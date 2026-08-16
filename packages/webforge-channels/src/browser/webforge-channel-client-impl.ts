@@ -96,7 +96,7 @@ export class WebForgeChannelClientImpl implements WebForgeChannelClient {
         if (this.teachingTerminal && !this.teachingTerminal.isDisposed) {
             return this.teachingTerminal;
         }
-        const terminal = await this.terminalService.newTerminal({ title: 'Clyffy' });
+        const terminal = await this.terminalService.newTerminal({ title: 'Clyffy', useServerTitle: false });
         this.terminalService.open(terminal, { mode: 'activate' });
         await terminal.start();
         this.teachingTerminal = terminal;

@@ -17,11 +17,15 @@
 import { FrontendApplicationContribution, RemoteConnectionProvider, ServiceConnectionProvider } from '@theia/core/lib/browser';
 import { ContainerModule } from '@theia/core/shared/inversify';
 import { WEBFORGE_CHANNEL_SERVICE_PATH, WebForgeChannelClient } from '../common/webforge-channel-protocol';
+import { WebForgeAgentsMdSeeder } from './webforge-agents-md-seeder';
 import { WebForgeChannelClientImpl } from './webforge-channel-client-impl';
 
 export default new ContainerModule(bind => {
     bind(WebForgeChannelClientImpl).toSelf().inSingletonScope();
     bind(WebForgeChannelClient).toService(WebForgeChannelClientImpl);
+
+    bind(WebForgeAgentsMdSeeder).toSelf().inSingletonScope();
+    bind(FrontendApplicationContribution).toService(WebForgeAgentsMdSeeder);
 
     // Establish the RPC connection at startup so the backend endpoint always has a
     // client the moment a browser tab is attached — the channels light up with the UI.

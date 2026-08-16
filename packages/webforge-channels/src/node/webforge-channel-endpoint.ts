@@ -18,6 +18,10 @@ import { ILogger } from '@theia/core';
 import { inject, injectable, named } from '@theia/core/shared/inversify';
 import { BackendApplicationContribution } from '@theia/core/lib/node';
 import * as express from '@theia/core/shared/express';
+import { randomUUID } from 'crypto';
+import * as fs from 'fs';
+import * as os from 'os';
+import * as path from 'path';
 import { WebForgeChannelServiceImpl } from './webforge-channel-service-impl';
 
 /**
@@ -43,6 +47,33 @@ export class WebForgeChannelEndpoint implements BackendApplicationContribution {
     @inject(ILogger) @named('webforge-channels')
     protected readonly logger: ILogger;
 
+    /**
+     * The instance event tape: every channel op is appended as a CloudEvents 1.0 row
+     * (NDJSON) — the canonical, foldable record per the architecture canon. Source is
+     * the instance's platform-scoped identity; NATS/Zuul consume this same shape later.
+     */
+    protected get tapeFile(): string {
+        const dir = process.env.WEBFORGE_DATA_DIR || path.join(os.homedir(), '.webforge');
+        return path.join(dir, 'events.jsonl');
+    }
+
+    protected emitEvent(type: string, data: Record<string, unknown>): void {
+        try {
+            const event = {
+                specversion: '1.0',
+                id: randomUUID(),
+                source: process.env.WEBFORGE_EVENT_SOURCE || 'io.shippin.webforge/local',
+                type: `io.shippin.webforge.channel.${type}`,
+                time: new Date().toISOString(),
+                data,
+            };
+            fs.mkdirSync(path.dirname(this.tapeFile), { recursive: true });
+            fs.appendFileSync(this.tapeFile, `${JSON.stringify(event)}\n`);
+        } catch (error) {
+            this.logger.warn('[webforge-channels] tape append failed', error);
+        }
+    }
+
     configure(app: express.Application): void {
         app.post('/webforge/channel', express.json(), async (req, res) => {
             const token = (process.env.WEBFORGE_CHANNEL_TOKEN || '').trim();
@@ -64,20 +95,24 @@ export class WebForgeChannelEndpoint implements BackendApplicationContribution {
                 switch (body.op) {
                     case 'app.open': {
                         const result = await client.openFile(String(body.path ?? ''), typeof body.line === 'number' ? body.line : undefined);
+                        this.emitEvent('app.open', { path: result.opened });
                         res.json(result);
                         return;
                     }
                     case 'terminal.type': {
                         const result = await client.terminalType(String(body.text ?? ''), body.submit === true);
+                        this.emitEvent('terminal.type', { chars: result.typed, submitted: result.submitted });
                         res.json(result);
                         return;
                     }
                     case 'notify': {
                         const result = await client.notify(String(body.text ?? ''), body.kind === 'warn' ? 'warn' : 'info');
+                        this.emitEvent('notify', { chars: String(body.text ?? '').length });
                         res.json(result);
                         return;
                     }
                     case 'state.get': {
+                        // Sensing never wakes its own tape — reads are not acts.
                         res.json(await client.getState());
                         return;
                     }
@@ -88,6 +123,24 @@ export class WebForgeChannelEndpoint implements BackendApplicationContribution {
                 }
             } catch (error) {
                 this.logger.error('[webforge-channels] op failed', error);
+                res.status(500).json({ error: error instanceof Error ? error.message : String(error) });
+            }
+        });
+
+        // The tape, readable: last N CloudEvents rows (token-guarded like the channel).
+        app.get('/webforge/events', (req, res) => {
+            const token = (process.env.WEBFORGE_CHANNEL_TOKEN || '').trim();
+            if (!token || token.length < 16 || req.headers.authorization !== `Bearer ${token}`) {
+                res.status(401).json({ error: 'unauthorized' });
+                return;
+            }
+            try {
+                const limit = Math.max(1, Math.min(500, Number(req.query.limit) || 50));
+                const lines = fs.existsSync(this.tapeFile)
+                    ? fs.readFileSync(this.tapeFile, 'utf8').trim().split('\n').slice(-limit)
+                    : [];
+                res.json({ events: lines.map(l => JSON.parse(l)) });
+            } catch (error) {
                 res.status(500).json({ error: error instanceof Error ? error.message : String(error) });
             }
         });
