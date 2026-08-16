@@ -18,11 +18,8 @@ import { ILogger } from '@theia/core';
 import { inject, injectable, named } from '@theia/core/shared/inversify';
 import { BackendApplicationContribution } from '@theia/core/lib/node';
 import * as express from '@theia/core/shared/express';
-import { randomUUID } from 'crypto';
-import * as fs from 'fs';
-import * as os from 'os';
-import * as path from 'path';
 import { WebForgeChannelServiceImpl } from './webforge-channel-service-impl';
+import { WebForgeEventTape } from './webforge-event-tape';
 
 /**
  * The HTTP face of the WebForge channels: `POST /webforge/channel`.
@@ -36,6 +33,7 @@ import { WebForgeChannelServiceImpl } from './webforge-channel-service-impl';
  *   { op: 'app.open',      path, line? }
  *   { op: 'terminal.type', text, submit? }
  *   { op: 'notify',        text, kind? }
+ *   { op: 'guide.type',    command, note?, threshold? }
  *   { op: 'state.get' }
  */
 @injectable()
@@ -47,31 +45,11 @@ export class WebForgeChannelEndpoint implements BackendApplicationContribution {
     @inject(ILogger) @named('webforge-channels')
     protected readonly logger: ILogger;
 
-    /**
-     * The instance event tape: every channel op is appended as a CloudEvents 1.0 row
-     * (NDJSON) — the canonical, foldable record per the architecture canon. Source is
-     * the instance's platform-scoped identity; NATS/Zuul consume this same shape later.
-     */
-    protected get tapeFile(): string {
-        const dir = process.env.WEBFORGE_DATA_DIR || path.join(os.homedir(), '.webforge');
-        return path.join(dir, 'events.jsonl');
-    }
+    @inject(WebForgeEventTape)
+    protected readonly tape: WebForgeEventTape;
 
     protected emitEvent(type: string, data: Record<string, unknown>): void {
-        try {
-            const event = {
-                specversion: '1.0',
-                id: randomUUID(),
-                source: process.env.WEBFORGE_EVENT_SOURCE || 'io.shippin.webforge/local',
-                type: `io.shippin.webforge.channel.${type}`,
-                time: new Date().toISOString(),
-                data,
-            };
-            fs.mkdirSync(path.dirname(this.tapeFile), { recursive: true });
-            fs.appendFileSync(this.tapeFile, `${JSON.stringify(event)}\n`);
-        } catch (error) {
-            this.logger.warn('[webforge-channels] tape append failed', error);
-        }
+        this.tape.emit(type, data);
     }
 
     configure(app: express.Application): void {
@@ -111,13 +89,20 @@ export class WebForgeChannelEndpoint implements BackendApplicationContribution {
                         res.json(result);
                         return;
                     }
+                    case 'guide.type': {
+                        const command = String(body.command ?? '');
+                        const result = await client.guideType(command, typeof body.note === 'string' ? body.note : undefined, typeof body.threshold === 'number' ? body.threshold : undefined);
+                        this.emitEvent('guide.shown', { chars: command.length });
+                        res.json(result);
+                        return;
+                    }
                     case 'state.get': {
                         // Sensing never wakes its own tape — reads are not acts.
                         res.json(await client.getState());
                         return;
                     }
                     default: {
-                        res.status(400).json({ error: `unknown op '${body.op}' — legal: app.open, terminal.type, notify, state.get` });
+                        res.status(400).json({ error: `unknown op '${body.op}' — legal: app.open, terminal.type, notify, guide.type, state.get` });
                         return;
                     }
                 }
@@ -136,10 +121,7 @@ export class WebForgeChannelEndpoint implements BackendApplicationContribution {
             }
             try {
                 const limit = Math.max(1, Math.min(500, Number(req.query.limit) || 50));
-                const lines = fs.existsSync(this.tapeFile)
-                    ? fs.readFileSync(this.tapeFile, 'utf8').trim().split('\n').slice(-limit)
-                    : [];
-                res.json({ events: lines.map(l => JSON.parse(l)) });
+                res.json({ events: this.tape.tail(limit) });
             } catch (error) {
                 res.status(500).json({ error: error instanceof Error ? error.message : String(error) });
             }

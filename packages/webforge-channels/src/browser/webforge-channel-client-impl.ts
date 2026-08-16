@@ -20,7 +20,8 @@ import { EditorManager } from '@theia/editor/lib/browser';
 import { TerminalService } from '@theia/terminal/lib/browser/base/terminal-service';
 import { TerminalWidget } from '@theia/terminal/lib/browser/base/terminal-widget';
 import { WorkspaceService } from '@theia/workspace/lib/browser';
-import { WebForgeChannelClient, WebForgeStateSnapshot } from '../common/webforge-channel-protocol';
+import { WebForgeChannelClient, WebForgeChannelService, WebForgeStateSnapshot } from '../common/webforge-channel-protocol';
+import { WebForgeGuidedTyping } from './webforge-guided-typing';
 
 /**
  * Executes channel ops in the LIVE workbench — visibly, because the point is to show
@@ -42,7 +43,13 @@ export class WebForgeChannelClientImpl implements WebForgeChannelClient {
     @inject(WorkspaceService)
     protected readonly workspaceService: WorkspaceService;
 
+    @inject(WebForgeGuidedTyping)
+    protected readonly guidedTyping: WebForgeGuidedTyping;
+
     protected teachingTerminal: TerminalWidget | undefined;
+
+    /** Set by the frontend module once the RPC proxy exists — used to report guide outcomes onto the tape. */
+    backendService: WebForgeChannelService | undefined;
 
     async openFile(path: string, line?: number): Promise<{ opened: string }> {
         if (!path) {
@@ -90,6 +97,21 @@ export class WebForgeChannelClientImpl implements WebForgeChannelClient {
             openEditors: this.editorManager.all.map(e => e.editor.uri.path.toString()),
             terminals: this.terminalService.all.map(t => t.title.label),
         };
+    }
+
+    async guideType(command: string, note?: string, threshold?: number): Promise<{ started: boolean }> {
+        const trimmed = command.trim();
+        if (!trimmed) {
+            throw new Error('command is required');
+        }
+        const terminal = await this.getTeachingTerminal();
+        this.terminalService.open(terminal, { mode: 'activate' });
+        const effectiveThreshold = typeof threshold === 'number' && threshold > 0 && threshold <= 1 ? threshold : 0.7;
+        this.guidedTyping.show(terminal, trimmed, note, effectiveThreshold, result => {
+            this.backendService?.reportGuideEvent(result.type, { command: result.command, typedRatio: result.typedRatio })
+                .then(undefined, () => { /* tape unavailable — the lesson still happened */ });
+        });
+        return { started: true };
     }
 
     protected async getTeachingTerminal(): Promise<TerminalWidget> {

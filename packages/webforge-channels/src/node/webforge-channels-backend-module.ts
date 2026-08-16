@@ -20,8 +20,11 @@ import { ContainerModule } from '@theia/core/shared/inversify';
 import { WEBFORGE_CHANNEL_SERVICE_PATH, WebForgeChannelClient } from '../common/webforge-channel-protocol';
 import { WebForgeChannelEndpoint } from './webforge-channel-endpoint';
 import { WebForgeChannelServiceImpl } from './webforge-channel-service-impl';
+import { WebForgeEventTape } from './webforge-event-tape';
 
 export default new ContainerModule(bind => {
+    bind(WebForgeEventTape).toSelf().inSingletonScope();
+
     // Singleton across connections: the HTTP endpoint needs the same instance the
     // RPC handler wires the frontend client into.
     bind(WebForgeChannelServiceImpl).toSelf().inSingletonScope();

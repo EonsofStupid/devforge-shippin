@@ -54,12 +54,23 @@ export interface WebForgeChannelClient {
     notify(text: string, kind?: 'info' | 'warn'): Promise<{ shown: boolean }>;
     /** The See plane: a typed snapshot of what the user currently sees. */
     getState(): Promise<WebForgeStateSnapshot>;
+    /**
+     * Guided typing — the teaching mechanic: the target command floats above the
+     * teaching terminal; the learner types; correct characters go green live; at the
+     * threshold (default 0.7) the remainder auto-fills and the learner confirms with
+     * Enter. Never punishes a wrong key. Resolves when the guide is SHOWN (completion
+     * arrives asynchronously on the event tape).
+     */
+    guideType(command: string, note?: string, threshold?: number): Promise<{ started: boolean }>;
 }
 
 /**
  * Implemented in the BACKEND: holds the RPC client (the connected frontend) and is
- * driven by the HTTP endpoint.
+ * driven by the HTTP endpoint. The frontend also calls back into it to report
+ * asynchronous outcomes (guided-typing completion) onto the event tape.
  */
 export interface WebForgeChannelService {
     setClient(client: WebForgeChannelClient | undefined): void;
+    /** Frontend → backend: record a guide outcome as a CloudEvents row on the tape. */
+    reportGuideEvent(type: 'guide.completed' | 'guide.abandoned', data: { command: string; typedRatio: number }): Promise<void>;
 }

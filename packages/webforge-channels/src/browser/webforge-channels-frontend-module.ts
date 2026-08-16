@@ -16,11 +16,14 @@
 
 import { FrontendApplicationContribution, RemoteConnectionProvider, ServiceConnectionProvider } from '@theia/core/lib/browser';
 import { ContainerModule } from '@theia/core/shared/inversify';
-import { WEBFORGE_CHANNEL_SERVICE_PATH, WebForgeChannelClient } from '../common/webforge-channel-protocol';
+import { WEBFORGE_CHANNEL_SERVICE_PATH, WebForgeChannelClient, WebForgeChannelService } from '../common/webforge-channel-protocol';
 import { WebForgeAgentsMdSeeder } from './webforge-agents-md-seeder';
 import { WebForgeChannelClientImpl } from './webforge-channel-client-impl';
+import { WebForgeGuidedTyping } from './webforge-guided-typing';
 
 export default new ContainerModule(bind => {
+    bind(WebForgeGuidedTyping).toSelf().inSingletonScope();
+
     bind(WebForgeChannelClientImpl).toSelf().inSingletonScope();
     bind(WebForgeChannelClient).toService(WebForgeChannelClientImpl);
 
@@ -29,11 +32,13 @@ export default new ContainerModule(bind => {
 
     // Establish the RPC connection at startup so the backend endpoint always has a
     // client the moment a browser tab is attached — the channels light up with the UI.
+    // The returned proxy is the backend service; the client keeps it to report guide
+    // outcomes onto the event tape.
     bind(FrontendApplicationContribution).toDynamicValue(ctx => ({
         initialize: () => {
             const connection = ctx.container.get<ServiceConnectionProvider>(RemoteConnectionProvider);
             const client = ctx.container.get<WebForgeChannelClientImpl>(WebForgeChannelClientImpl);
-            connection.createProxy(WEBFORGE_CHANNEL_SERVICE_PATH, client);
+            client.backendService = connection.createProxy<WebForgeChannelService>(WEBFORGE_CHANNEL_SERVICE_PATH, client);
         },
     })).inSingletonScope();
 });
