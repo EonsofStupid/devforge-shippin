@@ -18,8 +18,9 @@ import { ILogger } from '@theia/core';
 import { inject, injectable, named } from '@theia/core/shared/inversify';
 import { BackendApplicationContribution } from '@theia/core/lib/node';
 import * as express from '@theia/core/shared/express';
+import { WebForgeEvents } from '@theia/webforge-runtime/lib/common/webforge-runtime-events';
+import { WebForgeRuntimeTape } from '@theia/webforge-runtime/lib/node/webforge-runtime-tape';
 import { WebForgeChannelServiceImpl } from './webforge-channel-service-impl';
-import { WebForgeEventTape } from './webforge-event-tape';
 
 /** How long an op waits on the attached frontend before it is declared lapsed. */
 const FRONTEND_TIMEOUT_MS = 8000;
@@ -54,25 +55,21 @@ export class WebForgeChannelEndpoint implements BackendApplicationContribution {
     @inject(ILogger) @named('webforge-channels')
     protected readonly logger: ILogger;
 
-    @inject(WebForgeEventTape)
-    protected readonly tape: WebForgeEventTape;
-
-    protected emitEvent(type: string, data: Record<string, unknown>): void {
-        this.tape.emit(type, data);
-    }
+    @inject(WebForgeRuntimeTape)
+    protected readonly tape: WebForgeRuntimeTape;
 
     /**
      * A client proxy left behind by a tab that has since gone away never rejects — the RPC
      * call simply waits forever and the whole channel wedges. Every op is therefore bounded:
      * a lapsed frontend answers as a timeout instead of hanging the caller.
      */
-    protected async withFrontend<T>(work: Promise<T>): Promise<T> {
+    protected async withFrontend<T>(work: Promise<T>, timeoutMs = FRONTEND_TIMEOUT_MS): Promise<T> {
         let timer: NodeJS.Timeout | undefined;
         try {
             return await Promise.race([
                 work,
                 new Promise<never>((_resolve, reject) => {
-                    timer = setTimeout(() => reject(new FrontendTimeout()), FRONTEND_TIMEOUT_MS);
+                    timer = setTimeout(() => reject(new FrontendTimeout()), timeoutMs);
                 })
             ]);
         } finally {
@@ -80,6 +77,11 @@ export class WebForgeChannelEndpoint implements BackendApplicationContribution {
                 clearTimeout(timer);
             }
         }
+    }
+
+    /** Real typing is deliberately slow; the deadline has to allow for the whole phrase. */
+    protected typingBudget(text: string): number {
+        return Math.max(FRONTEND_TIMEOUT_MS, text.length * 220 + 5000);
     }
 
     configure(app: express.Application): void {
@@ -103,19 +105,16 @@ export class WebForgeChannelEndpoint implements BackendApplicationContribution {
                 switch (body.op) {
                     case 'app.open': {
                         const result = await this.withFrontend(client.openFile(String(body.path ?? ''), typeof body.line === 'number' ? body.line : undefined));
-                        this.emitEvent('app.open', { path: result.opened });
                         res.json(result);
                         return;
                     }
                     case 'terminal.type': {
                         const result = await this.withFrontend(client.terminalType(String(body.text ?? ''), body.submit === true));
-                        this.emitEvent('terminal.type', { chars: result.typed, submitted: result.submitted });
                         res.json(result);
                         return;
                     }
                     case 'notify': {
                         const result = await this.withFrontend(client.notify(String(body.text ?? ''), body.kind === 'warn' ? 'warn' : 'info'));
-                        this.emitEvent('notify', { chars: String(body.text ?? '').length });
                         res.json(result);
                         return;
                     }
@@ -124,7 +123,6 @@ export class WebForgeChannelEndpoint implements BackendApplicationContribution {
                         const note = typeof body.note === 'string' ? body.note : undefined;
                         const threshold = typeof body.threshold === 'number' ? body.threshold : undefined;
                         const result = await this.withFrontend(client.guideType(command, note, threshold));
-                        this.emitEvent('guide.shown', { chars: command.length });
                         res.json(result);
                         return;
                     }
@@ -133,8 +131,50 @@ export class WebForgeChannelEndpoint implements BackendApplicationContribution {
                         res.json(await this.withFrontend(client.getState()));
                         return;
                     }
+                    case 'surface.list': {
+                        res.json({ surfaces: await this.withFrontend(client.listSurfaces(body.query ?? body)) });
+                        return;
+                    }
+                    case 'surface.read': {
+                        res.json(await this.withFrontend(client.readSurface(String(body.surface ?? ''))));
+                        return;
+                    }
+                    case 'surface.set': {
+                        const result = await this.withFrontend(client.setSurface(String(body.surface ?? ''), String(body.value ?? '')));
+                        res.json(result);
+                        return;
+                    }
+                    case 'surface.focus': {
+                        const result = await this.withFrontend(client.focusSurface(String(body.surface ?? '')));
+                        res.json(result);
+                        return;
+                    }
+                    case 'surface.invoke': {
+                        const args = Array.isArray(body.args) ? body.args : undefined;
+                        const result = await this.withFrontend(client.invokeSurface(String(body.surface ?? ''), args));
+                        res.json(result);
+                        return;
+                    }
+                    case 'type.real': {
+                        const surface = String(body.surface ?? '');
+                        const text = String(body.text ?? '');
+                        const options = {
+                            cadence: typeof body.cadence === 'number' ? body.cadence : undefined,
+                            submit: body.submit === true
+                        };
+                        // Typing takes as long as typing takes; the pace is the lesson.
+                        const result = await this.withFrontend(client.typeInto(surface, text, options), this.typingBudget(text));
+                        res.json(result);
+                        return;
+                    }
                     default: {
-                        res.status(400).json({ error: `unknown op '${body.op}' — legal: app.open, terminal.type, notify, guide.type, state.get` });
+                        res.status(400).json({
+                            error: `unknown op '${body.op}'`,
+                            legal: [
+                                'app.open', 'terminal.type', 'notify', 'guide.type', 'state.get',
+                                'surface.list', 'surface.read', 'surface.set', 'surface.focus', 'surface.invoke', 'type.real'
+                            ]
+                        });
                         return;
                     }
                 }
@@ -148,6 +188,17 @@ export class WebForgeChannelEndpoint implements BackendApplicationContribution {
             }
         });
 
+        // The declared event catalog: what this instance can emit, and what each row
+        // means. An agent reads this instead of inferring semantics from names.
+        app.get('/webforge/catalog', (req, res) => {
+            const token = (process.env.WEBFORGE_CHANNEL_TOKEN || '').trim();
+            if (!token || token.length < 16 || req.headers.authorization !== `Bearer ${token}`) {
+                res.status(401).json({ error: 'unauthorized' });
+                return;
+            }
+            res.json({ events: WebForgeEvents.all() });
+        });
+
         // The tape, readable: last N CloudEvents rows (token-guarded like the channel).
         app.get('/webforge/events', (req, res) => {
             const token = (process.env.WEBFORGE_CHANNEL_TOKEN || '').trim();
@@ -157,7 +208,7 @@ export class WebForgeChannelEndpoint implements BackendApplicationContribution {
             }
             try {
                 const limit = Math.max(1, Math.min(500, Number(req.query.limit) || 50));
-                res.json({ events: this.tape.tail(limit) });
+                res.json({ events: this.tape.tailSync(limit) });
             } catch (error) {
                 res.status(500).json({ error: error instanceof Error ? error.message : String(error) });
             }

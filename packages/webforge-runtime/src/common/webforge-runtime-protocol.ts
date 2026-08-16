@@ -14,25 +14,18 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { injectable } from '@theia/core/shared/inversify';
-import { WebForgeChannelClient, WebForgeChannelService } from '../common/webforge-channel-protocol';
+import { RuntimeEvent } from './webforge-runtime-events';
+
+export const WEBFORGE_RUNTIME_SERVICE_PATH = '/services/webforge-runtime';
+
+export const WebForgeRuntimeSink = Symbol('WebForgeRuntimeSink');
 
 /**
- * Backend half of the channels: keeps the RPC client (the connected frontend) and
- * hands it to the HTTP endpoint. One frontend per backend process in WebForge's
- * per-operator instance model, so a single client reference is the honest shape.
+ * Backend half of the runtime: the tape. Frontend planes hand it declared events; it
+ * writes them as CloudEvents rows under the instance's platform-scoped source.
  */
-@injectable()
-export class WebForgeChannelServiceImpl implements WebForgeChannelService {
-
-    protected client: WebForgeChannelClient | undefined;
-
-    setClient(client: WebForgeChannelClient | undefined): void {
-        this.client = client;
-    }
-
-    getClient(): WebForgeChannelClient | undefined {
-        return this.client;
-    }
-
+export interface WebForgeRuntimeSink {
+    record(event: RuntimeEvent): Promise<void>;
+    /** Last N rows, newest last. */
+    tail(limit: number): Promise<object[]>;
 }

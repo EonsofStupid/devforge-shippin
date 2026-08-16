@@ -20,7 +20,7 @@ import { PerspectiveService, PerspectiveServiceImpl } from '@theia/core/lib/brow
 import { inject, injectable, named } from '@theia/core/shared/inversify';
 import { FileService } from '@theia/filesystem/lib/browser/file-service';
 import { WorkspaceService } from '@theia/workspace/lib/browser';
-import { WalkthroughEventType } from '../common/webforge-channel-protocol';
+import { WebForgeRuntimeBus } from '@theia/webforge-runtime/lib/browser/webforge-runtime-bus';
 import { WebForgeChannelClientImpl } from './webforge-channel-client-impl';
 import { WEBFORGE_GUIDED_TYPING_THRESHOLD, WEBFORGE_WALKTHROUGH_LINEAGE, WebForgeLineage } from './webforge-preferences';
 import { SceneAct, WalkthroughScene, walkthroughScenes } from './webforge-walkthrough-scenes';
@@ -69,6 +69,9 @@ export class WebForgeWalkthrough {
     @inject(WebForgeChannelClientImpl)
     protected readonly acts: WebForgeChannelClientImpl;
 
+    @inject(WebForgeRuntimeBus)
+    protected readonly bus: WebForgeRuntimeBus;
+
     @inject(ILogger) @named('webforge-walkthrough')
     protected readonly logger: ILogger;
 
@@ -99,7 +102,7 @@ export class WebForgeWalkthrough {
         this.scenes = walkthroughScenes();
         this.index = 0;
         this.build();
-        this.report('walkthrough.started');
+        this.report('started');
         this.render();
     }
 
@@ -149,7 +152,7 @@ export class WebForgeWalkthrough {
         this.escListener = (e: KeyboardEvent) => {
             if (e.key === 'Escape' && this.root) {
                 e.stopPropagation();
-                this.report('walkthrough.skipped');
+                this.report('skipped');
                 this.close();
             }
         };
@@ -198,7 +201,7 @@ export class WebForgeWalkthrough {
         const art = this.root!.querySelector('.wf-art');
         art?.classList.add('wf-playing');
         primary.focus();
-        this.report('walkthrough.scene');
+        this.report('scene');
     }
 
     /** The primary button: perform this scene's act for real, then move on. */
@@ -287,7 +290,7 @@ export class WebForgeWalkthrough {
     }
 
     protected async finish(): Promise<void> {
-        this.report('walkthrough.completed');
+        this.report('completed');
         await this.storage.setData(WALKTHROUGH_SEEN_KEY, true);
         this.close();
     }
@@ -295,7 +298,7 @@ export class WebForgeWalkthrough {
     /** The explicit exit: done for good, and straight into the full workbench. */
     protected async leave(): Promise<void> {
         const last = this.index === this.scenes.length - 1;
-        this.report(last ? 'walkthrough.completed' : 'walkthrough.skipped');
+        this.report(last ? 'completed' : 'skipped');
         await this.storage.setData(WALKTHROUGH_SEEN_KEY, true);
         this.close();
         if (!last) {
@@ -303,11 +306,11 @@ export class WebForgeWalkthrough {
         }
     }
 
-    protected report(type: WalkthroughEventType): void {
-        this.acts.backendService?.reportWalkthroughEvent(type, {
+    protected report(type: 'started' | 'scene' | 'completed' | 'skipped'): void {
+        this.bus.emit(`teach.walkthrough.${type}`, {
             scene: this.scene?.id ?? 'unknown',
             index: this.index,
             total: this.scenes.length
-        }).then(undefined, () => { /* tape unavailable — the lesson still happened */ });
+        });
     }
 }

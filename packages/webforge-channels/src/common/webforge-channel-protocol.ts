@@ -23,6 +23,8 @@
  * is to show and teach, never to act invisibly. Every op returns a typed receipt.
  */
 
+import { SurfaceActionResult, SurfaceDescriptor, SurfaceQuery } from '@theia/webforge-runtime/lib/common/webforge-surfaces';
+
 export const WEBFORGE_CHANNEL_SERVICE_PATH = '/services/webforge-channels';
 
 export const WebForgeChannelService = Symbol('WebForgeChannelService');
@@ -62,27 +64,34 @@ export interface WebForgeChannelClient {
      * arrives asynchronously on the event tape).
      */
     guideType(command: string, note?: string, threshold?: number): Promise<{ started: boolean }>;
+
+    // ── The surface plane ─────────────────────────────────────────────────────
+    // Everything the operator can touch is addressable, so Clyffy drives the
+    // application the way a person does — find the thing, use it — instead of
+    // needing a bespoke op per feature.
+
+    /** Find surfaces: inputs, settings, commands, views, editors, terminals. */
+    listSurfaces(query: SurfaceQuery): Promise<SurfaceDescriptor[]>;
+    /** Read a surface's value. Sensing, never an act. */
+    readSurface(id: string): Promise<SurfaceActionResult>;
+    /** Replace a surface's value outright. */
+    setSurface(id: string, value: string): Promise<SurfaceActionResult>;
+    /** Bring a surface to the operator's attention. */
+    focusSurface(id: string): Promise<SurfaceActionResult>;
+    /** Trigger a surface: run a command, press a button, submit a field. */
+    invokeSurface(id: string, args?: unknown[]): Promise<SurfaceActionResult>;
+    /**
+     * Type into a surface for real — character by character, at a human cadence, with
+     * the surface marked so the operator can see Clyffy is at the keyboard.
+     */
+    typeInto(id: string, text: string, options?: { cadence?: number; submit?: boolean }): Promise<{ typed: number }>;
 }
 
 /**
  * Implemented in the BACKEND: holds the RPC client (the connected frontend) and is
- * driven by the HTTP endpoint. The frontend also calls back into it to report
- * asynchronous outcomes (guided-typing completion) onto the event tape.
+ * driven by the HTTP endpoint. Outcomes are reported by the frontend straight onto the
+ * runtime bus, which is what gives them provenance — this service only routes ops.
  */
 export interface WebForgeChannelService {
     setClient(client: WebForgeChannelClient | undefined): void;
-    /** Frontend → backend: record a guide outcome as a CloudEvents row on the tape. */
-    reportGuideEvent(type: 'guide.completed' | 'guide.abandoned', data: { command: string; typedRatio: number }): Promise<void>;
-    /**
-     * Frontend → backend: record walkthrough progress on the tape. Teaching is only
-     * measurable if it is written down — this is what makes the competence ladder a
-     * signal rather than a guess.
-     */
-    reportWalkthroughEvent(type: WalkthroughEventType, data: { scene: string; index: number; total: number }): Promise<void>;
 }
-
-export type WalkthroughEventType =
-    | 'walkthrough.started'
-    | 'walkthrough.scene'
-    | 'walkthrough.completed'
-    | 'walkthrough.skipped';

@@ -225,6 +225,9 @@
       "path": "../../packages/webforge-channels"
     },
     {
+      "path": "../../packages/webforge-runtime"
+    },
+    {
       "path": "../../packages/workspace"
     },
     {

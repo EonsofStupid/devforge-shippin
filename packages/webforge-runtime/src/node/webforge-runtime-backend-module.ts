@@ -15,25 +15,15 @@
 // *****************************************************************************
 
 import { ConnectionHandler, RpcConnectionHandler } from '@theia/core';
-import { BackendApplicationContribution } from '@theia/core/lib/node';
 import { ContainerModule } from '@theia/core/shared/inversify';
-import { WEBFORGE_CHANNEL_SERVICE_PATH, WebForgeChannelClient } from '../common/webforge-channel-protocol';
-import { WebForgeChannelEndpoint } from './webforge-channel-endpoint';
-import { WebForgeChannelServiceImpl } from './webforge-channel-service-impl';
+import { WEBFORGE_RUNTIME_SERVICE_PATH, WebForgeRuntimeSink } from '../common/webforge-runtime-protocol';
+import { WebForgeRuntimeTape } from './webforge-runtime-tape';
 
 export default new ContainerModule(bind => {
-    // Singleton across connections: the HTTP endpoint needs the same instance the
-    // RPC handler wires the frontend client into.
-    bind(WebForgeChannelServiceImpl).toSelf().inSingletonScope();
+    bind(WebForgeRuntimeTape).toSelf().inSingletonScope();
+    bind(WebForgeRuntimeSink).toService(WebForgeRuntimeTape);
 
     bind(ConnectionHandler).toDynamicValue(ctx =>
-        new RpcConnectionHandler<WebForgeChannelClient>(WEBFORGE_CHANNEL_SERVICE_PATH, client => {
-            const service = ctx.container.get(WebForgeChannelServiceImpl);
-            service.setClient(client);
-            return service;
-        })
+        new RpcConnectionHandler(WEBFORGE_RUNTIME_SERVICE_PATH, () => ctx.container.get(WebForgeRuntimeTape))
     ).inSingletonScope();
-
-    bind(WebForgeChannelEndpoint).toSelf().inSingletonScope();
-    bind(BackendApplicationContribution).toService(WebForgeChannelEndpoint);
 });

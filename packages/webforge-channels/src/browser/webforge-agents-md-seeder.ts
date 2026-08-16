@@ -93,6 +93,28 @@ This WebForge instance exposes a local Act plane at \`POST /webforge/channel\`
 - \`{"op":"notify","text":"…"}\` — show the operator a short teaching note
 - \`{"op":"state.get"}\` — what the operator currently sees (roots, editors, terminals)
 
+### The surface plane — everything is addressable
+
+You do not need a bespoke op per feature. Every part of the application is a
+**surface** with an address (\`<kind>:<name>\`) and declared capabilities: find the
+thing, then use it, the way a person would.
+
+- \`{"op":"surface.list","match":"font","kind":"setting","withValues":true}\` — search
+  inputs, settings, commands, views, editors and terminals
+- \`{"op":"surface.read","surface":"setting:editor.fontSize"}\` — read a value (sensing,
+  never counted as an act)
+- \`{"op":"surface.set","surface":"setting:editor.fontSize","value":"16"}\` — set one
+- \`{"op":"surface.focus","surface":"view:explorer-view-container"}\` — bring it forward
+- \`{"op":"surface.invoke","surface":"command:workbench.action.files.save"}\` — trigger it
+- \`{"op":"type.real","surface":"input:ask-a-question","text":"…","submit":true}\` —
+  **type it for real**, character by character at a human cadence, with the field marked
+  so the operator can see you at the keyboard. Prefer this over setting a value outright
+  whenever the operator is watching: the pace is the lesson.
+
+\`GET /webforge/catalog\` returns the declared runtime-event catalog — every event this
+instance can emit, its plane and what its fields mean. Read it rather than inferring.
+
 Use the channels instead of screenshots or blind guesses: the state is typed, the
-actions are visible, and everything is recorded to the instance's event tape.
+actions are visible, and everything is recorded to the instance's event tape with
+provenance — who acted, and what caused it.
 `;

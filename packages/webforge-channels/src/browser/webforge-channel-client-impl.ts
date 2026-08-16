@@ -20,6 +20,11 @@ import { EditorManager } from '@theia/editor/lib/browser';
 import { TerminalService } from '@theia/terminal/lib/browser/base/terminal-service';
 import { TerminalWidget } from '@theia/terminal/lib/browser/base/terminal-widget';
 import { WorkspaceService } from '@theia/workspace/lib/browser';
+import { Actor } from '@theia/webforge-runtime/lib/common/webforge-provenance';
+import { SurfaceActionResult, SurfaceDescriptor, SurfaceQuery } from '@theia/webforge-runtime/lib/common/webforge-surfaces';
+import { WebForgeRealTyping } from '@theia/webforge-runtime/lib/browser/webforge-real-typing';
+import { WebForgeRuntimeBus } from '@theia/webforge-runtime/lib/browser/webforge-runtime-bus';
+import { WebForgeSurfaceRegistry } from '@theia/webforge-runtime/lib/browser/webforge-surface-registry';
 import { WebForgeChannelClient, WebForgeChannelService, WebForgeStateSnapshot } from '../common/webforge-channel-protocol';
 import { WebForgeGuidedTyping } from './webforge-guided-typing';
 import { WEBFORGE_GUIDED_TYPING_THRESHOLD } from './webforge-preferences';
@@ -50,33 +55,92 @@ export class WebForgeChannelClientImpl implements WebForgeChannelClient {
     @inject(PreferenceService)
     protected readonly preferences: PreferenceService;
 
+    @inject(WebForgeRuntimeBus)
+    protected readonly bus: WebForgeRuntimeBus;
+
+    @inject(WebForgeSurfaceRegistry)
+    protected readonly surfaces: WebForgeSurfaceRegistry;
+
+    @inject(WebForgeRealTyping)
+    protected readonly typing: WebForgeRealTyping;
+
     protected teachingTerminal: TerminalWidget | undefined;
 
-    /** Set by the frontend module once the RPC proxy exists — used to report guide outcomes onto the tape. */
+    /** Set by the frontend module once the RPC proxy exists. */
     backendService: WebForgeChannelService | undefined;
 
     async openFile(path: string, line?: number): Promise<{ opened: string }> {
         if (!path) {
             throw new Error('path is required');
         }
-        const uri = new URI(path.startsWith('file://') ? path : `file://${path}`);
-        const editor = await this.editorManager.open(uri, {
-            mode: 'activate',
-            ...(typeof line === 'number' ? { selection: { start: { line, character: 0 } } } : {}),
+        return this.asClyffy('open a file', async () => {
+            const uri = new URI(path.startsWith('file://') ? path : `file://${path}`);
+            const editor = await this.editorManager.open(uri, {
+                mode: 'activate',
+                ...(typeof line === 'number' ? { selection: { start: { line, character: 0 } } } : {}),
+            });
+            return { opened: editor.editor.uri.path.toString() };
         });
-        return { opened: editor.editor.uri.path.toString() };
+    }
+
+    /**
+     * Everything arriving over the channel is Clyffy's doing, and the tape must say so.
+     * Acts raised deep inside Theia by this work inherit the same attribution and chain,
+     * which is what keeps an AI's edits distinguishable from the operator's own.
+     */
+    protected asClyffy<T>(reason: string, work: () => Promise<T>): Promise<T> {
+        return this.bus.as(Actor.channel('http'), reason, work);
     }
 
     async terminalType(text: string, submit = false): Promise<{ typed: number; submitted: boolean }> {
-        const terminal = await this.getTeachingTerminal();
-        this.terminalService.open(terminal, { mode: 'activate' });
-        if (text) {
-            terminal.sendText(text);
-        }
-        if (submit) {
-            terminal.sendText('\n');
-        }
-        return { typed: text.length, submitted: submit };
+        return this.asClyffy('type in the terminal', async () => {
+            const terminal = await this.getTeachingTerminal();
+            this.terminalService.open(terminal, { mode: 'activate' });
+            if (text) {
+                // Character by character, at a human cadence: the operator watches the
+                // same motion they would make themselves. Pasting teaches nothing.
+                await this.typing.intoTerminal(terminal, text, { submit });
+            } else if (submit) {
+                terminal.sendText('\n');
+            }
+            this.bus.emit('act.terminal.typed', { terminal: terminal.title.label, chars: text.length, submitted: submit });
+            return { typed: text.length, submitted: submit };
+        });
+    }
+
+    async listSurfaces(query: SurfaceQuery): Promise<SurfaceDescriptor[]> {
+        return this.surfaces.list(query ?? {});
+    }
+
+    async readSurface(id: string): Promise<SurfaceActionResult> {
+        return this.surfaces.read(id);
+    }
+
+    async setSurface(id: string, value: string): Promise<SurfaceActionResult> {
+        return this.asClyffy(`set ${id}`, () => this.surfaces.set(id, value));
+    }
+
+    async focusSurface(id: string): Promise<SurfaceActionResult> {
+        return this.asClyffy(`focus ${id}`, () => this.surfaces.focus(id));
+    }
+
+    async invokeSurface(id: string, args?: unknown[]): Promise<SurfaceActionResult> {
+        return this.asClyffy(`invoke ${id}`, () => this.surfaces.invoke(id, args));
+    }
+
+    async typeInto(id: string, text: string, options: { cadence?: number; submit?: boolean } = {}): Promise<{ typed: number }> {
+        return this.asClyffy(`type into ${id}`, async () => {
+            const target = await this.surfaces.typeTarget(id);
+            if (!target) {
+                throw new Error(`surface '${id}' cannot be typed into`);
+            }
+            const terminal = this.terminalService.all.find(candidate => candidate.node === target);
+            const typed = terminal
+                ? await this.typing.intoTerminal(terminal, text, options)
+                : await this.typing.intoElement(target, text, { ...options, yieldToOperator: true });
+            this.bus.emit('act.surface.set', { surface: id, kind: terminal ? 'terminal' : 'input', chars: typed });
+            return { typed };
+        });
     }
 
     async notify(text: string, kind: 'info' | 'warn' = 'info'): Promise<{ shown: boolean }> {
@@ -90,11 +154,13 @@ export class WebForgeChannelClientImpl implements WebForgeChannelClient {
         } else {
             this.messageService.info(text, { timeout: 8000 }).then(undefined, () => { /* dismissed */ });
         }
+        this.bus.emit('act.notice.shown', { chars: text.length, kind });
         return { shown: true };
     }
 
     async getState(): Promise<WebForgeStateSnapshot> {
         const roots = await this.workspaceService.roots;
+        this.bus.emit('sense.state.read', { editors: this.editorManager.all.length, terminals: this.terminalService.all.length });
         return {
             workspaceRoots: roots.map(r => r.resource.path.toString()),
             activeEditor: this.editorManager.currentEditor?.editor.uri.path.toString(),
@@ -108,15 +174,22 @@ export class WebForgeChannelClientImpl implements WebForgeChannelClient {
         if (!trimmed) {
             throw new Error('command is required');
         }
+        // Offering the guide is Clyffy's act; completing it is the learner's, and that
+        // outcome fires later, outside this scope, so it is attributed to them.
+        return this.asClyffy('offer a guided command', () => this.showGuide(trimmed, note, threshold));
+    }
+
+    protected async showGuide(trimmed: string, note?: string, threshold?: number): Promise<{ started: boolean }> {
         const terminal = await this.getTeachingTerminal();
         this.terminalService.open(terminal, { mode: 'activate' });
         // An explicit threshold on the op wins; otherwise the operator's own preference,
         // because how much help feels like help is a personal setting.
         const preferred = this.preferences.get<number>(WEBFORGE_GUIDED_TYPING_THRESHOLD, 0.7);
         const effectiveThreshold = typeof threshold === 'number' && threshold > 0 && threshold <= 1 ? threshold : preferred;
+        this.bus.emit('teach.guide.shown', { command: trimmed, chars: trimmed.length });
         this.guidedTyping.show(terminal, trimmed, note, effectiveThreshold, result => {
-            this.backendService?.reportGuideEvent(result.type, { command: result.command, typedRatio: result.typedRatio })
-                .then(undefined, () => { /* tape unavailable — the lesson still happened */ });
+            // The learner typed this, not Clyffy — the outcome is recorded as theirs.
+            this.bus.emit(`teach.${result.type}`, { command: result.command, typedRatio: result.typedRatio });
         });
         return { started: true };
     }

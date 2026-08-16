@@ -1,15 +1,14 @@
 {
-  "name": "@theia/webforge-channels",
+  "name": "@theia/webforge-runtime",
   "version": "1.74.0",
-  "description": "WebForge direct channels \u2014 the Act plane: lets Clyffy (and, later, the Shippin chat webapp) manipulate the application visibly: open files, type in the terminal, teach while working.",
+  "description": "The WebForge runtime layer \u2014 the engine underneath the IDE: a declared runtime-event catalog, provenance for every act, and an addressable surface registry so Clyffy can read and drive any part of the application.",
   "dependencies": {
-    "@theia/ai-chat-ui": "1.74.0",
     "@theia/core": "1.74.0",
     "@theia/editor": "1.74.0",
     "@theia/filesystem": "1.74.0",
-    "@theia/navigator": "1.74.0",
+    "@theia/monaco": "1.74.0",
+    "@theia/monaco-editor-core": "1.108.201",
     "@theia/terminal": "1.74.0",
-    "@theia/webforge-runtime": "1.74.0",
     "@theia/workspace": "1.74.0",
     "tslib": "^2.6.2"
   },
@@ -19,8 +18,8 @@
   },
   "theiaExtensions": [
     {
-      "frontend": "lib/browser/webforge-channels-frontend-module",
-      "backend": "lib/node/webforge-channels-backend-module"
+      "frontend": "lib/browser/webforge-runtime-frontend-module",
+      "backend": "lib/node/webforge-runtime-backend-module"
     }
   ],
   "keywords": [

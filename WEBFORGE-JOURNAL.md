@@ -130,6 +130,51 @@ The mock made real. New in `@theia/webforge-channels`:
 - **Tape** — `walkthrough.started` / `.scene` / `.completed` / `.skipped` join the guide
   rows, so the competence ladder is measured rather than assumed.
 
+### W10 — The engine: Theia becomes WebForge
+Bolting features onto upstream was the wrong shape. New package
+**`@theia/webforge-runtime`** — the layer underneath the IDE that everything else stands
+on. Nothing upstream had to be patched to get here; the hooks were already there.
+
+- **Two layers, one application.** `webforge.layer` context key + `data-webforge-layer`
+  on the document: **simplified** (larger type, lower density, machinery folded away) and
+  **full** (nothing withheld). A presentation state, not two builds and not a feature
+  gate — every command, view and setting is reachable in both, and any contribution can
+  adapt with a `when` clause instead of forking. `webforge.layer.simplified` /
+  `webforge.layer.full`; the move is recorded, because outgrowing the simplified layer is
+  the signal the ladder is about.
+- **Surfaces — everything addressable.** A surface is anything an operator can touch,
+  with an address (`<kind>:<name>`) and declared capabilities (`read`/`set`/`type`/
+  `focus`/`invoke`). Providers ship for settings (every preference in the app), commands,
+  views, editors, terminals, and **live DOM inputs found by scanning what is actually on
+  screen**. Clyffy finds the thing and uses it, as a person would — no bespoke op per
+  feature. New ops: `surface.list` / `.read` / `.set` / `.focus` / `.invoke`.
+- **Real typing** (`type.real`). Character by character at a human cadence, uneven on
+  purpose, pausing longer after a space; the target wears a green marker so authorship of
+  every keystroke is visible. Monaco-backed inputs (the chat prompt, every code editor)
+  go through Monaco's own type command — writing into DOM another component owns is
+  discarded at best and destructive at worst. In plain fields, if the operator takes the
+  keyboard mid-phrase, Clyffy stops.
+- **Provenance.** Every event carries who (`operator` / `clyffy/<scope>/<role>` /
+  `channel/<caller>`) and what caused it (a chain id). Attribution is *scoped*, not
+  threaded: work inside `bus.as(actor, …)` is attributed to that actor including acts
+  raised deep inside Theia by it.
+- **A declared event catalog.** 21 events across four planes (`act` / `sense` / `teach` /
+  `state`), each with its meaning and fields, served at `GET /webforge/catalog`. Events
+  are declared, not invented; an undeclared name is a warning we can see.
+- **The workbench reports itself.** Opening a file by clicking and opening it through
+  Clyffy produce the same event, differing only in provenance.
+- **Vibe-coder defaults**: editor 15px/24px line height, terminal 14px, dark theme by
+  default (the art and the workbench finally belong to the same world).
+
+**Receipts (CI instance):** `surface.list` found settings with live values and the chat
+prompt; `surface.set setting:editor.fontSize` applied and read back; `type.real` put
+"what does this file do?" **visibly into the Monaco chat prompt**, character by character;
+invoking one command recorded three rows under one chain and one actor. Tape discipline:
+a boot that produced **696 rows dropped to 8** once derived settings and output plumbing
+stopped being counted as acts — a session now reads as
+`workbench.ready → layer → perspective → walkthrough → guide.shown(clyffy) →
+guide.completed(operator, typedRatio 1) → surface.set(channel/http)`.
+
 ---
 
 ## Where it stands

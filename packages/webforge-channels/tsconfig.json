@@ -22,6 +22,9 @@
       "path": "../terminal"
     },
     {
+      "path": "../webforge-runtime"
+    },
+    {
       "path": "../workspace"
     }
   ]
