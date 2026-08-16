@@ -14,7 +14,7 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { MessageService, URI } from '@theia/core';
+import { MessageService, PreferenceService, URI } from '@theia/core';
 import { inject, injectable } from '@theia/core/shared/inversify';
 import { EditorManager } from '@theia/editor/lib/browser';
 import { TerminalService } from '@theia/terminal/lib/browser/base/terminal-service';
@@ -22,6 +22,7 @@ import { TerminalWidget } from '@theia/terminal/lib/browser/base/terminal-widget
 import { WorkspaceService } from '@theia/workspace/lib/browser';
 import { WebForgeChannelClient, WebForgeChannelService, WebForgeStateSnapshot } from '../common/webforge-channel-protocol';
 import { WebForgeGuidedTyping } from './webforge-guided-typing';
+import { WEBFORGE_GUIDED_TYPING_THRESHOLD } from './webforge-preferences';
 
 /**
  * Executes channel ops in the LIVE workbench — visibly, because the point is to show
@@ -45,6 +46,9 @@ export class WebForgeChannelClientImpl implements WebForgeChannelClient {
 
     @inject(WebForgeGuidedTyping)
     protected readonly guidedTyping: WebForgeGuidedTyping;
+
+    @inject(PreferenceService)
+    protected readonly preferences: PreferenceService;
 
     protected teachingTerminal: TerminalWidget | undefined;
 
@@ -106,7 +110,10 @@ export class WebForgeChannelClientImpl implements WebForgeChannelClient {
         }
         const terminal = await this.getTeachingTerminal();
         this.terminalService.open(terminal, { mode: 'activate' });
-        const effectiveThreshold = typeof threshold === 'number' && threshold > 0 && threshold <= 1 ? threshold : 0.7;
+        // An explicit threshold on the op wins; otherwise the operator's own preference,
+        // because how much help feels like help is a personal setting.
+        const preferred = this.preferences.get<number>(WEBFORGE_GUIDED_TYPING_THRESHOLD, 0.7);
+        const effectiveThreshold = typeof threshold === 'number' && threshold > 0 && threshold <= 1 ? threshold : preferred;
         this.guidedTyping.show(terminal, trimmed, note, effectiveThreshold, result => {
             this.backendService?.reportGuideEvent(result.type, { command: result.command, typedRatio: result.typedRatio })
                 .then(undefined, () => { /* tape unavailable — the lesson still happened */ });

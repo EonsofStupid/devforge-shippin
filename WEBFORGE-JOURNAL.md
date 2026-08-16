@@ -102,6 +102,34 @@ curling `state.get` with no tab open; it timed out at the client instead of answ
 The naming + guided-surface canon (Clyffy's address scheme, the competence ladder, the
 art direction) lives in `shippin-forge/docs/CLYFFY-ORCHESTRATION.md`.
 
+### W9b — The Clyffy walkthrough, in Phosphor Flat
+The mock made real. New in `@theia/webforge-channels`:
+
+- **`webforge-walkthrough-scenes.ts`** — five scenes drawn as inline SVG in the house
+  art language. Every fill is a palette token (`--wf-a1`…`--wf-a6`), so switching
+  lineage re-themes all the art with **no re-export and no animation runtime** (Lottie's
+  player alone is ~250KB, and baked art can never be theme-aware). Three rules hold the
+  style: vibrancy from `screen` overlap rather than a bigger palette; exactly **one
+  focal plane** per scene with a hard-offset shadow and a 1px light edge; motion on the
+  existing tokens — planes arrive staggered on the 120ms beat, the focal plane settles
+  last, and `prefers-reduced-motion` gets the final frame.
+- **`webforge-walkthrough.ts`** — the overlay. It is deliberately *not* a wizard in a
+  box: when a scene performs its act the scrim drops and the card retreats to the
+  corner, so the learner watches the **real** editor open the **real** file and the
+  **real** terminal take the command. Acts: open the workspace's house rules
+  (`AGENTS.md`, falling back to a README, then any file), guided-type `ls`, reveal
+  Clyffy. Escape steps out without burning the tour; only the explicit exit marks it
+  done and drops the operator into the full workbench.
+- **First-run front door (D6 default-on)** — a new operator lands in `webforge.guided`
+  with the walkthrough offered over it. Shown once, always re-openable from
+  **Help → Guided Walkthrough**; `webforge.walkthrough.reset` offers it again.
+- **Preferences** — `webforge.walkthrough.autoStart`, `webforge.walkthrough.lineage`
+  (amber / green / chroma, live-swaps the open overlay), and
+  `webforge.guidedTyping.threshold`, which the `guide.type` op now honours when the
+  caller doesn't specify one. How much help feels like help is a personal setting.
+- **Tape** — `walkthrough.started` / `.scene` / `.completed` / `.skipped` join the guide
+  rows, so the competence ladder is measured rather than assumed.
+
 ---
 
 ## Where it stands

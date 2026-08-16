@@ -15,7 +15,7 @@
 // *****************************************************************************
 
 import { inject, injectable } from '@theia/core/shared/inversify';
-import { WebForgeChannelClient, WebForgeChannelService } from '../common/webforge-channel-protocol';
+import { WalkthroughEventType, WebForgeChannelClient, WebForgeChannelService } from '../common/webforge-channel-protocol';
 import { WebForgeEventTape } from './webforge-event-tape';
 
 /**
@@ -42,5 +42,13 @@ export class WebForgeChannelServiceImpl implements WebForgeChannelService {
     async reportGuideEvent(type: 'guide.completed' | 'guide.abandoned', data: { command: string; typedRatio: number }): Promise<void> {
         const clamped = Math.max(0, Math.min(1, Number(data?.typedRatio) || 0));
         this.tape.emit(type, { command: String(data?.command ?? '').slice(0, 300), typedRatio: clamped });
+    }
+
+    async reportWalkthroughEvent(type: WalkthroughEventType, data: { scene: string; index: number; total: number }): Promise<void> {
+        this.tape.emit(type, {
+            scene: String(data?.scene ?? '').slice(0, 120),
+            index: Number(data?.index) || 0,
+            total: Number(data?.total) || 0
+        });
     }
 }

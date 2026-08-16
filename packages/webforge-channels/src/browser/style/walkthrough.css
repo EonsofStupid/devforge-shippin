@@ -1,0 +1,281 @@
+/********************************************************************************
+ * Copyright (C) 2026 Shippin.
+ *
+ * This program and the accompanying materials are made available under the
+ * terms of the Eclipse Public License v. 2.0 which is available at
+ * http://www.eclipse.org/legal/epl-2.0.
+ *
+ * This Source Code may also be made available under the following Secondary
+ * Licenses when the conditions for such availability set forth in the Eclipse
+ * Public License v. 2.0 are satisfied: GNU General Public License, version 2
+ * with the GNU Classpath Exception which is available at
+ * https://www.gnu.org/software/classpath/license.html.
+ *
+ * SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
+ ********************************************************************************/
+
+/* ── Phosphor Flat ────────────────────────────────────────────────────────────
+   Six art inks per lineage, bound as custom properties so a lineage change
+   re-themes every scene without re-exporting a single vector. Surfaces borrow
+   Theia's own theme variables so the overlay belongs to whatever theme the
+   operator runs, while the art keeps its own deliberate palette.            */
+
+.webforge-walkthrough {
+    --wf-a1: #FFB000;   /* guidance      */
+    --wf-a2: #FF7A3D;   /* ember         */
+    --wf-a3: #7CE38B;   /* machinery     */
+    --wf-a4: #6C8CFF;   /* Clyffy speaks */
+    --wf-a5: #B58CFF;   /* depth         */
+    --wf-a6: #FF6B8A;   /* trouble       */
+
+    --wf-focal: var(--wf-a1);
+    --wf-plate: #1B1E2C;
+    --wf-ground: #101119;
+    --wf-edge: var(--theia-editorWidget-border, #262A3D);
+    --wf-dim: #868DA8;
+
+    --wf-arrive: 240ms;
+    --wf-settle: 900ms;
+    --wf-beat: 120ms;
+    --wf-ease: cubic-bezier(.22, .61, .36, 1);
+
+    position: fixed;
+    inset: 0;
+    z-index: 3000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+    pointer-events: none;
+}
+
+.webforge-walkthrough[data-lineage="green"] {
+    --wf-a1: #7CE38B;
+    --wf-a2: #33D17A;
+    --wf-a3: #B8F5C4;
+    --wf-a4: #6C8CFF;
+    --wf-a5: #4ABF9B;
+}
+
+.webforge-walkthrough[data-lineage="chroma"] {
+    --wf-a1: #55E6FF;
+    --wf-a2: #FF55C8;
+    --wf-a3: #7CE38B;
+    --wf-a4: #6C5EB5;
+    --wf-a5: #B58CFF;
+}
+
+.webforge-walkthrough .wf-scrim {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(9, 10, 16, .74), rgba(9, 10, 16, .93));
+    pointer-events: auto;
+    transition: opacity var(--wf-settle) var(--wf-ease);
+}
+
+/* Acting: the overlay steps aside so the learner watches the real workbench. */
+.webforge-walkthrough.wf-acting .wf-scrim {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.webforge-walkthrough .wf-card {
+    position: relative;
+    display: grid;
+    grid-template-columns: minmax(0, 300px) minmax(0, 1fr);
+    gap: 22px;
+    align-items: center;
+    width: 100%;
+    max-width: 660px;
+    padding: 20px;
+    border-radius: 12px;
+    background: var(--theia-editorWidget-background, #181A26);
+    border: 1px solid var(--wf-edge);
+    color: var(--theia-foreground, #C9CEE2);
+    pointer-events: auto;
+    /* The one focal object on screen: crisp offset, no soft haze. */
+    box-shadow: 5px 6px 0 rgba(0, 0, 0, .55), inset 0 0 0 1px rgba(255, 255, 255, .05);
+    transition:
+        transform var(--wf-settle) var(--wf-ease),
+        max-width var(--wf-settle) var(--wf-ease),
+        opacity var(--wf-arrive) var(--wf-ease);
+}
+
+.webforge-walkthrough.wf-acting .wf-card {
+    max-width: 380px;
+    margin: auto 0 0 auto;
+    grid-template-columns: 1fr;
+    opacity: .97;
+}
+
+.webforge-walkthrough.wf-acting .wf-art-slot {
+    display: none;
+}
+
+/* The art keeps its own ground in every theme: `screen` compositing only reads as
+   vibrance over a dark field, and Phosphor Flat is a deliberate single visual world. */
+.webforge-walkthrough .wf-art-slot {
+    min-width: 0;
+    padding: 10px;
+    border-radius: 10px;
+    background: var(--wf-ground);
+    border: 1px solid rgba(255, 255, 255, .06);
+}
+
+.webforge-walkthrough .wf-art {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.webforge-walkthrough .wf-copy {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    min-width: 0;
+}
+
+.webforge-walkthrough .wf-step {
+    font-family: var(--theia-code-font-family, monospace);
+    font-size: 10.5px;
+    letter-spacing: .16em;
+    text-transform: uppercase;
+    color: var(--wf-focal);
+}
+
+.webforge-walkthrough .wf-title {
+    margin: 0;
+    font-family: var(--theia-code-font-family, monospace);
+    font-size: 17px;
+    font-weight: 600;
+    letter-spacing: -.01em;
+    line-height: 1.3;
+    text-wrap: balance;
+}
+
+.webforge-walkthrough .wf-body {
+    margin: 0;
+    font-size: 13px;
+    line-height: 1.6;
+    color: var(--theia-descriptionForeground, #868DA8);
+}
+
+.webforge-walkthrough .wf-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 9px;
+    margin-top: 4px;
+}
+
+.webforge-walkthrough .wf-btn {
+    font-family: var(--theia-code-font-family, monospace);
+    font-size: 12px;
+    border-radius: 7px;
+    padding: 8px 14px;
+    cursor: pointer;
+    border: 1px solid transparent;
+    transition: transform var(--wf-beat) var(--wf-ease);
+}
+
+.webforge-walkthrough .wf-btn:active {
+    transform: translateY(1px);
+}
+
+.webforge-walkthrough .wf-btn:focus-visible {
+    outline: 2px solid var(--wf-a4);
+    outline-offset: 2px;
+}
+
+.webforge-walkthrough .wf-btn-primary {
+    background: var(--wf-focal);
+    color: #14150E;
+    font-weight: 600;
+}
+
+.webforge-walkthrough .wf-btn-ghost {
+    background: transparent;
+    border-color: var(--wf-edge);
+    color: var(--theia-descriptionForeground, #868DA8);
+}
+
+.webforge-walkthrough .wf-btn-ghost:hover {
+    color: var(--theia-foreground, #C9CEE2);
+}
+
+.webforge-walkthrough .wf-dots {
+    display: flex;
+    gap: 5px;
+    margin-top: 2px;
+}
+
+.webforge-walkthrough .wf-dots i {
+    display: block;
+    width: 16px;
+    height: 3px;
+    border-radius: 2px;
+    background: var(--wf-edge);
+}
+
+.webforge-walkthrough .wf-dots i.on {
+    background: var(--wf-focal);
+}
+
+/* ── motion: planes arrive staggered on the beat, focal settles last ──────── */
+.webforge-walkthrough .wf-plane {
+    opacity: 0;
+}
+
+.webforge-walkthrough .wf-playing .wf-plane {
+    animation: wf-arrive var(--wf-settle) var(--wf-ease) forwards;
+}
+
+.webforge-walkthrough .wf-playing .wf-p1 { animation-delay: 0ms; }
+.webforge-walkthrough .wf-playing .wf-p2 { animation-delay: 120ms; }
+.webforge-walkthrough .wf-playing .wf-p3 { animation-delay: 240ms; }
+.webforge-walkthrough .wf-playing .wf-p4 { animation-delay: 360ms; }
+.webforge-walkthrough .wf-playing .wf-p5 { animation-delay: 520ms; }
+
+@keyframes wf-arrive {
+    from {
+        opacity: 0;
+        transform: translateY(14px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Vibrancy from overlap, not from a bigger palette. */
+.webforge-walkthrough .wf-blend {
+    mix-blend-mode: screen;
+}
+
+.webforge-walkthrough .wf-pulse {
+    animation: wf-pulse 1.6s var(--wf-ease) infinite;
+}
+
+@keyframes wf-pulse {
+    0%, 100% { opacity: .85; }
+    50% { opacity: .35; }
+}
+
+@media (max-width: 860px) {
+    .webforge-walkthrough .wf-card {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    .webforge-walkthrough *,
+    .webforge-walkthrough .wf-plane {
+        animation: none !important;
+        transition: none !important;
+    }
+
+    .webforge-walkthrough .wf-plane {
+        opacity: 1;
+    }
+}

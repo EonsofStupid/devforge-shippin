@@ -14,6 +14,9 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
+import '../../src/browser/style/walkthrough.css';
+
+import { CommandContribution, MenuContribution, PreferenceContribution } from '@theia/core';
 import { FrontendApplicationContribution, RemoteConnectionProvider, ServiceConnectionProvider } from '@theia/core/lib/browser';
 import { PerspectiveContribution } from '@theia/core/lib/browser/perspective-service';
 import { ContainerModule } from '@theia/core/shared/inversify';
@@ -22,8 +25,13 @@ import { WebForgeAgentsMdSeeder } from './webforge-agents-md-seeder';
 import { WebForgeChannelClientImpl } from './webforge-channel-client-impl';
 import { WebForgeGuidedPerspectiveContribution } from './webforge-guided-perspective';
 import { WebForgeGuidedTyping } from './webforge-guided-typing';
+import { WebForgePreferencesSchema } from './webforge-preferences';
+import { WebForgeWalkthrough } from './webforge-walkthrough';
+import { WebForgeWalkthroughContribution } from './webforge-walkthrough-contribution';
 
 export default new ContainerModule(bind => {
+    bind(PreferenceContribution).toConstantValue({ schema: WebForgePreferencesSchema });
+
     bind(WebForgeGuidedTyping).toSelf().inSingletonScope();
 
     bind(WebForgeGuidedPerspectiveContribution).toSelf().inSingletonScope();
@@ -31,6 +39,12 @@ export default new ContainerModule(bind => {
 
     bind(WebForgeChannelClientImpl).toSelf().inSingletonScope();
     bind(WebForgeChannelClient).toService(WebForgeChannelClientImpl);
+
+    bind(WebForgeWalkthrough).toSelf().inSingletonScope();
+    bind(WebForgeWalkthroughContribution).toSelf().inSingletonScope();
+    bind(CommandContribution).toService(WebForgeWalkthroughContribution);
+    bind(MenuContribution).toService(WebForgeWalkthroughContribution);
+    bind(FrontendApplicationContribution).toService(WebForgeWalkthroughContribution);
 
     bind(WebForgeAgentsMdSeeder).toSelf().inSingletonScope();
     bind(FrontendApplicationContribution).toService(WebForgeAgentsMdSeeder);

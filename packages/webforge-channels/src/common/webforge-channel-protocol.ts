@@ -73,4 +73,16 @@ export interface WebForgeChannelService {
     setClient(client: WebForgeChannelClient | undefined): void;
     /** Frontend → backend: record a guide outcome as a CloudEvents row on the tape. */
     reportGuideEvent(type: 'guide.completed' | 'guide.abandoned', data: { command: string; typedRatio: number }): Promise<void>;
+    /**
+     * Frontend → backend: record walkthrough progress on the tape. Teaching is only
+     * measurable if it is written down — this is what makes the competence ladder a
+     * signal rather than a guess.
+     */
+    reportWalkthroughEvent(type: WalkthroughEventType, data: { scene: string; index: number; total: number }): Promise<void>;
 }
+
+export type WalkthroughEventType =
+    | 'walkthrough.started'
+    | 'walkthrough.scene'
+    | 'walkthrough.completed'
+    | 'walkthrough.skipped';
