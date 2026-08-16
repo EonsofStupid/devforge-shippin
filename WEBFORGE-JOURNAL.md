@@ -81,6 +81,27 @@ its workspace from the instance's `--root-dir`).
 **Receipt:** unit active, `<title>WebForge</title>` on :8102, edge chain healthy
 (unauthenticated → login 200, authenticated → WebForge).
 
+### W9a — The Guided perspective (simplify by arrangement, not amputation)
+Theia's `PerspectiveService` (`packages/core/src/browser/perspective-service.ts`) turns
+out to be exactly the lever the barrier problem needs: view placements, primary views,
+collapsed areas, per-perspective saved layouts — and an `activePerspectiveId` **context
+key**, so menus/commands/views can be gated with `when` clauses instead of forking the
+workbench. Nothing is deleted; the command palette still reaches everything.
+
+New `webforge.guided` perspective
+(`packages/webforge-channels/src/browser/webforge-guided-perspective.ts`): the work in the
+centre, Clyffy on the right, explorer left but collapsed, bottom panel collapsed. The
+terminal and the tree appear when a lesson opens them through the channels rather than as
+a wall of chrome on boot. Reachable from **View → Switch Perspective (Experimental)**.
+
+Also fixed here: a channel op against a tab that had gone away **hung forever** (the RPC
+proxy outlives the tab and never rejects, so the whole channel wedged). Every op is now
+bounded — a lapsed frontend answers **504** in 8s instead of hanging the caller. Found by
+curling `state.get` with no tab open; it timed out at the client instead of answering.
+
+The naming + guided-surface canon (Clyffy's address scheme, the competence ladder, the
+art direction) lives in `shippin-forge/docs/CLYFFY-ORCHESTRATION.md`.
+
 ---
 
 ## Where it stands
@@ -98,7 +119,9 @@ CloudEvents tape, and guided typing.
   a first-class render mode** (decision D1 = Reading A).
 - **W8 rest** — forgemaster mints WebForge instances per operator; session→instance
   routing at the gateway.
-- **W9** — SME tailoring pass (layout defaults, theme port, front door) — needs D3
-  (public label) and D4 (the arrangement).
+- **W9** — SME tailoring pass: the Clyffy walkthrough (Phosphor Flat art over the live
+  workbench, each scene ending in a real act through the channels), the competence ladder
+  (Watch / Guided / Assisted / Full), theme port, front door — needs D3 (public label),
+  D4 (the arrangement), D5 (palette lineage), D6 (is Guided the default front door).
 - Polish: name the default agent persona Clyffy; guided-typing threshold as a
   preference.

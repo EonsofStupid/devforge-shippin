@@ -15,14 +15,19 @@
 // *****************************************************************************
 
 import { FrontendApplicationContribution, RemoteConnectionProvider, ServiceConnectionProvider } from '@theia/core/lib/browser';
+import { PerspectiveContribution } from '@theia/core/lib/browser/perspective-service';
 import { ContainerModule } from '@theia/core/shared/inversify';
 import { WEBFORGE_CHANNEL_SERVICE_PATH, WebForgeChannelClient, WebForgeChannelService } from '../common/webforge-channel-protocol';
 import { WebForgeAgentsMdSeeder } from './webforge-agents-md-seeder';
 import { WebForgeChannelClientImpl } from './webforge-channel-client-impl';
+import { WebForgeGuidedPerspectiveContribution } from './webforge-guided-perspective';
 import { WebForgeGuidedTyping } from './webforge-guided-typing';
 
 export default new ContainerModule(bind => {
     bind(WebForgeGuidedTyping).toSelf().inSingletonScope();
+
+    bind(WebForgeGuidedPerspectiveContribution).toSelf().inSingletonScope();
+    bind(PerspectiveContribution).toService(WebForgeGuidedPerspectiveContribution);
 
     bind(WebForgeChannelClientImpl).toSelf().inSingletonScope();
     bind(WebForgeChannelClient).toService(WebForgeChannelClientImpl);

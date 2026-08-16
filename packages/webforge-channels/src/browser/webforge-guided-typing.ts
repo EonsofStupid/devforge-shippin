@@ -92,7 +92,13 @@ export class WebForgeGuidedTyping {
         overlay.appendChild(chip);
         node.appendChild(overlay);
 
-        const state = { overlay, node, report, command, progress: 0, filled: false, typedBeforeFill: undefined as number | undefined, keyListener: undefined as unknown as (e: KeyboardEvent) => void };
+        const state = {
+            overlay, node, report, command,
+            progress: 0,
+            filled: false,
+            typedBeforeFill: undefined as number | undefined,
+            keyListener: undefined as unknown as (e: KeyboardEvent) => void
+        };
 
         const render = () => {
             chip.textContent = '';

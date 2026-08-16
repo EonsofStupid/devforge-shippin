@@ -3,9 +3,11 @@
   "version": "1.74.0",
   "description": "WebForge direct channels — the Act plane: lets Clyffy (and, later, the Shippin chat webapp) manipulate the application visibly: open files, type in the terminal, teach while working.",
   "dependencies": {
+    "@theia/ai-chat-ui": "1.74.0",
     "@theia/core": "1.74.0",
     "@theia/editor": "1.74.0",
     "@theia/filesystem": "1.74.0",
+    "@theia/navigator": "1.74.0",
     "@theia/terminal": "1.74.0",
     "@theia/workspace": "1.74.0",
     "tslib": "^2.6.2"

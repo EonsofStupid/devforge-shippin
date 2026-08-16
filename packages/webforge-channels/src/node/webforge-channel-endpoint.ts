@@ -21,6 +21,15 @@ import * as express from '@theia/core/shared/express';
 import { WebForgeChannelServiceImpl } from './webforge-channel-service-impl';
 import { WebForgeEventTape } from './webforge-event-tape';
 
+/** How long an op waits on the attached frontend before it is declared lapsed. */
+const FRONTEND_TIMEOUT_MS = 8000;
+
+class FrontendTimeout extends Error {
+    constructor() {
+        super('the attached frontend did not answer — reload the WebForge tab');
+    }
+}
+
 /**
  * The HTTP face of the WebForge channels: `POST /webforge/channel`.
  *
@@ -52,6 +61,27 @@ export class WebForgeChannelEndpoint implements BackendApplicationContribution {
         this.tape.emit(type, data);
     }
 
+    /**
+     * A client proxy left behind by a tab that has since gone away never rejects — the RPC
+     * call simply waits forever and the whole channel wedges. Every op is therefore bounded:
+     * a lapsed frontend answers as a timeout instead of hanging the caller.
+     */
+    protected async withFrontend<T>(work: Promise<T>): Promise<T> {
+        let timer: NodeJS.Timeout | undefined;
+        try {
+            return await Promise.race([
+                work,
+                new Promise<never>((_resolve, reject) => {
+                    timer = setTimeout(() => reject(new FrontendTimeout()), FRONTEND_TIMEOUT_MS);
+                })
+            ]);
+        } finally {
+            if (timer) {
+                clearTimeout(timer);
+            }
+        }
+    }
+
     configure(app: express.Application): void {
         app.post('/webforge/channel', express.json(), async (req, res) => {
             const token = (process.env.WEBFORGE_CHANNEL_TOKEN || '').trim();
@@ -72,33 +102,35 @@ export class WebForgeChannelEndpoint implements BackendApplicationContribution {
             try {
                 switch (body.op) {
                     case 'app.open': {
-                        const result = await client.openFile(String(body.path ?? ''), typeof body.line === 'number' ? body.line : undefined);
+                        const result = await this.withFrontend(client.openFile(String(body.path ?? ''), typeof body.line === 'number' ? body.line : undefined));
                         this.emitEvent('app.open', { path: result.opened });
                         res.json(result);
                         return;
                     }
                     case 'terminal.type': {
-                        const result = await client.terminalType(String(body.text ?? ''), body.submit === true);
+                        const result = await this.withFrontend(client.terminalType(String(body.text ?? ''), body.submit === true));
                         this.emitEvent('terminal.type', { chars: result.typed, submitted: result.submitted });
                         res.json(result);
                         return;
                     }
                     case 'notify': {
-                        const result = await client.notify(String(body.text ?? ''), body.kind === 'warn' ? 'warn' : 'info');
+                        const result = await this.withFrontend(client.notify(String(body.text ?? ''), body.kind === 'warn' ? 'warn' : 'info'));
                         this.emitEvent('notify', { chars: String(body.text ?? '').length });
                         res.json(result);
                         return;
                     }
                     case 'guide.type': {
                         const command = String(body.command ?? '');
-                        const result = await client.guideType(command, typeof body.note === 'string' ? body.note : undefined, typeof body.threshold === 'number' ? body.threshold : undefined);
+                        const note = typeof body.note === 'string' ? body.note : undefined;
+                        const threshold = typeof body.threshold === 'number' ? body.threshold : undefined;
+                        const result = await this.withFrontend(client.guideType(command, note, threshold));
                         this.emitEvent('guide.shown', { chars: command.length });
                         res.json(result);
                         return;
                     }
                     case 'state.get': {
                         // Sensing never wakes its own tape — reads are not acts.
-                        res.json(await client.getState());
+                        res.json(await this.withFrontend(client.getState()));
                         return;
                     }
                     default: {
@@ -107,6 +139,10 @@ export class WebForgeChannelEndpoint implements BackendApplicationContribution {
                     }
                 }
             } catch (error) {
+                if (error instanceof FrontendTimeout) {
+                    res.status(504).json({ error: error.message });
+                    return;
+                }
                 this.logger.error('[webforge-channels] op failed', error);
                 res.status(500).json({ error: error instanceof Error ? error.message : String(error) });
             }
