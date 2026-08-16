@@ -1,0 +1,50 @@
+{
+  "name": "@theia/webforge-channels",
+  "version": "1.74.0",
+  "description": "WebForge direct channels — the Act plane: lets Clyffy (and, later, the Shippin chat webapp) manipulate the application visibly: open files, type in the terminal, teach while working.",
+  "dependencies": {
+    "@theia/core": "1.74.0",
+    "@theia/editor": "1.74.0",
+    "@theia/filesystem": "1.74.0",
+    "@theia/terminal": "1.74.0",
+    "@theia/workspace": "1.74.0",
+    "tslib": "^2.6.2"
+  },
+  "main": "lib/common",
+  "publishConfig": {
+    "access": "public"
+  },
+  "theiaExtensions": [
+    {
+      "frontend": "lib/browser/webforge-channels-frontend-module",
+      "backend": "lib/node/webforge-channels-backend-module"
+    }
+  ],
+  "keywords": [
+    "theia-extension",
+    "webforge"
+  ],
+  "license": "EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/EonsofStupid/devforge-shippin.git"
+  },
+  "files": [
+    "lib",
+    "src"
+  ],
+  "scripts": {
+    "build": "theiaext build",
+    "clean": "theiaext clean",
+    "compile": "theiaext compile",
+    "lint": "theiaext lint",
+    "test": "theiaext test",
+    "watch": "theiaext watch"
+  },
+  "devDependencies": {
+    "@theia/ext-scripts": "1.74.0"
+  },
+  "nyc": {
+    "extends": "../../configs/nyc.json"
+  }
+}
