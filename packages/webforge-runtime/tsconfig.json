@@ -9,11 +9,26 @@
     "src"
   ],
   "references": [
-    { "path": "../core" },
-    { "path": "../editor" },
-    { "path": "../filesystem" },
-    { "path": "../monaco" },
-    { "path": "../terminal" },
-    { "path": "../workspace" }
+    {
+      "path": "../core"
+    },
+    {
+      "path": "../editor"
+    },
+    {
+      "path": "../filesystem"
+    },
+    {
+      "path": "../mini-browser"
+    },
+    {
+      "path": "../monaco"
+    },
+    {
+      "path": "../terminal"
+    },
+    {
+      "path": "../workspace"
+    }
   ]
 }

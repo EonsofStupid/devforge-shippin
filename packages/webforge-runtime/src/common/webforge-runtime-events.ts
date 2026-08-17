@@ -72,6 +72,8 @@ export const WEBFORGE_EVENT_CATALOG: RuntimeEventDescriptor[] = [
     { name: 'act.surface.invoked', plane: 'act', description: 'A surface was invoked (button, command, submit).', fields: ['surface', 'kind'] },
     { name: 'act.setting.changed', plane: 'act', description: 'A preference changed.', fields: ['key', 'scope'] },
     { name: 'act.notice.shown', plane: 'act', description: 'A message was shown to the operator.', fields: ['chars', 'kind'] },
+    { name: 'act.preview.opened', plane: 'act', description: 'The running application was put on screen.', fields: ['url'] },
+    { name: 'act.preview.navigated', plane: 'act', description: 'The preview was pointed at a different URL.', fields: ['url'] },
 
     // ── sense ─────────────────────────────────────────────────────────────────
     { name: 'sense.state.read', plane: 'sense', description: 'The workbench state snapshot was read.', fields: ['editors', 'terminals'] },
@@ -90,7 +92,9 @@ export const WEBFORGE_EVENT_CATALOG: RuntimeEventDescriptor[] = [
     // ── state ─────────────────────────────────────────────────────────────────
     { name: 'state.workbench.ready', plane: 'state', description: 'The workbench finished starting.', fields: ['perspective'] },
     { name: 'state.perspective.changed', plane: 'state', description: 'The active perspective changed.', fields: ['perspective'] },
-    { name: 'state.layer.changed', plane: 'state', description: 'The operator moved between the simplified and the full layer.', fields: ['layer'] }
+    { name: 'state.layer.changed', plane: 'state', description: 'The operator moved between the simplified and the full layer.', fields: ['layer'] },
+    // eslint-disable-next-line max-len
+    { name: 'state.devserver.detected', plane: 'state', description: 'A dev server announced itself in a terminal; the preview follows automatically.', fields: ['port'] }
 ];
 
 export namespace WebForgeEvents {

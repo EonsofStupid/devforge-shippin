@@ -21,6 +21,7 @@ import { FrontendApplicationContribution, RemoteConnectionProvider, ServiceConne
 import { ContainerModule } from '@theia/core/shared/inversify';
 import { WEBFORGE_RUNTIME_SERVICE_PATH, WebForgeRuntimeSink } from '../common/webforge-runtime-protocol';
 import { WebForgeLayerService } from './webforge-layers';
+import { WebForgePreview } from './webforge-preview';
 import { WebForgeRealTyping } from './webforge-real-typing';
 import { WebForgeRuntimeBus } from './webforge-runtime-bus';
 import { WebForgeRuntimeObserver } from './webforge-runtime-observer';
@@ -47,6 +48,10 @@ export default new ContainerModule(bind => {
         bind(provider).toSelf().inSingletonScope();
         bind(WebForgeSurfaceProvider).toService(provider);
     }
+
+    bind(WebForgePreview).toSelf().inSingletonScope();
+    bind(WebForgeSurfaceProvider).toService(WebForgePreview);
+    bind(FrontendApplicationContribution).toService(WebForgePreview);
 
     bind(WebForgeRuntimeObserver).toSelf().inSingletonScope();
     bind(FrontendApplicationContribution).toService(WebForgeRuntimeObserver);

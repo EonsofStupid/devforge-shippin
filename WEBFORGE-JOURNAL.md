@@ -175,6 +175,35 @@ stopped being counted as acts — a session now reads as
 `workbench.ready → layer → perspective → walkthrough → guide.shown(clyffy) →
 guide.completed(operator, typedRatio 1) → surface.set(channel/http)`.
 
+### W11 — Preview: the running thing, beside the code
+Positioning made explicit: **WebForge is the tier-2 Lovable concept** — Lovable's barrier
+of entry, with the real IDE underneath and an AI that can drive all of it. Under that
+reading the preview is not a feature, it is half the product, so it landed next.
+
+- **Preview proxy** (`webforge-preview-proxy.ts`). A dev server started in the operator's
+  terminal listens on the *instance's* loopback; the operator's browser is on another
+  machine, so `localhost:5173` in an iframe is the wrong computer. Ports are proxied
+  through the session the gateway already authorized —
+  `/webforge/preview/<port>/…` → `127.0.0.1:<port>` — including **WebSocket upgrades**,
+  so hot reload survives. Without upgrades the preview is a screenshot; the point is that
+  it is the running thing. Only plausible user-space loopback ports are reachable.
+- **Dev-server detection** (`webforge-preview.ts`). Terminal output is watched for a
+  served URL; the first one opens the preview automatically, split beside the code. A
+  newcomer never learns what a dev server is or which port it chose — they run the project
+  and the app appears.
+- **Preview is a surface** (`preview:app`, capabilities read/set/focus/invoke), so Clyffy
+  navigates and reloads it through the generic surface plane. **No new channel ops were
+  needed for any of this** — which is the engine paying for itself.
+- Catalog grew by declaration: `act.preview.opened`, `act.preview.navigated`,
+  `state.devserver.detected`.
+
+**Receipt (CI):** `terminal.type "cd site && python3 -m http.server 5199"` → tape shows
+`act.terminal.typed(channel/http)` → `state.devserver.detected {port:5199}` →
+`act.preview.opened` → the Preview tab renders the page through the proxy. Two bugs found
+and fixed by that receipt: a greedy path capture swallowed python's closing paren
+(`…:5199/)`), and an already-proxied URL was proxied a second time, nesting the instance's
+own port inside the path.
+
 ---
 
 ## Where it stands

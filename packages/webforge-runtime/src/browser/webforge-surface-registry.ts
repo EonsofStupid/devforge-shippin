@@ -39,7 +39,7 @@ export interface WebForgeSurfaceProvider {
 /** Surface addresses are `<kind>:<rest>`; the kind routes to its provider. */
 export function surfaceKindOf(id: string): SurfaceKind | undefined {
     const kind = id.split(':', 1)[0];
-    return ['input', 'setting', 'command', 'view', 'editor', 'terminal'].includes(kind)
+    return ['input', 'setting', 'command', 'view', 'editor', 'terminal', 'preview'].includes(kind)
         ? kind as SurfaceKind
         : undefined;
 }

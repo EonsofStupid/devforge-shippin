@@ -32,7 +32,8 @@ export type SurfaceKind =
     | 'command'    /** an invocable workbench command */
     | 'view'       /** a panel or widget */
     | 'editor'     /** an open text editor */
-    | 'terminal';  /** a terminal pane */
+    | 'terminal'   /** a terminal pane */
+    | 'preview';   /** the running application */
 
 export type SurfaceCapability =
     | 'read'    /** the value can be read */
