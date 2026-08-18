@@ -14,10 +14,10 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { ContributionProvider, Emitter, type Event } from '@theia/core';
-import { type FrontendApplicationContribution } from '@theia/core/lib/browser';
-import { inject, injectable, named } from '@theia/core/shared/inversify';
-import debounce = require('@theia/core/shared/lodash.debounce');
+import { ContributionProvider, Emitter, type Event } from '@ogun/core';
+import { type FrontendApplicationContribution } from '@ogun/core/lib/browser';
+import { inject, injectable, named } from '@ogun/core/shared/inversify';
+import debounce = require('@ogun/core/shared/lodash.debounce');
 import type { ChangeSetDecoration, ChangeSetElement } from '../common';
 
 /**

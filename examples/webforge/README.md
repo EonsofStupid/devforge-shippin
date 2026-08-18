@@ -2,7 +2,7 @@
 
 The Shippin web instance of DevForge — the custom split that lowers the barrier of
 entry to the IDE. Full VS Code extension support (Open VSX router), the Theia AI suite
-(Clyffy's home in `@theia/ai-chat`), and in-app browsing (mini-browser today; the
+(Clyffy's home in `@ogun/ai-chat`), and in-app browsing (mini-browser today; the
 bundled headless engine and skeleton-render experiences to come).
 
 ```bash

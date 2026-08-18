@@ -17,10 +17,10 @@
 import * as decompress from 'decompress';
 import * as path from 'path';
 import * as filenamify from 'filenamify';
-import { FileUri } from '@theia/core/lib/node';
-import * as fs from '@theia/core/shared/fs-extra';
+import { FileUri } from '@ogun/core/lib/node';
+import * as fs from '@ogun/core/shared/fs-extra';
 import { PluginVSCodeEnvironment } from '../common/plugin-vscode-environment';
-import { PluginIdentifiers, PluginPackage } from '@theia/plugin-ext/lib/common/plugin-protocol';
+import { PluginIdentifiers, PluginPackage } from '@ogun/plugin-ext/lib/common/plugin-protocol';
 
 /**
  * Extracts extension identity from a VSIX file by reading its package.json.

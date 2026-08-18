@@ -53,7 +53,7 @@ The Model Context Server (MCP) UI Integration package provides the UI for users 
 ### Configuration
 
 To configure MCP servers, open the preferences and add entries to the `MCP Servers Configuration` section.
-See the Theia MCP package (`@theia/ai-mcp`) README for more information.
+See the Theia MCP package (`@ogun/ai-mcp`) README for more information.
 
 ### More Information
 
@@ -63,7 +63,7 @@ See the Theia MCP package (`@theia/ai-mcp`) README for more information.
 
 ## Additional Information
 
-- [API documentation for `@theia/mcp-ui`](https://eclipse-theia.github.io/theia/docs/next/modules/_theia_ai-mcp-ui.html)
+- [API documentation for `@ogun/mcp-ui`](https://eclipse-theia.github.io/theia/docs/next/modules/_theia_ai-mcp-ui.html)
 - [Theia - GitHub](https://github.com/eclipse-theia/theia)
 - [Theia - Website](https://theia-ide.org/)
 

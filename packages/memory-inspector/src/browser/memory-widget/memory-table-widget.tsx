@@ -14,12 +14,12 @@
  * SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
  ********************************************************************************/
 
-import { ContextMenuRenderer, ReactWidget, Widget } from '@theia/core/lib/browser';
-import { ThemeService } from '@theia/core/lib/browser/theming';
-import { Deferred } from '@theia/core/lib/common/promise-util';
-import { ThemeChangeEvent } from '@theia/core/lib/common/theme';
-import { inject, injectable, postConstruct } from '@theia/core/shared/inversify';
-import * as React from '@theia/core/shared/react';
+import { ContextMenuRenderer, ReactWidget, Widget } from '@ogun/core/lib/browser';
+import { ThemeService } from '@ogun/core/lib/browser/theming';
+import { Deferred } from '@ogun/core/lib/common/promise-util';
+import { ThemeChangeEvent } from '@ogun/core/lib/common/theme';
+import { inject, injectable, postConstruct } from '@ogun/core/shared/inversify';
+import * as React from '@ogun/core/shared/react';
 import { hexStrToUnsignedLong } from '../../common/util';
 import { MemoryProviderService } from '../memory-provider/memory-provider-service';
 import { EasilyMappedObject, MemoryHoverRendererService } from '../utils/memory-hover-renderer';
@@ -29,7 +29,7 @@ import {
 } from '../utils/memory-widget-utils';
 import { VariableDecoration, VariableFinder } from '../utils/memory-widget-variable-utils';
 import { MemoryOptionsWidget } from './memory-options-widget';
-import debounce = require('@theia/core/shared/lodash.debounce');
+import debounce = require('@ogun/core/shared/lodash.debounce');
 
 /* eslint-disable @typescript-eslint/no-explicit-any */
 export namespace MemoryTable {

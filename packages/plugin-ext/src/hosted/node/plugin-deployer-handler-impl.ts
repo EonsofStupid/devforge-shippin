@@ -14,17 +14,17 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import * as fs from '@theia/core/shared/fs-extra';
-import { injectable, inject, named } from '@theia/core/shared/inversify';
-import { ILogger } from '@theia/core';
+import * as fs from '@ogun/core/shared/fs-extra';
+import { injectable, inject, named } from '@ogun/core/shared/inversify';
+import { ILogger } from '@ogun/core';
 import {
     PluginDeployerHandler, PluginDeployerEntry, PluginEntryPoint, DeployedPlugin,
     PluginDependencies, PluginType, PluginIdentifiers
 } from '../../common/plugin-protocol';
 import { HostedPluginReader } from './plugin-reader';
-import { Deferred } from '@theia/core/lib/common/promise-util';
+import { Deferred } from '@ogun/core/lib/common/promise-util';
 import { HostedPluginLocalizationService } from './hosted-plugin-localization-service';
-import { Stopwatch } from '@theia/core/lib/common';
+import { Stopwatch } from '@ogun/core/lib/common';
 import { PluginUninstallationManager } from '../../main/node/plugin-uninstallation-manager';
 
 @injectable()

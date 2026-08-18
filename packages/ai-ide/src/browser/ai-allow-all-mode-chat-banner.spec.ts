@@ -14,18 +14,18 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { enableJSDOM } from '@theia/core/lib/browser/test/jsdom';
+import { enableJSDOM } from '@ogun/core/lib/browser/test/jsdom';
 let disableJSDOM = enableJSDOM();
-import { FrontendApplicationConfigProvider } from '@theia/core/lib/browser/frontend-application-config-provider';
+import { FrontendApplicationConfigProvider } from '@ogun/core/lib/browser/frontend-application-config-provider';
 FrontendApplicationConfigProvider.set({});
 import { expect } from 'chai';
-import { Emitter } from '@theia/core';
-import { PreferenceChange } from '@theia/core/lib/common/preferences';
+import { Emitter } from '@ogun/core';
+import { PreferenceChange } from '@ogun/core/lib/common/preferences';
 import {
     DEFAULT_TOOL_CONFIRMATION_PREFERENCE,
     TOOL_CONFIRMATION_PREFERENCE,
     ToolConfirmationMode
-} from '@theia/ai-chat/lib/common/chat-tool-preferences';
+} from '@ogun/ai-chat/lib/common/chat-tool-preferences';
 import { AiAllowAllModeChatBanner } from './ai-allow-all-mode-chat-banner';
 disableJSDOM();
 

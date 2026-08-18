@@ -12,14 +12,14 @@
 
 ## Description
 
-The `@theia/output` extension contributes an `output` widget to the application that displays output to end-users.
+The `@ogun/output` extension contributes an `output` widget to the application that displays output to end-users.
 The displayed output usually comes from external commands executed by the backend, e.g. `git` or language-servers.
 Generally, output requires a bit more of the user's attention compared to log messages as they tend to be more verbose,
 and help identify internal operations which a user can act upon if problems occur.
 
 ## Additional Information
 
-- [API documentation for `@theia/output`](https://eclipse-theia.github.io/theia/docs/next/modules/_theia_output.html)
+- [API documentation for `@ogun/output`](https://eclipse-theia.github.io/theia/docs/next/modules/_theia_output.html)
 - [Theia - GitHub](https://github.com/eclipse-theia/theia)
 - [Theia - Website](https://theia-ide.org/)
 

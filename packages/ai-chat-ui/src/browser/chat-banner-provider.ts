@@ -14,8 +14,8 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import * as React from '@theia/core/shared/react';
-import { Event } from '@theia/core';
+import * as React from '@ogun/core/shared/react';
+import { Event } from '@ogun/core';
 
 /**
  * Contribution point for compact, persistent banners shown above the chat view

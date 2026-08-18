@@ -14,7 +14,7 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { ContributionProvider } from '@theia/core/lib/common/contribution-provider';
+import { ContributionProvider } from '@ogun/core/lib/common/contribution-provider';
 import { Tool, Resource, Prompt, PromptMessage } from '@modelcontextprotocol/sdk/types';
 import { z } from 'zod';
 

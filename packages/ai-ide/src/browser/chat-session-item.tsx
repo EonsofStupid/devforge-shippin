@@ -16,12 +16,12 @@
 
 import {
     ChatAgentService, ChatService, ChatSession, ChatSessionMetadata, ChatSessionStatus
-} from '@theia/ai-chat';
-import { DisposableCollection, Event } from '@theia/core';
-import { buttonKeyboardProps, codicon, HoverService, isActivationKey } from '@theia/core/lib/browser';
-import { MarkdownRenderer } from '@theia/core/lib/browser/markdown-rendering/markdown-renderer';
-import { nls } from '@theia/core/lib/common/nls';
-import * as React from '@theia/core/shared/react';
+} from '@ogun/ai-chat';
+import { DisposableCollection, Event } from '@ogun/core';
+import { buttonKeyboardProps, codicon, HoverService, isActivationKey } from '@ogun/core/lib/browser';
+import { MarkdownRenderer } from '@ogun/core/lib/browser/markdown-rendering/markdown-renderer';
+import { nls } from '@ogun/core/lib/common/nls';
+import * as React from '@ogun/core/shared/react';
 import { ChatSessionItemAction } from './chat-session-item-action-contribution';
 import { buildRestoredSessionTooltip, buildSessionTooltip } from './chat-session-tooltip';
 

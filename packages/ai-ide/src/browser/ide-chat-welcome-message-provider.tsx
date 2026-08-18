@@ -14,22 +14,22 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { ChatWelcomeMessageProvider } from '@theia/ai-chat-ui/lib/browser/chat-tree-view';
-import * as React from '@theia/core/shared/react';
-import { nls } from '@theia/core/lib/common/nls';
-import { inject, injectable, postConstruct } from '@theia/core/shared/inversify';
-import { codicon, CommonCommands, LocalizedMarkdown, MarkdownRenderer } from '@theia/core/lib/browser';
-import { CommandRegistry, DisposableCollection, Emitter, Event, PreferenceScope } from '@theia/core';
-import { AgentService, FrontendLanguageModelRegistry } from '@theia/ai-core/lib/common';
-import { PreferenceService } from '@theia/core/lib/common';
-import { DEFAULT_CHAT_AGENT_PREF, BYPASS_MODEL_REQUIREMENT_PREF, PERSISTED_SESSION_LIMIT_PREF, SESSION_STORAGE_PREF } from '@theia/ai-chat/lib/common/ai-chat-preferences';
-import { ChatAgentRecommendationService, ChatAgentService, ChatService } from '@theia/ai-chat/lib/common';
-import { ToolConfirmationManager } from '@theia/ai-chat/lib/browser/chat-tool-preference-bindings';
-import { DEFAULT_TOOL_CONFIRMATION_PREFERENCE, TOOL_CONFIRMATION_PREFERENCE, ToolConfirmationMode } from '@theia/ai-chat/lib/common/chat-tool-preferences';
+import { ChatWelcomeMessageProvider } from '@ogun/ai-chat-ui/lib/browser/chat-tree-view';
+import * as React from '@ogun/core/shared/react';
+import { nls } from '@ogun/core/lib/common/nls';
+import { inject, injectable, postConstruct } from '@ogun/core/shared/inversify';
+import { codicon, CommonCommands, LocalizedMarkdown, MarkdownRenderer } from '@ogun/core/lib/browser';
+import { CommandRegistry, DisposableCollection, Emitter, Event, PreferenceScope } from '@ogun/core';
+import { AgentService, FrontendLanguageModelRegistry } from '@ogun/ai-core/lib/common';
+import { PreferenceService } from '@ogun/core/lib/common';
+import { DEFAULT_CHAT_AGENT_PREF, BYPASS_MODEL_REQUIREMENT_PREF, PERSISTED_SESSION_LIMIT_PREF, SESSION_STORAGE_PREF } from '@ogun/ai-chat/lib/common/ai-chat-preferences';
+import { ChatAgentRecommendationService, ChatAgentService, ChatService } from '@ogun/ai-chat/lib/common';
+import { ToolConfirmationManager } from '@ogun/ai-chat/lib/browser/chat-tool-preference-bindings';
+import { DEFAULT_TOOL_CONFIRMATION_PREFERENCE, TOOL_CONFIRMATION_PREFERENCE, ToolConfirmationMode } from '@ogun/ai-chat/lib/common/chat-tool-preferences';
 import { OPEN_AI_CONFIG_VIEW, OPEN_AI_CONFIG_VIEW_TOOLS } from './ai-configuration/ai-configuration-view-contribution';
-import { AIActivationService } from '@theia/ai-core/lib/browser';
-import { FrontendApplicationConfigProvider } from '@theia/core/lib/browser/frontend-application-config-provider';
-import { WorkspaceCommands } from '@theia/workspace/lib/browser/workspace-commands';
+import { AIActivationService } from '@ogun/ai-core/lib/browser';
+import { FrontendApplicationConfigProvider } from '@ogun/core/lib/browser/frontend-application-config-provider';
+import { WorkspaceCommands } from '@ogun/workspace/lib/browser/workspace-commands';
 
 const TheiaIdeAiLogo = ({ width = 120, height = 120, className = '' }) =>
     <svg
@@ -356,7 +356,7 @@ This typically happens in custom IDE distributions where Theia AI language model
 
 **To resolve this:**
 
-- Install one or more language model provider packages (e.g., '@theia/ai-openai', '@theia/ai-anthropic', '@theia/ai-ollama')
+- Install one or more language model provider packages (e.g., '@ogun/ai-openai', '@ogun/ai-anthropic', '@ogun/ai-ollama')
 - Or use agents that don't require Theia Language Models (e.g., Claude Code)
                 `}
                     markdownRenderer={this.markdownRenderer}

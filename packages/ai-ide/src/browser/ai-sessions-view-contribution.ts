@@ -14,12 +14,12 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { AI_CHAT_HOME, ChatCommands } from '@theia/ai-chat-ui/lib/browser/chat-view-commands';
-import { AIViewContribution, ENABLE_AI_CONTEXT_KEY } from '@theia/ai-core/lib/browser';
-import { Command, CommandRegistry, nls } from '@theia/core';
-import { codicon } from '@theia/core/lib/browser';
-import { TabBarToolbarContribution, TabBarToolbarRegistry } from '@theia/core/lib/browser/shell/tab-bar-toolbar';
-import { inject, injectable } from '@theia/core/shared/inversify';
+import { AI_CHAT_HOME, ChatCommands } from '@ogun/ai-chat-ui/lib/browser/chat-view-commands';
+import { AIViewContribution, ENABLE_AI_CONTEXT_KEY } from '@ogun/ai-core/lib/browser';
+import { Command, CommandRegistry, nls } from '@ogun/core';
+import { codicon } from '@ogun/core/lib/browser';
+import { TabBarToolbarContribution, TabBarToolbarRegistry } from '@ogun/core/lib/browser/shell/tab-bar-toolbar';
+import { inject, injectable } from '@ogun/core/shared/inversify';
 import { AISessionsWidget } from './ai-sessions-widget';
 
 export const AI_SESSIONS_TOGGLE_COMMAND_ID = 'aiSessions:toggle';

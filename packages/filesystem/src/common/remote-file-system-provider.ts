@@ -14,11 +14,11 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { injectable, inject, postConstruct } from '@theia/core/shared/inversify';
-import URI from '@theia/core/lib/common/uri';
-import { Emitter } from '@theia/core/lib/common/event';
-import { Disposable, DisposableCollection } from '@theia/core/lib/common/disposable';
-import { BinaryBuffer } from '@theia/core/lib/common/buffer';
+import { injectable, inject, postConstruct } from '@ogun/core/shared/inversify';
+import URI from '@ogun/core/lib/common/uri';
+import { Emitter } from '@ogun/core/lib/common/event';
+import { Disposable, DisposableCollection } from '@ogun/core/lib/common/disposable';
+import { BinaryBuffer } from '@ogun/core/lib/common/buffer';
 import {
     FileWriteOptions, FileOpenOptions, FileChangeType,
     FileSystemProviderCapabilities, FileChange, Stat, FileOverwriteOptions, WatchOptions, FileType, FileSystemProvider, FileDeleteOptions,
@@ -26,13 +26,13 @@ import {
     FileSystemProviderError, FileSystemProviderErrorCode, FileUpdateOptions, hasUpdateCapability, FileUpdateResult, FileReadStreamOptions, hasFileReadStreamCapability,
     ReadOnlyMessageFileSystemProvider
 } from './files';
-import { RpcServer, RpcProxy, RpcProxyFactory } from '@theia/core/lib/common/messaging/proxy-factory';
-import { ApplicationError } from '@theia/core/lib/common/application-error';
-import { Deferred } from '@theia/core/lib/common/promise-util';
-import type { TextDocumentContentChangeEvent } from '@theia/core/shared/vscode-languageserver-protocol';
-import { newWriteableStream, ReadableStreamEvents } from '@theia/core/lib/common/stream';
-import { CancellationToken, cancelled } from '@theia/core/lib/common/cancellation';
-import { MarkdownString } from '@theia/core/lib/common/markdown-rendering';
+import { RpcServer, RpcProxy, RpcProxyFactory } from '@ogun/core/lib/common/messaging/proxy-factory';
+import { ApplicationError } from '@ogun/core/lib/common/application-error';
+import { Deferred } from '@ogun/core/lib/common/promise-util';
+import type { TextDocumentContentChangeEvent } from '@ogun/core/shared/vscode-languageserver-protocol';
+import { newWriteableStream, ReadableStreamEvents } from '@ogun/core/lib/common/stream';
+import { CancellationToken, cancelled } from '@ogun/core/lib/common/cancellation';
+import { MarkdownString } from '@ogun/core/lib/common/markdown-rendering';
 
 export const remoteFileSystemPath = '/services/remote-filesystem';
 

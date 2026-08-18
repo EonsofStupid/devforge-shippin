@@ -14,10 +14,10 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { nls } from '@theia/core';
-import { ReactRenderer } from '@theia/core/lib/browser';
-import { inject, postConstruct } from '@theia/core/shared/inversify';
-import * as React from '@theia/core/shared/react';
+import { nls } from '@ogun/core';
+import { ReactRenderer } from '@ogun/core/lib/browser';
+import { inject, postConstruct } from '@ogun/core/shared/inversify';
+import * as React from '@ogun/core/shared/react';
 import { FileDialogTree } from './file-dialog-tree';
 
 const TOGGLE_HIDDEN_PANEL_CLASS = 'theia-ToggleHiddenPanel';

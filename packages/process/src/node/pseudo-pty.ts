@@ -15,7 +15,7 @@
 // *****************************************************************************
 
 import { IPty } from 'node-pty';
-import { Event } from '@theia/core';
+import { Event } from '@ogun/core';
 
 export class PseudoPty implements IPty {
 

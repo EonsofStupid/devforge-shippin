@@ -14,17 +14,17 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import URI from '@theia/core/lib/common/uri';
-import { Event, Emitter, CancellationToken } from '@theia/core/lib/common';
-import { Disposable, DisposableCollection } from '@theia/core/lib/common/disposable';
+import URI from '@ogun/core/lib/common/uri';
+import { Event, Emitter, CancellationToken } from '@ogun/core/lib/common';
+import { Disposable, DisposableCollection } from '@ogun/core/lib/common/disposable';
 import {
     FileSystemProvider, FileSystemProviderCapabilities, WatchOptions, FileDeleteOptions, FileOverwriteOptions, FileWriteOptions, FileOpenOptions, FileChange, Stat, FileType,
     hasReadWriteCapability, hasFileFolderCopyCapability, hasOpenReadWriteCloseCapability, hasAccessCapability, FileUpdateOptions, hasUpdateCapability, FileUpdateResult,
     FileReadStreamOptions,
     hasFileReadStreamCapability
 } from './files';
-import type { TextDocumentContentChangeEvent } from '@theia/core/shared/vscode-languageserver-protocol';
-import { ReadableStreamEvents } from '@theia/core/lib/common/stream';
+import type { TextDocumentContentChangeEvent } from '@ogun/core/shared/vscode-languageserver-protocol';
+import { ReadableStreamEvents } from '@ogun/core/lib/common/stream';
 
 export class DelegatingFileSystemProvider implements Required<FileSystemProvider>, Disposable {
 

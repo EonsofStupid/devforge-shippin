@@ -14,7 +14,7 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { interfaces } from '@theia/core/shared/inversify';
+import { interfaces } from '@ogun/core/shared/inversify';
 import { DirtyDiffDecorator } from './dirty-diff-decorator';
 import { DirtyDiffNavigator } from './dirty-diff-navigator';
 import { DirtyDiffWidget, DirtyDiffWidgetFactory, DirtyDiffWidgetProps } from './dirty-diff-widget';

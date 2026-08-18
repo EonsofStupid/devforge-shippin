@@ -14,9 +14,9 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { CommandContribution, PreferenceContribution } from '@theia/core';
-import { ContainerModule } from '@theia/core/shared/inversify';
-import { WorkspaceService } from '@theia/workspace/lib/browser';
+import { CommandContribution, PreferenceContribution } from '@ogun/core';
+import { ContainerModule } from '@ogun/core/shared/inversify';
+import { WorkspaceService } from '@ogun/workspace/lib/browser';
 import { CollaborationColorService } from './collaboration-color-service';
 import { CollaborationFrontendContribution } from './collaboration-frontend-contribution';
 import { CollaborationInstance, CollaborationInstanceFactory, CollaborationInstanceOptions, createCollaborationInstanceContainer } from './collaboration-instance';

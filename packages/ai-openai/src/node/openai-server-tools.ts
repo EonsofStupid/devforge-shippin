@@ -14,7 +14,7 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { ServerToolDescriptor } from '@theia/ai-core';
+import { ServerToolDescriptor } from '@ogun/ai-core';
 
 export const OPENAI_WEB_SEARCH = 'web_search';
 export const OPENAI_WEB_SEARCH_REPLAY_DATA_KEY = 'openAiWebSearchReplay';

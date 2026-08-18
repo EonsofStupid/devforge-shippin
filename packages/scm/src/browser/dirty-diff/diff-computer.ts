@@ -16,7 +16,7 @@
 
 import * as jsdiff from 'diff';
 import { ContentLinesArrayLike } from './content-lines';
-import { Position, Range, uinteger } from '@theia/core/shared/vscode-languageserver-protocol';
+import { Position, Range, uinteger } from '@ogun/core/shared/vscode-languageserver-protocol';
 
 export class DiffComputer {
 

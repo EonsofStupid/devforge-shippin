@@ -14,8 +14,8 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { FrontendApplicationConfigProvider } from '@theia/core/lib/browser/frontend-application-config-provider';
-import { enableJSDOM } from '@theia/core/lib/browser/test/jsdom';
+import { FrontendApplicationConfigProvider } from '@ogun/core/lib/browser/frontend-application-config-provider';
+import { enableJSDOM } from '@ogun/core/lib/browser/test/jsdom';
 const disableJSDOM = enableJSDOM();
 // Another spec in this package may have already set the configuration; mocha loads all
 // specs into one process and `set` throws if called twice, so guard it.
@@ -26,10 +26,10 @@ try {
 }
 
 import { expect } from 'chai';
-import { Container } from '@theia/core/shared/inversify';
-import { MessageService, PreferenceService } from '@theia/core';
-import { WindowService } from '@theia/core/lib/browser/window/window-service';
-import URI from '@theia/core/lib/common/uri';
+import { Container } from '@ogun/core/shared/inversify';
+import { MessageService, PreferenceService } from '@ogun/core';
+import { WindowService } from '@ogun/core/lib/browser/window/window-service';
+import URI from '@ogun/core/lib/common/uri';
 import { MCP_SERVERS_PREF } from '../common/mcp-preferences';
 import { MCPFrontendService } from '../common/mcp-server-manager';
 import { MCPServerEditor, MCPServerEditorImpl, MCPServerEditDialogFactory, MCPInstallEntry } from './mcp-server-editor';

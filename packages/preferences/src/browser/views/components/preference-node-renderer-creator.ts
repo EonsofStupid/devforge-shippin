@@ -14,8 +14,8 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { ContributionProvider, Disposable, Emitter, Event, Prioritizeable } from '@theia/core';
-import { inject, injectable, interfaces, named } from '@theia/core/shared/inversify';
+import { ContributionProvider, Disposable, Emitter, Event, Prioritizeable } from '@ogun/core';
+import { inject, injectable, interfaces, named } from '@ogun/core/shared/inversify';
 import { Preference } from '../../util/preference-types';
 import { PreferenceHeaderRenderer, PreferenceNodeRenderer } from './preference-node-renderer';
 

@@ -17,19 +17,19 @@
 // tslint:disable-next-line:no-implicit-dependencies
 import 'reflect-metadata';
 import { createTaskTestContainer } from './test/task-test-container';
-import { BackendApplication } from '@theia/core/lib/node/backend-application';
+import { BackendApplication } from '@ogun/core/lib/node/backend-application';
 import { TaskExitedEvent, TaskInfo, TaskServer, TaskWatcher, TaskConfiguration } from '../common';
 import { ProcessType, ProcessTaskConfiguration } from '../common/process/task-protocol';
 import * as http from 'http';
 import * as https from 'https';
-import { isWindows, isOSX } from '@theia/core/lib/common/os';
-import { FileUri } from '@theia/core/lib/node';
-import { terminalsPath } from '@theia/terminal/lib/common/terminal-protocol';
-import { TestWebSocketChannelSetup } from '@theia/core/lib/node/messaging/test/test-web-socket-channel';
+import { isWindows, isOSX } from '@ogun/core/lib/common/os';
+import { FileUri } from '@ogun/core/lib/node';
+import { terminalsPath } from '@ogun/terminal/lib/common/terminal-protocol';
+import { TestWebSocketChannelSetup } from '@ogun/core/lib/node/messaging/test/test-web-socket-channel';
 import { expect } from 'chai';
-import URI from '@theia/core/lib/common/uri';
-import { StringBufferingStream } from '@theia/terminal/lib/node/buffering-stream';
-import { BackendApplicationConfigProvider } from '@theia/core/lib/node/backend-application-config-provider';
+import URI from '@ogun/core/lib/common/uri';
+import { StringBufferingStream } from '@ogun/terminal/lib/node/buffering-stream';
+import { BackendApplicationConfigProvider } from '@ogun/core/lib/node/backend-application-config-provider';
 
 // test scripts that we bundle with tasks
 const commandShortRunning = './task';

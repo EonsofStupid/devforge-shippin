@@ -12,7 +12,7 @@
 
 ## Description
 
-The `@theia/ai-ollama` integrates Ollama's models with Theia AI.
+The `@ogun/ai-ollama` integrates Ollama's models with Theia AI.
 
 ## Additional Information
 
@@ -21,7 +21,7 @@ The `@theia/ai-ollama` integrates Ollama's models with Theia AI.
 
 ## License
 
-- [API documentation for `@theia/ai-ollama`](https://eclipse-theia.github.io/theia/docs/next/modules/_theia_ai-ollama.html)
+- [API documentation for `@ogun/ai-ollama`](https://eclipse-theia.github.io/theia/docs/next/modules/_theia_ai-ollama.html)
 - [Eclipse Public License 2.0](http://www.eclipse.org/legal/epl-2.0/)
 - [(Secondary) GNU General Public License, version 2 with the GNU Classpath Exception](https://projects.eclipse.org/license/secondary-gpl-2.0-cp)
 

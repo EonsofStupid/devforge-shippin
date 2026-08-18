@@ -15,7 +15,7 @@
 // *****************************************************************************
 
 import { expect } from 'chai';
-import { KeyStoreService } from '@theia/core/lib/common/key-store';
+import { KeyStoreService } from '@ogun/core/lib/common/key-store';
 import { MCPOAuthFrontendDelegate } from '../common/mcp-oauth';
 import { MCPOAuthCallbackService } from './mcp-oauth-callback-service';
 import { MCPOAuthClientProviderFactory } from './mcp-oauth-client-provider-factory';

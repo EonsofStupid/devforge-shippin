@@ -19,11 +19,11 @@ describe('CredentialsService', function () {
     this.timeout(5000);
     const { assert } = chai;
 
-    const { CredentialsService } = require('@theia/core/lib/browser/credentials-service');
+    const { CredentialsService } = require('@ogun/core/lib/browser/credentials-service');
 
     /** @type {import('inversify').Container} */
     const container = window['theia'].container;
-    /** @type {import('@theia/core/lib/browser/credentials-service').CredentialsService} */
+    /** @type {import('@ogun/core/lib/browser/credentials-service').CredentialsService} */
     const credentials = container.get(CredentialsService);
 
     const serviceName = 'theia-test';

@@ -18,11 +18,11 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import * as theia from '@theia/plugin';
+import * as theia from '@ogun/plugin';
 import * as rpc from '../../common';
 import { EditorsAndDocumentsExtImpl } from '../editors-and-documents';
-import * as notebookCommon from '@theia/notebook/lib/common';
-import { Disposable, URI } from '@theia/core';
+import * as notebookCommon from '@ogun/notebook/lib/common';
+import { Disposable, URI } from '@ogun/core';
 import * as typeConverters from '../type-converters';
 import { ModelAddedData, NotebookCellDto, NotebookCellsChangedEventDto, NotebookModelAddedData, NotebookOutputDto } from '../../common';
 import { NotebookRange } from '../types-impl';

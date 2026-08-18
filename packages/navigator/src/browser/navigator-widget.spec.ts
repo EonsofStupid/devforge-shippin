@@ -14,18 +14,18 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { enableJSDOM } from '@theia/core/lib/browser/test/jsdom';
+import { enableJSDOM } from '@ogun/core/lib/browser/test/jsdom';
 const disableJSDOM = enableJSDOM();
 
-import { FrontendApplicationConfigProvider } from '@theia/core/lib/browser/frontend-application-config-provider';
+import { FrontendApplicationConfigProvider } from '@ogun/core/lib/browser/frontend-application-config-provider';
 FrontendApplicationConfigProvider.set({});
 
 import { expect } from 'chai';
-import URI from '@theia/core/lib/common/uri';
-import { MessageService } from '@theia/core/lib/common/message-service';
-import { ContextMenuRenderer, TreeProps } from '@theia/core/lib/browser';
-import { FileStatNode } from '@theia/filesystem/lib/browser';
-import { WorkspaceService } from '@theia/workspace/lib/browser';
+import URI from '@ogun/core/lib/common/uri';
+import { MessageService } from '@ogun/core/lib/common/message-service';
+import { ContextMenuRenderer, TreeProps } from '@ogun/core/lib/browser';
+import { FileStatNode } from '@ogun/filesystem/lib/browser';
+import { WorkspaceService } from '@ogun/workspace/lib/browser';
 import { FileNavigatorWidget } from './navigator-widget';
 import { FileNavigatorModel } from './navigator-model';
 import { NavigatorFileClipboard } from './navigator-file-clipboard';

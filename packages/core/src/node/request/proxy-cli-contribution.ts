@@ -16,7 +16,7 @@
 
 import { inject, injectable } from 'inversify';
 import { MaybePromise } from '../../common/types';
-import { RequestConfiguration, RequestService } from '@theia/request';
+import { RequestConfiguration, RequestService } from '@ogun/request';
 import { Argv, Arguments } from 'yargs';
 import { CliContribution } from '../cli';
 

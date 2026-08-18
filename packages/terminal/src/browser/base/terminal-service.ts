@@ -13,8 +13,8 @@
 //
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
-import { Event } from '@theia/core/lib/common/event';
-import { WidgetOpenerOptions } from '@theia/core/lib/browser';
+import { Event } from '@ogun/core/lib/common/event';
+import { WidgetOpenerOptions } from '@ogun/core/lib/browser';
 import { TerminalWidgetOptions, TerminalWidget } from './terminal-widget';
 
 /**

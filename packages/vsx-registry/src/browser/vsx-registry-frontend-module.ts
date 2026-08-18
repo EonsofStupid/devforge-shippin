@@ -16,22 +16,22 @@
 
 import '../../src/browser/style/index.css';
 
-import { ContainerModule } from '@theia/core/shared/inversify';
-import { CommandContribution, MenuContribution } from '@theia/core/lib/common';
+import { ContainerModule } from '@ogun/core/shared/inversify';
+import { CommandContribution, MenuContribution } from '@ogun/core/lib/common';
 import {
     WidgetFactory, bindViewContribution, FrontendApplicationContribution, ViewContainerIdentifier, OpenHandler, WidgetManager, WebSocketConnectionProvider,
     WidgetStatusBarContribution,
     noopWidgetStatusBarContribution
-} from '@theia/core/lib/browser';
-import { ServiceConnectionProvider } from '@theia/core/lib/browser/messaging/service-connection-provider';
+} from '@ogun/core/lib/browser';
+import { ServiceConnectionProvider } from '@ogun/core/lib/browser/messaging/service-connection-provider';
 import { VSXExtensionsFilterContribution } from './vsx-extensions-filter-contribution';
 import { VSXExtensionsViewContainer } from './vsx-extensions-view-container';
 import { VSXExtensionsContribution } from './vsx-extensions-contribution';
 import { VSXExtensionsSearchBar } from './vsx-extensions-search-bar';
 import { VSXExtensionsModel } from './vsx-extensions-model';
-import { ColorContribution } from '@theia/core/lib/browser/color-application-contribution';
-import { bindRootContributionProvider } from '@theia/core/lib/common/contribution-provider';
-import { FuzzySearch } from '@theia/core/lib/common/fuzzy-search';
+import { ColorContribution } from '@ogun/core/lib/browser/color-application-contribution';
+import { bindRootContributionProvider } from '@ogun/core/lib/common/contribution-provider';
+import { FuzzySearch } from '@ogun/core/lib/common/fuzzy-search';
 import { ExtensionsSourceContribution } from './extensions-source-contribution';
 import { VSXExtensionsContributionAdapter } from './vsx-extensions-contribution-adapter';
 import { VSXExtensionsWidget, VSXExtensionsWidgetOptions } from './vsx-extensions-widget';
@@ -45,12 +45,12 @@ import { bindPreferenceProviderOverrides } from './recommended-extensions/prefer
 import { bindVsxExtensionsPreferences } from './vsx-extensions-preferences';
 import { VSXEnvironment, VSX_ENVIRONMENT_PATH } from '../common/vsx-environment';
 import { VSXRegistryService, VSX_REGISTRY_SERVICE_PATH } from '../common/vsx-registry-service';
-import { LanguageQuickPickService } from '@theia/core/lib/browser/i18n/language-quick-pick-service';
+import { LanguageQuickPickService } from '@ogun/core/lib/browser/i18n/language-quick-pick-service';
 import { VSXLanguageQuickPickService } from './vsx-language-quick-pick-service';
 import { VsxExtensionArgumentProcessor } from './vsx-extension-argument-processor';
-import { ArgumentProcessorContribution } from '@theia/plugin-ext/lib/main/browser/command-registry-main';
+import { ArgumentProcessorContribution } from '@ogun/plugin-ext/lib/main/browser/command-registry-main';
 import { ExtensionSchemaContribution } from './recommended-extensions/recommended-extensions-json-schema';
-import { JsonSchemaContribution } from '@theia/core/lib/browser/json-schema-store';
+import { JsonSchemaContribution } from '@ogun/core/lib/browser/json-schema-store';
 
 export default new ContainerModule((bind, unbind, isBound, rebind) => {
     bind(VSXEnvironment)

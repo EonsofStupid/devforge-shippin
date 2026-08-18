@@ -14,13 +14,13 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { enableJSDOM } from '@theia/core/lib/browser/test/jsdom';
+import { enableJSDOM } from '@ogun/core/lib/browser/test/jsdom';
 let disableJSDOM = enableJSDOM();
 
-import { FrontendApplicationConfigProvider } from '@theia/core/lib/browser/frontend-application-config-provider';
+import { FrontendApplicationConfigProvider } from '@ogun/core/lib/browser/frontend-application-config-provider';
 FrontendApplicationConfigProvider.set({});
 
-import { Disposable, Emitter, URI } from '@theia/core';
+import { Disposable, Emitter, URI } from '@ogun/core';
 import { expect } from 'chai';
 import * as sinon from 'sinon';
 import { FileChange, FileChangeType, FileSystemProvider, FileSystemProviderCapabilities, WatchOptions } from '../common/files';
@@ -883,7 +883,7 @@ describe('FileService applies files.watcherExclude to all watchers', () => {
 
         // The workspace root watcher already carries the configured excludes...
         fileService.watch(new URI('file:///project'), { recursive: true, excludes: ['**/node_modules/**'] });
-        // ...while an internal recursive watcher (e.g. @theia/ai-core) requests a child directory
+        // ...while an internal recursive watcher (e.g. @ogun/ai-core) requests a child directory
         // with empty excludes. Previously their exclude lists differed, so the child was not
         // subsumed and produced a second OS watcher (and duplicate change events, see #17247).
         fileService.watch(new URI('file:///project/.prompts'), { recursive: true, excludes: [] });

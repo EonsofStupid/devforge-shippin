@@ -14,10 +14,10 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { Channel, Disposable, Emitter, Event } from '@theia/core';
-import { ApplicationError } from '@theia/core/lib/common/application-error';
-import { IJSONSchema, IJSONSchemaSnippet } from '@theia/core/lib/common/json-schema';
-import { CommandIdVariables } from '@theia/variable-resolver/lib/common/variable-types';
+import { Channel, Disposable, Emitter, Event } from '@ogun/core';
+import { ApplicationError } from '@ogun/core/lib/common/application-error';
+import { IJSONSchema, IJSONSchemaSnippet } from '@ogun/core/lib/common/json-schema';
+import { CommandIdVariables } from '@ogun/variable-resolver/lib/common/variable-types';
 import { DebugConfiguration } from './debug-configuration';
 
 export interface DebuggerDescription {

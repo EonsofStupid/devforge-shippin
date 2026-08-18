@@ -14,19 +14,19 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { enableJSDOM } from '@theia/core/lib/browser/test/jsdom';
-import { ILogger } from '@theia/core';
+import { enableJSDOM } from '@ogun/core/lib/browser/test/jsdom';
+import { ILogger } from '@ogun/core';
 let disableJSDOM = enableJSDOM();
-import { FrontendApplicationConfigProvider } from '@theia/core/lib/browser/frontend-application-config-provider';
+import { FrontendApplicationConfigProvider } from '@ogun/core/lib/browser/frontend-application-config-provider';
 FrontendApplicationConfigProvider.set({});
 
 import 'reflect-metadata';
 
 import { expect } from 'chai';
 import * as sinon from 'sinon';
-import { Container } from '@theia/core/shared/inversify';
+import { Container } from '@ogun/core/shared/inversify';
 import { SkillsVariableContribution, SKILLS_VARIABLE, SKILL_VARIABLE, ResolvedSkillsVariable } from './skills-variable-contribution';
-import { FileService } from '@theia/filesystem/lib/browser/file-service';
+import { FileService } from '@ogun/filesystem/lib/browser/file-service';
 import { SkillService } from './skill-service';
 import { Skill } from '../common/skill';
 

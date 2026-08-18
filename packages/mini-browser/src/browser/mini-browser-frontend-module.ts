@@ -16,17 +16,17 @@
 
 import '../../src/browser/style/index.css';
 
-import { ContainerModule } from '@theia/core/shared/inversify';
-import URI from '@theia/core/lib/common/uri';
-import { OpenHandler } from '@theia/core/lib/browser/opener-service';
-import { WidgetFactory } from '@theia/core/lib/browser/widget-manager';
-import { bindRootContributionProvider } from '@theia/core/lib/common/contribution-provider';
-import { WebSocketConnectionProvider } from '@theia/core/lib/browser/messaging/ws-connection-provider';
-import { FrontendApplicationContribution } from '@theia/core/lib/browser/frontend-application-contribution';
-import { TabBarToolbarContribution } from '@theia/core/lib/browser/shell/tab-bar-toolbar';
-import { CommandContribution } from '@theia/core/lib/common/command';
-import { MenuContribution } from '@theia/core/lib/common/menu';
-import { NavigatableWidgetOptions } from '@theia/core/lib/browser/navigatable';
+import { ContainerModule } from '@ogun/core/shared/inversify';
+import URI from '@ogun/core/lib/common/uri';
+import { OpenHandler } from '@ogun/core/lib/browser/opener-service';
+import { WidgetFactory } from '@ogun/core/lib/browser/widget-manager';
+import { bindRootContributionProvider } from '@ogun/core/lib/common/contribution-provider';
+import { WebSocketConnectionProvider } from '@ogun/core/lib/browser/messaging/ws-connection-provider';
+import { FrontendApplicationContribution } from '@ogun/core/lib/browser/frontend-application-contribution';
+import { TabBarToolbarContribution } from '@ogun/core/lib/browser/shell/tab-bar-toolbar';
+import { CommandContribution } from '@ogun/core/lib/common/command';
+import { MenuContribution } from '@ogun/core/lib/common/menu';
+import { NavigatableWidgetOptions } from '@ogun/core/lib/browser/navigatable';
 import { MiniBrowserOpenHandler } from './mini-browser-open-handler';
 import { MiniBrowserService, MiniBrowserServicePath } from '../common/mini-browser-service';
 import { MiniBrowser, MiniBrowserOptions } from './mini-browser';

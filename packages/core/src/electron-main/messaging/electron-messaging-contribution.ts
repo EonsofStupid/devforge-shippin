@@ -14,7 +14,7 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { WebContents } from '@theia/electron/shared/electron';
+import { WebContents } from '@ogun/electron/shared/electron';
 import { inject, injectable, named, postConstruct } from 'inversify';
 import { ConnectionHandlers } from '../../node/messaging/default-messaging-service';
 import { AbstractChannel, Channel, ChannelMultiplexer, MessageProvider } from '../../common/message-rpc/channel';

@@ -18,7 +18,7 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import * as theia from '@theia/plugin';
+import * as theia from '@ogun/plugin';
 import { NotebookDocument } from './notebook-document';
 
 export class NotebookEditor {

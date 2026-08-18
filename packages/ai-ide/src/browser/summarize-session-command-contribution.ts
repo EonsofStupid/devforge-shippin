@@ -14,19 +14,19 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { ChatAgentLocation, ChatService } from '@theia/ai-chat/lib/common';
-import { CommandContribution, CommandRegistry, CommandService } from '@theia/core';
-import { TaskContextStorageService, TaskContextService } from '@theia/ai-chat/lib/browser/task-context-service';
-import { injectable, inject } from '@theia/core/shared/inversify';
+import { ChatAgentLocation, ChatService } from '@ogun/ai-chat/lib/common';
+import { CommandContribution, CommandRegistry, CommandService } from '@ogun/core';
+import { TaskContextStorageService, TaskContextService } from '@ogun/ai-chat/lib/browser/task-context-service';
+import { injectable, inject } from '@ogun/core/shared/inversify';
 import { AI_EXECUTE_PLAN_WITH_CODER } from '../common/summarize-session-commands';
 import { CoderAgent } from './coder-agent';
-import { TASK_CONTEXT_VARIABLE } from '@theia/ai-chat/lib/browser/task-context-variable';
+import { TASK_CONTEXT_VARIABLE } from '@ogun/ai-chat/lib/browser/task-context-variable';
 
-import { FILE_VARIABLE } from '@theia/ai-core/lib/browser/file-variable-contribution';
-import { AIVariableResolutionRequest } from '@theia/ai-core';
-import { FileService } from '@theia/filesystem/lib/browser/file-service';
-import { WorkspaceService } from '@theia/workspace/lib/browser';
-import { AICommandHandlerFactory } from '@theia/ai-core/lib/browser';
+import { FILE_VARIABLE } from '@ogun/ai-core/lib/browser/file-variable-contribution';
+import { AIVariableResolutionRequest } from '@ogun/ai-core';
+import { FileService } from '@ogun/filesystem/lib/browser/file-service';
+import { WorkspaceService } from '@ogun/workspace/lib/browser';
+import { AICommandHandlerFactory } from '@ogun/ai-core/lib/browser';
 
 @injectable()
 export class SummarizeSessionCommandContribution implements CommandContribution {

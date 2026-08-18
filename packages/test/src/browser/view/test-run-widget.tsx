@@ -14,15 +14,15 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { injectable, inject, postConstruct } from '@theia/core/shared/inversify';
-import { TreeWidget, TreeModel, TreeProps, CompositeTreeNode, TreeNode, TreeImpl, NodeProps, SelectableTreeNode } from '@theia/core/lib/browser/tree';
-import { ContextMenuRenderer, codicon } from '@theia/core/lib/browser';
-import { IconThemeService } from '@theia/core/lib/browser/icon-theme-service';
-import { ThemeService } from '@theia/core/lib/browser/theming';
-import { ContextKeyService } from '@theia/core/lib/browser/context-key-service';
+import { injectable, inject, postConstruct } from '@ogun/core/shared/inversify';
+import { TreeWidget, TreeModel, TreeProps, CompositeTreeNode, TreeNode, TreeImpl, NodeProps, SelectableTreeNode } from '@ogun/core/lib/browser/tree';
+import { ContextMenuRenderer, codicon } from '@ogun/core/lib/browser';
+import { IconThemeService } from '@ogun/core/lib/browser/icon-theme-service';
+import { ThemeService } from '@ogun/core/lib/browser/theming';
+import { ContextKeyService } from '@ogun/core/lib/browser/context-key-service';
 import { TestController, TestExecutionState, TestFailure, TestItem, TestMessage, TestOutputItem, TestRun, TestService } from '../test-service';
-import * as React from '@theia/core/shared/react';
-import { Disposable, DisposableCollection, Event, nls } from '@theia/core';
+import * as React from '@ogun/core/shared/react';
+import { Disposable, DisposableCollection, Event, nls } from '@ogun/core';
 import { TestExecutionStateManager } from './test-execution-state-manager';
 import { TestOutputUIModel } from './test-output-ui-model';
 

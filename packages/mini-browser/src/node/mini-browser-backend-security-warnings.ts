@@ -14,9 +14,9 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { BackendApplicationContribution } from '@theia/core/lib/node';
-import { BackendApplicationConfigProvider } from '@theia/core/lib/node/backend-application-config-provider';
-import { injectable } from '@theia/core/shared/inversify';
+import { BackendApplicationContribution } from '@ogun/core/lib/node';
+import { BackendApplicationConfigProvider } from '@ogun/core/lib/node/backend-application-config-provider';
+import { injectable } from '@ogun/core/shared/inversify';
 import { MiniBrowserEndpoint } from '../common/mini-browser-endpoint';
 
 @injectable()
@@ -35,9 +35,9 @@ export class MiniBrowserBackendSecurityWarnings implements BackendApplicationCon
             console.warn(`\
 MINI BROWSER SECURITY WARNING
 
-    Changing the @theia/mini-browser host pattern can lead to security vulnerabilities.
+    Changing the @ogun/mini-browser host pattern can lead to security vulnerabilities.
         Current pattern: "${envHostPattern}"
-    Please read @theia/mini-browser/README.md for more information.
+    Please read @ogun/mini-browser/README.md for more information.
 `
             );
         }

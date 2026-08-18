@@ -1,4 +1,4 @@
-/* eslint-disable @theia/runtime-import-check */
+/* eslint-disable @ogun/runtime-import-check */
 // *****************************************************************************
 // Copyright (C) 2018 TypeFox and others.
 //

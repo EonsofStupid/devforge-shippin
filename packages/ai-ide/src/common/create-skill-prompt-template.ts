@@ -13,7 +13,7 @@
 //
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
-import { PromptVariantSet } from '@theia/ai-core/lib/common';
+import { PromptVariantSet } from '@ogun/ai-core/lib/common';
 import {
     GET_WORKSPACE_FILE_LIST_FUNCTION_ID, FILE_CONTENT_FUNCTION_ID,
     FIND_FILES_BY_PATTERN_FUNCTION_ID

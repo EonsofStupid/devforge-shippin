@@ -12,14 +12,14 @@
 
 ## Description
 
-The experimental `@theia/telemetry` extension provides a typed service for reporting usage, error, and crash events from Theia frontends and backends. Applications decide where events go by contributing local or remote backend sinks; without a sink, the framework sends data nowhere.
+The experimental `@ogun/telemetry` extension provides a typed service for reporting usage, error, and crash events from Theia frontends and backends. Applications decide where events go by contributing local or remote backend sinks; without a sink, the framework sends data nowhere.
 
 Remote sinks are gated by the user-scoped `telemetry.telemetryLevel` preference, which defaults to `off`. Local sinks keep data on the machine and bypass consent, but all sinks respect `telemetry.filters`. A missing filter entry allows all declared sink interests, an empty array disables that sink, and a non-empty array restricts delivery to matching topics.
 
 ```typescript
-import { TelemetryEvent } from '@theia/telemetry/lib/common';
-import { TelemetrySink } from '@theia/telemetry/lib/node';
-import { injectable } from '@theia/core/shared/inversify';
+import { TelemetryEvent } from '@ogun/telemetry/lib/common';
+import { TelemetrySink } from '@ogun/telemetry/lib/node';
+import { injectable } from '@ogun/core/shared/inversify';
 
 @injectable()
 class ApplicationTelemetrySink implements TelemetrySink {
@@ -42,7 +42,7 @@ telemetryService.report('example/build/completed', {
 });
 ```
 
-See the [API samples](../../examples/api-samples) for a complete command and sink example, and the generated [`@theia/telemetry` API documentation](https://eclipse-theia.github.io/theia/docs/next/modules/_theia_telemetry.html) for the public contracts.
+See the [API samples](../../examples/api-samples) for a complete command and sink example, and the generated [`@ogun/telemetry` API documentation](https://eclipse-theia.github.io/theia/docs/next/modules/_theia_telemetry.html) for the public contracts.
 
 ## Customize consent
 

@@ -12,7 +12,7 @@
 
 ## Description
 
-The `@theia/markers` adds support for file markers (diagnostic markers (`errors`, `warnings`, `infos`, `hint`)) for a given file.
+The `@ogun/markers` adds support for file markers (diagnostic markers (`errors`, `warnings`, `infos`, `hint`)) for a given file.
 The extension contributes, the following:
 
 - `problems view`: a dedicated view to viewing diagnostic markers contributed by language-servers, linters, task problem matchers for the workspace
@@ -20,7 +20,7 @@ The extension contributes, the following:
 
 ## Additional Information
 
-- [API documentation for `@theia/markers`](https://eclipse-theia.github.io/theia/docs/next/modules/_theia_markers.html)
+- [API documentation for `@ogun/markers`](https://eclipse-theia.github.io/theia/docs/next/modules/_theia_markers.html)
 - [Theia - GitHub](https://github.com/eclipse-theia/theia)
 - [Theia - Website](https://theia-ide.org/)
 

@@ -14,12 +14,12 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import * as React from '@theia/core/shared/react';
-import { DisposableCollection } from '@theia/core';
+import * as React from '@ogun/core/shared/react';
+import { DisposableCollection } from '@ogun/core';
 import { NotificationManager, NotificationUpdateEvent } from './notifications-manager';
 import { NotificationComponent } from './notification-component';
-import { codicon, ContextMenuRenderer } from '@theia/core/lib/browser';
-import { nls } from '@theia/core/lib/common/nls';
+import { codicon, ContextMenuRenderer } from '@ogun/core/lib/browser';
+import { nls } from '@ogun/core/lib/common/nls';
 
 const PerfectScrollbar = require('react-perfect-scrollbar');
 

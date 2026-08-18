@@ -14,14 +14,14 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { injectable, inject, postConstruct, interfaces, Container } from '@theia/core/shared/inversify';
-import { MenuPath } from '@theia/core/lib/common';
-import { TreeNode, NodeProps } from '@theia/core/lib/browser';
-import { SourceTreeWidget } from '@theia/core/lib/browser/source-tree';
+import { injectable, inject, postConstruct, interfaces, Container } from '@ogun/core/shared/inversify';
+import { MenuPath } from '@ogun/core/lib/common';
+import { TreeNode, NodeProps } from '@ogun/core/lib/browser';
+import { SourceTreeWidget } from '@ogun/core/lib/browser/source-tree';
 import { DebugBreakpointsSource } from './debug-breakpoints-source';
 import { BreakpointManager } from '../breakpoint/breakpoint-manager';
 import { DebugViewModel } from './debug-view-model';
-import { nls } from '@theia/core/lib/common/nls';
+import { nls } from '@ogun/core/lib/common/nls';
 import { DebugSession } from '../debug-session';
 
 @injectable()

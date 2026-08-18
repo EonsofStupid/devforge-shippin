@@ -14,24 +14,24 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { FrontendApplicationConfigProvider } from '@theia/core/lib/browser/frontend-application-config-provider';
-import { enableJSDOM } from '@theia/core/lib/browser/test/jsdom';
+import { FrontendApplicationConfigProvider } from '@ogun/core/lib/browser/frontend-application-config-provider';
+import { enableJSDOM } from '@ogun/core/lib/browser/test/jsdom';
 let disableJSDOM = enableJSDOM();
 FrontendApplicationConfigProvider.set({});
 
 import { expect } from 'chai';
 import * as sinon from 'sinon';
-import { Container } from '@theia/core/shared/inversify';
-import { TokenUsageService } from '@theia/ai-core';
-import { FileService } from '@theia/filesystem/lib/browser/file-service';
-import { WorkspaceService } from '@theia/workspace/lib/browser';
-import { URI } from '@theia/core/lib/common/uri';
-import { ChangeSetFileElementFactory } from '@theia/ai-chat/lib/browser/change-set-file-element';
-import { ChatAgentLocation, MarkdownChatResponseContentImpl, ThinkingChatResponseContentImpl, ErrorChatResponseContentImpl, MutableChatRequestModel } from '@theia/ai-chat';
+import { Container } from '@ogun/core/shared/inversify';
+import { TokenUsageService } from '@ogun/ai-core';
+import { FileService } from '@ogun/filesystem/lib/browser/file-service';
+import { WorkspaceService } from '@ogun/workspace/lib/browser';
+import { URI } from '@ogun/core/lib/common/uri';
+import { ChangeSetFileElementFactory } from '@ogun/ai-chat/lib/browser/change-set-file-element';
+import { ChatAgentLocation, MarkdownChatResponseContentImpl, ThinkingChatResponseContentImpl, ErrorChatResponseContentImpl, MutableChatRequestModel } from '@ogun/ai-chat';
 import { CodexFrontendService } from './codex-frontend-service';
 import { CodexChatAgent, CODEX_CHAT_AGENT_ID, CODEX_TOOL_CALLS_KEY, CODEX_INPUT_TOKENS_KEY, CODEX_OUTPUT_TOKENS_KEY } from './codex-chat-agent';
-import { ILogger } from '@theia/core/lib/common/logger';
-import { MockLogger } from '@theia/core/lib/common/test/mock-logger';
+import { ILogger } from '@ogun/core/lib/common/logger';
+import { MockLogger } from '@ogun/core/lib/common/test/mock-logger';
 
 import type {
     CommandExecutionItem,

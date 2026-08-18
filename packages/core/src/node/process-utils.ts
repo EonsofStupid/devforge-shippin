@@ -19,7 +19,7 @@ import { injectable, inject, named } from 'inversify';
 import { ILogger } from '../common/logger';
 
 /**
- * `@theia/core` service with some process-related utilities.
+ * `@ogun/core` service with some process-related utilities.
  */
 @injectable()
 export class ProcessUtils {

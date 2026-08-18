@@ -12,13 +12,13 @@
 
 ## Description
 
-The `@theia/anthropic` integrates Anthropic's models with Theia AI.
+The `@ogun/anthropic` integrates Anthropic's models with Theia AI.
 The Anthropic API key and the models to use can be configured via preferences.
 Alternatively the API key can also be handed in via the `ANTHROPIC_API_KEY` environment variable.
 
 ## Additional Information
 
-- [API documentation for `@theia/ai-anthropic`](https://eclipse-theia.github.io/theia/docs/next/modules/_theia_ai-anthropic.html)
+- [API documentation for `@ogun/ai-anthropic`](https://eclipse-theia.github.io/theia/docs/next/modules/_theia_ai-anthropic.html)
 - [Theia - GitHub](https://github.com/eclipse-theia/theia)
 - [Theia - Website](https://theia-ide.org/)
 

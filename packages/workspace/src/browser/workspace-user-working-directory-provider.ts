@@ -14,12 +14,12 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { inject, injectable } from '@theia/core/shared/inversify';
-import { UserWorkingDirectoryProvider } from '@theia/core/lib/browser/user-working-directory-provider';
-import URI from '@theia/core/lib/common/uri';
+import { inject, injectable } from '@ogun/core/shared/inversify';
+import { UserWorkingDirectoryProvider } from '@ogun/core/lib/browser/user-working-directory-provider';
+import URI from '@ogun/core/lib/common/uri';
 import { WorkspaceService } from './workspace-service';
-import { MaybePromise } from '@theia/core';
-import { FileService } from '@theia/filesystem/lib/browser/file-service';
+import { MaybePromise } from '@ogun/core';
+import { FileService } from '@ogun/filesystem/lib/browser/file-service';
 
 @injectable()
 export class WorkspaceUserWorkingDirectoryProvider extends UserWorkingDirectoryProvider {

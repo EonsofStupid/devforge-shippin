@@ -9,7 +9,7 @@
 // SPDX-License-Identifier: MIT
 // *****************************************************************************
 
-import { PromptVariantSet } from '@theia/ai-core';
+import { PromptVariantSet } from '@ogun/ai-core';
 
 export const CHAT_SESSION_NAMING_PROMPT: PromptVariantSet = {
     id: 'chat-session-naming-system',

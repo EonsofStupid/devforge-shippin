@@ -16,21 +16,21 @@
 
 /* eslint-disable @typescript-eslint/no-explicit-any */
 
-import { inject, injectable, optional } from '@theia/core/shared/inversify';
-import { MenuPath, CommandRegistry, Disposable, DisposableCollection, nls, CommandMenu, AcceleratorSource, ContextExpressionMatcher, environment } from '@theia/core';
-import { MenuModelRegistry } from '@theia/core/lib/common';
-import { TabBarToolbarRegistry } from '@theia/core/lib/browser/shell/tab-bar-toolbar';
+import { inject, injectable, optional } from '@ogun/core/shared/inversify';
+import { MenuPath, CommandRegistry, Disposable, DisposableCollection, nls, CommandMenu, AcceleratorSource, ContextExpressionMatcher, environment } from '@ogun/core';
+import { MenuModelRegistry } from '@ogun/core/lib/common';
+import { TabBarToolbarRegistry } from '@ogun/core/lib/browser/shell/tab-bar-toolbar';
 import { DeployedPlugin, IconUrl, Menu } from '../../../common';
-import { ScmWidget } from '@theia/scm/lib/browser/scm-widget';
-import { ScmRepositoriesWidget, SCM_SOURCE_CONTROL_TITLE_MENU } from '@theia/scm/lib/browser/scm-repositories-widget';
-import { ScmHistoryGraphWidget, SCM_HISTORY_TITLE_MENU } from '@theia/scm/lib/browser/scm-history-graph-widget';
-import { KeybindingRegistry, QuickCommandService, codicon } from '@theia/core/lib/browser';
+import { ScmWidget } from '@ogun/scm/lib/browser/scm-widget';
+import { ScmRepositoriesWidget, SCM_SOURCE_CONTROL_TITLE_MENU } from '@ogun/scm/lib/browser/scm-repositories-widget';
+import { ScmHistoryGraphWidget, SCM_HISTORY_TITLE_MENU } from '@ogun/scm/lib/browser/scm-history-graph-widget';
+import { KeybindingRegistry, QuickCommandService, codicon } from '@ogun/core/lib/browser';
 import {
     CodeEditorWidgetUtil, codeToTheiaMappings, ContributionPoint,
     PLUGIN_EDITOR_TITLE_MENU, PLUGIN_EDITOR_TITLE_RUN_MENU, PLUGIN_SCM_TITLE_MENU, PLUGIN_VIEW_TITLE_MENU
 } from './vscode-theia-menu-mappings';
 import { PluginMenuCommandAdapter } from './plugin-menu-command-adapter';
-import { ContextKeyService } from '@theia/core/lib/browser/context-key-service';
+import { ContextKeyService } from '@ogun/core/lib/browser/context-key-service';
 import { PluginSharedStyle } from '../plugin-shared-style';
 import { ThemeIcon } from '@theia/monaco-editor-core/esm/vs/base/common/themables';
 

@@ -1,5 +1,5 @@
 {
-  "name": "@theia/bundle-plugin",
+  "name": "@ogun/bundle-plugin",
   "version": "1.74.0",
   "description": "Contains bundler plugins for Theia.",
   "publishConfig": {

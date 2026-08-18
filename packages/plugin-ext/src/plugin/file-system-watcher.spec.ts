@@ -16,7 +16,7 @@
 
 import * as assert from 'assert';
 import { FileSystemWatcher } from './file-system-event-service-ext-impl';
-import { DisposableCollection, Emitter } from '@theia/core';
+import { DisposableCollection, Emitter } from '@ogun/core';
 import { FileSystemEvents } from '../common';
 import { URI } from './types-impl';
 

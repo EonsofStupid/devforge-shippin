@@ -14,10 +14,10 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import * as React from '@theia/core/shared/react';
-import { Disposable, MaybePromise, nls } from '@theia/core';
-import { DialogError, DialogMode } from '@theia/core/lib/browser/dialogs';
-import { ReactDialog } from '@theia/core/lib/browser/dialogs/react-dialog';
+import * as React from '@ogun/core/shared/react';
+import { Disposable, MaybePromise, nls } from '@ogun/core';
+import { DialogError, DialogMode } from '@ogun/core/lib/browser/dialogs';
+import { ReactDialog } from '@ogun/core/lib/browser/dialogs/react-dialog';
 
 export interface MCPServerInstallParameters {
     /** Whether the server should autostart. Defaults to true if the dialog isn't shown. */

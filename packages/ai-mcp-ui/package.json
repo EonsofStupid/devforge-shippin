@@ -1,11 +1,11 @@
 {
-  "name": "@theia/ai-mcp-ui",
+  "name": "@ogun/ai-mcp-ui",
   "version": "1.74.0",
   "description": "Theia - MCP UI Integration",
   "dependencies": {
-    "@theia/ai-core": "1.74.0",
-    "@theia/ai-mcp": "1.74.0",
-    "@theia/core": "1.74.0"
+    "@ogun/ai-core": "1.74.0",
+    "@ogun/ai-mcp": "1.74.0",
+    "@ogun/core": "1.74.0"
   },
   "publishConfig": {
     "access": "public"
@@ -40,7 +40,7 @@
     "watch": "theiaext watch"
   },
   "devDependencies": {
-    "@theia/ext-scripts": "1.74.0"
+    "@ogun/ext-scripts": "1.74.0"
   },
   "nyc": {
     "extends": "../../configs/nyc.json"

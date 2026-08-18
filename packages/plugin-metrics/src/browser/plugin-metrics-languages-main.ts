@@ -14,14 +14,14 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { CodeActionProviderDocumentation, Range, SerializedDocumentFilter, WorkspaceSymbolParams } from '@theia/plugin-ext/lib/common/plugin-api-rpc-model';
+import { CodeActionProviderDocumentation, Range, SerializedDocumentFilter, WorkspaceSymbolParams } from '@ogun/plugin-ext/lib/common/plugin-api-rpc-model';
 import { PluginMetricsResolver } from './plugin-metrics-resolver';
-import { LanguagesMainImpl } from '@theia/plugin-ext/lib/main/browser/languages-main';
-import { SymbolInformation } from '@theia/core/shared/vscode-languageserver-protocol';
-import { injectable, inject } from '@theia/core/shared/inversify';
-import * as vst from '@theia/core/shared/vscode-languageserver-protocol';
-import { PluginInfo } from '@theia/plugin-ext/lib/common/plugin-api-rpc';
-import * as theia from '@theia/plugin';
+import { LanguagesMainImpl } from '@ogun/plugin-ext/lib/main/browser/languages-main';
+import { SymbolInformation } from '@ogun/core/shared/vscode-languageserver-protocol';
+import { injectable, inject } from '@ogun/core/shared/inversify';
+import * as vst from '@ogun/core/shared/vscode-languageserver-protocol';
+import { PluginInfo } from '@ogun/plugin-ext/lib/common/plugin-api-rpc';
+import * as theia from '@ogun/plugin';
 import * as monaco from '@theia/monaco-editor-core';
 
 @injectable()

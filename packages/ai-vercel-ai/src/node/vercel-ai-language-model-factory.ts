@@ -17,7 +17,7 @@
 import { createAnthropic } from '@ai-sdk/anthropic';
 import { createOpenAI } from '@ai-sdk/openai';
 import { LanguageModelV1 } from '@ai-sdk/provider';
-import { injectable } from '@theia/core/shared/inversify';
+import { injectable } from '@ogun/core/shared/inversify';
 import { VercelAiModelDescription } from '../common';
 
 export type VercelAiProvider = 'openai' | 'anthropic';

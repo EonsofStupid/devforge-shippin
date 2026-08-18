@@ -13,7 +13,7 @@
 //
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
-import { Event, MaybePromise } from '@theia/core';
+import { Event, MaybePromise } from '@ogun/core';
 import { AIVariableContext } from './variable-service';
 
 /** Prompt fragment IDs for each generic capability type */

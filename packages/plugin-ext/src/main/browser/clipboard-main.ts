@@ -14,9 +14,9 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { interfaces } from '@theia/core/shared/inversify';
+import { interfaces } from '@ogun/core/shared/inversify';
 import { ClipboardMain } from '../../common';
-import { ClipboardService } from '@theia/core/lib/browser/clipboard-service';
+import { ClipboardService } from '@ogun/core/lib/browser/clipboard-service';
 
 export class ClipboardMainImpl implements ClipboardMain {
 

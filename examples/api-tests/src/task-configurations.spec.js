@@ -21,9 +21,9 @@ describe('The Task Configuration Manager', function () {
 
     const { assert } = chai;
 
-    const { WorkspaceService } = require('@theia/workspace/lib/browser/workspace-service');
-    const { TaskScope, TaskConfigurationScope } = require('@theia/task/lib/common/task-protocol');
-    const { TaskConfigurationManager } = require('@theia/task/lib/browser/task-configuration-manager');
+    const { WorkspaceService } = require('@ogun/workspace/lib/browser/workspace-service');
+    const { TaskScope, TaskConfigurationScope } = require('@ogun/task/lib/common/task-protocol');
+    const { TaskConfigurationManager } = require('@ogun/task/lib/browser/task-configuration-manager');
     const container = window.theia.container;
     const workspaceService = container.get(WorkspaceService);
     const taskConfigurationManager = container.get(TaskConfigurationManager);
@@ -77,9 +77,9 @@ describe('The Task Configuration Manager', function () {
     }
 
     /* UNCOMMENT TO RUN MULTI-ROOT TESTS */
-    // const { FileService } = require('@theia/filesystem/lib/browser/file-service');
-    // const { EnvVariablesServer } = require('@theia/core/lib/common/env-variables');
-    // const URI = require('@theia/core/lib/common/uri').default;
+    // const { FileService } = require('@ogun/filesystem/lib/browser/file-service');
+    // const { EnvVariablesServer } = require('@ogun/core/lib/common/env-variables');
+    // const URI = require('@ogun/core/lib/common/uri').default;
 
     // const fileService = container.get(FileService);
     // /** @type {EnvVariablesServer} */

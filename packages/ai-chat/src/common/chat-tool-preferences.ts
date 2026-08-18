@@ -14,16 +14,16 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { AI_CORE_PREFERENCES_TITLE } from '@theia/ai-core/lib/common/ai-core-preferences';
-import { nls } from '@theia/core';
+import { AI_CORE_PREFERENCES_TITLE } from '@ogun/ai-core/lib/common/ai-core-preferences';
+import { nls } from '@ogun/core';
 import {
     createPreferenceProxy,
     PreferenceContribution,
     PreferenceProxy,
     PreferenceSchema,
     PreferenceService,
-} from '@theia/core/lib/common/preferences';
-import { interfaces } from '@theia/core/shared/inversify';
+} from '@ogun/core/lib/common/preferences';
+import { interfaces } from '@ogun/core/shared/inversify';
 
 export type ChatToolPreferences = PreferenceProxy<ChatToolConfiguration>;
 

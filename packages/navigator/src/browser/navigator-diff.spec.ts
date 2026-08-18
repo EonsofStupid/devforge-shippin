@@ -14,26 +14,26 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { enableJSDOM } from '@theia/core/lib/browser/test/jsdom';
+import { enableJSDOM } from '@ogun/core/lib/browser/test/jsdom';
 const disableJSDOM = enableJSDOM();
 
-import { FrontendApplicationConfigProvider } from '@theia/core/lib/browser/frontend-application-config-provider';
+import { FrontendApplicationConfigProvider } from '@ogun/core/lib/browser/frontend-application-config-provider';
 FrontendApplicationConfigProvider.set({});
 
 import { expect } from 'chai';
 import { NavigatorDiff } from './navigator-diff';
 import * as path from 'path';
-import { Container, ContainerModule } from '@theia/core/shared/inversify';
-import { SelectionService, ILogger } from '@theia/core/lib/common';
-import { MockLogger } from '@theia/core/lib/common/test/mock-logger';
-import URI from '@theia/core/lib/common/uri';
-import { OpenerService } from '@theia/core/lib/browser';
-import { MockOpenerService } from '@theia/core/lib/browser/test/mock-opener-service';
-import { MessageService } from '@theia/core/lib/common/message-service';
-import { MessageClient } from '@theia/core/lib/common/message-service-protocol';
-import { FileUri } from '@theia/core/lib/common/file-uri';
-import { FileService } from '@theia/filesystem/lib/browser/file-service';
-import { DiskFileSystemProvider } from '@theia/filesystem/lib/node/disk-file-system-provider';
+import { Container, ContainerModule } from '@ogun/core/shared/inversify';
+import { SelectionService, ILogger } from '@ogun/core/lib/common';
+import { MockLogger } from '@ogun/core/lib/common/test/mock-logger';
+import URI from '@ogun/core/lib/common/uri';
+import { OpenerService } from '@ogun/core/lib/browser';
+import { MockOpenerService } from '@ogun/core/lib/browser/test/mock-opener-service';
+import { MessageService } from '@ogun/core/lib/common/message-service';
+import { MessageClient } from '@ogun/core/lib/common/message-service-protocol';
+import { FileUri } from '@ogun/core/lib/common/file-uri';
+import { FileService } from '@ogun/filesystem/lib/browser/file-service';
+import { DiskFileSystemProvider } from '@ogun/filesystem/lib/node/disk-file-system-provider';
 
 disableJSDOM();
 

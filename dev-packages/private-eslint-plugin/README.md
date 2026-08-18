@@ -12,7 +12,7 @@
 
 ## Description
 
-The `@theia/eslint-plugin` contributes rules useful for Eclipse Theia development.
+The `@ogun/eslint-plugin` contributes rules useful for Eclipse Theia development.
 The plugin helps identify problems during development through static analysis including code quality, potential issues and code smells.
 
 ## Rules
@@ -43,8 +43,8 @@ The check enforces the [code organization guidelines](https://github.com/eclipse
 
 The rule prevents the following:
 
-- prevents the implicit use of a shared dependency from `@theia/core`.
-- prevents extensions from depending on a shared dependency without re-using it from `@theia/core`.
+- prevents the implicit use of a shared dependency from `@ogun/core`.
+- prevents extensions from depending on a shared dependency without re-using it from `@ogun/core`.
 
 ## Additional Information
 

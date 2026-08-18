@@ -14,8 +14,8 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { Command, CommandContribution, CommandRegistry, ContributionFilterRegistry, FilterContribution, bindContribution } from '@theia/core/lib/common';
-import { injectable, interfaces } from '@theia/core/shared/inversify';
+import { Command, CommandContribution, CommandRegistry, ContributionFilterRegistry, FilterContribution, bindContribution } from '@ogun/core/lib/common';
+import { injectable, interfaces } from '@ogun/core/shared/inversify';
 
 export namespace SampleFilteredCommand {
 

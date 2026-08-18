@@ -14,7 +14,7 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import * as theia from '@theia/plugin';
+import * as theia from '@ogun/plugin';
 import {
     DecorationData,
     DecorationReply,
@@ -25,7 +25,7 @@ import {
 } from '../common/plugin-api-rpc';
 import { RPCProtocol } from '../common/rpc-protocol';
 import { Disposable, FileDecoration, URI } from './types-impl';
-import { CancellationToken } from '@theia/core/lib/common';
+import { CancellationToken } from '@ogun/core/lib/common';
 import { dirname } from 'path';
 import { PluginLogger } from './logger';
 

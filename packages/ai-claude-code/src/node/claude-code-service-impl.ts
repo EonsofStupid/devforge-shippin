@@ -14,8 +14,8 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { ILogger, generateUuid, nls } from '@theia/core';
-import { inject, injectable, named } from '@theia/core/shared/inversify';
+import { ILogger, generateUuid, nls } from '@ogun/core';
+import { inject, injectable, named } from '@ogun/core/shared/inversify';
 import { execSync } from 'child_process';
 import { existsSync, realpathSync } from 'fs';
 import * as fs from 'fs/promises';

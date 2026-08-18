@@ -19,12 +19,12 @@ import { ProblemManager } from './problem-manager';
 import { ProblemCompositeTreeNode } from './problem-composite-tree-node';
 import { MarkerNode, MarkerTree, MarkerOptions, MarkerInfoNode, MarkerRootNode } from '../marker-tree';
 import { MarkerTreeModel } from '../marker-tree-model';
-import { injectable, inject } from '@theia/core/shared/inversify';
-import { OpenerOptions, TreeNode } from '@theia/core/lib/browser';
+import { injectable, inject } from '@ogun/core/shared/inversify';
+import { OpenerOptions, TreeNode } from '@ogun/core/lib/browser';
 import { Marker } from '../../common/marker';
-import { Diagnostic } from '@theia/core/shared/vscode-languageserver-protocol';
+import { Diagnostic } from '@ogun/core/shared/vscode-languageserver-protocol';
 import { ProblemUtils } from './problem-utils';
-import debounce = require('@theia/core/shared/lodash.debounce');
+import debounce = require('@ogun/core/shared/lodash.debounce');
 
 @injectable()
 export class ProblemTree extends MarkerTree<Diagnostic> {

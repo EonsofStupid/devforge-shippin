@@ -14,21 +14,21 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { injectable, inject, postConstruct } from '@theia/core/shared/inversify';
-import URI from '@theia/core/lib/common/uri';
-import { Widget } from '@theia/core/lib/browser/widgets/widget';
-import { MaybePromise } from '@theia/core/lib/common/types';
-import { CommonCommands, quickCommand, OpenHandler, open, OpenerOptions, OpenerService, QuickPickItem, QuickPickValue } from '@theia/core/lib/browser';
-import { CommandRegistry, MenuModelRegistry, CommandService } from '@theia/core/lib/common';
-import { AbstractViewContribution } from '@theia/core/lib/browser/shell/view-contribution';
+import { injectable, inject, postConstruct } from '@ogun/core/shared/inversify';
+import URI from '@ogun/core/lib/common/uri';
+import { Widget } from '@ogun/core/lib/browser/widgets/widget';
+import { MaybePromise } from '@ogun/core/lib/common/types';
+import { CommonCommands, quickCommand, OpenHandler, open, OpenerOptions, OpenerService, QuickPickItem, QuickPickValue } from '@ogun/core/lib/browser';
+import { CommandRegistry, MenuModelRegistry, CommandService } from '@ogun/core/lib/common';
+import { AbstractViewContribution } from '@ogun/core/lib/browser/shell/view-contribution';
 import { OutputWidget } from './output-widget';
 import { OutputContextMenu } from './output-context-menu';
 import { OutputUri } from '../common/output-uri';
-import { ClipboardService } from '@theia/core/lib/browser/clipboard-service';
+import { ClipboardService } from '@ogun/core/lib/browser/clipboard-service';
 import { OutputChannelManager, OutputChannel } from './output-channel';
 import { OutputCommands } from './output-commands';
-import { QuickPickSeparator, QuickPickService } from '@theia/core/lib/common/quick-pick-service';
-import { nls } from '@theia/core/lib/common/nls';
+import { QuickPickSeparator, QuickPickService } from '@ogun/core/lib/common/quick-pick-service';
+import { nls } from '@ogun/core/lib/common/nls';
 
 @injectable()
 export class OutputContribution extends AbstractViewContribution<OutputWidget> implements OpenHandler {

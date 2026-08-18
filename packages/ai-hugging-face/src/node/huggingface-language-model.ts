@@ -23,10 +23,10 @@ import {
     LanguageModelTextResponse,
     MessageActor,
     LanguageModelStatus
-} from '@theia/ai-core';
-import { CancellationToken } from '@theia/core';
+} from '@ogun/ai-core';
+import { CancellationToken } from '@ogun/core';
 import { InferenceClient } from '@huggingface/inference';
-import { createProxyFetch } from '@theia/ai-core/lib/node';
+import { createProxyFetch } from '@ogun/ai-core/lib/node';
 
 export const HuggingFaceModelIdentifier = Symbol('HuggingFaceModelIdentifier');
 

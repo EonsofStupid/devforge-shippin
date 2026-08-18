@@ -14,8 +14,8 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { inject, injectable } from '@theia/core/shared/inversify';
-import { Widget, DockLayout } from '@theia/core/lib/browser';
+import { inject, injectable } from '@ogun/core/shared/inversify';
+import { Widget, DockLayout } from '@ogun/core/lib/browser';
 import { SplitEditorContribution } from './split-editor-contribution';
 import { EditorWidget } from './editor-widget';
 import { EditorManager } from './editor-manager';

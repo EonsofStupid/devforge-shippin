@@ -14,10 +14,10 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { injectable, inject } from '@theia/core/shared/inversify';
-import { LabelProviderContribution, DidChangeLabelEvent, LabelProvider } from '@theia/core/lib/browser/label-provider';
+import { injectable, inject } from '@ogun/core/shared/inversify';
+import { LabelProviderContribution, DidChangeLabelEvent, LabelProvider } from '@ogun/core/lib/browser/label-provider';
 import { FileStatNode } from './file-tree';
-import { TreeLabelProvider } from '@theia/core/lib/browser/tree/tree-label-provider';
+import { TreeLabelProvider } from '@ogun/core/lib/browser/tree/tree-label-provider';
 
 @injectable()
 export class FileTreeLabelProvider implements LabelProviderContribution {

@@ -21,8 +21,8 @@ All three APIs — backend, frontend, and headless — can be provided by implem
 ## Declare your plugin API provider
 
 The plugin API provider is executed on the respective plugin host to add your custom API object and namespaces.
-Add `@theia/plugin-ext` as a dependency in your `package.json`.
-If your plugin is contributing API to headless plugins, then you also need to add the `@theia/plugin-ext-headless` package as a dependency.
+Add `@ogun/plugin-ext` as a dependency in your `package.json`.
+If your plugin is contributing API to headless plugins, then you also need to add the `@ogun/plugin-ext-headless` package as a dependency.
 
 Example Foo Plugin API provider.
 Here we see that it provides the same API initialized by the same script to both backend plugins that are frontend-connection-scoped and to headless plugins.
@@ -79,10 +79,10 @@ It also implements for us the customization of Node's module loading system to h
 Example `node/foo-init.ts`:
 
 ```typescript
-import { inject, injectable } from '@theia/core/shared/inversify';
-import { RPCProtocol } from '@theia/plugin-ext/lib/common/rpc-protocol';
-import { Plugin } from '@theia/plugin-ext/lib/common/plugin-api-rpc';
-import { PluginContainerModule } from '@theia/plugin-ext/lib/plugin/node/plugin-container-module';
+import { inject, injectable } from '@ogun/core/shared/inversify';
+import { RPCProtocol } from '@ogun/plugin-ext/lib/common/rpc-protocol';
+import { Plugin } from '@ogun/plugin-ext/lib/common/plugin-api-rpc';
+import { PluginContainerModule } from '@ogun/plugin-ext/lib/plugin/node/plugin-container-module';
 import { FooExt } from '../common/foo-api-rpc';
 import { FooExtImpl } from './foo-ext-impl';
 
@@ -180,8 +180,8 @@ On the plugin host side we can register our implementation and retrieve the prox
 Example `plugin/foo-ext.ts`:
 
 ```typescript
-import { inject, injectable } from '@theia/core/shared/inversify';
-import { RPCProtocol } from '@theia/plugin-ext/lib/common/rpc-protocol';
+import { inject, injectable } from '@ogun/core/shared/inversify';
+import { RPCProtocol } from '@ogun/plugin-ext/lib/common/rpc-protocol';
 import { FooExt, FooMain, FOO_PLUGIN_RPC_CONTEXT } from '../common/foo-api-rpc';
 
 @injectable()

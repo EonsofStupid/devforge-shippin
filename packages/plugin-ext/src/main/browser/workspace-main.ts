@@ -18,27 +18,27 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 // some code was copied and modified from https://github.com/Microsoft/vscode/blob/main/src/vs/workbench/api/browser/mainThreadWorkspace.ts
-import * as theia from '@theia/plugin';
-import { interfaces, injectable } from '@theia/core/shared/inversify';
+import * as theia from '@ogun/plugin';
+import { interfaces, injectable } from '@ogun/core/shared/inversify';
 import { WorkspaceExt, StorageExt, MAIN_RPC_CONTEXT, WorkspaceMain, WorkspaceFolderPickOptionsMain, FindFilesOptions } from '../../common/plugin-api-rpc';
 import { RPCProtocol } from '../../common/rpc-protocol';
-import { URI as Uri } from '@theia/core/shared/vscode-uri';
+import { URI as Uri } from '@ogun/core/shared/vscode-uri';
 import { UriComponents } from '../../common/uri-components';
-import { FileSearchService } from '@theia/file-search/lib/common/file-search-service';
-import URI from '@theia/core/lib/common/uri';
-import { WorkspaceService, WorkspaceTrustService, CanonicalUriService } from '@theia/workspace/lib/browser';
-import { Resource } from '@theia/core/lib/common/resource';
-import { Disposable, DisposableCollection } from '@theia/core/lib/common/disposable';
-import { Emitter, Event, ResourceResolver, CancellationToken, isUndefined } from '@theia/core';
+import { FileSearchService } from '@ogun/file-search/lib/common/file-search-service';
+import URI from '@ogun/core/lib/common/uri';
+import { WorkspaceService, WorkspaceTrustService, CanonicalUriService } from '@ogun/workspace/lib/browser';
+import { Resource } from '@ogun/core/lib/common/resource';
+import { Disposable, DisposableCollection } from '@ogun/core/lib/common/disposable';
+import { Emitter, Event, ResourceResolver, CancellationToken, isUndefined } from '@ogun/core';
 import { PluginServer } from '../../common/plugin-protocol';
-import { FileSystemPreferences } from '@theia/filesystem/lib/common';
-import { SearchInWorkspaceService } from '@theia/search-in-workspace/lib/browser/search-in-workspace-service';
-import { FileStat } from '@theia/filesystem/lib/common/files';
-import { MonacoQuickInputService } from '@theia/monaco/lib/browser/monaco-quick-input-service';
-import { RequestService } from '@theia/core/shared/@theia/request';
-import { UTF16be, UTF16le, UTF8, UTF8_with_bom } from '@theia/core/lib/common/encodings';
-import { EncodingRegistry } from '@theia/core/lib/browser/encoding-registry';
-import { PreferenceService } from '@theia/core/lib/common/preferences/preference-service';
+import { FileSystemPreferences } from '@ogun/filesystem/lib/common';
+import { SearchInWorkspaceService } from '@ogun/search-in-workspace/lib/browser/search-in-workspace-service';
+import { FileStat } from '@ogun/filesystem/lib/common/files';
+import { MonacoQuickInputService } from '@ogun/monaco/lib/browser/monaco-quick-input-service';
+import { RequestService } from '@ogun/core/shared/@ogun/request';
+import { UTF16be, UTF16le, UTF8, UTF8_with_bom } from '@ogun/core/lib/common/encodings';
+import { EncodingRegistry } from '@ogun/core/lib/browser/encoding-registry';
+import { PreferenceService } from '@ogun/core/lib/common/preferences/preference-service';
 
 export class WorkspaceMainImpl implements WorkspaceMain, Disposable {
 

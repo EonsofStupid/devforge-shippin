@@ -14,7 +14,7 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { interfaces } from '@theia/core/shared/inversify';
+import { interfaces } from '@ogun/core/shared/inversify';
 import { RPCProtocol } from '../../common/rpc-protocol';
 import {
     LanguageModelToolsMain,
@@ -24,10 +24,10 @@ import {
     isToolInvocationError,
     base64ToUint8Array,
 } from '../../common/lm-tool-protocol';
-import { BinaryBuffer } from '@theia/core/lib/common/buffer';
+import { BinaryBuffer } from '@ogun/core/lib/common/buffer';
 import { MAIN_RPC_CONTEXT } from '../../common/plugin-api-rpc';
-import { ToolInvocationRegistry } from '@theia/ai-core/lib/common';
-import { ToolRequest, ToolRequestParameters, ToolInvocationContext, ToolCallContent, ToolCallContentResult, createToolCallError } from '@theia/ai-core/lib/common/language-model';
+import { ToolInvocationRegistry } from '@ogun/ai-core/lib/common';
+import { ToolRequest, ToolRequestParameters, ToolInvocationContext, ToolCallContent, ToolCallContentResult, createToolCallError } from '@ogun/ai-core/lib/common/language-model';
 
 export class LanguageModelToolsMainImpl implements LanguageModelToolsMain {
     private readonly proxy: LanguageModelToolsExt;

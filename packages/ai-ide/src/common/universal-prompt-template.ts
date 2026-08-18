@@ -9,8 +9,8 @@
 // SPDX-License-Identifier: MIT
 // *****************************************************************************
 
-import { BasePromptFragment } from '@theia/ai-core/lib/common';
-import { CHAT_CONTEXT_DETAILS_VARIABLE_ID } from '@theia/ai-chat';
+import { BasePromptFragment } from '@ogun/ai-core/lib/common';
+import { CHAT_CONTEXT_DETAILS_VARIABLE_ID } from '@ogun/ai-chat';
 
 export const universalTemplate: BasePromptFragment = {
    id: 'universal-system-default',

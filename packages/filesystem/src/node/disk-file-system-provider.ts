@@ -22,10 +22,10 @@
 /* eslint-disable no-null/no-null */
 /* eslint-disable @typescript-eslint/no-shadow */
 
-import { injectable, inject, postConstruct, named } from '@theia/core/shared/inversify';
-import { ILogger } from '@theia/core';
+import { injectable, inject, postConstruct, named } from '@ogun/core/shared/inversify';
+import { ILogger } from '@ogun/core';
 import { basename, dirname, normalize, join } from 'path';
-import { generateUuid } from '@theia/core/lib/common/uuid';
+import { generateUuid } from '@ogun/core/lib/common/uuid';
 import * as os from 'os';
 import * as fs from 'fs';
 import {
@@ -34,13 +34,13 @@ import {
     rmdir, unlink, rename, futimes, truncate
 } from 'fs';
 import { promisify } from 'util';
-import URI from '@theia/core/lib/common/uri';
-import { Path } from '@theia/core/lib/common/path';
-import { FileUri } from '@theia/core/lib/common/file-uri';
-import { Event, Emitter } from '@theia/core/lib/common/event';
-import { Disposable, DisposableCollection } from '@theia/core/lib/common/disposable';
-import { OS, isWindows } from '@theia/core/lib/common/os';
-import { retry } from '@theia/core/lib/common/promise-util';
+import URI from '@ogun/core/lib/common/uri';
+import { Path } from '@ogun/core/lib/common/path';
+import { FileUri } from '@ogun/core/lib/common/file-uri';
+import { Event, Emitter } from '@ogun/core/lib/common/event';
+import { Disposable, DisposableCollection } from '@ogun/core/lib/common/disposable';
+import { OS, isWindows } from '@ogun/core/lib/common/os';
+import { retry } from '@ogun/core/lib/common/promise-util';
 import {
     FileSystemProviderWithFileReadWriteCapability, FileSystemProviderWithOpenReadWriteCloseCapability, FileSystemProviderWithFileFolderCopyCapability,
     FileSystemProviderCapabilities,
@@ -59,12 +59,12 @@ import {
 } from '../common/files';
 import { FileSystemWatcherServer } from '../common/filesystem-watcher-protocol';
 import trash = require('trash');
-import { TextDocumentContentChangeEvent } from '@theia/core/shared/vscode-languageserver-protocol';
+import { TextDocumentContentChangeEvent } from '@ogun/core/shared/vscode-languageserver-protocol';
 import { TextDocument } from 'vscode-languageserver-textdocument';
-import { EncodingService } from '@theia/core/lib/common/encoding-service';
-import { BinaryBuffer } from '@theia/core/lib/common/buffer';
-import { ReadableStreamEvents, newWriteableStream } from '@theia/core/lib/common/stream';
-import { CancellationToken } from '@theia/core/lib/common/cancellation';
+import { EncodingService } from '@ogun/core/lib/common/encoding-service';
+import { BinaryBuffer } from '@ogun/core/lib/common/buffer';
+import { ReadableStreamEvents, newWriteableStream } from '@ogun/core/lib/common/stream';
+import { CancellationToken } from '@ogun/core/lib/common/cancellation';
 import { readFileIntoStream } from '../common/io';
 import { Mode } from 'stat-mode';
 

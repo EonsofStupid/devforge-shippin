@@ -14,10 +14,10 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { injectable, postConstruct } from '@theia/core/shared/inversify';
-import { Disposable } from '@theia/core/lib/common/disposable';
+import { injectable, postConstruct } from '@ogun/core/shared/inversify';
+import { Disposable } from '@ogun/core/lib/common/disposable';
 import { TaskConfiguration } from '../common/task-protocol';
-import { WaitUntilEvent, Emitter } from '@theia/core/lib/common/event';
+import { WaitUntilEvent, Emitter } from '@ogun/core/lib/common/event';
 
 export const TaskContribution = Symbol('TaskContribution');
 

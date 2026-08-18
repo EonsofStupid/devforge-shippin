@@ -22,8 +22,8 @@
  */
 
 import * as assert from 'assert';
-import { Emitter } from '@theia/core/lib/common/event';
-import { DisposableCollection } from '@theia/core/lib/common/disposable';
+import { Emitter } from '@ogun/core/lib/common/event';
+import { DisposableCollection } from '@ogun/core/lib/common/disposable';
 import { ScmCommandArg, ScmHistoryItemCommandArg } from '../common/plugin-api-rpc';
 
 /* eslint-disable @typescript-eslint/no-explicit-any */

@@ -14,7 +14,7 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { FrontendApplicationConfig } from '@theia/application-package';
+import { FrontendApplicationConfig } from '@ogun/application-package';
 import { FrontendApplicationState, StopReason } from '../common/frontend-application-state';
 import { BrowserWindow, BrowserWindowConstructorOptions } from '../../electron-shared/electron';
 import { inject, injectable, postConstruct } from '../../shared/inversify';

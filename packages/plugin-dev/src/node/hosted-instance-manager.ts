@@ -14,24 +14,24 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { RequestOptions, RequestService } from '@theia/core/shared/@theia/request';
-import { inject, injectable, named } from '@theia/core/shared/inversify';
+import { RequestOptions, RequestService } from '@ogun/core/shared/@ogun/request';
+import { inject, injectable, named } from '@ogun/core/shared/inversify';
 import * as cp from 'child_process';
-import * as fs from '@theia/core/shared/fs-extra';
+import * as fs from '@ogun/core/shared/fs-extra';
 import * as net from 'net';
 import * as path from 'path';
-import URI from '@theia/core/lib/common/uri';
-import { ContributionProvider } from '@theia/core/lib/common/contribution-provider';
+import URI from '@ogun/core/lib/common/uri';
+import { ContributionProvider } from '@ogun/core/lib/common/contribution-provider';
 import { HostedPluginUriPostProcessor, HostedPluginUriPostProcessorSymbolName } from './hosted-plugin-uri-postprocessor';
-import { environment, isWindows } from '@theia/core';
-import { FileUri } from '@theia/core/lib/common/file-uri';
-import { EnvVariablesServer } from '@theia/core/lib/common/env-variables';
-import { LogType } from '@theia/plugin-ext/lib/common/types';
-import { HostedPluginSupport } from '@theia/plugin-ext/lib/hosted/node/hosted-plugin';
-import { MetadataScanner } from '@theia/plugin-ext/lib/hosted/node/metadata-scanner';
+import { environment, isWindows } from '@ogun/core';
+import { FileUri } from '@ogun/core/lib/common/file-uri';
+import { EnvVariablesServer } from '@ogun/core/lib/common/env-variables';
+import { LogType } from '@ogun/plugin-ext/lib/common/types';
+import { HostedPluginSupport } from '@ogun/plugin-ext/lib/hosted/node/hosted-plugin';
+import { MetadataScanner } from '@ogun/plugin-ext/lib/hosted/node/metadata-scanner';
 import { PluginDebugConfiguration } from '../common/plugin-dev-protocol';
-import { HostedPluginProcess } from '@theia/plugin-ext/lib/hosted/node/hosted-plugin-process';
-import { isENOENT } from '@theia/plugin-ext/lib/common/errors';
+import { HostedPluginProcess } from '@ogun/plugin-ext/lib/hosted/node/hosted-plugin-process';
+import { isENOENT } from '@ogun/plugin-ext/lib/common/errors';
 
 const DEFAULT_HOSTED_PLUGIN_PORT = 3030;
 

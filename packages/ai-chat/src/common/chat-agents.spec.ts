@@ -20,7 +20,7 @@ import { expect } from 'chai';
 import {
     LanguageModel, LanguageModelMessage, LanguageModelRegistry, LanguageModelRequirement, LanguageModelResponse,
     LanguageModelSelector, LanguageModelService, LanguageModelStreamResponsePart, ServerToolDescriptor, UserRequest
-} from '@theia/ai-core';
+} from '@ogun/ai-core';
 import { AbstractChatAgent, AbstractStreamParsingChatAgent, ChatAgentLocation } from './chat-agents';
 import {
     ChatResponseContent,

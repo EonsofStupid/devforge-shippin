@@ -14,8 +14,8 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { inject, injectable } from '@theia/core/shared/inversify';
-import { MessageService, nls, PreferenceScope, PreferenceService } from '@theia/core';
+import { inject, injectable } from '@ogun/core/shared/inversify';
+import { MessageService, nls, PreferenceScope, PreferenceService } from '@ogun/core';
 import {
     isLocalMCPServerDescription,
     isRemoteMCPServerDescription,
@@ -28,7 +28,7 @@ import {
 } from '../common/mcp-server-manager';
 import { MCP_SERVERS_PREF } from '../common/mcp-preferences';
 import { MCPOAuthConfig } from '../common/mcp-oauth';
-import type { DialogProps } from '@theia/core/lib/browser/dialogs';
+import type { DialogProps } from '@ogun/core/lib/browser/dialogs';
 import type { MCPServerEditDialog, MCPServerFormData } from './mcp-server-edit-dialog';
 
 /**
@@ -81,7 +81,7 @@ export interface MCPInstallOverrides {
 }
 
 /**
- * Owns the persistence + dialog flows for MCP servers. Lives in `@theia/ai-mcp`
+ * Owns the persistence + dialog flows for MCP servers. Lives in `@ogun/ai-mcp`
  * alongside the data model so both the configuration widget (in ai-ide) and the
  * registry/URL-driven install flows (in ai-registry / ai-mcp) can share it.
  */

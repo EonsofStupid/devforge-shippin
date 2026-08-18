@@ -14,20 +14,20 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { injectable, inject, postConstruct } from '@theia/core/shared/inversify';
-import URI from '@theia/core/lib/common/uri';
-import { CancellationTokenSource, CancellationToken, checkCancelled, isCancelled } from '@theia/core/lib/common/cancellation';
-import { Deferred } from '@theia/core/lib/common/promise-util';
-import { MessageService } from '@theia/core/lib/common/message-service';
-import { Progress } from '@theia/core/lib/common/message-service-protocol';
-import throttle = require('@theia/core/shared/lodash.throttle');
+import { injectable, inject, postConstruct } from '@ogun/core/shared/inversify';
+import URI from '@ogun/core/lib/common/uri';
+import { CancellationTokenSource, CancellationToken, checkCancelled, isCancelled } from '@ogun/core/lib/common/cancellation';
+import { Deferred } from '@ogun/core/lib/common/promise-util';
+import { MessageService } from '@ogun/core/lib/common/message-service';
+import { Progress } from '@ogun/core/lib/common/message-service-protocol';
+import throttle = require('@ogun/core/shared/lodash.throttle');
 import { Semaphore } from 'async-mutex';
 import { FileService } from '../../browser/file-service';
-import { ConfirmDialog, Dialog } from '@theia/core/lib/browser';
-import { nls } from '@theia/core/lib/common/nls';
-import { Emitter, Event } from '@theia/core/lib/common/event';
+import { ConfirmDialog, Dialog } from '@ogun/core/lib/browser';
+import { nls } from '@ogun/core/lib/common/nls';
+import { Emitter, Event } from '@ogun/core/lib/common/event';
 import { FileSystemPreferences } from '../../common/filesystem-preferences';
-import { fileToStream } from '@theia/core/lib/common/stream';
+import { fileToStream } from '@ogun/core/lib/common/stream';
 import { minimatch } from 'minimatch';
 
 import type { FileUploadService } from '../../common/upload/file-upload';

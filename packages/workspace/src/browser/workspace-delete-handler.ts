@@ -14,17 +14,17 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { injectable, inject, named } from '@theia/core/shared/inversify';
-import URI from '@theia/core/lib/common/uri';
-import { ConfirmDialog, ApplicationShell, SaveableWidget, NavigatableWidget } from '@theia/core/lib/browser';
-import { UriCommandHandler } from '@theia/core/lib/common/uri-command-handler';
+import { injectable, inject, named } from '@ogun/core/shared/inversify';
+import URI from '@ogun/core/lib/common/uri';
+import { ConfirmDialog, ApplicationShell, SaveableWidget, NavigatableWidget } from '@ogun/core/lib/browser';
+import { UriCommandHandler } from '@ogun/core/lib/common/uri-command-handler';
 import { WorkspaceService } from './workspace-service';
 import { WorkspaceUtils } from './workspace-utils';
-import { FileService } from '@theia/filesystem/lib/browser/file-service';
-import { FileSystemPreferences } from '@theia/filesystem/lib/common/filesystem-preferences';
-import { FileDeleteOptions, FileSystemProviderCapabilities } from '@theia/filesystem/lib/common/files';
-import { nls } from '@theia/core/lib/common/nls';
-import { ILogger } from '@theia/core';
+import { FileService } from '@ogun/filesystem/lib/browser/file-service';
+import { FileSystemPreferences } from '@ogun/filesystem/lib/common/filesystem-preferences';
+import { FileDeleteOptions, FileSystemProviderCapabilities } from '@ogun/filesystem/lib/common/files';
+import { nls } from '@ogun/core/lib/common/nls';
+import { ILogger } from '@ogun/core';
 
 @injectable()
 export class WorkspaceDeleteHandler implements UriCommandHandler<URI[]> {

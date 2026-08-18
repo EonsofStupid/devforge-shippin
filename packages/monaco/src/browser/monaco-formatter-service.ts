@@ -14,11 +14,11 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { inject, injectable, postConstruct } from '@theia/core/shared/inversify';
-import { Emitter, Event, PreferenceInspection, PreferenceLanguageOverrideService, PreferenceScope, PreferenceService } from '@theia/core';
-import { WorkspaceService } from '@theia/workspace/lib/browser';
-import { FormatterInfo, FormatterService, FormatterSettingScope, FormatterStatus } from '@theia/editor/lib/browser/editor-formatter-service';
-import { TextEditor } from '@theia/editor/lib/browser';
+import { inject, injectable, postConstruct } from '@ogun/core/shared/inversify';
+import { Emitter, Event, PreferenceInspection, PreferenceLanguageOverrideService, PreferenceScope, PreferenceService } from '@ogun/core';
+import { WorkspaceService } from '@ogun/workspace/lib/browser';
+import { FormatterInfo, FormatterService, FormatterSettingScope, FormatterStatus } from '@ogun/editor/lib/browser/editor-formatter-service';
+import { TextEditor } from '@ogun/editor/lib/browser';
 import { StandaloneServices } from '@theia/monaco-editor-core/esm/vs/editor/standalone/browser/standaloneServices';
 import { ILanguageFeaturesService } from '@theia/monaco-editor-core/esm/vs/editor/common/services/languageFeatures';
 import { DocumentFormattingEditProvider, DocumentRangeFormattingEditProvider } from '@theia/monaco-editor-core/esm/vs/editor/common/languages';

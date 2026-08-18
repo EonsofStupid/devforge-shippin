@@ -12,7 +12,7 @@
 
 ## Description
 
-The `@theia/localization-manager` package is used easily create localizations of Theia and Theia extensions for different languages. It has two main use cases.
+The `@ogun/localization-manager` package is used easily create localizations of Theia and Theia extensions for different languages. It has two main use cases.
 
 First, it allows to extract localization keys and default values from `nls.localize` calls within the codebase using the `nls-extract` Theia-CLI command. Take this code for example:
 

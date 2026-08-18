@@ -14,10 +14,10 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { interfaces } from '@theia/core/shared/inversify';
+import { interfaces } from '@ogun/core/shared/inversify';
 import { WebviewWidget, WebviewWidgetIdentifier, WebviewWidgetExternalEndpoint } from './webview';
 import { WebviewEnvironment } from './webview-environment';
-import { hashValue } from '@theia/core/lib/common/uuid';
+import { hashValue } from '@ogun/core/lib/common/uuid';
 
 export class WebviewWidgetFactory {
 

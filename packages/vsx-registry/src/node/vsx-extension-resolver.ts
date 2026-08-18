@@ -16,17 +16,19 @@
 
 import * as path from 'path';
 import * as semver from 'semver';
-import * as fs from '@theia/core/shared/fs-extra';
-import { injectable, inject } from '@theia/core/shared/inversify';
-import URI from '@theia/core/lib/common/uri';
-import { PluginDeployerHandler, PluginDeployerResolver, PluginDeployerResolverContext, PluginDeployOptions, PluginIdentifiers } from '@theia/plugin-ext/lib/common/plugin-protocol';
-import { FileUri } from '@theia/core/lib/node';
-import { VSCodeExtensionUri } from '@theia/plugin-ext-vscode/lib/common/plugin-vscode-uri';
+import * as fs from '@ogun/core/shared/fs-extra';
+import { injectable, inject } from '@ogun/core/shared/inversify';
+import URI from '@ogun/core/lib/common/uri';
+import {
+    PluginDeployerHandler, PluginDeployerResolver, PluginDeployerResolverContext, PluginDeployOptions, PluginIdentifiers
+} from '@ogun/plugin-ext/lib/common/plugin-protocol';
+import { FileUri } from '@ogun/core/lib/node';
+import { VSCodeExtensionUri } from '@ogun/plugin-ext-vscode/lib/common/plugin-vscode-uri';
 import { OVSXClientProvider } from '../common/ovsx-client-provider';
-import { OVSXApiFilterProvider, VSXExtensionRaw, VSXTargetPlatform } from '@theia/ovsx-client';
-import { RequestService } from '@theia/core/shared/@theia/request';
-import { PluginVSCodeEnvironment } from '@theia/plugin-ext-vscode/lib/common/plugin-vscode-environment';
-import { PluginUninstallationManager } from '@theia/plugin-ext/lib/main/node/plugin-uninstallation-manager';
+import { OVSXApiFilterProvider, VSXExtensionRaw, VSXTargetPlatform } from '@ogun/ovsx-client';
+import { RequestService } from '@ogun/core/shared/@ogun/request';
+import { PluginVSCodeEnvironment } from '@ogun/plugin-ext-vscode/lib/common/plugin-vscode-environment';
+import { PluginUninstallationManager } from '@ogun/plugin-ext/lib/main/node/plugin-uninstallation-manager';
 
 @injectable()
 export class VSXExtensionResolver implements PluginDeployerResolver {

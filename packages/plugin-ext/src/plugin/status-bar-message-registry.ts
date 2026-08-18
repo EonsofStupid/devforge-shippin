@@ -14,7 +14,7 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 import { Disposable, StatusBarAlignment } from './types-impl';
-import { CancellationToken, ProviderResult, StatusBarItem } from '@theia/plugin';
+import { CancellationToken, ProviderResult, StatusBarItem } from '@ogun/plugin';
 import {
     PLUGIN_RPC_CONTEXT as Ext, StatusBarMessageRegistryMain,
     StatusBarMessageRegistryExt

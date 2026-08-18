@@ -14,15 +14,15 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { ChatSessionSettings, CommonChatSessionSettings } from '@theia/ai-chat';
-import { SERVER_SIDE_COMPACTION_TOKEN_THRESHOLD_MINIMUM } from '@theia/ai-core';
-import { InMemoryResources, URI, nls } from '@theia/core';
-import { AbstractDialog, Message } from '@theia/core/lib/browser';
-import * as React from '@theia/core/shared/react';
-import { flushSync } from '@theia/core/shared/react-dom';
-import { createRoot, Root } from '@theia/core/shared/react-dom/client';
-import { MonacoEditor } from '@theia/monaco/lib/browser/monaco-editor';
-import { MonacoEditorProvider } from '@theia/monaco/lib/browser/monaco-editor-provider';
+import { ChatSessionSettings, CommonChatSessionSettings } from '@ogun/ai-chat';
+import { SERVER_SIDE_COMPACTION_TOKEN_THRESHOLD_MINIMUM } from '@ogun/ai-core';
+import { InMemoryResources, URI, nls } from '@ogun/core';
+import { AbstractDialog, Message } from '@ogun/core/lib/browser';
+import * as React from '@ogun/core/shared/react';
+import { flushSync } from '@ogun/core/shared/react-dom';
+import { createRoot, Root } from '@ogun/core/shared/react-dom/client';
+import { MonacoEditor } from '@ogun/monaco/lib/browser/monaco-editor';
+import { MonacoEditorProvider } from '@ogun/monaco/lib/browser/monaco-editor-provider';
 
 export interface SessionSettingsDialogProps {
     initialSettings: ChatSessionSettings | undefined;

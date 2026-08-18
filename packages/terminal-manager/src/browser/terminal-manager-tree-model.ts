@@ -14,9 +14,9 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { injectable, postConstruct } from '@theia/core/shared/inversify';
-import { TreeModelImpl, CompositeTreeNode, SelectableTreeNode, DepthFirstTreeIterator, TreeNode } from '@theia/core/lib/browser';
-import { Emitter, nls } from '@theia/core';
+import { injectable, postConstruct } from '@ogun/core/shared/inversify';
+import { TreeModelImpl, CompositeTreeNode, SelectableTreeNode, DepthFirstTreeIterator, TreeNode } from '@ogun/core/lib/browser';
+import { Emitter, nls } from '@ogun/core';
 import { TerminalManagerTreeTypes, SpecialPageConfig } from './terminal-manager-types';
 
 @injectable()

@@ -14,22 +14,22 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { injectable, inject } from '@theia/core/shared/inversify';
-import { Widget } from '@theia/core/shared/@lumino/widgets';
-import { FrontendApplicationContribution, WidgetOpenerOptions, NavigatableWidgetOpenHandler, codicon } from '@theia/core/lib/browser';
-import { EditorManager, TextEditor, EditorWidget, EditorContextMenu } from '@theia/editor/lib/browser';
-import { DisposableCollection, CommandContribution, CommandRegistry, Command, MenuContribution, MenuModelRegistry, Disposable } from '@theia/core/lib/common';
-import { TabBarToolbarContribution, TabBarToolbarRegistry } from '@theia/core/lib/browser/shell/tab-bar-toolbar';
-import { MiniBrowserCommands } from '@theia/mini-browser/lib/browser/mini-browser-open-handler';
-import URI from '@theia/core/lib/common/uri';
-import { Position } from '@theia/core/shared/vscode-languageserver-protocol';
+import { injectable, inject } from '@ogun/core/shared/inversify';
+import { Widget } from '@ogun/core/shared/@lumino/widgets';
+import { FrontendApplicationContribution, WidgetOpenerOptions, NavigatableWidgetOpenHandler, codicon } from '@ogun/core/lib/browser';
+import { EditorManager, TextEditor, EditorWidget, EditorContextMenu } from '@ogun/editor/lib/browser';
+import { DisposableCollection, CommandContribution, CommandRegistry, Command, MenuContribution, MenuModelRegistry, Disposable } from '@ogun/core/lib/common';
+import { TabBarToolbarContribution, TabBarToolbarRegistry } from '@ogun/core/lib/browser/shell/tab-bar-toolbar';
+import { MiniBrowserCommands } from '@ogun/mini-browser/lib/browser/mini-browser-open-handler';
+import URI from '@ogun/core/lib/common/uri';
+import { Position } from '@ogun/core/shared/vscode-languageserver-protocol';
 import { PreviewWidget } from './preview-widget';
 import { PreviewHandlerProvider } from './preview-handler';
 import { PreviewUri } from './preview-uri';
 import { PreviewPreferences } from '../common/preview-preferences';
-import { nls } from '@theia/core/lib/common/nls';
+import { nls } from '@ogun/core/lib/common/nls';
 
-import debounce = require('@theia/core/shared/lodash.debounce');
+import debounce = require('@ogun/core/shared/lodash.debounce');
 
 export namespace PreviewCommands {
     /**

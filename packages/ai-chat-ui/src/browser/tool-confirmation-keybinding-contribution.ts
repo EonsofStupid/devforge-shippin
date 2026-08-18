@@ -14,11 +14,11 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { Command, CommandContribution, CommandRegistry } from '@theia/core';
-import { ApplicationShell, KeybindingContribution, KeybindingRegistry } from '@theia/core/lib/browser';
-import { ContextKey, ContextKeyService } from '@theia/core/lib/browser/context-key-service';
-import { inject, injectable, postConstruct } from '@theia/core/shared/inversify';
-import { PendingToolConfirmation, PendingToolConfirmationTracker } from '@theia/ai-chat/lib/browser/pending-tool-confirmation-tracker';
+import { Command, CommandContribution, CommandRegistry } from '@ogun/core';
+import { ApplicationShell, KeybindingContribution, KeybindingRegistry } from '@ogun/core/lib/browser';
+import { ContextKey, ContextKeyService } from '@ogun/core/lib/browser/context-key-service';
+import { inject, injectable, postConstruct } from '@ogun/core/shared/inversify';
+import { PendingToolConfirmation, PendingToolConfirmationTracker } from '@ogun/ai-chat/lib/browser/pending-tool-confirmation-tracker';
 import { ChatViewWidget } from './chat-view-widget';
 
 export const HAS_PENDING_TOOL_CONFIRMATION_CONTEXT_KEY = 'theiaAi.hasPendingToolConfirmation';

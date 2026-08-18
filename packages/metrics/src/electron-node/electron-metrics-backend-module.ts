@@ -14,9 +14,9 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { ContainerModule } from '@theia/core/shared/inversify';
+import { ContainerModule } from '@ogun/core/shared/inversify';
 import { MetricsElectronTokenValidator } from './electron-token-validator';
-import { ElectronTokenValidator } from '@theia/core/lib/electron-node/token/electron-token-validator';
+import { ElectronTokenValidator } from '@ogun/core/lib/electron-node/token/electron-token-validator';
 
 export default new ContainerModule((bind, unbind, isBound, rebind) => {
     bind(MetricsElectronTokenValidator).toSelf().inSingletonScope();

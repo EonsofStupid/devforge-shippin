@@ -16,8 +16,8 @@
 
 import { MAIN_RPC_CONTEXT, ThemingMain, ThemingExt } from '../../common/plugin-api-rpc';
 import { RPCProtocol } from '../../common/rpc-protocol';
-import { ThemeService } from '@theia/core/lib/browser/theming';
-import { Disposable } from '@theia/core/lib/common/disposable';
+import { ThemeService } from '@ogun/core/lib/browser/theming';
+import { Disposable } from '@ogun/core/lib/common/disposable';
 
 /*---------------------------------------------------------------------------------------------
  *  Copyright (c) Microsoft Corporation. All rights reserved.

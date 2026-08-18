@@ -16,7 +16,7 @@
 
 /* eslint-disable @typescript-eslint/no-explicit-any */
 
-import * as theia from '@theia/plugin';
+import * as theia from '@ogun/plugin';
 
 export class PluginDebugAdapterTracker implements theia.DebugAdapterTracker {
     constructor(protected readonly trackers: theia.DebugAdapterTracker[]) { }

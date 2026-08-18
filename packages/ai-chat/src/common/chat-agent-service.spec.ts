@@ -18,9 +18,9 @@ import 'reflect-metadata';
 
 import { expect } from 'chai';
 import * as sinon from 'sinon';
-import { Container } from '@theia/core/shared/inversify';
-import { ContributionProvider, Emitter, ILogger, PreferenceService } from '@theia/core';
-import { AgentService, AISettings, AISettingsService } from '@theia/ai-core';
+import { Container } from '@ogun/core/shared/inversify';
+import { ContributionProvider, Emitter, ILogger, PreferenceService } from '@ogun/core';
+import { AgentService, AISettings, AISettingsService } from '@ogun/ai-core';
 import { ChatAgent, ChatAgentLocation } from './chat-agents';
 import { ChatAgentService, ChatAgentServiceImpl, DefaultChatAgentId, FallbackChatAgentId } from './chat-agent-service';
 import { ParsedChatRequest, ParsedChatRequestAgentPart, ParsedChatRequestTextPart } from './parsed-chat-request';

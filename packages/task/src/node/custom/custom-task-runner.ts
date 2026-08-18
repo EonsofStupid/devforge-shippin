@@ -17,14 +17,14 @@
 import { TaskConfiguration } from '../../common';
 import { Task } from '../task';
 import { TaskRunner } from '../task-runner';
-import { injectable, inject, named } from '@theia/core/shared/inversify';
-import { ILogger } from '@theia/core';
+import { injectable, inject, named } from '@ogun/core/shared/inversify';
+import { ILogger } from '@ogun/core';
 import { TaskFactory } from './custom-task';
 import {
     TerminalProcessFactory,
     Process,
     TerminalProcessOptions,
-} from '@theia/process/lib/node';
+} from '@ogun/process/lib/node';
 
 /**
  * Task runner that runs a task as a pseudoterminal open.

@@ -14,13 +14,13 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { RemoteConnection, RemoteExecOptions, RemoteExecResult, RemoteExecTester } from '@theia/remote/lib/electron-node/remote-types';
-import { RemoteSetupResult } from '@theia/remote/lib/electron-node/setup/remote-setup-service';
-import { Emitter, Event, ILogger } from '@theia/core';
-import { BashQuotingFunctions, ShellQuoting, createShellCommandLine } from '@theia/core/lib/common/shell-quoting';
+import { RemoteConnection, RemoteExecOptions, RemoteExecResult, RemoteExecTester } from '@ogun/remote/lib/electron-node/remote-types';
+import { RemoteSetupResult } from '@ogun/remote/lib/electron-node/setup/remote-setup-service';
+import { Emitter, Event, ILogger } from '@ogun/core';
+import { BashQuotingFunctions, ShellQuoting, createShellCommandLine } from '@ogun/core/lib/common/shell-quoting';
 import { Socket } from 'net';
 import * as Docker from 'dockerode';
-import { Deferred } from '@theia/core/lib/common/promise-util';
+import { Deferred } from '@ogun/core/lib/common/promise-util';
 import { PassThrough } from 'stream';
 import { execFile, execFileSync } from 'child_process';
 import { DevContainerConfiguration } from './devcontainer-file';

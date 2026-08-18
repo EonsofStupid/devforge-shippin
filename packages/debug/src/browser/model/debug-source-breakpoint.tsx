@@ -14,13 +14,13 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import * as React from '@theia/core/shared/react';
+import * as React from '@ogun/core/shared/react';
 import { DebugProtocol } from '@vscode/debugprotocol';
-import { nls, RecursivePartial } from '@theia/core';
-import URI from '@theia/core/lib/common/uri';
-import { EditorWidget, Range } from '@theia/editor/lib/browser';
-import { TREE_NODE_INFO_CLASS, WidgetOpenerOptions, codicon, open } from '@theia/core/lib/browser';
-import { TreeElement } from '@theia/core/lib/browser/source-tree';
+import { nls, RecursivePartial } from '@ogun/core';
+import URI from '@ogun/core/lib/common/uri';
+import { EditorWidget, Range } from '@ogun/editor/lib/browser';
+import { TREE_NODE_INFO_CLASS, WidgetOpenerOptions, codicon, open } from '@ogun/core/lib/browser';
+import { TreeElement } from '@ogun/core/lib/browser/source-tree';
 import { DEBUG_BREAKPOINT_SCHEME, SourceBreakpoint } from '../breakpoint/breakpoint-marker';
 import { DebugBreakpoint, DebugBreakpointOptions, DebugBreakpointDecoration } from './debug-breakpoint';
 import { DebugCommands } from '../debug-commands';

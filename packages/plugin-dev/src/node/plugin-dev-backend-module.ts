@@ -17,13 +17,13 @@
 import { HostedInstanceManager, NodeHostedPluginRunner } from './hosted-instance-manager';
 import { HostedPluginUriPostProcessorSymbolName } from './hosted-plugin-uri-postprocessor';
 import { HostedPluginsManager, HostedPluginsManagerImpl } from './hosted-plugins-manager';
-import { ContainerModule, interfaces } from '@theia/core/shared/inversify';
-import { ConnectionContainerModule } from '@theia/core/lib/node/messaging/connection-container-module';
-import { bindContributionProvider } from '@theia/core/lib/common/contribution-provider';
+import { ContainerModule, interfaces } from '@ogun/core/shared/inversify';
+import { ConnectionContainerModule } from '@ogun/core/lib/node/messaging/connection-container-module';
+import { bindContributionProvider } from '@ogun/core/lib/common/contribution-provider';
 import { PluginDevServerImpl } from './plugin-dev-service';
 import { PluginDevServer, PluginDevClient, pluginDevServicePath } from '../common/plugin-dev-protocol';
 import { HostedPluginReader } from './hosted-plugin-reader';
-import { BackendApplicationContribution } from '@theia/core/lib/node/backend-application';
+import { BackendApplicationContribution } from '@ogun/core/lib/node/backend-application';
 import { bindHostedPluginPreferences } from '../common/hosted-plugin-preferences';
 
 const commonHostedConnectionModule = ConnectionContainerModule.create(({ bind, bindBackendService }) => {

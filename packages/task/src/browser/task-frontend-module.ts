@@ -14,10 +14,10 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { ContainerModule } from '@theia/core/shared/inversify';
-import { FrontendApplicationContribution, KeybindingContribution } from '@theia/core/lib/browser';
-import { CommandContribution, MenuContribution, bindRootContributionProvider, nls } from '@theia/core/lib/common';
-import { WebSocketConnectionProvider } from '@theia/core/lib/browser/messaging';
+import { ContainerModule } from '@ogun/core/shared/inversify';
+import { FrontendApplicationContribution, KeybindingContribution } from '@ogun/core/lib/browser';
+import { CommandContribution, MenuContribution, bindRootContributionProvider, nls } from '@ogun/core/lib/common';
+import { WebSocketConnectionProvider } from '@ogun/core/lib/browser/messaging';
 import { QuickOpenTask, TaskTerminateQuickOpen, TaskRestartRunningQuickOpen, TaskRunningQuickOpen } from './quick-open-task';
 import { TaskContribution, TaskProviderRegistry, TaskResolverRegistry } from './task-contribution';
 import { TaskService } from './task-service';
@@ -40,10 +40,10 @@ import { TaskNameResolver } from './task-name-resolver';
 import { TaskSourceResolver } from './task-source-resolver';
 import { TaskTemplateSelector } from './task-templates';
 import { TaskTerminalWidgetManager } from './task-terminal-widget-manager';
-import { JsonSchemaContribution } from '@theia/core/lib/browser/json-schema-store';
-import { QuickAccessContribution } from '@theia/core/lib/browser/quick-input/quick-access';
+import { JsonSchemaContribution } from '@ogun/core/lib/browser/json-schema-store';
+import { QuickAccessContribution } from '@ogun/core/lib/browser/quick-input/quick-access';
 import { TaskContextKeyService } from './task-context-key-service';
-import { WorkspaceRestrictionContribution, WorkspaceRestriction } from '@theia/workspace/lib/browser/workspace-trust-service';
+import { WorkspaceRestrictionContribution, WorkspaceRestriction } from '@ogun/workspace/lib/browser/workspace-trust-service';
 
 export default new ContainerModule(bind => {
     bind(TaskFrontendContribution).toSelf().inSingletonScope();

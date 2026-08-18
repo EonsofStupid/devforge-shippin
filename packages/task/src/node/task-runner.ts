@@ -14,8 +14,8 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { injectable, inject, postConstruct } from '@theia/core/shared/inversify';
-import { Disposable } from '@theia/core/lib/common/disposable';
+import { injectable, inject, postConstruct } from '@ogun/core/shared/inversify';
+import { Disposable } from '@ogun/core/lib/common/disposable';
 import { ProcessTaskRunner } from './process/process-task-runner';
 import { TaskRunner } from './task-runner-protocol';
 export { TaskRunner };

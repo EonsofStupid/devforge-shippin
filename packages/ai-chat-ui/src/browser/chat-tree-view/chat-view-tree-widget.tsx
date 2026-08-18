@@ -27,10 +27,10 @@ import {
     ParsedChatRequestVariablePart,
     type ChatRequest,
     type ChatHierarchyBranch,
-} from '@theia/ai-chat';
-import { AIVariableService } from '@theia/ai-core';
-import { AIActivationService } from '@theia/ai-core/lib/browser';
-import { CommandRegistry, ContributionProvider, Disposable, DisposableCollection, Emitter, Event, ILogger } from '@theia/core';
+} from '@ogun/ai-chat';
+import { AIVariableService } from '@ogun/ai-core';
+import { AIActivationService } from '@ogun/ai-core/lib/browser';
+import { CommandRegistry, ContributionProvider, Disposable, DisposableCollection, Emitter, Event, ILogger } from '@ogun/core';
 import {
     codicon,
     CompositeTreeNode,
@@ -46,18 +46,18 @@ import {
     TreeWidget,
     Widget,
     type ReactWidget
-} from '@theia/core/lib/browser';
-import { ContextKey, ContextKeyService } from '@theia/core/lib/browser/context-key-service';
-import { nls } from '@theia/core/lib/common/nls';
+} from '@ogun/core/lib/browser';
+import { ContextKey, ContextKeyService } from '@ogun/core/lib/browser/context-key-service';
+import { nls } from '@ogun/core/lib/common/nls';
 import {
     inject,
     injectable,
     named,
     postConstruct
-} from '@theia/core/shared/inversify';
-import * as React from '@theia/core/shared/react';
-import { ImageContextVariable } from '@theia/ai-chat/lib/common/image-context-variable';
-import { MarkdownStringImpl } from '@theia/core/lib/common/markdown-rendering';
+} from '@ogun/core/shared/inversify';
+import * as React from '@ogun/core/shared/react';
+import { ImageContextVariable } from '@ogun/ai-chat/lib/common/image-context-variable';
+import { MarkdownStringImpl } from '@ogun/core/lib/common/markdown-rendering';
 import { ChatNodeToolbarActionContribution } from '../chat-node-toolbar-action-contribution';
 import { ChatResponsePartRenderer } from '../chat-response-part-renderer';
 import { formatTokenCount } from '../chat-token-usage-indicator-util';

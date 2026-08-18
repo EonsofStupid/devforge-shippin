@@ -12,11 +12,11 @@
 
 ## Description
 
-The `@theia/console` extension contributes a `console` widget which is used to evaluate expressions (in the form of REPL [(Read-Eval-Print-Loop)](https://en.wikipedia.org/wiki/Read%E2%80%93eval%E2%80%93print_loop)) when debugging.
+The `@ogun/console` extension contributes a `console` widget which is used to evaluate expressions (in the form of REPL [(Read-Eval-Print-Loop)](https://en.wikipedia.org/wiki/Read%E2%80%93eval%E2%80%93print_loop)) when debugging.
 
 ## Additional Information
 
-- [API documentation for `@theia/console`](https://eclipse-theia.github.io/theia/docs/next/modules/_theia_console.html)
+- [API documentation for `@ogun/console`](https://eclipse-theia.github.io/theia/docs/next/modules/_theia_console.html)
 - [Theia - GitHub](https://github.com/eclipse-theia/theia)
 - [Theia - Website](https://theia-ide.org/)
 

@@ -14,7 +14,7 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { LINUX_ENV_HINT, PreferenceSchema } from '@theia/core';
+import { LINUX_ENV_HINT, PreferenceSchema } from '@ogun/core';
 
 export const SCAN_OSS_API_KEY_PREF = 'ai-features.SCANOSS.apiKey';
 

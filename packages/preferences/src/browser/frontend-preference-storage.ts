@@ -14,9 +14,9 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { ListenerList, DisposableCollection, URI, PreferenceScope, Listener } from '@theia/core';
-import { JSONValue } from '@theia/core/shared/@lumino/coreutils';
-import { FileService } from '@theia/filesystem/lib/browser/file-service';
+import { ListenerList, DisposableCollection, URI, PreferenceScope, Listener } from '@ogun/core';
+import { JSONValue } from '@ogun/core/shared/@lumino/coreutils';
+import { FileService } from '@ogun/filesystem/lib/browser/file-service';
 import { FileContentStatus, PreferenceStorage } from '../common/abstract-resource-preference-provider';
 import { PreferenceTransaction, PreferenceTransactionFactory } from './preference-transaction-manager';
 

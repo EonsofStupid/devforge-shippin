@@ -35,7 +35,7 @@ The AI Llamafile package provides an integration that allows users to manage and
 
 ## Dependencies
 
-This extension depends on the `@theia/ai-core` package for AI-related services and functionalities.
+This extension depends on the `@ogun/ai-core` package for AI-related services and functionalities.
 
 ## Configuration
 

@@ -14,8 +14,8 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { DisposableCollection } from '@theia/core/lib/common/disposable';
-import { Emitter, Event } from '@theia/core/lib/common/event';
+import { DisposableCollection } from '@ogun/core/lib/common/disposable';
+import { Emitter, Event } from '@ogun/core/lib/common/event';
 import { ChildProcess } from 'child_process';
 import * as stream from 'stream';
 import * as net from 'net';

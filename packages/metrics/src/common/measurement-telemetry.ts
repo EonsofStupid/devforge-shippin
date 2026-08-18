@@ -14,8 +14,8 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { MeasurementResult } from '@theia/core';
-import { TelemetryService } from '@theia/telemetry/lib/common';
+import { MeasurementResult } from '@ogun/core';
+import { TelemetryService } from '@ogun/telemetry/lib/common';
 
 export const MEASUREMENT_TELEMETRY_TOPIC = 'theia/measurement/result';
 

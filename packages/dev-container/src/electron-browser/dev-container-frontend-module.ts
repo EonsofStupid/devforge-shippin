@@ -13,16 +13,16 @@
 //
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
-import { ContainerModule } from '@theia/core/shared/inversify';
-import { RemoteRegistryContribution } from '@theia/remote/lib/electron-browser/remote-registry-contribution';
+import { ContainerModule } from '@ogun/core/shared/inversify';
+import { RemoteRegistryContribution } from '@ogun/remote/lib/electron-browser/remote-registry-contribution';
 import { RemoteContainerConnectionProvider, RemoteContainerConnectionProviderPath } from '../electron-common/remote-container-connection-provider';
 import { ContainerConnectionContribution } from './container-connection-contribution';
-import { ServiceConnectionProvider } from '@theia/core/lib/browser/messaging/service-connection-provider';
+import { ServiceConnectionProvider } from '@ogun/core/lib/browser/messaging/service-connection-provider';
 import { ContainerOutputProvider } from './container-output-provider';
 import { ContainerInfoContribution } from './container-info-contribution';
-import { FrontendApplicationContribution, LabelProviderContribution } from '@theia/core/lib/browser';
-import { WorkspaceOpenHandlerContribution } from '@theia/workspace/lib/browser/workspace-service';
-import { WindowTitleContribution } from '@theia/core/lib/browser/window/window-title-service';
+import { FrontendApplicationContribution, LabelProviderContribution } from '@ogun/core/lib/browser';
+import { WorkspaceOpenHandlerContribution } from '@ogun/workspace/lib/browser/workspace-service';
+import { WindowTitleContribution } from '@ogun/core/lib/browser/window/window-title-service';
 import { DevContainerSuggestionContribution } from './dev-container-suggestion-contribution';
 import { bindDevContainerPreferences } from '../electron-common/dev-container-preferences';
 import { DevContainerStartupContribution } from './dev-container-startup-contribution';

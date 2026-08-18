@@ -14,15 +14,15 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { CommonCommands, KeybindingRegistry, OpenerService, QuickAccessProvider, QuickAccessRegistry } from '@theia/core/lib/browser';
-import { QuickInputService, QuickPickItem, QuickPicks } from '@theia/core/lib/browser/quick-input/quick-input-service';
-import { CancellationToken, Command, nls } from '@theia/core/lib/common';
-import { MessageService } from '@theia/core/lib/common/message-service';
-import URI from '@theia/core/lib/common/uri';
-import { inject, injectable, optional, postConstruct } from '@theia/core/shared/inversify';
-import { EditorOpenerOptions, EditorWidget, Position, Range } from '@theia/editor/lib/browser';
-import { NavigationLocationService } from '@theia/editor/lib/browser/navigation/navigation-location-service';
-import { WorkspaceService } from '@theia/workspace/lib/browser/workspace-service';
+import { CommonCommands, KeybindingRegistry, OpenerService, QuickAccessProvider, QuickAccessRegistry } from '@ogun/core/lib/browser';
+import { QuickInputService, QuickPickItem, QuickPicks } from '@ogun/core/lib/browser/quick-input/quick-input-service';
+import { CancellationToken, Command, nls } from '@ogun/core/lib/common';
+import { MessageService } from '@ogun/core/lib/common/message-service';
+import URI from '@ogun/core/lib/common/uri';
+import { inject, injectable, optional, postConstruct } from '@ogun/core/shared/inversify';
+import { EditorOpenerOptions, EditorWidget, Position, Range } from '@ogun/editor/lib/browser';
+import { NavigationLocationService } from '@ogun/editor/lib/browser/navigation/navigation-location-service';
+import { WorkspaceService } from '@ogun/workspace/lib/browser/workspace-service';
 import { QuickFileSelectService } from './quick-file-select-service';
 
 export const quickFileOpen = Command.toDefaultLocalizedCommand({

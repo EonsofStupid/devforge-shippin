@@ -14,9 +14,9 @@
  * SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
  ********************************************************************************/
 
-import { inject, injectable, named, postConstruct } from '@theia/core/shared/inversify';
-import { FileService } from '@theia/filesystem/lib/browser/file-service';
-import { ILogger, Emitter, Event, Disposable, DisposableCollection, URI } from '@theia/core/lib/common';
+import { inject, injectable, named, postConstruct } from '@ogun/core/shared/inversify';
+import { FileService } from '@ogun/filesystem/lib/browser/file-service';
+import { ILogger, Emitter, Event, Disposable, DisposableCollection, URI } from '@ogun/core/lib/common';
 import { WorkspaceService } from '../workspace-service';
 
 /**

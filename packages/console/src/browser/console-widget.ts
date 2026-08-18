@@ -14,22 +14,22 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { ElementExt } from '@theia/core/shared/@lumino/domutils';
-import { injectable, inject, postConstruct, interfaces, Container } from '@theia/core/shared/inversify';
-import { TreeSourceNode } from '@theia/core/lib/browser/source-tree';
-import { ContextKeyService, ContextKey } from '@theia/core/lib/browser/context-key-service';
-import { BaseWidget, PanelLayout, Widget, Message, MessageLoop, StatefulWidget, CompositeTreeNode } from '@theia/core/lib/browser';
-import { MonacoEditor } from '@theia/monaco/lib/browser/monaco-editor';
-import URI from '@theia/core/lib/common/uri';
-import { MonacoEditorProvider } from '@theia/monaco/lib/browser/monaco-editor-provider';
+import { ElementExt } from '@ogun/core/shared/@lumino/domutils';
+import { injectable, inject, postConstruct, interfaces, Container } from '@ogun/core/shared/inversify';
+import { TreeSourceNode } from '@ogun/core/lib/browser/source-tree';
+import { ContextKeyService, ContextKey } from '@ogun/core/lib/browser/context-key-service';
+import { BaseWidget, PanelLayout, Widget, Message, MessageLoop, StatefulWidget, CompositeTreeNode } from '@ogun/core/lib/browser';
+import { MonacoEditor } from '@ogun/monaco/lib/browser/monaco-editor';
+import URI from '@ogun/core/lib/common/uri';
+import { MonacoEditorProvider } from '@ogun/monaco/lib/browser/monaco-editor-provider';
 import { ConsoleHistory } from './console-history';
 import { ConsoleContentWidget } from './console-content-widget';
 import { ConsoleSession } from './console-session';
 import { ConsoleSessionManager } from './console-session-manager';
 import * as monaco from '@theia/monaco-editor-core';
-import { Disposable } from '@theia/core/lib/common/disposable';
-import { EditorManager } from '@theia/editor/lib/browser';
-import { MonacoEditorService } from '@theia/monaco/lib/browser/monaco-editor-service';
+import { Disposable } from '@ogun/core/lib/common/disposable';
+import { EditorManager } from '@ogun/editor/lib/browser';
+import { MonacoEditorService } from '@ogun/monaco/lib/browser/monaco-editor-service';
 
 export const ConsoleOptions = Symbol('ConsoleWidgetOptions');
 export interface ConsoleOptions {

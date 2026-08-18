@@ -20,7 +20,7 @@
  *--------------------------------------------------------------------------------------------*/
 // code copied and modified from https://github.com/microsoft/vscode/blob/1.103.2/src/vscode-dts/vscode.proposed.textEditorDiffInformation.d.ts
 
-export module '@theia/plugin' {
+export module '@ogun/plugin' {
     // https://github.com/microsoft/vscode/issues/84899
 
     export enum TextEditorChangeKind {

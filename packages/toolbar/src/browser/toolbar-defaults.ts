@@ -14,7 +14,7 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { nls } from '@theia/core';
+import { nls } from '@ogun/core';
 import { DeflatedToolbarTree, ToolbarAlignment } from './toolbar-interfaces';
 
 // This file specifies the default layout of the toolbar. This binding should be overridden for extenders.

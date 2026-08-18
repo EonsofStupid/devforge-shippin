@@ -16,15 +16,15 @@
 
 import { expect } from 'chai';
 import * as sinon from 'sinon';
-import { CancellationTokenSource, PreferenceService } from '@theia/core';
+import { CancellationTokenSource, PreferenceService } from '@ogun/core';
 import { WorkspaceSearchProvider } from './workspace-search-provider';
-import { ToolInvocationContext } from '@theia/ai-core';
-import { Container } from '@theia/core/shared/inversify';
-import { SearchInWorkspaceService, SearchInWorkspaceCallbacks } from '@theia/search-in-workspace/lib/browser/search-in-workspace-service';
+import { ToolInvocationContext } from '@ogun/ai-core';
+import { Container } from '@ogun/core/shared/inversify';
+import { SearchInWorkspaceService, SearchInWorkspaceCallbacks } from '@ogun/search-in-workspace/lib/browser/search-in-workspace-service';
 import { WorkspaceFunctionScope } from './workspace-functions';
-import { FileService } from '@theia/filesystem/lib/browser/file-service';
-import { URI } from '@theia/core/lib/common/uri';
-import { SearchInWorkspaceOptions } from '@theia/search-in-workspace/lib/common/search-in-workspace-interface';
+import { FileService } from '@ogun/filesystem/lib/browser/file-service';
+import { URI } from '@ogun/core/lib/common/uri';
+import { SearchInWorkspaceOptions } from '@ogun/search-in-workspace/lib/common/search-in-workspace-interface';
 
 describe('Workspace Search Provider Cancellation Tests', () => {
     let cancellationTokenSource: CancellationTokenSource;

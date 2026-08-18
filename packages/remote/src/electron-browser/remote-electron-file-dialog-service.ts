@@ -14,12 +14,12 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { MaybeArray, URI, nls } from '@theia/core';
-import { inject, injectable } from '@theia/core/shared/inversify';
-import { AdditionalButtonDefinition, OpenFileDialogProps, SaveFileDialogProps } from '@theia/filesystem/lib/browser/file-dialog';
-import { FileStat } from '@theia/filesystem/lib/common/files';
-import { DefaultFileDialogService } from '@theia/filesystem/lib/browser/file-dialog/file-dialog-service';
-import { ElectronFileDialogService } from '@theia/filesystem/lib/electron-browser/file-dialog/electron-file-dialog-service';
+import { MaybeArray, URI, nls } from '@ogun/core';
+import { inject, injectable } from '@ogun/core/shared/inversify';
+import { AdditionalButtonDefinition, OpenFileDialogProps, SaveFileDialogProps } from '@ogun/filesystem/lib/browser/file-dialog';
+import { FileStat } from '@ogun/filesystem/lib/common/files';
+import { DefaultFileDialogService } from '@ogun/filesystem/lib/browser/file-dialog/file-dialog-service';
+import { ElectronFileDialogService } from '@ogun/filesystem/lib/electron-browser/file-dialog/electron-file-dialog-service';
 import { RemoteService } from './remote-service';
 import { LOCAL_FILE_SCHEME } from './local-backend-services';
 

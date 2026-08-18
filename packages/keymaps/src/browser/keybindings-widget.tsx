@@ -14,23 +14,23 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import React = require('@theia/core/shared/react');
-import debounce = require('@theia/core/shared/lodash.debounce');
-import * as fuzzy from '@theia/core/shared/fuzzy';
-import { injectable, inject, postConstruct, unmanaged } from '@theia/core/shared/inversify';
-import { Emitter, Event } from '@theia/core/lib/common/event';
-import { CommandRegistry, Command } from '@theia/core/lib/common/command';
-import { Keybinding } from '@theia/core/lib/common/keybinding';
-import { findSubstringIndex, matchRank } from '@theia/core/lib/common/fuzzy-match-utils';
-import { ReactWidget } from '@theia/core/lib/browser/widgets/react-widget';
+import React = require('@ogun/core/shared/react');
+import debounce = require('@ogun/core/shared/lodash.debounce');
+import * as fuzzy from '@ogun/core/shared/fuzzy';
+import { injectable, inject, postConstruct, unmanaged } from '@ogun/core/shared/inversify';
+import { Emitter, Event } from '@ogun/core/lib/common/event';
+import { CommandRegistry, Command } from '@ogun/core/lib/common/command';
+import { Keybinding } from '@ogun/core/lib/common/keybinding';
+import { findSubstringIndex, matchRank } from '@ogun/core/lib/common/fuzzy-match-utils';
+import { ReactWidget } from '@ogun/core/lib/browser/widgets/react-widget';
 import {
     KeybindingRegistry, SingleTextInputDialog, KeySequence, ConfirmDialog, Message, KeybindingScope,
     SingleTextInputDialogProps, Key, ScopedKeybinding, codicon, StatefulWidget, Widget, ContextMenuRenderer, SELECTED_CLASS, KeyCode
-} from '@theia/core/lib/browser';
+} from '@ogun/core/lib/browser';
 import { KeymapsService } from './keymaps-service';
-import { AlertMessage } from '@theia/core/lib/browser/widgets/alert-message';
-import { DisposableCollection, Disposable, isOSX, isObject } from '@theia/core';
-import { nls } from '@theia/core/lib/common/nls';
+import { AlertMessage } from '@ogun/core/lib/browser/widgets/alert-message';
+import { DisposableCollection, Disposable, isOSX, isObject } from '@ogun/core';
+import { nls } from '@ogun/core/lib/common/nls';
 
 /**
  * Representation of a keybinding item for the view.

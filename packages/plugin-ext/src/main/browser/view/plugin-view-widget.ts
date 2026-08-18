@@ -14,16 +14,16 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { injectable, inject, postConstruct } from '@theia/core/shared/inversify';
-import { Panel, Widget } from '@theia/core/shared/@lumino/widgets';
-import { MenuModelRegistry } from '@theia/core/lib/common/menu';
-import { CommandRegistry } from '@theia/core/lib/common/command';
-import { StatefulWidget } from '@theia/core/lib/browser/shell/shell-layout-restorer';
-import { Message } from '@theia/core/shared/@lumino/messaging';
+import { injectable, inject, postConstruct } from '@ogun/core/shared/inversify';
+import { Panel, Widget } from '@ogun/core/shared/@lumino/widgets';
+import { MenuModelRegistry } from '@ogun/core/lib/common/menu';
+import { CommandRegistry } from '@ogun/core/lib/common/command';
+import { StatefulWidget } from '@ogun/core/lib/browser/shell/shell-layout-restorer';
+import { Message } from '@ogun/core/shared/@lumino/messaging';
 import { TreeViewWidget } from './tree-view-widget';
-import { DescriptionWidget, DynamicToolbarWidget } from '@theia/core/lib/browser/view-container';
-import { DisposableCollection, Emitter, Event } from '@theia/core/lib/common';
-import { ContextKeyService } from '@theia/core/lib/browser/context-key-service';
+import { DescriptionWidget, DynamicToolbarWidget } from '@ogun/core/lib/browser/view-container';
+import { DisposableCollection, Emitter, Event } from '@ogun/core/lib/common';
+import { ContextKeyService } from '@ogun/core/lib/browser/context-key-service';
 
 @injectable()
 export class PluginViewWidgetIdentifier {

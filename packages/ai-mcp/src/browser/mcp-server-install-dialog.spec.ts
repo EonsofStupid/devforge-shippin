@@ -14,9 +14,9 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { enableJSDOM } from '@theia/core/lib/browser/test/jsdom';
+import { enableJSDOM } from '@ogun/core/lib/browser/test/jsdom';
 let disableJSDOM = enableJSDOM();
-import { FrontendApplicationConfigProvider } from '@theia/core/lib/browser/frontend-application-config-provider';
+import { FrontendApplicationConfigProvider } from '@ogun/core/lib/browser/frontend-application-config-provider';
 // Another spec in this package may have already set the configuration; mocha loads all
 // specs into one process and `set` throws if called twice, so guard it.
 try {
@@ -26,7 +26,7 @@ try {
 }
 
 import { expect } from 'chai';
-import { DialogError } from '@theia/core/lib/browser/dialogs';
+import { DialogError } from '@ogun/core/lib/browser/dialogs';
 import { MCPServerInstallDialog, MCPServerInstallDialogOptions } from './mcp-server-install-dialog';
 
 // Balance the import-time enable; the suite re-enables JSDOM around its own tests so it

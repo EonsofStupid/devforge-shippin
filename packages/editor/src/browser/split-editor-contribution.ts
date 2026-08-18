@@ -14,7 +14,7 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { Widget, DockLayout } from '@theia/core/lib/browser';
+import { Widget, DockLayout } from '@ogun/core/lib/browser';
 
 /**
  * Symbol used to bind SplitEditorContribution implementations.

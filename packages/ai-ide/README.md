@@ -12,7 +12,7 @@
 
 ## Description
 
-The `@theia/ai-ide` package consolidates various AI agents for use within IDEs like the Theia IDE.
+The `@ogun/ai-ide` package consolidates various AI agents for use within IDEs like the Theia IDE.
 
 ## Agents
 
@@ -34,7 +34,7 @@ The package provides a configuration view that enables you to adjust settings re
 
 ## Additional Information
 
-- [API documentation for `@theia/ai-ide`](https://eclipse-theia.github.io/theia/docs/next/modules/_theia_ai-ide.html)
+- [API documentation for `@ogun/ai-ide`](https://eclipse-theia.github.io/theia/docs/next/modules/_theia_ai-ide.html)
 - [Theia - GitHub](https://github.com/eclipse-theia/theia)
 - [Theia - Website](https://theia-ide.org/)
 

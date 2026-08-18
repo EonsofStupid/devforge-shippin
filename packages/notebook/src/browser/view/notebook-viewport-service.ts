@@ -14,9 +14,9 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { Disposable } from '@theia/core';
-import { injectable } from '@theia/core/shared/inversify';
-import { Emitter } from '@theia/core/shared/vscode-languageserver-protocol';
+import { Disposable } from '@ogun/core';
+import { injectable } from '@ogun/core/shared/inversify';
+import { Emitter } from '@ogun/core/shared/vscode-languageserver-protocol';
 
 /**
  * this service is for managing the viewport and scroll state of a notebook editor.

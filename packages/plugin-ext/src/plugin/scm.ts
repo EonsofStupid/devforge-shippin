@@ -20,8 +20,8 @@
  *--------------------------------------------------------------------------------------------*/
 // code copied and modified from https://github.com/microsoft/vscode/blob/1.52.1/src/vs/workbench/api/common/extHostSCM.ts
 
-import * as theia from '@theia/plugin';
-import { Emitter, Event } from '@theia/core/lib/common/event';
+import * as theia from '@ogun/plugin';
+import { Emitter, Event } from '@ogun/core/lib/common/event';
 import {
     Plugin, PLUGIN_RPC_CONTEXT,
     ScmExt,
@@ -35,8 +35,8 @@ import {
     ScmHistoryOptionsDto,
     ScmHistoryItemRefsChangeEventDto
 } from '../common';
-import { Disposable, DisposableCollection } from '@theia/core/lib/common/disposable';
-import { CancellationToken } from '@theia/core/lib/common/cancellation';
+import { Disposable, DisposableCollection } from '@ogun/core/lib/common/disposable';
+import { CancellationToken } from '@ogun/core/lib/common/cancellation';
 import { CommandRegistryImpl } from '../plugin/command-registry';
 import { Splice } from '../common/arrays';
 import { UriComponents } from '../common/uri-components';
@@ -44,7 +44,7 @@ import { Command } from '../common/plugin-api-rpc-model';
 import { RPCProtocol } from '../common/rpc-protocol';
 import { URI, ThemeIcon } from './types-impl';
 import { ScmCommandArg, ScmHistoryItemCommandArg } from '../common/plugin-api-rpc';
-import { sep } from '@theia/core/lib/common/paths';
+import { sep } from '@ogun/core/lib/common/paths';
 import { PluginIconPath } from './plugin-icon-path';
 import { createAPIObject } from './plugin-context';
 

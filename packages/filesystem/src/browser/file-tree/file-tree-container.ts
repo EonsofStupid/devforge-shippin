@@ -14,8 +14,8 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { interfaces, Container } from '@theia/core/shared/inversify';
-import { CompressedExpansionService, CompressionToggle, createTreeContainer, TreeCompressionService, TreeContainerProps } from '@theia/core/lib/browser';
+import { interfaces, Container } from '@ogun/core/shared/inversify';
+import { CompressedExpansionService, CompressionToggle, createTreeContainer, TreeCompressionService, TreeContainerProps } from '@ogun/core/lib/browser';
 import { FileTree } from './file-tree';
 import { FileTreeModel } from './file-tree-model';
 import { FileTreeWidget } from './file-tree-widget';

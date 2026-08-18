@@ -14,9 +14,9 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { PromptService } from '@theia/ai-core/lib/common/prompt-service';
-import { FrontendApplicationContribution } from '@theia/core/lib/browser';
-import { inject, injectable, interfaces } from '@theia/core/shared/inversify';
+import { PromptService } from '@ogun/ai-core/lib/common/prompt-service';
+import { FrontendApplicationContribution } from '@ogun/core/lib/browser';
+import { inject, injectable, interfaces } from '@ogun/core/shared/inversify';
 
 export function bindSampleChatCommandContribution(bind: interfaces.Bind): void {
     bind(SampleChatCommandContribution).toSelf().inSingletonScope();

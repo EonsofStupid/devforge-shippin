@@ -14,13 +14,13 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { FrontendApplicationConfigProvider } from '@theia/core/lib/browser/frontend-application-config-provider';
-import { enableJSDOM } from '@theia/core/lib/browser/test/jsdom';
+import { FrontendApplicationConfigProvider } from '@ogun/core/lib/browser/frontend-application-config-provider';
+import { enableJSDOM } from '@ogun/core/lib/browser/test/jsdom';
 let disableJSDOM = enableJSDOM();
 FrontendApplicationConfigProvider.set({});
 
-import { ChatToolContext, MutableChatRequestModel, MutableChatResponseModel } from '@theia/ai-chat';
-import { Container } from '@theia/core/shared/inversify';
+import { ChatToolContext, MutableChatRequestModel, MutableChatResponseModel } from '@ogun/ai-chat';
+import { Container } from '@ogun/core/shared/inversify';
 import { expect } from 'chai';
 import { DefaultFileChangeSetTitleProvider } from './file-changeset-functions';
 

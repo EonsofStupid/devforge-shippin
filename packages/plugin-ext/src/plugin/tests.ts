@@ -25,26 +25,26 @@
 
 /* tslint:disable:typedef */
 
-import * as theia from '@theia/plugin';
-import { CancellationToken, CancellationTokenSource } from '@theia/core/lib/common/cancellation';
-import { Disposable, DisposableCollection, Emitter, Event } from '@theia/core';
-import { hash } from '@theia/core/lib/common/hash';
+import * as theia from '@ogun/plugin';
+import { CancellationToken, CancellationTokenSource } from '@ogun/core/lib/common/cancellation';
+import { Disposable, DisposableCollection, Emitter, Event } from '@ogun/core';
+import { hash } from '@ogun/core/lib/common/hash';
 
-import { isDefined } from '@theia/core/lib/common/types';
+import { isDefined } from '@ogun/core/lib/common/types';
 import { TestingExt, PLUGIN_RPC_CONTEXT, TestingMain } from '../common/plugin-api-rpc';
 import { CommandRegistryImpl } from './command-registry';
 import { RPCProtocol } from '../common/rpc-protocol';
-import { generateUuid } from '@theia/core/lib/common/uuid';
+import { generateUuid } from '@ogun/core/lib/common/uuid';
 import * as Convert from './type-converters';
 import { TestItemImpl, TestItemCollection } from './test-item';
-import { AccumulatingTreeDeltaEmitter, TreeDelta } from '@theia/test/lib/common/tree-delta';
+import { AccumulatingTreeDeltaEmitter, TreeDelta } from '@ogun/test/lib/common/tree-delta';
 import {
     TestItemDTO, TestOutputDTO, TestExecutionState, TestRunProfileDTO,
     TestRunProfileKind, TestRunRequestDTO, TestStateChangeDTO, TestItemReference, TestMessageArg, TestMessageDTO,
     TestMessageStackFrameDTO
 } from '../common/test-types';
-import * as protocol from '@theia/core/shared/vscode-languageserver-protocol';
-import { ChangeBatcher, observableProperty } from '@theia/test/lib/common/collections';
+import * as protocol from '@ogun/core/shared/vscode-languageserver-protocol';
+import { ChangeBatcher, observableProperty } from '@ogun/test/lib/common/collections';
 import { Location, Position, Range, TestRunRequest, URI } from './types-impl';
 import { MarkdownString } from '../common/plugin-api-rpc-model';
 

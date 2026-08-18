@@ -14,15 +14,15 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { LanguageQuickPickItem, LanguageQuickPickService } from '@theia/core/lib/browser/i18n/language-quick-pick-service';
-import { inject, injectable, named } from '@theia/core/shared/inversify';
-import { LanguageInfo } from '@theia/core/lib/common/i18n/localization';
-import { PluginServer } from '@theia/plugin-ext';
-import { VSXSearchEntry } from '@theia/ovsx-client';
-import { VSCodeExtensionUri } from '@theia/plugin-ext-vscode/lib/common/plugin-vscode-uri';
-import { nls } from '@theia/core/lib/common/nls';
-import { MessageService } from '@theia/core/lib/common/message-service';
-import { ILogger } from '@theia/core';
+import { LanguageQuickPickItem, LanguageQuickPickService } from '@ogun/core/lib/browser/i18n/language-quick-pick-service';
+import { inject, injectable, named } from '@ogun/core/shared/inversify';
+import { LanguageInfo } from '@ogun/core/lib/common/i18n/localization';
+import { PluginServer } from '@ogun/plugin-ext';
+import { VSXSearchEntry } from '@ogun/ovsx-client';
+import { VSCodeExtensionUri } from '@ogun/plugin-ext-vscode/lib/common/plugin-vscode-uri';
+import { nls } from '@ogun/core/lib/common/nls';
+import { MessageService } from '@ogun/core/lib/common/message-service';
+import { ILogger } from '@ogun/core';
 import { VSXRegistryService } from '../common/vsx-registry-service';
 
 @injectable()

@@ -14,17 +14,17 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import * as React from '@theia/core/shared/react';
-import { injectable, inject, postConstruct } from '@theia/core/shared/inversify';
-import { Message } from '@theia/core/shared/@lumino/messaging';
+import * as React from '@ogun/core/shared/react';
+import { injectable, inject, postConstruct } from '@ogun/core/shared/inversify';
+import { Message } from '@ogun/core/shared/@lumino/messaging';
 import { PluginIdentifiers, PluginMetadata } from '../../common/plugin-protocol';
-import { ReactWidget } from '@theia/core/lib/browser/widgets/react-widget';
-import { AlertMessage } from '@theia/core/lib/browser/widgets/alert-message';
+import { ReactWidget } from '@ogun/core/lib/browser/widgets/react-widget';
+import { AlertMessage } from '@ogun/core/lib/browser/widgets/alert-message';
 import { HostedPluginSupport, PluginProgressLocation } from '../../hosted/browser/hosted-plugin';
-import { ProgressBarFactory } from '@theia/core/lib/browser/progress-bar-factory';
-import { DisposableCollection } from '@theia/core/lib/common/disposable';
-import { codicon } from '@theia/core/lib/browser';
-import { nls } from '@theia/core/lib/common';
+import { ProgressBarFactory } from '@ogun/core/lib/browser/progress-bar-factory';
+import { DisposableCollection } from '@ogun/core/lib/common/disposable';
+import { codicon } from '@ogun/core/lib/browser';
+import { nls } from '@ogun/core/lib/common';
 
 export const PLUGINS_LABEL = nls.localizeByDefault('Plugins');
 

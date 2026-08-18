@@ -13,13 +13,13 @@
 //
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
-import * as theia from '@theia/plugin';
+import * as theia from '@ogun/plugin';
 import { ThemeColor, StatusBarAlignment } from '../types-impl';
 import { StatusBarMessageRegistryMain } from '../../common/plugin-api-rpc';
-import { UUID } from '@theia/core/shared/@lumino/coreutils';
+import { UUID } from '@ogun/core/shared/@lumino/coreutils';
 import { CommandRegistryImpl } from '../command-registry';
 import { MarkdownString } from '../markdown-string';
-import { DisposableCollection } from '@theia/core/lib/common/disposable';
+import { DisposableCollection } from '@ogun/core/lib/common/disposable';
 
 export class StatusBarItemImpl implements theia.StatusBarItem {
 

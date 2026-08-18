@@ -16,7 +16,7 @@
 import * as chai from 'chai';
 import * as os from 'os';
 import * as path from 'path';
-import { FileUri } from '@theia/core/lib/common/file-uri';
+import { FileUri } from '@ogun/core/lib/common/file-uri';
 import { createTerminalTestContainer } from './test/terminal-test-container';
 import { IShellTerminalServer, IShellTerminalServerOptions } from '../common/shell-terminal-protocol';
 

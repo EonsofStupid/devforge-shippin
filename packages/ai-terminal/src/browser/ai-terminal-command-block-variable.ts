@@ -14,10 +14,10 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { AIVariable, AIVariableContext, AIVariableContribution, AIVariableResolutionRequest, AIVariableResolver, AIVariableService, ResolvedAIVariable } from '@theia/ai-core';
-import { ILogger, MaybePromise, nls, QuickInputService, QuickPickItem, QuickPickItemOrSeparator } from '@theia/core';
-import { inject, injectable } from '@theia/core/shared/inversify';
-import { TerminalService } from '@theia/terminal/lib/browser/base/terminal-service';
+import { AIVariable, AIVariableContext, AIVariableContribution, AIVariableResolutionRequest, AIVariableResolver, AIVariableService, ResolvedAIVariable } from '@ogun/ai-core';
+import { ILogger, MaybePromise, nls, QuickInputService, QuickPickItem, QuickPickItemOrSeparator } from '@ogun/core';
+import { inject, injectable } from '@ogun/core/shared/inversify';
+import { TerminalService } from '@ogun/terminal/lib/browser/base/terminal-service';
 
 const TERMINAL_COMMAND_BLOCK: AIVariable = {
     id: 'ai-terminal:terminal-command-block',

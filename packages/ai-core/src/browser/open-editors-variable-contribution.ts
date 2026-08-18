@@ -14,11 +14,11 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { MaybePromise, nls } from '@theia/core';
-import { injectable, inject } from '@theia/core/shared/inversify';
-import { EditorManager } from '@theia/editor/lib/browser';
-import { WorkspaceService } from '@theia/workspace/lib/browser';
-import URI from '@theia/core/lib/common/uri';
+import { MaybePromise, nls } from '@ogun/core';
+import { injectable, inject } from '@ogun/core/shared/inversify';
+import { EditorManager } from '@ogun/editor/lib/browser';
+import { WorkspaceService } from '@ogun/workspace/lib/browser';
+import URI from '@ogun/core/lib/common/uri';
 import { AIVariable, ResolvedAIVariable, AIVariableContribution, AIVariableResolver, AIVariableService, AIVariableResolutionRequest, AIVariableContext } from '../common';
 
 export const OPEN_EDITORS_VARIABLE: AIVariable = {

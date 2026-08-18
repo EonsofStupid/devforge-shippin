@@ -12,11 +12,11 @@
 
 ## Description
 
-The `@theia/process` extension allows the management of processes started with or without a `terminal`.
+The `@ogun/process` extension allows the management of processes started with or without a `terminal`.
 
 ## Additional Information
 
-- [API documentation for `@theia/process`](https://eclipse-theia.github.io/theia/docs/next/modules/_theia_process.html)
+- [API documentation for `@ogun/process`](https://eclipse-theia.github.io/theia/docs/next/modules/_theia_process.html)
 - [Theia - GitHub](https://github.com/eclipse-theia/theia)
 - [Theia - Website](https://theia-ide.org/)
 

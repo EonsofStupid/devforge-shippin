@@ -14,9 +14,9 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { CancellationToken, URI } from '@theia/core/lib/common';
-import { injectable } from '@theia/core/shared/inversify';
-import { Disposable } from '@theia/core/shared/vscode-languageserver-protocol';
+import { CancellationToken, URI } from '@ogun/core/lib/common';
+import { injectable } from '@ogun/core/shared/inversify';
+import { Disposable } from '@ogun/core/shared/vscode-languageserver-protocol';
 
 export interface CanonicalUriProvider extends Disposable {
     provideCanonicalUri(uri: URI, targetScheme: string, token: CancellationToken): Promise<URI | undefined>;

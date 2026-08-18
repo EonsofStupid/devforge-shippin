@@ -14,20 +14,20 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { FrontendApplicationContribution } from '@theia/core/lib/browser';
-import { inject, injectable, named } from '@theia/core/shared/inversify';
+import { FrontendApplicationContribution } from '@ogun/core/lib/browser';
+import { inject, injectable, named } from '@ogun/core/shared/inversify';
 import { isRemoteMCPServerDescription, MCPOAuthFrontendDelegate, MCPServerDescription, MCPServerManager, MCPServerStatus } from '../common';
 import { MCP_SERVERS_PREF, MCP_USE_WORKSPACE_AS_ROOT_PREF } from '../common/mcp-preferences';
 import { MCPFrontendNotificationService, MCPFrontendService } from '../common/mcp-server-manager';
-import { JSONObject } from '@theia/core/shared/@lumino/coreutils';
-import { MessageService, PreferenceService, PreferenceUtils, Progress, ILogger } from '@theia/core';
-import { nls } from '@theia/core/lib/common/nls';
+import { JSONObject } from '@ogun/core/shared/@lumino/coreutils';
+import { MessageService, PreferenceService, PreferenceUtils, Progress, ILogger } from '@ogun/core';
+import { nls } from '@ogun/core/lib/common/nls';
 import {
     WorkspaceTrustService,
     WorkspaceRestrictionContribution,
     WorkspaceRestriction
-} from '@theia/workspace/lib/browser/workspace-trust-service';
-import { WorkspaceService } from '@theia/workspace/lib/browser/workspace-service';
+} from '@ogun/workspace/lib/browser/workspace-trust-service';
+import { WorkspaceService } from '@ogun/workspace/lib/browser/workspace-service';
 import { filterValidValues, MCPServersPreference } from '../common/mcp-server-preference-validator';
 
 @injectable()

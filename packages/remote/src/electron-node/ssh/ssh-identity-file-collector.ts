@@ -14,13 +14,13 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import * as fs from '@theia/core/shared/fs-extra';
+import * as fs from '@ogun/core/shared/fs-extra';
 import * as os from 'os';
 import * as path from 'path';
 import * as crypto from 'crypto';
 import { ParsedKey } from 'ssh2';
 import * as ssh2 from 'ssh2';
-import { injectable } from '@theia/core/shared/inversify';
+import { injectable } from '@ogun/core/shared/inversify';
 
 export interface SSHKey {
     filename: string;

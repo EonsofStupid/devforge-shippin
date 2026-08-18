@@ -18,7 +18,7 @@ import { expect } from 'chai';
 import * as sinon from 'sinon';
 import { ShellCommandPermissionService } from './shell-command-permission-service';
 import { SHELL_COMMAND_ALLOWLIST_PREFERENCE, SHELL_COMMAND_DENYLIST_PREFERENCE } from '../common/shell-command-preferences';
-import { AiConfigurationService } from '@theia/ai-core';
+import { AiConfigurationService } from '@ogun/ai-core';
 import { DefaultShellCommandAnalyzer, ShellCommandAnalyzer } from '../common/shell-command-analyzer';
 
 describe('ShellCommandPermissionService', () => {

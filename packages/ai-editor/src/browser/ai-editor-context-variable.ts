@@ -14,15 +14,15 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { AIVariable, AIVariableContext, AIVariableContribution, AIVariableResolutionRequest, AIVariableResolver, ResolvedAIContextVariable } from '@theia/ai-core';
-import { FrontendVariableService } from '@theia/ai-core/lib/browser';
-import { inject, injectable } from '@theia/core/shared/inversify';
-import { codiconArray } from '@theia/core/lib/browser';
-import { MonacoEditor } from '@theia/monaco/lib/browser/monaco-editor';
-import { MonacoEditorProvider } from '@theia/monaco/lib/browser/monaco-editor-provider';
-import { WorkspaceService } from '@theia/workspace/lib/browser/workspace-service';
+import { AIVariable, AIVariableContext, AIVariableContribution, AIVariableResolutionRequest, AIVariableResolver, ResolvedAIContextVariable } from '@ogun/ai-core';
+import { FrontendVariableService } from '@ogun/ai-core/lib/browser';
+import { inject, injectable } from '@ogun/core/shared/inversify';
+import { codiconArray } from '@ogun/core/lib/browser';
+import { MonacoEditor } from '@ogun/monaco/lib/browser/monaco-editor';
+import { MonacoEditorProvider } from '@ogun/monaco/lib/browser/monaco-editor-provider';
+import { WorkspaceService } from '@ogun/workspace/lib/browser/workspace-service';
 import * as monaco from '@theia/monaco-editor-core';
-import { nls } from '@theia/core';
+import { nls } from '@ogun/core';
 
 export const EDITOR_CONTEXT_VARIABLE: AIVariable = {
     id: 'editorContext',

@@ -16,12 +16,12 @@
 
 /* eslint-disable @typescript-eslint/no-explicit-any */
 
-import { DisposableCollection, Emitter } from '@theia/core/lib/common';
-import { injectable, inject } from '@theia/core/shared/inversify';
+import { DisposableCollection, Emitter } from '@ogun/core/lib/common';
+import { injectable, inject } from '@ogun/core/shared/inversify';
 import { ScmContextKeyService } from './scm-context-key-service';
 import { ScmRepository, ScmProviderOptions } from './scm-repository';
 import { ScmCommand, ScmProvider } from './scm-provider';
-import URI from '@theia/core/lib/common/uri';
+import URI from '@ogun/core/lib/common/uri';
 
 @injectable()
 export class ScmService {

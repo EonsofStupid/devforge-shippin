@@ -14,8 +14,8 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { ContributionProvider, MaybePromise, Prioritizeable } from '@theia/core';
-import { inject, injectable, named, postConstruct } from '@theia/core/shared/inversify';
+import { ContributionProvider, MaybePromise, Prioritizeable } from '@ogun/core';
+import { inject, injectable, named, postConstruct } from '@ogun/core/shared/inversify';
 import { PropertyDataService } from './property-data-service';
 import { PropertyViewContentWidget } from './property-view-content-widget';
 

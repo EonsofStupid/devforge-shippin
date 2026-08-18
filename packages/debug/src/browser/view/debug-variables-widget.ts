@@ -14,14 +14,14 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { injectable, inject, postConstruct, interfaces, Container } from '@theia/core/shared/inversify';
-import { MenuPath, Disposable, CommandRegistry, MenuModelRegistry, DisposableCollection, Command } from '@theia/core/lib/common';
-import { SourceTreeWidget, TreeElementNode } from '@theia/core/lib/browser/source-tree';
+import { injectable, inject, postConstruct, interfaces, Container } from '@ogun/core/shared/inversify';
+import { MenuPath, Disposable, CommandRegistry, MenuModelRegistry, DisposableCollection, Command } from '@ogun/core/lib/common';
+import { SourceTreeWidget, TreeElementNode } from '@ogun/core/lib/browser/source-tree';
 import { DebugVariablesSource } from './debug-variables-source';
 import { DebugViewModel } from './debug-view-model';
-import { nls } from '@theia/core/lib/common/nls';
-import { MouseEvent } from '@theia/core/shared/react';
-import { SelectableTreeNode, TreeNode, TreeSelection } from '@theia/core/lib/browser';
+import { nls } from '@ogun/core/lib/common/nls';
+import { MouseEvent } from '@ogun/core/shared/react';
+import { SelectableTreeNode, TreeNode, TreeSelection } from '@ogun/core/lib/browser';
 import { DebugVariable } from '../console/debug-console-items';
 import { BreakpointManager } from '../breakpoint/breakpoint-manager';
 import { DataBreakpoint, DataBreakpointSource, DataBreakpointSourceType } from '../breakpoint/breakpoint-marker';

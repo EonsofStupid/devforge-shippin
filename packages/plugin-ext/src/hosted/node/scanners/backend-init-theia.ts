@@ -14,7 +14,7 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import * as theia from '@theia/plugin';
+import * as theia from '@ogun/plugin';
 import { BackendInitializationFn } from '../../../common/plugin-protocol';
 import { PluginAPIFactory, Plugin, emptyPlugin } from '../../../common/plugin-api-rpc';
 
@@ -39,6 +39,16 @@ export const doInitialization: BackendInitializationFn = (apiFactory: PluginAPIF
 
 };
 
+/**
+ * The module specifiers a plugin may require to reach the plugin API.
+ *
+ * Our own package is `@ogun/plugin`, but a Theia plugin built against upstream
+ * requires `@theia/plugin` — and it is a string baked into someone else's compiled code,
+ * not something a rename on our side can reach. Renaming the scope is about no longer
+ * half-owning what is ours; it is not a reason to stop loading plugins that exist.
+ */
+const PLUGIN_API_MODULES = new Set(['@ogun/plugin', '@theia/plugin']);
+
 function overrideInternalLoad(): void {
     const module = require('module');
     // save original load method
@@ -47,7 +57,7 @@ function overrideInternalLoad(): void {
     // if we try to resolve theia module, return the filename entry to use cache.
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     module._load = function (request: string, parent: any, isMain: {}): any {
-        if (request !== '@theia/plugin') {
+        if (!PLUGIN_API_MODULES.has(request)) {
             return internalLoad.apply(this, arguments);
         }
 

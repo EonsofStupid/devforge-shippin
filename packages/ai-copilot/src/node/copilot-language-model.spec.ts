@@ -15,7 +15,7 @@
 // *****************************************************************************
 
 import { expect } from 'chai';
-import { LanguageModelMessage } from '@theia/ai-core';
+import { LanguageModelMessage } from '@ogun/ai-core';
 import { ChatCompletionMessageParam } from 'openai/resources';
 import { CopilotLanguageModel } from './copilot-language-model';
 

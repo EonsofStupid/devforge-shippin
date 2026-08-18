@@ -14,11 +14,11 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { inject, injectable } from '@theia/core/shared/inversify';
-import { Disposable } from '@theia/core';
-import { Autorun, Observable } from '@theia/core/lib/common/observable';
+import { inject, injectable } from '@ogun/core/shared/inversify';
+import { Disposable } from '@ogun/core';
+import { Autorun, Observable } from '@ogun/core/lib/common/observable';
 import * as monaco from '@theia/monaco-editor-core';
-import { MonacoEditorViewZone } from '@theia/monaco/lib/browser/monaco-editor-zone-widget';
+import { MonacoEditorViewZone } from '@ogun/monaco/lib/browser/monaco-editor-zone-widget';
 import { MergeEditor } from '../merge-editor';
 import { MergeRange } from '../model/merge-range';
 import { MergeRangeAction, MergeRangeActions } from './merge-range-actions';

@@ -3,7 +3,7 @@
 ## v0.14.0 - 19/12/2019
 
 - [application-manager] removed unnecessary `bunyan` dependency [#6651](https://github.com/eclipse-theia/theia/pull/6651)
-- [bunyan] removed [`@theia/bunyan`](https://github.com/eclipse-theia/theia/tree/b92a5673de1e9d1bdc85e6200486b92394200579/packages/bunyan) extension [#6651](https://github.com/eclipse-theia/theia/pull/6651)
+- [bunyan] removed [`@ogun/bunyan`](https://github.com/eclipse-theia/theia/tree/b92a5673de1e9d1bdc85e6200486b92394200579/packages/bunyan) extension [#6651](https://github.com/eclipse-theia/theia/pull/6651)
 - [core] added handling preventing scrolling when closing dialogs [#6674](https://github.com/eclipse-theia/theia/pull/6674)
 - [core] fixed `noWrapInfo` classname in applications with a subset of extensions [#6593](https://github.com/eclipse-theia/theia/pull/6593)
 - [core] fixed infinite recursion when the tree root is refreshed [#6679](https://github.com/eclipse-theia/theia/pull/6679)
@@ -324,7 +324,7 @@ This repo was moved to the `eclipse-theia` organization. Though GitHub automatic
 - [core] supported diagnostic marker in the tab bar [#5845](https://github.com/theia-ide/theia/pull/5845)
 - [cpp] added support for multiple root cpp build configurations [#4603](https://github.com/theia-ide/theia/pull/4603)
 - [cpp] enabled better semantic highlighting support [#5850](https://github.com/theia-ide/theia/pull/5850)
-- [cpp] moved cpp grammars from the `@theia/cpp` extension to the `@theia/textmate-grammars` extension [#5803](https://github.com/theia-ide/theia/pull/5803)
+- [cpp] moved cpp grammars from the `@ogun/cpp` extension to the `@ogun/textmate-grammars` extension [#5803](https://github.com/theia-ide/theia/pull/5803)
 - [debug] added progress indicator for the debug widget [#6009](https://github.com/theia-ide/theia/pull/6009)
 - [debug] ensured that terminate flags are properly restarted [#5954](https://github.com/theia-ide/theia/pull/5954)
 - [debug] fixed issue where the debug icons remain opaque after a debug session has terminated [#5933](https://github.com/theia-ide/theia/pull/5933)
@@ -577,7 +577,7 @@ Breaking changes:
   - The CLEAR_BUTTON and OVERLAY constants are no longer available. Furthermore OutputChannelManager API has changed.
 - [preferences] refactored to integrate launch configurations as preferences
 - [scm] added Source Control Model
-- [core] renamed the `src/electron-main` folder to `src/electron-node` in `@theia/core`. Removed `preventStop` from the `FrontendApplication` API. Move the `DefaultWindowService` class into its own module.
+- [core] renamed the `src/electron-main` folder to `src/electron-node` in `@ogun/core`. Removed `preventStop` from the `FrontendApplication` API. Move the `DefaultWindowService` class into its own module.
 
 ## v0.6.0 - 30/04/2019
 

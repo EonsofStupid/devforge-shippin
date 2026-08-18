@@ -13,7 +13,7 @@
 //
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
-import * as theia from '@theia/plugin';
+import * as theia from '@ogun/plugin';
 import { OutputChannelRegistryMain, PluginInfo } from '../../common/plugin-api-rpc';
 
 export class OutputChannelImpl implements theia.OutputChannel {

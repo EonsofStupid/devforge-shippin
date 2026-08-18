@@ -15,7 +15,7 @@
 // *****************************************************************************
 
 import * as sinon from 'sinon';
-import { ContributionProvider, Logger } from '@theia/core';
+import { ContributionProvider, Logger } from '@ogun/core';
 import { expect } from 'chai';
 import {
     DefaultAIVariableService,

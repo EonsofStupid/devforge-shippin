@@ -15,12 +15,12 @@
 // *****************************************************************************
 
 import { ChatResponsePartRenderer } from '../chat-response-part-renderer';
-import { inject, injectable } from '@theia/core/shared/inversify';
-import { ChatResponseContent, ServerToolCallChatResponseContent } from '@theia/ai-chat/lib/common';
-import * as React from '@theia/core/shared/react';
-import { ReactNode } from '@theia/core/shared/react';
-import { nls } from '@theia/core/lib/common/nls';
-import { codicon, HoverService, OpenerService } from '@theia/core/lib/browser';
+import { inject, injectable } from '@ogun/core/shared/inversify';
+import { ChatResponseContent, ServerToolCallChatResponseContent } from '@ogun/ai-chat/lib/common';
+import * as React from '@ogun/core/shared/react';
+import { ReactNode } from '@ogun/core/shared/react';
+import { nls } from '@ogun/core/lib/common/nls';
+import { codicon, HoverService, OpenerService } from '@ogun/core/lib/browser';
 import { renderToolCallResult } from './toolcall-result';
 import { condenseArguments, formatArgsForTooltip } from './toolcall-utils';
 

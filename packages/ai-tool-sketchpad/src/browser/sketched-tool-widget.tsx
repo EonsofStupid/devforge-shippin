@@ -14,11 +14,11 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { codicon, ConfirmDialog, ReactWidget } from '@theia/core/lib/browser';
-import { nls } from '@theia/core';
-import { inject, injectable, postConstruct } from '@theia/core/shared/inversify';
-import * as React from '@theia/core/shared/react';
-import { generateUuid } from '@theia/core/lib/common/uuid';
+import { codicon, ConfirmDialog, ReactWidget } from '@ogun/core/lib/browser';
+import { nls } from '@ogun/core';
+import { inject, injectable, postConstruct } from '@ogun/core/shared/inversify';
+import * as React from '@ogun/core/shared/react';
+import { generateUuid } from '@ogun/core/lib/common/uuid';
 import { SketchedToolDefinition, SketchedToolParameterDefinition, SketchedToolParameterType, SketchedToolReturnMode, SketchedToolService } from '../common';
 
 const PARAMETER_TYPES: SketchedToolParameterType[] = ['string', 'number', 'integer', 'boolean', 'object', 'array'];

@@ -15,17 +15,17 @@
 // *****************************************************************************
 
 import * as path from 'path';
-import * as yargs from '@theia/core/shared/yargs';
-import * as fs from '@theia/core/shared/fs-extra';
+import * as yargs from '@ogun/core/shared/yargs';
+import * as fs from '@ogun/core/shared/fs-extra';
 import * as jsoncparser from 'jsonc-parser';
-import { injectable, inject, postConstruct, named } from '@theia/core/shared/inversify';
-import { FileUri, BackendApplicationContribution } from '@theia/core/lib/node';
-import { CliContribution } from '@theia/core/lib/node/cli';
-import { Deferred } from '@theia/core/lib/common/promise-util';
+import { injectable, inject, postConstruct, named } from '@ogun/core/shared/inversify';
+import { FileUri, BackendApplicationContribution } from '@ogun/core/lib/node';
+import { CliContribution } from '@ogun/core/lib/node/cli';
+import { Deferred } from '@ogun/core/lib/common/promise-util';
 import { WorkspaceServer, UntitledWorkspaceService } from '../common';
-import { EnvVariablesServer } from '@theia/core/lib/common/env-variables';
-import URI from '@theia/core/lib/common/uri';
-import { ContributionProvider, notEmpty } from '@theia/core';
+import { EnvVariablesServer } from '@ogun/core/lib/common/env-variables';
+import URI from '@ogun/core/lib/common/uri';
+import { ContributionProvider, notEmpty } from '@ogun/core';
 
 export const WorkspaceHandlerContribution = Symbol('workspaceHandlerContribution');
 export interface WorkspaceHandlerContribution {

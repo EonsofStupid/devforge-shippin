@@ -14,11 +14,11 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { injectable, postConstruct } from '@theia/core/shared/inversify';
-import { ElectronTokenValidator } from '@theia/core/lib/electron-node/token/electron-token-validator';
+import { injectable, postConstruct } from '@ogun/core/shared/inversify';
+import { ElectronTokenValidator } from '@ogun/core/lib/electron-node/token/electron-token-validator';
 import { IncomingMessage } from 'http';
 import { MetricsBackendApplicationContribution } from '../node/metrics-backend-application-contribution';
-import { MaybePromise } from '@theia/core';
+import { MaybePromise } from '@ogun/core';
 
 @injectable()
 export class MetricsElectronTokenValidator extends ElectronTokenValidator {

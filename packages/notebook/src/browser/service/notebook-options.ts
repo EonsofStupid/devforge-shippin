@@ -15,11 +15,11 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { inject, injectable, postConstruct } from '@theia/core/shared/inversify';
-import { PreferenceService } from '@theia/core/lib/common';
-import { Emitter } from '@theia/core';
+import { inject, injectable, postConstruct } from '@ogun/core/shared/inversify';
+import { PreferenceService } from '@ogun/core/lib/common';
+import { Emitter } from '@ogun/core';
 import { NotebookPreferences, notebookPreferenceSchema } from '../../common/notebook-preferences';
-import { EditorPreferences } from '@theia/editor/lib/common/editor-preferences';
+import { EditorPreferences } from '@ogun/editor/lib/common/editor-preferences';
 import { BareFontInfo } from '@theia/monaco-editor-core/esm/vs/editor/common/config/fontInfo';
 import { createBareFontInfoFromRawSettings } from '@theia/monaco-editor-core/esm/vs/editor/common/config/fontInfoFromSettings';
 import { PixelRatio } from '@theia/monaco-editor-core/esm/vs/base/browser/pixelRatio';

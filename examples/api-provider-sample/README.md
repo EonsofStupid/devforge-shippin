@@ -12,7 +12,7 @@
 
 ## Description
 
-The `@theia/api-provider-sample` extension is a programming example showing how to define and provide a custom API object for _plugins_ to use.
+The `@ogun/api-provider-sample` extension is a programming example showing how to define and provide a custom API object for _plugins_ to use.
 The purpose of the extension is to:
 
 - provide developers with realistic coding examples of providing custom API objects

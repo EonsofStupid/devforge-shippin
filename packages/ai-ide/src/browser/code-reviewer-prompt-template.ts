@@ -14,7 +14,7 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { BasePromptFragment } from '@theia/ai-core/lib/common';
+import { BasePromptFragment } from '@ogun/ai-core/lib/common';
 
 export const CODE_REVIEWER_SYSTEM_PROMPT_ID = 'code-reviewer-system';
 

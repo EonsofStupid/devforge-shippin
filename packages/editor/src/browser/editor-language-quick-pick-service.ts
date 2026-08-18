@@ -14,10 +14,10 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { inject, injectable } from '@theia/core/shared/inversify';
-import { Language, LanguageService } from '@theia/core/lib/browser/language-service';
-import { nls, QuickInputService, QuickPickItemOrSeparator, QuickPickValue, URI } from '@theia/core';
-import { LabelProvider } from '@theia/core/lib/browser';
+import { inject, injectable } from '@ogun/core/shared/inversify';
+import { Language, LanguageService } from '@ogun/core/lib/browser/language-service';
+import { nls, QuickInputService, QuickPickItemOrSeparator, QuickPickValue, URI } from '@ogun/core';
+import { LabelProvider } from '@ogun/core/lib/browser';
 
 @injectable()
 export class EditorLanguageQuickPickService {

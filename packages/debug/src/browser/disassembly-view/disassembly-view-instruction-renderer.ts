@@ -14,9 +14,9 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { open, OpenerService } from '@theia/core/lib/browser';
-import { URI as TheiaURI } from '@theia/core/lib/common/uri';
-import { EditorOpenerOptions } from '@theia/editor/lib/browser';
+import { open, OpenerService } from '@ogun/core/lib/browser';
+import { URI as TheiaURI } from '@ogun/core/lib/common/uri';
+import { EditorOpenerOptions } from '@ogun/editor/lib/browser';
 import { IDisposable, Uri as URI } from '@theia/monaco-editor-core';
 import { $, addStandardDisposableListener, append } from '@theia/monaco-editor-core/esm/vs/base/browser/dom';
 import { ITableRenderer } from '@theia/monaco-editor-core/esm/vs/base/browser/ui/table/table';

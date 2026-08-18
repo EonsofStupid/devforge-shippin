@@ -14,8 +14,8 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { ContributionProvider, Emitter, Event } from '@theia/core';
-import { inject, injectable, named, postConstruct } from '@theia/core/shared/inversify';
+import { ContributionProvider, Emitter, Event } from '@ogun/core';
+import { inject, injectable, named, postConstruct } from '@ogun/core/shared/inversify';
 
 export const WorkspaceSearchFilterProvider = Symbol('WorkspaceSearchFilterProvider');
 

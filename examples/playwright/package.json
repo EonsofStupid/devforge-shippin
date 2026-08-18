@@ -1,5 +1,5 @@
 {
-  "name": "@theia/playwright",
+  "name": "@ogun/playwright",
   "version": "1.74.0",
   "description": "System tests for Theia",
   "license": "EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0",
@@ -37,7 +37,7 @@
     "tslib": "^2.8.1"
   },
   "devDependencies": {
-    "@theia/cli": "1.74.0",
+    "@ogun/cli": "1.74.0",
     "@types/fs-extra": "^9.0.13",
     "allure-commandline": "^2.43.0",
     "allure-playwright": "^2.15.1",

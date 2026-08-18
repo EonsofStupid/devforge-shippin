@@ -14,10 +14,10 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { injectable, inject } from '@theia/core/shared/inversify';
-import { LabelProvider, codicon } from '@theia/core/lib/browser';
-import { FileStat } from '@theia/filesystem/lib/common/files';
-import { CommandRegistry, MenuModelRegistry, Command, PreferenceScope } from '@theia/core/lib/common';
+import { injectable, inject } from '@ogun/core/shared/inversify';
+import { LabelProvider, codicon } from '@ogun/core/lib/browser';
+import { FileStat } from '@ogun/filesystem/lib/common/files';
+import { CommandRegistry, MenuModelRegistry, Command, PreferenceScope } from '@ogun/core/lib/common';
 import { Preference, PreferenceMenus } from './preference-types';
 
 /**

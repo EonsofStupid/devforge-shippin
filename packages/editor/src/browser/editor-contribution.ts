@@ -16,22 +16,22 @@
 
 import { EditorManager } from './editor-manager';
 import { TextEditor } from './editor';
-import { injectable, inject, optional, named } from '@theia/core/shared/inversify';
-import { StatusBarAlignment, StatusBar } from '@theia/core/lib/browser/status-bar/status-bar';
+import { injectable, inject, optional, named } from '@ogun/core/shared/inversify';
+import { StatusBarAlignment, StatusBar } from '@ogun/core/lib/browser/status-bar/status-bar';
 import {
     FrontendApplicationContribution, DiffUris, DockLayout,
     QuickInputService, KeybindingRegistry, KeybindingContribution, SHELL_TABBAR_CONTEXT_SPLIT, ApplicationShell,
     WidgetStatusBarContribution,
     Widget,
     OpenWithService
-} from '@theia/core/lib/browser';
-import { ContextKeyService } from '@theia/core/lib/browser/context-key-service';
-import { CommandHandler, DisposableCollection, MenuContribution, MenuModelRegistry, ContributionProvider, Prioritizeable } from '@theia/core';
+} from '@ogun/core/lib/browser';
+import { ContextKeyService } from '@ogun/core/lib/browser/context-key-service';
+import { CommandHandler, DisposableCollection, MenuContribution, MenuModelRegistry, ContributionProvider, Prioritizeable } from '@ogun/core';
 import { EditorCommands } from './editor-command';
-import { CommandRegistry, CommandContribution } from '@theia/core/lib/common';
-import { SUPPORTED_ENCODINGS } from '@theia/core/lib/common/supported-encodings';
-import { nls } from '@theia/core/lib/common/nls';
-import { CurrentWidgetCommandAdapter } from '@theia/core/lib/browser/shell/current-widget-command-adapter';
+import { CommandRegistry, CommandContribution } from '@ogun/core/lib/common';
+import { SUPPORTED_ENCODINGS } from '@ogun/core/lib/common/supported-encodings';
+import { nls } from '@ogun/core/lib/common/nls';
+import { CurrentWidgetCommandAdapter } from '@ogun/core/lib/browser/shell/current-widget-command-adapter';
 import { EditorWidget } from './editor-widget';
 import { EditorLanguageStatusService } from './language-status/editor-language-status-service';
 import { QuickEditorService } from './quick-editor-service';

@@ -14,19 +14,19 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import throttle = require('@theia/core/shared/lodash.throttle');
-import { inject, injectable } from '@theia/core/shared/inversify';
-import { Resource, MaybePromise } from '@theia/core';
-import { Navigatable } from '@theia/core/lib/browser/navigatable';
-import { BaseWidget, Message, addEventListener, codicon } from '@theia/core/lib/browser';
-import URI from '@theia/core/lib/common/uri';
-import { Event, Emitter } from '@theia/core/lib/common';
+import throttle = require('@ogun/core/shared/lodash.throttle');
+import { inject, injectable } from '@ogun/core/shared/inversify';
+import { Resource, MaybePromise } from '@ogun/core';
+import { Navigatable } from '@ogun/core/lib/browser/navigatable';
+import { BaseWidget, Message, addEventListener, codicon } from '@ogun/core/lib/browser';
+import URI from '@ogun/core/lib/common/uri';
+import { Event, Emitter } from '@ogun/core/lib/common';
 import { PreviewHandler, PreviewHandlerProvider } from './preview-handler';
-import { ThemeService } from '@theia/core/lib/browser/theming';
-import { EditorPreferences } from '@theia/editor/lib/common/editor-preferences';
-import { Disposable } from '@theia/core/lib/common/disposable';
-import { MonacoWorkspace } from '@theia/monaco/lib/browser/monaco-workspace';
-import { Range, Location } from '@theia/core/shared/vscode-languageserver-protocol';
+import { ThemeService } from '@ogun/core/lib/browser/theming';
+import { EditorPreferences } from '@ogun/editor/lib/common/editor-preferences';
+import { Disposable } from '@ogun/core/lib/common/disposable';
+import { MonacoWorkspace } from '@ogun/monaco/lib/browser/monaco-workspace';
+import { Range, Location } from '@ogun/core/shared/vscode-languageserver-protocol';
 
 export const PREVIEW_WIDGET_CLASS = 'theia-preview-widget';
 

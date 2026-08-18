@@ -14,11 +14,11 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { inject, injectable } from '@theia/core/shared/inversify';
-import { Command, CommandContribution, CommandRegistry, DisposableCollection, generateUuid, InMemoryResources, MessageService, nls, QuickInputService, URI } from '@theia/core';
-import { ApplicationShell, open, OpenerService } from '@theia/core/lib/browser';
-import { ClipboardService } from '@theia/core/lib/browser/clipboard-service';
-import { LanguageService } from '@theia/core/lib/browser/language-service';
+import { inject, injectable } from '@ogun/core/shared/inversify';
+import { Command, CommandContribution, CommandRegistry, DisposableCollection, generateUuid, InMemoryResources, MessageService, nls, QuickInputService, URI } from '@ogun/core';
+import { ApplicationShell, open, OpenerService } from '@ogun/core/lib/browser';
+import { ClipboardService } from '@ogun/core/lib/browser/clipboard-service';
+import { LanguageService } from '@ogun/core/lib/browser/language-service';
 import { MergeEditor, MergeEditorOpenerOptions, MergeEditorUri } from './merge-editor';
 
 export namespace MergeEditorDevCommands {

@@ -14,7 +14,7 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { enableJSDOM } from '@theia/core/lib/browser/test/jsdom';
+import { enableJSDOM } from '@ogun/core/lib/browser/test/jsdom';
 
 let disableJSDOM = enableJSDOM();
 
@@ -22,10 +22,10 @@ import 'reflect-metadata';
 
 import { expect } from 'chai';
 import * as sinon from 'sinon';
-import { CommandService, ILogger, Logger } from '@theia/core';
-import { MockLogger } from '@theia/core/lib/common/test/mock-logger';
-import { DefaultAIVariableService, PromptService, PromptServiceImpl, ToolInvocationRegistryImpl } from '@theia/ai-core';
-import { PromptVariableContribution } from '@theia/ai-core/lib/browser/prompt-variable-contribution';
+import { CommandService, ILogger, Logger } from '@ogun/core';
+import { MockLogger } from '@ogun/core/lib/common/test/mock-logger';
+import { DefaultAIVariableService, PromptService, PromptServiceImpl, ToolInvocationRegistryImpl } from '@ogun/ai-core';
+import { PromptVariableContribution } from '@ogun/ai-core/lib/browser/prompt-variable-contribution';
 import { ChatAgentServiceImpl } from '../common/chat-agent-service';
 import { ChatAgentLocation } from '../common/chat-agents';
 import { ChatRequestParserImpl } from '../common/chat-request-parser';

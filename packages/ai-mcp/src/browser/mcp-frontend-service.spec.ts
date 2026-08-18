@@ -14,15 +14,15 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { enableJSDOM } from '@theia/core/lib/browser/test/jsdom';
+import { enableJSDOM } from '@ogun/core/lib/browser/test/jsdom';
 let disableJSDOM = enableJSDOM();
-import { FrontendApplicationConfigProvider } from '@theia/core/lib/browser/frontend-application-config-provider';
+import { FrontendApplicationConfigProvider } from '@ogun/core/lib/browser/frontend-application-config-provider';
 FrontendApplicationConfigProvider.set({});
 
 import { expect } from 'chai';
-import { MessageService } from '@theia/core';
-import { WorkspaceTrustService } from '@theia/workspace/lib/browser/workspace-trust-service';
-import { PromptService, ToolInvocationRegistry, ToolRequest } from '@theia/ai-core';
+import { MessageService } from '@ogun/core';
+import { WorkspaceTrustService } from '@ogun/workspace/lib/browser/workspace-trust-service';
+import { PromptService, ToolInvocationRegistry, ToolRequest } from '@ogun/ai-core';
 import { MCPServerDescription, MCPServerManager, MCPServerStatus } from '../common/mcp-server-manager';
 import type { MCPFrontendServiceImpl } from './mcp-frontend-service';
 const MCPFrontendServiceImplConstructor: new () => MCPFrontendServiceImpl = require('./mcp-frontend-service').MCPFrontendServiceImpl;

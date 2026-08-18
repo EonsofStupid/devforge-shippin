@@ -12,14 +12,14 @@
 
 ## Description
 
-The `@theia/collaboration` extension features to enable collaboration between multiple peers using Theia.
+The `@ogun/collaboration` extension features to enable collaboration between multiple peers using Theia.
 This is built on top of the [Open Collaboration Tools](https://www.open-collab.tools/) ([GitHub](https://github.com/TypeFox/open-collaboration-tools)) project.
 
 Note that the project is still in a beta phase and can be subject to unexpected breaking changes. This package is therefore in a beta phase as well.
 
 ## Additional Information
 
-- [API documentation for `@theia/collaboration`](https://eclipse-theia.github.io/theia/docs/next/modules/_theia_collaboration.html)
+- [API documentation for `@ogun/collaboration`](https://eclipse-theia.github.io/theia/docs/next/modules/_theia_collaboration.html)
 - [Theia - GitHub](https://github.com/eclipse-theia/theia)
 - [Theia - Website](https://theia-ide.org/)
 

@@ -14,12 +14,12 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { isObject } from '@theia/core/lib/common';
-import { nls } from '@theia/core/lib/common/nls';
-import { inject, injectable, interfaces } from '@theia/core/shared/inversify';
-import { OpenFileDialogProps } from '@theia/filesystem/lib/browser';
-import { FileDialogService } from '@theia/filesystem/lib/browser/file-dialog/file-dialog-service';
-import { WorkspaceCommands } from '@theia/workspace/lib/browser';
+import { isObject } from '@ogun/core/lib/common';
+import { nls } from '@ogun/core/lib/common/nls';
+import { inject, injectable, interfaces } from '@ogun/core/shared/inversify';
+import { OpenFileDialogProps } from '@ogun/filesystem/lib/browser';
+import { FileDialogService } from '@ogun/filesystem/lib/browser/file-dialog/file-dialog-service';
+import { WorkspaceCommands } from '@ogun/workspace/lib/browser';
 import { Preference } from '../../util/preference-types';
 import { PreferenceNodeRenderer } from './preference-node-renderer';
 import { PreferenceLeafNodeRendererContribution } from './preference-node-renderer-creator';

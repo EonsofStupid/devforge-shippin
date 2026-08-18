@@ -14,8 +14,8 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { PreferenceService } from '@theia/core/lib/common';
-import { Container } from '@theia/core/shared/inversify';
+import { PreferenceService } from '@ogun/core/lib/common';
+import { Container } from '@ogun/core/shared/inversify';
 import { editor, languages, Uri } from '@theia/monaco-editor-core/esm/vs/editor/editor.api';
 import { expect } from 'chai';
 import { CodeCompletionVariableContext } from './code-completion-variable-context';

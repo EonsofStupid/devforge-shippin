@@ -14,12 +14,12 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { MCPInstallEntryConfig } from '@theia/ai-mcp/lib/common/mcp-server-manager';
+import { MCPInstallEntryConfig } from '@ogun/ai-mcp/lib/common/mcp-server-manager';
 
 /**
  * Shape of `installConfigs[].config` for Theia: a `servers` map keyed by the local
  * MCP server key chosen by the registry maintainer. Server entries use the canonical
- * {@link MCPInstallEntryConfig} type from `@theia/ai-mcp` so the registry and the
+ * {@link MCPInstallEntryConfig} type from `@ogun/ai-mcp` so the registry and the
  * install path can never drift in shape.
  */
 export interface RegistryMCPInstallConfigBlob {

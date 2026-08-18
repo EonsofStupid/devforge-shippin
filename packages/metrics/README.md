@@ -12,11 +12,11 @@
 
 ## Description
 
-The `@theia/metrics` extension provides metrics using the [Prometheus](https://prometheus.io/) API.
+The `@ogun/metrics` extension provides metrics using the [Prometheus](https://prometheus.io/) API.
 
 ## Additional Information
 
-- [API documentation for `@theia/metrics`](https://eclipse-theia.github.io/theia/docs/next/modules/_theia_metrics.html)
+- [API documentation for `@ogun/metrics`](https://eclipse-theia.github.io/theia/docs/next/modules/_theia_metrics.html)
 - [Theia - GitHub](https://github.com/eclipse-theia/theia)
 - [Theia - Website](https://theia-ide.org/)
 

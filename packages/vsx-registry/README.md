@@ -12,7 +12,7 @@
 
 ## Description
 
-The `@theia/vsx-registry` extension provides integration with the Open VSX Registry.
+The `@ogun/vsx-registry` extension provides integration with the Open VSX Registry.
 
 ### Configuration
 
@@ -26,12 +26,12 @@ It is possible to target multiple registries by specifying a CLI argument when
 running the backend: `--ovsx-router-config=<path>` where `path` must point to
 a json defining an `OVSXRouterConfig` object.
 
-See `@theia/ovsx-client`'s documentation to read more about `OVSXRouterClient`
+See `@ogun/ovsx-client`'s documentation to read more about `OVSXRouterClient`
 and its `OVSXRouterConfig` configuration.
 
 ## Additional Information
 
-- [API documentation for `@theia/vsx-registry`](https://eclipse-theia.github.io/theia/docs/next/modules/_theia_vsx-registry.html)
+- [API documentation for `@ogun/vsx-registry`](https://eclipse-theia.github.io/theia/docs/next/modules/_theia_vsx-registry.html)
 - [Theia - GitHub](https://github.com/eclipse-theia/theia)
 - [Theia - Website](https://theia-ide.org/)
 

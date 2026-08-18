@@ -15,17 +15,17 @@
 // *****************************************************************************
 
 import '../../src/browser/style/output.css';
-import { inject, injectable, postConstruct } from '@theia/core/shared/inversify';
-import { EditorWidget } from '@theia/editor/lib/browser';
-import { MonacoEditor } from '@theia/monaco/lib/browser/monaco-editor';
-import { SelectionService } from '@theia/core/lib/common/selection-service';
-import { MonacoEditorProvider } from '@theia/monaco/lib/browser/monaco-editor-provider';
-import { Disposable, DisposableCollection } from '@theia/core/lib/common/disposable';
-import { Message, BaseWidget, DockPanel, Widget, MessageLoop, StatefulWidget, codicon, StorageService } from '@theia/core/lib/browser';
+import { inject, injectable, postConstruct } from '@ogun/core/shared/inversify';
+import { EditorWidget } from '@ogun/editor/lib/browser';
+import { MonacoEditor } from '@ogun/monaco/lib/browser/monaco-editor';
+import { SelectionService } from '@ogun/core/lib/common/selection-service';
+import { MonacoEditorProvider } from '@ogun/monaco/lib/browser/monaco-editor-provider';
+import { Disposable, DisposableCollection } from '@ogun/core/lib/common/disposable';
+import { Message, BaseWidget, DockPanel, Widget, MessageLoop, StatefulWidget, codicon, StorageService } from '@ogun/core/lib/browser';
 import { OutputUri } from '../common/output-uri';
 import { OutputChannelManager, OutputChannel } from './output-channel';
-import { Emitter, Event, deepClone } from '@theia/core';
-import { nls } from '@theia/core/lib/common/nls';
+import { Emitter, Event, deepClone } from '@ogun/core';
+import { nls } from '@ogun/core/lib/common/nls';
 import * as monaco from '@theia/monaco-editor-core';
 
 @injectable()

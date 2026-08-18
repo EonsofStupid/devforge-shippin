@@ -13,14 +13,14 @@
 //
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
-import { FrontendApplication, codicon } from '@theia/core/lib/browser';
-import { AIViewContribution } from '@theia/ai-core/lib/browser';
-import { inject, injectable } from '@theia/core/shared/inversify';
+import { FrontendApplication, codicon } from '@ogun/core/lib/browser';
+import { AIViewContribution } from '@ogun/ai-core/lib/browser';
+import { inject, injectable } from '@ogun/core/shared/inversify';
 import { AIHistoryView } from './ai-history-widget';
-import { Command, CommandRegistry, Emitter, nls } from '@theia/core';
-import { TabBarToolbarContribution, TabBarToolbarRegistry } from '@theia/core/lib/browser/shell/tab-bar-toolbar';
-import { LanguageModelService } from '@theia/ai-core';
-import { ChatViewWidget } from '@theia/ai-chat-ui/lib/browser/chat-view-widget';
+import { Command, CommandRegistry, Emitter, nls } from '@ogun/core';
+import { TabBarToolbarContribution, TabBarToolbarRegistry } from '@ogun/core/lib/browser/shell/tab-bar-toolbar';
+import { LanguageModelService } from '@ogun/ai-core';
+import { ChatViewWidget } from '@ogun/ai-chat-ui/lib/browser/chat-view-widget';
 
 export const AI_HISTORY_TOGGLE_COMMAND_ID = 'aiHistory:toggle';
 export const OPEN_AI_HISTORY_VIEW = Command.toLocalizedCommand({

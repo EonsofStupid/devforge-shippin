@@ -14,16 +14,16 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { injectable, inject } from '@theia/core/shared/inversify';
-import URI from '@theia/core/lib/common/uri';
-import { MaybeArray, UNTITLED_SCHEME, nls } from '@theia/core/lib/common';
-import { LabelProvider } from '@theia/core/lib/browser';
+import { injectable, inject } from '@ogun/core/shared/inversify';
+import URI from '@ogun/core/lib/common/uri';
+import { MaybeArray, UNTITLED_SCHEME, nls } from '@ogun/core/lib/common';
+import { LabelProvider } from '@ogun/core/lib/browser';
 import { FileStat } from '../../common/files';
 import { DirNode } from '../file-tree';
 import { OpenFileDialogFactory, OpenFileDialogProps, SaveFileDialogFactory, SaveFileDialogProps } from './file-dialog';
 import { FileService } from '../file-service';
-import { EnvVariablesServer } from '@theia/core/lib/common/env-variables';
-import { UserWorkingDirectoryProvider } from '@theia/core/lib/browser/user-working-directory-provider';
+import { EnvVariablesServer } from '@ogun/core/lib/common/env-variables';
+import { UserWorkingDirectoryProvider } from '@ogun/core/lib/browser/user-working-directory-provider';
 
 export const FileDialogService = Symbol('FileDialogService');
 export interface FileDialogService {

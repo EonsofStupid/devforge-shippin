@@ -19,15 +19,15 @@ describe('Explorer and Editor - open and close', function () {
     this.timeout(90_000);
     const { assert } = chai;
 
-    const { DisposableCollection } = require('@theia/core/lib/common/disposable');
-    const { EditorManager } = require('@theia/editor/lib/browser/editor-manager');
-    const { WorkspaceService } = require('@theia/workspace/lib/browser/workspace-service');
-    const { FileNavigatorContribution } = require('@theia/navigator/lib/browser/navigator-contribution');
-    const { ApplicationShell } = require('@theia/core/lib/browser/shell/application-shell');
-    const { HostedPluginSupport } = require('@theia/plugin-ext/lib/hosted/browser/hosted-plugin');
-    const { ProgressStatusBarItem } = require('@theia/core/lib/browser/progress-status-bar-item');
-    const { EXPLORER_VIEW_CONTAINER_ID } = require('@theia/navigator/lib/browser/navigator-widget-factory');
-    const { MonacoEditor } = require('@theia/monaco/lib/browser/monaco-editor');
+    const { DisposableCollection } = require('@ogun/core/lib/common/disposable');
+    const { EditorManager } = require('@ogun/editor/lib/browser/editor-manager');
+    const { WorkspaceService } = require('@ogun/workspace/lib/browser/workspace-service');
+    const { FileNavigatorContribution } = require('@ogun/navigator/lib/browser/navigator-contribution');
+    const { ApplicationShell } = require('@ogun/core/lib/browser/shell/application-shell');
+    const { HostedPluginSupport } = require('@ogun/plugin-ext/lib/hosted/browser/hosted-plugin');
+    const { ProgressStatusBarItem } = require('@ogun/core/lib/browser/progress-status-bar-item');
+    const { EXPLORER_VIEW_CONTAINER_ID } = require('@ogun/navigator/lib/browser/navigator-widget-factory');
+    const { MonacoEditor } = require('@ogun/monaco/lib/browser/monaco-editor');
     const container = window.theia.container;
     const editorManager = container.get(EditorManager);
     const workspaceService = container.get(WorkspaceService);

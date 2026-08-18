@@ -13,14 +13,14 @@
 //
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
-import { injectable } from '@theia/core/shared/inversify';
-import { Message } from '@theia/core/shared/@lumino/messaging';
-import { codiconArray, Key } from '@theia/core/lib/browser';
-import { AbstractDialog } from '@theia/core/lib/browser/dialogs';
+import { injectable } from '@ogun/core/shared/inversify';
+import { Message } from '@ogun/core/shared/@lumino/messaging';
+import { codiconArray, Key } from '@ogun/core/lib/browser';
+import { AbstractDialog } from '@ogun/core/lib/browser/dialogs';
 import '../../../../src/main/browser/dialogs/style/modal-notification.css';
 import { MainMessageItem, MainMessageOptions } from '../../../common/plugin-api-rpc';
-import { FrontendApplicationConfigProvider } from '@theia/core/lib/browser/frontend-application-config-provider';
-import { nls } from '@theia/core/lib/common/nls';
+import { FrontendApplicationConfigProvider } from '@ogun/core/lib/browser/frontend-application-config-provider';
+import { nls } from '@ogun/core/lib/common/nls';
 
 export enum MessageType {
     Error = 'error',

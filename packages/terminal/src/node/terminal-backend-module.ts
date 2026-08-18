@@ -14,9 +14,9 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { ContainerModule, Container, interfaces } from '@theia/core/shared/inversify';
+import { ContainerModule, Container, interfaces } from '@ogun/core/shared/inversify';
 import { TerminalBackendContribution } from './terminal-backend-contribution';
-import { ConnectionHandler, RpcConnectionHandler } from '@theia/core/lib/common/messaging';
+import { ConnectionHandler, RpcConnectionHandler } from '@ogun/core/lib/common/messaging';
 import { ShellProcess, ShellProcessFactory, ShellProcessOptions } from './shell-process';
 import { ITerminalServer, terminalPath } from '../common/terminal-protocol';
 import { IBaseTerminalClient, DispatchingBaseTerminalClient, IBaseTerminalServer } from '../common/base-terminal-protocol';
@@ -24,7 +24,7 @@ import { TerminalServer } from './terminal-server';
 import { IShellTerminalServer, shellTerminalPath } from '../common/shell-terminal-protocol';
 import { ShellTerminalServer } from '../node/shell-terminal-server';
 import { TerminalWatcher } from '../common/terminal-watcher';
-import { MessagingService } from '@theia/core/lib/node/messaging/messaging-service';
+import { MessagingService } from '@ogun/core/lib/node/messaging/messaging-service';
 import { bindTerminalPreferences } from '../common/terminal-preferences';
 import { ShellIntegrationInjector } from './shell-integration-injector';
 

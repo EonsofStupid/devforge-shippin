@@ -14,15 +14,15 @@
  * SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
  *******************************************************************************‚*/
 
-import { injectable, inject, postConstruct } from '@theia/core/shared/inversify';
-import { ViewContainer, PanelLayout, ViewContainerPart, Message, codicon, Widget } from '@theia/core/lib/browser';
+import { injectable, inject, postConstruct } from '@ogun/core/shared/inversify';
+import { ViewContainer, PanelLayout, ViewContainerPart, Message, codicon, Widget } from '@ogun/core/lib/browser';
 import { VSXExtensionsSearchBar } from './vsx-extensions-search-bar';
 import { VSXExtensionsModel } from './vsx-extensions-model';
 import { VSXSearchMode } from './vsx-extensions-search-model';
 import { generateExtensionWidgetId } from './vsx-extensions-widget';
 import { VSXExtensionsSourceOptions } from './vsx-extensions-source';
 import { VSXExtensionsCommands } from './vsx-extension-commands';
-import { nls } from '@theia/core/lib/common/nls';
+import { nls } from '@ogun/core/lib/common/nls';
 
 @injectable()
 export class VSXExtensionsViewContainer extends ViewContainer {

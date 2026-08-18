@@ -14,9 +14,9 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { inject, injectable } from '@theia/core/shared/inversify';
-import { PreferenceService } from '@theia/core/lib/common/preferences';
-import { BackendApplicationContribution } from '@theia/core/lib/node';
+import { inject, injectable } from '@ogun/core/shared/inversify';
+import { PreferenceService } from '@ogun/core/lib/common/preferences';
+import { BackendApplicationContribution } from '@ogun/core/lib/node';
 import { PluginHostNavigatorState, SUPPORT_NODE_GLOBAL_NAVIGATOR_PREF } from '../common/plugin-host-environment-preferences';
 
 /**

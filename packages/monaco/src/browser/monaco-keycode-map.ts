@@ -18,7 +18,7 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import * as browser from '@theia/core/lib/browser';
+import * as browser from '@ogun/core/lib/browser';
 // This is exported as part of the public API, but we use it with private API's so we need to refer to the private version.
 import { KeyCode } from '@theia/monaco-editor-core/esm/vs/base/common/keyCodes';
 import * as MonacoPlatform from '@theia/monaco-editor-core/esm/vs/base/common/platform';

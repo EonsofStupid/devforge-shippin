@@ -14,18 +14,18 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { injectable, inject, postConstruct } from '@theia/core/shared/inversify';
-import URI from '@theia/core/lib/common/uri';
-import { CompositeTreeNode, TreeNode, ConfirmDialog, CompressedTreeModel, Dialog } from '@theia/core/lib/browser';
+import { injectable, inject, postConstruct } from '@ogun/core/shared/inversify';
+import URI from '@ogun/core/lib/common/uri';
+import { CompositeTreeNode, TreeNode, ConfirmDialog, CompressedTreeModel, Dialog } from '@ogun/core/lib/browser';
 import { FileStatNode, DirNode, FileNode } from './file-tree';
 import { LocationService } from '../location';
-import { LabelProvider } from '@theia/core/lib/browser/label-provider';
+import { LabelProvider } from '@ogun/core/lib/browser/label-provider';
 import { FileService } from '../file-service';
 import { FileOperationError, FileOperationResult, FileChangesEvent, FileChangeType, FileChange } from '../../common/files';
-import { MessageService } from '@theia/core/lib/common/message-service';
-import { EnvVariablesServer } from '@theia/core/lib/common/env-variables';
+import { MessageService } from '@ogun/core/lib/common/message-service';
+import { EnvVariablesServer } from '@ogun/core/lib/common/env-variables';
 import { FileSystemUtils } from '../../common';
-import { nls } from '@theia/core';
+import { nls } from '@ogun/core';
 
 @injectable()
 export class FileTreeModel extends CompressedTreeModel implements LocationService {

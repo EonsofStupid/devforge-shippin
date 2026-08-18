@@ -12,11 +12,11 @@
 
 ## Description
 
-This package extends the @theia/remote feature with functionality to connect to Windows Subsystem for Linux.
+This package extends the @ogun/remote feature with functionality to connect to Windows Subsystem for Linux.
 
 ## Additional Information
 
-- [API documentation for `@theia/remote-wsl`](https://eclipse-theia.github.io/theia/docs/next/modules/_theia_remote-wsl.html)
+- [API documentation for `@ogun/remote-wsl`](https://eclipse-theia.github.io/theia/docs/next/modules/_theia_remote-wsl.html)
 - [Theia - GitHub](https://github.com/eclipse-theia/theia)
 - [Theia - Website](https://theia-ide.org/)
 

@@ -14,15 +14,15 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { injectable, inject, postConstruct } from '@theia/core/shared/inversify';
-import * as React from '@theia/core/shared/react';
-import { ReactWidget, LabelProvider, codicon, ContextMenuRenderer } from '@theia/core/lib/browser';
-import { LabelParser, LabelIcon } from '@theia/core/lib/browser/label-parser';
-import { CommandService, MenuPath } from '@theia/core/lib/common';
-import { DisposableCollection } from '@theia/core/lib/common/disposable';
-import { nls } from '@theia/core/lib/common/nls';
-import { Path } from '@theia/core/lib/common/path';
-import URI from '@theia/core/lib/common/uri';
+import { injectable, inject, postConstruct } from '@ogun/core/shared/inversify';
+import * as React from '@ogun/core/shared/react';
+import { ReactWidget, LabelProvider, codicon, ContextMenuRenderer } from '@ogun/core/lib/browser';
+import { LabelParser, LabelIcon } from '@ogun/core/lib/browser/label-parser';
+import { CommandService, MenuPath } from '@ogun/core/lib/common';
+import { DisposableCollection } from '@ogun/core/lib/common/disposable';
+import { nls } from '@ogun/core/lib/common/nls';
+import { Path } from '@ogun/core/lib/common/path';
+import URI from '@ogun/core/lib/common/uri';
 import { ScmService } from './scm-service';
 import { ScmRepository } from './scm-repository';
 import { ScmCommand } from './scm-provider';

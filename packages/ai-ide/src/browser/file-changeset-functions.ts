@@ -13,19 +13,19 @@
 //
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
-import { assertChatContext, ChatToolContext } from '@theia/ai-chat';
-import { ChangeSet } from '@theia/ai-chat/lib/common/change-set';
-import { ChangeSetElementArgs, ChangeSetFileElement, ChangeSetFileElementFactory } from '@theia/ai-chat/lib/browser/change-set-file-element';
-import { ToolInvocationContext, ToolProvider, ToolRequest, ToolRequestParameters, ToolRequestParametersProperties } from '@theia/ai-core';
-import { ContentReplacerV1Impl, Replacement, ContentReplacer } from '@theia/core/lib/common/content-replacer';
-import { ContentReplacerV2Impl } from '@theia/core/lib/common/content-replacer-v2-impl';
-import { URI } from '@theia/core/lib/common/uri';
-import { inject, injectable } from '@theia/core/shared/inversify';
-import { FileService } from '@theia/filesystem/lib/browser/file-service';
+import { assertChatContext, ChatToolContext } from '@ogun/ai-chat';
+import { ChangeSet } from '@ogun/ai-chat/lib/common/change-set';
+import { ChangeSetElementArgs, ChangeSetFileElement, ChangeSetFileElementFactory } from '@ogun/ai-chat/lib/browser/change-set-file-element';
+import { ToolInvocationContext, ToolProvider, ToolRequest, ToolRequestParameters, ToolRequestParametersProperties } from '@ogun/ai-core';
+import { ContentReplacerV1Impl, Replacement, ContentReplacer } from '@ogun/core/lib/common/content-replacer';
+import { ContentReplacerV2Impl } from '@ogun/core/lib/common/content-replacer-v2-impl';
+import { URI } from '@ogun/core/lib/common/uri';
+import { inject, injectable } from '@ogun/core/shared/inversify';
+import { FileService } from '@ogun/filesystem/lib/browser/file-service';
 import { WorkspaceFunctionScope } from './workspace-functions';
 
-import { nls } from '@theia/core';
-import { extractJsonStringField } from '@theia/ai-chat-ui/lib/browser/chat-response-renderer/toolcall-utils';
+import { nls } from '@ogun/core';
+import { extractJsonStringField } from '@ogun/ai-chat-ui/lib/browser/chat-response-renderer/toolcall-utils';
 import {
     CLEAR_FILE_CHANGES_ID,
     GET_PROPOSED_CHANGES_ID,

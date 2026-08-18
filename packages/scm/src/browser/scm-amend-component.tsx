@@ -16,14 +16,14 @@
 
 import '../../src/browser/style/scm-amend-component.css';
 
-import * as React from '@theia/core/shared/react';
+import * as React from '@ogun/core/shared/react';
 import { ScmAvatarService } from './scm-avatar-service';
-import { codicon, StorageService } from '@theia/core/lib/browser';
-import { Disposable, DisposableCollection } from '@theia/core';
+import { codicon, StorageService } from '@ogun/core/lib/browser';
+import { Disposable, DisposableCollection } from '@ogun/core';
 
 import { ScmRepository } from './scm-repository';
 import { ScmAmendSupport, ScmCommit } from './scm-provider';
-import { nls } from '@theia/core/lib/common/nls';
+import { nls } from '@ogun/core/lib/common/nls';
 
 export interface ScmAmendComponentProps {
     style: React.CSSProperties | undefined,

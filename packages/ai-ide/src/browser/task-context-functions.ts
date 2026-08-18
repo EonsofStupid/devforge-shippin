@@ -14,13 +14,13 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { assertChatContext } from '@theia/ai-chat';
-import { Summary, TaskContextStorageService } from '@theia/ai-chat/lib/browser/task-context-service';
-import { ToolInvocationContext, ToolProvider, ToolRequest } from '@theia/ai-core';
-import { generateUuid } from '@theia/core';
-import { ContentReplacer, Replacement } from '@theia/core/lib/common/content-replacer';
-import { ContentReplacerV2Impl } from '@theia/core/lib/common/content-replacer-v2-impl';
-import { inject, injectable } from '@theia/core/shared/inversify';
+import { assertChatContext } from '@ogun/ai-chat';
+import { Summary, TaskContextStorageService } from '@ogun/ai-chat/lib/browser/task-context-service';
+import { ToolInvocationContext, ToolProvider, ToolRequest } from '@ogun/ai-core';
+import { generateUuid } from '@ogun/core';
+import { ContentReplacer, Replacement } from '@ogun/core/lib/common/content-replacer';
+import { ContentReplacerV2Impl } from '@ogun/core/lib/common/content-replacer-v2-impl';
+import { inject, injectable } from '@ogun/core/shared/inversify';
 import {
     CREATE_TASK_CONTEXT_FUNCTION_ID,
     GET_TASK_CONTEXT_FUNCTION_ID,

@@ -14,8 +14,8 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { FrontendApplicationConfigProvider } from '@theia/core/lib/browser/frontend-application-config-provider';
-import { enableJSDOM } from '@theia/core/lib/browser/test/jsdom';
+import { FrontendApplicationConfigProvider } from '@ogun/core/lib/browser/frontend-application-config-provider';
+import { enableJSDOM } from '@ogun/core/lib/browser/test/jsdom';
 // Entries render against the shared ExtensionCard, which pulls in browser-side modules,
 // so a DOM is required at import time.
 const disableJSDOM = enableJSDOM();
@@ -26,13 +26,13 @@ try {
 }
 
 import { expect } from 'chai';
-import { Container } from '@theia/core/shared/inversify';
-import { Emitter, MessageService, PreferenceService } from '@theia/core';
-import { HoverService } from '@theia/core/lib/browser';
-import { MCP_SERVERS_PREF } from '@theia/ai-mcp/lib/common/mcp-preferences';
-import { MCPFrontendService } from '@theia/ai-mcp/lib/common/mcp-server-manager';
-import { MCPServerEditor, MCPServerEditorImpl, MCPServerEditDialogFactory } from '@theia/ai-mcp/lib/browser/mcp-server-editor';
-import { MCPServerInstallDialogFactory } from '@theia/ai-mcp/lib/browser/mcp-server-install-dialog';
+import { Container } from '@ogun/core/shared/inversify';
+import { Emitter, MessageService, PreferenceService } from '@ogun/core';
+import { HoverService } from '@ogun/core/lib/browser';
+import { MCP_SERVERS_PREF } from '@ogun/ai-mcp/lib/common/mcp-preferences';
+import { MCPFrontendService } from '@ogun/ai-mcp/lib/common/mcp-server-manager';
+import { MCPServerEditor, MCPServerEditorImpl, MCPServerEditDialogFactory } from '@ogun/ai-mcp/lib/browser/mcp-server-editor';
+import { MCPServerInstallDialogFactory } from '@ogun/ai-mcp/lib/browser/mcp-server-install-dialog';
 import { RegistryFetchService } from '../../common/registry-fetch-service';
 import { RegistrySearchFilter } from '../../common/registry-search-filter';
 import { ResolvedRegistryEntry } from '../../common/mcp/mcp-registry-types';

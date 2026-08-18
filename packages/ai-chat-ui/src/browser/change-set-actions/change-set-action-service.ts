@@ -14,9 +14,9 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { ContributionProvider, Event, Emitter } from '@theia/core';
-import { ChangeSet } from '@theia/ai-chat';
-import { inject, injectable, named, postConstruct } from '@theia/core/shared/inversify';
+import { ContributionProvider, Event, Emitter } from '@ogun/core';
+import { ChangeSet } from '@ogun/ai-chat';
+import { inject, injectable, named, postConstruct } from '@ogun/core/shared/inversify';
 
 export const ChangeSetActionRenderer = Symbol('ChangeSetActionRenderer');
 /**

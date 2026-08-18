@@ -16,7 +16,7 @@
 
 import { FileChangesEvent, FileChangeType } from './files';
 import { expect } from 'chai';
-import URI from '@theia/core/lib/common/uri';
+import URI from '@ogun/core/lib/common/uri';
 
 describe('FileChangesEvent', () => {
     it('deleting parent folder - event contains child', () => {

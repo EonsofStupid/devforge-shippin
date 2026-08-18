@@ -14,9 +14,9 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { URI } from '@theia/core';
-import { injectable } from '@theia/core/shared/inversify';
-import { FileStat } from '@theia/filesystem/lib/common/files';
+import { URI } from '@ogun/core';
+import { injectable } from '@ogun/core/shared/inversify';
+import { FileStat } from '@ogun/filesystem/lib/common/files';
 
 export interface WorkspaceFileType {
     extension: string

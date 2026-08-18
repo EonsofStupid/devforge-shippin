@@ -18,8 +18,8 @@ import { expect } from 'chai';
 import * as sinon from 'sinon';
 import { StreamingAsyncIterator } from './openai-streaming-iterator';
 import { ChatCompletionStream } from 'openai/lib/ChatCompletionStream';
-import { CancellationTokenSource, CancellationError } from '@theia/core';
-import { LanguageModelStreamResponsePart, isTextResponsePart, isToolCallResponsePart } from '@theia/ai-core';
+import { CancellationTokenSource, CancellationError } from '@ogun/core';
+import { LanguageModelStreamResponsePart, isTextResponsePart, isToolCallResponsePart } from '@ogun/ai-core';
 import { EventEmitter } from 'events';
 import { ChatCompletionToolMessageParam } from 'openai/resources';
 

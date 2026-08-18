@@ -15,8 +15,8 @@
 // *****************************************************************************
 
 import { expect } from 'chai';
-import { OS, URI } from '@theia/core';
-import { SearchInWorkspaceResult } from '@theia/search-in-workspace/lib/common/search-in-workspace-interface';
+import { OS, URI } from '@ogun/core';
+import { SearchInWorkspaceResult } from '@ogun/search-in-workspace/lib/common/search-in-workspace-interface';
 import { optimizeSearchResults, WorkspacePathResolver } from './workspace-search-provider-util';
 
 const result = (fileUri: string): SearchInWorkspaceResult => ({

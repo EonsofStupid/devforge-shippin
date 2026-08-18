@@ -16,18 +16,18 @@
 
 import '../../../src/browser/style/index.css';
 
-import { ContainerModule } from '@theia/core/shared/inversify';
+import { ContainerModule } from '@ogun/core/shared/inversify';
 import { ProblemWidget, PROBLEMS_WIDGET_ID } from './problem-widget';
 import { ProblemContribution } from './problem-contribution';
 import { createProblemWidget } from './problem-container';
-import { FrontendApplicationContribution, bindViewContribution, ApplicationShellLayoutMigration, LabelProviderContribution } from '@theia/core/lib/browser';
-import { SaveErrorChecker } from '@theia/core/lib/browser/saveable-service';
+import { FrontendApplicationContribution, bindViewContribution, ApplicationShellLayoutMigration, LabelProviderContribution } from '@ogun/core/lib/browser';
+import { SaveErrorChecker } from '@ogun/core/lib/browser/saveable-service';
 import { ProblemManager } from './problem-manager';
-import { WidgetFactory } from '@theia/core/lib/browser/widget-manager';
+import { WidgetFactory } from '@ogun/core/lib/browser/widget-manager';
 import { ProblemTabBarDecorator } from './problem-tabbar-decorator';
-import { TabBarToolbarContribution } from '@theia/core/lib/browser/shell/tab-bar-toolbar';
+import { TabBarToolbarContribution } from '@ogun/core/lib/browser/shell/tab-bar-toolbar';
 import { ProblemLayoutVersion3Migration } from './problem-layout-migrations';
-import { TabBarDecorator } from '@theia/core/lib/browser/shell/tab-bar-decorator';
+import { TabBarDecorator } from '@ogun/core/lib/browser/shell/tab-bar-decorator';
 import { MarkerTreeLabelProvider } from '../marker-tree-label-provider';
 import { ProblemWidgetTabBarDecorator } from './problem-widget-tab-bar-decorator';
 import { ProblemDecorationContribution, ProblemDecorationsProvider } from './problem-decorations-provider';

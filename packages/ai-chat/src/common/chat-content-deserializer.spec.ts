@@ -15,9 +15,9 @@
 // *****************************************************************************
 
 import { expect } from 'chai';
-import { URI } from '@theia/core';
-import { Position } from '@theia/core/shared/vscode-languageserver-protocol';
-import { ILogger } from '@theia/core/lib/common';
+import { URI } from '@ogun/core';
+import { Position } from '@ogun/core/shared/vscode-languageserver-protocol';
+import { ILogger } from '@ogun/core/lib/common';
 import {
     ChatContentDeserializerRegistryImpl,
     DefaultChatContentDeserializerContribution

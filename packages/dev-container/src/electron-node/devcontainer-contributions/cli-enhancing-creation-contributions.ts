@@ -14,11 +14,11 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { RemoteCliContext, RemoteCliContribution } from '@theia/core/lib/node/remote/remote-cli-contribution';
+import { RemoteCliContext, RemoteCliContribution } from '@ogun/core/lib/node/remote/remote-cli-contribution';
 import { ContainerCreationContribution } from '../docker-container-service';
 import * as Docker from 'dockerode';
 import { DevContainerConfiguration, } from '../devcontainer-file';
-import { injectable, interfaces } from '@theia/core/shared/inversify';
+import { injectable, interfaces } from '@ogun/core/shared/inversify';
 
 export function registerTheiaStartOptionsContributions(bind: interfaces.Bind): void {
     bind(ContainerCreationContribution).toService(ExtensionsContribution);

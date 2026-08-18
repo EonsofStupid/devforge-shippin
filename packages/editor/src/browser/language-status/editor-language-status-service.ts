@@ -14,18 +14,18 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { injectable, inject, optional } from '@theia/core/shared/inversify';
-import { codicon, HoverService, StatusBar, StatusBarAlignment, StatusBarEntry } from '@theia/core/lib/browser';
-import { LanguageService } from '@theia/core/lib/browser/language-service';
-import { CommandRegistry, DisposableCollection, MessageService, nls } from '@theia/core';
+import { injectable, inject, optional } from '@ogun/core/shared/inversify';
+import { codicon, HoverService, StatusBar, StatusBarAlignment, StatusBarEntry } from '@ogun/core/lib/browser';
+import { LanguageService } from '@ogun/core/lib/browser/language-service';
+import { CommandRegistry, DisposableCollection, MessageService, nls } from '@ogun/core';
 import { TextEditor } from '../editor';
 import { EditorCommands } from '../editor-command';
 import { LanguageSelector, score } from '../../common/language-selector';
-import { AccessibilityInformation } from '@theia/core/lib/common/accessibility';
-import URI from '@theia/core/lib/common/uri';
+import { AccessibilityInformation } from '@ogun/core/lib/common/accessibility';
+import URI from '@ogun/core/lib/common/uri';
 import { CurrentEditorAccess } from '../editor-manager';
-import { Severity } from '@theia/core/lib/common/severity';
-import { LabelParser } from '@theia/core/lib/browser/label-parser';
+import { Severity } from '@ogun/core/lib/common/severity';
+import { LabelParser } from '@ogun/core/lib/browser/label-parser';
 import { FormatterService } from '../editor-formatter-service';
 import { EditorFormatterStatusContribution } from './editor-formatter-status-contribution';
 

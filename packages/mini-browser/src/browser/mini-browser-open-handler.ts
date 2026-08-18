@@ -14,24 +14,24 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { Widget } from '@theia/core/shared/@lumino/widgets';
-import { injectable, inject, optional } from '@theia/core/shared/inversify';
-import URI from '@theia/core/lib/common/uri';
-import { MaybePromise } from '@theia/core/lib/common/types';
-import { codicon, QuickInputService } from '@theia/core/lib/browser';
-import { ApplicationShell } from '@theia/core/lib/browser/shell';
-import { Command, CommandContribution, CommandRegistry } from '@theia/core/lib/common/command';
-import { MenuContribution, MenuModelRegistry } from '@theia/core/lib/common/menu';
-import { TabBarToolbarContribution, TabBarToolbarRegistry } from '@theia/core/lib/browser/shell/tab-bar-toolbar';
-import { NavigatableWidget, NavigatableWidgetOpenHandler } from '@theia/core/lib/browser/navigatable';
-import { open, OpenerService } from '@theia/core/lib/browser/opener-service';
-import { LabelProvider } from '@theia/core/lib/browser/label-provider';
-import { FrontendApplicationContribution } from '@theia/core/lib/browser/frontend-application-contribution';
-import { WidgetOpenerOptions } from '@theia/core/lib/browser/widget-open-handler';
+import { Widget } from '@ogun/core/shared/@lumino/widgets';
+import { injectable, inject, optional } from '@ogun/core/shared/inversify';
+import URI from '@ogun/core/lib/common/uri';
+import { MaybePromise } from '@ogun/core/lib/common/types';
+import { codicon, QuickInputService } from '@ogun/core/lib/browser';
+import { ApplicationShell } from '@ogun/core/lib/browser/shell';
+import { Command, CommandContribution, CommandRegistry } from '@ogun/core/lib/common/command';
+import { MenuContribution, MenuModelRegistry } from '@ogun/core/lib/common/menu';
+import { TabBarToolbarContribution, TabBarToolbarRegistry } from '@ogun/core/lib/browser/shell/tab-bar-toolbar';
+import { NavigatableWidget, NavigatableWidgetOpenHandler } from '@ogun/core/lib/browser/navigatable';
+import { open, OpenerService } from '@ogun/core/lib/browser/opener-service';
+import { LabelProvider } from '@ogun/core/lib/browser/label-provider';
+import { FrontendApplicationContribution } from '@ogun/core/lib/browser/frontend-application-contribution';
+import { WidgetOpenerOptions } from '@ogun/core/lib/browser/widget-open-handler';
 import { MiniBrowserService } from '../common/mini-browser-service';
 import { MiniBrowser, MiniBrowserProps } from './mini-browser';
 import { LocationMapperService } from './location-mapper-service';
-import { nls } from '@theia/core/lib/common/nls';
+import { nls } from '@ogun/core/lib/common/nls';
 
 export namespace MiniBrowserCommands {
 

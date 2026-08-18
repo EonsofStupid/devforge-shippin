@@ -14,10 +14,10 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { nls } from '@theia/core/lib/common/nls';
-import { ReactWidget } from '@theia/core/lib/browser';
-import { injectable } from '@theia/core/shared/inversify';
-import * as React from '@theia/core/shared/react';
+import { nls } from '@ogun/core/lib/common/nls';
+import { ReactWidget } from '@ogun/core/lib/browser';
+import { injectable } from '@ogun/core/shared/inversify';
+import * as React from '@ogun/core/shared/react';
 import { PropertyViewContentWidget } from './property-view-content-widget';
 import { DefaultPropertyViewWidgetProvider } from './property-view-widget-provider';
 

@@ -13,9 +13,9 @@
 //
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
-import { createTreeContainer, LabelProviderContribution, WidgetFactory } from '@theia/core/lib/browser';
-import { bindRootContributionProvider } from '@theia/core/lib/common/contribution-provider';
-import { Container, interfaces } from '@theia/core/shared/inversify';
+import { createTreeContainer, LabelProviderContribution, WidgetFactory } from '@ogun/core/lib/browser';
+import { bindRootContributionProvider } from '@ogun/core/lib/common/contribution-provider';
+import { Container, interfaces } from '@ogun/core/shared/inversify';
 import { PreferenceTreeModel } from '../preference-tree-model';
 import { PreferenceTreeLabelProvider } from '../util/preference-tree-label-provider';
 import { Preference } from '../util/preference-types';

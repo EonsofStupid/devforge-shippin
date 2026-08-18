@@ -14,12 +14,12 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { injectable, inject, postConstruct } from '@theia/core/shared/inversify';
-import { Event, Emitter } from '@theia/core/lib/common';
-import URI from '@theia/core/lib/common/uri';
+import { injectable, inject, postConstruct } from '@ogun/core/shared/inversify';
+import { Event, Emitter } from '@ogun/core/lib/common';
+import URI from '@ogun/core/lib/common/uri';
 import { Marker } from '../common/marker';
-import { FileService } from '@theia/filesystem/lib/browser/file-service';
-import { FileChangesEvent, FileChangeType } from '@theia/filesystem/lib/common/files';
+import { FileService } from '@ogun/filesystem/lib/browser/file-service';
+import { FileChangesEvent, FileChangeType } from '@ogun/filesystem/lib/common/files';
 
 /*
  * argument to the `findMarkers` method.

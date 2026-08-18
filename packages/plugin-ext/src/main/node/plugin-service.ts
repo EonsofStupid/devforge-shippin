@@ -17,15 +17,15 @@
 import * as http from 'http';
 import * as path from 'path';
 const vhost = require('vhost');
-import * as express from '@theia/core/shared/express';
-import { BackendApplicationContribution } from '@theia/core/lib/node/backend-application';
-import { inject, injectable, postConstruct } from '@theia/core/shared/inversify';
+import * as express from '@ogun/core/shared/express';
+import { BackendApplicationContribution } from '@ogun/core/lib/node/backend-application';
+import { inject, injectable, postConstruct } from '@ogun/core/shared/inversify';
 import { WebviewExternalEndpoint } from '../common/webview-protocol';
-import { environment } from '@theia/core/shared/@theia/application-package/lib/environment';
-import { WsRequestValidatorContribution } from '@theia/core/lib/node/ws-request-validators';
-import { MaybePromise } from '@theia/core/lib/common';
-import { ApplicationPackage } from '@theia/core/shared/@theia/application-package';
-import { BackendRemoteService } from '@theia/core/lib/node/remote/backend-remote-service';
+import { environment } from '@ogun/core/shared/@ogun/application-package/lib/environment';
+import { WsRequestValidatorContribution } from '@ogun/core/lib/node/ws-request-validators';
+import { MaybePromise } from '@ogun/core/lib/common';
+import { ApplicationPackage } from '@ogun/core/shared/@ogun/application-package';
+import { BackendRemoteService } from '@ogun/core/lib/node/remote/backend-remote-service';
 
 @injectable()
 export class PluginApiContribution implements BackendApplicationContribution, WsRequestValidatorContribution {

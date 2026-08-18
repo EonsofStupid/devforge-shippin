@@ -14,7 +14,7 @@
  * SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
  ********************************************************************************/
 
-/* Shared styles for MCP Server dialogs (add/edit, install). Loaded by @theia/ai-mcp
+/* Shared styles for MCP Server dialogs (add/edit, install). Loaded by @ogun/ai-mcp
    so both the configuration view and the registry install flow render consistently. */
 
 .mcp-dialog-form {

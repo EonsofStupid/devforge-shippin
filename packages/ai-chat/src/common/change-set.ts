@@ -14,7 +14,7 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { ArrayUtils, Disposable, Emitter, Event, nls, URI } from '@theia/core';
+import { ArrayUtils, Disposable, Emitter, Event, nls, URI } from '@ogun/core';
 import { SerializableChangeSetElement } from './chat-model-serialization';
 
 export interface ChangeSetElement {

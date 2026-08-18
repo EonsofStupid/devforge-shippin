@@ -14,11 +14,11 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { Command, CommandContribution, CommandRegistry } from '@theia/core/lib/common/command';
-import { inject, injectable } from '@theia/core/shared/inversify';
-import { UriAwareCommandHandler, UriCommandHandler } from '@theia/core/lib/common/uri-command-handler';
-import URI from '@theia/core/lib/common/uri';
-import { SelectionService } from '@theia/core';
+import { Command, CommandContribution, CommandRegistry } from '@ogun/core/lib/common/command';
+import { inject, injectable } from '@ogun/core/shared/inversify';
+import { UriAwareCommandHandler, UriCommandHandler } from '@ogun/core/lib/common/uri-command-handler';
+import URI from '@ogun/core/lib/common/uri';
+import { SelectionService } from '@ogun/core';
 
 export namespace SelectionProviderCommands {
     export const GET_SELECTED_CONTEXT: Command = {

@@ -15,7 +15,7 @@
 // *****************************************************************************
 
 import { OVSXClient, VSXQueryOptions, VSXQueryResult, VSXSearchOptions, VSXSearchResult } from './ovsx-types';
-import { RequestContext, RequestService } from '@theia/request';
+import { RequestContext, RequestService } from '@ogun/request';
 import { RateLimiter } from 'limiter';
 
 export const OVSX_RATE_LIMIT = 15;

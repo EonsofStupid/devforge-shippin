@@ -14,20 +14,20 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { Container, ContainerModule, interfaces } from '@theia/core/shared/inversify';
-import { WidgetFactory } from '@theia/core/lib/browser/widget-manager';
+import { Container, ContainerModule, interfaces } from '@ogun/core/shared/inversify';
+import { WidgetFactory } from '@ogun/core/lib/browser/widget-manager';
 import { TimelineService } from './timeline-service';
 import { TimelineWidget } from './timeline-widget';
 import { TimelineTreeWidget } from './timeline-tree-widget';
-import { createTreeContainer, } from '@theia/core/lib/browser';
+import { createTreeContainer, } from '@ogun/core/lib/browser';
 import { TimelineTreeModel } from './timeline-tree-model';
 import { TimelineEmptyWidget } from './timeline-empty-widget';
 import { TimelineContextKeyService } from './timeline-context-key-service';
 import { TimelineContribution } from './timeline-contribution';
 
 import '../../src/browser/style/index.css';
-import { CommandContribution } from '@theia/core/lib/common';
-import { TabBarToolbarContribution } from '@theia/core/lib/browser/shell/tab-bar-toolbar';
+import { CommandContribution } from '@ogun/core/lib/common';
+import { TabBarToolbarContribution } from '@ogun/core/lib/browser/shell/tab-bar-toolbar';
 
 export default new ContainerModule(bind => {
     bind(TimelineContribution).toSelf().inSingletonScope();

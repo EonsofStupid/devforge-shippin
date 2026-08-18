@@ -5,7 +5,7 @@
 import { browserOptions, watch } from './gen-esbuild.browser.mjs';
 import { nodeOptions } from './gen-esbuild.node.mjs';
 import { electronOptions } from './gen-esbuild.electron.mjs';
-import { exposeModulePlugin } from '@theia/bundle-plugin';
+import { exposeModulePlugin } from '@ogun/bundle-plugin';
 import esbuild from 'esbuild';
 
 browserOptions.plugins.push(exposeModulePlugin());

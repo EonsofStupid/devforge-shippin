@@ -14,7 +14,7 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { extractJsonStringField } from '@theia/ai-chat-ui/lib/common/toolcall-utils';
+import { extractJsonStringField } from '@ogun/ai-chat-ui/lib/common/toolcall-utils';
 
 export interface ShellExecutionInput {
     command: string;

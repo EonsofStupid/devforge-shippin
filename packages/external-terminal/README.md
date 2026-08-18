@@ -12,7 +12,7 @@
 
 ## Description
 
-The `@theia/external-terminal` extension contributes the ability to spawn external terminals for `electron` applications.
+The `@ogun/external-terminal` extension contributes the ability to spawn external terminals for `electron` applications.
 The extension includes the necessary logic to spawn the appropriate terminal application for each operating system (Windows, Linux, OSX)
 by identifying certain environment variables. The extension also contributes preferences to control this behavior if necessary.
 
@@ -32,7 +32,7 @@ by identifying certain environment variables. The extension also contributes pre
 
 ## Additional Information
 
-- [API documentation for `@theia/external-terminal`](https://eclipse-theia.github.io/theia/docs/next/modules/_theia_external-terminal.html)
+- [API documentation for `@ogun/external-terminal`](https://eclipse-theia.github.io/theia/docs/next/modules/_theia_external-terminal.html)
 - [Theia - GitHub](https://github.com/eclipse-theia/theia)
 - [Theia - Website](https://theia-ide.org/)
 

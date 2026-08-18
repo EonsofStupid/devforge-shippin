@@ -14,8 +14,8 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { RpcServer } from '@theia/core/lib/common/messaging/proxy-factory';
-import { PluginMetadata } from '@theia/plugin-ext/lib/common/plugin-protocol';
+import { RpcServer } from '@ogun/core/lib/common/messaging/proxy-factory';
+import { PluginMetadata } from '@ogun/plugin-ext/lib/common/plugin-protocol';
 
 export const pluginDevServicePath = '/services/plugin-dev';
 export const PluginDevServer = Symbol('PluginDevServer');

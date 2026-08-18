@@ -17,7 +17,7 @@
 import { expect } from 'chai';
 import { RemoteDockerContainerConnection } from './remote-docker-container-connection';
 import { DevContainerConfiguration } from './devcontainer-file';
-import { ILogger } from '@theia/core';
+import { ILogger } from '@ogun/core';
 import * as Docker from 'dockerode';
 
 class TestableDockerContainerConnection extends RemoteDockerContainerConnection {

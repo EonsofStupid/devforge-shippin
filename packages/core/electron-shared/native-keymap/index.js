@@ -1,1 +1,1 @@
-module.exports = require('@theia/electron/shared/native-keymap');
+module.exports = require('@ogun/electron/shared/native-keymap');

@@ -14,15 +14,15 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { inject, injectable, optional, postConstruct } from '@theia/core/shared/inversify';
-import { CommonCommands, LabelProvider, ApplicationShell, QuickInputService, QuickPickValue, SaveableService } from '@theia/core/lib/browser';
+import { inject, injectable, optional, postConstruct } from '@ogun/core/shared/inversify';
+import { CommonCommands, LabelProvider, ApplicationShell, QuickInputService, QuickPickValue, SaveableService } from '@ogun/core/lib/browser';
 import { EditorManager } from './editor-manager';
-import { CommandContribution, CommandRegistry, Command, ResourceProvider, MessageService, nls } from '@theia/core';
-import { LanguageService } from '@theia/core/lib/browser/language-service';
-import { SUPPORTED_ENCODINGS } from '@theia/core/lib/common/supported-encodings';
+import { CommandContribution, CommandRegistry, Command, ResourceProvider, MessageService, nls } from '@ogun/core';
+import { LanguageService } from '@ogun/core/lib/browser/language-service';
+import { SUPPORTED_ENCODINGS } from '@ogun/core/lib/common/supported-encodings';
 import { EncodingMode } from './editor';
 import { EditorLanguageQuickPickService } from './editor-language-quick-pick-service';
-import { PreferenceService } from '@theia/core/lib/common/preferences';
+import { PreferenceService } from '@ogun/core/lib/common/preferences';
 
 export namespace EditorCommands {
 

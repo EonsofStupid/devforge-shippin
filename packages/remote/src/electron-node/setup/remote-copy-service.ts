@@ -18,14 +18,14 @@ import * as archiver from 'archiver';
 import * as path from 'path';
 import * as fs from 'fs';
 import * as os from 'os';
-import { ApplicationPackage } from '@theia/core/shared/@theia/application-package';
-import { inject, injectable, named } from '@theia/core/shared/inversify';
+import { ApplicationPackage } from '@ogun/core/shared/@ogun/application-package';
+import { inject, injectable, named } from '@ogun/core/shared/inversify';
 import { RemoteConnection } from '../remote-types';
-import { RemotePlatform } from '@theia/core/lib/node/remote/remote-cli-contribution';
+import { RemotePlatform } from '@ogun/core/lib/node/remote/remote-cli-contribution';
 import { RemoteNativeDependencyService } from './remote-native-dependency-service';
-import { ContributionProvider } from '@theia/core';
+import { ContributionProvider } from '@ogun/core';
 import { RemoteCopyRegistryImpl } from './remote-copy-contribution';
-import { RemoteCopyContribution, RemoteFile } from '@theia/core/lib/node/remote/remote-copy-contribution';
+import { RemoteCopyContribution, RemoteFile } from '@ogun/core/lib/node/remote/remote-copy-contribution';
 
 @injectable()
 export class RemoteCopyService {

@@ -23,9 +23,9 @@ describe('Prometheus helper module', () => {
     /* According to https://prometheus.io/docs/concepts/data_model/ */
 
     const validName = 'theia_extension3242-:';
-    const invalidTheiaName = '@theia/something';
+    const invalidTheiaName = '@ogun/something';
     const validTheiaName = 'theia_something';
-    const invalidName2 = '@theia/?$%^ ';
+    const invalidName2 = '@ogun/?$%^ ';
 
     it('Should correctly validate a metric name', () => {
         expect(PROMETHEUS_REGEXP.test(validName)).to.be.true;

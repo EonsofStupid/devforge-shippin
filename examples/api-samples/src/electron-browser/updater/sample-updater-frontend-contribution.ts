@@ -14,8 +14,8 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { inject, injectable, postConstruct } from '@theia/core/shared/inversify';
-import { CommonMenus } from '@theia/core/lib/browser';
+import { inject, injectable, postConstruct } from '@ogun/core/shared/inversify';
+import { CommonMenus } from '@ogun/core/lib/browser';
 import {
     Emitter,
     Command,
@@ -25,9 +25,9 @@ import {
     MenuContribution,
     CommandRegistry,
     CommandContribution
-} from '@theia/core/lib/common';
-import { ElectronMainMenuFactory } from '@theia/core/lib/electron-browser/menu/electron-main-menu-factory';
-import { FrontendApplicationConfigProvider } from '@theia/core/lib/browser/frontend-application-config-provider';
+} from '@ogun/core/lib/common';
+import { ElectronMainMenuFactory } from '@ogun/core/lib/electron-browser/menu/electron-main-menu-factory';
+import { FrontendApplicationConfigProvider } from '@ogun/core/lib/browser/frontend-application-config-provider';
 import { SampleUpdater, UpdateStatus, SampleUpdaterClient } from '../../common/updater/sample-updater';
 
 export namespace SampleUpdaterCommands {

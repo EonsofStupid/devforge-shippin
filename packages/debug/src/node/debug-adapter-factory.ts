@@ -22,14 +22,14 @@
 // Some entities copied and modified from https://github.com/Microsoft/vscode-debugadapter-node/blob/master/adapter/src/protocol.ts
 
 import * as net from 'net';
-import { injectable, inject } from '@theia/core/shared/inversify';
+import { injectable, inject } from '@ogun/core/shared/inversify';
 import {
     RawProcessFactory,
     ProcessManager,
     RawProcess,
     RawForkOptions,
     RawProcessOptions
-} from '@theia/process/lib/node';
+} from '@ogun/process/lib/node';
 import {
     DebugAdapterExecutable,
     DebugAdapterSession,
@@ -39,9 +39,9 @@ import {
     DebugAdapter
 } from '../common/debug-model';
 import { DebugAdapterSessionImpl } from '../common/debug-adapter-session';
-import { environment } from '@theia/core/shared/@theia/application-package';
+import { environment } from '@ogun/core/shared/@ogun/application-package';
 import { ProcessDebugAdapter, SocketDebugAdapter } from './stream-debug-adapter';
-import { isObject } from '@theia/core/lib/common';
+import { isObject } from '@ogun/core/lib/common';
 
 /**
  * [DebugAdapterFactory](#DebugAdapterFactory) implementation based on

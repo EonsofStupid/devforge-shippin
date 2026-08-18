@@ -14,10 +14,10 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { FrontendApplicationContribution } from '@theia/core/lib/browser';
-import { inject, injectable } from '@theia/core/shared/inversify';
-import { PromptService } from '@theia/ai-core';
-import { nls } from '@theia/core';
+import { FrontendApplicationContribution } from '@ogun/core/lib/browser';
+import { inject, injectable } from '@ogun/core/shared/inversify';
+import { PromptService } from '@ogun/ai-core';
+import { nls } from '@ogun/core';
 import { GET_WORKSPACE_FILE_LIST_FUNCTION_ID, FILE_CONTENT_FUNCTION_ID, SEARCH_IN_WORKSPACE_FUNCTION_ID, FIND_FILES_BY_PATTERN_FUNCTION_ID } from '../common/workspace-functions';
 import { WRITE_FILE_REPLACEMENTS_ID, WRITE_FILE_CONTENT_ID } from '../common/file-changeset-function-ids';
 import { MEMORY_DIRECTORY_VARIABLE } from './memory-directory-variable-contribution';

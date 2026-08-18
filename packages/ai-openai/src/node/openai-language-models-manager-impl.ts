@@ -14,9 +14,9 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { LanguageModelRegistry, LanguageModelStatus, ReasoningSupport } from '@theia/ai-core';
-import { getProxyUrl } from '@theia/ai-core/lib/node';
-import { inject, injectable } from '@theia/core/shared/inversify';
+import { LanguageModelRegistry, LanguageModelStatus, ReasoningSupport } from '@ogun/ai-core';
+import { getProxyUrl } from '@ogun/ai-core/lib/node';
+import { inject, injectable } from '@ogun/core/shared/inversify';
 import { DeveloperMessageSettings, OpenAiModel, OpenAiModelUtils } from './openai-language-model';
 import { OpenAiResponseApiUtils } from './openai-response-api-utils';
 import { getOpenAiModelDefaults } from './openai-model-defaults';

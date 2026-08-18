@@ -14,32 +14,32 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { bindRootContributionProvider, CommandContribution } from '@theia/core';
-import { ContainerModule } from '@theia/core/shared/inversify';
-import { bindViewContribution, FrontendApplicationContribution, isRemote, WidgetFactory } from '@theia/core/lib/browser';
+import { bindRootContributionProvider, CommandContribution } from '@ogun/core';
+import { ContainerModule } from '@ogun/core/shared/inversify';
+import { bindViewContribution, FrontendApplicationContribution, isRemote, WidgetFactory } from '@ogun/core/lib/browser';
 import { RemoteSSHContribution } from './remote-ssh-contribution';
 import { RemoteSSHConnectionProvider, RemoteSSHConnectionProviderPath } from '../electron-common/remote-ssh-connection-provider';
 import { RemoteFrontendContribution } from './remote-frontend-contribution';
 import { RemoteRegistryContribution } from './remote-registry-contribution';
 import { RemoteService } from './remote-service';
 import { RemoteStatusService, RemoteStatusServicePath } from '../electron-common/remote-status-service';
-import { ElectronFileDialogService } from '@theia/filesystem/lib/electron-browser/file-dialog/electron-file-dialog-service';
+import { ElectronFileDialogService } from '@ogun/filesystem/lib/electron-browser/file-dialog/electron-file-dialog-service';
 import { RemoteElectronFileDialogService } from './remote-electron-file-dialog-service';
 import { bindRemotePreferences } from '../electron-common/remote-preferences';
 import { PortForwardingWidget, PORT_FORWARDING_WIDGET_ID } from './port-forwarding/port-forwarding-widget';
 import { PortForwardingContribution } from './port-forwarding/port-forwading-contribution';
 import { PortForwardingService } from './port-forwarding/port-forwarding-service';
 import { RemotePortForwardingProvider, RemoteRemotePortForwardingProviderPath } from '../electron-common/remote-port-forwarding-provider';
-import { ServiceConnectionProvider } from '@theia/core/lib/browser/messaging/service-connection-provider';
+import { ServiceConnectionProvider } from '@ogun/core/lib/browser/messaging/service-connection-provider';
 import '../../src/electron-browser/style/port-forwarding-widget.css';
-import { UserStorageContribution } from '@theia/userstorage/lib/browser/user-storage-contribution';
+import { UserStorageContribution } from '@ogun/userstorage/lib/browser/user-storage-contribution';
 import { RemoteUserStorageContribution } from './remote-user-storage-provider';
-import { RemoteFileSystemProvider, remoteFileSystemPath, RemoteFileSystemProxyFactory, RemoteFileSystemServer } from '@theia/filesystem/lib/common/remote-file-system-provider';
+import { RemoteFileSystemProvider, remoteFileSystemPath, RemoteFileSystemProxyFactory, RemoteFileSystemServer } from '@ogun/filesystem/lib/common/remote-file-system-provider';
 import { LocalEnvVariablesServer, LocalRemoteFileSystemContribution, LocalRemoteFileSystemProvider, LocalRemoteFileSytemServer } from './local-backend-services';
-import { envVariablesPath, EnvVariablesServer } from '@theia/core/lib/common/env-variables';
-import { WorkspaceHandlingContribution, WorkspaceOpenHandlerContribution } from '@theia/workspace/lib/browser';
+import { envVariablesPath, EnvVariablesServer } from '@ogun/core/lib/common/env-variables';
+import { WorkspaceHandlingContribution, WorkspaceOpenHandlerContribution } from '@ogun/workspace/lib/browser';
 import { RemoteLocalWorkspaceContribution } from './remote-local-workspace-contribution';
-import { FileServiceContribution } from '@theia/filesystem/lib/browser/file-service';
+import { FileServiceContribution } from '@ogun/filesystem/lib/browser/file-service';
 
 export default new ContainerModule((bind, _, __, rebind) => {
     bind(RemoteFrontendContribution).toSelf().inSingletonScope();

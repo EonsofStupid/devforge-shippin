@@ -14,12 +14,12 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { injectable, postConstruct } from '@theia/core/shared/inversify';
+import { injectable, postConstruct } from '@ogun/core/shared/inversify';
 import {
     ContextKeyService as TheiaContextKeyService, ContextKey, ContextKeyChangeEvent,
     ScopedValueStore, ContextMatcher, ContextKeyValue, Context
-} from '@theia/core/lib/browser/context-key-service';
-import { Emitter, Event } from '@theia/core';
+} from '@ogun/core/lib/browser/context-key-service';
+import { Emitter, Event } from '@ogun/core';
 import { AbstractContextKeyService, Context as MonacoContext } from '@theia/monaco-editor-core/esm/vs/platform/contextkey/browser/contextKeyService';
 import { ContextKeyExpr, ContextKeyExpression, IContext, IContextKeyService } from '@theia/monaco-editor-core/esm/vs/platform/contextkey/common/contextkey';
 import { StandaloneServices } from '@theia/monaco-editor-core/esm/vs/editor/standalone/browser/standaloneServices';

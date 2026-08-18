@@ -14,12 +14,12 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { generateUuid, hashValue } from '@theia/core/lib/common/uuid';
-import { inject, injectable, postConstruct } from '@theia/core/shared/inversify';
+import { generateUuid, hashValue } from '@ogun/core/lib/common/uuid';
+import { inject, injectable, postConstruct } from '@ogun/core/shared/inversify';
 import { Plugin, WebviewsExt, WebviewPanelViewState, WebviewsMain, PLUGIN_RPC_CONTEXT, WebviewInitData, /* WebviewsMain, PLUGIN_RPC_CONTEXT  */ } from '../common/plugin-api-rpc';
-import * as theia from '@theia/plugin';
+import * as theia from '@ogun/plugin';
 import { RPCProtocol } from '../common/rpc-protocol';
-import { Emitter, Event } from '@theia/core/lib/common/event';
+import { Emitter, Event } from '@ogun/core/lib/common/event';
 import { fromViewColumn, toViewColumn, toWebviewPanelShowOptions } from './type-converters';
 import { Disposable, WebviewPanelTargetArea, URI, ThemeIcon } from './types-impl';
 import { WorkspaceExtImpl } from './workspace';

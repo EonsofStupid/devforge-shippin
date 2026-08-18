@@ -14,12 +14,12 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { MessageService, nls, PreferenceService } from '@theia/core';
-import URI from '@theia/core/lib/common/uri';
-import { ConfirmDialog } from '@theia/core/lib/browser/dialogs';
-import { OpenHandler } from '@theia/core/lib/browser/opener-service';
-import { WindowService } from '@theia/core/lib/browser/window/window-service';
-import { inject, injectable, optional } from '@theia/core/shared/inversify';
+import { MessageService, nls, PreferenceService } from '@ogun/core';
+import URI from '@ogun/core/lib/common/uri';
+import { ConfirmDialog } from '@ogun/core/lib/browser/dialogs';
+import { OpenHandler } from '@ogun/core/lib/browser/opener-service';
+import { WindowService } from '@ogun/core/lib/browser/window/window-service';
+import { inject, injectable, optional } from '@ogun/core/shared/inversify';
 import { MCP_SERVERS_PREF } from '../common/mcp-preferences';
 import { MCPServerEditor } from './mcp-server-editor';
 import { MCPInstallUriConfiguration } from './mcp-install-uri-configuration';
@@ -38,7 +38,7 @@ const ID_PARAM = 'id';
  * (Extensions) view with the `serverId` searched so the entry is in focus, and then opens
  * the install dialog for that entry.
  *
- * Lives in `@theia/ai-mcp` so products without the registry package still receive the
+ * Lives in `@ogun/ai-mcp` so products without the registry package still receive the
  * URL - but installation only succeeds when an `MCPRegistryUiBridge` is bound and the
  * id exists in the registry. The bridge is consulted via `@optional()`.
  */

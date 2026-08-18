@@ -14,13 +14,13 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { injectable, inject, postConstruct } from '@theia/core/shared/inversify';
-import { FileSystemLocking } from '@theia/core/lib/node';
-import * as fs from '@theia/core/shared/fs-extra';
+import { injectable, inject, postConstruct } from '@ogun/core/shared/inversify';
+import { FileSystemLocking } from '@ogun/core/lib/node';
+import * as fs from '@ogun/core/shared/fs-extra';
 import * as path from 'path';
-import { FileUri } from '@theia/core/lib/common/file-uri';
-import { Deferred } from '@theia/core/lib/common/promise-util';
-import { EnvVariablesServer } from '@theia/core/lib/common/env-variables';
+import { FileUri } from '@ogun/core/lib/common/file-uri';
+import { Deferred } from '@ogun/core/lib/common/promise-util';
+import { EnvVariablesServer } from '@ogun/core/lib/common/env-variables';
 import { PluginPaths } from './paths/const';
 import { PluginPathsService } from '../common/plugin-paths-protocol';
 import { KeysToAnyValues, KeysToKeysToAnyValue } from '../../common/types';

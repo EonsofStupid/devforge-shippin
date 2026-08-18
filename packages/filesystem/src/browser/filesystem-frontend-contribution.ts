@@ -14,7 +14,7 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { CorePreferences, nls, ILogger } from '@theia/core';
+import { CorePreferences, nls, ILogger } from '@ogun/core';
 import {
     ApplicationShell,
     CommonCommands,
@@ -27,16 +27,16 @@ import {
     StatefulWidget,
     WidgetManager,
     open
-} from '@theia/core/lib/browser';
-import { MimeService } from '@theia/core/lib/browser/mime-service';
-import { TreeWidgetSelection } from '@theia/core/lib/browser/tree/tree-widget-selection';
-import { Emitter, MaybePromise, SelectionService, isCancelled } from '@theia/core/lib/common';
-import { Command, CommandContribution, CommandRegistry } from '@theia/core/lib/common/command';
-import { Deferred } from '@theia/core/lib/common/promise-util';
-import URI from '@theia/core/lib/common/uri';
-import { environment } from '@theia/core/shared/@theia/application-package/lib/environment';
-import { inject, injectable, named } from '@theia/core/shared/inversify';
-import { UserWorkingDirectoryProvider } from '@theia/core/lib/browser/user-working-directory-provider';
+} from '@ogun/core/lib/browser';
+import { MimeService } from '@ogun/core/lib/browser/mime-service';
+import { TreeWidgetSelection } from '@ogun/core/lib/browser/tree/tree-widget-selection';
+import { Emitter, MaybePromise, SelectionService, isCancelled } from '@ogun/core/lib/common';
+import { Command, CommandContribution, CommandRegistry } from '@ogun/core/lib/common/command';
+import { Deferred } from '@ogun/core/lib/common/promise-util';
+import URI from '@ogun/core/lib/common/uri';
+import { environment } from '@ogun/core/shared/@ogun/application-package/lib/environment';
+import { inject, injectable, named } from '@ogun/core/shared/inversify';
+import { UserWorkingDirectoryProvider } from '@ogun/core/lib/browser/user-working-directory-provider';
 import { FileChangeType, FileChangesEvent, FileOperation } from '../common/files';
 import { FileDialogService, SaveFileDialogProps } from './file-dialog';
 import { FileSelection } from './file-selection';

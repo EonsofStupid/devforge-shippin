@@ -14,11 +14,11 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { inject, injectable, postConstruct } from '@theia/core/shared/inversify';
-import { CommonCommands, FrontendApplicationContribution, StatusBar, StatusBarAlignment } from '@theia/core/lib/browser';
-import { MarkdownStringImpl } from '@theia/core/lib/common/markdown-rendering/markdown-string';
-import { PreferenceProviderProvider, PreferenceScope, PreferenceService } from '@theia/core/lib/common/preferences';
-import { DisposableCollection, nls } from '@theia/core';
+import { inject, injectable, postConstruct } from '@ogun/core/shared/inversify';
+import { CommonCommands, FrontendApplicationContribution, StatusBar, StatusBarAlignment } from '@ogun/core/lib/browser';
+import { MarkdownStringImpl } from '@ogun/core/lib/common/markdown-rendering/markdown-string';
+import { PreferenceProviderProvider, PreferenceScope, PreferenceService } from '@ogun/core/lib/common/preferences';
+import { DisposableCollection, nls } from '@ogun/core';
 
 export const SESSION_PREFERENCE_STATUS_BAR_ID = 'session-preference-status';
 

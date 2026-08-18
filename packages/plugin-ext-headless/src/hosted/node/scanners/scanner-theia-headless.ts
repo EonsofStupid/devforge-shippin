@@ -14,12 +14,12 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-/* eslint-disable @theia/localization-check */
+/* eslint-disable @ogun/localization-check */
 
-import { injectable } from '@theia/core/shared/inversify';
-import { DeployedPlugin, PluginPackage, PluginEntryPoint } from '@theia/plugin-ext';
-import { AbstractPluginScanner } from '@theia/plugin-ext/lib/hosted/node/scanners/scanner-theia';
-import { deepClone } from '@theia/core/lib/common/objects';
+import { injectable } from '@ogun/core/shared/inversify';
+import { DeployedPlugin, PluginPackage, PluginEntryPoint } from '@ogun/plugin-ext';
+import { AbstractPluginScanner } from '@ogun/plugin-ext/lib/hosted/node/scanners/scanner-theia';
+import { deepClone } from '@ogun/core/lib/common/objects';
 
 @injectable()
 export class TheiaHeadlessPluginScanner extends AbstractPluginScanner {

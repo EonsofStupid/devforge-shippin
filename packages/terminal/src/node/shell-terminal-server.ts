@@ -16,22 +16,22 @@
 import { exec } from 'child_process';
 import * as fs from 'fs';
 
-import { inject, injectable, named } from '@theia/core/shared/inversify';
-import { ILogger } from '@theia/core/lib/common/logger';
-import { EnvironmentUtils } from '@theia/core/lib/node/environment-utils';
+import { inject, injectable, named } from '@ogun/core/shared/inversify';
+import { ILogger } from '@ogun/core/lib/common/logger';
+import { EnvironmentUtils } from '@ogun/core/lib/node/environment-utils';
 import { BaseTerminalServer } from './base-terminal-server';
 import { ShellProcessFactory, getRootPath } from './shell-process';
-import { ProcessManager, TerminalProcess } from '@theia/process/lib/node';
-import { isWindows } from '@theia/core/lib/common/os';
+import { ProcessManager, TerminalProcess } from '@ogun/process/lib/node';
+import { isWindows } from '@ogun/core/lib/common/os';
 import * as cp from 'child_process';
 import {
     EnvironmentVariableCollectionWithPersistence, EnvironmentVariableMutatorType, NO_ROOT_URI, SerializableEnvironmentVariableCollection,
     IShellTerminalServer, IShellTerminalServerOptions
 }
     from '../common/shell-terminal-protocol';
-import { URI } from '@theia/core';
-import { MultiKeyMap } from '@theia/core/lib/common/collections';
-import { MarkdownString } from '@theia/core/lib/common/markdown-rendering/markdown-string';
+import { URI } from '@ogun/core';
+import { MultiKeyMap } from '@ogun/core/lib/common/collections';
+import { MarkdownString } from '@ogun/core/lib/common/markdown-rendering/markdown-string';
 
 interface SerializedExtensionEnvironmentVariableCollection {
     extensionIdentifier: string,

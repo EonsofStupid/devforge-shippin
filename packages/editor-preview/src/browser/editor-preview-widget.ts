@@ -14,9 +14,9 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { TabBar, Widget } from '@theia/core/lib/browser';
-import { EditorWidget, TextEditor } from '@theia/editor/lib/browser';
-import { Event, SelectionService, UNTITLED_SCHEME } from '@theia/core/lib/common';
+import { TabBar, Widget } from '@ogun/core/lib/browser';
+import { EditorWidget, TextEditor } from '@ogun/editor/lib/browser';
+import { Event, SelectionService, UNTITLED_SCHEME } from '@ogun/core/lib/common';
 import { PreviewTabWidget, PreviewTabSupport } from './preview-tab-widget';
 
 export class EditorPreviewWidget extends EditorWidget implements PreviewTabWidget {

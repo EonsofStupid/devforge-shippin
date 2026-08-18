@@ -14,17 +14,17 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { inject, injectable } from '@theia/core/shared/inversify';
-import { PreferenceScope, PreferenceService } from '@theia/core';
+import { inject, injectable } from '@ogun/core/shared/inversify';
+import { PreferenceScope, PreferenceService } from '@ogun/core';
 import {
     isLocalMCPServerDescription,
     isRemoteMCPServerDescription,
     MCPInstallEntryConfig,
     MCPRegistryMetadata,
     MCPServerDescription
-} from '@theia/ai-mcp/lib/common/mcp-server-manager';
-import { MCP_SERVERS_PREF } from '@theia/ai-mcp/lib/common/mcp-preferences';
-import { MCPInstallOverrides, MCPServerEditor } from '@theia/ai-mcp/lib/browser/mcp-server-editor';
+} from '@ogun/ai-mcp/lib/common/mcp-server-manager';
+import { MCP_SERVERS_PREF } from '@ogun/ai-mcp/lib/common/mcp-preferences';
+import { MCPInstallOverrides, MCPServerEditor } from '@ogun/ai-mcp/lib/browser/mcp-server-editor';
 import { ClassificationResult, ResolvedRegistryEntry } from '../../common/mcp/mcp-registry-types';
 
 export { MCPInstallOverrides };

@@ -12,8 +12,8 @@
 
 ## Description
 
-The `@theia/ai-chat` extension provides the concept of a language model chat to Theia.
-It serves as the basis for `@theia/ai-chat-ui` to provide the Chat UI.
+The `@ogun/ai-chat` extension provides the concept of a language model chat to Theia.
+It serves as the basis for `@ogun/ai-chat-ui` to provide the Chat UI.
 
 ## Tool Context Patterns
 
@@ -24,7 +24,7 @@ When implementing tool handlers, there are two patterns depending on whether you
 For tools that only need basic context like cancellation support:
 
 ```typescript
-import { ToolInvocationContext, ToolProvider, ToolRequest } from '@theia/ai-core';
+import { ToolInvocationContext, ToolProvider, ToolRequest } from '@ogun/ai-core';
 
 @injectable()
 export class MyGenericTool implements ToolProvider {
@@ -51,8 +51,8 @@ export class MyGenericTool implements ToolProvider {
 For tools that need access to the chat session, request model, or response:
 
 ```typescript
-import { assertChatContext, ChatToolContext } from '@theia/ai-chat';
-import { ToolInvocationContext, ToolProvider, ToolRequest } from '@theia/ai-core';
+import { assertChatContext, ChatToolContext } from '@ogun/ai-chat';
+import { ToolInvocationContext, ToolProvider, ToolRequest } from '@ogun/ai-core';
 
 @injectable()
 export class MyChatTool implements ToolProvider {
@@ -81,7 +81,7 @@ The `assertChatContext()` function serves as both a runtime validator and TypeSc
 
 ## Additional Information
 
-- [API documentation for `@theia/ai-chat`](https://eclipse-theia.github.io/theia/docs/next/modules/_theia_ai-chat.html)
+- [API documentation for `@ogun/ai-chat`](https://eclipse-theia.github.io/theia/docs/next/modules/_theia_ai-chat.html)
 - [Theia - GitHub](https://github.com/eclipse-theia/theia)
 - [Theia - Website](https://theia-ide.org/)
 

@@ -20,26 +20,26 @@ describe('Menus', function () {
 
     const { assert } = chai;
 
-    const { BrowserMenuBarContribution } = require('@theia/core/lib/browser/menu/browser-menu-plugin');
-    const { MenuModelRegistry } = require('@theia/core/lib/common/menu');
-    const { CommandRegistry } = require('@theia/core/lib/common/command');
-    const { DisposableCollection } = require('@theia/core/lib/common/disposable');
-    const { ContextMenuRenderer } = require('@theia/core/lib/browser/context-menu-renderer');
-    const { BrowserContextMenuAccess } = require('@theia/core/lib/browser/menu/browser-context-menu-renderer');
-    const { ApplicationShell } = require('@theia/core/lib/browser/shell/application-shell');
-    const { ViewContainer } = require('@theia/core/lib/browser/view-container');
-    const { waitForRevealed, waitForHidden } = require('@theia/core/lib/browser/widgets/widget');
-    const { CallHierarchyContribution } = require('@theia/callhierarchy/lib/browser/callhierarchy-contribution');
-    const { EXPLORER_VIEW_CONTAINER_ID } = require('@theia/navigator/lib/browser/navigator-widget-factory');
-    const { FileNavigatorContribution } = require('@theia/navigator/lib/browser/navigator-contribution');
-    const { ScmContribution } = require('@theia/scm/lib/browser/scm-contribution');
-    const { OutlineViewContribution } = require('@theia/outline-view/lib/browser/outline-view-contribution');
-    const { OutputContribution } = require('@theia/output/lib/browser/output-contribution');
-    const { PluginFrontendViewContribution } = require('@theia/plugin-ext/lib/main/browser/plugin-frontend-view-contribution');
-    const { ProblemContribution } = require('@theia/markers/lib/browser/problem/problem-contribution');
-    const { PropertyViewContribution } = require('@theia/property-view/lib/browser/property-view-contribution');
-    const { SearchInWorkspaceFrontendContribution } = require('@theia/search-in-workspace/lib/browser/search-in-workspace-frontend-contribution');
-    const { HostedPluginSupport } = require('@theia/plugin-ext/lib/hosted/browser/hosted-plugin');
+    const { BrowserMenuBarContribution } = require('@ogun/core/lib/browser/menu/browser-menu-plugin');
+    const { MenuModelRegistry } = require('@ogun/core/lib/common/menu');
+    const { CommandRegistry } = require('@ogun/core/lib/common/command');
+    const { DisposableCollection } = require('@ogun/core/lib/common/disposable');
+    const { ContextMenuRenderer } = require('@ogun/core/lib/browser/context-menu-renderer');
+    const { BrowserContextMenuAccess } = require('@ogun/core/lib/browser/menu/browser-context-menu-renderer');
+    const { ApplicationShell } = require('@ogun/core/lib/browser/shell/application-shell');
+    const { ViewContainer } = require('@ogun/core/lib/browser/view-container');
+    const { waitForRevealed, waitForHidden } = require('@ogun/core/lib/browser/widgets/widget');
+    const { CallHierarchyContribution } = require('@ogun/callhierarchy/lib/browser/callhierarchy-contribution');
+    const { EXPLORER_VIEW_CONTAINER_ID } = require('@ogun/navigator/lib/browser/navigator-widget-factory');
+    const { FileNavigatorContribution } = require('@ogun/navigator/lib/browser/navigator-contribution');
+    const { ScmContribution } = require('@ogun/scm/lib/browser/scm-contribution');
+    const { OutlineViewContribution } = require('@ogun/outline-view/lib/browser/outline-view-contribution');
+    const { OutputContribution } = require('@ogun/output/lib/browser/output-contribution');
+    const { PluginFrontendViewContribution } = require('@ogun/plugin-ext/lib/main/browser/plugin-frontend-view-contribution');
+    const { ProblemContribution } = require('@ogun/markers/lib/browser/problem/problem-contribution');
+    const { PropertyViewContribution } = require('@ogun/property-view/lib/browser/property-view-contribution');
+    const { SearchInWorkspaceFrontendContribution } = require('@ogun/search-in-workspace/lib/browser/search-in-workspace-frontend-contribution');
+    const { HostedPluginSupport } = require('@ogun/plugin-ext/lib/hosted/browser/hosted-plugin');
 
     const container = window.theia.container;
     const shell = container.get(ApplicationShell);

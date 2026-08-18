@@ -22,7 +22,7 @@
 /* eslint-disable max-len */
 
 import { CharacterClassifier } from './character-classifier';
-import { CharCode } from '@theia/core/lib/common/char-code';
+import { CharCode } from '@ogun/core/lib/common/char-code';
 import { DocumentLink as ILink } from './plugin-api-rpc-model';
 
 export interface ILinkComputerTarget {

@@ -14,10 +14,10 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { injectable, inject } from '@theia/core/shared/inversify';
-import { ToolProvider, ToolRequest, AutoActionResult } from '@theia/ai-core';
+import { injectable, inject } from '@ogun/core/shared/inversify';
+import { ToolProvider, ToolRequest, AutoActionResult } from '@ogun/ai-core';
 import { ShellCommandPermissionService } from './shell-command-permission-service';
-import { WorkspaceService } from '@theia/workspace/lib/browser';
+import { WorkspaceService } from '@ogun/workspace/lib/browser';
 import {
     SHELL_EXECUTION_FUNCTION_ID,
     ShellExecutionServer,
@@ -25,7 +25,7 @@ import {
     ShellExecutionCanceledResult,
     combineAndTruncate
 } from '../common/shell-execution-server';
-import { CancellationToken, generateUuid, Path } from '@theia/core';
+import { CancellationToken, generateUuid, Path } from '@ogun/core';
 
 @injectable()
 export class ShellExecutionTool implements ToolProvider {

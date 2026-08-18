@@ -14,9 +14,9 @@
  * SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
  ********************************************************************************/
 
-import { DockPanelRendererFactory } from '@theia/core/lib/browser';
-import { TheiaDockPanel } from '@theia/core/lib/browser/shell/theia-dock-panel';
-import { interfaces } from '@theia/core/shared/inversify';
+import { DockPanelRendererFactory } from '@ogun/core/lib/browser';
+import { TheiaDockPanel } from '@ogun/core/lib/browser/shell/theia-dock-panel';
+import { interfaces } from '@ogun/core/shared/inversify';
 
 export class MemoryDockPanel extends TheiaDockPanel {
     override toggleMaximized(): void { /* don't */ }

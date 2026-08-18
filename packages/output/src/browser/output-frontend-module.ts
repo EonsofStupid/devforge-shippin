@@ -14,19 +14,19 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { ContainerModule } from '@theia/core/shared/inversify';
+import { ContainerModule } from '@ogun/core/shared/inversify';
 import { OutputWidget } from './output-widget';
-import { TabBarToolbarContribution } from '@theia/core/lib/browser/shell/tab-bar-toolbar';
-import { ResourceResolver } from '@theia/core/lib/common';
-import { WidgetFactory, bindViewContribution, OpenHandler } from '@theia/core/lib/browser';
+import { TabBarToolbarContribution } from '@ogun/core/lib/browser/shell/tab-bar-toolbar';
+import { ResourceResolver } from '@ogun/core/lib/common';
+import { WidgetFactory, bindViewContribution, OpenHandler } from '@ogun/core/lib/browser';
 import { OutputChannelManager } from './output-channel';
 import { bindOutputPreferences } from '../common/output-preferences';
 import { OutputToolbarContribution } from './output-toolbar-contribution';
 import { OutputContribution } from './output-contribution';
-import { MonacoEditorFactory } from '@theia/monaco/lib/browser/monaco-editor-provider';
+import { MonacoEditorFactory } from '@ogun/monaco/lib/browser/monaco-editor-provider';
 import { OutputContextMenuService } from './output-context-menu';
 import { OutputEditorFactory } from './output-editor-factory';
-import { MonacoEditorModelFactory } from '@theia/monaco/lib/browser/monaco-text-model-service';
+import { MonacoEditorModelFactory } from '@ogun/monaco/lib/browser/monaco-text-model-service';
 import { OutputEditorModelFactory } from './output-editor-model-factory';
 
 export default new ContainerModule(bind => {

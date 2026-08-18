@@ -14,18 +14,18 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { Summary, SummaryMetadata, TaskContextStorageService } from '@theia/ai-chat/lib/browser/task-context-service';
-import { InMemoryTaskContextStorage } from '@theia/ai-chat/lib/browser/task-context-storage-service';
-import { parseFrontmatter } from '@theia/ai-core/lib/common/frontmatter';
-import { inject, injectable, postConstruct } from '@theia/core/shared/inversify';
-import { DisposableCollection, EOL, Emitter, ILogger, Path, PreferenceService, URI, unreachable } from '@theia/core';
-import { OpenerService, open } from '@theia/core/lib/browser';
-import { FileService } from '@theia/filesystem/lib/browser/file-service';
-import { WorkspaceService } from '@theia/workspace/lib/browser';
+import { Summary, SummaryMetadata, TaskContextStorageService } from '@ogun/ai-chat/lib/browser/task-context-service';
+import { InMemoryTaskContextStorage } from '@ogun/ai-chat/lib/browser/task-context-storage-service';
+import { parseFrontmatter } from '@ogun/ai-core/lib/common/frontmatter';
+import { inject, injectable, postConstruct } from '@ogun/core/shared/inversify';
+import { DisposableCollection, EOL, Emitter, ILogger, Path, PreferenceService, URI, unreachable } from '@ogun/core';
+import { OpenerService, open } from '@ogun/core/lib/browser';
+import { FileService } from '@ogun/filesystem/lib/browser/file-service';
+import { WorkspaceService } from '@ogun/workspace/lib/browser';
 import * as yaml from 'js-yaml';
-import { FileChange, FileChangeType } from '@theia/filesystem/lib/common/files';
+import { FileChange, FileChangeType } from '@ogun/filesystem/lib/common/files';
 import { TASK_CONTEXT_STORAGE_DIRECTORY_PREF } from '../common/workspace-preferences';
-import { BinaryBuffer } from '@theia/core/lib/common/buffer';
+import { BinaryBuffer } from '@ogun/core/lib/common/buffer';
 
 @injectable()
 export class TaskContextFileStorageService implements TaskContextStorageService {

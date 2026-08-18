@@ -14,7 +14,7 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { inject, injectable, interfaces, postConstruct, named } from '@theia/core/shared/inversify';
+import { inject, injectable, interfaces, postConstruct, named } from '@ogun/core/shared/inversify';
 import {
     ApplicationShell,
     BaseWidget,
@@ -31,17 +31,17 @@ import {
     ViewContainerLayout,
     Widget,
     WidgetManager,
-} from '@theia/core/lib/browser';
-import { Disposable, DisposableCollection, Emitter, nls, ILogger } from '@theia/core';
-import { UUID } from '@theia/core/shared/@lumino/coreutils';
-import { TerminalWidget, TerminalWidgetOptions } from '@theia/terminal/lib/browser/base/terminal-widget';
-import { TerminalWidgetImpl, nextTerminalCreationToken } from '@theia/terminal/lib/browser/terminal-widget-impl';
-import { FrontendApplicationStateService } from '@theia/core/lib/browser/frontend-application-state';
-import { TerminalFrontendContribution } from '@theia/terminal/lib/browser/terminal-frontend-contribution';
+} from '@ogun/core/lib/browser';
+import { Disposable, DisposableCollection, Emitter, nls, ILogger } from '@ogun/core';
+import { UUID } from '@ogun/core/shared/@lumino/coreutils';
+import { TerminalWidget, TerminalWidgetOptions } from '@ogun/terminal/lib/browser/base/terminal-widget';
+import { TerminalWidgetImpl, nextTerminalCreationToken } from '@ogun/terminal/lib/browser/terminal-widget-impl';
+import { FrontendApplicationStateService } from '@ogun/core/lib/browser/frontend-application-state';
+import { TerminalFrontendContribution } from '@ogun/terminal/lib/browser/terminal-frontend-contribution';
 import { TerminalManagerPreferences } from './terminal-manager-preferences';
 import { TerminalManagerTreeTypes } from './terminal-manager-types';
 import { TerminalManagerTreeWidget } from './terminal-manager-tree-widget';
-import { ConfirmDialog } from '@theia/core/lib/browser/dialogs';
+import { ConfirmDialog } from '@ogun/core/lib/browser/dialogs';
 
 export namespace TerminalManagerWidgetState {
     export interface BaseLayoutData<ID> {

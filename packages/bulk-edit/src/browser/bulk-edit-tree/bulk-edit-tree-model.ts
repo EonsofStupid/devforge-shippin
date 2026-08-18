@@ -14,9 +14,9 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { injectable, inject } from '@theia/core/shared/inversify';
+import { injectable, inject } from '@ogun/core/shared/inversify';
 import { BulkEditNode, BulkEditTree } from './bulk-edit-tree';
-import { TreeModelImpl, OpenerService, open, TreeNode } from '@theia/core/lib/browser';
+import { TreeModelImpl, OpenerService, open, TreeNode } from '@ogun/core/lib/browser';
 import { ResourceEdit } from '@theia/monaco-editor-core/esm/vs/editor/browser/services/bulkEditService';
 
 @injectable()

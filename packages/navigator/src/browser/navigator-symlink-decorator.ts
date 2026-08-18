@@ -14,11 +14,11 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { inject, injectable, postConstruct } from '@theia/core/shared/inversify';
-import { Emitter, Event, nls } from '@theia/core';
-import { TreeDecorator, Tree, TreeDecoration, DepthFirstTreeIterator } from '@theia/core/lib/browser';
-import { FileStatNode } from '@theia/filesystem/lib/browser';
-import { DecorationsService } from '@theia/core/lib/browser/decorations-service';
+import { inject, injectable, postConstruct } from '@ogun/core/shared/inversify';
+import { Emitter, Event, nls } from '@ogun/core';
+import { TreeDecorator, Tree, TreeDecoration, DepthFirstTreeIterator } from '@ogun/core/lib/browser';
+import { FileStatNode } from '@ogun/filesystem/lib/browser';
+import { DecorationsService } from '@ogun/core/lib/browser/decorations-service';
 
 @injectable()
 export class NavigatorSymlinkDecorator implements TreeDecorator {

@@ -14,8 +14,8 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { injectable } from '@theia/core/shared/inversify';
-import { ToolProvider, ToolRequest } from '@theia/ai-core/lib/common';
+import { injectable } from '@ogun/core/shared/inversify';
+import { ToolProvider, ToolRequest } from '@ogun/ai-core/lib/common';
 import { TODO_WRITE_FUNCTION_ID, isValidTodoItem } from '../common/todo-tool';
 
 @injectable()

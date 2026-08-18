@@ -19,8 +19,8 @@ describe('Shell', function () {
 
     const { assert } = chai;
 
-    const { ApplicationShell } = require('@theia/core/lib/browser/shell/application-shell');
-    const { StatusBarImpl } = require('@theia/core/lib/browser/status-bar');
+    const { ApplicationShell } = require('@ogun/core/lib/browser/shell/application-shell');
+    const { StatusBarImpl } = require('@ogun/core/lib/browser/status-bar');
 
     const container = window.theia.container;
     const shell = container.get(ApplicationShell);

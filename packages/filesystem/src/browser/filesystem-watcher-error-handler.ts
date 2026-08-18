@@ -14,10 +14,10 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { injectable, inject } from '@theia/core/shared/inversify';
-import { environment } from '@theia/core/shared/@theia/application-package/lib/environment';
-import { MessageService } from '@theia/core';
-import { WindowService } from '@theia/core/lib/browser/window/window-service';
+import { injectable, inject } from '@ogun/core/shared/inversify';
+import { environment } from '@ogun/core/shared/@ogun/application-package/lib/environment';
+import { MessageService } from '@ogun/core';
+import { WindowService } from '@ogun/core/lib/browser/window/window-service';
 
 @injectable()
 export class FileSystemWatcherErrorHandler {

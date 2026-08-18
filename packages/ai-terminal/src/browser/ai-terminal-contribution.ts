@@ -14,19 +14,19 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { ENABLE_AI_CONTEXT_KEY } from '@theia/ai-core/lib/browser';
-import { Command, CommandContribution, CommandRegistry, MenuContribution, MenuModelRegistry } from '@theia/core';
-import { ApplicationShell, codicon, KeybindingContribution, KeybindingRegistry } from '@theia/core/lib/browser';
-import { inject, injectable } from '@theia/core/shared/inversify';
-import { TerminalService } from '@theia/terminal/lib/browser/base/terminal-service';
-import { TerminalMenus } from '@theia/terminal/lib/browser/terminal-frontend-contribution';
-import { TerminalWidgetImpl } from '@theia/terminal/lib/browser/terminal-widget-impl';
-import { TerminalPreferences } from '@theia/terminal/lib/common/terminal-preferences';
+import { ENABLE_AI_CONTEXT_KEY } from '@ogun/ai-core/lib/browser';
+import { Command, CommandContribution, CommandRegistry, MenuContribution, MenuModelRegistry } from '@ogun/core';
+import { ApplicationShell, codicon, KeybindingContribution, KeybindingRegistry } from '@ogun/core/lib/browser';
+import { inject, injectable } from '@ogun/core/shared/inversify';
+import { TerminalService } from '@ogun/terminal/lib/browser/base/terminal-service';
+import { TerminalMenus } from '@ogun/terminal/lib/browser/terminal-frontend-contribution';
+import { TerminalWidgetImpl } from '@ogun/terminal/lib/browser/terminal-widget-impl';
+import { TerminalPreferences } from '@ogun/terminal/lib/common/terminal-preferences';
 import { AiTerminalAgent } from './ai-terminal-agent';
-import { AICommandHandlerFactory } from '@theia/ai-core/lib/browser/ai-command-handler-factory';
-import { AgentService } from '@theia/ai-core';
-import { nls } from '@theia/core/lib/common/nls';
-import { TerminalBlock } from '@theia/terminal/lib/browser/base/terminal-widget';
+import { AICommandHandlerFactory } from '@ogun/ai-core/lib/browser/ai-command-handler-factory';
+import { AgentService } from '@ogun/ai-core';
+import { nls } from '@ogun/core/lib/common/nls';
+import { TerminalBlock } from '@ogun/terminal/lib/browser/base/terminal-widget';
 
 const AI_TERMINAL_COMMAND = Command.toLocalizedCommand({
     id: 'ai-terminal:open',

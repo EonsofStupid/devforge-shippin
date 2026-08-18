@@ -18,8 +18,8 @@
  *  Licensed under the MIT License. See https://github.com/Microsoft/vscode/blob/master/LICENSE.txt for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { injectable } from '@theia/core/shared/inversify';
-import { ArrayUtils } from '@theia/core';
+import { injectable } from '@ogun/core/shared/inversify';
+import { ArrayUtils } from '@ogun/core';
 import * as monaco from '@theia/monaco-editor-core';
 import { CancellationToken } from '@theia/monaco-editor-core/esm/vs/base/common/cancellation';
 import { ILanguageFeaturesService } from '@theia/monaco-editor-core/esm/vs/editor/common/services/languageFeatures';

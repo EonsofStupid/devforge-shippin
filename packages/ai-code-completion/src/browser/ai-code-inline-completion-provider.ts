@@ -16,9 +16,9 @@
 
 import * as monaco from '@theia/monaco-editor-core';
 
-import { inject, injectable } from '@theia/core/shared/inversify';
+import { inject, injectable } from '@ogun/core/shared/inversify';
 import { CodeCompletionAgent } from './code-completion-agent';
-import { AgentService } from '@theia/ai-core';
+import { AgentService } from '@ogun/ai-core';
 
 @injectable()
 export class AICodeInlineCompletionsProvider

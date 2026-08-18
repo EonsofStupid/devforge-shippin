@@ -16,7 +16,7 @@
 
 import { expect } from 'chai';
 import { DevContainerCliContribution } from './dev-container-cli-contribution';
-import { Arguments } from '@theia/core/shared/yargs';
+import { Arguments } from '@ogun/core/shared/yargs';
 
 function createArgs(overrides: Record<string, unknown> = {}): Arguments {
     return {

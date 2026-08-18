@@ -14,9 +14,9 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { inject, injectable } from '@theia/core/shared/inversify';
-import URI from '@theia/core/lib/common/uri';
-import { SingleTextInputDialog, SingleTextInputDialogProps, LabelProvider, codiconArray } from '@theia/core/lib/browser';
+import { inject, injectable } from '@ogun/core/shared/inversify';
+import URI from '@ogun/core/lib/common/uri';
+import { SingleTextInputDialog, SingleTextInputDialogProps, LabelProvider, codiconArray } from '@ogun/core/lib/browser';
 
 @injectable()
 export class WorkspaceInputDialogProps extends SingleTextInputDialogProps {

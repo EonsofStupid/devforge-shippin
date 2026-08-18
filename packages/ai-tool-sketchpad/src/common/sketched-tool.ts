@@ -14,7 +14,7 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { Event, nls } from '@theia/core';
+import { Event, nls } from '@ogun/core';
 
 export type SketchedToolParameterType = 'string' | 'number' | 'integer' | 'boolean' | 'object' | 'array';
 

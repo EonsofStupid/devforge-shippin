@@ -15,15 +15,15 @@
 // *****************************************************************************
 
 import * as path from 'path';
-import * as fs from '@theia/core/shared/fs-extra';
-import { inject, injectable } from '@theia/core/shared/inversify';
-import type { RecursivePartial, URI } from '@theia/core';
-import { Deferred, firstTrue } from '@theia/core/lib/common/promise-util';
+import * as fs from '@ogun/core/shared/fs-extra';
+import { inject, injectable } from '@ogun/core/shared/inversify';
+import type { RecursivePartial, URI } from '@ogun/core';
+import { Deferred, firstTrue } from '@ogun/core/lib/common/promise-util';
 import {
     PluginDeployerDirectoryHandler, PluginDeployerEntry, PluginDeployerDirectoryHandlerContext,
     PluginDeployerEntryType, PluginPackage, PluginIdentifiers
-} from '@theia/plugin-ext';
-import { PluginCliContribution } from '@theia/plugin-ext/lib/main/node/plugin-cli-contribution';
+} from '@ogun/plugin-ext';
+import { PluginCliContribution } from '@ogun/plugin-ext/lib/main/node/plugin-cli-contribution';
 import { TMP_DIR_PREFIX } from './plugin-vscode-utils';
 
 @injectable()

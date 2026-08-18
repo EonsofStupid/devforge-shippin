@@ -14,14 +14,14 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import * as React from '@theia/core/shared/react';
-import { Anchor, ApplicationShell, ContextMenuAccess, KeybindingRegistry, Widget, WidgetManager } from '@theia/core/lib/browser';
-import { TabBarToolbar, TabBarToolbarFactory } from '@theia/core/lib/browser/shell/tab-bar-toolbar';
-import { injectable, inject, postConstruct, interfaces } from '@theia/core/shared/inversify';
-import { DisposableCollection, MenuPath, PreferenceService, ProgressService } from '@theia/core';
-import { FrontendApplicationStateService } from '@theia/core/lib/browser/frontend-application-state';
-import { ProgressBarFactory } from '@theia/core/lib/browser/progress-bar-factory';
-import { Deferred } from '@theia/core/lib/common/promise-util';
+import * as React from '@ogun/core/shared/react';
+import { Anchor, ApplicationShell, ContextMenuAccess, KeybindingRegistry, Widget, WidgetManager } from '@ogun/core/lib/browser';
+import { TabBarToolbar, TabBarToolbarFactory } from '@ogun/core/lib/browser/shell/tab-bar-toolbar';
+import { injectable, inject, postConstruct, interfaces } from '@ogun/core/shared/inversify';
+import { DisposableCollection, MenuPath, PreferenceService, ProgressService } from '@ogun/core';
+import { FrontendApplicationStateService } from '@ogun/core/lib/browser/frontend-application-state';
+import { ProgressBarFactory } from '@ogun/core/lib/browser/progress-bar-factory';
+import { Deferred } from '@ogun/core/lib/common/promise-util';
 import {
     ToolbarAlignment,
     ToolbarAlignmentString,
@@ -30,7 +30,7 @@ import {
 } from './toolbar-interfaces';
 import { ToolbarController } from './toolbar-controller';
 import { ToolbarMenus } from './toolbar-constants';
-import { TabBarToolbarItem } from '@theia/core/lib/browser/shell/tab-bar-toolbar/tab-toolbar-item';
+import { TabBarToolbarItem } from '@ogun/core/lib/browser/shell/tab-bar-toolbar/tab-toolbar-item';
 
 const TOOLBAR_BACKGROUND_DATA_ID = 'toolbar-wrapper';
 export const TOOLBAR_PROGRESSBAR_ID = 'main-toolbar-progress';

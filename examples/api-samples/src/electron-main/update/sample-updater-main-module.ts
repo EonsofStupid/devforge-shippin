@@ -14,10 +14,10 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { ContainerModule } from '@theia/core/shared/inversify';
-import { RpcConnectionHandler } from '@theia/core/lib/common/messaging/proxy-factory';
-import { ElectronMainApplicationContribution } from '@theia/core/lib/electron-main/electron-main-application';
-import { ElectronConnectionHandler } from '@theia/core/lib/electron-main/messaging/electron-connection-handler';
+import { ContainerModule } from '@ogun/core/shared/inversify';
+import { RpcConnectionHandler } from '@ogun/core/lib/common/messaging/proxy-factory';
+import { ElectronMainApplicationContribution } from '@ogun/core/lib/electron-main/electron-main-application';
+import { ElectronConnectionHandler } from '@ogun/core/lib/electron-main/messaging/electron-connection-handler';
 import { SampleUpdaterPath, SampleUpdater, SampleUpdaterClient } from '../../common/updater/sample-updater';
 import { SampleUpdaterImpl } from './sample-updater-impl';
 

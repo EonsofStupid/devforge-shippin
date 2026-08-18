@@ -14,7 +14,7 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 import { PLUGIN_RPC_CONTEXT as Ext, OpenDialogOptionsMain, DialogsMain, SaveDialogOptionsMain, UploadDialogOptionsMain } from '../common/plugin-api-rpc';
-import { OpenDialogOptions, SaveDialogOptions, UploadDialogOptions } from '@theia/plugin';
+import { OpenDialogOptions, SaveDialogOptions, UploadDialogOptions } from '@ogun/plugin';
 import { RPCProtocol } from '../common/rpc-protocol';
 import { URI } from './types-impl';
 

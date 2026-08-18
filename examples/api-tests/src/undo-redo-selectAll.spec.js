@@ -21,19 +21,19 @@ describe('Undo, Redo and Select All', function () {
 
     const { assert } = chai;
 
-    const { timeout } = require('@theia/core/lib/common/promise-util');
-    const { DisposableCollection } = require('@theia/core/lib/common/disposable');
-    const { CommonCommands } = require('@theia/core/lib/browser/common-frontend-contribution');
-    const { EditorManager } = require('@theia/editor/lib/browser/editor-manager');
-    const { WorkspaceService } = require('@theia/workspace/lib/browser/workspace-service');
-    const { CommandRegistry } = require('@theia/core/lib/common/command');
-    const { KeybindingRegistry } = require('@theia/core/lib/browser/keybinding');
-    const { FileNavigatorContribution } = require('@theia/navigator/lib/browser/navigator-contribution');
-    const { ApplicationShell } = require('@theia/core/lib/browser/shell/application-shell');
-    const { MonacoEditor } = require('@theia/monaco/lib/browser/monaco-editor');
-    const { ScmContribution } = require('@theia/scm/lib/browser/scm-contribution');
+    const { timeout } = require('@ogun/core/lib/common/promise-util');
+    const { DisposableCollection } = require('@ogun/core/lib/common/disposable');
+    const { CommonCommands } = require('@ogun/core/lib/browser/common-frontend-contribution');
+    const { EditorManager } = require('@ogun/editor/lib/browser/editor-manager');
+    const { WorkspaceService } = require('@ogun/workspace/lib/browser/workspace-service');
+    const { CommandRegistry } = require('@ogun/core/lib/common/command');
+    const { KeybindingRegistry } = require('@ogun/core/lib/browser/keybinding');
+    const { FileNavigatorContribution } = require('@ogun/navigator/lib/browser/navigator-contribution');
+    const { ApplicationShell } = require('@ogun/core/lib/browser/shell/application-shell');
+    const { MonacoEditor } = require('@ogun/monaco/lib/browser/monaco-editor');
+    const { ScmContribution } = require('@ogun/scm/lib/browser/scm-contribution');
     const { Range } = require('@theia/monaco-editor-core/esm/vs/editor/common/core/range');
-    const { PreferenceService, PreferenceScope } = require('@theia/core/lib/browser');
+    const { PreferenceService, PreferenceScope } = require('@ogun/core/lib/browser');
 
     const container = window.theia.container;
     const editorManager = container.get(EditorManager);
@@ -100,7 +100,7 @@ describe('Undo, Redo and Select All', function () {
     });
 
     /**
-     * @param {import('@theia/editor/lib/browser/editor-widget').EditorWidget} widget
+     * @param {import('@ogun/editor/lib/browser/editor-widget').EditorWidget} widget
      */
     async function assertInEditor(widget) {
         const originalContent = widget.editor.document.getText();

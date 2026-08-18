@@ -14,29 +14,29 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import debounce = require('@theia/core/shared/lodash.debounce');
-import { injectable, inject } from '@theia/core/shared/inversify';
+import debounce = require('@ogun/core/shared/lodash.debounce');
+import { injectable, inject } from '@ogun/core/shared/inversify';
 import {
     FrontendApplication, FrontendApplicationContribution, CompositeTreeNode, SelectableTreeNode, Widget, codicon,
     TreeNode, TreeSelection
-} from '@theia/core/lib/browser';
-import { MessageService } from '@theia/core/lib/common/message-service';
-import { StatusBar, StatusBarAlignment } from '@theia/core/lib/browser/status-bar/status-bar';
-import { AbstractViewContribution } from '@theia/core/lib/browser/shell/view-contribution';
+} from '@ogun/core/lib/browser';
+import { MessageService } from '@ogun/core/lib/common/message-service';
+import { StatusBar, StatusBarAlignment } from '@ogun/core/lib/browser/status-bar/status-bar';
+import { AbstractViewContribution } from '@ogun/core/lib/browser/shell/view-contribution';
 import { PROBLEM_KIND, ProblemMarker } from '../../common/problem-marker';
 import { ProblemManager, ProblemStat } from './problem-manager';
 import { ProblemWidget, PROBLEMS_WIDGET_ID } from './problem-widget';
 import { ProblemTreeModel } from './problem-tree-model';
 import { MarkerNode, MarkerInfoNode } from '../marker-tree';
-import { MenuPath, MenuModelRegistry } from '@theia/core/lib/common/menu';
-import { Command, CommandRegistry } from '@theia/core/lib/common/command';
-import { TabBarToolbarContribution, TabBarToolbarRegistry } from '@theia/core/lib/browser/shell/tab-bar-toolbar';
-import { KeybindingContribution, KeybindingRegistry } from '@theia/core/lib/browser/keybinding';
-import { ContextKeyService } from '@theia/core/lib/browser/context-key-service';
+import { MenuPath, MenuModelRegistry } from '@ogun/core/lib/common/menu';
+import { Command, CommandRegistry } from '@ogun/core/lib/common/command';
+import { TabBarToolbarContribution, TabBarToolbarRegistry } from '@ogun/core/lib/browser/shell/tab-bar-toolbar';
+import { KeybindingContribution, KeybindingRegistry } from '@ogun/core/lib/browser/keybinding';
+import { ContextKeyService } from '@ogun/core/lib/browser/context-key-service';
 import { ProblemSelection } from './problem-selection';
-import { nls } from '@theia/core/lib/common/nls';
-import { FileDialogService } from '@theia/filesystem/lib/browser';
-import { FileService } from '@theia/filesystem/lib/browser/file-service';
+import { nls } from '@ogun/core/lib/common/nls';
+import { FileDialogService } from '@ogun/filesystem/lib/browser';
+import { FileService } from '@ogun/filesystem/lib/browser/file-service';
 
 export const PROBLEMS_CONTEXT_MENU: MenuPath = [PROBLEM_KIND];
 

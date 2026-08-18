@@ -14,13 +14,13 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { ILogger, nls, URI } from '@theia/core';
-import { ApplicationShell, DiffUris, LabelProvider, NavigatableWidget, OpenerService, open } from '@theia/core/lib/browser';
-import { inject, injectable } from '@theia/core/shared/inversify';
-import { EditorManager } from '@theia/editor/lib/browser';
-import { FileService } from '@theia/filesystem/lib/browser/file-service';
-import { MonacoWorkspace } from '@theia/monaco/lib/browser/monaco-workspace';
-import { WorkspaceService } from '@theia/workspace/lib/browser/workspace-service';
+import { ILogger, nls, URI } from '@ogun/core';
+import { ApplicationShell, DiffUris, LabelProvider, NavigatableWidget, OpenerService, open } from '@ogun/core/lib/browser';
+import { inject, injectable } from '@ogun/core/shared/inversify';
+import { EditorManager } from '@ogun/editor/lib/browser';
+import { FileService } from '@ogun/filesystem/lib/browser/file-service';
+import { MonacoWorkspace } from '@ogun/monaco/lib/browser/monaco-workspace';
+import { WorkspaceService } from '@ogun/workspace/lib/browser/workspace-service';
 import { ChangeSetFileElement } from './change-set-file-element';
 
 @injectable()

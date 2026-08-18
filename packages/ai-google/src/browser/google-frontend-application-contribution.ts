@@ -14,11 +14,11 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { FrontendApplicationContribution } from '@theia/core/lib/browser';
-import { inject, injectable } from '@theia/core/shared/inversify';
+import { FrontendApplicationContribution } from '@ogun/core/lib/browser';
+import { inject, injectable } from '@ogun/core/shared/inversify';
 import { GoogleLanguageModelsManager, GoogleModelDescription } from '../common';
 import { API_KEY_PREF, MODELS_PREF, MAX_RETRIES, RETRY_DELAY_OTHER_ERRORS, RETRY_DELAY_RATE_LIMIT } from '../common/google-preferences';
-import { PreferenceService } from '@theia/core';
+import { PreferenceService } from '@ogun/core';
 
 const GOOGLE_PROVIDER_ID = 'google';
 

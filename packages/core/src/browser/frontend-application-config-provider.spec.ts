@@ -17,7 +17,7 @@
 import { enableJSDOM } from '../browser/test/jsdom';
 let disableJSDOM = enableJSDOM();
 
-import { FrontendApplicationConfig } from '@theia/application-package/lib/';
+import { FrontendApplicationConfig } from '@ogun/application-package/lib/';
 import { expect } from 'chai';
 import { FrontendApplicationConfigProvider } from './frontend-application-config-provider';
 

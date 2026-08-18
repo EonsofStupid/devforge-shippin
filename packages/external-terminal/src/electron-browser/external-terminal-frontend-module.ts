@@ -14,9 +14,9 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { ContainerModule, interfaces } from '@theia/core/shared/inversify';
-import { CommandContribution } from '@theia/core/lib/common';
-import { KeybindingContribution, WebSocketConnectionProvider } from '@theia/core/lib/browser';
+import { ContainerModule, interfaces } from '@ogun/core/shared/inversify';
+import { CommandContribution } from '@ogun/core/lib/common';
+import { KeybindingContribution, WebSocketConnectionProvider } from '@ogun/core/lib/browser';
 import { bindExternalTerminalPreferences } from './external-terminal-preference';
 import { ExternalTerminalFrontendContribution } from './external-terminal-contribution';
 import { ExternalTerminalService, externalTerminalServicePath } from '../common/external-terminal';

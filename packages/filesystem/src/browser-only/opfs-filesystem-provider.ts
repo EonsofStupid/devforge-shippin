@@ -14,7 +14,7 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { inject, injectable, postConstruct } from '@theia/core/shared/inversify';
+import { inject, injectable, postConstruct } from '@ogun/core/shared/inversify';
 import {
     FileChange, FileChangeType, FileDeleteOptions,
     FileOverwriteOptions, FileSystemProviderCapabilities,
@@ -27,16 +27,16 @@ import {
     FileOpenOptions, FileUpdateOptions, FileUpdateResult,
     type FileReadStreamOptions
 } from '../common/files';
-import { Emitter, Event, URI, Disposable, DisposableCollection, type CancellationToken } from '@theia/core';
-import { EncodingService } from '@theia/core/lib/common/encoding-service';
-import { BinaryBuffer } from '@theia/core/lib/common/buffer';
-import { TextDocumentContentChangeEvent } from '@theia/core/shared/vscode-languageserver-protocol';
+import { Emitter, Event, URI, Disposable, DisposableCollection, type CancellationToken } from '@ogun/core';
+import { EncodingService } from '@ogun/core/lib/common/encoding-service';
+import { BinaryBuffer } from '@ogun/core/lib/common/buffer';
+import { TextDocumentContentChangeEvent } from '@ogun/core/shared/vscode-languageserver-protocol';
 import { TextDocument } from 'vscode-languageserver-textdocument';
 import { OPFSFileSystem, WatchEventType, type FileStat, type OPFSError, type WatchEvent } from 'opfs-worker';
 import { OPFSInitialization } from './opfs-filesystem-initialization';
-import { ReadableStreamEvents, newWriteableStream } from '@theia/core/lib/common/stream';
+import { ReadableStreamEvents, newWriteableStream } from '@ogun/core/lib/common/stream';
 import { readFileIntoStream } from '../common/io';
-import { Path } from '@theia/core/lib/common/path';
+import { Path } from '@ogun/core/lib/common/path';
 
 @injectable()
 export class OPFSFileSystemProvider implements Disposable,

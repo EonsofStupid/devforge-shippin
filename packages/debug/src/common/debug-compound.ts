@@ -14,8 +14,8 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { isObject } from '@theia/core/lib/common';
-import { TaskIdentifier } from '@theia/task/lib/common';
+import { isObject } from '@ogun/core/lib/common';
+import { TaskIdentifier } from '@ogun/task/lib/common';
 
 export const defaultCompound: DebugCompound = { name: 'Compound', configurations: [] };
 

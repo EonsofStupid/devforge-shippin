@@ -13,8 +13,8 @@
 //
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
-import { inject, injectable, postConstruct } from '@theia/core/shared/inversify';
-import { Emitter } from '@theia/core/lib/common/event';
+import { inject, injectable, postConstruct } from '@ogun/core/shared/inversify';
+import { Emitter } from '@ogun/core/lib/common/event';
 import {
     AbstractViewContribution,
     FrontendApplicationContribution, LabelProvider,
@@ -27,26 +27,26 @@ import {
     StylingParticipant,
     ColorTheme,
     CssStyleCollector
-} from '@theia/core/lib/browser';
-import { TabBarToolbarContribution, TabBarToolbarRegistry, TabBarToolbarAction } from '@theia/core/lib/browser/shell/tab-bar-toolbar';
-import { CommandRegistry, Command, Disposable, DisposableCollection, CommandService, MenuModelRegistry } from '@theia/core/lib/common';
-import { ContextKeyService, ContextKey } from '@theia/core/lib/browser/context-key-service';
+} from '@ogun/core/lib/browser';
+import { TabBarToolbarContribution, TabBarToolbarRegistry, TabBarToolbarAction } from '@ogun/core/lib/browser/shell/tab-bar-toolbar';
+import { CommandRegistry, Command, Disposable, DisposableCollection, CommandService, MenuModelRegistry } from '@ogun/core/lib/common';
+import { ContextKeyService, ContextKey } from '@ogun/core/lib/browser/context-key-service';
 import { ScmService } from './scm-service';
 import { ScmContextKeyService } from './scm-context-key-service';
 import { ScmWidget } from '../browser/scm-widget';
-import URI from '@theia/core/lib/common/uri';
+import URI from '@ogun/core/lib/common/uri';
 import { ScmQuickOpenService } from './scm-quick-open-service';
-import { ColorContribution } from '@theia/core/lib/browser/color-application-contribution';
-import { ColorRegistry } from '@theia/core/lib/browser/color-registry';
-import { Color } from '@theia/core/lib/common/color';
+import { ColorContribution } from '@ogun/core/lib/browser/color-application-contribution';
+import { ColorRegistry } from '@ogun/core/lib/browser/color-registry';
+import { Color } from '@ogun/core/lib/common/color';
 import { ScmColors } from './scm-colors';
 import { ScmCommand } from './scm-provider';
 import { ScmDecorationsService } from '../browser/decorations/scm-decorations-service';
-import { nls } from '@theia/core/lib/common/nls';
-import { isHighContrast } from '@theia/core/lib/common/theme';
-import { EditorMainMenu, EditorWidget } from '@theia/editor/lib/browser';
+import { nls } from '@ogun/core/lib/common/nls';
+import { isHighContrast } from '@ogun/core/lib/common/theme';
+import { EditorMainMenu, EditorWidget } from '@ogun/editor/lib/browser';
 import { DirtyDiffNavigator } from './dirty-diff/dirty-diff-navigator';
-import { MonacoDiffEditor } from '@theia/monaco/lib/browser/monaco-diff-editor';
+import { MonacoDiffEditor } from '@ogun/monaco/lib/browser/monaco-diff-editor';
 
 export const SCM_WIDGET_FACTORY_ID = ScmWidget.ID;
 export const SCM_VIEW_CONTAINER_ID = 'scm-view-container';

@@ -13,9 +13,9 @@
 //
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
-import * as React from '@theia/core/shared/react';
-import { injectable } from '@theia/core/shared/inversify';
-import { ReactWidget } from '@theia/core/lib/browser/widgets/react-widget';
+import * as React from '@ogun/core/shared/react';
+import { injectable } from '@ogun/core/shared/inversify';
+import { ReactWidget } from '@ogun/core/lib/browser/widgets/react-widget';
 
 /**
  * Base class for all AI configuration widgets providing common structure and lifecycle management.

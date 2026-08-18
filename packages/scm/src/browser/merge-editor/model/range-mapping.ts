@@ -19,8 +19,8 @@
  *--------------------------------------------------------------------------------------------*/
 // copied and modified from https://github.com/microsoft/vscode/blob/1.96.3/src/vs/workbench/contrib/mergeEditor/browser/model/mapping.ts
 
-import { ArrayUtils } from '@theia/core';
-import { Position, Range, TextEditorDocument } from '@theia/editor/lib/browser/editor';
+import { ArrayUtils } from '@ogun/core';
+import { Position, Range, TextEditorDocument } from '@ogun/editor/lib/browser/editor';
 import { LineRange } from './line-range';
 import { LineRangeEdit } from './range-editing';
 import { PositionUtils, RangeUtils } from './range-utils';

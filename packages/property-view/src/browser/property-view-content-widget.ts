@@ -14,7 +14,7 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { Widget } from '@theia/core/lib/browser/widgets/widget';
+import { Widget } from '@ogun/core/lib/browser/widgets/widget';
 import { PropertyDataService } from './property-data-service';
 
 /**

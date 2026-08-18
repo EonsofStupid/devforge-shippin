@@ -14,19 +14,19 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { ConfirmDialog } from '@theia/core/lib/browser';
-import { inject, injectable, postConstruct } from '@theia/core/shared/inversify';
-import * as React from '@theia/core/shared/react';
-import { AiConfigurationService, ToolInvocationRegistry, ToolRequest } from '@theia/ai-core';
-import { nls } from '@theia/core';
-import { ToolConfirmationManager } from '@theia/ai-chat/lib/browser/chat-tool-preference-bindings';
-import { ShellCommandPermissionService } from '@theia/ai-terminal/lib/browser/shell-command-permission-service';
+import { ConfirmDialog } from '@ogun/core/lib/browser';
+import { inject, injectable, postConstruct } from '@ogun/core/shared/inversify';
+import * as React from '@ogun/core/shared/react';
+import { AiConfigurationService, ToolInvocationRegistry, ToolRequest } from '@ogun/ai-core';
+import { nls } from '@ogun/core';
+import { ToolConfirmationManager } from '@ogun/ai-chat/lib/browser/chat-tool-preference-bindings';
+import { ShellCommandPermissionService } from '@ogun/ai-terminal/lib/browser/shell-command-permission-service';
 import {
     DEFAULT_TOOL_CONFIRMATION_PREFERENCE,
     TOOL_CONFIRMATION_PREFERENCE,
     ToolConfirmationMode
-} from '@theia/ai-chat/lib/common/chat-tool-preferences';
-import { SHELL_COMMAND_ALLOWLIST_PREFERENCE, SHELL_COMMAND_DENYLIST_PREFERENCE } from '@theia/ai-terminal/lib/common/shell-command-preferences';
+} from '@ogun/ai-chat/lib/common/chat-tool-preferences';
+import { SHELL_COMMAND_ALLOWLIST_PREFERENCE, SHELL_COMMAND_DENYLIST_PREFERENCE } from '@ogun/ai-terminal/lib/common/shell-command-preferences';
 import { AITableConfigurationWidget, TableColumn } from './base/ai-table-configuration-widget';
 
 const TOOL_OPTIONS: { value: ToolConfirmationMode, label: string, icon: string }[] = [

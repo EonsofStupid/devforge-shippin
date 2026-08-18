@@ -12,11 +12,11 @@
 
 ## Description
 
-The `@theia/test` extension adds the Test view for executing tests in the Theia application.
+The `@ogun/test` extension adds the Test view for executing tests in the Theia application.
 
 ## Additional Information
 
-- [API documentation for `@theia/test`](https://eclipse-theia.github.io/theia/docs/next/modules/_theia_test.html)
+- [API documentation for `@ogun/test`](https://eclipse-theia.github.io/theia/docs/next/modules/_theia_test.html)
 - [Theia - GitHub](https://github.com/eclipse-theia/theia)
 - [Theia - Website](https://theia-ide.org/)
 - [VS Code Timeline Documentation](https://code.visualstudio.com/updates/v1_44#_timeline-view)

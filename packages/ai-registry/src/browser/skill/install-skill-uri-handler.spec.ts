@@ -14,9 +14,9 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { enableJSDOM } from '@theia/core/lib/browser/test/jsdom';
+import { enableJSDOM } from '@ogun/core/lib/browser/test/jsdom';
 let disableJSDOM = enableJSDOM();
-import { FrontendApplicationConfigProvider } from '@theia/core/lib/browser/frontend-application-config-provider';
+import { FrontendApplicationConfigProvider } from '@ogun/core/lib/browser/frontend-application-config-provider';
 try {
     FrontendApplicationConfigProvider.set({});
 } catch {
@@ -24,8 +24,8 @@ try {
 }
 
 import { expect } from 'chai';
-import { MessageService } from '@theia/core';
-import URI from '@theia/core/lib/common/uri';
+import { MessageService } from '@ogun/core';
+import URI from '@ogun/core/lib/common/uri';
 import { RegistryFetchService } from '../../common/registry-fetch-service';
 import { ResolvedSkillEntry } from '../../common/skill/skill-registry-types';
 import { InstallSkillUriConfiguration } from './install-skill-uri-configuration';

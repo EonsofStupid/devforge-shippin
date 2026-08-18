@@ -15,14 +15,14 @@
 // *****************************************************************************
 
 import * as path from 'path';
-import * as fs from '@theia/core/shared/fs-extra';
+import * as fs from '@ogun/core/shared/fs-extra';
 import * as os from 'os';
 
-import { inject, injectable } from '@theia/core/shared/inversify';
-import { RequestService } from '@theia/core/shared/@theia/request';
+import { inject, injectable } from '@ogun/core/shared/inversify';
+import { RequestService } from '@ogun/core/shared/@ogun/request';
 import { RemoteSetupScriptService } from './remote-setup-script-service';
-import { RemotePlatform } from '@theia/core/lib/node/remote/remote-cli-contribution';
-import { OS } from '@theia/core';
+import { RemotePlatform } from '@ogun/core/lib/node/remote/remote-cli-contribution';
+import { OS } from '@ogun/core';
 
 /**
  * The current node version that Theia recommends.

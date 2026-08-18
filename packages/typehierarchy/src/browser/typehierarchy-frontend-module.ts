@@ -13,10 +13,10 @@
 //
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
-import { bindRootContributionProvider } from '@theia/core/lib/common';
-import { ContainerModule } from '@theia/core/shared/inversify';
-import { WidgetFactory } from '@theia/core/lib/browser/widget-manager';
-import { bindViewContribution } from '@theia/core/lib/browser/shell/view-contribution';
+import { bindRootContributionProvider } from '@ogun/core/lib/common';
+import { ContainerModule } from '@ogun/core/shared/inversify';
+import { WidgetFactory } from '@ogun/core/lib/browser/widget-manager';
+import { bindViewContribution } from '@ogun/core/lib/browser/shell/view-contribution';
 import { TypeHierarchyRegistry } from './typehierarchy-provider';
 import { TypeHierarchyContribution } from './typehierarchy-contribution';
 import { TypeHierarchyTreeWidget } from './tree/typehierarchy-tree-widget';

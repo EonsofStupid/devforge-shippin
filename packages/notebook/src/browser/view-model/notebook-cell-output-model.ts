@@ -14,7 +14,7 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { Disposable, Emitter } from '@theia/core';
+import { Disposable, Emitter } from '@ogun/core';
 import { CellOutput, CellOutputItem, isTextStreamMime } from '../../common';
 import { compressOutputItemStreams } from '../notebook-output-utils';
 

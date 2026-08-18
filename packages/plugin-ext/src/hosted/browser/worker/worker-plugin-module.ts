@@ -15,9 +15,9 @@
 // *****************************************************************************
 // eslint-disable-next-line import/no-extraneous-dependencies
 import 'reflect-metadata';
-import { ContainerModule } from '@theia/core/shared/inversify';
-import { BasicChannel } from '@theia/core/lib/common/message-rpc/channel';
-import { Uint8ArrayReadBuffer, Uint8ArrayWriteBuffer } from '@theia/core/lib/common/message-rpc/uint8-array-message-buffer';
+import { ContainerModule } from '@ogun/core/shared/inversify';
+import { BasicChannel } from '@ogun/core/lib/common/message-rpc/channel';
+import { Uint8ArrayReadBuffer, Uint8ArrayWriteBuffer } from '@ogun/core/lib/common/message-rpc/uint8-array-message-buffer';
 import { LocalizationExt } from '../../../common/plugin-api-rpc';
 import { RPCProtocol, RPCProtocolImpl } from '../../../common/rpc-protocol';
 import { ClipboardExt } from '../../../plugin/clipboard-ext';
@@ -35,7 +35,7 @@ import { EnvExtImpl } from '../../../plugin/env';
 import { WorkerEnvExtImpl } from './worker-env-ext';
 import { DebugExtImpl } from '../../../plugin/debug/debug-ext';
 import { LocalizationExtImpl } from '../../../plugin/localization-ext';
-import { EncodingService } from '@theia/core/lib/common/encoding-service';
+import { EncodingService } from '@ogun/core/lib/common/encoding-service';
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 const ctx = self as any;

@@ -14,7 +14,7 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { Command } from '@theia/core';
+import { Command } from '@ogun/core';
 
 export const AI_EXECUTE_PLAN_WITH_CODER = Command.toLocalizedCommand({
     id: 'ai.executePlanWithCoder',

@@ -19,9 +19,9 @@
 *  Licensed under the MIT License. See License.txt in the project root for license information.
 *--------------------------------------------------------------------------------------------*/
 
-import { injectable, inject, named } from '@theia/core/shared/inversify';
-import { ILogger } from '@theia/core/lib/common/';
-import { Process, IProcessExitEvent } from '@theia/process/lib/node';
+import { injectable, inject, named } from '@ogun/core/shared/inversify';
+import { ILogger } from '@ogun/core/lib/common/';
+import { Process, IProcessExitEvent } from '@ogun/process/lib/node';
 import { Task, TaskOptions } from '../task';
 import { TaskManager } from '../task-manager';
 import { ProcessType, ProcessTaskInfo } from '../../common/process/task-protocol';

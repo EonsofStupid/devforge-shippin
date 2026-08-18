@@ -14,7 +14,7 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { FrontendApplicationConfig, deepmerge } from '@theia/application-package/lib/application-props';
+import { FrontendApplicationConfig, deepmerge } from '@ogun/application-package/lib/application-props';
 
 export const DEFAULT_BACKGROUND_COLOR_STORAGE_KEY = 'theme.background';
 

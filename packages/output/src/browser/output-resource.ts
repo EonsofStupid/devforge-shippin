@@ -14,10 +14,10 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import URI from '@theia/core/lib/common/uri';
-import { Event, Resource, ResourceReadOptions, DisposableCollection, Emitter } from '@theia/core/lib/common';
-import { Deferred } from '@theia/core/lib/common/promise-util';
-import { MonacoEditorModel } from '@theia/monaco/lib/browser/monaco-editor-model';
+import URI from '@ogun/core/lib/common/uri';
+import { Event, Resource, ResourceReadOptions, DisposableCollection, Emitter } from '@ogun/core/lib/common';
+import { Deferred } from '@ogun/core/lib/common/promise-util';
+import { MonacoEditorModel } from '@ogun/monaco/lib/browser/monaco-editor-model';
 import { IReference } from '@theia/monaco-editor-core/esm/vs/base/common/lifecycle';
 import * as monaco from '@theia/monaco-editor-core';
 

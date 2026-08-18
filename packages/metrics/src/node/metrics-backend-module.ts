@@ -14,10 +14,10 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { bindRootContributionProvider } from '@theia/core/lib/common';
-import { BackendApplicationContribution } from '@theia/core/lib/node';
-import { ContainerModule } from '@theia/core/shared/inversify';
-import { TelemetrySink } from '@theia/telemetry/lib/node';
+import { bindRootContributionProvider } from '@ogun/core/lib/common';
+import { BackendApplicationContribution } from '@ogun/core/lib/node';
+import { ContainerModule } from '@ogun/core/shared/inversify';
+import { TelemetrySink } from '@ogun/telemetry/lib/node';
 import { ExtensionMetricsContribution } from './extensions-metrics-contribution';
 import { MeasurementMetricsBackendContribution } from './measurement-metrics-contribution';
 import { MeasurementTelemetryContribution } from './measurement-telemetry-contribution';

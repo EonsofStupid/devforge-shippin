@@ -15,12 +15,12 @@
 // *****************************************************************************
 
 import * as path from 'path';
-import * as express from '@theia/core/shared/express';
+import * as express from '@ogun/core/shared/express';
 import * as escape_html from 'escape-html';
 import { realpath, stat } from 'fs/promises';
-import { ILogger } from '@theia/core';
-import { inject, injectable, optional, multiInject } from '@theia/core/shared/inversify';
-import { BackendApplicationContribution } from '@theia/core/lib/node/backend-application';
+import { ILogger } from '@ogun/core';
+import { inject, injectable, optional, multiInject } from '@ogun/core/shared/inversify';
+import { BackendApplicationContribution } from '@ogun/core/lib/node/backend-application';
 import { PluginMetadata, getPluginId, MetadataProcessor, PluginPackage, PluginContribution } from '../../common/plugin-protocol';
 import { MetadataScanner } from './metadata-scanner';
 import { loadManifest } from './plugin-manifest-loader';

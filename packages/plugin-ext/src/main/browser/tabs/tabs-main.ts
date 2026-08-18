@@ -14,19 +14,19 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { interfaces } from '@theia/core/shared/inversify';
-import { ApplicationShell, PINNED_CLASS, Saveable, TabBar, Title, ViewContainer, Widget } from '@theia/core/lib/browser';
+import { interfaces } from '@ogun/core/shared/inversify';
+import { ApplicationShell, PINNED_CLASS, Saveable, TabBar, Title, ViewContainer, Widget } from '@ogun/core/lib/browser';
 import { AnyInputDto, MAIN_RPC_CONTEXT, TabDto, TabGroupDto, TabInputKind, TabModelOperationKind, TabsExt, TabsMain } from '../../../common/plugin-api-rpc';
 import { RPCProtocol } from '../../../common/rpc-protocol';
-import { EditorPreviewWidget } from '@theia/editor-preview/lib/browser/editor-preview-widget';
-import { Disposable } from '@theia/core/shared/vscode-languageserver-protocol';
-import { MonacoDiffEditor } from '@theia/monaco/lib/browser/monaco-diff-editor';
+import { EditorPreviewWidget } from '@ogun/editor-preview/lib/browser/editor-preview-widget';
+import { Disposable } from '@ogun/core/shared/vscode-languageserver-protocol';
+import { MonacoDiffEditor } from '@ogun/monaco/lib/browser/monaco-diff-editor';
 import { toUriComponents } from '../hierarchy/hierarchy-types-converters';
-import { TerminalWidget } from '@theia/terminal/lib/browser/base/terminal-widget';
-import { DisposableCollection } from '@theia/core';
-import { NotebookEditorWidget } from '@theia/notebook/lib/browser';
-import { Deferred } from '@theia/core/lib/common/promise-util';
-import { MergeEditor } from '@theia/scm/lib/browser/merge-editor/merge-editor';
+import { TerminalWidget } from '@ogun/terminal/lib/browser/base/terminal-widget';
+import { DisposableCollection } from '@ogun/core';
+import { NotebookEditorWidget } from '@ogun/notebook/lib/browser';
+import { Deferred } from '@ogun/core/lib/common/promise-util';
+import { MergeEditor } from '@ogun/scm/lib/browser/merge-editor/merge-editor';
 import { CustomEditorWidget } from '../custom-editors/custom-editor-widget';
 
 interface TabInfo {

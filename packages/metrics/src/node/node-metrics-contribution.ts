@@ -15,7 +15,7 @@
 // *****************************************************************************
 
 import * as prom from 'prom-client';
-import { injectable } from '@theia/core/shared/inversify';
+import { injectable } from '@ogun/core/shared/inversify';
 import { MetricsContribution } from './metrics-contribution';
 
 @injectable()

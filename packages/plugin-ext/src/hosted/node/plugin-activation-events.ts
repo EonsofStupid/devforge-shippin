@@ -15,7 +15,7 @@
 // *****************************************************************************
 
 import { flatten } from '../../common/arrays';
-import { isStringArray, isObject } from '@theia/core/lib/common/types';
+import { isStringArray, isObject } from '@ogun/core/lib/common/types';
 import {
     PluginPackage,
     PluginPackageAuthenticationProvider,

@@ -15,10 +15,10 @@
 // *****************************************************************************
 
 import { PreferenceLeafNodeRenderer, PreferenceNodeRenderer } from './preference-node-renderer';
-import { injectable, inject, interfaces } from '@theia/core/shared/inversify';
-import { CommandService, nls } from '@theia/core/lib/common';
+import { injectable, inject, interfaces } from '@ogun/core/shared/inversify';
+import { CommandService, nls } from '@ogun/core/lib/common';
 import { Preference, PreferencesCommands } from '../../util/preference-types';
-import { JSONValue } from '@theia/core/shared/@lumino/coreutils';
+import { JSONValue } from '@ogun/core/shared/@lumino/coreutils';
 import { PreferenceLeafNodeRendererContribution } from './preference-node-renderer-creator';
 
 @injectable()

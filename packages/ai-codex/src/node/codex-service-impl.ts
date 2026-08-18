@@ -14,8 +14,8 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { ILogger } from '@theia/core';
-import { inject, injectable, named } from '@theia/core/shared/inversify';
+import { ILogger } from '@ogun/core';
+import { inject, injectable, named } from '@ogun/core/shared/inversify';
 import type { Thread } from '@openai/codex-sdk';
 import {
     CodexBackendRequest,

@@ -15,7 +15,7 @@
 // *****************************************************************************
 
 import * as path from 'path';
-import { injectable } from '@theia/core/shared/inversify';
+import { injectable } from '@ogun/core/shared/inversify';
 import { spawn, ChildProcess, execSync } from 'child_process';
 import { ShellExecutionServer, ShellExecutionRequest, ShellExecutionResult } from '../common/shell-execution-server';
 

@@ -14,12 +14,12 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import * as React from '@theia/core/shared/react';
-import { inject, postConstruct, injectable, named } from '@theia/core/shared/inversify';
-import { CommandMenu, CompoundMenuNode, MenuModelRegistry, MenuPath, ILogger } from '@theia/core';
-import { KeybindingRegistry } from '@theia/core/lib/browser';
-import { ContextKeyService } from '@theia/core/lib/browser/context-key-service';
-import { ReactWidget } from '@theia/core/lib/browser/widgets';
+import * as React from '@ogun/core/shared/react';
+import { inject, postConstruct, injectable, named } from '@ogun/core/shared/inversify';
+import { CommandMenu, CompoundMenuNode, MenuModelRegistry, MenuPath, ILogger } from '@ogun/core';
+import { KeybindingRegistry } from '@ogun/core/lib/browser';
+import { ContextKeyService } from '@ogun/core/lib/browser/context-key-service';
+import { ReactWidget } from '@ogun/core/lib/browser/widgets';
 import { DebugViewModel } from './debug-view-model';
 import { DebugAction } from './debug-action';
 

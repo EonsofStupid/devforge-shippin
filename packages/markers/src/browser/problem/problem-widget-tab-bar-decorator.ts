@@ -14,12 +14,12 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { injectable, inject, postConstruct } from '@theia/core/shared/inversify';
-import { Event, Emitter } from '@theia/core/lib/common/event';
+import { injectable, inject, postConstruct } from '@ogun/core/shared/inversify';
+import { Event, Emitter } from '@ogun/core/lib/common/event';
 import { ProblemManager } from './problem-manager';
-import { TabBarDecorator } from '@theia/core/lib/browser/shell/tab-bar-decorator';
-import { Title, Widget } from '@theia/core/lib/browser';
-import { WidgetDecoration } from '@theia/core/lib/browser/widget-decoration';
+import { TabBarDecorator } from '@ogun/core/lib/browser/shell/tab-bar-decorator';
+import { Title, Widget } from '@ogun/core/lib/browser';
+import { WidgetDecoration } from '@ogun/core/lib/browser/widget-decoration';
 
 @injectable()
 export class ProblemWidgetTabBarDecorator implements TabBarDecorator {

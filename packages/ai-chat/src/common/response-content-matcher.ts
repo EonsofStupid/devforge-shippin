@@ -19,7 +19,7 @@ import {
     CodeChatResponseContentImpl,
     MarkdownChatResponseContentImpl
 } from './chat-model';
-import { injectable } from '@theia/core/shared/inversify';
+import { injectable } from '@ogun/core/shared/inversify';
 
 export type ResponseContentFactory = (content: string, request: MutableChatRequestModel) => ChatResponseContent;
 

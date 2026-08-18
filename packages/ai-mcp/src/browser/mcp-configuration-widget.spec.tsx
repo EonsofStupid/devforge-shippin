@@ -14,10 +14,10 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { enableJSDOM } from '@theia/core/lib/browser/test/jsdom';
+import { enableJSDOM } from '@ogun/core/lib/browser/test/jsdom';
 let disableJSDOM = enableJSDOM();
 
-import { FrontendApplicationConfigProvider } from '@theia/core/lib/browser/frontend-application-config-provider';
+import { FrontendApplicationConfigProvider } from '@ogun/core/lib/browser/frontend-application-config-provider';
 // Another spec in this package may have already set the configuration; mocha loads all
 // specs into one process and `set` throws if called twice, so guard it.
 try {
@@ -27,10 +27,10 @@ try {
 }
 
 import { expect } from 'chai';
-import * as React from '@theia/core/shared/react';
-import { createRoot, Root } from '@theia/core/shared/react-dom/client';
-import { flushSync } from '@theia/core/shared/react-dom';
-import { Emitter, Event, MessageService, PreferenceScope, PreferenceService } from '@theia/core';
+import * as React from '@ogun/core/shared/react';
+import { createRoot, Root } from '@ogun/core/shared/react-dom/client';
+import { flushSync } from '@ogun/core/shared/react-dom';
+import { Emitter, Event, MessageService, PreferenceScope, PreferenceService } from '@ogun/core';
 import {
     LocalMCPServerDescription,
     MCPFrontendNotificationService,
@@ -40,7 +40,7 @@ import {
     RemoteMCPServerDescription
 } from '../common/mcp-server-manager';
 import { AIMCPConfigurationWidget } from './mcp-configuration-widget';
-import { WorkspaceTrustService } from '@theia/workspace/lib/browser/workspace-trust-service';
+import { WorkspaceTrustService } from '@ogun/workspace/lib/browser/workspace-trust-service';
 
 disableJSDOM();
 

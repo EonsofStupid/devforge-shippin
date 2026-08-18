@@ -15,7 +15,7 @@
 // *****************************************************************************
 
 import { expect } from 'chai';
-import { OS } from '@theia/core';
+import { OS } from '@ogun/core';
 import { cleanTerminalTitle, GeneralShellType, guessShellTypeFromExecutable, looksLikeHostPrompt, looksLikePath, WindowsShellType } from './shell-type';
 
 // Save original environment state

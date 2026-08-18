@@ -14,12 +14,12 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { inject, injectable } from '@theia/core/shared/inversify';
-import { ILogger } from '@theia/core';
-import { MaybePromise } from '@theia/core/lib/common/types';
-import { MessagingListenerContribution } from '@theia/core/lib/node/messaging/messaging-listeners';
-import { CliContribution } from '@theia/core/lib/node';
-import { Arguments, Argv } from '@theia/core/shared/yargs';
+import { inject, injectable } from '@ogun/core/shared/inversify';
+import { ILogger } from '@ogun/core';
+import { MaybePromise } from '@ogun/core/lib/common/types';
+import { MessagingListenerContribution } from '@ogun/core/lib/node/messaging/messaging-listeners';
+import { CliContribution } from '@ogun/core/lib/node';
+import { Arguments, Argv } from '@ogun/core/shared/yargs';
 import * as http from 'http';
 import { Socket } from 'socket.io';
 

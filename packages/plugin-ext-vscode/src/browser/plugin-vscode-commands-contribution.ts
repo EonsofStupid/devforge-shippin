@@ -14,7 +14,7 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { Command, CommandContribution, CommandRegistry, environment, isOSX, CancellationTokenSource, MessageService, isArray } from '@theia/core';
+import { Command, CommandContribution, CommandRegistry, environment, isOSX, CancellationTokenSource, MessageService, isArray } from '@ogun/core';
 import {
     ApplicationShell,
     CommonCommands,
@@ -26,12 +26,12 @@ import {
     TabBar,
     Title,
     Widget
-} from '@theia/core/lib/browser';
-import { ContextKeyService } from '@theia/core/lib/browser/context-key-service';
-import { ApplicationShellMouseTracker } from '@theia/core/lib/browser/shell/application-shell-mouse-tracker';
-import { CommandService } from '@theia/core/lib/common/command';
-import TheiaURI from '@theia/core/lib/common/uri';
-import { EditorManager, EditorCommands } from '@theia/editor/lib/browser';
+} from '@ogun/core/lib/browser';
+import { ContextKeyService } from '@ogun/core/lib/browser/context-key-service';
+import { ApplicationShellMouseTracker } from '@ogun/core/lib/browser/shell/application-shell-mouse-tracker';
+import { CommandService } from '@ogun/core/lib/common/command';
+import TheiaURI from '@ogun/core/lib/common/uri';
+import { EditorManager, EditorCommands } from '@ogun/editor/lib/browser';
 import {
     TextDocumentShowOptions,
     Location,
@@ -43,48 +43,48 @@ import {
     TextEdit,
     FormattingOptions,
     DocumentHighlight
-} from '@theia/plugin-ext/lib/common/plugin-api-rpc-model';
-import { DocumentsMainImpl } from '@theia/plugin-ext/lib/main/browser/documents-main';
-import { isUriComponents, toMergedSymbol, toPosition } from '@theia/plugin-ext/lib/plugin/type-converters';
-import { ViewColumn } from '@theia/plugin-ext/lib/plugin/types-impl';
-import { WorkspaceCommands } from '@theia/workspace/lib/browser';
-import { WorkspaceService, WorkspaceInput } from '@theia/workspace/lib/browser/workspace-service';
-import { DiffService } from '@theia/workspace/lib/browser/diff-service';
-import { inject, injectable, optional } from '@theia/core/shared/inversify';
-import { Position } from '@theia/plugin-ext/lib/common/plugin-api-rpc';
-import { URI } from '@theia/core/shared/vscode-uri';
-import { PluginDeployOptions, PluginIdentifiers, PluginServer } from '@theia/plugin-ext/lib/common/plugin-protocol';
-import { TerminalFrontendContribution } from '@theia/terminal/lib/browser/terminal-frontend-contribution';
-import { QuickOpenWorkspace } from '@theia/workspace/lib/browser/quick-open-workspace';
-import { TerminalService } from '@theia/terminal/lib/browser/base/terminal-service';
+} from '@ogun/plugin-ext/lib/common/plugin-api-rpc-model';
+import { DocumentsMainImpl } from '@ogun/plugin-ext/lib/main/browser/documents-main';
+import { isUriComponents, toMergedSymbol, toPosition } from '@ogun/plugin-ext/lib/plugin/type-converters';
+import { ViewColumn } from '@ogun/plugin-ext/lib/plugin/types-impl';
+import { WorkspaceCommands } from '@ogun/workspace/lib/browser';
+import { WorkspaceService, WorkspaceInput } from '@ogun/workspace/lib/browser/workspace-service';
+import { DiffService } from '@ogun/workspace/lib/browser/diff-service';
+import { inject, injectable, optional } from '@ogun/core/shared/inversify';
+import { Position } from '@ogun/plugin-ext/lib/common/plugin-api-rpc';
+import { URI } from '@ogun/core/shared/vscode-uri';
+import { PluginDeployOptions, PluginIdentifiers, PluginServer } from '@ogun/plugin-ext/lib/common/plugin-protocol';
+import { TerminalFrontendContribution } from '@ogun/terminal/lib/browser/terminal-frontend-contribution';
+import { QuickOpenWorkspace } from '@ogun/workspace/lib/browser/quick-open-workspace';
+import { TerminalService } from '@ogun/terminal/lib/browser/base/terminal-service';
 import {
     FileNavigatorCommands,
     FILE_NAVIGATOR_TOGGLE_COMMAND_ID
-} from '@theia/navigator/lib/browser/navigator-contribution';
-import { FILE_NAVIGATOR_ID, FileNavigatorWidget } from '@theia/navigator/lib/browser';
-import { SelectableTreeNode } from '@theia/core/lib/browser/tree/tree-selection';
-import { UriComponents } from '@theia/plugin-ext/lib/common/uri-components';
-import { FileService } from '@theia/filesystem/lib/browser/file-service';
-import { CallHierarchyServiceProvider, CallHierarchyService } from '@theia/callhierarchy/lib/browser';
-import { TypeHierarchyServiceProvider, TypeHierarchyService } from '@theia/typehierarchy/lib/browser';
-import { MonacoTextModelService } from '@theia/monaco/lib/browser/monaco-text-model-service';
+} from '@ogun/navigator/lib/browser/navigator-contribution';
+import { FILE_NAVIGATOR_ID, FileNavigatorWidget } from '@ogun/navigator/lib/browser';
+import { SelectableTreeNode } from '@ogun/core/lib/browser/tree/tree-selection';
+import { UriComponents } from '@ogun/plugin-ext/lib/common/uri-components';
+import { FileService } from '@ogun/filesystem/lib/browser/file-service';
+import { CallHierarchyServiceProvider, CallHierarchyService } from '@ogun/callhierarchy/lib/browser';
+import { TypeHierarchyServiceProvider, TypeHierarchyService } from '@ogun/typehierarchy/lib/browser';
+import { MonacoTextModelService } from '@ogun/monaco/lib/browser/monaco-text-model-service';
 import {
     fromCallHierarchyCalleeToModelCallHierarchyOutgoingCall,
     fromCallHierarchyCallerToModelCallHierarchyIncomingCall,
     fromItemHierarchyDefinition,
     toItemHierarchyDefinition
-} from '@theia/plugin-ext/lib/main/browser/hierarchy/hierarchy-types-converters';
-import { CustomEditorOpener } from '@theia/plugin-ext/lib/main/browser/custom-editors/custom-editor-opener';
-import { nls } from '@theia/core/lib/common/nls';
-import { WindowService } from '@theia/core/lib/browser/window/window-service';
+} from '@ogun/plugin-ext/lib/main/browser/hierarchy/hierarchy-types-converters';
+import { CustomEditorOpener } from '@ogun/plugin-ext/lib/main/browser/custom-editors/custom-editor-opener';
+import { nls } from '@ogun/core/lib/common/nls';
+import { WindowService } from '@ogun/core/lib/browser/window/window-service';
 import * as monaco from '@theia/monaco-editor-core';
 import { VSCodeExtensionUri } from '../common/plugin-vscode-uri';
-import { CodeEditorWidgetUtil } from '@theia/plugin-ext/lib/main/browser/menus/vscode-theia-menu-mappings';
-import { OutlineViewContribution } from '@theia/outline-view/lib/browser/outline-view-contribution';
-import { CompletionList, Range, Position as PluginPosition } from '@theia/plugin';
-import { MonacoLanguages } from '@theia/monaco/lib/browser/monaco-languages';
-import { ScmContribution } from '@theia/scm/lib/browser/scm-contribution';
-import { MergeEditorOpenerOptions, MergeEditorUri } from '@theia/scm/lib/browser/merge-editor/merge-editor';
+import { CodeEditorWidgetUtil } from '@ogun/plugin-ext/lib/main/browser/menus/vscode-theia-menu-mappings';
+import { OutlineViewContribution } from '@ogun/outline-view/lib/browser/outline-view-contribution';
+import { CompletionList, Range, Position as PluginPosition } from '@ogun/plugin';
+import { MonacoLanguages } from '@ogun/monaco/lib/browser/monaco-languages';
+import { ScmContribution } from '@ogun/scm/lib/browser/scm-contribution';
+import { MergeEditorOpenerOptions, MergeEditorUri } from '@ogun/scm/lib/browser/merge-editor/merge-editor';
 
 export namespace VscodeCommands {
 

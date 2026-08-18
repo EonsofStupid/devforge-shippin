@@ -14,9 +14,9 @@
  * SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
  ********************************************************************************/
 
-import { injectable } from '@theia/core/shared/inversify';
-import { DebugScope, DebugVariable } from '@theia/debug/lib/browser/console/debug-console-items';
-import { DebugSession } from '@theia/debug/lib/browser/debug-session';
+import { injectable } from '@ogun/core/shared/inversify';
+import { DebugScope, DebugVariable } from '@ogun/debug/lib/browser/console/debug-console-items';
+import { DebugSession } from '@ogun/debug/lib/browser/debug-session';
 import { hexStrToUnsignedLong } from '../../common/util';
 import { VariableRange } from '../utils/memory-widget-variable-utils';
 import { AbstractMemoryProvider } from './memory-provider';

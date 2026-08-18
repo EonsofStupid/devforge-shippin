@@ -14,15 +14,15 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { inject, injectable } from '@theia/core/shared/inversify';
-import { WindowTitleContribution } from '@theia/core/lib/browser/window/window-title-service';
-import { RemoteStatus, RemoteStatusService } from '@theia/remote/lib/electron-common/remote-status-service';
-import { FrontendApplicationContribution, LabelProviderContribution } from '@theia/core/lib/browser';
+import { inject, injectable } from '@ogun/core/shared/inversify';
+import { WindowTitleContribution } from '@ogun/core/lib/browser/window/window-title-service';
+import { RemoteStatus, RemoteStatusService } from '@ogun/remote/lib/electron-common/remote-status-service';
+import { FrontendApplicationContribution, LabelProviderContribution } from '@ogun/core/lib/browser';
 import type { ContainerInspectInfo } from 'dockerode';
 import { RemoteContainerConnectionProvider } from '../electron-common/remote-container-connection-provider';
-import { PortForwardingService } from '@theia/remote/lib/electron-browser/port-forwarding/port-forwarding-service';
+import { PortForwardingService } from '@ogun/remote/lib/electron-browser/port-forwarding/port-forwarding-service';
 import { DEV_CONTAINER_PATH_QUERY } from '../electron-common/dev-container-workspaces';
-import { URI } from '@theia/core';
+import { URI } from '@ogun/core';
 
 @injectable()
 export class ContainerInfoContribution implements FrontendApplicationContribution, WindowTitleContribution, LabelProviderContribution {

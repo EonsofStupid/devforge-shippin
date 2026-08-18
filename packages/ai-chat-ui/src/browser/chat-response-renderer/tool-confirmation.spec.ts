@@ -14,18 +14,18 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { enableJSDOM } from '@theia/core/lib/browser/test/jsdom';
+import { enableJSDOM } from '@ogun/core/lib/browser/test/jsdom';
 
 let disableJSDOM = enableJSDOM();
 
 import { expect } from 'chai';
-import { ContextMenuRenderer, OpenerService } from '@theia/core/lib/browser';
-import { ToolCallChatResponseContent } from '@theia/ai-chat/lib/common';
-import { ToolConfirmationMode as ToolConfirmationPreferenceMode } from '@theia/ai-chat/lib/common/chat-tool-preferences';
-import { ToolConfirmationManager } from '@theia/ai-chat/lib/browser/chat-tool-preference-bindings';
-import { flushSync } from '@theia/core/shared/react-dom';
-import { createRoot } from '@theia/core/shared/react-dom/client';
-import * as React from '@theia/core/shared/react';
+import { ContextMenuRenderer, OpenerService } from '@ogun/core/lib/browser';
+import { ToolCallChatResponseContent } from '@ogun/ai-chat/lib/common';
+import { ToolConfirmationMode as ToolConfirmationPreferenceMode } from '@ogun/ai-chat/lib/common/chat-tool-preferences';
+import { ToolConfirmationManager } from '@ogun/ai-chat/lib/browser/chat-tool-preference-bindings';
+import { flushSync } from '@ogun/core/shared/react-dom';
+import { createRoot } from '@ogun/core/shared/react-dom/client';
+import * as React from '@ogun/core/shared/react';
 import {
     ConfirmationScope,
     CountdownTimerProps,

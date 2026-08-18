@@ -13,10 +13,10 @@
 //
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
-import { injectable } from '@theia/core/shared/inversify';
+import { injectable } from '@ogun/core/shared/inversify';
 import { MetricsContribution } from './metrics-contribution';
 import { PROMETHEUS_REGEXP, toPrometheusValidName } from './prometheus';
-import { backendGlobal } from '@theia/core/lib/node';
+import { backendGlobal } from '@ogun/core/lib/node';
 
 const metricsName = 'theia_extension_version';
 

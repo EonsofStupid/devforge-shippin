@@ -140,11 +140,11 @@
         }
       }
     ],
-    "@theia/annotation-check": "error",
-    "@theia/localization-check": "error",
-    "@theia/no-src-import": "error",
-    "@theia/runtime-import-check": "error",
-    "@theia/shared-dependencies": "error",
+    "@ogun/annotation-check": "error",
+    "@ogun/localization-check": "error",
+    "@ogun/no-src-import": "error",
+    "@ogun/runtime-import-check": "error",
+    "@ogun/shared-dependencies": "error",
     "import/no-extraneous-dependencies": "error",
     "import/no-dynamic-require": "error",
     "no-restricted-imports": [
@@ -161,8 +161,8 @@
         "**/*.{spec,espec,slow-spec}.{js,ts,tsx}"
       ],
       "rules": {
-        "@theia/runtime-import-check": "off",
-        "@theia/shared-dependencies": "off",
+        "@ogun/runtime-import-check": "off",
+        "@ogun/shared-dependencies": "off",
         "import/no-extraneous-dependencies": "off",
         "no-unused-expressions": "off"
       }

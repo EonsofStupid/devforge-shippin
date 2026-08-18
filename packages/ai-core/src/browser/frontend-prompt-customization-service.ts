@@ -14,23 +14,23 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { DisposableCollection, URI, Event, Emitter, nls, ILogger } from '@theia/core';
-import { OpenerService } from '@theia/core/lib/browser';
-import { inject, injectable, postConstruct, named } from '@theia/core/shared/inversify';
+import { DisposableCollection, URI, Event, Emitter, nls, ILogger } from '@ogun/core';
+import { OpenerService } from '@ogun/core/lib/browser';
+import { inject, injectable, postConstruct, named } from '@ogun/core/shared/inversify';
 import {
     PromptFragmentCustomizationService, CustomAgentDescription, CustomAgentPromptVariant, CustomizedPromptFragment, CommandPromptFragmentMetadata, CustomAgentsLocation
 } from '../common';
 import { ConfigurableInMemoryResources } from '../common/configurable-in-memory-resources';
 import { parseFrontmatter, serializeFrontmatter } from '../common/frontmatter';
-import { BinaryBuffer } from '@theia/core/lib/common/buffer';
-import { FileService } from '@theia/filesystem/lib/browser/file-service';
-import { FileChangesEvent } from '@theia/filesystem/lib/common/files';
+import { BinaryBuffer } from '@ogun/core/lib/common/buffer';
+import { FileService } from '@ogun/filesystem/lib/browser/file-service';
+import { FileChangesEvent } from '@ogun/filesystem/lib/common/files';
 import { AICorePreferences, PREFERENCE_NAME_PROMPT_TEMPLATES } from '../common/ai-core-preferences';
-import { EnvVariablesServer } from '@theia/core/lib/common/env-variables';
+import { EnvVariablesServer } from '@ogun/core/lib/common/env-variables';
 import { dump, load } from 'js-yaml';
 import { PROMPT_TEMPLATE_EXTENSION } from './prompttemplate-contribution';
 import { parseTemplateWithMetadata, ParsedTemplate } from './prompttemplate-parser';
-import { WorkspaceService } from '@theia/workspace/lib/browser';
+import { WorkspaceService } from '@ogun/workspace/lib/browser';
 
 /**
  * Subdirectory (relative to a prompt-templates scope) holding one folder per custom agent.

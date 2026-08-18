@@ -15,10 +15,10 @@
 // *****************************************************************************
 
 import { expect } from 'chai';
-import { FrontendIdProvider } from '@theia/core/lib/browser/messaging/frontend-id-provider';
-import { Emitter, ILogger } from '@theia/core/lib/common';
+import { FrontendIdProvider } from '@ogun/core/lib/browser/messaging/frontend-id-provider';
+import { Emitter, ILogger } from '@ogun/core/lib/common';
 import * as sinon from 'sinon';
-import { Container } from '@theia/core/shared/inversify';
+import { Container } from '@ogun/core/shared/inversify';
 import { TelemetryConsentProvider } from '../common/telemetry-consent-provider';
 import { TelemetryEvent, TelemetryRpc } from '../common/telemetry-protocol';
 import { RecordingLogger } from '../common/test/recording-logger';

@@ -14,8 +14,8 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { injectable } from '@theia/core/shared/inversify';
-import { AIViewContribution } from '@theia/ai-core/lib/browser';
+import { injectable } from '@ogun/core/shared/inversify';
+import { AIViewContribution } from '@ogun/ai-core/lib/browser';
 import { SketchedToolWidget } from './sketched-tool-widget';
 
 export const SKETCHED_TOOL_TOGGLE_COMMAND_ID = 'aiToolSketchpad:toggle';

@@ -16,27 +16,27 @@
 
 /* eslint-disable no-null/no-null, @typescript-eslint/no-explicit-any */
 
-import * as React from '@theia/core/shared/react';
-import { injectable, inject, postConstruct, named } from '@theia/core/shared/inversify';
-import URI from '@theia/core/lib/common/uri';
-import { isOSX } from '@theia/core/lib/common/os';
-import { DisposableCollection, Disposable } from '@theia/core/lib/common/disposable';
-import { TreeWidget, TreeNode, SelectableTreeNode, TreeModel, TreeProps, NodeProps, TREE_NODE_SEGMENT_CLASS, TREE_NODE_SEGMENT_GROW_CLASS } from '@theia/core/lib/browser/tree';
-import { TreeViewWelcomeWidget } from '@theia/core/lib/browser/tree/tree-view-welcome-widget';
+import * as React from '@ogun/core/shared/react';
+import { injectable, inject, postConstruct, named } from '@ogun/core/shared/inversify';
+import URI from '@ogun/core/lib/common/uri';
+import { isOSX } from '@ogun/core/lib/common/os';
+import { DisposableCollection, Disposable } from '@ogun/core/lib/common/disposable';
+import { TreeWidget, TreeNode, SelectableTreeNode, TreeModel, TreeProps, NodeProps, TREE_NODE_SEGMENT_CLASS, TREE_NODE_SEGMENT_GROW_CLASS } from '@ogun/core/lib/browser/tree';
+import { TreeViewWelcomeWidget } from '@ogun/core/lib/browser/tree/tree-view-welcome-widget';
 import { ScmTreeModel, ScmFileChangeRootNode, ScmFileChangeGroupNode, ScmFileChangeFolderNode, ScmFileChangeNode } from './scm-tree-model';
-import { MenuModelRegistry, CompoundMenuNode, MenuPath, CommandMenu } from '@theia/core/lib/common/menu';
+import { MenuModelRegistry, CompoundMenuNode, MenuPath, CommandMenu } from '@ogun/core/lib/common/menu';
 import { ScmResource } from './scm-provider';
-import { ContextMenuRenderer, LabelProvider, DiffUris, ACTION_ITEM } from '@theia/core/lib/browser';
+import { ContextMenuRenderer, LabelProvider, DiffUris, ACTION_ITEM } from '@ogun/core/lib/browser';
 import { ScmContextKeyService } from './scm-context-key-service';
-import { EditorWidget, EditorManager, DiffNavigatorProvider } from '@theia/editor/lib/browser';
-import { IconThemeService } from '@theia/core/lib/browser/icon-theme-service';
-import { ColorRegistry } from '@theia/core/lib/browser/color-registry';
-import { Decoration, DecorationsService } from '@theia/core/lib/browser/decorations-service';
+import { EditorWidget, EditorManager, DiffNavigatorProvider } from '@ogun/editor/lib/browser';
+import { IconThemeService } from '@ogun/core/lib/browser/icon-theme-service';
+import { ColorRegistry } from '@ogun/core/lib/browser/color-registry';
+import { Decoration, DecorationsService } from '@ogun/core/lib/browser/decorations-service';
 import { ScmService } from './scm-service';
-import { FileStat } from '@theia/filesystem/lib/common/files';
-import { ThemeService } from '@theia/core/lib/browser/theming';
-import { CorePreferences } from '@theia/core/lib/common';
-import { ILogger } from '@theia/core';
+import { FileStat } from '@ogun/filesystem/lib/common/files';
+import { ThemeService } from '@ogun/core/lib/browser/theming';
+import { CorePreferences } from '@ogun/core/lib/common';
+import { ILogger } from '@ogun/core';
 
 @injectable()
 export class ScmTreeWidget extends TreeViewWelcomeWidget {

@@ -14,9 +14,9 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { injectable, inject, postConstruct } from '@theia/core/shared/inversify';
-import { ContextKeyService, ContextKey } from '@theia/core/lib/browser/context-key-service';
-import { ApplicationServer } from '@theia/core/lib/common/application-protocol';
+import { injectable, inject, postConstruct } from '@ogun/core/shared/inversify';
+import { ContextKeyService, ContextKey } from '@ogun/core/lib/browser/context-key-service';
+import { ApplicationServer } from '@ogun/core/lib/common/application-protocol';
 
 @injectable()
 export class TaskContextKeyService {

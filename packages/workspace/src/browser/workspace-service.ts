@@ -14,26 +14,26 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { injectable, inject, postConstruct, named } from '@theia/core/shared/inversify';
-import URI from '@theia/core/lib/common/uri';
+import { injectable, inject, postConstruct, named } from '@ogun/core/shared/inversify';
+import URI from '@ogun/core/lib/common/uri';
 import { WorkspaceServer, UntitledWorkspaceService, WorkspaceFileService } from '../common';
-import { WindowService } from '@theia/core/lib/browser/window/window-service';
-import { DEFAULT_WINDOW_HASH } from '@theia/core/lib/common/window';
-import { FrontendApplicationContribution, LabelProvider, OnWillStopAction } from '@theia/core/lib/browser';
-import { Deferred } from '@theia/core/lib/common/promise-util';
-import { EnvVariablesServer } from '@theia/core/lib/common/env-variables';
-import { ILogger, Disposable, DisposableCollection, Emitter, environment, Event, MaybePromise, MessageService, nls, ContributionProvider } from '@theia/core';
+import { WindowService } from '@ogun/core/lib/browser/window/window-service';
+import { DEFAULT_WINDOW_HASH } from '@ogun/core/lib/common/window';
+import { FrontendApplicationContribution, LabelProvider, OnWillStopAction } from '@ogun/core/lib/browser';
+import { Deferred } from '@ogun/core/lib/common/promise-util';
+import { EnvVariablesServer } from '@ogun/core/lib/common/env-variables';
+import { ILogger, Disposable, DisposableCollection, Emitter, environment, Event, MaybePromise, MessageService, nls, ContributionProvider } from '@ogun/core';
 import { WorkspacePreferences } from '../common/workspace-preferences';
 import * as jsoncparser from 'jsonc-parser';
-import * as Ajv from '@theia/core/shared/ajv';
-import { FileStat, BaseStat } from '@theia/filesystem/lib/common/files';
-import { FileService } from '@theia/filesystem/lib/browser/file-service';
-import { WindowTitleService } from '@theia/core/lib/browser/window/window-title-service';
-import { FileSystemPreferences } from '@theia/filesystem/lib/common';
+import * as Ajv from '@ogun/core/shared/ajv';
+import { FileStat, BaseStat } from '@ogun/filesystem/lib/common/files';
+import { FileService } from '@ogun/filesystem/lib/browser/file-service';
+import { WindowTitleService } from '@ogun/core/lib/browser/window/window-title-service';
+import { FileSystemPreferences } from '@ogun/filesystem/lib/common';
 import { workspaceSchema, WorkspaceSchemaUpdater } from './workspace-schema-updater';
-import { IJSONSchema } from '@theia/core/lib/common/json-schema';
-import { StopReason } from '@theia/core/lib/common/frontend-application-state';
-import { PreferenceSchemaService, PreferenceScope, PreferenceService } from '@theia/core/lib/common/preferences';
+import { IJSONSchema } from '@ogun/core/lib/common/json-schema';
+import { StopReason } from '@ogun/core/lib/common/frontend-application-state';
+import { PreferenceSchemaService, PreferenceScope, PreferenceService } from '@ogun/core/lib/common/preferences';
 
 export const WorkspaceOpenHandlerContribution = Symbol('WorkspaceOpenHandlerContribution');
 

@@ -14,9 +14,9 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { ContainerModule, interfaces } from '@theia/core/shared/inversify';
-import { ConnectionHandler, RpcConnectionHandler } from '@theia/core/lib/common';
-import { isWindows, isOSX } from '@theia/core/lib/common/os';
+import { ContainerModule, interfaces } from '@ogun/core/shared/inversify';
+import { ConnectionHandler, RpcConnectionHandler } from '@ogun/core/lib/common';
+import { isWindows, isOSX } from '@ogun/core/lib/common/os';
 import { ExternalTerminalService, externalTerminalServicePath } from '../common/external-terminal';
 import { MacExternalTerminalService } from './mac-external-terminal-service';
 import { LinuxExternalTerminalService } from './linux-external-terminal-service';

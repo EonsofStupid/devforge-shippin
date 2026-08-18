@@ -16,7 +16,7 @@
 import { TextEditorConfiguration, TextEditorsMain, TextEditorConfigurationUpdate, SingleEditOperation } from '../common/plugin-api-rpc';
 import { Range as ApiRange } from '../common/plugin-api-rpc-model';
 import { Selection, Range, TextEditorLineNumbersStyle, SnippetString, Position, TextEditorRevealType, EndOfLine } from './types-impl';
-import * as theia from '@theia/plugin';
+import * as theia from '@ogun/plugin';
 import { DocumentDataExt } from './document-data';
 import { readonly, illegalArgument } from '../common/errors';
 import { TextEditorCursorStyle } from '../common/editor-options';

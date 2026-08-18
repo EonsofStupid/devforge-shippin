@@ -14,13 +14,13 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { MetricsContribution } from '@theia/metrics/lib/node/metrics-contribution';
+import { MetricsContribution } from '@ogun/metrics/lib/node/metrics-contribution';
 import { PluginMetricsContribution } from './plugin-metrics';
 import { PluginMetrics, metricsJsonRpcPath } from '../common/metrics-protocol';
 import { PluginMetricsImpl } from './plugin-metrics-impl';
-import { ConnectionHandler } from '@theia/core/lib/common/messaging/handler';
-import { RpcConnectionHandler } from '@theia/core';
-import { ContainerModule } from '@theia/core/shared/inversify';
+import { ConnectionHandler } from '@ogun/core/lib/common/messaging/handler';
+import { RpcConnectionHandler } from '@ogun/core';
+import { ContainerModule } from '@ogun/core/shared/inversify';
 import { PluginMetricsContributor } from './metrics-contributor';
 import { PluginMetricTimeSum } from './metric-output/plugin-metrics-time-sum';
 import { PluginMetricTimeCount } from './metric-output/plugin-metrics-time-count';

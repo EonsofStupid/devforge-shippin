@@ -14,7 +14,7 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { Options } from '@theia/core/shared/@parcel/watcher';
+import { Options } from '@ogun/core/shared/@parcel/watcher';
 
 /**
  * Inversify service identifier allowing extensions to override options passed to parcel by the file watcher.

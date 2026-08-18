@@ -14,19 +14,19 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { Disposable, DisposableCollection } from '@theia/core/lib/common/disposable';
-import { EncodingService } from '@theia/core/lib/common/encoding-service';
-import { ILogger } from '@theia/core/lib/common/logger';
-import { MockLogger } from '@theia/core/lib/common/test/mock-logger';
-import { FileUri } from '@theia/core/lib/common/file-uri';
-import { IPCConnectionProvider } from '@theia/core/lib/node/messaging/ipc-connection-provider';
-import { Container, ContainerModule } from '@theia/core/shared/inversify';
+import { Disposable, DisposableCollection } from '@ogun/core/lib/common/disposable';
+import { EncodingService } from '@ogun/core/lib/common/encoding-service';
+import { ILogger } from '@ogun/core/lib/common/logger';
+import { MockLogger } from '@ogun/core/lib/common/test/mock-logger';
+import { FileUri } from '@ogun/core/lib/common/file-uri';
+import { IPCConnectionProvider } from '@ogun/core/lib/node/messaging/ipc-connection-provider';
+import { Container, ContainerModule } from '@ogun/core/shared/inversify';
 import { equal, fail } from 'assert';
 import { promises as fs } from 'fs';
 import * as os from 'os';
 import { join } from 'path';
 import * as temp from 'temp';
-import { generateUuid } from '@theia/core/lib/common/uuid';
+import { generateUuid } from '@ogun/core/lib/common/uuid';
 import { FilePermission, FileSystemProviderCapabilities, FileSystemProviderError, FileSystemProviderErrorCode } from '../common/files';
 import { DiskFileSystemProvider } from './disk-file-system-provider';
 import { bindFileSystemWatcherServer } from './filesystem-backend-module';

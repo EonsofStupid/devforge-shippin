@@ -15,9 +15,9 @@
 // *****************************************************************************
 
 import * as path from 'path';
-import { inject, injectable } from '@theia/core/shared/inversify';
-import { PluginDeployerResolverContext, PluginIdentifiers } from '@theia/plugin-ext';
-import { LocalPluginDeployerResolver } from '@theia/plugin-ext/lib/main/node/resolvers/local-plugin-deployer-resolver';
+import { inject, injectable } from '@ogun/core/shared/inversify';
+import { PluginDeployerResolverContext, PluginIdentifiers } from '@ogun/plugin-ext';
+import { LocalPluginDeployerResolver } from '@ogun/plugin-ext/lib/main/node/resolvers/local-plugin-deployer-resolver';
 import { PluginVSCodeEnvironment } from '../common/plugin-vscode-environment';
 import { isVSCodePluginFile } from './plugin-vscode-file-handler';
 import { existsInDeploymentDir, unpackToDeploymentDir, extractExtensionIdentityFromVsix } from './plugin-vscode-utils';

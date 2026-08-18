@@ -12,11 +12,11 @@
 
 ## Description
 
-The `@theia/electron` extension bundles all Electron-specific dependencies and core functionalities.
+The `@ogun/electron` extension bundles all Electron-specific dependencies and core functionalities.
 
 ## Re-Exports
 
-- `@theia/electron/shared/...`
+- `@ogun/electron/shared/...`
   - `native-keymap` (from [`native-keymap@^2.5.0`](https://www.npmjs.com/package/native-keymap))
   - `electron` (from [`electron@42.3.0`](https://www.npmjs.com/package/electron/v/42.3.0))
   - `electron-store` (from [`electron-store@^8.2.0`](https://www.npmjs.com/package/electron-store))

@@ -15,20 +15,20 @@
 // *****************************************************************************
 
 import { ChatResponsePartRenderer } from '../chat-response-part-renderer';
-import { inject, injectable } from '@theia/core/shared/inversify';
+import { inject, injectable } from '@ogun/core/shared/inversify';
 import {
     ChatResponseContent,
     InformationalChatResponseContent,
     MarkdownChatResponseContent,
-} from '@theia/ai-chat/lib/common';
-import { ReactNode, useEffect, useRef } from '@theia/core/shared/react';
-import * as React from '@theia/core/shared/react';
-import * as markdownit from '@theia/core/shared/markdown-it';
-import * as markdownitemoji from '@theia/core/shared/markdown-it-emoji';
-import * as DOMPurify from '@theia/core/shared/dompurify';
-import { MarkdownString } from '@theia/core/lib/common/markdown-rendering';
-import { OpenerService, open } from '@theia/core/lib/browser';
-import { URI } from '@theia/core';
+} from '@ogun/ai-chat/lib/common';
+import { ReactNode, useEffect, useRef } from '@ogun/core/shared/react';
+import * as React from '@ogun/core/shared/react';
+import * as markdownit from '@ogun/core/shared/markdown-it';
+import * as markdownitemoji from '@ogun/core/shared/markdown-it-emoji';
+import * as DOMPurify from '@ogun/core/shared/dompurify';
+import { MarkdownString } from '@ogun/core/lib/common/markdown-rendering';
+import { OpenerService, open } from '@ogun/core/lib/browser';
+import { URI } from '@ogun/core';
 import {
     blockExternalResources,
     BLOCKED_RESOURCE_ALLOW_CLASS,

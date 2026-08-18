@@ -14,9 +14,9 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { inject, injectable, named, optional, postConstruct } from '@theia/core/shared/inversify';
-import { ContributionProvider, Disposable, DisposableCollection, Emitter, Event } from '@theia/core';
-import { SkillService } from '@theia/ai-core/lib/browser';
+import { inject, injectable, named, optional, postConstruct } from '@ogun/core/shared/inversify';
+import { ContributionProvider, Disposable, DisposableCollection, Emitter, Event } from '@ogun/core';
+import { SkillService } from '@ogun/ai-core/lib/browser';
 import {
     AIVariable,
     CapabilityType,
@@ -29,9 +29,9 @@ import {
     PromptService,
     ToolInvocationRegistry,
     AIVariableService
-} from '@theia/ai-core';
-import { ChatAgentService } from '@theia/ai-chat';
-import debounce = require('@theia/core/shared/lodash.debounce');
+} from '@ogun/ai-core';
+import { ChatAgentService } from '@ogun/ai-chat';
+import debounce = require('@ogun/core/shared/lodash.debounce');
 
 // Re-export types from ai-core for backward compatibility
 export { GenericCapabilityItem, GenericCapabilityGroup, GenericCapabilitiesContribution };

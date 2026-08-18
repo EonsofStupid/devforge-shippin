@@ -14,9 +14,9 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { enableJSDOM } from '@theia/core/lib/browser/test/jsdom';
+import { enableJSDOM } from '@ogun/core/lib/browser/test/jsdom';
 let disableJSDOM = enableJSDOM();
-import { FrontendApplicationConfigProvider } from '@theia/core/lib/browser/frontend-application-config-provider';
+import { FrontendApplicationConfigProvider } from '@ogun/core/lib/browser/frontend-application-config-provider';
 // Another spec in this package may have already set the configuration; mocha loads all
 // specs into one process and `set` throws if called twice, so guard it.
 try {
@@ -29,15 +29,15 @@ import 'reflect-metadata';
 
 import { expect } from 'chai';
 import * as sinon from 'sinon';
-import { Container } from '@theia/core/shared/inversify';
-import { MessageService, PreferenceService, ProgressMessage, ILogger } from '@theia/core';
+import { Container } from '@ogun/core/shared/inversify';
+import { MessageService, PreferenceService, ProgressMessage, ILogger } from '@ogun/core';
 import { McpFrontendApplicationContribution } from './mcp-frontend-application-contribution';
 import {
     MCPFrontendNotificationService, MCPFrontendService, MCPOAuthFrontendDelegate, MCPServerDescription, MCPServerManager, MCPServersPreference, MCPServerStatus
 } from '../common';
-import { WorkspaceTrustService } from '@theia/workspace/lib/browser/workspace-trust-service';
-import { WorkspaceService } from '@theia/workspace/lib/browser/workspace-service';
-import { MockLogger } from '@theia/core/lib/common/test/mock-logger';
+import { WorkspaceTrustService } from '@ogun/workspace/lib/browser/workspace-trust-service';
+import { WorkspaceService } from '@ogun/workspace/lib/browser/workspace-service';
+import { MockLogger } from '@ogun/core/lib/common/test/mock-logger';
 
 disableJSDOM();
 

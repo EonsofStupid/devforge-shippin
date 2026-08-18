@@ -14,11 +14,11 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { AgentService, CustomAgentDescription, PromptFragmentCustomizationService } from '@theia/ai-core';
-import { Command, CommandContribution, CommandRegistry, ILogger, MessageService, nls } from '@theia/core';
-import { FrontendApplicationContribution, LocalStorageService } from '@theia/core/lib/browser';
-import { FrontendApplicationConfigProvider } from '@theia/core/lib/browser/frontend-application-config-provider';
-import { inject, injectable, optional, named } from '@theia/core/shared/inversify';
+import { AgentService, CustomAgentDescription, PromptFragmentCustomizationService } from '@ogun/ai-core';
+import { Command, CommandContribution, CommandRegistry, ILogger, MessageService, nls } from '@ogun/core';
+import { FrontendApplicationContribution, LocalStorageService } from '@ogun/core/lib/browser';
+import { FrontendApplicationConfigProvider } from '@ogun/core/lib/browser/frontend-application-config-provider';
+import { inject, injectable, optional, named } from '@ogun/core/shared/inversify';
 import { ChatAgentService } from '../common';
 import { CustomAgentFactory } from './custom-agent-factory';
 

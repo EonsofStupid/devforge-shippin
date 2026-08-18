@@ -14,12 +14,12 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import * as React from '@theia/core/shared/react';
-import { CommandMenu, CommandRegistry, CompoundMenuNode, DisposableCollection, Emitter, Event, MenuModelRegistry, MenuPath, RenderedMenuNode } from '@theia/core';
-import { inject, injectable } from '@theia/core/shared/inversify';
-import { ContextKeyService } from '@theia/core/lib/browser/context-key-service';
+import * as React from '@ogun/core/shared/react';
+import { CommandMenu, CommandRegistry, CompoundMenuNode, DisposableCollection, Emitter, Event, MenuModelRegistry, MenuPath, RenderedMenuNode } from '@ogun/core';
+import { inject, injectable } from '@ogun/core/shared/inversify';
+import { ContextKeyService } from '@ogun/core/lib/browser/context-key-service';
 import { NotebookCellSidebar, NotebookCellToolbar } from './notebook-cell-toolbar';
-import { ContextMenuRenderer } from '@theia/core/lib/browser';
+import { ContextMenuRenderer } from '@ogun/core/lib/browser';
 import { NotebookCellModel } from '../view-model/notebook-cell-model';
 import { NotebookContextManager } from '../service/notebook-context-manager';
 

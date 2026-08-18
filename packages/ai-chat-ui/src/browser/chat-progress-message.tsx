@@ -14,8 +14,8 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { ChatProgressMessage } from '@theia/ai-chat';
-import * as React from '@theia/core/shared/react';
+import { ChatProgressMessage } from '@ogun/ai-chat';
+import * as React from '@ogun/core/shared/react';
 
 export type ProgressMessageProps = Omit<ChatProgressMessage, 'kind' | 'id' | 'show'>;
 

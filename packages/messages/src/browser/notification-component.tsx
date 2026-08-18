@@ -14,11 +14,11 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import * as React from '@theia/core/shared/react';
-import * as DOMPurify from '@theia/core/shared/dompurify';
+import * as React from '@ogun/core/shared/react';
+import * as DOMPurify from '@ogun/core/shared/dompurify';
 import { NotificationManager, Notification } from './notifications-manager';
-import { codicon, ContextMenuRenderer } from '@theia/core/lib/browser';
-import { nls } from '@theia/core/lib/common/nls';
+import { codicon, ContextMenuRenderer } from '@ogun/core/lib/browser';
+import { nls } from '@ogun/core/lib/common/nls';
 import { NOTIFICATION_CONTEXT_MENU } from './notifications-commands';
 
 export interface NotificationComponentProps {

@@ -14,17 +14,17 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { Command, CommandContribution, CommandRegistry, MenuContribution, MenuModelRegistry, SelectionService, URI } from '@theia/core';
-import { CommonCommands, KeybindingContribution, KeybindingRegistry, OpenWithService } from '@theia/core/lib/browser';
-import { WidgetManager } from '@theia/core/lib/browser/widget-manager';
-import { nls } from '@theia/core/lib/common';
-import { FileUri } from '@theia/core/lib/common/file-uri';
-import { isOSX, isWindows } from '@theia/core/lib/common/os';
-import { UriAwareCommandHandler } from '@theia/core/lib/common/uri-command-handler';
-import '@theia/core/lib/electron-common/electron-api';
-import { inject, injectable } from '@theia/core/shared/inversify';
-import { FileStatNode } from '@theia/filesystem/lib/browser';
-import { WorkspaceService } from '@theia/workspace/lib/browser';
+import { Command, CommandContribution, CommandRegistry, MenuContribution, MenuModelRegistry, SelectionService, URI } from '@ogun/core';
+import { CommonCommands, KeybindingContribution, KeybindingRegistry, OpenWithService } from '@ogun/core/lib/browser';
+import { WidgetManager } from '@ogun/core/lib/browser/widget-manager';
+import { nls } from '@ogun/core/lib/common';
+import { FileUri } from '@ogun/core/lib/common/file-uri';
+import { isOSX, isWindows } from '@ogun/core/lib/common/os';
+import { UriAwareCommandHandler } from '@ogun/core/lib/common/uri-command-handler';
+import '@ogun/core/lib/electron-common/electron-api';
+import { inject, injectable } from '@ogun/core/shared/inversify';
+import { FileStatNode } from '@ogun/filesystem/lib/browser';
+import { WorkspaceService } from '@ogun/workspace/lib/browser';
 import { FILE_NAVIGATOR_ID, FileNavigatorWidget } from '../browser';
 import { NavigatorContextMenu, SHELL_TABBAR_CONTEXT_REVEAL } from '../browser/navigator-contribution';
 

@@ -14,15 +14,15 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { inject, injectable } from '@theia/core/shared/inversify';
-import URI from '@theia/core/lib/common/uri';
-import { SelectionService, UriSelection } from '@theia/core/lib/common';
-import { OpenerService, open } from '@theia/core/lib/browser/opener-service';
-import { MessageService } from '@theia/core/lib/common/message-service';
-import { Command } from '@theia/core/lib/common/command';
-import { DiffUris } from '@theia/core/lib/browser/diff-uris';
-import { FileService } from '@theia/filesystem/lib/browser/file-service';
-import { FileOperationError, FileOperationResult } from '@theia/filesystem/lib/common/files';
+import { inject, injectable } from '@ogun/core/shared/inversify';
+import URI from '@ogun/core/lib/common/uri';
+import { SelectionService, UriSelection } from '@ogun/core/lib/common';
+import { OpenerService, open } from '@ogun/core/lib/browser/opener-service';
+import { MessageService } from '@ogun/core/lib/common/message-service';
+import { Command } from '@ogun/core/lib/common/command';
+import { DiffUris } from '@ogun/core/lib/browser/diff-uris';
+import { FileService } from '@ogun/filesystem/lib/browser/file-service';
+import { FileOperationError, FileOperationResult } from '@ogun/filesystem/lib/common/files';
 
 export namespace NavigatorDiffCommands {
     const COMPARE_CATEGORY = 'Compare';

@@ -14,11 +14,11 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import * as React from '@theia/core/shared/react';
-import { nls } from '@theia/core';
-import { DialogProps } from '@theia/core/lib/browser/dialogs';
-import { ReactDialog } from '@theia/core/lib/browser/dialogs/react-dialog';
-import { SelectComponent } from '@theia/core/lib/browser/widgets/select-component';
+import * as React from '@ogun/core/shared/react';
+import { nls } from '@ogun/core';
+import { DialogProps } from '@ogun/core/lib/browser/dialogs';
+import { ReactDialog } from '@ogun/core/lib/browser/dialogs/react-dialog';
+import { SelectComponent } from '@ogun/core/lib/browser/widgets/select-component';
 import { isHttpOrHttpsUrl } from '../common/mcp-server-preference-validator';
 
 /** Server type edited in the dialog: local stdio launch, remote URL with token authentication, or remote URL with OAuth. */

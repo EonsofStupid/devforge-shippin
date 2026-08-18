@@ -14,16 +14,16 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { inject, injectable, postConstruct } from '@theia/core/shared/inversify';
-import { TabBarToolbarContribution, TabBarToolbarRegistry } from '@theia/core/lib/browser/shell/tab-bar-toolbar';
+import { inject, injectable, postConstruct } from '@ogun/core/shared/inversify';
+import { TabBarToolbarContribution, TabBarToolbarRegistry } from '@ogun/core/lib/browser/shell/tab-bar-toolbar';
 import { AIChatContribution } from './ai-chat-ui-contribution';
-import { Emitter, InMemoryResources, URI, nls } from '@theia/core';
+import { Emitter, InMemoryResources, URI, nls } from '@ogun/core';
 import { ChatCommands } from './chat-view-commands';
-import { CommandRegistry } from '@theia/core/lib/common/command';
+import { CommandRegistry } from '@ogun/core/lib/common/command';
 import { SessionSettingsDialog } from './session-settings-dialog';
-import { MonacoEditorProvider } from '@theia/monaco/lib/browser/monaco-editor-provider';
+import { MonacoEditorProvider } from '@ogun/monaco/lib/browser/monaco-editor-provider';
 import { ChatViewWidget } from './chat-view-widget';
-import { AIActivationService, ENABLE_AI_CONTEXT_KEY } from '@theia/ai-core/lib/browser';
+import { AIActivationService, ENABLE_AI_CONTEXT_KEY } from '@ogun/ai-core/lib/browser';
 
 @injectable()
 export class ChatViewWidgetToolbarContribution implements TabBarToolbarContribution {

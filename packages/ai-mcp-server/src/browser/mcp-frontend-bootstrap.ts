@@ -14,10 +14,10 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { inject, injectable } from '@theia/core/shared/inversify';
-import { MaybePromise } from '@theia/core';
-import { FrontendApplication, FrontendApplicationContribution } from '@theia/core/lib/browser';
-import { ILogger } from '@theia/core/lib/common/logger';
+import { inject, injectable } from '@ogun/core/shared/inversify';
+import { MaybePromise } from '@ogun/core';
+import { FrontendApplication, FrontendApplicationContribution } from '@ogun/core/lib/browser';
+import { ILogger } from '@ogun/core/lib/common/logger';
 import { MCPToolFrontendDelegate } from '../common/mcp-tool-delegate';
 
 /**

@@ -14,17 +14,17 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { injectable, inject } from '@theia/core/shared/inversify';
-import URI from '@theia/core/lib/common/uri';
-import { OpenerService } from '@theia/core/lib/browser';
-import { isOSX } from '@theia/core/lib/common';
-import { Path } from '@theia/core/lib/common/path';
+import { injectable, inject } from '@ogun/core/shared/inversify';
+import URI from '@ogun/core/lib/common/uri';
+import { OpenerService } from '@ogun/core/lib/browser';
+import { isOSX } from '@ogun/core/lib/common';
+import { Path } from '@ogun/core/lib/common/path';
 
 import * as hljs from 'highlight.js';
-import * as markdownit from '@theia/core/shared/markdown-it';
-import * as markdownitemoji from '@theia/core/shared/markdown-it-emoji';
-import * as anchor from '@theia/core/shared/markdown-it-anchor';
-import * as DOMPurify from '@theia/core/shared/dompurify';
+import * as markdownit from '@ogun/core/shared/markdown-it';
+import * as markdownitemoji from '@ogun/core/shared/markdown-it-emoji';
+import * as anchor from '@ogun/core/shared/markdown-it-anchor';
+import * as DOMPurify from '@ogun/core/shared/dompurify';
 import { PreviewUri } from '../preview-uri';
 import { PreviewHandler, RenderContentParams } from '../preview-handler';
 import { PreviewOpenerOptions } from '../preview-contribution';

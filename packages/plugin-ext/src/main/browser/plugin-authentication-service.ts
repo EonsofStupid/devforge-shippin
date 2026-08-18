@@ -14,9 +14,9 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { AuthenticationProvider, AuthenticationService, AuthenticationServiceImpl, AuthenticationSession } from '@theia/core/lib/browser/authentication-service';
-import { inject } from '@theia/core/shared/inversify';
-import { Deferred, timeoutReject } from '@theia/core/lib/common/promise-util';
+import { AuthenticationProvider, AuthenticationService, AuthenticationServiceImpl, AuthenticationSession } from '@ogun/core/lib/browser/authentication-service';
+import { inject } from '@ogun/core/shared/inversify';
+import { Deferred, timeoutReject } from '@ogun/core/lib/common/promise-util';
 import { HostedPluginSupport } from '../../hosted/browser/hosted-plugin';
 
 export function getAuthenticationProviderActivationEvent(id: string): string { return `onAuthenticationRequest:${id}`; }

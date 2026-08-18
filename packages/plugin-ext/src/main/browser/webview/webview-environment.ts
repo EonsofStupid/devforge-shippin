@@ -14,13 +14,13 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { injectable, inject, postConstruct } from '@theia/core/shared/inversify';
-import { Endpoint } from '@theia/core/lib/browser/endpoint';
-import { Deferred } from '@theia/core/lib/common/promise-util';
-import { EnvVariablesServer } from '@theia/core/lib/common/env-variables';
-import URI from '@theia/core/lib/common/uri';
+import { injectable, inject, postConstruct } from '@ogun/core/shared/inversify';
+import { Endpoint } from '@ogun/core/lib/browser/endpoint';
+import { Deferred } from '@ogun/core/lib/common/promise-util';
+import { EnvVariablesServer } from '@ogun/core/lib/common/env-variables';
+import URI from '@ogun/core/lib/common/uri';
 import { WebviewExternalEndpoint } from '../../common/webview-protocol';
-import { environment } from '@theia/core/shared/@theia/application-package/lib/environment';
+import { environment } from '@ogun/core/shared/@ogun/application-package/lib/environment';
 
 @injectable()
 export class WebviewEnvironment {

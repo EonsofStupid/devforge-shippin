@@ -14,8 +14,8 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { interfaces } from '@theia/core/shared/inversify';
-import { MessageService } from '@theia/core/lib/common/message-service';
+import { interfaces } from '@ogun/core/shared/inversify';
+import { MessageService } from '@ogun/core/lib/common/message-service';
 import { MessageRegistryMain, MainMessageType, MainMessageOptions, MainMessageItem } from '../../common/plugin-api-rpc';
 
 /**

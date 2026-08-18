@@ -17,10 +17,10 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 /* tslint:disable:typedef */
 
-import type * as theia from '@theia/plugin';
+import type * as theia from '@ogun/plugin';
 import { CommandRegistryImpl } from './command-registry';
-import { Emitter, Event } from '@theia/core/lib/common/event';
-import { CancellationError, CancellationToken, CancellationTokenSource } from '@theia/core/lib/common/cancellation';
+import { Emitter, Event } from '@ogun/core/lib/common/event';
+import { CancellationError, CancellationToken, CancellationTokenSource } from '@ogun/core/lib/common/cancellation';
 import { QuickOpenExtImpl } from './quick-open';
 import {
     MAIN_RPC_CONTEXT,
@@ -262,7 +262,7 @@ import { LanguagesExtImpl } from './languages';
 import { fromDocumentSelector, pluginToPluginInfo, fromGlobPattern } from './type-converters';
 import { DialogsExtImpl } from './dialogs';
 import { NotificationExtImpl } from './notification';
-import { score } from '@theia/editor/lib/common/language-selector';
+import { score } from '@ogun/editor/lib/common/language-selector';
 import { MarkdownString } from './markdown-string';
 import { TreeViewsExtImpl } from './tree/tree-views';
 import { ConnectionImpl } from '../common/connection';
@@ -282,8 +282,8 @@ import { CommentsExtImpl } from './comments';
 import { CustomEditorsExtImpl } from './custom-editors';
 import { WebviewViewsExtImpl } from './webview-views';
 import { PluginPackage } from '../common';
-import { Endpoint } from '@theia/core/lib/browser/endpoint';
-import { FilePermission } from '@theia/filesystem/lib/common/files';
+import { Endpoint } from '@ogun/core/lib/browser/endpoint';
+import { FilePermission } from '@ogun/filesystem/lib/common/files';
 import { TabsExtImpl } from './tabs';
 import { LocalizationExtImpl } from './localization-ext';
 import { NotebooksExtImpl } from './notebook/notebooks';

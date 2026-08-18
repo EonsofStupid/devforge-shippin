@@ -14,8 +14,8 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { Disposable, DisposableCollection, Emitter } from '@theia/core/lib/common';
-import URI from '@theia/core/lib/common/uri';
+import { Disposable, DisposableCollection, Emitter } from '@ogun/core/lib/common';
+import URI from '@ogun/core/lib/common/uri';
 import { ScmInput, ScmInputOptions } from './scm-input';
 import { ScmProvider } from './scm-provider';
 

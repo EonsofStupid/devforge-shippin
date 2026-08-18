@@ -14,13 +14,13 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { Emitter, Event } from '@theia/core';
-import { Deferred } from '@theia/core/lib/common/promise-util';
-import { inject, injectable, postConstruct } from '@theia/core/shared/inversify';
-import { MCPRegistryUiBridge } from '@theia/ai-mcp/lib/browser/mcp-registry-ui-bridge';
-import { MCPInstallEntry } from '@theia/ai-mcp/lib/browser/mcp-server-editor';
-import { VSXExtensionsContribution } from '@theia/vsx-registry/lib/browser/vsx-extensions-contribution';
-import { VSXExtensionsSearchModel } from '@theia/vsx-registry/lib/browser/vsx-extensions-search-model';
+import { Emitter, Event } from '@ogun/core';
+import { Deferred } from '@ogun/core/lib/common/promise-util';
+import { inject, injectable, postConstruct } from '@ogun/core/shared/inversify';
+import { MCPRegistryUiBridge } from '@ogun/ai-mcp/lib/browser/mcp-registry-ui-bridge';
+import { MCPInstallEntry } from '@ogun/ai-mcp/lib/browser/mcp-server-editor';
+import { VSXExtensionsContribution } from '@ogun/vsx-registry/lib/browser/vsx-extensions-contribution';
+import { VSXExtensionsSearchModel } from '@ogun/vsx-registry/lib/browser/vsx-extensions-search-model';
 import { ResolvedRegistryEntry } from '../../common/mcp/mcp-registry-types';
 import { RegistryFetchService } from '../../common/registry-fetch-service';
 

@@ -14,9 +14,9 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { animationFrame, OpenHandler } from '@theia/core/lib/browser';
-import URI from '@theia/core/lib/common/uri';
-import { injectable, inject } from '@theia/core/shared/inversify';
+import { animationFrame, OpenHandler } from '@ogun/core/lib/browser';
+import URI from '@ogun/core/lib/common/uri';
+import { injectable, inject } from '@ogun/core/shared/inversify';
 import { PreferencesContribution } from './preferences-contribution';
 
 @injectable()

@@ -14,8 +14,8 @@
  * SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
  ********************************************************************************/
 
-import { isOSX, isWindows, nls } from '@theia/core';
-import { PreferenceSchema, PreferenceScope } from '@theia/core/lib/common/preferences';
+import { isOSX, isWindows, nls } from '@ogun/core';
+import { PreferenceSchema, PreferenceScope } from '@ogun/core/lib/common/preferences';
 
 /* eslint-disable @typescript-eslint/quotes,max-len,no-null/no-null */
 

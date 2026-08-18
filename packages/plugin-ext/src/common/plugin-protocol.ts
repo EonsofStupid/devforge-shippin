@@ -13,19 +13,19 @@
 //
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
-import { RpcServer } from '@theia/core/lib/common/messaging/proxy-factory';
+import { RpcServer } from '@ogun/core/lib/common/messaging/proxy-factory';
 import { RPCProtocol } from './rpc-protocol';
-import { Disposable } from '@theia/core/lib/common/disposable';
+import { Disposable } from '@ogun/core/lib/common/disposable';
 import { LogPart, KeysToAnyValues, KeysToKeysToAnyValue } from './types';
 import { CharacterPair, CommentRule, PluginAPIFactory, Plugin, ThemeIcon } from './plugin-api-rpc';
 import { ExtPluginApi } from './plugin-ext-api-contribution';
-import { IJSONSchema, IJSONSchemaSnippet } from '@theia/core/lib/common/json-schema';
-import { ProblemMatcherContribution, ProblemPatternContribution, TaskDefinition } from '@theia/task/lib/common';
-import { ColorDefinition } from '@theia/core/lib/common/color';
-import { ResourceLabelFormatter } from '@theia/core/lib/common/label-protocol';
+import { IJSONSchema, IJSONSchemaSnippet } from '@ogun/core/lib/common/json-schema';
+import { ProblemMatcherContribution, ProblemPatternContribution, TaskDefinition } from '@ogun/task/lib/common';
+import { ColorDefinition } from '@ogun/core/lib/common/color';
+import { ResourceLabelFormatter } from '@ogun/core/lib/common/label-protocol';
 import { PluginIdentifiers } from './plugin-identifiers';
-import { JSONObject } from '@theia/core/shared/@lumino/coreutils';
-import { PreferenceSchema } from '@theia/core';
+import { JSONObject } from '@ogun/core/shared/@lumino/coreutils';
+import { PreferenceSchema } from '@ogun/core';
 
 export { PluginIdentifiers };
 export const hostedServicePath = '/services/hostedPlugin';
@@ -49,7 +49,7 @@ export interface PluginPackage {
     theiaPlugin?: {
         frontend?: string;
         backend?: string;
-        /* Requires the `@theia/plugin-ext-headless` extension. */
+        /* Requires the `@ogun/plugin-ext-headless` extension. */
         headless?: string;
     };
     main?: string;

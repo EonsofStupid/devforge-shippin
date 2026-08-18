@@ -14,14 +14,14 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { injectable, inject, postConstruct } from '@theia/core/shared/inversify';
-import URI from '@theia/core/lib/common/uri';
-import { Path } from '@theia/core/lib/common/path';
-import { ApplicationShell, NavigatableWidget, WidgetManager } from '@theia/core/lib/browser';
-import { VariableContribution, VariableRegistry, Variable } from '@theia/variable-resolver/lib/browser';
+import { injectable, inject, postConstruct } from '@ogun/core/shared/inversify';
+import URI from '@ogun/core/lib/common/uri';
+import { Path } from '@ogun/core/lib/common/path';
+import { ApplicationShell, NavigatableWidget, WidgetManager } from '@ogun/core/lib/browser';
+import { VariableContribution, VariableRegistry, Variable } from '@ogun/variable-resolver/lib/browser';
 import { WorkspaceService } from './workspace-service';
-import { FileService } from '@theia/filesystem/lib/browser/file-service';
-import { nls } from '@theia/core';
+import { FileService } from '@ogun/filesystem/lib/browser/file-service';
+import { nls } from '@ogun/core';
 
 @injectable()
 export class WorkspaceVariableContribution implements VariableContribution {

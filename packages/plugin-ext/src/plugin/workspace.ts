@@ -20,10 +20,10 @@
 // copied and modified from https://github.com/Microsoft/vscode/blob/master/src/vs/workbench/services/workspace/node/workspaceEditingService.ts
 
 import * as paths from 'path';
-import * as theia from '@theia/plugin';
-import { inject, injectable, postConstruct } from '@theia/core/shared/inversify';
-import { Event, Emitter } from '@theia/core/lib/common/event';
-import { CancellationToken } from '@theia/core/lib/common/cancellation';
+import * as theia from '@ogun/plugin';
+import { inject, injectable, postConstruct } from '@ogun/core/shared/inversify';
+import { Event, Emitter } from '@ogun/core/lib/common/event';
+import { CancellationToken } from '@ogun/core/lib/common/cancellation';
 import {
     WorkspaceExt,
     WorkspaceFolderPickOptionsMain,
@@ -31,22 +31,22 @@ import {
     PLUGIN_RPC_CONTEXT as Ext,
     MainMessageType,
 } from '../common/plugin-api-rpc';
-import { Path } from '@theia/core/lib/common/path';
+import { Path } from '@ogun/core/lib/common/path';
 import { RPCProtocol } from '../common/rpc-protocol';
 import { WorkspaceRootsChangeEvent, SearchInWorkspaceResult, Range } from '../common/plugin-api-rpc-model';
 import { EditorsAndDocumentsExtImpl } from './editors-and-documents';
 import { Disposable, URI } from './types-impl';
-import { normalize } from '@theia/core/lib/common/paths';
+import { normalize } from '@ogun/core/lib/common/paths';
 import { relative } from '../common/paths-util';
 import { Schemes, UriComponents } from '../common/uri-components';
 import { MessageRegistryExt } from './message-registry';
 import * as Converter from './type-converters';
-import { FileStat } from '@theia/filesystem/lib/common/files';
+import { FileStat } from '@ogun/filesystem/lib/common/files';
 import { isUndefinedOrNull, isUndefined } from '../common/types';
 import { PluginLogger } from './logger';
-import { consumeStream } from '@theia/core/lib/common/stream';
-import { EncodingService } from '@theia/core/lib/common/encoding-service';
-import { BinaryBuffer, BinaryBufferReadableStream } from '@theia/core/lib/common/buffer';
+import { consumeStream } from '@ogun/core/lib/common/stream';
+import { EncodingService } from '@ogun/core/lib/common/encoding-service';
+import { BinaryBuffer, BinaryBufferReadableStream } from '@ogun/core/lib/common/buffer';
 
 @injectable()
 export class WorkspaceExtImpl implements WorkspaceExt {

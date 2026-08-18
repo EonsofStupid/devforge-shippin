@@ -14,9 +14,9 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-/* eslint-disable @theia/localization-check */
+/* eslint-disable @ogun/localization-check */
 
-import { inject, injectable, unmanaged, named } from '@theia/core/shared/inversify';
+import { inject, injectable, unmanaged, named } from '@ogun/core/shared/inversify';
 import {
     AutoClosingPair,
     AutoClosingPairConditional,
@@ -68,21 +68,21 @@ import {
 } from '../../../common/plugin-protocol';
 import { promises as fs, readdirSync } from 'fs';
 import * as path from 'path';
-import { isObject, isStringArray } from '@theia/core/lib/common/types';
+import { isObject, isStringArray } from '@ogun/core/lib/common/types';
 import { GrammarsReader } from './grammars-reader';
 import { CharacterPair } from '../../../common/plugin-api-rpc';
 import { isENOENT } from '../../../common/errors';
 import * as jsoncparser from 'jsonc-parser';
-import { IJSONSchema, JsonType } from '@theia/core/lib/common/json-schema';
-import { JSONValue } from '@theia/core/shared/@lumino/coreutils';
-import { deepClone } from '@theia/core/lib/common/objects';
-import { PreferenceSchema, PreferenceDataProperty } from '@theia/core/lib/common/preferences/preference-schema';
-import { TaskDefinition } from '@theia/task/lib/common/task-protocol';
-import { ColorDefinition } from '@theia/core/lib/common/color';
-import { CSSIcon } from '@theia/core/lib/common/markdown-rendering/icon-utilities';
+import { IJSONSchema, JsonType } from '@ogun/core/lib/common/json-schema';
+import { JSONValue } from '@ogun/core/shared/@lumino/coreutils';
+import { deepClone } from '@ogun/core/lib/common/objects';
+import { PreferenceSchema, PreferenceDataProperty } from '@ogun/core/lib/common/preferences/preference-schema';
+import { TaskDefinition } from '@ogun/task/lib/common/task-protocol';
+import { ColorDefinition } from '@ogun/core/lib/common/color';
+import { CSSIcon } from '@ogun/core/lib/common/markdown-rendering/icon-utilities';
 import { PluginUriFactory } from './plugin-uri-factory';
-import { PreferenceScope } from '@theia/core/lib/common/preferences/preference-scope';
-import { ILogger } from '@theia/core';
+import { PreferenceScope } from '@ogun/core/lib/common/preferences/preference-scope';
+import { ILogger } from '@ogun/core';
 
 const colorIdPattern = '^\\w+[.\\w+]*$';
 const iconIdPattern = `^${CSSIcon.iconNameSegment}(-${CSSIcon.iconNameSegment})+$`;

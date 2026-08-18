@@ -17,8 +17,8 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 
 import * as debounce from 'p-debounce';
-import { Disposable, DisposableCollection, Emitter } from '@theia/core/lib/common';
-import { JSONExt, JSONObject } from '@theia/core/shared/@lumino/coreutils';
+import { Disposable, DisposableCollection, Emitter } from '@ogun/core/lib/common';
+import { JSONExt, JSONObject } from '@ogun/core/shared/@lumino/coreutils';
 
 export interface ScmInputIssue {
     message: string;

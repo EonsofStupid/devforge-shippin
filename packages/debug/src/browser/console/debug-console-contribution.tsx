@@ -15,23 +15,23 @@
 // *****************************************************************************
 import '../../../src/browser/style/debug.css';
 
-import { ConsoleSessionManager } from '@theia/console/lib/browser/console-session-manager';
-import { ConsoleOptions, ConsoleWidget } from '@theia/console/lib/browser/console-widget';
-import { AbstractViewContribution, bindViewContribution, codicon, HoverService, Widget, WidgetFactory } from '@theia/core/lib/browser';
-import { ContextKey, ContextKeyService } from '@theia/core/lib/browser/context-key-service';
-import { nls } from '@theia/core/lib/common/nls';
-import { TabBarToolbarContribution, TabBarToolbarRegistry } from '@theia/core/lib/browser/shell/tab-bar-toolbar';
-import { Command, CommandRegistry } from '@theia/core/lib/common/command';
-import { Severity } from '@theia/core/lib/common/severity';
-import { inject, injectable, interfaces, postConstruct } from '@theia/core/shared/inversify';
-import * as React from '@theia/core/shared/react';
-import { SelectComponent, SelectOption } from '@theia/core/lib/browser/widgets/select-component';
+import { ConsoleSessionManager } from '@ogun/console/lib/browser/console-session-manager';
+import { ConsoleOptions, ConsoleWidget } from '@ogun/console/lib/browser/console-widget';
+import { AbstractViewContribution, bindViewContribution, codicon, HoverService, Widget, WidgetFactory } from '@ogun/core/lib/browser';
+import { ContextKey, ContextKeyService } from '@ogun/core/lib/browser/context-key-service';
+import { nls } from '@ogun/core/lib/common/nls';
+import { TabBarToolbarContribution, TabBarToolbarRegistry } from '@ogun/core/lib/browser/shell/tab-bar-toolbar';
+import { Command, CommandRegistry } from '@ogun/core/lib/common/command';
+import { Severity } from '@ogun/core/lib/common/severity';
+import { inject, injectable, interfaces, postConstruct } from '@ogun/core/shared/inversify';
+import * as React from '@ogun/core/shared/react';
+import { SelectComponent, SelectOption } from '@ogun/core/lib/browser/widgets/select-component';
 import { DebugSession } from '../debug-session';
 import { DebugSessionManager, DidChangeActiveDebugSession } from '../debug-session-manager';
 import { DebugConsoleSession, DebugConsoleSessionFactory } from './debug-console-session';
-import { Disposable, DisposableCollection, Emitter, Event, InMemoryResources } from '@theia/core';
-import { MarkdownStringImpl } from '@theia/core/lib/common/markdown-rendering';
-import debounce = require('@theia/core/shared/lodash.debounce');
+import { Disposable, DisposableCollection, Emitter, Event, InMemoryResources } from '@ogun/core';
+import { MarkdownStringImpl } from '@ogun/core/lib/common/markdown-rendering';
+import debounce = require('@ogun/core/shared/lodash.debounce');
 
 export type InDebugReplContextKey = ContextKey<boolean>;
 export const InDebugReplContextKey = Symbol('inDebugReplContextKey');

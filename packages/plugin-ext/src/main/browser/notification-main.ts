@@ -15,7 +15,7 @@
 // *****************************************************************************
 
 import { MAIN_RPC_CONTEXT } from '../../common';
-import { interfaces } from '@theia/core/shared/inversify';
+import { interfaces } from '@ogun/core/shared/inversify';
 import { RPCProtocol } from '../../common/rpc-protocol';
 import { BasicNotificationMainImpl } from '../common/basic-notification-main';
 

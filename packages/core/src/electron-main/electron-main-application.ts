@@ -25,7 +25,7 @@ import { AddressInfo } from 'net';
 import { promises as fs } from 'fs';
 import { existsSync, mkdirSync } from 'fs-extra';
 import { fork, ForkOptions } from 'child_process';
-import { DefaultTheme, ElectronFrontendApplicationConfig, FrontendApplicationConfig } from '@theia/application-package/lib/application-props';
+import { DefaultTheme, ElectronFrontendApplicationConfig, FrontendApplicationConfig } from '@ogun/application-package/lib/application-props';
 import URI from '../common/uri';
 import { FileUri } from '../common/file-uri';
 import { Deferred, timeout } from '../common/promise-util';

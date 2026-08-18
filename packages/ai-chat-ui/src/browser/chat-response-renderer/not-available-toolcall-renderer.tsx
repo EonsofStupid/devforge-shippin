@@ -15,11 +15,11 @@
 // *****************************************************************************
 
 import { ChatResponsePartRenderer } from '../chat-response-part-renderer';
-import { injectable } from '@theia/core/shared/inversify';
-import { ChatResponseContent, ToolCallChatResponseContent } from '@theia/ai-chat/lib/common';
-import { ReactNode } from '@theia/core/shared/react';
-import { codicon } from '@theia/core/lib/browser';
-import * as React from '@theia/core/shared/react';
+import { injectable } from '@ogun/core/shared/inversify';
+import { ChatResponseContent, ToolCallChatResponseContent } from '@ogun/ai-chat/lib/common';
+import { ReactNode } from '@ogun/core/shared/react';
+import { codicon } from '@ogun/core/lib/browser';
+import * as React from '@ogun/core/shared/react';
 import { ResponseNode } from '../chat-tree-view';
 
 /**

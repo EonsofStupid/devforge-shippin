@@ -14,7 +14,7 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { CompositeTreeNode, ExpandableTreeNode, SelectableTreeNode, TreeNode } from '@theia/core/lib/browser';
+import { CompositeTreeNode, ExpandableTreeNode, SelectableTreeNode, TreeNode } from '@ogun/core/lib/browser';
 
 export const ROOT_ID = 'ResourcePropertiesTree';
 

@@ -14,12 +14,12 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { enableJSDOM } from '@theia/core/lib/browser/test/jsdom';
+import { enableJSDOM } from '@ogun/core/lib/browser/test/jsdom';
 const disableJSDOM = enableJSDOM();
 
 import { expect } from 'chai';
-import { ContextKey, ContextKeyServiceDummyImpl, ContextKeyValue } from '@theia/core/lib/browser/context-key-service';
-import { Emitter } from '@theia/core/lib/common/event';
+import { ContextKey, ContextKeyServiceDummyImpl, ContextKeyValue } from '@ogun/core/lib/browser/context-key-service';
+import { Emitter } from '@ogun/core/lib/common/event';
 import { ScmContextKeyService } from './scm-context-key-service';
 import { ScmContribution } from './scm-contribution';
 import { ScmRepository } from './scm-repository';

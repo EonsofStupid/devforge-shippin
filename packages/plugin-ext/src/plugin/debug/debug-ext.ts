@@ -13,27 +13,27 @@
 //
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
-import { inject, injectable, postConstruct } from '@theia/core/shared/inversify';
-import { Emitter } from '@theia/core/lib/common/event';
-import { Path } from '@theia/core/lib/common/path';
-import * as theia from '@theia/plugin';
-import { URI } from '@theia/core/shared/vscode-uri';
+import { inject, injectable, postConstruct } from '@ogun/core/shared/inversify';
+import { Emitter } from '@ogun/core/lib/common/event';
+import { Path } from '@ogun/core/lib/common/path';
+import * as theia from '@ogun/plugin';
+import { URI } from '@ogun/core/shared/vscode-uri';
 import { Breakpoint, DebugStackFrameDTO, DebugThreadDTO } from '../../common/plugin-api-rpc-model';
 import { DebugConfigurationProviderTriggerKind, DebugExt, DebugMain, PLUGIN_RPC_CONTEXT as Ext, TerminalOptionsExt } from '../../common/plugin-api-rpc';
 import { PluginPackageDebuggersContribution } from '../../common/plugin-protocol';
 import { RPCProtocol } from '../../common/rpc-protocol';
 import { CommandRegistryImpl } from '../command-registry';
 import { ConnectionImpl } from '../../common/connection';
-import { DEBUG_SCHEME, SCHEME_PATTERN } from '@theia/debug/lib/common/debug-uri-utils';
+import { DEBUG_SCHEME, SCHEME_PATTERN } from '@ogun/debug/lib/common/debug-uri-utils';
 import { Disposable, Breakpoint as BreakpointExt, SourceBreakpoint, FunctionBreakpoint, Location, Range, URI as URIImpl, DebugStackFrame, DebugThread } from '../types-impl';
 import { PluginDebugAdapterSession } from './plugin-debug-adapter-session';
 import { PluginDebugAdapterTracker } from './plugin-debug-adapter-tracker';
-import { generateUuid } from '@theia/core/lib/common/uuid';
-import { DebugAdapter } from '@theia/debug/lib/common/debug-model';
+import { generateUuid } from '@ogun/core/lib/common/uuid';
+import { DebugAdapter } from '@ogun/debug/lib/common/debug-model';
 import { PluginDebugAdapterCreator } from './plugin-debug-adapter-creator';
 import { NodeDebugAdapterCreator } from '../node/debug/plugin-node-debug-adapter-creator';
 import { DebugProtocol } from '@vscode/debugprotocol';
-import { DebugConfiguration, DebugSessionOptions } from '@theia/debug/lib/common/debug-configuration';
+import { DebugConfiguration, DebugSessionOptions } from '@ogun/debug/lib/common/debug-configuration';
 import { checkTestRunInstance } from '../tests';
 import { PluginLogger } from '../logger';
 

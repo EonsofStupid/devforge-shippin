@@ -14,10 +14,10 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { inject, injectable, postConstruct } from '@theia/core/shared/inversify';
-import { LocalStorageService, StorageService } from '@theia/core/lib/browser/storage-service';
+import { inject, injectable, postConstruct } from '@ogun/core/shared/inversify';
+import { LocalStorageService, StorageService } from '@ogun/core/lib/browser/storage-service';
 import { WorkspaceService } from './workspace-service';
-import { FileStat } from '@theia/filesystem/lib/common/files';
+import { FileStat } from '@ogun/filesystem/lib/common/files';
 
 /*
  * Prefixes any stored data with the current workspace path.

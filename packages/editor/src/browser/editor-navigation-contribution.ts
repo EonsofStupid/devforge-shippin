@@ -14,22 +14,22 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { inject, injectable, postConstruct } from '@theia/core/shared/inversify';
-import { ILogger } from '@theia/core/lib/common/logger';
-import { StorageService } from '@theia/core/lib/browser/storage-service';
-import { Disposable, DisposableCollection } from '@theia/core/lib/common/disposable';
-import { FrontendApplicationContribution } from '@theia/core/lib/browser/frontend-application-contribution';
-import { CommandRegistry } from '@theia/core/lib/common/command';
+import { inject, injectable, postConstruct } from '@ogun/core/shared/inversify';
+import { ILogger } from '@ogun/core/lib/common/logger';
+import { StorageService } from '@ogun/core/lib/browser/storage-service';
+import { Disposable, DisposableCollection } from '@ogun/core/lib/common/disposable';
+import { FrontendApplicationContribution } from '@ogun/core/lib/browser/frontend-application-contribution';
+import { CommandRegistry } from '@ogun/core/lib/common/command';
 import { EditorCommands } from './editor-command';
 import { EditorWidget } from './editor-widget';
 import { EditorManager } from './editor-manager';
 import { TextEditor, Position, Range, TextDocumentChangeEvent } from './editor';
 import { NavigationLocation, RecentlyClosedEditor } from './navigation/navigation-location';
 import { NavigationLocationService } from './navigation/navigation-location-service';
-import { addEventListener } from '@theia/core/lib/browser';
-import { ConfirmDialog, Dialog } from '@theia/core/lib/browser/dialogs';
-import { nls } from '@theia/core';
-import { PreferenceService, PreferenceScope } from '@theia/core/lib/common/preferences';
+import { addEventListener } from '@ogun/core/lib/browser';
+import { ConfirmDialog, Dialog } from '@ogun/core/lib/browser/dialogs';
+import { nls } from '@ogun/core';
+import { PreferenceService, PreferenceScope } from '@ogun/core/lib/common/preferences';
 
 @injectable()
 export class EditorNavigationContribution implements Disposable, FrontendApplicationContribution {

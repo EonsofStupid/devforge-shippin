@@ -1,2 +1,2 @@
-import Electron = require('@theia/electron/shared/electron');
+import Electron = require('@ogun/electron/shared/electron');
 export = Electron;

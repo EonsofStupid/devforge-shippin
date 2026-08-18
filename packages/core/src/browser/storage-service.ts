@@ -18,7 +18,7 @@ import { inject, injectable, postConstruct } from 'inversify';
 import { ILogger } from '../common/logger';
 import { MessageService } from '../common/message-service';
 import { WindowService } from './window/window-service';
-import { environment } from '@theia/application-package/lib/environment';
+import { environment } from '@ogun/application-package/lib/environment';
 
 export const StorageService = Symbol('IStorageService');
 /**

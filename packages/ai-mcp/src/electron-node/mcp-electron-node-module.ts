@@ -14,8 +14,8 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { ContainerModule } from '@theia/core/shared/inversify';
-import { BackendApplicationContribution } from '@theia/core/lib/node/backend-application';
+import { ContainerModule } from '@ogun/core/shared/inversify';
+import { BackendApplicationContribution } from '@ogun/core/lib/node/backend-application';
 import { MCPOAuthCallbackEndpoint } from '../node/mcp-oauth-callback-endpoint';
 import { MCPOAuthLoopbackCallbackServer } from './mcp-oauth-loopback-callback-server';
 

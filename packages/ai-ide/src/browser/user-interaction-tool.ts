@@ -14,17 +14,17 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { ToolProvider, ToolRequest, ToolRequestParameterProperty, ToolRequestParameters } from '@theia/ai-core';
-import { ToolInvocationContext } from '@theia/ai-core/lib/common/language-model';
-import { ChatToolContext } from '@theia/ai-chat';
-import { DiffUris } from '@theia/core/lib/browser/diff-uris';
-import { open, OpenerService } from '@theia/core/lib/browser';
-import { Deferred } from '@theia/core/lib/common/promise-util';
-import { MEMORY_TEXT, MEMORY_TEXT_READONLY, ResourceProvider } from '@theia/core/lib/common/resource';
-import URI from '@theia/core/lib/common/uri';
-import { inject, injectable } from '@theia/core/shared/inversify';
-import { EditorManager } from '@theia/editor/lib/browser';
-import { ScmService } from '@theia/scm/lib/browser/scm-service';
+import { ToolProvider, ToolRequest, ToolRequestParameterProperty, ToolRequestParameters } from '@ogun/ai-core';
+import { ToolInvocationContext } from '@ogun/ai-core/lib/common/language-model';
+import { ChatToolContext } from '@ogun/ai-chat';
+import { DiffUris } from '@ogun/core/lib/browser/diff-uris';
+import { open, OpenerService } from '@ogun/core/lib/browser';
+import { Deferred } from '@ogun/core/lib/common/promise-util';
+import { MEMORY_TEXT, MEMORY_TEXT_READONLY, ResourceProvider } from '@ogun/core/lib/common/resource';
+import URI from '@ogun/core/lib/common/uri';
+import { inject, injectable } from '@ogun/core/shared/inversify';
+import { EditorManager } from '@ogun/editor/lib/browser';
+import { ScmService } from '@ogun/scm/lib/browser/scm-service';
 import { WorkspaceFunctionScope } from './workspace-functions';
 import {
     ContentRef,

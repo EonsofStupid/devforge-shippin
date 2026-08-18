@@ -1,7 +1,7 @@
 require:
   - 'ignore-styles'
   - 'reflect-metadata/Reflect'
-  - '@theia/test-setup'
+  - '@ogun/test-setup'
 reporter: 'spec'
 watch-files:
     - '**/*.js'

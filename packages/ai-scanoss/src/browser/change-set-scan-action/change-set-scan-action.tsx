@@ -14,23 +14,23 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import * as React from '@theia/core/shared/react';
-import { ChangeSet, ChangeSetElement } from '@theia/ai-chat';
-import { inject, injectable, postConstruct } from '@theia/core/shared/inversify';
-import { ChangeSetActionRenderer } from '@theia/ai-chat-ui/lib/browser/change-set-actions/change-set-action-service';
-import { PreferenceService } from '@theia/core/lib/common/preferences';
-import { ScanOSSService, ScanOSSResult, ScanOSSResultMatch } from '@theia/scanoss';
+import * as React from '@ogun/core/shared/react';
+import { ChangeSet, ChangeSetElement } from '@ogun/ai-chat';
+import { inject, injectable, postConstruct } from '@ogun/core/shared/inversify';
+import { ChangeSetActionRenderer } from '@ogun/ai-chat-ui/lib/browser/change-set-actions/change-set-action-service';
+import { PreferenceService } from '@ogun/core/lib/common/preferences';
+import { ScanOSSService, ScanOSSResult, ScanOSSResultMatch } from '@ogun/scanoss';
 import { SCANOSS_MODE_PREF } from '../../common/ai-scanoss-preferences';
-import { SCAN_OSS_API_KEY_PREF } from '@theia/scanoss/lib/common/scanoss-preferences';
-import { ChangeSetFileElement } from '@theia/ai-chat/lib/browser/change-set-file-element';
+import { SCAN_OSS_API_KEY_PREF } from '@ogun/scanoss/lib/common/scanoss-preferences';
+import { ChangeSetFileElement } from '@ogun/ai-chat/lib/browser/change-set-file-element';
 import { ScanOSSDialog } from '../ai-scanoss-code-scan-action';
 import { StandaloneServices } from '@theia/monaco-editor-core/esm/vs/editor/standalone/browser/standaloneServices';
 import { IDiffProviderFactoryService } from '@theia/monaco-editor-core/esm/vs/editor/browser/widget/diffEditor/diffProviderFactoryService';
 import { IDocumentDiffProvider } from '@theia/monaco-editor-core/esm/vs/editor/common/diff/documentDiffProvider';
-import { MonacoTextModelService } from '@theia/monaco/lib/browser/monaco-text-model-service';
-import { CancellationToken, Emitter, MessageService, nls } from '@theia/core';
+import { MonacoTextModelService } from '@ogun/monaco/lib/browser/monaco-text-model-service';
+import { CancellationToken, Emitter, MessageService, nls } from '@ogun/core';
 import { ChangeSetScanDecorator } from './change-set-scan-decorator';
-import { AIActivationService } from '@theia/ai-core/lib/browser';
+import { AIActivationService } from '@ogun/ai-core/lib/browser';
 
 type ScanOSSState = 'pending' | 'clean' | 'match' | 'error' | 'none';
 type ScanOSSResultOptions = 'pending' | ScanOSSResult[] | undefined;

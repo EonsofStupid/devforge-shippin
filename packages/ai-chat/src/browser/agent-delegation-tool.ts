@@ -14,9 +14,9 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { inject, injectable, named } from '@theia/core/shared/inversify';
-import { AGENT_DELEGATION_FUNCTION_ID, ToolInvocationContext, ToolProvider, ToolRequest } from '@theia/ai-core';
-import { Disposable, ILogger } from '@theia/core';
+import { inject, injectable, named } from '@ogun/core/shared/inversify';
+import { AGENT_DELEGATION_FUNCTION_ID, ToolInvocationContext, ToolProvider, ToolRequest } from '@ogun/ai-core';
+import { Disposable, ILogger } from '@ogun/core';
 import {
     assertChatContext,
     ChatAgentService,

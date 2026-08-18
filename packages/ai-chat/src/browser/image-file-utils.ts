@@ -14,8 +14,8 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { ILogger, URI } from '@theia/core';
-import { FileService } from '@theia/filesystem/lib/browser/file-service';
+import { ILogger, URI } from '@ogun/core';
+import { FileService } from '@ogun/filesystem/lib/browser/file-service';
 
 const MIME_TYPES: { [key: string]: string } = {
     '.jpg': 'image/jpeg',

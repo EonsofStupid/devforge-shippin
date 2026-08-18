@@ -14,9 +14,9 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { ApplicationPackage } from '@theia/core/shared/@theia/application-package';
-import { inject, injectable } from '@theia/core/shared/inversify';
-import { RemoteCopyRegistry, RemoteFile, RemoteCopyOptions } from '@theia/core/lib/node/remote/remote-copy-contribution';
+import { ApplicationPackage } from '@ogun/core/shared/@ogun/application-package';
+import { inject, injectable } from '@ogun/core/shared/inversify';
+import { RemoteCopyRegistry, RemoteFile, RemoteCopyOptions } from '@ogun/core/lib/node/remote/remote-copy-contribution';
 import { glob as globCallback } from 'glob';
 import { promisify } from 'util';
 import * as path from 'path';

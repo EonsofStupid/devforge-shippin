@@ -20,17 +20,17 @@ describe('Saveable', function () {
 
     const { assert } = chai;
 
-    const { EditorManager } = require('@theia/editor/lib/browser/editor-manager');
-    const { EditorWidget } = require('@theia/editor/lib/browser/editor-widget');
-    const { PreferenceService } = require('@theia/core/lib/common/preferences/preference-service');
-    const { Saveable, SaveableWidget } = require('@theia/core/lib/browser/saveable');
-    const { WorkspaceService } = require('@theia/workspace/lib/browser/workspace-service');
-    const { FileService } = require('@theia/filesystem/lib/browser/file-service');
-    const { FileResource } = require('@theia/filesystem/lib/browser/file-resource');
-    const { ETAG_DISABLED } = require('@theia/filesystem/lib/common/files');
-    const { MonacoEditor } = require('@theia/monaco/lib/browser/monaco-editor');
-    const { Deferred, timeout } = require('@theia/core/lib/common/promise-util');
-    const { Disposable, DisposableCollection } = require('@theia/core/lib/common/disposable');
+    const { EditorManager } = require('@ogun/editor/lib/browser/editor-manager');
+    const { EditorWidget } = require('@ogun/editor/lib/browser/editor-widget');
+    const { PreferenceService } = require('@ogun/core/lib/common/preferences/preference-service');
+    const { Saveable, SaveableWidget } = require('@ogun/core/lib/browser/saveable');
+    const { WorkspaceService } = require('@ogun/workspace/lib/browser/workspace-service');
+    const { FileService } = require('@ogun/filesystem/lib/browser/file-service');
+    const { FileResource } = require('@ogun/filesystem/lib/browser/file-resource');
+    const { ETAG_DISABLED } = require('@ogun/filesystem/lib/common/files');
+    const { MonacoEditor } = require('@ogun/monaco/lib/browser/monaco-editor');
+    const { Deferred, timeout } = require('@ogun/core/lib/common/promise-util');
+    const { Disposable, DisposableCollection } = require('@ogun/core/lib/common/disposable');
     const { Range } = require('@theia/monaco-editor-core/esm/vs/editor/common/core/range');
 
     const container = window.theia.container;
@@ -38,7 +38,7 @@ describe('Saveable', function () {
     const editorManager = container.get(EditorManager);
     const workspaceService = container.get(WorkspaceService);
     const fileService = container.get(FileService);
-    /** @type {import('@theia/core/lib/common/preferences/preference-service').PreferenceService} */
+    /** @type {import('@ogun/core/lib/common/preferences/preference-service').PreferenceService} */
     const preferences = container.get(PreferenceService);
 
     /** @type {EditorWidget & SaveableWidget} */

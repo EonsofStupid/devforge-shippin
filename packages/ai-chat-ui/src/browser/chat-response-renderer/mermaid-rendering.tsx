@@ -14,19 +14,19 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { UntitledResourceResolver } from '@theia/core';
-import { OpenerService } from '@theia/core/lib/browser';
-import { ClipboardService } from '@theia/core/lib/browser/clipboard-service';
-import { ThemeService } from '@theia/core/lib/browser/theming';
-import { isOSX } from '@theia/core/lib/common/os';
-import { nls } from '@theia/core/lib/common/nls';
-import { getThemeMode, ThemeMode } from '@theia/core/lib/common/theme';
-import { generateUuid } from '@theia/core/lib/common/uuid';
-import * as DOMPurify from '@theia/core/shared/dompurify';
-import * as React from '@theia/core/shared/react';
-import { ReactNode } from '@theia/core/shared/react';
+import { UntitledResourceResolver } from '@ogun/core';
+import { OpenerService } from '@ogun/core/lib/browser';
+import { ClipboardService } from '@ogun/core/lib/browser/clipboard-service';
+import { ThemeService } from '@ogun/core/lib/browser/theming';
+import { isOSX } from '@ogun/core/lib/common/os';
+import { nls } from '@ogun/core/lib/common/nls';
+import { getThemeMode, ThemeMode } from '@ogun/core/lib/common/theme';
+import { generateUuid } from '@ogun/core/lib/common/uuid';
+import * as DOMPurify from '@ogun/core/shared/dompurify';
+import * as React from '@ogun/core/shared/react';
+import { ReactNode } from '@ogun/core/shared/react';
 import { IMouseEvent } from '@theia/monaco-editor-core';
-import { MonacoEditorProvider } from '@theia/monaco/lib/browser/monaco-editor-provider';
+import { MonacoEditorProvider } from '@ogun/monaco/lib/browser/monaco-editor-provider';
 import type { Mermaid } from 'mermaid';
 import { CodeWrapper } from './code-part-renderer';
 import { MarkdownRender } from './markdown-part-renderer';

@@ -14,13 +14,13 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { injectable } from '@theia/core/shared/inversify';
+import { injectable } from '@ogun/core/shared/inversify';
 
-import { ElectronMainApplication, ElectronMainApplicationContribution } from '@theia/core/lib/electron-main/electron-main-application';
-import { MaybePromise } from '@theia/core';
+import { ElectronMainApplication, ElectronMainApplicationContribution } from '@ogun/core/lib/electron-main/electron-main-application';
+import { MaybePromise } from '@ogun/core';
 import { CHANNEL_SHOW_OPEN, CHANNEL_SHOW_SAVE, OpenDialogOptions, SaveDialogOptions } from '../electron-common/electron-api';
 import { ipcMain, OpenDialogOptions as ElectronOpenDialogOptions, SaveDialogOptions as ElectronSaveDialogOptions, BrowserWindow, dialog }
-    from '@theia/core/electron-shared/electron';
+    from '@ogun/core/electron-shared/electron';
 
 @injectable()
 export class ElectronApi implements ElectronMainApplicationContribution {

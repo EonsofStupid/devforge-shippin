@@ -14,10 +14,10 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import * as React from '@theia/core/shared/react';
-import { ReactNode } from '@theia/core/shared/react';
-import { OpenerService } from '@theia/core/lib/browser';
-import { isToolCallContent, ToolCallResult } from '@theia/ai-core';
+import * as React from '@ogun/core/shared/react';
+import { ReactNode } from '@ogun/core/shared/react';
+import { OpenerService } from '@ogun/core/lib/browser';
+import { isToolCallContent, ToolCallResult } from '@ogun/ai-core';
 import { MarkdownRender } from './markdown-part-renderer';
 
 /** Parses a tool call result that may be a JSON string, returning the original value on failure. */

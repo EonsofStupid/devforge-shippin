@@ -14,30 +14,30 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { enableJSDOM } from '@theia/core/lib/browser/test/jsdom';
+import { enableJSDOM } from '@ogun/core/lib/browser/test/jsdom';
 
 let disableJSDOM = enableJSDOM();
 
-import { FrontendApplicationConfigProvider } from '@theia/core/lib/browser/frontend-application-config-provider';
+import { FrontendApplicationConfigProvider } from '@ogun/core/lib/browser/frontend-application-config-provider';
 FrontendApplicationConfigProvider.set({});
 
-import URI from '@theia/core/lib/common/uri';
+import URI from '@ogun/core/lib/common/uri';
 import { expect } from 'chai';
-import { Container } from '@theia/core/shared/inversify';
-import { ContributionProvider, Event } from '@theia/core/lib/common';
-import { LabelProvider, LabelProviderContribution, DefaultUriLabelProviderContribution, ApplicationShell, WidgetManager } from '@theia/core/lib/browser';
+import { Container } from '@ogun/core/shared/inversify';
+import { ContributionProvider, Event } from '@ogun/core/lib/common';
+import { LabelProvider, LabelProviderContribution, DefaultUriLabelProviderContribution, ApplicationShell, WidgetManager } from '@ogun/core/lib/browser';
 import { MarkerInfoNode } from './marker-tree';
 import { MarkerTreeLabelProvider } from './marker-tree-label-provider';
-import { TreeLabelProvider } from '@theia/core/lib/browser/tree/tree-label-provider';
-import { WorkspaceService } from '@theia/workspace/lib/browser';
-import { WorkspaceUriLabelProviderContribution } from '@theia/workspace/lib/browser/workspace-uri-contribution';
-import { WorkspaceVariableContribution } from '@theia/workspace/lib/browser/workspace-variable-contribution';
-import { FileService } from '@theia/filesystem/lib/browser/file-service';
-import { FileStat } from '@theia/filesystem/lib/common/files';
-import { EnvVariablesServer } from '@theia/core/lib/common/env-variables';
-import { MockEnvVariablesServerImpl } from '@theia/core/lib/browser/test/mock-env-variables-server';
-import { FileUri } from '@theia/core/lib/node';
-import { OS } from '@theia/core/lib/common/os';
+import { TreeLabelProvider } from '@ogun/core/lib/browser/tree/tree-label-provider';
+import { WorkspaceService } from '@ogun/workspace/lib/browser';
+import { WorkspaceUriLabelProviderContribution } from '@ogun/workspace/lib/browser/workspace-uri-contribution';
+import { WorkspaceVariableContribution } from '@ogun/workspace/lib/browser/workspace-variable-contribution';
+import { FileService } from '@ogun/filesystem/lib/browser/file-service';
+import { FileStat } from '@ogun/filesystem/lib/common/files';
+import { EnvVariablesServer } from '@ogun/core/lib/common/env-variables';
+import { MockEnvVariablesServerImpl } from '@ogun/core/lib/browser/test/mock-env-variables-server';
+import { FileUri } from '@ogun/core/lib/node';
+import { OS } from '@ogun/core/lib/common/os';
 import * as temp from 'temp';
 
 disableJSDOM();

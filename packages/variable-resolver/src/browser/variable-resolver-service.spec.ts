@@ -15,8 +15,8 @@
 // *****************************************************************************
 
 import * as chai from 'chai';
-import { Container } from '@theia/core/shared/inversify';
-import { cancelled } from '@theia/core/lib/common';
+import { Container } from '@ogun/core/shared/inversify';
+import { cancelled } from '@ogun/core/lib/common';
 import { VariableRegistry } from './variable';
 import { VariableResolverService } from './variable-resolver-service';
 

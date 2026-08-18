@@ -14,9 +14,9 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { RemoteCliContext, RemoteCliContribution } from '@theia/core/lib/node/remote/remote-cli-contribution';
-import { inject, injectable } from '@theia/core/shared/inversify';
-import { PluginDeployerHandler, PluginType } from '@theia/plugin-ext';
+import { RemoteCliContext, RemoteCliContribution } from '@ogun/core/lib/node/remote/remote-cli-contribution';
+import { inject, injectable } from '@ogun/core/shared/inversify';
+import { PluginDeployerHandler, PluginType } from '@ogun/plugin-ext';
 
 @injectable()
 export class VsxRemoteCli implements RemoteCliContribution {

@@ -14,9 +14,9 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { inject, injectable, named } from '@theia/core/shared/inversify';
-import { CommandContribution, CommandRegistry, MenuContribution, MenuModelRegistry, MenuPath, nls } from '@theia/core/lib/common';
-import { ContributionProvider } from '@theia/core/lib/common/contribution-provider';
+import { inject, injectable, named } from '@ogun/core/shared/inversify';
+import { CommandContribution, CommandRegistry, MenuContribution, MenuModelRegistry, MenuPath, nls } from '@ogun/core/lib/common';
+import { ContributionProvider } from '@ogun/core/lib/common/contribution-provider';
 import { ExtensionsSourceContribution } from './extensions-source-contribution';
 import { BUILTIN_QUERY, INSTALLED_QUERY, MODE_QUERIES, RECOMMENDED_QUERY, VSXExtensionsSearchModel } from './vsx-extensions-search-model';
 

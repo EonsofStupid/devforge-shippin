@@ -14,16 +14,16 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { injectable, postConstruct, inject, interfaces, Container } from '@theia/core/shared/inversify';
+import { injectable, postConstruct, inject, interfaces, Container } from '@ogun/core/shared/inversify';
 import {
     BaseWidget, PanelLayout, Message, ApplicationShell, Widget, StatefulWidget, ViewContainer, codicon
-} from '@theia/core/lib/browser';
+} from '@ogun/core/lib/browser';
 import { DebugSessionWidget } from './debug-session-widget';
 import { DebugConfigurationWidget } from './debug-configuration-widget';
 import { DebugViewModel } from './debug-view-model';
 import { DebugSessionManager } from '../debug-session-manager';
-import { ProgressBarFactory } from '@theia/core/lib/browser/progress-bar-factory';
-import { nls } from '@theia/core/lib/common/nls';
+import { ProgressBarFactory } from '@ogun/core/lib/browser/progress-bar-factory';
+import { nls } from '@ogun/core/lib/common/nls';
 
 @injectable()
 export class DebugWidget extends BaseWidget implements StatefulWidget, ApplicationShell.TrackableWidgetProvider {

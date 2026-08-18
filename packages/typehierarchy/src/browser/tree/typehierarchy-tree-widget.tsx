@@ -14,19 +14,19 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import * as React from '@theia/core/shared/react';
-import { inject, injectable } from '@theia/core/shared/inversify';
-import { DockPanel } from '@theia/core/shared/@lumino/widgets';
-import URI from '@theia/core/lib/common/uri';
-import { SymbolKind, Range } from '@theia/core/shared/vscode-languageserver-protocol';
-import { TreeNode } from '@theia/core/lib/browser/tree/tree';
-import { EditorManager } from '@theia/editor/lib/browser/editor-manager';
-import { ContextMenuRenderer } from '@theia/core/lib/browser/context-menu-renderer';
-import { TreeWidget, TreeProps } from '@theia/core/lib/browser/tree/tree-widget';
+import * as React from '@ogun/core/shared/react';
+import { inject, injectable } from '@ogun/core/shared/inversify';
+import { DockPanel } from '@ogun/core/shared/@lumino/widgets';
+import URI from '@ogun/core/lib/common/uri';
+import { SymbolKind, Range } from '@ogun/core/shared/vscode-languageserver-protocol';
+import { TreeNode } from '@ogun/core/lib/browser/tree/tree';
+import { EditorManager } from '@ogun/editor/lib/browser/editor-manager';
+import { ContextMenuRenderer } from '@ogun/core/lib/browser/context-menu-renderer';
+import { TreeWidget, TreeProps } from '@ogun/core/lib/browser/tree/tree-widget';
 import { TypeHierarchyTreeModel } from './typehierarchy-tree-model';
 import { TypeHierarchyTree } from './typehierarchy-tree';
-import { codicon } from '@theia/core/lib/browser';
-import { nls } from '@theia/core/lib/common/nls';
+import { codicon } from '@ogun/core/lib/browser';
+import { nls } from '@ogun/core/lib/common/nls';
 
 @injectable()
 export class TypeHierarchyTreeWidget extends TreeWidget {

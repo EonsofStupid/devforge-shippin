@@ -12,13 +12,13 @@
 
 ## Description
 
-The `@theia/ai-google` integrates Google's models with Theia AI.
+The `@ogun/ai-google` integrates Google's models with Theia AI.
 The Google API key and the models to use can be configured via preferences.
 Alternatively the API key can also be handed in via the `GOOGLE_API_KEY` environment variable.
 
 ## Additional Information
 
-- [API documentation for `@theia/ai-google`](https://eclipse-theia.github.io/theia/docs/next/modules/_theia_ai-google.html)
+- [API documentation for `@ogun/ai-google`](https://eclipse-theia.github.io/theia/docs/next/modules/_theia_ai-google.html)
 - [Theia - GitHub](https://github.com/eclipse-theia/theia)
 - [Theia - Website](https://theia-ide.org/)
 

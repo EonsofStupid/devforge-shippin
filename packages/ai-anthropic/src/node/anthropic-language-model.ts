@@ -36,11 +36,11 @@ import {
     ToolCallResult,
     ToolInvocationContext,
     UserRequest
-} from '@theia/ai-core';
-import { CancellationToken, isArray, nls } from '@theia/core';
+} from '@ogun/ai-core';
+import { CancellationToken, isArray, nls } from '@ogun/core';
 import { Anthropic } from '@anthropic-ai/sdk';
 import type { Base64ImageSource, ImageBlockParam, Message, MessageParam, TextBlockParam, ToolResultBlockParam } from '@anthropic-ai/sdk/resources';
-import { createProxyFetch } from '@theia/ai-core/lib/node';
+import { createProxyFetch } from '@ogun/ai-core/lib/node';
 import { anthropicReasoningFor } from './anthropic-reasoning';
 import { ANTHROPIC_TOOL_SEARCH, ANTHROPIC_TOOL_SEARCH_NATIVE, ANTHROPIC_WEB_FETCH, ANTHROPIC_WEB_SEARCH } from './anthropic-server-tools';
 

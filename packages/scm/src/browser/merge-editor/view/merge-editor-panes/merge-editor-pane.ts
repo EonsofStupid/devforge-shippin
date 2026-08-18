@@ -14,13 +14,13 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { inject, injectable, postConstruct } from '@theia/core/shared/inversify';
-import { Disposable, DisposableCollection } from '@theia/core';
-import { Autorun, DerivedObservable, Observable, ObservableFromEvent } from '@theia/core/lib/common/observable';
-import { BoxPanel, Message } from '@theia/core/lib/browser';
-import { EditorDecoration, EditorWidget, MinimapPosition, OverviewRulerLane, Position, Range, TrackedRangeStickiness } from '@theia/editor/lib/browser';
-import { MonacoEditor } from '@theia/monaco/lib/browser/monaco-editor';
-import { MonacoToProtocolConverter } from '@theia/monaco/lib/browser/monaco-to-protocol-converter';
+import { inject, injectable, postConstruct } from '@ogun/core/shared/inversify';
+import { Disposable, DisposableCollection } from '@ogun/core';
+import { Autorun, DerivedObservable, Observable, ObservableFromEvent } from '@ogun/core/lib/common/observable';
+import { BoxPanel, Message } from '@ogun/core/lib/browser';
+import { EditorDecoration, EditorWidget, MinimapPosition, OverviewRulerLane, Position, Range, TrackedRangeStickiness } from '@ogun/editor/lib/browser';
+import { MonacoEditor } from '@ogun/monaco/lib/browser/monaco-editor';
+import { MonacoToProtocolConverter } from '@ogun/monaco/lib/browser/monaco-to-protocol-converter';
 import { Selection } from '@theia/monaco-editor-core';
 import { MergeEditorPaneHeader, MergeEditorPaneToolbarItem } from './merge-editor-pane-header';
 import { MergeEditor } from '../../merge-editor';

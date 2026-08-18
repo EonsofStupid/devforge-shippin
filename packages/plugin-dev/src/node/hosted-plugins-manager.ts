@@ -14,14 +14,14 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { inject, injectable } from '@theia/core/shared/inversify';
+import { inject, injectable } from '@ogun/core/shared/inversify';
 import * as cp from 'child_process';
-import * as fs from '@theia/core/shared/fs-extra';
+import * as fs from '@ogun/core/shared/fs-extra';
 import * as path from 'path';
-import { FileUri } from '@theia/core/lib/node';
-import { HostedPluginSupport } from '@theia/plugin-ext/lib/hosted/node/hosted-plugin';
-import { LogType } from '@theia/plugin-ext/lib/common/types';
-import { ProcessUtils } from '@theia/core/lib/node/process-utils';
+import { FileUri } from '@ogun/core/lib/node';
+import { HostedPluginSupport } from '@ogun/plugin-ext/lib/hosted/node/hosted-plugin';
+import { LogType } from '@ogun/plugin-ext/lib/common/types';
+import { ProcessUtils } from '@ogun/core/lib/node/process-utils';
 
 export const HostedPluginsManager = Symbol('HostedPluginsManager');
 

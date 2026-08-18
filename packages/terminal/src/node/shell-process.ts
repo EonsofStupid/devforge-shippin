@@ -14,15 +14,15 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { injectable, inject, named } from '@theia/core/shared/inversify';
+import { injectable, inject, named } from '@ogun/core/shared/inversify';
 import * as os from 'os';
-import { ILogger } from '@theia/core/lib/common/logger';
-import { TerminalProcess, TerminalProcessOptions, ProcessManager, MultiRingBuffer } from '@theia/process/lib/node';
-import { isWindows, isOSX } from '@theia/core/lib/common';
-import URI from '@theia/core/lib/common/uri';
-import { FileUri } from '@theia/core/lib/common/file-uri';
-import { EnvironmentUtils } from '@theia/core/lib/node/environment-utils';
-import { parseArgs } from '@theia/process/lib/node/utils';
+import { ILogger } from '@ogun/core/lib/common/logger';
+import { TerminalProcess, TerminalProcessOptions, ProcessManager, MultiRingBuffer } from '@ogun/process/lib/node';
+import { isWindows, isOSX } from '@ogun/core/lib/common';
+import URI from '@ogun/core/lib/common/uri';
+import { FileUri } from '@ogun/core/lib/common/file-uri';
+import { EnvironmentUtils } from '@ogun/core/lib/node/environment-utils';
+import { parseArgs } from '@ogun/process/lib/node/utils';
 
 export const ShellProcessFactory = Symbol('ShellProcessFactory');
 export type ShellProcessFactory = (options: ShellProcessOptions) => ShellProcess;

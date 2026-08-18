@@ -14,12 +14,12 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { ContainerModule } from '@theia/core/shared/inversify';
+import { ContainerModule } from '@ogun/core/shared/inversify';
 import { OVSXClientProvider, OVSXUrlResolver } from '../common';
-import { RequestService } from '@theia/core/shared/@theia/request';
+import { RequestService } from '@ogun/core/shared/@ogun/request';
 import {
     ExtensionIdMatchesFilterFactory, OVSXApiFilter, OVSXApiFilterImpl, OVSXApiFilterProvider, OVSXClient, OVSXHttpClient, OVSXRouterClient, RequestContainsFilterFactory
-} from '@theia/ovsx-client';
+} from '@ogun/ovsx-client';
 import { VSXEnvironment } from './vsx-environment';
 import { RateLimiter } from 'limiter';
 

@@ -188,7 +188,7 @@ bind(MCPFrontendContribution).toService(MyFrontendContribution);
 
 ## Additional Information
 
-- [API documentation for `@theia/ai-mcp-server`](https://eclipse-theia.github.io/theia/docs/next/modules/_theia_ai-mcp-server.html)
+- [API documentation for `@ogun/ai-mcp-server`](https://eclipse-theia.github.io/theia/docs/next/modules/_theia_ai-mcp-server.html)
 - [Theia - GitHub](https://github.com/eclipse-theia/theia)
 - [Theia - Website](https://theia-ide.org/)
 

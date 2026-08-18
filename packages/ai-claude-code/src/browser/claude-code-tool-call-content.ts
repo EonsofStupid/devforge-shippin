@@ -14,8 +14,8 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { ToolCallChatResponseContentImpl } from '@theia/ai-chat/lib/common';
-import { ToolCallResult } from '@theia/ai-core';
+import { ToolCallChatResponseContentImpl } from '@ogun/ai-chat/lib/common';
+import { ToolCallResult } from '@ogun/ai-core';
 
 export class ClaudeCodeToolCallChatResponseContent extends ToolCallChatResponseContentImpl {
     static readonly type = 'claude-code-tool-call';

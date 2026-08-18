@@ -14,13 +14,13 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { ContainerModule } from '@theia/core/shared/inversify';
+import { ContainerModule } from '@ogun/core/shared/inversify';
 import { RemoteWslConnectionProviderImpl } from './remote-wsl-connection-provider';
 import { RemoteWslConnectionProvider, RemoteWslConnectionProviderPath } from '../electron-common/remote-wsl-connection-provider';
-import { ConnectionContainerModule } from '@theia/core/lib/node/messaging/connection-container-module';
-import { ConnectionHandler, RpcConnectionHandler } from '@theia/core';
+import { ConnectionContainerModule } from '@ogun/core/lib/node/messaging/connection-container-module';
+import { ConnectionHandler, RpcConnectionHandler } from '@ogun/core';
 import { WslWorkspaceHandler } from './wsl-workspace-handler';
-import { WorkspaceHandlerContribution } from '@theia/workspace/lib/node/default-workspace-server';
+import { WorkspaceHandlerContribution } from '@ogun/workspace/lib/node/default-workspace-server';
 
 export const wslRemoteConnectionModule = ConnectionContainerModule.create(({ bind, bindBackendService }) => {
     bind(RemoteWslConnectionProviderImpl).toSelf().inSingletonScope();

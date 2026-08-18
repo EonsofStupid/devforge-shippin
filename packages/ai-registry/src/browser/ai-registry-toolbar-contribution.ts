@@ -14,12 +14,12 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { CommandRegistry } from '@theia/core';
-import { Widget } from '@theia/core/lib/browser';
-import { TabBarToolbarContribution, TabBarToolbarRegistry } from '@theia/core/lib/browser/shell/tab-bar-toolbar';
-import { ADD_MCP_SERVER_COMMAND } from '@theia/ai-mcp/lib/browser/mcp-configuration-command-contribution';
-import { VSXExtensionsViewContainer } from '@theia/vsx-registry/lib/browser/vsx-extensions-view-container';
-import { inject, injectable } from '@theia/core/shared/inversify';
+import { CommandRegistry } from '@ogun/core';
+import { Widget } from '@ogun/core/lib/browser';
+import { TabBarToolbarContribution, TabBarToolbarRegistry } from '@ogun/core/lib/browser/shell/tab-bar-toolbar';
+import { ADD_MCP_SERVER_COMMAND } from '@ogun/ai-mcp/lib/browser/mcp-configuration-command-contribution';
+import { VSXExtensionsViewContainer } from '@ogun/vsx-registry/lib/browser/vsx-extensions-view-container';
+import { inject, injectable } from '@ogun/core/shared/inversify';
 
 @injectable()
 export class AIRegistryToolbarContribution implements TabBarToolbarContribution {

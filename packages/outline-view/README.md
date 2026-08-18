@@ -12,11 +12,11 @@
 
 ## Description
 
-The `@theia/outline-view` extension contributes the code outline tree based on a document's symbols.
+The `@ogun/outline-view` extension contributes the code outline tree based on a document's symbols.
 
 ## Additional Information
 
-- [API documentation for `@theia/outline-view`](https://eclipse-theia.github.io/theia/docs/next/modules/_theia_outline-view.html)
+- [API documentation for `@ogun/outline-view`](https://eclipse-theia.github.io/theia/docs/next/modules/_theia_outline-view.html)
 - [Theia - GitHub](https://github.com/eclipse-theia/theia)
 - [Theia - Website](https://theia-ide.org/)
 

@@ -18,16 +18,16 @@ import '../../../src/main/style/status-bar.css';
 import '../../../src/main/browser/style/index.css';
 import '../../../src/main/browser/style/comments.css';
 
-import { ContainerModule } from '@theia/core/shared/inversify';
+import { ContainerModule } from '@ogun/core/shared/inversify';
 import {
     FrontendApplicationContribution, WidgetFactory, bindViewContribution,
     ViewContainerIdentifier, ViewContainer, createTreeContainer, TreeWidget, LabelProviderContribution, LabelProvider,
     UndoRedoHandler, DiffUris, Navigatable, SplitWidget,
     noopWidgetStatusBarContribution,
     WidgetStatusBarContribution
-} from '@theia/core/lib/browser';
-import { MaybePromise, CommandContribution, ResourceResolver, bindRootContributionProvider, URI, generateUuid, PreferenceContribution, nls } from '@theia/core/lib/common';
-import { WebSocketConnectionProvider } from '@theia/core/lib/browser/messaging';
+} from '@ogun/core/lib/browser';
+import { MaybePromise, CommandContribution, ResourceResolver, bindRootContributionProvider, URI, generateUuid, PreferenceContribution, nls } from '@ogun/core/lib/common';
+import { WebSocketConnectionProvider } from '@ogun/core/lib/browser/messaging';
 import { HostedPluginSupport } from '../../hosted/browser/hosted-plugin';
 import { HostedPluginWatcher } from '../../hosted/browser/hosted-plugin-watcher';
 import { OpenUriCommandHandler } from './commands';
@@ -44,10 +44,10 @@ import { TextContentResourceResolver } from './workspace-main';
 import { MainPluginApiProvider } from '../../common/plugin-ext-api-contribution';
 import { PluginPathsService, pluginPathsServicePath } from '../common/plugin-paths-protocol';
 import { KeybindingsContributionPointHandler } from './keybindings/keybindings-contribution-handler';
-import { DebugSessionContributionRegistry } from '@theia/debug/lib/browser/debug-session-contribution';
+import { DebugSessionContributionRegistry } from '@ogun/debug/lib/browser/debug-session-contribution';
 import { PluginDebugSessionContributionRegistry } from './debug/plugin-debug-session-contribution-registry';
 import { PluginDebugService } from './debug/plugin-debug-service';
-import { DebugService } from '@theia/debug/lib/common/debug-service';
+import { DebugService } from '@ogun/debug/lib/common/debug-service';
 import { PluginSharedStyle } from './plugin-shared-style';
 import { SelectionProviderCommandContribution } from './selection-provider-command';
 import { ViewContextKeyService } from './view/view-context-key-service';
@@ -74,7 +74,7 @@ import { CustomEditorWidget } from './custom-editors/custom-editor-widget';
 import { CustomEditorService } from './custom-editors/custom-editor-service';
 import { WebviewFrontendSecurityWarnings } from './webview/webview-frontend-security-warnings';
 import { PluginAuthenticationServiceImpl } from './plugin-authentication-service';
-import { AuthenticationService } from '@theia/core/lib/browser/authentication-service';
+import { AuthenticationService } from '@ogun/core/lib/browser/authentication-service';
 import { bindTreeViewDecoratorUtilities, TreeViewDecoratorService } from './view/tree-view-decorator-service';
 import { PluginMenuCommandAdapter } from './menus/plugin-menu-command-adapter';
 import './theme-icon-override';
@@ -83,8 +83,8 @@ import { PluginTerminalRegistry } from './plugin-terminal-registry';
 import { DnDFileContentStore } from './view/dnd-file-content-store';
 import { WebviewContextKeys } from './webview/webview-context-keys';
 import { LanguagePackService, languagePackServicePath } from '../../common/language-pack-service';
-import { TabBarToolbarContribution } from '@theia/core/lib/browser/shell/tab-bar-toolbar';
-import { CellOutputWebviewFactory } from '@theia/notebook/lib/browser';
+import { TabBarToolbarContribution } from '@ogun/core/lib/browser/shell/tab-bar-toolbar';
+import { CellOutputWebviewFactory } from '@ogun/notebook/lib/browser';
 import { CellOutputWebviewImpl, createCellOutputWebviewContainer } from './notebooks/renderers/cell-output-webview';
 import { ArgumentProcessorContribution } from './command-registry-main';
 import { WebviewSecondaryWindowSupport } from './webview/webview-secondary-window-support';
@@ -94,7 +94,7 @@ import { bindWebviewPreferences } from '../common/webview-preferences';
 import { bindPluginHostEnvironmentPreferences } from '../common/plugin-host-environment-preferences';
 import { WebviewFrontendPreferenceContribution } from './webview/webview-frontend-preference-contribution';
 import { PluginExtToolbarItemArgumentProcessor } from './plugin-ext-argument-processor';
-import { WorkspaceRestriction, WorkspaceRestrictionContribution } from '@theia/workspace/lib/browser/workspace-trust-service';
+import { WorkspaceRestriction, WorkspaceRestrictionContribution } from '@ogun/workspace/lib/browser/workspace-trust-service';
 
 export default new ContainerModule((bind, unbind, isBound, rebind) => {
 

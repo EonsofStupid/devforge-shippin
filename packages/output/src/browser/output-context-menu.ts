@@ -13,9 +13,9 @@
 //
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
-import { injectable } from '@theia/core/shared/inversify';
-import { MenuPath } from '@theia/core/lib/common';
-import { MonacoContextMenuService } from '@theia/monaco/lib/browser/monaco-context-menu';
+import { injectable } from '@ogun/core/shared/inversify';
+import { MenuPath } from '@ogun/core/lib/common';
+import { MonacoContextMenuService } from '@ogun/monaco/lib/browser/monaco-context-menu';
 
 export namespace OutputContextMenu {
     export const MENU_PATH: MenuPath = ['output_context_menu'];

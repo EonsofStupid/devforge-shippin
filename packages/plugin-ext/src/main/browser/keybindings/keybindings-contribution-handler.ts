@@ -14,13 +14,13 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { injectable, inject } from '@theia/core/shared/inversify';
+import { injectable, inject } from '@ogun/core/shared/inversify';
 import { PluginContribution, Keybinding as PluginKeybinding } from '../../../common';
-import { Keybinding } from '@theia/core/lib/common/keybinding';
-import { KeybindingRegistry } from '@theia/core/lib/browser/keybinding';
-import { OS } from '@theia/core/lib/common/os';
-import { Disposable } from '@theia/core/lib/common/disposable';
-import { DisposableCollection } from '@theia/core';
+import { Keybinding } from '@ogun/core/lib/common/keybinding';
+import { KeybindingRegistry } from '@ogun/core/lib/browser/keybinding';
+import { OS } from '@ogun/core/lib/common/os';
+import { Disposable } from '@ogun/core/lib/common/disposable';
+import { DisposableCollection } from '@ogun/core';
 
 @injectable()
 export class KeybindingsContributionPointHandler {

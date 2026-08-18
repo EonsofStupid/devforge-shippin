@@ -14,14 +14,14 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { enableJSDOM } from '@theia/core/lib/browser/test/jsdom';
+import { enableJSDOM } from '@ogun/core/lib/browser/test/jsdom';
 let disableJSDOM = enableJSDOM();
-import { FrontendApplicationConfigProvider } from '@theia/core/lib/browser/frontend-application-config-provider';
+import { FrontendApplicationConfigProvider } from '@ogun/core/lib/browser/frontend-application-config-provider';
 FrontendApplicationConfigProvider.set({});
 
 import { expect } from 'chai';
-import { Emitter, MessageService, ProgressMessage } from '@theia/core';
-import { WindowService } from '@theia/core/lib/browser/window/window-service';
+import { Emitter, MessageService, ProgressMessage } from '@ogun/core';
+import { WindowService } from '@ogun/core/lib/browser/window/window-service';
 import { MCPOAuthFrontendDelegateClientImpl } from './mcp-oauth-frontend-delegate-client';
 import { MCPFrontendNotificationService } from '../common/mcp-server-manager';
 

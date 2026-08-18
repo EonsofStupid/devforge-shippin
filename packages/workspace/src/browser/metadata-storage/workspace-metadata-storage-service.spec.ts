@@ -14,25 +14,25 @@
  * SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
  ********************************************************************************/
 
-import { enableJSDOM } from '@theia/core/lib/browser/test/jsdom';
+import { enableJSDOM } from '@ogun/core/lib/browser/test/jsdom';
 let disableJSDOM = enableJSDOM();
 
-import { FrontendApplicationConfigProvider } from '@theia/core/lib/browser/frontend-application-config-provider';
+import { FrontendApplicationConfigProvider } from '@ogun/core/lib/browser/frontend-application-config-provider';
 FrontendApplicationConfigProvider.set({});
 
-import { Container } from '@theia/core/shared/inversify';
+import { Container } from '@ogun/core/shared/inversify';
 import { expect } from 'chai';
 import * as sinon from 'sinon';
-import { EnvVariablesServer } from '@theia/core/lib/common/env-variables';
-import { ILogger } from '@theia/core/lib/common/logger';
-import { URI } from '@theia/core/lib/common/uri';
-import { BinaryBuffer } from '@theia/core/lib/common/buffer';
-import { FileContent, FileStat, FileStatWithMetadata } from '@theia/filesystem/lib/common/files';
-import { FileService } from '@theia/filesystem/lib/browser/file-service';
+import { EnvVariablesServer } from '@ogun/core/lib/common/env-variables';
+import { ILogger } from '@ogun/core/lib/common/logger';
+import { URI } from '@ogun/core/lib/common/uri';
+import { BinaryBuffer } from '@ogun/core/lib/common/buffer';
+import { FileContent, FileStat, FileStatWithMetadata } from '@ogun/filesystem/lib/common/files';
+import { FileService } from '@ogun/filesystem/lib/browser/file-service';
 import { WorkspaceService } from '../workspace-service';
 import { WorkspaceMetadataStorageServiceImpl, WorkspaceMetadataStoreFactory } from './workspace-metadata-storage-service';
 import { WorkspaceMetadataStoreImpl } from './workspace-metadata-store';
-import * as uuid from '@theia/core/lib/common/uuid';
+import * as uuid from '@ogun/core/lib/common/uuid';
 
 disableJSDOM();
 

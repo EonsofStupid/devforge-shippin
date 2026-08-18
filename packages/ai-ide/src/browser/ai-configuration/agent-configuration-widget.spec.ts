@@ -14,15 +14,15 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { enableJSDOM } from '@theia/core/lib/browser/test/jsdom';
+import { enableJSDOM } from '@ogun/core/lib/browser/test/jsdom';
 let disableJSDOM = enableJSDOM();
 
-import { FrontendApplicationConfigProvider } from '@theia/core/lib/browser/frontend-application-config-provider';
+import { FrontendApplicationConfigProvider } from '@ogun/core/lib/browser/frontend-application-config-provider';
 FrontendApplicationConfigProvider.set({});
 
 import { expect } from 'chai';
-import { URI } from '@theia/core';
-import { CustomAgentsLocation } from '@theia/ai-core/lib/common';
+import { URI } from '@ogun/core';
+import { CustomAgentsLocation } from '@ogun/ai-core/lib/common';
 import { AIAgentConfigurationWidget } from './agent-configuration-widget';
 
 disableJSDOM();

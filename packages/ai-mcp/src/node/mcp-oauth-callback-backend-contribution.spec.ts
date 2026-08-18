@@ -15,7 +15,7 @@
 // *****************************************************************************
 
 import { expect } from 'chai';
-import * as express from '@theia/core/shared/express';
+import * as express from '@ogun/core/shared/express';
 import { MCPOAuthCallbackBackendContribution } from './mcp-oauth-callback-backend-contribution';
 import { MCPOAuthCallbackResponder, MCPOAuthCallbackQuery, MCPOAuthCallbackResponse } from './mcp-oauth-callback-responder';
 

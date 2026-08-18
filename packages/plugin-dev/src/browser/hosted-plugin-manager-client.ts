@@ -14,22 +14,22 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { injectable, inject, postConstruct } from '@theia/core/shared/inversify';
-import URI from '@theia/core/lib/common/uri';
-import { Path } from '@theia/core/lib/common/path';
-import { MessageService, Command, Emitter, Event } from '@theia/core/lib/common';
-import { LabelProvider, isNative, AbstractDialog } from '@theia/core/lib/browser';
-import { WindowService } from '@theia/core/lib/browser/window/window-service';
-import { WorkspaceService } from '@theia/workspace/lib/browser';
-import { FileDialogService } from '@theia/filesystem/lib/browser';
+import { injectable, inject, postConstruct } from '@ogun/core/shared/inversify';
+import URI from '@ogun/core/lib/common/uri';
+import { Path } from '@ogun/core/lib/common/path';
+import { MessageService, Command, Emitter, Event } from '@ogun/core/lib/common';
+import { LabelProvider, isNative, AbstractDialog } from '@ogun/core/lib/browser';
+import { WindowService } from '@ogun/core/lib/browser/window/window-service';
+import { WorkspaceService } from '@ogun/workspace/lib/browser';
+import { FileDialogService } from '@ogun/filesystem/lib/browser';
 import { PluginDebugConfiguration, PluginDevServer } from '../common/plugin-dev-protocol';
-import { LaunchVSCodeArgument, LaunchVSCodeRequest, LaunchVSCodeResult } from '@theia/debug/lib/browser/debug-contribution';
-import { DebugSessionManager } from '@theia/debug/lib/browser/debug-session-manager';
+import { LaunchVSCodeArgument, LaunchVSCodeRequest, LaunchVSCodeResult } from '@ogun/debug/lib/browser/debug-contribution';
+import { DebugSessionManager } from '@ogun/debug/lib/browser/debug-session-manager';
 import { HostedPluginPreferences } from '../common/hosted-plugin-preferences';
-import { FileService } from '@theia/filesystem/lib/browser/file-service';
-import { EnvVariablesServer } from '@theia/core/lib/common/env-variables';
-import { DebugSessionConnection } from '@theia/debug/lib/browser/debug-session-connection';
-import { nls } from '@theia/core/lib/common/nls';
+import { FileService } from '@ogun/filesystem/lib/browser/file-service';
+import { EnvVariablesServer } from '@ogun/core/lib/common/env-variables';
+import { DebugSessionConnection } from '@ogun/debug/lib/browser/debug-session-connection';
+import { nls } from '@ogun/core/lib/common/nls';
 
 /**
  * Commands to control Hosted plugin instances.

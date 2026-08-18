@@ -14,23 +14,23 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { inject, injectable } from '@theia/core/shared/inversify';
-import { ChatResponsePartRenderer } from '@theia/ai-chat-ui/lib/browser/chat-response-part-renderer';
-import { ResponseNode } from '@theia/ai-chat-ui/lib/browser/chat-tree-view';
-import { ChatResponseContent, ToolCallChatResponseContent } from '@theia/ai-chat/lib/common';
-import { ReactNode } from '@theia/core/shared/react';
-import * as React from '@theia/core/shared/react';
-import { codicon, ContextMenuRenderer, KeybindingRegistry, OpenerService } from '@theia/core/lib/browser';
-import { nls } from '@theia/core';
+import { inject, injectable } from '@ogun/core/shared/inversify';
+import { ChatResponsePartRenderer } from '@ogun/ai-chat-ui/lib/browser/chat-response-part-renderer';
+import { ResponseNode } from '@ogun/ai-chat-ui/lib/browser/chat-tree-view';
+import { ChatResponseContent, ToolCallChatResponseContent } from '@ogun/ai-chat/lib/common';
+import { ReactNode } from '@ogun/core/shared/react';
+import * as React from '@ogun/core/shared/react';
+import { codicon, ContextMenuRenderer, KeybindingRegistry, OpenerService } from '@ogun/core/lib/browser';
+import { nls } from '@ogun/core';
 import { TODO_WRITE_FUNCTION_ID, TodoItem, isValidTodoItem } from '../common/todo-tool';
-import { ToolConfirmationKeybindingHints, withToolCallConfirmation } from '@theia/ai-chat-ui/lib/browser/chat-response-renderer/tool-confirmation';
+import { ToolConfirmationKeybindingHints, withToolCallConfirmation } from '@ogun/ai-chat-ui/lib/browser/chat-response-renderer/tool-confirmation';
 import {
     APPROVE_LATEST_TOOL_CONFIRMATION_COMMAND,
     DENY_LATEST_TOOL_CONFIRMATION_COMMAND
-} from '@theia/ai-chat-ui/lib/browser/tool-confirmation-keybinding-contribution';
-import { ToolConfirmationManager } from '@theia/ai-chat/lib/browser/chat-tool-preference-bindings';
-import { PendingToolConfirmationTracker } from '@theia/ai-chat/lib/browser/pending-tool-confirmation-tracker';
-import { ToolInvocationRegistry } from '@theia/ai-core';
+} from '@ogun/ai-chat-ui/lib/browser/tool-confirmation-keybinding-contribution';
+import { ToolConfirmationManager } from '@ogun/ai-chat/lib/browser/chat-tool-preference-bindings';
+import { PendingToolConfirmationTracker } from '@ogun/ai-chat/lib/browser/pending-tool-confirmation-tracker';
+import { ToolInvocationRegistry } from '@ogun/ai-core';
 
 interface TodoListComponentProps {
     todos: TodoItem[] | undefined;

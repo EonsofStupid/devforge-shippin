@@ -13,19 +13,19 @@
 //
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
-import { Container } from '@theia/core/shared/inversify';
-import { bindLogger } from '@theia/core/lib/node/logger-backend-module';
-import { backendApplicationModule } from '@theia/core/lib/node/backend-application-module';
-import processBackendModule from '@theia/process/lib/node/process-backend-module';
-import terminalBackendModule from '@theia/terminal/lib/node/terminal-backend-module';
+import { Container } from '@ogun/core/shared/inversify';
+import { bindLogger } from '@ogun/core/lib/node/logger-backend-module';
+import { backendApplicationModule } from '@ogun/core/lib/node/backend-application-module';
+import processBackendModule from '@ogun/process/lib/node/process-backend-module';
+import terminalBackendModule from '@ogun/terminal/lib/node/terminal-backend-module';
 import taskBackendModule from '../task-backend-module';
-import filesystemBackendModule from '@theia/filesystem/lib/node/filesystem-backend-module';
-import workspaceServer from '@theia/workspace/lib/node/workspace-backend-module';
-import { messagingBackendModule } from '@theia/core/lib/node/messaging/messaging-backend-module';
-import { HttpConnectionValidator } from '@theia/core/lib/node';
-import { ApplicationPackage } from '@theia/core/shared/@theia/application-package';
-import { TerminalProcess } from '@theia/process/lib/node';
-import { ProcessUtils } from '@theia/core/lib/node/process-utils';
+import filesystemBackendModule from '@ogun/filesystem/lib/node/filesystem-backend-module';
+import workspaceServer from '@ogun/workspace/lib/node/workspace-backend-module';
+import { messagingBackendModule } from '@ogun/core/lib/node/messaging/messaging-backend-module';
+import { HttpConnectionValidator } from '@ogun/core/lib/node';
+import { ApplicationPackage } from '@ogun/core/shared/@ogun/application-package';
+import { TerminalProcess } from '@ogun/process/lib/node';
+import { ProcessUtils } from '@ogun/core/lib/node/process-utils';
 
 export function createTaskTestContainer(): Container {
     const testContainer = new Container();

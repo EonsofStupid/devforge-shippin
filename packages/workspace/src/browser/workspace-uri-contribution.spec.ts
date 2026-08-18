@@ -14,25 +14,25 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { enableJSDOM } from '@theia/core/lib/browser/test/jsdom';
+import { enableJSDOM } from '@ogun/core/lib/browser/test/jsdom';
 const disableJSDOM = enableJSDOM();
 
 import { expect } from 'chai';
 import * as sinon from 'sinon';
-import { Container } from '@theia/core/shared/inversify';
-import { Event } from '@theia/core/lib/common/event';
-import { ApplicationShell, WidgetManager } from '@theia/core/lib/browser';
-import { DefaultUriLabelProviderContribution } from '@theia/core/lib/browser/label-provider';
+import { Container } from '@ogun/core/shared/inversify';
+import { Event } from '@ogun/core/lib/common/event';
+import { ApplicationShell, WidgetManager } from '@ogun/core/lib/browser';
+import { DefaultUriLabelProviderContribution } from '@ogun/core/lib/browser/label-provider';
 import { WorkspaceUriLabelProviderContribution } from './workspace-uri-contribution';
-import URI from '@theia/core/lib/common/uri';
+import URI from '@ogun/core/lib/common/uri';
 import { WorkspaceVariableContribution } from './workspace-variable-contribution';
 import { WorkspaceService } from './workspace-service';
-import { FileService } from '@theia/filesystem/lib/browser/file-service';
-import { FileStat } from '@theia/filesystem/lib/common/files';
-import { EnvVariablesServer } from '@theia/core/lib/common/env-variables';
-import { MockEnvVariablesServerImpl } from '@theia/core/lib/browser/test/mock-env-variables-server';
-import { FileUri } from '@theia/core/lib/node';
-import { OS } from '@theia/core/lib/common/os';
+import { FileService } from '@ogun/filesystem/lib/browser/file-service';
+import { FileStat } from '@ogun/filesystem/lib/common/files';
+import { EnvVariablesServer } from '@ogun/core/lib/common/env-variables';
+import { MockEnvVariablesServerImpl } from '@ogun/core/lib/browser/test/mock-env-variables-server';
+import { FileUri } from '@ogun/core/lib/node';
+import { OS } from '@ogun/core/lib/common/os';
 import * as temp from 'temp';
 
 after(() => disableJSDOM());

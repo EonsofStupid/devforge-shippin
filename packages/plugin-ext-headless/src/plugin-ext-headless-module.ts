@@ -14,7 +14,7 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { ContainerModule } from '@theia/core/shared/inversify';
+import { ContainerModule } from '@ogun/core/shared/inversify';
 import { HeadlessPluginContainerModule } from './common/headless-plugin-container';
 import { bindHeadlessHosted, bindCommonHostedBackend } from './hosted/node/plugin-ext-headless-hosted-module';
 import { bindHeadlessMain, bindBackendMain } from './main/node/plugin-ext-headless-main-module';

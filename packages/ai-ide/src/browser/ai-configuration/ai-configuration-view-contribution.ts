@@ -13,12 +13,12 @@
 //
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
-import { Command, CommandRegistry, nls } from '@theia/core';
-import { TabBarToolbarContribution, TabBarToolbarRegistry } from '@theia/core/lib/browser/shell/tab-bar-toolbar';
-import { AIViewContribution } from '@theia/ai-core/lib/browser';
-import { ChatViewWidget } from '@theia/ai-chat-ui/lib/browser/chat-view-widget';
-import { FrontendApplication } from '@theia/core/lib/browser';
-import { inject, injectable } from '@theia/core/shared/inversify';
+import { Command, CommandRegistry, nls } from '@ogun/core';
+import { TabBarToolbarContribution, TabBarToolbarRegistry } from '@ogun/core/lib/browser/shell/tab-bar-toolbar';
+import { AIViewContribution } from '@ogun/ai-core/lib/browser';
+import { ChatViewWidget } from '@ogun/ai-chat-ui/lib/browser/chat-view-widget';
+import { FrontendApplication } from '@ogun/core/lib/browser';
+import { inject, injectable } from '@ogun/core/shared/inversify';
 import { AIConfigurationContainerWidget } from './ai-configuration-widget';
 import { AIConfigurationSelectionService } from './ai-configuration-service';
 import { AIToolsConfigurationWidget } from './tools-configuration-widget';

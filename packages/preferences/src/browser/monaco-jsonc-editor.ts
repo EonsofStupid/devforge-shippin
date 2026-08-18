@@ -15,9 +15,9 @@
 // *****************************************************************************
 
 import * as jsoncparser from 'jsonc-parser';
-import { MonacoEditorModel } from '@theia/monaco/lib/browser/monaco-editor-model';
-import { MonacoWorkspace } from '@theia/monaco/lib/browser/monaco-workspace';
-import { inject, injectable } from '@theia/core/shared/inversify';
+import { MonacoEditorModel } from '@ogun/monaco/lib/browser/monaco-editor-model';
+import { MonacoWorkspace } from '@ogun/monaco/lib/browser/monaco-workspace';
+import { inject, injectable } from '@ogun/core/shared/inversify';
 import * as monaco from '@theia/monaco-editor-core';
 
 @injectable()

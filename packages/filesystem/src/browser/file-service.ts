@@ -29,14 +29,14 @@
 /* eslint-disable @typescript-eslint/tslint/config */
 /* eslint-disable @typescript-eslint/no-explicit-any */
 
-import { injectable, inject, named, postConstruct } from '@theia/core/shared/inversify';
-import URI from '@theia/core/lib/common/uri';
-import { timeout, Deferred } from '@theia/core/lib/common/promise-util';
-import { CancellationToken, CancellationTokenSource } from '@theia/core/lib/common/cancellation';
-import { Disposable, DisposableCollection } from '@theia/core/lib/common/disposable';
-import { WaitUntilEvent, Emitter, AsyncEmitter, Event } from '@theia/core/lib/common/event';
-import { ContributionProvider } from '@theia/core/lib/common/contribution-provider';
-import { TernarySearchTree } from '@theia/core/lib/common/ternary-search-tree';
+import { injectable, inject, named, postConstruct } from '@ogun/core/shared/inversify';
+import URI from '@ogun/core/lib/common/uri';
+import { timeout, Deferred } from '@ogun/core/lib/common/promise-util';
+import { CancellationToken, CancellationTokenSource } from '@ogun/core/lib/common/cancellation';
+import { Disposable, DisposableCollection } from '@ogun/core/lib/common/disposable';
+import { WaitUntilEvent, Emitter, AsyncEmitter, Event } from '@ogun/core/lib/common/event';
+import { ContributionProvider } from '@ogun/core/lib/common/contribution-provider';
+import { TernarySearchTree } from '@ogun/core/lib/common/ternary-search-tree';
 import {
     ensureFileSystemProviderError, etag, ETAG_DISABLED,
     FileChangesEvent,
@@ -53,23 +53,23 @@ import {
     MoveFileOptions, CopyFileOptions, BaseStatWithMetadata, FileDeleteOptions, FileOperationOptions, hasAccessCapability, hasUpdateCapability,
     hasFileReadStreamCapability, FileSystemProviderWithFileReadStreamCapability, ReadOnlyMessageFileSystemProvider
 } from '../common/files';
-import { BinaryBuffer, BinaryBufferReadable, BinaryBufferReadableStream, BinaryBufferReadableBufferedStream, BinaryBufferWriteableStream } from '@theia/core/lib/common/buffer';
-import { ReadableStream, isReadableStream, isReadableBufferedStream, transform, consumeStream, peekStream, peekReadable, Readable } from '@theia/core/lib/common/stream';
-import { LabelProvider } from '@theia/core/lib/browser/label-provider';
+import { BinaryBuffer, BinaryBufferReadable, BinaryBufferReadableStream, BinaryBufferReadableBufferedStream, BinaryBufferWriteableStream } from '@ogun/core/lib/common/buffer';
+import { ReadableStream, isReadableStream, isReadableBufferedStream, transform, consumeStream, peekStream, peekReadable, Readable } from '@ogun/core/lib/common/stream';
+import { LabelProvider } from '@ogun/core/lib/browser/label-provider';
 import { FileSystemPreferences } from '../common/filesystem-preferences';
-import { ProgressService } from '@theia/core/lib/common/progress-service';
+import { ProgressService } from '@ogun/core/lib/common/progress-service';
 import { DelegatingFileSystemProvider } from '../common/delegating-file-system-provider';
-import type { TextDocumentContentChangeEvent } from '@theia/core/shared/vscode-languageserver-protocol';
-import { EncodingRegistry } from '@theia/core/lib/browser/encoding-registry';
-import { UTF8, UTF8_with_bom } from '@theia/core/lib/common/encodings';
-import { EncodingService, ResourceEncoding, DecodeStreamResult } from '@theia/core/lib/common/encoding-service';
+import type { TextDocumentContentChangeEvent } from '@ogun/core/shared/vscode-languageserver-protocol';
+import { EncodingRegistry } from '@ogun/core/lib/browser/encoding-registry';
+import { UTF8, UTF8_with_bom } from '@ogun/core/lib/common/encodings';
+import { EncodingService, ResourceEncoding, DecodeStreamResult } from '@ogun/core/lib/common/encoding-service';
 import { Minimatch } from 'minimatch';
-import { Mutable } from '@theia/core/lib/common/types';
+import { Mutable } from '@ogun/core/lib/common/types';
 import { readFileIntoStream } from '../common/io';
 import { FileSystemWatcherErrorHandler } from './filesystem-watcher-error-handler';
 import { FileSystemUtils } from '../common/filesystem-utils';
-import { nls, ILogger } from '@theia/core';
-import { MarkdownString } from '@theia/core/lib/common/markdown-rendering';
+import { nls, ILogger } from '@ogun/core';
+import { MarkdownString } from '@ogun/core/lib/common/markdown-rendering';
 
 export interface FileOperationParticipant {
 

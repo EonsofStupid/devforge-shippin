@@ -14,10 +14,10 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { MaybePromise } from '@theia/core/lib/common';
-import { FrontendApplication, FrontendApplicationContribution } from '@theia/core/lib/browser';
-import { inject, injectable } from '@theia/core/shared/inversify';
-import { SecondaryWindowHandler } from '@theia/core/lib/browser/secondary-window-handler';
+import { MaybePromise } from '@ogun/core/lib/common';
+import { FrontendApplication, FrontendApplicationContribution } from '@ogun/core/lib/browser';
+import { inject, injectable } from '@ogun/core/shared/inversify';
+import { SecondaryWindowHandler } from '@ogun/core/lib/browser/secondary-window-handler';
 import { WebviewWidget } from './webview';
 
 @injectable()

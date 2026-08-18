@@ -14,8 +14,8 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { injectable, inject, postConstruct } from '@theia/core/shared/inversify';
-import { Disposable, DisposableCollection } from '@theia/core/lib/common/disposable';
+import { injectable, inject, postConstruct } from '@ogun/core/shared/inversify';
+import { Disposable, DisposableCollection } from '@ogun/core/lib/common/disposable';
 import { ScmService } from './scm-service';
 import { ScmTreeModel } from './scm-tree-model';
 import { ScmResourceGroup, ScmProvider } from './scm-provider';

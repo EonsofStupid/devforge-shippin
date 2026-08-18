@@ -14,16 +14,16 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { Emitter, Resource, ResourceProvider, UNTITLED_SCHEME, URI, ILogger } from '@theia/core';
-import { inject, injectable, named } from '@theia/core/shared/inversify';
-import { UriComponents } from '@theia/core/lib/common/uri';
-import { FileService } from '@theia/filesystem/lib/browser/file-service';
+import { Emitter, Resource, ResourceProvider, UNTITLED_SCHEME, URI, ILogger } from '@ogun/core';
+import { inject, injectable, named } from '@ogun/core/shared/inversify';
+import { UriComponents } from '@ogun/core/lib/common/uri';
+import { FileService } from '@ogun/filesystem/lib/browser/file-service';
 import { NotebookData } from '../../common';
 import { NotebookModel } from '../view-model/notebook-model';
 import { NotebookService } from './notebook-service';
 import { NotebookTypeRegistry } from '../notebook-type-registry';
 import { NotebookFileSelector } from '../../common/notebook-protocol';
-import { match } from '@theia/core/lib/common/glob';
+import { match } from '@ogun/core/lib/common/glob';
 
 export interface UntitledResource {
     untitledResource: URI | undefined

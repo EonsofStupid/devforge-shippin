@@ -9,7 +9,7 @@
 // SPDX-License-Identifier: MIT
 // *****************************************************************************
 
-import { PromptVariantSet } from '@theia/ai-core/lib/common';
+import { PromptVariantSet } from '@ogun/ai-core/lib/common';
 import { FILE, LANGUAGE, PREFIX, SUFFIX } from './code-completion-variables';
 
 export const codeCompletionPrompts: PromptVariantSet[] = [{

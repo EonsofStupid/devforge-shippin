@@ -14,10 +14,10 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import * as theia from '@theia/plugin';
+import * as theia from '@ogun/plugin';
 import { DocumentsExtImpl } from '../documents';
 import * as Converter from '../type-converters';
-import { URI } from '@theia/core/shared/vscode-uri';
+import { URI } from '@ogun/core/shared/vscode-uri';
 import { FormattingOptions, TextEdit } from '../../common/plugin-api-rpc-model';
 
 export class DocumentFormattingAdapter {

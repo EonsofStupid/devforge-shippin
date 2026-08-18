@@ -14,10 +14,10 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { inject, injectable } from '@theia/core/shared/inversify';
-import { MaybePromise, URI } from '@theia/core';
-import { OpenHandler, OpenerOptions } from '@theia/core/lib/browser';
-import { EditorManager } from '@theia/editor/lib/browser';
+import { inject, injectable } from '@ogun/core/shared/inversify';
+import { MaybePromise, URI } from '@ogun/core';
+import { OpenHandler, OpenerOptions } from '@ogun/core/lib/browser';
+import { EditorManager } from '@ogun/editor/lib/browser';
 import { BreakpointManager } from '../breakpoint/breakpoint-manager';
 import { DebugSessionManager } from '../debug-session-manager';
 import { DEBUG_BREAKPOINT_SCHEME } from '../breakpoint/breakpoint-marker';

@@ -14,11 +14,11 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { interfaces, Container } from '@theia/core/shared/inversify';
+import { interfaces, Container } from '@ogun/core/shared/inversify';
 import { MarkerOptions } from '../marker-tree';
 import { ProblemWidget } from './problem-widget';
 import { ProblemTreeModel, ProblemTree } from './problem-tree-model';
-import { TreeProps, defaultTreeProps, createTreeContainer } from '@theia/core/lib/browser';
+import { TreeProps, defaultTreeProps, createTreeContainer } from '@ogun/core/lib/browser';
 import { PROBLEM_KIND } from '../../common/problem-marker';
 
 export const PROBLEM_TREE_PROPS = <TreeProps>{

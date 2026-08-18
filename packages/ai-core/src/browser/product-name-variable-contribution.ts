@@ -14,9 +14,9 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { MaybePromise, nls } from '@theia/core';
-import { FrontendApplicationConfigProvider } from '@theia/core/lib/browser/frontend-application-config-provider';
-import { injectable } from '@theia/core/shared/inversify';
+import { MaybePromise, nls } from '@ogun/core';
+import { FrontendApplicationConfigProvider } from '@ogun/core/lib/browser/frontend-application-config-provider';
+import { injectable } from '@ogun/core/shared/inversify';
 import { AIVariable, AIVariableContribution, AIVariableContext, AIVariableResolutionRequest, AIVariableResolver, AIVariableService, ResolvedAIVariable } from '../common';
 
 export const PRODUCT_NAME_VARIABLE: AIVariable = {

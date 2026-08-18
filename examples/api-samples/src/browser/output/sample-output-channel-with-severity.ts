@@ -13,12 +13,12 @@
 //
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
-import { ApplicationShell, FrontendApplicationContribution } from '@theia/core/lib/browser';
-import { Command, CommandContribution, CommandRegistry } from '@theia/core/lib/common';
-import { inject, injectable, interfaces } from '@theia/core/shared/inversify';
-import { OutputChannelManager, OutputChannelSeverity } from '@theia/output/lib/browser/output-channel';
-import { OutputCommands } from '@theia/output/lib/browser/output-commands';
-import { OutputWidget } from '@theia/output/lib/browser/output-widget';
+import { ApplicationShell, FrontendApplicationContribution } from '@ogun/core/lib/browser';
+import { Command, CommandContribution, CommandRegistry } from '@ogun/core/lib/common';
+import { inject, injectable, interfaces } from '@ogun/core/shared/inversify';
+import { OutputChannelManager, OutputChannelSeverity } from '@ogun/output/lib/browser/output-channel';
+import { OutputCommands } from '@ogun/output/lib/browser/output-commands';
+import { OutputWidget } from '@ogun/output/lib/browser/output-widget';
 
 const API_SAMPLES_CATEGORY = 'API Samples';
 

@@ -14,13 +14,13 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import * as React from '@theia/core/shared/react';
-import { ReactNode } from '@theia/core/shared/react';
-import { OpenerService, ReactWidget } from '@theia/core/lib/browser';
-import { nls, URI } from '@theia/core';
-import { inject, injectable, postConstruct } from '@theia/core/shared/inversify';
+import * as React from '@ogun/core/shared/react';
+import { ReactNode } from '@ogun/core/shared/react';
+import { OpenerService, ReactWidget } from '@ogun/core/lib/browser';
+import { nls, URI } from '@ogun/core';
+import { inject, injectable, postConstruct } from '@ogun/core/shared/inversify';
 import { ForwardedPort, PortForwardingService } from './port-forwarding-service';
-import { ClipboardService } from '@theia/core/lib/browser/clipboard-service';
+import { ClipboardService } from '@ogun/core/lib/browser/clipboard-service';
 
 export const PORT_FORWARDING_WIDGET_ID = 'port-forwarding-widget';
 

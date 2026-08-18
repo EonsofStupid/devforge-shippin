@@ -14,13 +14,13 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { inject, injectable, interfaces, postConstruct } from '@theia/core/shared/inversify';
-import { AbstractViewContribution, bindViewContribution, WidgetFactory } from '@theia/core/lib/browser';
+import { inject, injectable, interfaces, postConstruct } from '@ogun/core/shared/inversify';
+import { AbstractViewContribution, bindViewContribution, WidgetFactory } from '@ogun/core/lib/browser';
 import { DisassemblyViewWidget } from './disassembly-view-widget';
-import { Command, CommandRegistry, MenuModelRegistry, nls } from '@theia/core';
+import { Command, CommandRegistry, MenuModelRegistry, nls } from '@ogun/core';
 import { DebugService } from '../../common/debug-service';
-import { EditorManager, EDITOR_CONTEXT_MENU } from '@theia/editor/lib/browser';
-import { ContextKeyService } from '@theia/core/lib/browser/context-key-service';
+import { EditorManager, EDITOR_CONTEXT_MENU } from '@ogun/editor/lib/browser';
+import { ContextKeyService } from '@ogun/core/lib/browser/context-key-service';
 import { DebugSessionManager } from '../debug-session-manager';
 import { DebugStackFrame } from '../model/debug-stack-frame';
 import { DebugSession, DebugState } from '../debug-session';

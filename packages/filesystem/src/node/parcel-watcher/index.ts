@@ -14,11 +14,11 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import * as yargs from '@theia/core/shared/yargs';
-import { RpcProxyFactory } from '@theia/core';
+import * as yargs from '@ogun/core/shared/yargs';
+import { RpcProxyFactory } from '@ogun/core';
 import { FileSystemWatcherServiceClient } from '../../common/filesystem-watcher-protocol';
 import { ParcelFileSystemWatcherService } from './parcel-filesystem-service';
-import { IPCEntryPoint } from '@theia/core/lib/node/messaging/ipc-protocol';
+import { IPCEntryPoint } from '@ogun/core/lib/node/messaging/ipc-protocol';
 
 /* eslint-disable @typescript-eslint/no-explicit-any */
 

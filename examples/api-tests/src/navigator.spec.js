@@ -20,10 +20,10 @@ describe('Navigator', function () {
 
     const { assert } = chai;
 
-    const { FileService } = require('@theia/filesystem/lib/browser/file-service');
-    const { DirNode, FileNode } = require('@theia/filesystem/lib/browser/file-tree/file-tree');
-    const { WorkspaceService } = require('@theia/workspace/lib/browser/workspace-service');
-    const { FileNavigatorContribution } = require('@theia/navigator/lib/browser/navigator-contribution');
+    const { FileService } = require('@ogun/filesystem/lib/browser/file-service');
+    const { DirNode, FileNode } = require('@ogun/filesystem/lib/browser/file-tree/file-tree');
+    const { WorkspaceService } = require('@ogun/workspace/lib/browser/workspace-service');
+    const { FileNavigatorContribution } = require('@ogun/navigator/lib/browser/navigator-contribution');
 
     /** @type {import('inversify').Container} */
     const container = window['theia'].container;

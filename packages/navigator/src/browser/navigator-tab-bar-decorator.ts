@@ -14,12 +14,12 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { injectable } from '@theia/core/shared/inversify';
-import { Emitter, Event } from '@theia/core/lib/common/event';
-import { TabBarDecorator } from '@theia/core/lib/browser/shell/tab-bar-decorator';
-import { ApplicationShell, FrontendApplication, FrontendApplicationContribution, Saveable, Title, ViewContainer, Widget } from '@theia/core/lib/browser';
-import { WidgetDecoration } from '@theia/core/lib/browser/widget-decoration';
-import { Disposable, DisposableCollection } from '@theia/core/lib/common/disposable';
+import { injectable } from '@ogun/core/shared/inversify';
+import { Emitter, Event } from '@ogun/core/lib/common/event';
+import { TabBarDecorator } from '@ogun/core/lib/browser/shell/tab-bar-decorator';
+import { ApplicationShell, FrontendApplication, FrontendApplicationContribution, Saveable, Title, ViewContainer, Widget } from '@ogun/core/lib/browser';
+import { WidgetDecoration } from '@ogun/core/lib/browser/widget-decoration';
+import { Disposable, DisposableCollection } from '@ogun/core/lib/common/disposable';
 import { OpenEditorsWidget } from './open-editors-widget/navigator-open-editors-widget';
 
 @injectable()

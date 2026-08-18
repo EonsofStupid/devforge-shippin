@@ -19,7 +19,7 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-export module '@theia/plugin' {
+export module '@ogun/plugin' {
 
     /**
      * The action that should be taken when a port is discovered through automatic port forwarding discovery.

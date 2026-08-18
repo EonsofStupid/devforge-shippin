@@ -12,11 +12,11 @@
 
 ## Description
 
-The `@theia/timeline` extension adds Timeline view for visualizing time-series events.
+The `@ogun/timeline` extension adds Timeline view for visualizing time-series events.
 
 ## Additional Information
 
-- [API documentation for `@theia/timeline`](https://eclipse-theia.github.io/theia/docs/next/modules/_theia_timeline.html)
+- [API documentation for `@ogun/timeline`](https://eclipse-theia.github.io/theia/docs/next/modules/_theia_timeline.html)
 - [Theia - GitHub](https://github.com/eclipse-theia/theia)
 - [Theia - Website](https://theia-ide.org/)
 - [VS Code Timeline Documentation](https://code.visualstudio.com/updates/v1_44#_timeline-view)

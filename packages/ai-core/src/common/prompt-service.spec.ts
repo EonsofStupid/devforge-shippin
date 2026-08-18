@@ -22,8 +22,8 @@ import { CustomAgentDescription, PromptService, PromptServiceImpl } from './prom
 import { DefaultAIVariableService, AIVariableService } from './variable-service';
 import { ToolInvocationRegistry } from './tool-invocation-registry';
 import { ToolRequest } from './language-model';
-import { MockLogger } from '@theia/core/lib/common/test/mock-logger';
-import { ILogger, Logger } from '@theia/core';
+import { MockLogger } from '@ogun/core/lib/common/test/mock-logger';
+import { ILogger, Logger } from '@ogun/core';
 import * as sinon from 'sinon';
 
 describe('PromptService', () => {

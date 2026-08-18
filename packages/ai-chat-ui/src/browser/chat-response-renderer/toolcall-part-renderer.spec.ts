@@ -15,9 +15,9 @@
 // *****************************************************************************
 
 import { expect } from 'chai';
-import { ToolCallChatResponseContent } from '@theia/ai-chat/lib/common';
-import { OpenerService } from '@theia/core/lib/browser';
-import { ReactNode } from '@theia/core/shared/react';
+import { ToolCallChatResponseContent } from '@ogun/ai-chat/lib/common';
+import { OpenerService } from '@ogun/core/lib/browser';
+import { ReactNode } from '@ogun/core/shared/react';
 import { ToolCallPartRenderer } from './toolcall-part-renderer';
 import { condenseArguments, formatArgsForTooltip } from './toolcall-utils';
 

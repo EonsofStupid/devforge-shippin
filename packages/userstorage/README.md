@@ -12,11 +12,11 @@
 
 ## Description
 
-The `@theia/userstorage` extension provides an API for accessing user storage files, i.e preferences, custom keymaps and other user-specific files without having to know how it's implemented. User storage files can then be accessed with `userstorage` uri scheme like so `userstorage://settings.json` and the user storage service implementation will then fetch the appropriate file.
+The `@ogun/userstorage` extension provides an API for accessing user storage files, i.e preferences, custom keymaps and other user-specific files without having to know how it's implemented. User storage files can then be accessed with `userstorage` uri scheme like so `userstorage://settings.json` and the user storage service implementation will then fetch the appropriate file.
 
 ## Additional Information
 
-- [API documentation for `@theia/userstorage`](https://eclipse-theia.github.io/theia/docs/next/modules/_theia_userstorage.html)
+- [API documentation for `@ogun/userstorage`](https://eclipse-theia.github.io/theia/docs/next/modules/_theia_userstorage.html)
 - [Theia - GitHub](https://github.com/eclipse-theia/theia)
 - [Theia - Website](https://theia-ide.org/)
 

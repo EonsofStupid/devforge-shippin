@@ -15,7 +15,7 @@
  ********************************************************************************/
 
 import { ContainerModule } from 'inversify';
-import { RequestService } from '@theia/request';
+import { RequestService } from '@ogun/request';
 import { ElectronBackendRequestService } from './electron-backend-request-service';
 
 export default new ContainerModule(bind => {

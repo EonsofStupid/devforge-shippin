@@ -14,13 +14,13 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { injectable, inject } from '@theia/core/shared/inversify';
+import { injectable, inject } from '@ogun/core/shared/inversify';
 import {
     ToolConfirmationMode,
     TOOL_CONFIRMATION_PREFERENCE,
     DEFAULT_TOOL_CONFIRMATION_PREFERENCE
 } from '../common/chat-tool-preferences';
-import { AiConfigurationService, ToolRequest } from '@theia/ai-core';
+import { AiConfigurationService, ToolRequest } from '@ogun/ai-core';
 
 /**
  * The loop-invariant inputs to {@link ToolConfirmationManager.computeEffectiveDefaultForTool}:

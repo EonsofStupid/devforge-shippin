@@ -14,7 +14,7 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { inject, injectable, named, optional, postConstruct } from '@theia/core/shared/inversify';
+import { inject, injectable, named, optional, postConstruct } from '@ogun/core/shared/inversify';
 import {
     CommandContribution,
     Command,
@@ -31,35 +31,35 @@ import {
     MAIN_MENU_BAR,
     PreferenceService,
     PreferenceScope
-} from '@theia/core/lib/common';
+} from '@ogun/core/lib/common';
 import {
     ApplicationShell, KeybindingContribution, KeyCode, Key, WidgetManager,
     KeybindingRegistry, LabelProvider, WidgetOpenerOptions, StorageService, QuickInputService,
     codicon, CommonCommands, FrontendApplicationContribution, OnWillStopAction, Dialog, ConfirmDialog, FrontendApplication, Widget, SHELL_TABBAR_CONTEXT_MENU
-} from '@theia/core/lib/browser';
-import { ClipboardService } from '@theia/core/lib/browser/clipboard-service';
-import { TabBarToolbarContribution, TabBarToolbarRegistry } from '@theia/core/lib/browser/shell/tab-bar-toolbar';
+} from '@ogun/core/lib/browser';
+import { ClipboardService } from '@ogun/core/lib/browser/clipboard-service';
+import { TabBarToolbarContribution, TabBarToolbarRegistry } from '@ogun/core/lib/browser/shell/tab-bar-toolbar';
 import { TERMINAL_WIDGET_FACTORY_ID, TerminalWidgetFactoryOptions, TerminalWidgetImpl, nextTerminalCreationToken } from './terminal-widget-impl';
 import { TerminalService } from './base/terminal-service';
 import { TerminalWidgetOptions, TerminalWidget } from './base/terminal-widget';
 import { ContributedTerminalProfileStore, NULL_PROFILE, TerminalProfile, TerminalProfileService, TerminalProfileStore, UserTerminalProfileStore } from './terminal-profile-service';
-import { UriAwareCommandHandler } from '@theia/core/lib/common/uri-command-handler';
+import { UriAwareCommandHandler } from '@ogun/core/lib/common/uri-command-handler';
 import { ShellTerminalServerProxy } from '../common/shell-terminal-protocol';
-import URI from '@theia/core/lib/common/uri';
-import { WorkspaceService } from '@theia/workspace/lib/browser';
-import { ContextKeyService } from '@theia/core/lib/browser/context-key-service';
-import { ColorContribution } from '@theia/core/lib/browser/color-application-contribution';
-import { ColorRegistry } from '@theia/core/lib/browser/color-registry';
-import { FileService } from '@theia/filesystem/lib/browser/file-service';
-import { FileStat } from '@theia/filesystem/lib/common/files';
+import URI from '@ogun/core/lib/common/uri';
+import { WorkspaceService } from '@ogun/workspace/lib/browser';
+import { ContextKeyService } from '@ogun/core/lib/browser/context-key-service';
+import { ColorContribution } from '@ogun/core/lib/browser/color-application-contribution';
+import { ColorRegistry } from '@ogun/core/lib/browser/color-registry';
+import { FileService } from '@ogun/filesystem/lib/browser/file-service';
+import { FileStat } from '@ogun/filesystem/lib/common/files';
 import { TerminalCopyOnSelectionHandler } from './terminal-copy-on-selection-handler';
 import { TerminalWatcher } from '../common/terminal-watcher';
-import { nls } from '@theia/core/lib/common/nls';
+import { nls } from '@ogun/core/lib/common/nls';
 import { Profiles, terminalAnsiColorMap, TerminalPreferences } from '../common/terminal-preferences';
 import { ShellTerminalProfile } from './shell-terminal-profile';
-import { VariableResolverService } from '@theia/variable-resolver/lib/browser';
-import { Color } from '@theia/core/lib/common/color';
-import { ContributionProvider } from '@theia/core';
+import { VariableResolverService } from '@ogun/variable-resolver/lib/browser';
+import { Color } from '@ogun/core/lib/common/color';
+import { ContributionProvider } from '@ogun/core';
 import { TerminalCreationHandler } from './terminal-creation-handler';
 
 export namespace TerminalMenus {
@@ -327,7 +327,7 @@ export class TerminalFrontendContribution implements FrontendApplicationContribu
 
     async initializeLayout(): Promise<void> {
         await this.preferenceService.ready;
-        // `terminal.grouping.mode` is defined in @theia/terminal-manager, which this package
+        // `terminal.grouping.mode` is defined in @ogun/terminal-manager, which this package
         // cannot depend on. Reading via generic PreferenceService; undefined safely
         // falls through to standard terminal behavior.
         const groupingMode = this.preferenceService.get('terminal.grouping.mode');

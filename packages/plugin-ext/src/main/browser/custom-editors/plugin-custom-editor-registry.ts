@@ -14,13 +14,13 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { injectable, inject, postConstruct } from '@theia/core/shared/inversify';
+import { injectable, inject, postConstruct } from '@ogun/core/shared/inversify';
 import { CustomEditor, DeployedPlugin } from '../../../common';
-import { Disposable, DisposableCollection } from '@theia/core/lib/common/disposable';
-import { Deferred } from '@theia/core/lib/common/promise-util';
+import { Disposable, DisposableCollection } from '@ogun/core/lib/common/disposable';
+import { Deferred } from '@ogun/core/lib/common/promise-util';
 import { CustomEditorOpener } from './custom-editor-opener';
-import { Emitter, PreferenceService } from '@theia/core';
-import { ApplicationShell, DefaultOpenerService, OpenWithService, WidgetManager } from '@theia/core/lib/browser';
+import { Emitter, PreferenceService } from '@ogun/core';
+import { ApplicationShell, DefaultOpenerService, OpenWithService, WidgetManager } from '@ogun/core/lib/browser';
 import { CustomEditorWidget } from './custom-editor-widget';
 
 @injectable()

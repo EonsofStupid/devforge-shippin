@@ -13,20 +13,20 @@
 //
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
-import { ChatAgentService } from '@theia/ai-chat';
-import { ImageContextVariable } from '@theia/ai-chat/lib/common/image-context-variable';
-import { AIVariableService, DEFERRED_FUNCTION_MARKER } from '@theia/ai-core/lib/common';
-import { PromptText } from '@theia/ai-core/lib/common/prompt-text';
-import { PromptService, BasePromptFragment } from '@theia/ai-core/lib/common/prompt-service';
-import { ToolInvocationRegistry } from '@theia/ai-core/lib/common/tool-invocation-registry';
-import { MaybePromise, nls } from '@theia/core';
-import { FrontendApplication, FrontendApplicationContribution } from '@theia/core/lib/browser';
-import { ContextKeyService } from '@theia/core/lib/browser/context-key-service';
-import { inject, injectable } from '@theia/core/shared/inversify';
+import { ChatAgentService } from '@ogun/ai-chat';
+import { ImageContextVariable } from '@ogun/ai-chat/lib/common/image-context-variable';
+import { AIVariableService, DEFERRED_FUNCTION_MARKER } from '@ogun/ai-core/lib/common';
+import { PromptText } from '@ogun/ai-core/lib/common/prompt-text';
+import { PromptService, BasePromptFragment } from '@ogun/ai-core/lib/common/prompt-service';
+import { ToolInvocationRegistry } from '@ogun/ai-core/lib/common/tool-invocation-registry';
+import { MaybePromise, nls } from '@ogun/core';
+import { FrontendApplication, FrontendApplicationContribution } from '@ogun/core/lib/browser';
+import { ContextKeyService } from '@ogun/core/lib/browser/context-key-service';
+import { inject, injectable } from '@ogun/core/shared/inversify';
 import * as monaco from '@theia/monaco-editor-core';
 import { ProviderResult } from '@theia/monaco-editor-core/esm/vs/editor/common/languages';
-import { AIChatFrontendContribution, OPEN_FILE_BY_PATH_COMMAND, VARIABLE_ADD_CONTEXT_COMMAND } from '@theia/ai-chat/lib/browser/ai-chat-frontend-contribution';
-import { PendingImageRegistry } from '@theia/ai-chat/lib/browser/pending-image-registry';
+import { AIChatFrontendContribution, OPEN_FILE_BY_PATH_COMMAND, VARIABLE_ADD_CONTEXT_COMMAND } from '@ogun/ai-chat/lib/browser/ai-chat-frontend-contribution';
+import { PendingImageRegistry } from '@ogun/ai-chat/lib/browser/pending-image-registry';
 
 export const CHAT_VIEW_LANGUAGE_ID = 'theia-ai-chat-view-language';
 export const SETTINGS_LANGUAGE_ID = 'theia-ai-chat-settings-language';

@@ -1,0 +1,53 @@
+{
+  "name": "@ogun/runtime",
+  "version": "1.74.0",
+  "description": "The WebForge runtime layer \u2014 the engine underneath the IDE: a declared runtime-event catalog, provenance for every act, and an addressable surface registry so Clyffy can read and drive any part of the application.",
+  "dependencies": {
+    "@ogun/core": "1.74.0",
+    "@ogun/editor": "1.74.0",
+    "@ogun/filesystem": "1.74.0",
+    "@ogun/mini-browser": "1.74.0",
+    "@ogun/monaco": "1.74.0",
+    "@theia/monaco-editor-core": "1.108.201",
+    "@ogun/terminal": "1.74.0",
+    "@ogun/workspace": "1.74.0",
+    "tslib": "^2.6.2"
+  },
+  "main": "lib/common",
+  "publishConfig": {
+    "access": "public"
+  },
+  "theiaExtensions": [
+    {
+      "frontend": "lib/browser/webforge-runtime-frontend-module",
+      "backend": "lib/node/webforge-runtime-backend-module"
+    }
+  ],
+  "keywords": [
+    "theia-extension",
+    "webforge"
+  ],
+  "license": "EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/EonsofStupid/devforge-shippin.git"
+  },
+  "files": [
+    "lib",
+    "src"
+  ],
+  "scripts": {
+    "build": "theiaext build",
+    "clean": "theiaext clean",
+    "compile": "theiaext compile",
+    "lint": "theiaext lint",
+    "test": "theiaext test",
+    "watch": "theiaext watch"
+  },
+  "devDependencies": {
+    "@ogun/ext-scripts": "1.74.0"
+  },
+  "nyc": {
+    "extends": "../../configs/nyc.json"
+  }
+}

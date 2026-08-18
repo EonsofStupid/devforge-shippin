@@ -12,15 +12,15 @@
 
 ## Description
 
-The `@theia/plugin-ext-headless` extension contributes functionality for the backend-only "headless `plugin`" API.
+The `@ogun/plugin-ext-headless` extension contributes functionality for the backend-only "headless `plugin`" API.
 The plugin extension host managed by this extension is scoped to the single Theia NodeJS instance.
-This is unlike the plugin extension hosts managed by the [`@theia/plugin-ext` extension][plugin-ext] which are scoped on a per-frontend-connection basis.
+This is unlike the plugin extension hosts managed by the [`@ogun/plugin-ext` extension][plugin-ext] which are scoped on a per-frontend-connection basis.
 
 [plugin-ext]: ../plugin-ext/README.md
 
 ## Implementation
 
-The implementation is derived from the [`@theia/plugin-ext` extension][plugin-ext] for frontend-scoped plugins.
+The implementation is derived from the [`@ogun/plugin-ext` extension][plugin-ext] for frontend-scoped plugins.
 
 ## License
 

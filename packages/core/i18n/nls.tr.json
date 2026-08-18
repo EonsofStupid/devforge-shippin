@@ -1410,7 +1410,7 @@
               "mdDescription": "Bu sunucuyu kurmak için kullanılan kayıt defteri onayının içerik hash'i.",
               "title": "Kayıt Defteri Yapılandırma Hash'i"
             },
-            "mdDescription": "Bir AI kayıt defterinden kurulan sunucu için menşe meta verileri. `@theia/ai-registry` tarafından yazılmıştır; kullanıcı tarafından düzenlenemez.",
+            "mdDescription": "Bir AI kayıt defterinden kurulan sunucu için menşe meta verileri. `@ogun/ai-registry` tarafından yazılmıştır; kullanıcı tarafından düzenlenemez.",
             "serverId": {
               "mdDescription": "Bu sunucunun kurulduğu AI kayıt defteri girdisini tanımlar.",
               "title": "Kayıt Defteri Sunucu Kimliği"

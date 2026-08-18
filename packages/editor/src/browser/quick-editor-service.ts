@@ -14,12 +14,12 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { injectable, inject } from '@theia/core/shared/inversify';
-import { CancellationToken, nls, QuickPickItemOrSeparator } from '@theia/core/lib/common';
-import { LabelProvider } from '@theia/core/lib/browser/label-provider';
-import { QuickAccessProvider, QuickAccessRegistry, QuickAccessContribution } from '@theia/core/lib/browser/quick-input/quick-access';
-import { filterItems, QuickPickItem, QuickPickSeparator } from '@theia/core/lib/browser/quick-input/quick-input-service';
-import { ApplicationShell, NavigatableWidget, TabBar, Widget } from '@theia/core/lib/browser';
+import { injectable, inject } from '@ogun/core/shared/inversify';
+import { CancellationToken, nls, QuickPickItemOrSeparator } from '@ogun/core/lib/common';
+import { LabelProvider } from '@ogun/core/lib/browser/label-provider';
+import { QuickAccessProvider, QuickAccessRegistry, QuickAccessContribution } from '@ogun/core/lib/browser/quick-input/quick-access';
+import { filterItems, QuickPickItem, QuickPickSeparator } from '@ogun/core/lib/browser/quick-input/quick-input-service';
+import { ApplicationShell, NavigatableWidget, TabBar, Widget } from '@ogun/core/lib/browser';
 
 @injectable()
 export class QuickEditorService implements QuickAccessContribution, QuickAccessProvider {

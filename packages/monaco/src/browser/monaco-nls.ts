@@ -30,8 +30,8 @@
 // Re-export the message store — imported via a path that is NOT aliased.
 export { getNLSLanguage, getNLSMessages } from '@theia/monaco-editor-core/esm/vs/nls.messages';
 
-import { nls } from '@theia/core/lib/common/nls';
-import { FormatType, Localization } from '@theia/core/lib/common/i18n/localization';
+import { nls } from '@ogun/core/lib/common/nls';
+import { FormatType, Localization } from '@ogun/core/lib/common/i18n/localization';
 
 // Duplicate the interface declarations from the original nls module so that
 // consumers get the same types without importing from the aliased path.

@@ -18,10 +18,10 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { Disposable, DisposableCollection, Emitter, Event, URI } from '@theia/core';
-import { inject, injectable, interfaces, postConstruct } from '@theia/core/shared/inversify';
-import { MonacoEditorModel } from '@theia/monaco/lib/browser/monaco-editor-model';
-import { type MonacoEditor } from '@theia/monaco/lib/browser/monaco-editor';
+import { Disposable, DisposableCollection, Emitter, Event, URI } from '@ogun/core';
+import { inject, injectable, interfaces, postConstruct } from '@ogun/core/shared/inversify';
+import { MonacoEditorModel } from '@ogun/monaco/lib/browser/monaco-editor-model';
+import { type MonacoEditor } from '@ogun/monaco/lib/browser/monaco-editor';
 import {
     CellKind, NotebookCellCollapseState, NotebookCellInternalMetadata,
     NotebookCellMetadata, CellOutput, CellData, CellOutputItem
@@ -29,11 +29,11 @@ import {
 import { NotebookCellOutputsSplice } from '../notebook-types';
 import { NotebookMonacoTextModelService } from '../service/notebook-monaco-text-model-service';
 import { NotebookCellOutputModel } from './notebook-cell-output-model';
-import { PreferenceService } from '@theia/core/lib/common';
+import { PreferenceService } from '@ogun/core/lib/common';
 import { NotebookPreferences } from '../../common/notebook-preferences';
-import { LanguageService } from '@theia/core/lib/browser/language-service';
+import { LanguageService } from '@ogun/core/lib/browser/language-service';
 import { NotebookEditorFindMatch, NotebookEditorFindMatchOptions } from '../view/notebook-find-widget';
-import { Range } from '@theia/core/shared/vscode-languageserver-protocol';
+import { Range } from '@ogun/core/shared/vscode-languageserver-protocol';
 
 export const NotebookCellModelFactory = Symbol('NotebookModelFactory');
 export type NotebookCellModelFactory = (props: NotebookCellModelProps) => NotebookCellModel;

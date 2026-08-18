@@ -14,9 +14,9 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { Command, CommandContribution, CommandRegistry } from '@theia/core/lib/common';
-import { inject, injectable } from '@theia/core/shared/inversify';
-import { TelemetryService } from '@theia/telemetry/lib/common';
+import { Command, CommandContribution, CommandRegistry } from '@ogun/core/lib/common';
+import { inject, injectable } from '@ogun/core/shared/inversify';
+import { TelemetryService } from '@ogun/telemetry/lib/common';
 
 const TELEMETRY_SAMPLE_CATEGORY = 'Telemetry Samples';
 

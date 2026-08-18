@@ -15,7 +15,7 @@
 // *****************************************************************************
 
 import type { OPFSFileSystemProvider } from './opfs-filesystem-provider';
-import { injectable } from '@theia/core/shared/inversify';
+import { injectable } from '@ogun/core/shared/inversify';
 
 export const OPFSInitialization = Symbol('OPFSInitialization');
 export interface OPFSInitialization {

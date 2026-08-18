@@ -17,11 +17,11 @@
 import '../../src/browser/style/terminal.css';
 import 'xterm/css/xterm.css';
 
-import { ContainerModule, Container } from '@theia/core/shared/inversify';
-import { CommandContribution, MenuContribution, nls } from '@theia/core/lib/common';
-import { bindRootContributionProvider } from '@theia/core';
-import { KeybindingContribution, WebSocketConnectionProvider, WidgetFactory, FrontendApplicationContribution } from '@theia/core/lib/browser';
-import { TabBarToolbarContribution } from '@theia/core/lib/browser/shell/tab-bar-toolbar';
+import { ContainerModule, Container } from '@ogun/core/shared/inversify';
+import { CommandContribution, MenuContribution, nls } from '@ogun/core/lib/common';
+import { bindRootContributionProvider } from '@ogun/core';
+import { KeybindingContribution, WebSocketConnectionProvider, WidgetFactory, FrontendApplicationContribution } from '@ogun/core/lib/browser';
+import { TabBarToolbarContribution } from '@ogun/core/lib/browser/shell/tab-bar-toolbar';
 import { TerminalFrontendContribution } from './terminal-frontend-contribution';
 import { TerminalWidgetImpl, TERMINAL_WIDGET_FACTORY_ID } from './terminal-widget-impl';
 import { TerminalWidget, TerminalWidgetOptions } from './base/terminal-widget';
@@ -37,9 +37,9 @@ import { TerminalSearchWidgetFactory } from './search/terminal-search-widget';
 import { TerminalQuickOpenService, TerminalQuickOpenContribution } from './terminal-quick-open-service';
 import { createTerminalSearchFactory } from './search/terminal-search-container';
 import { TerminalCopyOnSelectionHandler } from './terminal-copy-on-selection-handler';
-import { ColorContribution } from '@theia/core/lib/browser/color-application-contribution';
+import { ColorContribution } from '@ogun/core/lib/browser/color-application-contribution';
 import { TerminalThemeService } from './terminal-theme-service';
-import { QuickAccessContribution } from '@theia/core/lib/browser/quick-input/quick-access';
+import { QuickAccessContribution } from '@ogun/core/lib/browser/quick-input/quick-access';
 import { createXtermLinkFactory, TerminalLinkProvider, TerminalLinkProviderContribution, XtermLinkFactory } from './terminal-link-provider';
 import { UrlLinkProvider } from './terminal-url-link-provider';
 import { FileDiffPostLinkProvider, FileDiffPreLinkProvider, FileLinkProvider, LocalFileLinkProvider } from './terminal-file-link-provider';

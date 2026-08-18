@@ -16,11 +16,11 @@
 
 import * as path from 'path';
 import * as filenamify from 'filenamify';
-import * as fs from '@theia/core/shared/fs-extra';
-import type { URI } from '@theia/core';
-import { inject, injectable } from '@theia/core/shared/inversify';
-import { Deferred } from '@theia/core/lib/common/promise-util';
-import { FileUri } from '@theia/core/lib/node';
+import * as fs from '@ogun/core/shared/fs-extra';
+import type { URI } from '@ogun/core';
+import { inject, injectable } from '@ogun/core/shared/inversify';
+import { Deferred } from '@ogun/core/lib/common/promise-util';
+import { FileUri } from '@ogun/core/lib/node';
 import {
     PluginDeployerDirectoryHandler, PluginDeployerEntry, PluginPackage, PluginDeployerDirectoryHandlerContext, PluginDeployerEntryType, PluginType, PluginIdentifiers
 } from '../../../common/plugin-protocol';

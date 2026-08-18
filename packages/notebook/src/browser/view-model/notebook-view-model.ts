@@ -14,9 +14,9 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { injectable } from '@theia/core/shared/inversify';
+import { injectable } from '@ogun/core/shared/inversify';
 import { NotebookCellModel } from './notebook-cell-model';
-import { Disposable, Emitter } from '@theia/core';
+import { Disposable, Emitter } from '@ogun/core';
 import { NotebookModel } from './notebook-model';
 
 export interface SelectedCellChangeEvent {

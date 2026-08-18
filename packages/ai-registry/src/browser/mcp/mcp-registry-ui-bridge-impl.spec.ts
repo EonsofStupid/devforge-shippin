@@ -14,8 +14,8 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { FrontendApplicationConfigProvider } from '@theia/core/lib/browser/frontend-application-config-provider';
-import { enableJSDOM } from '@theia/core/lib/browser/test/jsdom';
+import { FrontendApplicationConfigProvider } from '@ogun/core/lib/browser/frontend-application-config-provider';
+import { enableJSDOM } from '@ogun/core/lib/browser/test/jsdom';
 // The view contribution import chain pulls in browser-side modules, so a DOM is required at import time.
 const disableJSDOM = enableJSDOM();
 try {
@@ -25,10 +25,10 @@ try {
 }
 
 import { expect } from 'chai';
-import { Container } from '@theia/core/shared/inversify';
-import { Emitter } from '@theia/core';
-import { VSXExtensionsContribution } from '@theia/vsx-registry/lib/browser/vsx-extensions-contribution';
-import { VSXExtensionsSearchModel } from '@theia/vsx-registry/lib/browser/vsx-extensions-search-model';
+import { Container } from '@ogun/core/shared/inversify';
+import { Emitter } from '@ogun/core';
+import { VSXExtensionsContribution } from '@ogun/vsx-registry/lib/browser/vsx-extensions-contribution';
+import { VSXExtensionsSearchModel } from '@ogun/vsx-registry/lib/browser/vsx-extensions-search-model';
 import { RegistryFetchService } from '../../common/registry-fetch-service';
 import { RegistrySearchFilter } from '../../common/registry-search-filter';
 import { ResolvedRegistryEntry } from '../../common/mcp/mcp-registry-types';

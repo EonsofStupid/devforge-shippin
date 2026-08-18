@@ -14,15 +14,15 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { dynamicRequire } from '@theia/core/lib/node/dynamic-require';
-import { ContainerModule, injectable, inject } from '@theia/core/shared/inversify';
-import { EnvExtImpl } from '@theia/plugin-ext/lib/plugin/env';
-import { LocalizationExt } from '@theia/plugin-ext';
-import { LocalizationExtImpl } from '@theia/plugin-ext/lib/plugin/localization-ext';
+import { dynamicRequire } from '@ogun/core/lib/node/dynamic-require';
+import { ContainerModule, injectable, inject } from '@ogun/core/shared/inversify';
+import { EnvExtImpl } from '@ogun/plugin-ext/lib/plugin/env';
+import { LocalizationExt } from '@ogun/plugin-ext';
+import { LocalizationExtImpl } from '@ogun/plugin-ext/lib/plugin/localization-ext';
 import { HEADLESSMAIN_RPC_CONTEXT } from '../../common/headless-plugin-rpc';
 import { HeadlessPluginManagerExtImpl } from '../../plugin/headless-plugin-manager';
-import { AbstractPluginHostRPC, ExtInterfaces } from '@theia/plugin-ext/lib/hosted/node/plugin-host-rpc';
-import { PluginModel } from '@theia/plugin-ext/lib/common/plugin-protocol';
+import { AbstractPluginHostRPC, ExtInterfaces } from '@ogun/plugin-ext/lib/hosted/node/plugin-host-rpc';
+import { PluginModel } from '@ogun/plugin-ext/lib/common/plugin-protocol';
 import { ExtPluginApi, ExtPluginApiHeadlessInitializationFn } from '../../common/plugin-ext-headless-api-contribution';
 
 type HeadlessExtInterfaces = Pick<ExtInterfaces, 'envExt'|'localizationExt'>;

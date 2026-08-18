@@ -16,13 +16,13 @@
 
 // copied from https://github.com/microsoft/vscode/blob/6261075646f055b99068d3688932416f2346dd3b/src/vs/workbench/api/common/extHostLanguageFeatures.ts#L1069-L1185.
 
-import * as theia from '@theia/plugin';
+import * as theia from '@ogun/plugin';
 import * as Converter from '../type-converters';
 import { DocumentsExtImpl } from '../documents';
-import { URI } from '@theia/core/shared/vscode-uri';
+import { URI } from '@ogun/core/shared/vscode-uri';
 import { CommandRegistryImpl } from '../command-registry';
 import { ReferenceMap } from '../../common/reference-map';
-import { DisposableCollection } from '@theia/core/lib/common/disposable';
+import { DisposableCollection } from '@ogun/core/lib/common/disposable';
 import { InlineCompletionTriggerKind as TriggerKind } from '../../plugin/types-impl';
 import { Command, InlineCompletionContext, InlineCompletionTriggerKind } from '../../common/plugin-api-rpc-model';
 import { IdentifiableInlineCompletion, IdentifiableInlineCompletions, Position } from '../../common/plugin-api-rpc';

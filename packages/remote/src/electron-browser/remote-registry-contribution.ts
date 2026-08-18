@@ -14,9 +14,9 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { Command, CommandHandler, Emitter, Event } from '@theia/core';
-import { inject, injectable } from '@theia/core/shared/inversify';
-import { WindowService, WindowReloadOptions } from '@theia/core/lib/browser/window/window-service';
+import { Command, CommandHandler, Emitter, Event } from '@ogun/core';
+import { inject, injectable } from '@ogun/core/shared/inversify';
+import { WindowService, WindowReloadOptions } from '@ogun/core/lib/browser/window/window-service';
 
 export const RemoteRegistryContribution = Symbol('RemoteRegistryContribution');
 

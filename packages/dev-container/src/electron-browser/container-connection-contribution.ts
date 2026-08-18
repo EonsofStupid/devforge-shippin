@@ -14,21 +14,21 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { inject, injectable, postConstruct } from '@theia/core/shared/inversify';
-import { AbstractRemoteRegistryContribution, RemoteRegistry } from '@theia/remote/lib/electron-browser/remote-registry-contribution';
+import { inject, injectable, postConstruct } from '@ogun/core/shared/inversify';
+import { AbstractRemoteRegistryContribution, RemoteRegistry } from '@ogun/remote/lib/electron-browser/remote-registry-contribution';
 import {
     DevContainerFile, LastContainerInfo, RemoteContainerConnectionProvider,
     RunningContainerInfo, WorkspaceCandidate
 } from '../electron-common/remote-container-connection-provider';
-import { WorkspaceStorageService } from '@theia/workspace/lib/browser/workspace-storage-service';
-import { Command, ILogger, MaybePromise, MessageService, nls, QuickInputService, URI } from '@theia/core';
-import { WorkspaceInput, WorkspaceOpenHandlerContribution, WorkspaceService } from '@theia/workspace/lib/browser/workspace-service';
+import { WorkspaceStorageService } from '@ogun/workspace/lib/browser/workspace-storage-service';
+import { Command, ILogger, MaybePromise, MessageService, nls, QuickInputService, URI } from '@ogun/core';
+import { WorkspaceInput, WorkspaceOpenHandlerContribution, WorkspaceService } from '@ogun/workspace/lib/browser/workspace-service';
 import { ContainerOutputProvider } from './container-output-provider';
-import { WorkspaceServer } from '@theia/workspace/lib/common';
+import { WorkspaceServer } from '@ogun/workspace/lib/common';
 import { DEV_CONTAINER_PATH_QUERY, DEV_CONTAINER_WORKSPACE_SCHEME } from '../electron-common/dev-container-workspaces';
-import { RemotePreferences } from '@theia/remote/lib/electron-common/remote-preferences';
-import { LocalStorageService } from '@theia/core/lib/browser';
-import { ConfirmDialog, Dialog } from '@theia/core/lib/browser/dialogs';
+import { RemotePreferences } from '@ogun/remote/lib/electron-common/remote-preferences';
+import { LocalStorageService } from '@ogun/core/lib/browser';
+import { ConfirmDialog, Dialog } from '@ogun/core/lib/browser/dialogs';
 import { DevContainerPreferences } from '../electron-common/dev-container-preferences';
 
 export namespace RemoteContainerCommands {

@@ -72,7 +72,7 @@ async function exitHandler() {
             desc: `An array of extensions to test (defaults to the extensions in the packages folder).
                 - Each entry must have this format: {name}:{version}
                 - Entries are separated by whitespaces
-                - Example: --extensions @theia/core:1.18.0 @theia/keymaps:1.18.0`,
+                - Example: --extensions @ogun/core:1.18.0 @ogun/keymaps:1.18.0`,
             type: 'array'
         })
         .option('yarn', {
@@ -188,12 +188,12 @@ function preparePackageTemplate() {
         .replace(/\{\{configDir\}\}/g, configDir);
     basePackage = JSON.parse(content);
     if (hostApp === 'electron') {
-        basePackage.dependencies['@theia/electron'] = version;
-        // ApplicationPackageManager.prepareElectron() (in @theia/cli) requires `electron` to
-        // be declared as a devDependency with a range that satisfies @theia/electron's peer.
+        basePackage.dependencies['@ogun/electron'] = version;
+        // ApplicationPackageManager.prepareElectron() (in @ogun/cli) requires `electron` to
+        // be declared as a devDependency with a range that satisfies @ogun/electron's peer.
         // Without it, `theia build` auto-patches package.json and aborts with
         // `Updated dependencies, please run "install" again`, which fails every iteration.
-        const { electronRange } = require('@theia/electron');
+        const { electronRange } = require('@ogun/electron');
         basePackage.devDependencies = basePackage.devDependencies ?? {};
         basePackage.devDependencies.electron = electronRange;
     }

@@ -14,14 +14,14 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import * as React from '@theia/core/shared/react';
+import * as React from '@ogun/core/shared/react';
 import { DebugProtocol } from '@vscode/debugprotocol/lib/debugProtocol';
-import { codicon, SingleTextInputDialog } from '@theia/core/lib/browser';
-import { ConsoleItem, CompositeConsoleItem } from '@theia/console/lib/browser/console-session';
+import { codicon, SingleTextInputDialog } from '@ogun/core/lib/browser';
+import { ConsoleItem, CompositeConsoleItem } from '@ogun/console/lib/browser/console-session';
 import { DebugSession, formatMessage } from '../debug-session';
-import { Severity } from '@theia/core/lib/common/severity';
+import { Severity } from '@ogun/core/lib/common/severity';
 import * as monaco from '@theia/monaco-editor-core';
-import { generateUuid, nls } from '@theia/core';
+import { generateUuid, nls } from '@ogun/core';
 
 export type DebugSessionProvider = () => DebugSession | undefined;
 

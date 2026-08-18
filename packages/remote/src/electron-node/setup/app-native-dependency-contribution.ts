@@ -14,10 +14,10 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { injectable } from '@theia/core/shared/inversify';
+import { injectable } from '@ogun/core/shared/inversify';
 import { RemoteNativeDependencyContribution, DownloadOptions, DependencyDownload } from './remote-native-dependency-contribution';
-import { RemotePlatform } from '@theia/core/lib/node/remote/remote-cli-contribution';
-import { OS } from '@theia/core';
+import { RemotePlatform } from '@ogun/core/lib/node/remote/remote-cli-contribution';
+import { OS } from '@ogun/core';
 
 /**
  * GitHub release tag used for rolling pre-release publications of native

@@ -14,19 +14,19 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { SimpleObservableCollection, TreeCollection, observableProperty } from '@theia/test/lib/common/collections';
+import { SimpleObservableCollection, TreeCollection, observableProperty } from '@ogun/test/lib/common/collections';
 import {
     TestController, TestItem, TestOutputItem, TestRun, TestRunProfile, TestService, TestState, TestStateChangedEvent
-} from '@theia/test/lib/browser/test-service';
-import { TestExecutionProgressService } from '@theia/test/lib/browser/test-execution-progress-service';
-import { AccumulatingTreeDeltaEmitter, CollectionDelta, DeltaKind, TreeDelta, TreeDeltaBuilder } from '@theia/test/lib/common/tree-delta';
-import { Emitter, Location, Range } from '@theia/core/shared/vscode-languageserver-protocol';
+} from '@ogun/test/lib/browser/test-service';
+import { TestExecutionProgressService } from '@ogun/test/lib/browser/test-execution-progress-service';
+import { AccumulatingTreeDeltaEmitter, CollectionDelta, DeltaKind, TreeDelta, TreeDeltaBuilder } from '@ogun/test/lib/common/tree-delta';
+import { Emitter, Location, Range } from '@ogun/core/shared/vscode-languageserver-protocol';
 import { Range as PluginRange, Location as PluginLocation } from '../../common/plugin-api-rpc-model';
-import { MarkdownString } from '@theia/core/lib/common/markdown-rendering';
-import { CancellationToken, Disposable, Event, URI } from '@theia/core';
+import { MarkdownString } from '@ogun/core/lib/common/markdown-rendering';
+import { CancellationToken, Disposable, Event, URI } from '@ogun/core';
 import { MAIN_RPC_CONTEXT, TestControllerUpdate, TestingExt, TestingMain } from '../../common';
 import { RPCProtocol } from '../../common/rpc-protocol';
-import { interfaces } from '@theia/core/shared/inversify';
+import { interfaces } from '@ogun/core/shared/inversify';
 import {
     TestExecutionState, TestItemDTO, TestItemReference, TestOutputDTO,
     TestRunDTO, TestRunProfileDTO, TestStateChangeDTO

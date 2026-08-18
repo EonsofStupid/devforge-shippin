@@ -14,10 +14,10 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { MaybePromise } from '@theia/core/lib/common';
-import { RequestService } from '@theia/core/shared/@theia/request';
-import type { interfaces } from '@theia/core/shared/inversify';
-import { OVSXClient, OVSXHttpClient } from '@theia/ovsx-client';
+import { MaybePromise } from '@ogun/core/lib/common';
+import { RequestService } from '@ogun/core/shared/@ogun/request';
+import type { interfaces } from '@ogun/core/shared/inversify';
+import { OVSXClient, OVSXHttpClient } from '@ogun/ovsx-client';
 import { VSXEnvironment } from './vsx-environment';
 
 export const OVSXUrlResolver = Symbol('OVSXUrlResolver') as symbol & interfaces.Abstract<OVSXUrlResolver>;

@@ -14,18 +14,18 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { FrontendApplicationConfigProvider } from '@theia/core/lib/browser/frontend-application-config-provider';
-import { enableJSDOM } from '@theia/core/lib/browser/test/jsdom';
+import { FrontendApplicationConfigProvider } from '@ogun/core/lib/browser/frontend-application-config-provider';
+import { enableJSDOM } from '@ogun/core/lib/browser/test/jsdom';
 const disableJSDOM = enableJSDOM();
 FrontendApplicationConfigProvider.set({});
 
-import { Container } from '@theia/core/shared/inversify';
-import { CommandService, Emitter } from '@theia/core/lib/common';
-import { LabelProvider, OpenerService } from '@theia/core/lib/browser';
-import { StorageService } from '@theia/core/lib/browser/storage-service';
-import URI from '@theia/core/lib/common/uri';
-import { FileService } from '@theia/filesystem/lib/browser/file-service';
-import { FileChangesEvent, FileChangeType } from '@theia/filesystem/lib/common/files';
+import { Container } from '@ogun/core/shared/inversify';
+import { CommandService, Emitter } from '@ogun/core/lib/common';
+import { LabelProvider, OpenerService } from '@ogun/core/lib/browser';
+import { StorageService } from '@ogun/core/lib/browser/storage-service';
+import URI from '@ogun/core/lib/common/uri';
+import { FileService } from '@ogun/filesystem/lib/browser/file-service';
+import { FileChangesEvent, FileChangeType } from '@ogun/filesystem/lib/common/files';
 import { expect } from 'chai';
 import {
     BreakpointManager,

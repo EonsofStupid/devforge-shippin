@@ -1410,7 +1410,7 @@
               "mdDescription": "Hash obsahu schválení registru použitého k instalaci tohoto serveru.",
               "title": "Hash konfigurace registru"
             },
-            "mdDescription": "Metadata o původu pro server nainstalovaný z registru AI. Napsáno uživatelem `@theia/ai-registry`; uživatel je nemůže upravovat.",
+            "mdDescription": "Metadata o původu pro server nainstalovaný z registru AI. Napsáno uživatelem `@ogun/ai-registry`; uživatel je nemůže upravovat.",
             "serverId": {
               "mdDescription": "Identifikuje položku registru AI, ze které byl tento server nainstalován.",
               "title": "ID serveru registru"

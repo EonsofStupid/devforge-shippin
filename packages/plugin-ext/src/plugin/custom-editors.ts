@@ -20,14 +20,14 @@
 // copied and modified from https://github.com/microsoft/vscode/blob/53eac52308c4611000a171cc7bf1214293473c78/src/vs/workbench/api/common/extHostCustomEditors.ts
 
 import { CustomEditorsExt, CustomEditorsMain, Plugin, PLUGIN_RPC_CONTEXT } from '../common/plugin-api-rpc';
-import * as theia from '@theia/plugin';
+import * as theia from '@ogun/plugin';
 import { RPCProtocol } from '../common/rpc-protocol';
 import { Disposable, URI } from './types-impl';
 import { UriComponents } from '../common/uri-components';
 import { DocumentsExtImpl } from './documents';
 import { WebviewsExtImpl } from './webviews';
-import { CancellationToken, CancellationTokenSource } from '@theia/core/lib/common/cancellation';
-import { DisposableCollection } from '@theia/core/lib/common/disposable';
+import { CancellationToken, CancellationTokenSource } from '@ogun/core/lib/common/cancellation';
+import { DisposableCollection } from '@ogun/core/lib/common/disposable';
 import { Cache } from '../common/cache';
 import * as Converters from './type-converters';
 

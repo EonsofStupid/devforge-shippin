@@ -14,14 +14,14 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { MutableChatRequestModel } from '@theia/ai-chat';
-import { ChangeSetFileElement } from '@theia/ai-chat/lib/browser/change-set-file-element';
-import { URI } from '@theia/core/lib/common/uri';
-import { inject, injectable, named } from '@theia/core/shared/inversify';
-import { FileService } from '@theia/filesystem/lib/browser/file-service';
-import { WorkspaceService } from '@theia/workspace/lib/browser';
+import { MutableChatRequestModel } from '@ogun/ai-chat';
+import { ChangeSetFileElement } from '@ogun/ai-chat/lib/browser/change-set-file-element';
+import { URI } from '@ogun/core/lib/common/uri';
+import { inject, injectable, named } from '@ogun/core/shared/inversify';
+import { FileService } from '@ogun/filesystem/lib/browser/file-service';
+import { WorkspaceService } from '@ogun/workspace/lib/browser';
 import { CLAUDE_SESSION_ID_KEY } from './claude-code-chat-agent';
-import { ILogger } from '@theia/core';
+import { ILogger } from '@ogun/core';
 
 export const FileEditBackupService = Symbol('FileEditBackupService');
 

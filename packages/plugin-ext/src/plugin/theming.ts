@@ -15,10 +15,10 @@
 // *****************************************************************************
 
 import { ColorTheme, ColorThemeKind } from './types-impl';
-import { Emitter, Event } from '@theia/core/lib/common/event';
+import { Emitter, Event } from '@ogun/core/lib/common/event';
 import { ThemingExt } from '../common';
 import { RPCProtocol } from '../common/rpc-protocol';
-import { ThemeType } from '@theia/core/lib/common/theme';
+import { ThemeType } from '@ogun/core/lib/common/theme';
 
 /*---------------------------------------------------------------------------------------------
  *  Copyright (c) Microsoft Corporation. All rights reserved.

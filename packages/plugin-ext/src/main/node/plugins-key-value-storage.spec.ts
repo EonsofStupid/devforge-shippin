@@ -16,19 +16,19 @@
 
 import 'reflect-metadata';
 import { expect } from 'chai';
-import { Container } from '@theia/core/shared/inversify';
-import { EnvVariablesServer } from '@theia/core/lib/common/env-variables';
+import { Container } from '@ogun/core/shared/inversify';
+import { EnvVariablesServer } from '@ogun/core/lib/common/env-variables';
 import { PluginsKeyValueStorage } from './plugins-key-value-storage';
 import { PluginPathsService } from '../common/plugin-paths-protocol';
 import { PluginPathsServiceImpl } from './paths/plugin-paths-service';
 import { PluginCliContribution } from './plugin-cli-contribution';
-import { ILogger } from '@theia/core/lib/common/logger';
-import { MockLogger } from '@theia/core/lib/common/test/mock-logger';
-import { MockEnvVariablesServerImpl } from '@theia/core/lib/browser/test/mock-env-variables-server';
-import { FileSystemLocking, FileUri } from '@theia/core/lib/node';
-import { FileSystemLockingImpl } from '@theia/core/lib/node/filesystem-locking';
-import { WorkspaceFileService } from '@theia/workspace/lib/common';
-import { UntitledWorkspaceService } from '@theia/workspace/lib/common/untitled-workspace-service';
+import { ILogger } from '@ogun/core/lib/common/logger';
+import { MockLogger } from '@ogun/core/lib/common/test/mock-logger';
+import { MockEnvVariablesServerImpl } from '@ogun/core/lib/browser/test/mock-env-variables-server';
+import { FileSystemLocking, FileUri } from '@ogun/core/lib/node';
+import { FileSystemLockingImpl } from '@ogun/core/lib/node/filesystem-locking';
+import { WorkspaceFileService } from '@ogun/workspace/lib/common';
+import { UntitledWorkspaceService } from '@ogun/workspace/lib/common/untitled-workspace-service';
 import * as temp from 'temp';
 
 const GlobalStorageKind = undefined;

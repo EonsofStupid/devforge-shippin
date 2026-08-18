@@ -14,13 +14,13 @@
  * SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
  ********************************************************************************/
 
-import { inject, injectable, named } from '@theia/core/shared/inversify';
-import { FileService } from '@theia/filesystem/lib/browser/file-service';
-import { EnvVariablesServer } from '@theia/core/lib/common/env-variables';
-import { ILogger } from '@theia/core/lib/common/logger';
-import { URI } from '@theia/core/lib/common/uri';
-import { generateUuid } from '@theia/core/lib/common/uuid';
-import { BinaryBuffer } from '@theia/core/lib/common/buffer';
+import { inject, injectable, named } from '@ogun/core/shared/inversify';
+import { FileService } from '@ogun/filesystem/lib/browser/file-service';
+import { EnvVariablesServer } from '@ogun/core/lib/common/env-variables';
+import { ILogger } from '@ogun/core/lib/common/logger';
+import { URI } from '@ogun/core/lib/common/uri';
+import { generateUuid } from '@ogun/core/lib/common/uuid';
+import { BinaryBuffer } from '@ogun/core/lib/common/buffer';
 import { WorkspaceService } from '../workspace-service';
 import { WorkspaceMetadataStore, WorkspaceMetadataStoreImpl } from './workspace-metadata-store';
 

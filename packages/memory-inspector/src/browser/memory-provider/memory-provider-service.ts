@@ -14,16 +14,16 @@
  * SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
  ********************************************************************************/
 
-import { ContributionProvider } from '@theia/core';
-import { inject, injectable, named } from '@theia/core/shared/inversify';
-import { DebugVariable } from '@theia/debug/lib/browser/console/debug-console-items';
-import { DebugSession } from '@theia/debug/lib/browser/debug-session';
-import { DebugSessionManager } from '@theia/debug/lib/browser/debug-session-manager';
+import { ContributionProvider } from '@ogun/core';
+import { inject, injectable, named } from '@ogun/core/shared/inversify';
+import { DebugVariable } from '@ogun/debug/lib/browser/console/debug-console-items';
+import { DebugSession } from '@ogun/debug/lib/browser/debug-session';
+import { DebugSessionManager } from '@ogun/debug/lib/browser/debug-session-manager';
 import { DebugProtocol } from '@vscode/debugprotocol';
 import { Interfaces } from '../utils/memory-widget-utils';
 import { VariableRange } from '../utils/memory-widget-variable-utils';
 import { DefaultMemoryProvider, MemoryProvider } from './memory-provider';
-import { nls } from '@theia/core/lib/common/nls';
+import { nls } from '@ogun/core/lib/common/nls';
 
 @injectable()
 export class MemoryProviderService {

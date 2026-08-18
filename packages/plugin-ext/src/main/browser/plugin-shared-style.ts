@@ -14,13 +14,13 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { inject, injectable, postConstruct } from '@theia/core/shared/inversify';
-import { Disposable, DisposableCollection } from '@theia/core/lib/common/disposable';
-import { ThemeService } from '@theia/core/lib/browser/theming';
-import { Theme } from '@theia/core/lib/common/theme';
+import { inject, injectable, postConstruct } from '@ogun/core/shared/inversify';
+import { Disposable, DisposableCollection } from '@ogun/core/lib/common/disposable';
+import { ThemeService } from '@ogun/core/lib/browser/theming';
+import { Theme } from '@ogun/core/lib/common/theme';
 import { IconUrl } from '../../common/plugin-protocol';
-import { Reference, SyncReferenceCollection } from '@theia/core/lib/common/reference';
-import { Endpoint } from '@theia/core/lib/browser/endpoint';
+import { Reference, SyncReferenceCollection } from '@ogun/core/lib/common/reference';
+import { Endpoint } from '@ogun/core/lib/browser/endpoint';
 
 export interface PluginIconKey {
     url: IconUrl;

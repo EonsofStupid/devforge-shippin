@@ -15,9 +15,9 @@
 // *****************************************************************************
 
 import debounce from 'p-debounce';
-import { injectable, inject, postConstruct } from '@theia/core/shared/inversify';
-import { Disposable, DisposableCollection, Event, Emitter, deepClone, nls } from '@theia/core/lib/common';
-import URI from '@theia/core/lib/common/uri';
+import { injectable, inject, postConstruct } from '@ogun/core/shared/inversify';
+import { Disposable, DisposableCollection, Event, Emitter, deepClone, nls } from '@ogun/core/lib/common';
+import URI from '@ogun/core/lib/common/uri';
 import { DebugSession, DebugState } from '../debug-session';
 import { DebugSessionManager } from '../debug-session-manager';
 import { DebugThread } from '../model/debug-thread';

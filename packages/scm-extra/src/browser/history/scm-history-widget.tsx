@@ -14,29 +14,29 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { injectable, inject, postConstruct } from '@theia/core/shared/inversify';
-import { DisposableCollection } from '@theia/core';
-import { OpenerService, open, StatefulWidget, SELECTED_CLASS, WidgetManager, ApplicationShell, codicon } from '@theia/core/lib/browser';
-import { CancellationTokenSource } from '@theia/core/lib/common/cancellation';
-import { Message } from '@theia/core/shared/@lumino/messaging';
-import { Virtuoso, VirtuosoHandle } from '@theia/core/shared/react-virtuoso';
-import URI from '@theia/core/lib/common/uri';
+import { injectable, inject, postConstruct } from '@ogun/core/shared/inversify';
+import { DisposableCollection } from '@ogun/core';
+import { OpenerService, open, StatefulWidget, SELECTED_CLASS, WidgetManager, ApplicationShell, codicon } from '@ogun/core/lib/browser';
+import { CancellationTokenSource } from '@ogun/core/lib/common/cancellation';
+import { Message } from '@ogun/core/shared/@lumino/messaging';
+import { Virtuoso, VirtuosoHandle } from '@ogun/core/shared/react-virtuoso';
+import URI from '@ogun/core/lib/common/uri';
 import { ScmFileChange, ScmFileChangeNode } from '../scm-file-change-node';
-import { ScmAvatarService } from '@theia/scm/lib/browser/scm-avatar-service';
+import { ScmAvatarService } from '@ogun/scm/lib/browser/scm-avatar-service';
 import { ScmItemComponent, ScmNavigableListWidget } from '../scm-navigable-list-widget';
-import * as React from '@theia/core/shared/react';
-import { AlertMessage } from '@theia/core/lib/browser/widgets/alert-message';
-import { FileService } from '@theia/filesystem/lib/browser/file-service';
-import { nls } from '@theia/core/lib/common/nls';
+import * as React from '@ogun/core/shared/react';
+import { AlertMessage } from '@ogun/core/lib/browser/widgets/alert-message';
+import { FileService } from '@ogun/filesystem/lib/browser/file-service';
+import { nls } from '@ogun/core/lib/common/nls';
 import { ScmHistoryProvider } from './scm-history-provider';
-import throttle = require('@theia/core/shared/lodash.throttle');
+import throttle = require('@ogun/core/shared/lodash.throttle');
 import { HistoryWidgetOptions, ScmCommitNode, ScmHistoryListNode, ScmHistorySupport, SCM_HISTORY_ID, SCM_HISTORY_LABEL, SCM_HISTORY_MAX_COUNT } from './scm-history-constants';
 export { HistoryWidgetOptions, ScmCommitNode, ScmHistoryListNode, ScmHistorySupport };
 
 @injectable()
 /**
- * @deprecated since 1.75.0 - superseded by the SCM history graph in `@theia/scm`
- * and the Timeline view in `@theia/timeline`. This package will be removed in a
+ * @deprecated since 1.75.0 - superseded by the SCM history graph in `@ogun/scm`
+ * and the Timeline view in `@ogun/timeline`. This package will be removed in a
  * future release - see https://github.com/eclipse-theia/theia/issues/17457.
  */
 export class ScmHistoryWidget extends ScmNavigableListWidget<ScmHistoryListNode> implements StatefulWidget {
@@ -523,8 +523,8 @@ export class ScmHistoryWidget extends ScmNavigableListWidget<ScmHistoryListNode>
 }
 
 /**
- * @deprecated since 1.75.0 - superseded by the SCM history graph in `@theia/scm`
- * and the Timeline view in `@theia/timeline`. This package will be removed in a
+ * @deprecated since 1.75.0 - superseded by the SCM history graph in `@ogun/scm`
+ * and the Timeline view in `@ogun/timeline`. This package will be removed in a
  * future release - see https://github.com/eclipse-theia/theia/issues/17457.
  */
 export namespace ScmHistoryList {
@@ -537,8 +537,8 @@ export namespace ScmHistoryList {
     }
 }
 /**
- * @deprecated since 1.75.0 - superseded by the SCM history graph in `@theia/scm`
- * and the Timeline view in `@theia/timeline`. This package will be removed in a
+ * @deprecated since 1.75.0 - superseded by the SCM history graph in `@ogun/scm`
+ * and the Timeline view in `@ogun/timeline`. This package will be removed in a
  * future release - see https://github.com/eclipse-theia/theia/issues/17457.
  */
 export class ScmHistoryList extends React.Component<ScmHistoryList.Props> {

@@ -1410,7 +1410,7 @@
               "mdDescription": "Hash del contenuto dell'approvazione del registro utilizzata per installare questo server.",
               "title": "Hash della configurazione del Registro di sistema"
             },
-            "mdDescription": "Metadati di provenienza per un server installato da un registro AI. Scritti da `@theia/ai-registry`; non modificabili dall'utente.",
+            "mdDescription": "Metadati di provenienza per un server installato da un registro AI. Scritti da `@ogun/ai-registry`; non modificabili dall'utente.",
             "serverId": {
               "mdDescription": "Identifica la voce del registro AI da cui è stato installato questo server.",
               "title": "ID del server di registro"

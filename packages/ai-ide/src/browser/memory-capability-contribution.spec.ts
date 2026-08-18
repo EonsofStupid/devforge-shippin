@@ -15,8 +15,8 @@
 // *****************************************************************************
 
 import { expect } from 'chai';
-import { PromptService } from '@theia/ai-core';
-import { Container } from '@theia/core/shared/inversify';
+import { PromptService } from '@ogun/ai-core';
+import { Container } from '@ogun/core/shared/inversify';
 import {
     FILE_CONTENT_FUNCTION_ID,
     FIND_FILES_BY_PATTERN_FUNCTION_ID,

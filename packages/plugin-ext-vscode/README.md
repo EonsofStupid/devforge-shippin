@@ -12,12 +12,12 @@
 
 ## Description
 
-The `@theia/plugin-ext-vscode` extension contributes functionality to be able to successfully run VS Code extensions in the application.
+The `@ogun/plugin-ext-vscode` extension contributes functionality to be able to successfully run VS Code extensions in the application.
 The extension is mandatory for any application which requires VS Code extension support.
 
 ## Additional Information
 
-- [API documentation for `@theia/plugin-ext-vscode`](https://eclipse-theia.github.io/theia/docs/next/modules/_theia_plugin-ext-vscode.html)
+- [API documentation for `@ogun/plugin-ext-vscode`](https://eclipse-theia.github.io/theia/docs/next/modules/_theia_plugin-ext-vscode.html)
 - [Theia - GitHub](https://github.com/eclipse-theia/theia)
 - [Theia - Website](https://theia-ide.org/)
 

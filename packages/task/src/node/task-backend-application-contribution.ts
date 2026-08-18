@@ -14,9 +14,9 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { injectable, inject, named } from '@theia/core/shared/inversify';
-import { ContributionProvider } from '@theia/core';
-import { BackendApplicationContribution } from '@theia/core/lib/node';
+import { injectable, inject, named } from '@ogun/core/shared/inversify';
+import { ContributionProvider } from '@ogun/core';
+import { BackendApplicationContribution } from '@ogun/core/lib/node';
 import { TaskRunnerContribution, TaskRunnerRegistry } from './task-runner';
 
 @injectable()

@@ -19,26 +19,26 @@ describe('TypeScript', function () {
     this.timeout(360_000);
 
     const { assert } = chai;
-    const { timeout } = require('@theia/core/lib/common/promise-util');
-    const { MenuModelRegistry } = require('@theia/core/lib/common/menu/menu-model-registry');
+    const { timeout } = require('@ogun/core/lib/common/promise-util');
+    const { MenuModelRegistry } = require('@ogun/core/lib/common/menu/menu-model-registry');
 
-    const Uri = require('@theia/core/lib/common/uri');
-    const { DisposableCollection } = require('@theia/core/lib/common/disposable');
-    const { BrowserMainMenuFactory } = require('@theia/core/lib/browser/menu/browser-menu-plugin');
-    const { EditorManager } = require('@theia/editor/lib/browser/editor-manager');
-    const { EditorWidget } = require('@theia/editor/lib/browser/editor-widget');
-    const { EDITOR_CONTEXT_MENU } = require('@theia/editor/lib/browser/editor-menu');
-    const { WorkspaceService } = require('@theia/workspace/lib/browser/workspace-service');
-    const { MonacoEditor } = require('@theia/monaco/lib/browser/monaco-editor');
-    const { HostedPluginSupport } = require('@theia/plugin-ext/lib/hosted/browser/hosted-plugin');
-    const { ContextKeyService } = require('@theia/core/lib/browser/context-key-service');
-    const { CommandRegistry } = require('@theia/core/lib/common/command');
-    const { KeybindingRegistry } = require('@theia/core/lib/browser/keybinding');
-    const { OpenerService, open } = require('@theia/core/lib/browser/opener-service');
-    const { PreferenceService } = require('@theia/core/lib/common/preferences/preference-service');
-    const { PreferenceScope } = require('@theia/core/lib/common/preferences/preference-scope');
-    const { ProgressStatusBarItem } = require('@theia/core/lib/browser/progress-status-bar-item');
-    const { PluginViewRegistry } = require('@theia/plugin-ext/lib/main/browser/view/plugin-view-registry');
+    const Uri = require('@ogun/core/lib/common/uri');
+    const { DisposableCollection } = require('@ogun/core/lib/common/disposable');
+    const { BrowserMainMenuFactory } = require('@ogun/core/lib/browser/menu/browser-menu-plugin');
+    const { EditorManager } = require('@ogun/editor/lib/browser/editor-manager');
+    const { EditorWidget } = require('@ogun/editor/lib/browser/editor-widget');
+    const { EDITOR_CONTEXT_MENU } = require('@ogun/editor/lib/browser/editor-menu');
+    const { WorkspaceService } = require('@ogun/workspace/lib/browser/workspace-service');
+    const { MonacoEditor } = require('@ogun/monaco/lib/browser/monaco-editor');
+    const { HostedPluginSupport } = require('@ogun/plugin-ext/lib/hosted/browser/hosted-plugin');
+    const { ContextKeyService } = require('@ogun/core/lib/browser/context-key-service');
+    const { CommandRegistry } = require('@ogun/core/lib/common/command');
+    const { KeybindingRegistry } = require('@ogun/core/lib/browser/keybinding');
+    const { OpenerService, open } = require('@ogun/core/lib/browser/opener-service');
+    const { PreferenceService } = require('@ogun/core/lib/common/preferences/preference-service');
+    const { PreferenceScope } = require('@ogun/core/lib/common/preferences/preference-scope');
+    const { ProgressStatusBarItem } = require('@ogun/core/lib/browser/progress-status-bar-item');
+    const { PluginViewRegistry } = require('@ogun/plugin-ext/lib/main/browser/view/plugin-view-registry');
     const { Range } = require('@theia/monaco-editor-core/esm/vs/editor/common/core/range');
     const { Selection } = require('@theia/monaco-editor-core/esm/vs/editor/common/core/selection');
 
@@ -53,7 +53,7 @@ describe('TypeScript', function () {
     const openerService = container.get(OpenerService);
     /** @type {KeybindingRegistry} */
     const keybindings = container.get(KeybindingRegistry);
-    /** @type {import('@theia/core/lib/common/preferences/preference-service').PreferenceService} */
+    /** @type {import('@ogun/core/lib/common/preferences/preference-service').PreferenceService} */
     const preferences = container.get(PreferenceService);
     const progressStatusBarItem = container.get(ProgressStatusBarItem);
     /** @type {PluginViewRegistry} */

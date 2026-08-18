@@ -8,15 +8,15 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { injectable, inject, named } from '@theia/core/shared/inversify';
-import { CommandRegistry, PreferenceService, DisposableCollection } from '@theia/core/lib/common';
-import { TerminalWidget } from '@theia/terminal/lib/browser/base/terminal-widget';
-import { TerminalFrontendContribution, TerminalCommands } from '@theia/terminal/lib/browser/terminal-frontend-contribution';
-import { ApplicationShell, WidgetManager, FrontendApplicationContribution, FrontendApplication } from '@theia/core/lib/browser';
+import { injectable, inject, named } from '@ogun/core/shared/inversify';
+import { CommandRegistry, PreferenceService, DisposableCollection } from '@ogun/core/lib/common';
+import { TerminalWidget } from '@ogun/terminal/lib/browser/base/terminal-widget';
+import { TerminalFrontendContribution, TerminalCommands } from '@ogun/terminal/lib/browser/terminal-frontend-contribution';
+import { ApplicationShell, WidgetManager, FrontendApplicationContribution, FrontendApplication } from '@ogun/core/lib/browser';
 import { TerminalManagerWidget } from './terminal-manager-widget';
 import { TerminalManagerFrontendViewContribution } from './terminal-manager-frontend-view-contribution';
 import { TerminalManagerPreferences } from './terminal-manager-preferences';
-import { ILogger } from '@theia/core';
+import { ILogger } from '@ogun/core';
 /**
  * Re-registers terminal commands (e.g. new terminal) to execute them via the terminal manager
  * instead of creating new, separate terminals.

@@ -14,12 +14,12 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { inject, injectable } from '@theia/core/shared/inversify';
+import { inject, injectable } from '@ogun/core/shared/inversify';
 import { Summary, TaskContextStorageService } from './task-context-service';
-import { Emitter } from '@theia/core';
-import { AIVariableResourceResolver } from '@theia/ai-core';
+import { Emitter } from '@ogun/core';
+import { AIVariableResourceResolver } from '@ogun/ai-core';
 import { TASK_CONTEXT_VARIABLE } from './task-context-variable';
-import { open, OpenerService } from '@theia/core/lib/browser';
+import { open, OpenerService } from '@ogun/core/lib/browser';
 
 @injectable()
 export class InMemoryTaskContextStorage implements TaskContextStorageService {

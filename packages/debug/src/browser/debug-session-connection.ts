@@ -17,9 +17,9 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 
 import { DebugProtocol } from '@vscode/debugprotocol';
-import { Deferred } from '@theia/core/lib/common/promise-util';
-import { Event, Emitter, DisposableCollection, Disposable, MaybePromise } from '@theia/core';
-import { OutputChannel } from '@theia/output/lib/browser/output-channel';
+import { Deferred } from '@ogun/core/lib/common/promise-util';
+import { Event, Emitter, DisposableCollection, Disposable, MaybePromise } from '@ogun/core';
+import { OutputChannel } from '@ogun/output/lib/browser/output-channel';
 
 import { DebugChannel } from '../common/debug-service';
 

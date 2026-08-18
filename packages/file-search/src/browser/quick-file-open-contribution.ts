@@ -14,13 +14,13 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { injectable, inject } from '@theia/core/shared/inversify';
-import URI from '@theia/core/lib/common/uri';
+import { injectable, inject } from '@ogun/core/shared/inversify';
+import URI from '@ogun/core/lib/common/uri';
 import { QuickFileOpenService, quickFileOpen } from './quick-file-open';
-import { CommandRegistry, CommandContribution, MenuContribution, MenuModelRegistry } from '@theia/core/lib/common';
-import { KeybindingRegistry, KeybindingContribution, QuickAccessContribution } from '@theia/core/lib/browser';
-import { EditorMainMenu } from '@theia/editor/lib/browser';
-import { nls } from '@theia/core/lib/common/nls';
+import { CommandRegistry, CommandContribution, MenuContribution, MenuModelRegistry } from '@ogun/core/lib/common';
+import { KeybindingRegistry, KeybindingContribution, QuickAccessContribution } from '@ogun/core/lib/browser';
+import { EditorMainMenu } from '@ogun/editor/lib/browser';
+import { nls } from '@ogun/core/lib/common/nls';
 
 @injectable()
 export class QuickFileOpenFrontendContribution implements QuickAccessContribution, CommandContribution, KeybindingContribution, MenuContribution {

@@ -1410,7 +1410,7 @@
               "mdDescription": "A szerver telepítéséhez használt rendszerleíró adatbázis-jóváhagyás tartalmi hash-értéke.",
               "title": "Rendszerleíró adatbázis konfigurációs hash"
             },
-            "mdDescription": "Egy AI-nyilvántartásból telepített szerver származási metaadatai. Írta: `@theia/ai-registry`; a felhasználó nem szerkesztheti.",
+            "mdDescription": "Egy AI-nyilvántartásból telepített szerver származási metaadatai. Írta: `@ogun/ai-registry`; a felhasználó nem szerkesztheti.",
             "serverId": {
               "mdDescription": "Meghatározza azt az AI-nyilvántartási bejegyzést, amelyből ezt a szervert telepítették.",
               "title": "Rendszerleíró adatbázis szerverazonosítója"

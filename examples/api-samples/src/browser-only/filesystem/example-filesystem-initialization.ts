@@ -14,11 +14,11 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { URI } from '@theia/core';
-import { inject, injectable, interfaces } from '@theia/core/shared/inversify';
-import { EncodingService } from '@theia/core/lib/common/encoding-service';
-import { OPFSInitialization, DefaultOPFSInitialization } from '@theia/filesystem/lib/browser-only/opfs-filesystem-initialization';
-import { OPFSFileSystemProvider } from '@theia/filesystem/lib/browser-only/opfs-filesystem-provider';
+import { URI } from '@ogun/core';
+import { inject, injectable, interfaces } from '@ogun/core/shared/inversify';
+import { EncodingService } from '@ogun/core/lib/common/encoding-service';
+import { OPFSInitialization, DefaultOPFSInitialization } from '@ogun/filesystem/lib/browser-only/opfs-filesystem-initialization';
+import { OPFSFileSystemProvider } from '@ogun/filesystem/lib/browser-only/opfs-filesystem-provider';
 
 @injectable()
 export class ExampleOPFSInitialization extends DefaultOPFSInitialization {

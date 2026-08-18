@@ -14,11 +14,11 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { injectable } from '@theia/core/shared/inversify';
-import * as fs from '@theia/core/shared/fs-extra';
+import { injectable } from '@ogun/core/shared/inversify';
+import * as fs from '@ogun/core/shared/fs-extra';
 import { pack } from 'tar-fs';
-import URI from '@theia/core/lib/common/uri';
-import { FileUri } from '@theia/core/lib/common/file-uri';
+import URI from '@ogun/core/lib/common/uri';
+import { FileUri } from '@ogun/core/lib/common/file-uri';
 
 @injectable()
 export class DirectoryArchiver {

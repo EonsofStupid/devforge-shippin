@@ -14,12 +14,12 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { ChatChangeEvent, ChatService, ChatSession, ChatSessionStatus } from '@theia/ai-chat';
-import { DisposableCollection } from '@theia/core';
-import { ApplicationShell, FrontendApplicationContribution } from '@theia/core/lib/browser';
-import { AgentNotificationKind, AGENT_NOTIFICATION_KIND_COMPLETED, AGENT_NOTIFICATION_KIND_INPUT_NEEDED } from '@theia/ai-core';
-import { AgentNotificationService } from '@theia/ai-core/lib/browser';
-import { inject, injectable } from '@theia/core/shared/inversify';
+import { ChatChangeEvent, ChatService, ChatSession, ChatSessionStatus } from '@ogun/ai-chat';
+import { DisposableCollection } from '@ogun/core';
+import { ApplicationShell, FrontendApplicationContribution } from '@ogun/core/lib/browser';
+import { AgentNotificationKind, AGENT_NOTIFICATION_KIND_COMPLETED, AGENT_NOTIFICATION_KIND_INPUT_NEEDED } from '@ogun/ai-core';
+import { AgentNotificationService } from '@ogun/ai-core/lib/browser';
+import { inject, injectable } from '@ogun/core/shared/inversify';
 import { isChatSessionFocused } from './chat-session-focus';
 
 interface SessionNotificationState {

@@ -14,8 +14,8 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import type * as theia from '@theia/plugin';
-import { Disposable } from '@theia/core/lib/common/disposable';
+import type * as theia from '@ogun/plugin';
+import { Disposable } from '@ogun/core/lib/common/disposable';
 import { RPCProtocol } from '../common/rpc-protocol';
 import {
     McpServerDefinitionRegistryExt,

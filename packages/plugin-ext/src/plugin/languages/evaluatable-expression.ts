@@ -14,8 +14,8 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { URI } from '@theia/core/shared/vscode-uri';
-import * as theia from '@theia/plugin';
+import { URI } from '@ogun/core/shared/vscode-uri';
+import * as theia from '@ogun/plugin';
 import { Position } from '../../common/plugin-api-rpc';
 import { EvaluatableExpression } from '../../common/plugin-api-rpc-model';
 import { DocumentsExtImpl } from '../documents';

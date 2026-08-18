@@ -14,19 +14,19 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { injectable, inject } from '@theia/core/shared/inversify';
-import { StatusBar } from '@theia/core/lib/browser/status-bar/status-bar';
-import { StatusBarAlignment, StatusBarEntry, FrontendApplicationContribution, OnWillStopAction, codicon } from '@theia/core/lib/browser';
-import { MessageService, PreferenceChange, PreferenceServiceImpl } from '@theia/core/lib/common';
-import { CommandRegistry } from '@theia/core/shared/@lumino/commands';
-import { Menu } from '@theia/core/shared/@lumino/widgets';
-import { FrontendApplicationStateService } from '@theia/core/lib/browser/frontend-application-state';
-import { ConnectionStatusService, ConnectionStatus } from '@theia/core/lib/browser/connection-status-service';
+import { injectable, inject } from '@ogun/core/shared/inversify';
+import { StatusBar } from '@ogun/core/lib/browser/status-bar/status-bar';
+import { StatusBarAlignment, StatusBarEntry, FrontendApplicationContribution, OnWillStopAction, codicon } from '@ogun/core/lib/browser';
+import { MessageService, PreferenceChange, PreferenceServiceImpl } from '@ogun/core/lib/common';
+import { CommandRegistry } from '@ogun/core/shared/@lumino/commands';
+import { Menu } from '@ogun/core/shared/@lumino/widgets';
+import { FrontendApplicationStateService } from '@ogun/core/lib/browser/frontend-application-state';
+import { ConnectionStatusService, ConnectionStatus } from '@ogun/core/lib/browser/connection-status-service';
 import { PluginDevServer } from '../common/plugin-dev-protocol';
 import { HostedPluginManagerClient, HostedInstanceState, HostedPluginCommands, HostedInstanceData } from './hosted-plugin-manager-client';
 import { HostedPluginLogViewer } from './hosted-plugin-log-viewer';
 import { HostedPluginPreferences } from '../common/hosted-plugin-preferences';
-import { nls } from '@theia/core/lib/common/nls';
+import { nls } from '@ogun/core/lib/common/nls';
 
 /**
  * Adds a status bar element displaying the state of secondary Theia instance with hosted plugin and

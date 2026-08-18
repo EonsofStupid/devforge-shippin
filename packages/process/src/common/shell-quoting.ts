@@ -15,8 +15,8 @@
 // *****************************************************************************
 
 /**
- * Re-exported from `@theia/core` for backwards compatibility.
- * Prefer importing from `@theia/core/lib/common/shell-quoting` directly.
+ * Re-exported from `@ogun/core` for backwards compatibility.
+ * Prefer importing from `@ogun/core/lib/common/shell-quoting` directly.
  */
 export {
     ShellQuoting,
@@ -27,4 +27,4 @@ export {
     BashQuotingFunctions,
     CmdQuotingFunctions,
     PowershellQuotingFunctions
-} from '@theia/core/lib/common/shell-quoting';
+} from '@ogun/core/lib/common/shell-quoting';

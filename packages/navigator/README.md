@@ -12,12 +12,12 @@
 
 ## Description
 
-The `@theia/navigator` extension contributes the `file explorer` widget.\
+The `@ogun/navigator` extension contributes the `file explorer` widget.\
 The `file explorer` can be used to easily view, open, and manage the files that correspond to a given workspace.
 
 ## Additional Information
 
-- [API documentation for `@theia/navigator`](https://eclipse-theia.github.io/theia/docs/next/modules/_theia_navigator.html)
+- [API documentation for `@ogun/navigator`](https://eclipse-theia.github.io/theia/docs/next/modules/_theia_navigator.html)
 - [Theia - GitHub](https://github.com/eclipse-theia/theia)
 - [Theia - Website](https://theia-ide.org/)
 

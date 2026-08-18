@@ -12,7 +12,7 @@
 
 ## Description
 
-The `@theia/plugin` extension contributes the plugin API to the application.
+The `@ogun/plugin` extension contributes the plugin API to the application.
 
 ### Plugin API
 
@@ -761,7 +761,7 @@ function provideRanges(document: theia.TextDocument): theia.ProviderResult<theia
 
 ## Additional Information
 
-- [API documentation for `@theia/plugin`](https://eclipse-theia.github.io/theia/docs/next/modules/_theia_plugin.html)
+- [API documentation for `@ogun/plugin`](https://eclipse-theia.github.io/theia/docs/next/modules/_theia_plugin.html)
 - [Theia - GitHub](https://github.com/eclipse-theia/theia)
 - [Theia - Website](https://theia-ide.org/)
 

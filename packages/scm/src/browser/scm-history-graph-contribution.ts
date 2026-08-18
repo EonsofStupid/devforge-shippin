@@ -14,14 +14,14 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { injectable, inject, optional } from '@theia/core/shared/inversify';
-import { Command, CommandContribution, CommandRegistry } from '@theia/core/lib/common/command';
-import { MenuContribution, MenuModelRegistry } from '@theia/core/lib/common/menu';
-import { nls } from '@theia/core/lib/common/nls';
-import { CancellationTokenSource } from '@theia/core/lib/common/cancellation';
-import { QuickInputService } from '@theia/core/lib/browser';
-import { QuickPickItem, QuickPickSeparator } from '@theia/core/lib/common/quick-pick-service';
-import { codicon } from '@theia/core/lib/browser/widgets/widget';
+import { injectable, inject, optional } from '@ogun/core/shared/inversify';
+import { Command, CommandContribution, CommandRegistry } from '@ogun/core/lib/common/command';
+import { MenuContribution, MenuModelRegistry } from '@ogun/core/lib/common/menu';
+import { nls } from '@ogun/core/lib/common/nls';
+import { CancellationTokenSource } from '@ogun/core/lib/common/cancellation';
+import { QuickInputService } from '@ogun/core/lib/browser';
+import { QuickPickItem, QuickPickSeparator } from '@ogun/core/lib/common/quick-pick-service';
+import { codicon } from '@ogun/core/lib/browser/widgets/widget';
 import { ScmHistoryGraphModel, ScmHistoryGraphModelProvider } from './scm-history-graph-model';
 import { ScmService } from './scm-service';
 import { ScmHistoryItemRef, ScmHistoryProvider } from './scm-provider';

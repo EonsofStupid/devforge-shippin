@@ -14,16 +14,16 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { Agent, AIVariableContribution } from '@theia/ai-core';
-import { FrontendApplicationContribution, KeybindingContribution, } from '@theia/core/lib/browser';
-import { ContainerModule } from '@theia/core/shared/inversify';
+import { Agent, AIVariableContribution } from '@ogun/ai-core';
+import { FrontendApplicationContribution, KeybindingContribution, } from '@ogun/core/lib/browser';
+import { ContainerModule } from '@ogun/core/shared/inversify';
 import { AICodeCompletionPreferencesSchema } from '../common/ai-code-completion-preference';
 import { AIFrontendApplicationContribution } from './ai-code-frontend-application-contribution';
 import { AICodeInlineCompletionsProvider } from './ai-code-inline-completion-provider';
 import { CodeCompletionAgent, CodeCompletionAgentImpl } from './code-completion-agent';
 import { CodeCompletionPostProcessor, DefaultCodeCompletionPostProcessor } from './code-completion-postprocessor';
 import { CodeCompletionVariableContribution } from './code-completion-variable-contribution';
-import { PreferenceContribution } from '@theia/core';
+import { PreferenceContribution } from '@ogun/core';
 
 export default new ContainerModule(bind => {
     bind(CodeCompletionAgentImpl).toSelf().inSingletonScope();

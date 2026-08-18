@@ -15,7 +15,7 @@
 // *****************************************************************************
 
 import { expect } from 'chai';
-import { ScmService } from '@theia/scm/lib/browser/scm-service';
+import { ScmService } from '@ogun/scm/lib/browser/scm-service';
 import { ScmMainImpl } from './scm-main';
 
 interface ScmMainInternals {

@@ -14,11 +14,11 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { injectable } from '@theia/core/shared/inversify';
-import { StatusBar, StatusBarAlignment, Widget, WidgetStatusBarContribution } from '@theia/core/lib/browser';
-import { Disposable } from '@theia/core/lib/common';
+import { injectable } from '@ogun/core/shared/inversify';
+import { StatusBar, StatusBarAlignment, Widget, WidgetStatusBarContribution } from '@ogun/core/lib/browser';
+import { Disposable } from '@ogun/core/lib/common';
 import { NotebookEditorWidget } from '../notebook-editor-widget';
-import { nls } from '@theia/core';
+import { nls } from '@ogun/core';
 import { NotebookCommands } from './notebook-actions-contribution';
 
 export const NOTEBOOK_CELL_SELECTION_STATUS_BAR_ID = 'notebook-cell-selection-position';

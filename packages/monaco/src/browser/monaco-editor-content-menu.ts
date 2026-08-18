@@ -14,12 +14,12 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { inject, injectable } from '@theia/core/shared/inversify';
-import { ArrayUtils, CommandMenu, CommandRegistry, CompoundMenuNode, Disposable, Event, MenuModelRegistry, MenuNode } from '@theia/core';
-import { ObservableFromEvent, ObservableUtils } from '@theia/core/lib/common/observable';
-import { FrontendApplicationContribution } from '@theia/core/lib/browser';
-import { Context } from '@theia/core/lib/browser/context-key-service';
-import { EditorManager, EDITOR_CONTENT_MENU, EditorWidget } from '@theia/editor/lib/browser';
+import { inject, injectable } from '@ogun/core/shared/inversify';
+import { ArrayUtils, CommandMenu, CommandRegistry, CompoundMenuNode, Disposable, Event, MenuModelRegistry, MenuNode } from '@ogun/core';
+import { ObservableFromEvent, ObservableUtils } from '@ogun/core/lib/common/observable';
+import { FrontendApplicationContribution } from '@ogun/core/lib/browser';
+import { Context } from '@ogun/core/lib/browser/context-key-service';
+import { EditorManager, EDITOR_CONTENT_MENU, EditorWidget } from '@ogun/editor/lib/browser';
 import { ICodeEditor } from '@theia/monaco-editor-core/esm/vs/editor/browser/editorBrowser';
 import { IContextKeyService } from '@theia/monaco-editor-core/esm/vs/platform/contextkey/common/contextkey';
 import { MonacoContextKeyService } from './monaco-context-key-service';

@@ -14,17 +14,17 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { enableJSDOM } from '@theia/core/lib/browser/test/jsdom';
+import { enableJSDOM } from '@ogun/core/lib/browser/test/jsdom';
 const disableJSDOM = enableJSDOM();
-import { FrontendApplicationConfigProvider } from '@theia/core/lib/browser/frontend-application-config-provider';
+import { FrontendApplicationConfigProvider } from '@ogun/core/lib/browser/frontend-application-config-provider';
 FrontendApplicationConfigProvider.set({});
 
 import { expect } from 'chai';
-import { Container } from '@theia/core/shared/inversify';
-import { Emitter, Event } from '@theia/core';
-import { Deferred } from '@theia/core/lib/common/promise-util';
-import { PreferenceChange, PreferenceInspection, PreferenceScope, PreferenceService } from '@theia/core/lib/common/preferences';
-import { WorkspaceTrustService } from '@theia/workspace/lib/browser/workspace-trust-service';
+import { Container } from '@ogun/core/shared/inversify';
+import { Emitter, Event } from '@ogun/core';
+import { Deferred } from '@ogun/core/lib/common/promise-util';
+import { PreferenceChange, PreferenceInspection, PreferenceScope, PreferenceService } from '@ogun/core/lib/common/preferences';
+import { WorkspaceTrustService } from '@ogun/workspace/lib/browser/workspace-trust-service';
 import { TrustAwarePreferenceReader } from './trust-aware-preference-reader';
 import { AiConfigurationChange } from '../common/ai-configuration-service';
 import { AiConfigurationServiceImpl } from './ai-configuration-service-impl';

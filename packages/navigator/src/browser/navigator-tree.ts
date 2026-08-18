@@ -14,11 +14,11 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { injectable, inject, postConstruct } from '@theia/core/shared/inversify';
-import { FileTree, DirNode } from '@theia/filesystem/lib/browser';
-import { FileStat } from '@theia/filesystem/lib/common/files';
-import URI from '@theia/core/lib/common/uri';
-import { TreeNode, CompositeTreeNode, SelectableTreeNode, CompressionToggle } from '@theia/core/lib/browser';
+import { injectable, inject, postConstruct } from '@ogun/core/shared/inversify';
+import { FileTree, DirNode } from '@ogun/filesystem/lib/browser';
+import { FileStat } from '@ogun/filesystem/lib/common/files';
+import URI from '@ogun/core/lib/common/uri';
+import { TreeNode, CompositeTreeNode, SelectableTreeNode, CompressionToggle } from '@ogun/core/lib/browser';
 import { FileNavigatorFilter } from './navigator-filter';
 import { EXPLORER_COMPACT_FOLDERS, FileNavigatorPreferences } from '../common/navigator-preferences';
 

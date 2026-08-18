@@ -18,9 +18,9 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { nls } from '@theia/core';
-import { interfaces } from '@theia/core/shared/inversify';
-import { PreferenceContribution, PreferenceSchema } from '@theia/core/lib/common/preferences/preference-schema';
+import { nls } from '@ogun/core';
+import { interfaces } from '@ogun/core/shared/inversify';
+import { PreferenceContribution, PreferenceSchema } from '@ogun/core/lib/common/preferences/preference-schema';
 
 export namespace NotebookPreferences {
     export const NOTEBOOK_LINE_NUMBERS = 'notebook.lineNumbers';

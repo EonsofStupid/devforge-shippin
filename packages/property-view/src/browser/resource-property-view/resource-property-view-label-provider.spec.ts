@@ -14,19 +14,19 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { enableJSDOM } from '@theia/core/lib/browser/test/jsdom';
+import { enableJSDOM } from '@ogun/core/lib/browser/test/jsdom';
 
 let disableJSDOM = enableJSDOM();
 
 import { expect } from 'chai';
-import { FrontendApplicationConfigProvider } from '@theia/core/lib/browser/frontend-application-config-provider';
+import { FrontendApplicationConfigProvider } from '@ogun/core/lib/browser/frontend-application-config-provider';
 FrontendApplicationConfigProvider.set({});
 
-import { Container } from '@theia/core/shared/inversify';
-import { TreeNode } from '@theia/core/lib/browser/tree/tree';
+import { Container } from '@ogun/core/shared/inversify';
+import { TreeNode } from '@ogun/core/lib/browser/tree/tree';
 import { DEFAULT_INFO_ICON, ResourcePropertiesLabelProvider, } from './resource-property-view-label-provider';
-import { LabelProvider, LabelProviderContribution } from '@theia/core/lib/browser/label-provider';
-import { ContributionProvider } from '@theia/core/lib/common';
+import { LabelProvider, LabelProviderContribution } from '@ogun/core/lib/browser/label-provider';
+import { ContributionProvider } from '@ogun/core/lib/common';
 import { ResourcePropertiesCategoryNode, ResourcePropertiesItemNode } from './resource-property-view-tree-items';
 
 disableJSDOM();

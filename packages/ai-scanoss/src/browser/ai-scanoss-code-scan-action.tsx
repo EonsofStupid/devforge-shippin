@@ -13,22 +13,22 @@
 //
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // ***
-import { inject, injectable } from '@theia/core/shared/inversify';
-import { CodeChatResponseContent } from '@theia/ai-chat';
-import { CodePartRendererAction } from '@theia/ai-chat-ui/lib/browser/chat-response-renderer';
+import { inject, injectable } from '@ogun/core/shared/inversify';
+import { CodeChatResponseContent } from '@ogun/ai-chat';
+import { CodePartRendererAction } from '@ogun/ai-chat-ui/lib/browser/chat-response-renderer';
 import {
     ScanOSSResult,
     ScanOSSResultMatch,
     ScanOSSService,
-} from '@theia/scanoss';
-import { Dialog } from '@theia/core/lib/browser';
-import { ReactNode } from '@theia/core/shared/react';
-import { ResponseNode } from '@theia/ai-chat-ui/lib/browser/chat-tree-view';
-import * as React from '@theia/core/shared/react';
-import { ReactDialog } from '@theia/core/lib/browser/dialogs/react-dialog';
-import { SCAN_OSS_API_KEY_PREF } from '@theia/scanoss/lib/common/scanoss-preferences';
+} from '@ogun/scanoss';
+import { Dialog } from '@ogun/core/lib/browser';
+import { ReactNode } from '@ogun/core/shared/react';
+import { ResponseNode } from '@ogun/ai-chat-ui/lib/browser/chat-tree-view';
+import * as React from '@ogun/core/shared/react';
+import { ReactDialog } from '@ogun/core/lib/browser/dialogs/react-dialog';
+import { SCAN_OSS_API_KEY_PREF } from '@ogun/scanoss/lib/common/scanoss-preferences';
 import { SCANOSS_MODE_PREF } from '../common/ai-scanoss-preferences';
-import { nls, PreferenceService } from '@theia/core';
+import { nls, PreferenceService } from '@ogun/core';
 
 // cached map of scanOSS results.
 // 'false' is stored when not automatic check is off and it was not (yet) requested deliberately.

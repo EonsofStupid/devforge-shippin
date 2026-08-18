@@ -14,7 +14,7 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { RpcServer } from '@theia/core';
+import { RpcServer } from '@ogun/core';
 import { FileChangeType } from './files';
 export { FileChangeType };
 

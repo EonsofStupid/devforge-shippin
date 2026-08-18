@@ -14,10 +14,10 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { AIVariableContribution } from '@theia/ai-core';
-import { FrontendApplicationContribution, KeybindingContribution } from '@theia/core/lib/browser';
-import { CommandContribution, MenuContribution } from '@theia/core/lib/common';
-import { ContainerModule } from '@theia/core/shared/inversify';
+import { AIVariableContribution } from '@ogun/ai-core';
+import { FrontendApplicationContribution, KeybindingContribution } from '@ogun/core/lib/browser';
+import { CommandContribution, MenuContribution } from '@ogun/core/lib/common';
+import { ContainerModule } from '@ogun/core/shared/inversify';
 import '../../style/ask-ai-input.css';
 import { AICodeActionProvider } from './ai-code-action-provider';
 import { AiEditorCommandContribution } from './ai-editor-command-contribution';

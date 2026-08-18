@@ -14,13 +14,13 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { PreferenceChangeEvent } from '@theia/core';
-import { Event, Emitter } from '@theia/core/lib/common/event';
-import { MaybePromise } from '@theia/core/lib/common/types';
-import { inject, injectable, postConstruct } from '@theia/core/shared/inversify';
-import { FileStatNode } from '@theia/filesystem/lib/browser';
-import { FileSystemPreferences, FileSystemConfiguration } from '@theia/filesystem/lib/common/filesystem-preferences';
-import { WorkspaceService } from '@theia/workspace/lib/browser';
+import { PreferenceChangeEvent } from '@ogun/core';
+import { Event, Emitter } from '@ogun/core/lib/common/event';
+import { MaybePromise } from '@ogun/core/lib/common/types';
+import { inject, injectable, postConstruct } from '@ogun/core/shared/inversify';
+import { FileStatNode } from '@ogun/filesystem/lib/browser';
+import { FileSystemPreferences, FileSystemConfiguration } from '@ogun/filesystem/lib/common/filesystem-preferences';
+import { WorkspaceService } from '@ogun/workspace/lib/browser';
 import { Minimatch } from 'minimatch';
 import { FileNavigatorPreferences, FileNavigatorConfiguration } from '../common/navigator-preferences';
 

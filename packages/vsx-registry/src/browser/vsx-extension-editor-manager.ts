@@ -14,10 +14,10 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { injectable } from '@theia/core/shared/inversify';
-import URI from '@theia/core/lib/common/uri';
-import { WidgetOpenHandler } from '@theia/core/lib/browser';
-import { VSCodeExtensionUri } from '@theia/plugin-ext-vscode/lib/common/plugin-vscode-uri';
+import { injectable } from '@ogun/core/shared/inversify';
+import URI from '@ogun/core/lib/common/uri';
+import { WidgetOpenHandler } from '@ogun/core/lib/browser';
+import { VSCodeExtensionUri } from '@ogun/plugin-ext-vscode/lib/common/plugin-vscode-uri';
 import { VSXExtensionEditor } from './vsx-extension-editor';
 
 @injectable()

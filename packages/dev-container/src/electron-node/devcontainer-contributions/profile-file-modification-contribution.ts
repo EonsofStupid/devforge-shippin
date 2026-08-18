@@ -17,7 +17,7 @@
 import { DevContainerConfiguration } from '../devcontainer-file';
 import { ContainerCreationContribution } from '../docker-container-service';
 import * as Docker from 'dockerode';
-import { injectable } from '@theia/core/shared/inversify';
+import { injectable } from '@ogun/core/shared/inversify';
 import { ContainerOutputProvider } from '../../electron-common/container-output-provider';
 
 /**

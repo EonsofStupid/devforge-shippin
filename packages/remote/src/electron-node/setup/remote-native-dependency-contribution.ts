@@ -14,9 +14,9 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { isObject } from '@theia/core';
-import { RequestOptions } from '@theia/core/shared/@theia/request';
-import { RemotePlatform } from '@theia/core/lib/node/remote/remote-cli-contribution';
+import { isObject } from '@ogun/core';
+import { RequestOptions } from '@ogun/core/shared/@ogun/request';
+import { RemotePlatform } from '@ogun/core/lib/node/remote/remote-cli-contribution';
 
 export interface FileDependencyResult {
     path: string;

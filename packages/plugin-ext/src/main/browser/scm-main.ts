@@ -38,19 +38,19 @@ import {
     ScmProvider, ScmResource, ScmResourceDecorations, ScmResourceGroup, ScmCommand, ScmActionButton,
     ScmHistoryProvider, ScmHistoryItemRef, ScmHistoryItemRefsChangeEvent,
     ScmHistoryOptions, ScmHistoryItem, ScmHistoryItemChange
-} from '@theia/scm/lib/browser/scm-provider';
-import { ScmRepository } from '@theia/scm/lib/browser/scm-repository';
-import { ScmService } from '@theia/scm/lib/browser/scm-service';
+} from '@ogun/scm/lib/browser/scm-provider';
+import { ScmRepository } from '@ogun/scm/lib/browser/scm-repository';
+import { ScmService } from '@ogun/scm/lib/browser/scm-service';
 import { RPCProtocol } from '../../common/rpc-protocol';
-import { interfaces } from '@theia/core/shared/inversify';
-import { Emitter, Event } from '@theia/core/lib/common/event';
-import { CancellationToken, CancellationTokenSource } from '@theia/core/lib/common/cancellation';
-import { DisposableCollection } from '@theia/core/lib/common/disposable';
-import URI from '@theia/core/lib/common/uri';
-import { URI as vscodeURI } from '@theia/core/shared/vscode-uri';
+import { interfaces } from '@ogun/core/shared/inversify';
+import { Emitter, Event } from '@ogun/core/lib/common/event';
+import { CancellationToken, CancellationTokenSource } from '@ogun/core/lib/common/cancellation';
+import { DisposableCollection } from '@ogun/core/lib/common/disposable';
+import URI from '@ogun/core/lib/common/uri';
+import { URI as vscodeURI } from '@ogun/core/shared/vscode-uri';
 import { Splice } from '../../common/arrays';
 import { UriComponents } from '../../common/uri-components';
-import { ColorRegistry } from '@theia/core/lib/browser/color-registry';
+import { ColorRegistry } from '@ogun/core/lib/browser/color-registry';
 import { PluginSharedStyle } from './plugin-shared-style';
 import { IconUrl } from '../../common';
 import { ThemeIcon } from '@theia/monaco-editor-core/esm/vs/base/common/themables';

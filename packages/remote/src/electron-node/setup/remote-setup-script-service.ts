@@ -14,9 +14,9 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { OS } from '@theia/core';
-import { inject, injectable } from '@theia/core/shared/inversify';
-import { RemotePlatform } from '@theia/core/lib/node/remote/remote-cli-contribution';
+import { OS } from '@ogun/core';
+import { inject, injectable } from '@ogun/core/shared/inversify';
+import { RemotePlatform } from '@ogun/core/lib/node/remote/remote-cli-contribution';
 
 export interface RemoteScriptStrategy {
     exec(): string;

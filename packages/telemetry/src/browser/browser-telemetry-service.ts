@@ -14,9 +14,9 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { FrontendIdProvider } from '@theia/core/lib/browser/messaging/frontend-id-provider';
-import { ILogger } from '@theia/core/lib/common';
-import { inject, injectable, named } from '@theia/core/shared/inversify';
+import { FrontendIdProvider } from '@ogun/core/lib/browser/messaging/frontend-id-provider';
+import { ILogger } from '@ogun/core/lib/common';
+import { inject, injectable, named } from '@ogun/core/shared/inversify';
 import { TelemetryConsentProvider, isKindAllowedByLevel } from '../common/telemetry-consent-provider';
 import {
     TelemetryRpc, createTelemetryEvent, describeTelemetryTopic, isValidTelemetryEvent, snapshotTelemetryEvent

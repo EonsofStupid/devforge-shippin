@@ -15,14 +15,14 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { TestContribution, TestItem, TestRunProfileKind, TestService } from '@theia/test/lib/browser/test-service';
-import { CommandContribution, CommandRegistry, Path, URI } from '@theia/core';
-import { ILogger } from '@theia/core/lib/common/logger';
-import { inject, injectable, interfaces, named, postConstruct } from '@theia/core/shared/inversify';
-import { WorkspaceService } from '@theia/workspace/lib/browser';
-import { FileService } from '@theia/filesystem/lib/browser/file-service';
-import { FileSearchService } from '@theia/file-search/lib/common/file-search-service';
-import { FileStatWithMetadata } from '@theia/filesystem/lib/common/files';
+import { TestContribution, TestItem, TestRunProfileKind, TestService } from '@ogun/test/lib/browser/test-service';
+import { CommandContribution, CommandRegistry, Path, URI } from '@ogun/core';
+import { ILogger } from '@ogun/core/lib/common/logger';
+import { inject, injectable, interfaces, named, postConstruct } from '@ogun/core/shared/inversify';
+import { WorkspaceService } from '@ogun/workspace/lib/browser';
+import { FileService } from '@ogun/filesystem/lib/browser/file-service';
+import { FileSearchService } from '@ogun/file-search/lib/common/file-search-service';
+import { FileStatWithMetadata } from '@ogun/filesystem/lib/common/files';
 import { TestControllerImpl, TestItemImpl, TestRunImpl } from './test-controller';
 
 function stringifyTransformer(key: string, value: any): any {

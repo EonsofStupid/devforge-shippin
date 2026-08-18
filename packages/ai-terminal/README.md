@@ -12,7 +12,7 @@
 
 ## Description
 
-The `@theia/ai-terminal` extension contributes an overlay to the terminal view.\
+The `@ogun/ai-terminal` extension contributes an overlay to the terminal view.\
 The overlay can be used to ask a dedicated `TerminalAgent` for suggestions of terminal commands.
 
 It also provides the `shellExecute` tool that allows AI agents to run commands on the host system.
@@ -36,7 +36,7 @@ By default, every command requires explicit user approval. The tool is marked wi
 
 ## Additional Information
 
-- [API documentation for `@theia/ai-terminal`](https://eclipse-theia.github.io/theia/docs/next/modules/_theia_ai_terminal.html)
+- [API documentation for `@ogun/ai-terminal`](https://eclipse-theia.github.io/theia/docs/next/modules/_theia_ai_terminal.html)
 - [Theia - GitHub](https://github.com/eclipse-theia/theia)
 - [Theia - Website](https://theia-ide.org/)
 

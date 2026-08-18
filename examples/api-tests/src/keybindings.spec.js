@@ -19,22 +19,22 @@ describe('Keybindings', function () {
 
     const { assert } = chai;
 
-    const { Disposable, DisposableCollection } = require('@theia/core/lib/common/disposable');
-    const { isOSX } = require('@theia/core/lib/common/os');
-    const { CommonCommands } = require('@theia/core/lib/browser/common-commands');
-    const { TerminalService } = require('@theia/terminal/lib/browser/base/terminal-service');
-    const { TerminalCommands } = require('@theia/terminal/lib/browser/terminal-frontend-contribution');
-    const { ApplicationShell } = require('@theia/core/lib/browser/shell/application-shell');
-    const { KeybindingRegistry } = require('@theia/core/lib/browser/keybinding');
-    const { CommandRegistry } = require('@theia/core/lib/common/command');
-    const { Deferred } = require('@theia/core/lib/common/promise-util');
-    const { Key } = require('@theia/core/lib/browser/keys');
-    const { EditorManager } = require('@theia/editor/lib/browser/editor-manager');
-    const { WorkspaceService } = require('@theia/workspace/lib/browser/workspace-service');
+    const { Disposable, DisposableCollection } = require('@ogun/core/lib/common/disposable');
+    const { isOSX } = require('@ogun/core/lib/common/os');
+    const { CommonCommands } = require('@ogun/core/lib/browser/common-commands');
+    const { TerminalService } = require('@ogun/terminal/lib/browser/base/terminal-service');
+    const { TerminalCommands } = require('@ogun/terminal/lib/browser/terminal-frontend-contribution');
+    const { ApplicationShell } = require('@ogun/core/lib/browser/shell/application-shell');
+    const { KeybindingRegistry } = require('@ogun/core/lib/browser/keybinding');
+    const { CommandRegistry } = require('@ogun/core/lib/common/command');
+    const { Deferred } = require('@ogun/core/lib/common/promise-util');
+    const { Key } = require('@ogun/core/lib/browser/keys');
+    const { EditorManager } = require('@ogun/editor/lib/browser/editor-manager');
+    const { WorkspaceService } = require('@ogun/workspace/lib/browser/workspace-service');
 
     /** @type {import('inversify').Container} */
     const container = window['theia'].container;
-    /** @type {import('@theia/terminal/lib/browser/base/terminal-service').TerminalService} */
+    /** @type {import('@ogun/terminal/lib/browser/base/terminal-service').TerminalService} */
     const terminalService = container.get(TerminalService);
     const applicationShell = container.get(ApplicationShell);
     const keybindings = container.get(KeybindingRegistry);
@@ -46,7 +46,7 @@ describe('Keybindings', function () {
     afterEach(() => toTearDown.dispose());
 
     it('partial keybinding should not override full in the same scope', async () => {
-        const terminal = /** @type {import('@theia/terminal/lib/browser/terminal-widget-impl').TerminalWidgetImpl} */
+        const terminal = /** @type {import('@ogun/terminal/lib/browser/terminal-widget-impl').TerminalWidgetImpl} */
             (await terminalService.newTerminal({}));
         toTearDown.push(Disposable.create(() => terminal.dispose()));
         terminalService.open(terminal, { mode: 'activate' });

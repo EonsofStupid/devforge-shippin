@@ -14,7 +14,7 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { ContainerModule, interfaces } from '@theia/core/shared/inversify';
+import { ContainerModule, interfaces } from '@ogun/core/shared/inversify';
 import { bindDynamicLabelProvider } from './label/sample-dynamic-label-provider-command-contribution';
 import { bindSampleFilteredCommandContribution } from './contribution-filter/sample-filtered-command-contribution';
 import { bindSampleUnclosableView } from './view/sample-unclosable-view-contribution';
@@ -39,10 +39,10 @@ import { bindCustomResponseContentRendererContribution } from './chat/custom-res
 import { bindSampleChatCommandContribution } from './chat/sample-chat-command-contribution';
 import { bindSampleCodeCompletionVariableContribution } from './ai-code-completion/sample-code-completion-variable-contribution';
 import { bindSamplePreferenceContribution } from './preferences/sample-preferences-contribution';
-import { MCPFrontendContribution } from '@theia/ai-mcp-server/lib/browser/mcp-frontend-contribution';
+import { MCPFrontendContribution } from '@ogun/ai-mcp-server/lib/browser/mcp-frontend-contribution';
 import { SampleFrontendMCPContribution } from './mcp/sample-frontend-mcp-contribution';
-import { FrontendApplicationContribution } from '@theia/core/lib/browser';
-import { CommandContribution } from '@theia/core/lib/common';
+import { FrontendApplicationContribution } from '@ogun/core/lib/browser';
+import { CommandContribution } from '@ogun/core/lib/common';
 import { ResolveMcpFrontendContribution } from './mcp/resolve-frontend-mcp-contribution';
 import { TelemetrySampleCommandContribution } from './telemetry-sample/telemetry-sample-command-contribution';
 

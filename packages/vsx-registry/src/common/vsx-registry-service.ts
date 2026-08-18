@@ -14,8 +14,8 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { LanguageInfo } from '@theia/core/lib/common/i18n/localization';
-import { VSXExtensionRaw, VSXQueryOptions, VSXQueryResult, VSXSearchOptions, VSXSearchResult } from '@theia/ovsx-client/lib/ovsx-types';
+import { LanguageInfo } from '@ogun/core/lib/common/i18n/localization';
+import { VSXExtensionRaw, VSXQueryOptions, VSXQueryResult, VSXSearchOptions, VSXSearchResult } from '@ogun/ovsx-client/lib/ovsx-types';
 
 export const VSX_REGISTRY_SERVICE_PATH = '/services/vsx-registry';
 

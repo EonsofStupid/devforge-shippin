@@ -14,11 +14,11 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { inject, injectable } from '@theia/core/shared/inversify';
-import { CommandRegistry, CommandContribution, Command } from '@theia/core/lib/common/command';
-import { codicon, ExtractableWidget } from '@theia/core/lib/browser/widgets';
-import { TabBarToolbarContribution, TabBarToolbarRegistry } from '@theia/core/lib/browser/shell/tab-bar-toolbar';
-import { SecondaryWindowHandler } from '@theia/core/lib/browser/secondary-window-handler';
+import { inject, injectable } from '@ogun/core/shared/inversify';
+import { CommandRegistry, CommandContribution, Command } from '@ogun/core/lib/common/command';
+import { codicon, ExtractableWidget } from '@ogun/core/lib/browser/widgets';
+import { TabBarToolbarContribution, TabBarToolbarRegistry } from '@ogun/core/lib/browser/shell/tab-bar-toolbar';
+import { SecondaryWindowHandler } from '@ogun/core/lib/browser/secondary-window-handler';
 
 export const EXTRACT_WIDGET = Command.toLocalizedCommand({
     id: 'extract-widget',

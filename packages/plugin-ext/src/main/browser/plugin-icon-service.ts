@@ -14,11 +14,11 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { Endpoint } from '@theia/core/lib/browser';
-import { Disposable, DisposableCollection } from '@theia/core/lib/common/disposable';
-import { inject, injectable } from '@theia/core/shared/inversify';
-import { URI } from '@theia/core/shared/vscode-uri';
-import { MonacoIconRegistry } from '@theia/monaco/lib/browser/monaco-icon-registry';
+import { Endpoint } from '@ogun/core/lib/browser';
+import { Disposable, DisposableCollection } from '@ogun/core/lib/common/disposable';
+import { inject, injectable } from '@ogun/core/shared/inversify';
+import { URI } from '@ogun/core/shared/vscode-uri';
+import { MonacoIconRegistry } from '@ogun/monaco/lib/browser/monaco-icon-registry';
 import * as path from 'path';
 import { IconContribution, DeployedPlugin, IconDefinition } from '../../common/plugin-protocol';
 

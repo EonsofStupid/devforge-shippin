@@ -14,11 +14,11 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { inject, injectable, postConstruct } from '@theia/core/shared/inversify';
-import { FrontendApplicationContribution } from '@theia/core/lib/browser';
-import { StatusBar, StatusBarAlignment } from '@theia/core/lib/browser/status-bar/status-bar-types';
-import { Disposable, DisposableCollection, nls, PreferenceService } from '@theia/core';
-import { AIActivationService } from '@theia/ai-core/lib/browser';
+import { inject, injectable, postConstruct } from '@ogun/core/shared/inversify';
+import { FrontendApplicationContribution } from '@ogun/core/lib/browser';
+import { StatusBar, StatusBarAlignment } from '@ogun/core/lib/browser/status-bar/status-bar-types';
+import { Disposable, DisposableCollection, nls, PreferenceService } from '@ogun/core';
+import { AIActivationService } from '@ogun/ai-core/lib/browser';
 import { CopilotAuthService, CopilotAuthState } from '../common/copilot-auth-service';
 import { CopilotCommands } from './copilot-command-contribution';
 import { COPILOT_ENABLED_PREF } from '../common/copilot-preferences';

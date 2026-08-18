@@ -14,8 +14,8 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import URI from '@theia/core/lib/common/uri';
-import { Breadcrumb } from '@theia/core/lib/browser/breadcrumbs/breadcrumbs-constants';
+import URI from '@ogun/core/lib/common/uri';
+import { Breadcrumb } from '@ogun/core/lib/browser/breadcrumbs/breadcrumbs-constants';
 import { FilepathBreadcrumbType } from './filepath-breadcrumbs-contribution';
 
 export class FilepathBreadcrumb implements Breadcrumb {

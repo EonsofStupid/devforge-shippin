@@ -15,7 +15,7 @@
 // *****************************************************************************
 
 import { expect } from 'chai';
-import URI from '@theia/core/lib/common/uri';
+import URI from '@ogun/core/lib/common/uri';
 import { isValidTelemetryEvent } from './telemetry-protocol';
 import { TelemetryData, TelemetryService, isTelemetryData, isTelemetryEventKind, snapshotTelemetryData } from './telemetry-service';
 

@@ -14,18 +14,18 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { enableJSDOM } from '@theia/core/lib/browser/test/jsdom';
+import { enableJSDOM } from '@ogun/core/lib/browser/test/jsdom';
 
 let disableJSDOM = enableJSDOM();
 
-import { FrontendApplicationConfigProvider } from '@theia/core/lib/browser/frontend-application-config-provider';
+import { FrontendApplicationConfigProvider } from '@ogun/core/lib/browser/frontend-application-config-provider';
 FrontendApplicationConfigProvider.set({});
 
 import 'reflect-metadata';
 
 import { expect } from 'chai';
-import { Emitter } from '@theia/core';
-import { ApplicationShell } from '@theia/core/lib/browser';
+import { Emitter } from '@ogun/core';
+import { ApplicationShell } from '@ogun/core/lib/browser';
 import {
     ChatChangeEvent,
     ChatModel,
@@ -33,13 +33,13 @@ import {
     ChatService,
     ChatSession,
     ChatSessionStatus
-} from '@theia/ai-chat';
+} from '@ogun/ai-chat';
 import {
     AgentNotificationKind,
     AGENT_NOTIFICATION_KIND_COMPLETED,
     AGENT_NOTIFICATION_KIND_INPUT_NEEDED
-} from '@theia/ai-core';
-import { AgentNotificationService, AgentNotificationOptions } from '@theia/ai-core/lib/browser';
+} from '@ogun/ai-core';
+import { AgentNotificationService, AgentNotificationOptions } from '@ogun/ai-core/lib/browser';
 import { ChatSessionNotificationContribution } from './chat-session-notification-contribution';
 
 disableJSDOM();

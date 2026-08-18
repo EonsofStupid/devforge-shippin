@@ -16,14 +16,14 @@
 
 /* eslint-disable @typescript-eslint/no-explicit-any */
 
-import { inject, injectable, postConstruct } from '@theia/core/shared/inversify';
-import URI from '@theia/core/lib/common/uri';
-import { DisposableCollection } from '@theia/core/lib/common/disposable';
-import { WorkspaceService } from '@theia/workspace/lib/browser/workspace-service';
+import { inject, injectable, postConstruct } from '@ogun/core/shared/inversify';
+import URI from '@ogun/core/lib/common/uri';
+import { DisposableCollection } from '@ogun/core/lib/common/disposable';
+import { WorkspaceService } from '@ogun/workspace/lib/browser/workspace-service';
 import { WorkspaceFilePreferenceProviderFactory, WorkspaceFilePreferenceProvider } from './workspace-file-preference-provider';
-import { Deferred } from '@theia/core/lib/common/promise-util';
-import { Emitter, Event, PreferenceProvider, PreferenceProviderDataChanges, PreferenceProviderProvider, PreferenceScope } from '@theia/core';
-import { JSONObject } from '@theia/core/shared/@lumino/coreutils';
+import { Deferred } from '@ogun/core/lib/common/promise-util';
+import { Emitter, Event, PreferenceProvider, PreferenceProviderDataChanges, PreferenceProviderProvider, PreferenceScope } from '@ogun/core';
+import { JSONObject } from '@ogun/core/shared/@lumino/coreutils';
 
 @injectable()
 export class WorkspacePreferenceProvider implements PreferenceProvider {

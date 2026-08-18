@@ -13,17 +13,17 @@
 //
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
-import { CancellationToken } from '@theia/core';
+import { CancellationToken } from '@ogun/core';
 import {
     inject,
     injectable,
     postConstruct,
-} from '@theia/core/shared/inversify';
+} from '@ogun/core/shared/inversify';
 import {
     OutputChannel,
     OutputChannelManager,
     OutputChannelSeverity,
-} from '@theia/output/lib/browser/output-channel';
+} from '@ogun/output/lib/browser/output-channel';
 import {
     AISettingsService,
     createToolCallError,

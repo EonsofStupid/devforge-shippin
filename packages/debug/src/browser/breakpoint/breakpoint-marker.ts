@@ -14,9 +14,9 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { UUID } from '@theia/core/shared/@lumino/coreutils';
+import { UUID } from '@ogun/core/shared/@lumino/coreutils';
 import { DebugProtocol } from '@vscode/debugprotocol/lib/debugProtocol';
-import { isObject, isString, URI } from '@theia/core/lib/common';
+import { isObject, isString, URI } from '@ogun/core/lib/common';
 
 export const DEBUG_BREAKPOINT_SCHEME = 'debug-breakpoint';
 

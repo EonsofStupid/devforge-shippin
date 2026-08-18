@@ -17,11 +17,11 @@
 import {
     LanguageModelRequirement,
     PromptVariantSet
-} from '@theia/ai-core';
-import { injectable } from '@theia/core/shared/inversify';
+} from '@ogun/ai-core';
+import { injectable } from '@ogun/core/shared/inversify';
 import { AbstractStreamParsingChatAgent, ChatAgent } from './chat-agents';
 import { CHAT_SESSION_SUMMARY_PROMPT } from './chat-session-summary-agent-prompt';
-import { nls } from '@theia/core';
+import { nls } from '@ogun/core';
 
 @injectable()
 export class ChatSessionSummaryAgent extends AbstractStreamParsingChatAgent implements ChatAgent {

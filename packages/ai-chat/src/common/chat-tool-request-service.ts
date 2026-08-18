@@ -14,8 +14,8 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { ToolInvocationContext, ToolRequest } from '@theia/ai-core';
-import { injectable } from '@theia/core/shared/inversify';
+import { ToolInvocationContext, ToolRequest } from '@ogun/ai-core';
+import { injectable } from '@ogun/core/shared/inversify';
 import { MutableChatRequestModel, MutableChatResponseModel } from './chat-model';
 
 /**

@@ -16,29 +16,29 @@
 
 import '../../src/browser/style/index.css';
 import './preferences-monaco-contribution';
-import { ContainerModule, interfaces } from '@theia/core/shared/inversify';
-import { bindViewContribution, FrontendApplicationContribution, noopWidgetStatusBarContribution, OpenHandler, WidgetStatusBarContribution } from '@theia/core/lib/browser';
-import { TabBarToolbarContribution } from '@theia/core/lib/browser/shell/tab-bar-toolbar';
+import { ContainerModule, interfaces } from '@ogun/core/shared/inversify';
+import { bindViewContribution, FrontendApplicationContribution, noopWidgetStatusBarContribution, OpenHandler, WidgetStatusBarContribution } from '@ogun/core/lib/browser';
+import { TabBarToolbarContribution } from '@ogun/core/lib/browser/shell/tab-bar-toolbar';
 import { PreferenceTreeGenerator } from './util/preference-tree-generator';
 import { bindPreferenceProviders } from './preference-bindings';
 import { bindPreferencesWidgets } from './views/preference-widget-bindings';
 import { PreferencesContribution } from './preferences-contribution';
 import { PreferenceScopeCommandManager } from './util/preference-scope-command-manager';
-import { JsonSchemaContribution } from '@theia/core/lib/browser/json-schema-store';
+import { JsonSchemaContribution } from '@ogun/core/lib/browser/json-schema-store';
 import { PreferencesJsonSchemaContribution } from './preferences-json-schema-contribution';
 import { MonacoJSONCEditor } from './monaco-jsonc-editor';
 import { PreferenceTransaction, PreferenceTransactionFactory, preferenceTransactionFactoryCreator } from './preference-transaction-manager';
 import { PreferenceOpenHandler } from './preference-open-handler';
 import { CliPreferences, CliPreferencesPath } from '../common/cli-preferences';
-import { ServiceConnectionProvider } from '@theia/core/lib/browser/messaging/service-connection-provider';
+import { ServiceConnectionProvider } from '@ogun/core/lib/browser/messaging/service-connection-provider';
 import { PreferenceFrontendContribution } from './preference-frontend-contribution';
 import { SessionPreferenceStatusBarContribution } from './session-preference-status-bar-contribution';
 import { PreferenceLayoutProvider } from './util/preference-layout';
 import { PreferencesWidget } from './views/preference-widget';
 import { PreferenceStorageFactory } from '../common/abstract-resource-preference-provider';
 import { FrontendPreferenceStorage } from './frontend-preference-storage';
-import { FileService } from '@theia/filesystem/lib/browser/file-service';
-import { PreferenceScope, URI } from '@theia/core';
+import { FileService } from '@ogun/filesystem/lib/browser/file-service';
+import { PreferenceScope, URI } from '@ogun/core';
 
 export function bindPreferences(bind: interfaces.Bind, unbind: interfaces.Unbind): void {
     bindPreferenceProviders(bind, unbind);

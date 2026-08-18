@@ -14,20 +14,20 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { inject, injectable, postConstruct } from '@theia/core/shared/inversify';
-import { BaseWidget, LabelProvider, Message, OpenerService, Widget } from '@theia/core/lib/browser';
-import { ArrayUtils } from '@theia/core/lib/common/types';
+import { inject, injectable, postConstruct } from '@ogun/core/shared/inversify';
+import { BaseWidget, LabelProvider, Message, OpenerService, Widget } from '@ogun/core/lib/browser';
+import { ArrayUtils } from '@ogun/core/lib/common/types';
 import { DebugProtocol } from '@vscode/debugprotocol';
 import { InstructionBreakpoint } from '../breakpoint/breakpoint-marker';
 import { BreakpointManager } from '../breakpoint/breakpoint-manager';
 import { DebugSessionManager } from '../debug-session-manager';
 import { Emitter, IDisposable, IRange, Range, Uri } from '@theia/monaco-editor-core';
-import { nls } from '@theia/core';
+import { nls } from '@ogun/core';
 import { BareFontInfo } from '@theia/monaco-editor-core/esm/vs/editor/common/config/fontInfo';
 import { createBareFontInfoFromRawSettings } from '@theia/monaco-editor-core/esm/vs/editor/common/config/fontInfoFromSettings';
 import { WorkbenchTable } from '@theia/monaco-editor-core/esm/vs/platform/list/browser/listService';
 import { DebugState, DebugSession } from '../debug-session';
-import { EditorPreferences } from '@theia/editor/lib/common/editor-preferences';
+import { EditorPreferences } from '@ogun/editor/lib/common/editor-preferences';
 import { PixelRatio } from '@theia/monaco-editor-core/esm/vs/base/browser/pixelRatio';
 import { DebugPreferences } from '../../common/debug-preferences';
 import { DebugThread } from '../model/debug-thread';
@@ -41,7 +41,7 @@ import { BreakpointRenderer } from './disassembly-view-breakpoint-renderer';
 import { AccessibilityProvider } from './disassembly-view-accessibility-provider';
 import { editorBackground } from '@theia/monaco-editor-core/esm/vs/platform/theme/common/colorRegistry';
 import { Dimension } from '@theia/monaco-editor-core/esm/vs/base/browser/dom';
-import { URI } from '@theia/core/lib/common/uri';
+import { URI } from '@ogun/core/lib/common/uri';
 
 // This file is adapted from https://github.com/microsoft/vscode/blob/c061ce5c24fc480342fbc5f23244289d633c56eb/src/vs/workbench/contrib/debug/browser/disassemblyView.ts
 

@@ -16,13 +16,13 @@
 
 import '../../src/browser/style/index.css';
 
-import { ContainerModule } from '@theia/core/shared/inversify';
-import { CommandContribution, Emitter, Event, PreferenceContribution } from '@theia/core';
+import { ContainerModule } from '@ogun/core/shared/inversify';
+import { CommandContribution, Emitter, Event, PreferenceContribution } from '@ogun/core';
 import {
     FrontendApplicationContribution,
     RemoteConnectionProvider,
     ServiceConnectionProvider
-} from '@theia/core/lib/browser';
+} from '@ogun/core/lib/browser';
 import {
     CopilotLanguageModelsManager,
     COPILOT_LANGUAGE_MODELS_MANAGER_PATH,

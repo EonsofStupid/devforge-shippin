@@ -34,7 +34,7 @@ export const MenuContribution = Symbol('MenuContribution');
  * ### Example usage
  *
  * ```ts
- * import { MenuContribution, MenuModelRegistry, MAIN_MENU_BAR } from '@theia/core';
+ * import { MenuContribution, MenuModelRegistry, MAIN_MENU_BAR } from '@ogun/core';
  *
  * @injectable()
  * export class NewMenuContribution implements MenuContribution {

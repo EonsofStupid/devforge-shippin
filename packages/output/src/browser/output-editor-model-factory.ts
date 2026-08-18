@@ -14,13 +14,13 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { inject, injectable } from '@theia/core/shared/inversify';
-import { Resource } from '@theia/core/lib/common/resource';
-import { MonacoEditorModel } from '@theia/monaco/lib/browser/monaco-editor-model';
+import { inject, injectable } from '@ogun/core/shared/inversify';
+import { Resource } from '@ogun/core/lib/common/resource';
+import { MonacoEditorModel } from '@ogun/monaco/lib/browser/monaco-editor-model';
 import { OutputUri } from '../common/output-uri';
-import { MonacoEditorModelFactory } from '@theia/monaco/lib/browser/monaco-text-model-service';
-import { MonacoToProtocolConverter } from '@theia/monaco/lib/browser/monaco-to-protocol-converter';
-import { ProtocolToMonacoConverter } from '@theia/monaco/lib/browser/protocol-to-monaco-converter';
+import { MonacoEditorModelFactory } from '@ogun/monaco/lib/browser/monaco-text-model-service';
+import { MonacoToProtocolConverter } from '@ogun/monaco/lib/browser/monaco-to-protocol-converter';
+import { ProtocolToMonacoConverter } from '@ogun/monaco/lib/browser/protocol-to-monaco-converter';
 
 @injectable()
 export class OutputEditorModelFactory implements MonacoEditorModelFactory {

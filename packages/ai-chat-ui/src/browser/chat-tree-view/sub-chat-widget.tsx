@@ -14,16 +14,16 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { inject, injectable, named } from '@theia/core/shared/inversify';
+import { inject, injectable, named } from '@ogun/core/shared/inversify';
 import { ProgressMessage } from '../chat-progress-message';
 import { ChatViewTreeWidget, ResponseNode } from './chat-view-tree-widget';
-import * as React from '@theia/core/shared/react';
-import { ContributionProvider } from '@theia/core';
+import * as React from '@ogun/core/shared/react';
+import { ContributionProvider } from '@ogun/core';
 import { ChatResponsePartRenderer } from '../chat-response-part-renderer';
 import { ChatNodeToolbarActionContribution } from '../chat-node-toolbar-action-contribution';
-import { ChatResponseContent } from '@theia/ai-chat';
-import { ContextMenuRenderer, TreeNode } from '@theia/core/lib/browser';
-import { nls } from '@theia/core/lib/common/nls';
+import { ChatResponseContent } from '@ogun/ai-chat';
+import { ContextMenuRenderer, TreeNode } from '@ogun/core/lib/browser';
+import { nls } from '@ogun/core/lib/common/nls';
 
 /**
  * Subset of the ChatViewTreeWidget used to render ResponseNodes for delegated prompts.

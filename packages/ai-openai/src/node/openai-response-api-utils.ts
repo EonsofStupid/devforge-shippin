@@ -25,10 +25,10 @@ import {
     ToolInvocationContext,
     ToolRequest,
     UserRequest
-} from '@theia/ai-core';
-import { CancellationToken, nls, unreachable } from '@theia/core';
-import { Deferred } from '@theia/core/lib/common/promise-util';
-import { injectable } from '@theia/core/shared/inversify';
+} from '@ogun/ai-core';
+import { CancellationToken, nls, unreachable } from '@ogun/core';
+import { Deferred } from '@ogun/core/lib/common/promise-util';
+import { injectable } from '@ogun/core/shared/inversify';
 import { OpenAI } from 'openai';
 import type { RunnerOptions } from 'openai/lib/AbstractChatCompletionRunner';
 import type {

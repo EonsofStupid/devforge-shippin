@@ -14,9 +14,9 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { Event, Emitter, Resource, ResourceReadOptions, ResourceResolver, URI } from '@theia/core';
-import { inject, injectable } from '@theia/core/shared/inversify';
-import { MarkdownString } from '@theia/core/lib/common/markdown-rendering';
+import { Event, Emitter, Resource, ResourceReadOptions, ResourceResolver, URI } from '@ogun/core';
+import { inject, injectable } from '@ogun/core/shared/inversify';
+import { MarkdownString } from '@ogun/core/lib/common/markdown-rendering';
 import { CellUri } from '../common';
 import { NotebookService } from './service/notebook-service';
 import { NotebookCellModel } from './view-model/notebook-cell-model';

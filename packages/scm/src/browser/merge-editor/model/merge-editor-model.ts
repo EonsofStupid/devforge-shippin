@@ -20,14 +20,14 @@
 // copied and modified from https://github.com/microsoft/vscode/blob/1.96.3/src/vs/workbench/contrib/mergeEditor/browser/model/mergeEditorModel.ts,
 // https://github.com/microsoft/vscode/blob/1.96.3/src/vs/workbench/contrib/mergeEditor/browser/view/viewModel.ts
 
-import { inject, injectable, postConstruct } from '@theia/core/shared/inversify';
-import { ArrayUtils, Disposable, DisposableCollection, nls } from '@theia/core';
-import { Autorun, DerivedObservable, Observable, ObservableUtils, SettableObservable } from '@theia/core/lib/common/observable';
-import { DiffComputer } from '@theia/core/lib/common/diff';
-import { Range } from '@theia/core/shared/vscode-languageserver-protocol';
-import { MonacoEditor } from '@theia/monaco/lib/browser/monaco-editor';
-import { MonacoEditorModel } from '@theia/monaco/lib/browser/monaco-editor-model';
-import { MonacoToProtocolConverter } from '@theia/monaco/lib/browser/monaco-to-protocol-converter';
+import { inject, injectable, postConstruct } from '@ogun/core/shared/inversify';
+import { ArrayUtils, Disposable, DisposableCollection, nls } from '@ogun/core';
+import { Autorun, DerivedObservable, Observable, ObservableUtils, SettableObservable } from '@ogun/core/lib/common/observable';
+import { DiffComputer } from '@ogun/core/lib/common/diff';
+import { Range } from '@ogun/core/shared/vscode-languageserver-protocol';
+import { MonacoEditor } from '@ogun/monaco/lib/browser/monaco-editor';
+import { MonacoEditorModel } from '@ogun/monaco/lib/browser/monaco-editor-model';
+import { MonacoToProtocolConverter } from '@ogun/monaco/lib/browser/monaco-to-protocol-converter';
 import { StandaloneServices } from '@theia/monaco-editor-core/esm/vs/editor/standalone/browser/standaloneServices';
 import { IUndoRedoService, UndoRedoElementType } from '@theia/monaco-editor-core/esm/vs/platform/undoRedo/common/undoRedo';
 import { MergeRange, MergeRangeAcceptedState, MergeRangeResultState, MergeSide } from './merge-range';

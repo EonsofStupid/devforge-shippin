@@ -17,7 +17,7 @@
 import { parseModule } from './utility';
 import { expect } from 'chai';
 
-describe('@theia/re-exports/lib/utility.js', () => {
+describe('@ogun/re-exports/lib/utility.js', () => {
 
     it('parseModule', () => {
         expect(parseModule('a')).length(1).members(['a']);

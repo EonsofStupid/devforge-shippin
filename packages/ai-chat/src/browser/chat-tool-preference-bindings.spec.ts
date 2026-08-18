@@ -16,14 +16,14 @@
 
 import { expect } from 'chai';
 import * as sinon from 'sinon';
-import { Container } from '@theia/core/shared/inversify';
+import { Container } from '@ogun/core/shared/inversify';
 import { ToolConfirmationManager } from './chat-tool-preference-bindings';
 import {
     DEFAULT_TOOL_CONFIRMATION_PREFERENCE,
     TOOL_CONFIRMATION_PREFERENCE,
     ToolConfirmationMode
 } from '../common/chat-tool-preferences';
-import { AiConfigurationService, ToolRequest } from '@theia/ai-core';
+import { AiConfigurationService, ToolRequest } from '@ogun/ai-core';
 
 interface InspectResult<T> {
     defaultValue?: T;

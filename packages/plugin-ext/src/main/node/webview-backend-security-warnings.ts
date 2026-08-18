@@ -14,9 +14,9 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { BackendApplicationContribution } from '@theia/core/lib/node';
-import { BackendApplicationConfigProvider } from '@theia/core/lib/node/backend-application-config-provider';
-import { injectable } from '@theia/core/shared/inversify';
+import { BackendApplicationContribution } from '@ogun/core/lib/node';
+import { BackendApplicationConfigProvider } from '@ogun/core/lib/node/backend-application-config-provider';
+import { injectable } from '@ogun/core/shared/inversify';
 import { WebviewExternalEndpoint } from '../common/webview-protocol';
 
 @injectable()
@@ -35,9 +35,9 @@ export class WebviewBackendSecurityWarnings implements BackendApplicationContrib
             console.warn(`\
 WEBVIEW SECURITY WARNING
 
-    Changing the @theia/plugin-ext webview host pattern can lead to security vulnerabilities.
+    Changing the @ogun/plugin-ext webview host pattern can lead to security vulnerabilities.
         Current pattern: "${envHostPattern}"
-    Please read @theia/plugin-ext/README.md for more information.
+    Please read @ogun/plugin-ext/README.md for more information.
 `
             );
         }

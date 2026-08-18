@@ -14,10 +14,10 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { interfaces } from '@theia/core/shared/inversify';
+import { interfaces } from '@ogun/core/shared/inversify';
 import { PluginApiContribution } from './plugin-service';
-import { BackendApplicationContribution, CliContribution } from '@theia/core/lib/node';
-import { WsRequestValidatorContribution } from '@theia/core/lib/node/ws-request-validators';
+import { BackendApplicationContribution, CliContribution } from '@ogun/core/lib/node';
+import { WsRequestValidatorContribution } from '@ogun/core/lib/node/ws-request-validators';
 import { PluginsKeyValueStorage } from './plugins-key-value-storage';
 import { PluginDeployerContribution } from './plugin-deployer-contribution';
 import {
@@ -30,7 +30,7 @@ import { PluginTheiaFileHandler } from './handlers/plugin-theia-file-handler';
 import { PluginTheiaDirectoryHandler } from './handlers/plugin-theia-directory-handler';
 import { GithubPluginDeployerResolver } from './plugin-github-resolver';
 import { HttpPluginDeployerResolver } from './plugin-http-resolver';
-import { ConnectionHandler, RpcConnectionHandler, bindRootContributionProvider } from '@theia/core';
+import { ConnectionHandler, RpcConnectionHandler, bindRootContributionProvider } from '@ogun/core';
 import { PluginPathsService, pluginPathsServicePath } from '../common/plugin-paths-protocol';
 import { PluginPathsServiceImpl } from './paths/plugin-paths-service';
 import { PluginServerImpl } from './plugin-server-impl';
@@ -39,13 +39,13 @@ import { PluginTheiaEnvironment } from '../common/plugin-theia-environment';
 import { PluginTheiaDeployerParticipant } from './plugin-theia-deployer-participant';
 import { WebviewBackendSecurityWarnings } from './webview-backend-security-warnings';
 import { PluginUninstallationManager } from './plugin-uninstallation-manager';
-import { LocalizationServerImpl } from '@theia/core/lib/node/i18n/localization-server';
+import { LocalizationServerImpl } from '@ogun/core/lib/node/i18n/localization-server';
 import { PluginLocalizationServer } from './plugin-localization-server';
 import { PluginMgmtCliContribution } from './plugin-mgmt-cli-contribution';
 import { PluginRemoteCliContribution } from './plugin-remote-cli-contribution';
-import { RemoteCliContribution } from '@theia/core/lib/node/remote/remote-cli-contribution';
+import { RemoteCliContribution } from '@ogun/core/lib/node/remote/remote-cli-contribution';
 import { PluginRemoteCopyContribution } from './plugin-remote-copy-contribution';
-import { RemoteCopyContribution } from '@theia/core/lib/node/remote/remote-copy-contribution';
+import { RemoteCopyContribution } from '@ogun/core/lib/node/remote/remote-copy-contribution';
 import { bindWebviewPreferences } from '../common/webview-preferences';
 import { bindPluginHostEnvironmentPreferences } from '../common/plugin-host-environment-preferences';
 import { PluginHostNavigatorStateInitializer } from './plugin-host-navigator-state-initializer';

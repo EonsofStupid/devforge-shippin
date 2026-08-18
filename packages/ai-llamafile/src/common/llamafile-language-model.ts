@@ -14,8 +14,8 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { LanguageModel, LanguageModelMessage, LanguageModelRequest, LanguageModelResponse, LanguageModelStatus, LanguageModelStreamResponsePart } from '@theia/ai-core';
-import { CancellationToken } from '@theia/core';
+import { LanguageModel, LanguageModelMessage, LanguageModelRequest, LanguageModelResponse, LanguageModelStatus, LanguageModelStreamResponsePart } from '@ogun/ai-core';
+import { CancellationToken } from '@ogun/core';
 
 const createMessageContent = (message: LanguageModelMessage): string | undefined => {
     if (LanguageModelMessage.isTextMessage(message)) {

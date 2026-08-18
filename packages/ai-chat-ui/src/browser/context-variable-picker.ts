@@ -14,9 +14,9 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { AIContextVariable, AIVariableResolutionRequest, AIVariableService, PromptText } from '@theia/ai-core';
-import { nls, QuickInputService } from '@theia/core';
-import { inject, injectable } from '@theia/core/shared/inversify';
+import { AIContextVariable, AIVariableResolutionRequest, AIVariableService, PromptText } from '@ogun/ai-core';
+import { nls, QuickInputService } from '@ogun/core';
+import { inject, injectable } from '@ogun/core/shared/inversify';
 
 const QUERY_CONTEXT = { type: 'context-variable-picker' };
 

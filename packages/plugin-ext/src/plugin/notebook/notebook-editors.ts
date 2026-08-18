@@ -18,10 +18,10 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { Emitter } from '@theia/core';
+import { Emitter } from '@ogun/core';
 import { NotebookEditorPropertiesChangeData, NotebookEditorsExt, NotebookEditorViewColumnInfo } from '../../common';
 import * as typeConverters from '../type-converters';
-import * as theia from '@theia/plugin';
+import * as theia from '@ogun/plugin';
 import { NotebooksExtImpl } from './notebooks';
 
 export class NotebookEditorsExtImpl implements NotebookEditorsExt {

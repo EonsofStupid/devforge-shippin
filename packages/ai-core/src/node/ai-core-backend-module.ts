@@ -13,7 +13,7 @@
 //
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
-import { ContainerModule } from '@theia/core/shared/inversify';
+import { ContainerModule } from '@ogun/core/shared/inversify';
 import {
     LanguageModelFrontendDelegateImpl,
     LanguageModelRegistryFrontendDelegateImpl,
@@ -23,10 +23,10 @@ import {
     PreferenceContribution,
     RpcConnectionHandler,
     bindContributionProvider,
-} from '@theia/core';
+} from '@ogun/core';
 import {
     ConnectionContainerModule
-} from '@theia/core/lib/node/messaging/connection-container-module';
+} from '@ogun/core/lib/node/messaging/connection-container-module';
 import {
     LanguageModelRegistry,
     LanguageModelProvider,

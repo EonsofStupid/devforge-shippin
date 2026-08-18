@@ -14,16 +14,16 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { MutableChatRequestModel } from '@theia/ai-chat';
-import { ChangeSetFileElement, ChangeSetFileElementFactory } from '@theia/ai-chat/lib/browser/change-set-file-element';
-import { ChangeSetElement } from '@theia/ai-chat/lib/common/change-set';
-import { ContentReplacerV1Impl, Replacement } from '@theia/core/lib/common/content-replacer';
-import { URI } from '@theia/core/lib/common/uri';
-import { inject, injectable, named } from '@theia/core/shared/inversify';
-import { FileService } from '@theia/filesystem/lib/browser/file-service';
-import { WorkspaceService } from '@theia/workspace/lib/browser';
+import { MutableChatRequestModel } from '@ogun/ai-chat';
+import { ChangeSetFileElement, ChangeSetFileElementFactory } from '@ogun/ai-chat/lib/browser/change-set-file-element';
+import { ChangeSetElement } from '@ogun/ai-chat/lib/common/change-set';
+import { ContentReplacerV1Impl, Replacement } from '@ogun/core/lib/common/content-replacer';
+import { URI } from '@ogun/core/lib/common/uri';
+import { inject, injectable, named } from '@ogun/core/shared/inversify';
+import { FileService } from '@ogun/filesystem/lib/browser/file-service';
+import { WorkspaceService } from '@ogun/workspace/lib/browser';
 import { FileEditBackupService } from './claude-code-file-edit-backup-service';
-import { ILogger, nls } from '@theia/core';
+import { ILogger, nls } from '@ogun/core';
 
 export interface EditToolInput {
     file_path: string;

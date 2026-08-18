@@ -14,9 +14,9 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { ApplicationShell, PINNED_CLASS, Saveable } from '@theia/core/lib/browser';
-import { TabBar, Title, Widget } from '@theia/core/shared/@lumino/widgets';
-import { Disposable, DisposableCollection, Emitter, Event } from '@theia/core/lib/common';
+import { ApplicationShell, PINNED_CLASS, Saveable } from '@ogun/core/lib/browser';
+import { TabBar, Title, Widget } from '@ogun/core/shared/@lumino/widgets';
+import { Disposable, DisposableCollection, Emitter, Event } from '@ogun/core/lib/common';
 
 export const PREVIEW_TITLE_CLASS = 'theia-editor-preview-title-unpinned';
 

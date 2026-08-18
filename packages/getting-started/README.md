@@ -12,7 +12,7 @@
 
 ## Description
 
-The `@theia/getting-started` extension contributes a default `getting-started` widget which is displayed whenever
+The `@ogun/getting-started` extension contributes a default `getting-started` widget which is displayed whenever
 opening the application without any workspace present or if the widget is explicitly opened (through the menu or command).
 
 The `getting-started` widget provides useful commands and functionality for quickly getting up to speed with the application. For example:
@@ -24,7 +24,7 @@ The `getting-started` widget provides useful commands and functionality for quic
 
 ## Additional Information
 
-- [API documentation for `@theia/getting-started`](https://eclipse-theia.github.io/theia/docs/next/modules/_theia_getting-started.html)
+- [API documentation for `@ogun/getting-started`](https://eclipse-theia.github.io/theia/docs/next/modules/_theia_getting-started.html)
 - [Theia - GitHub](https://github.com/eclipse-theia/theia)
 - [Theia - Website](https://theia-ide.org/)
 

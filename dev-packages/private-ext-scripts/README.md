@@ -19,7 +19,7 @@ For instance, if you want add a new `hello` script that prints `Hello World`:
 
 ```json
 {
-    "name": "@theia/ext-scripts",
+    "name": "@ogun/ext-scripts",
     "theia-monorepo-scripts": {
         "ext:hello": "echo 'Hello World'"
     }
@@ -30,9 +30,9 @@ For instance, if you want add a new `hello` script that prints `Hello World`:
 
 ```json
 {
-    "name": "@theia/myextension",
+    "name": "@ogun/myextension",
     "devDependencies": {
-        "@theia/ext-scripts": "^0.1.1"
+        "@ogun/ext-scripts": "^0.1.1"
     }
 }
 ```
@@ -47,7 +47,7 @@ For instance, if you want add a new `hello` script that prints `Hello World`:
 
 ```json
 {
-    "name": "@theia/myextension",
+    "name": "@ogun/myextension",
     "scripts": {
         "hello": "theiaext hello"
     }

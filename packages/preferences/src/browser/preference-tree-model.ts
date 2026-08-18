@@ -14,7 +14,7 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { inject, injectable, postConstruct } from '@theia/core/shared/inversify';
+import { inject, injectable, postConstruct } from '@ogun/core/shared/inversify';
 import {
     TreeModelImpl,
     TreeWidget,
@@ -24,14 +24,14 @@ import {
     NodeProps,
     ExpandableTreeNode,
     SelectableTreeNode,
-} from '@theia/core/lib/browser';
-import { Emitter, PreferenceDataProperty, PreferenceSchemaService, PreferenceService } from '@theia/core';
+} from '@ogun/core/lib/browser';
+import { Emitter, PreferenceDataProperty, PreferenceSchemaService, PreferenceService } from '@ogun/core';
 import { PreferencesSearchbarWidget } from './views/preference-searchbar-widget';
 import { PreferenceTreeGenerator } from './util/preference-tree-generator';
-import * as fuzzy from '@theia/core/shared/fuzzy';
+import * as fuzzy from '@ogun/core/shared/fuzzy';
 import { PreferencesScopeTabBar } from './views/preference-scope-tabbar-widget';
 import { Preference } from './util/preference-types';
-import { Event } from '@theia/core/lib/common';
+import { Event } from '@ogun/core/lib/common';
 import { COMMONLY_USED_SECTION_PREFIX } from './util/preference-layout';
 
 export interface PreferenceTreeNodeProps extends NodeProps {

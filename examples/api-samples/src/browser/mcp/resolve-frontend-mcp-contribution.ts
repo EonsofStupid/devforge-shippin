@@ -14,10 +14,10 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { MCPFrontendService, RemoteMCPServerDescription } from '@theia/ai-mcp';
-import { inject, injectable, named } from '@theia/core/shared/inversify';
-import { FrontendApplicationContribution, QuickInputService } from '@theia/core/lib/browser';
-import { ILogger } from '@theia/core/lib/common/logger';
+import { MCPFrontendService, RemoteMCPServerDescription } from '@ogun/ai-mcp';
+import { inject, injectable, named } from '@ogun/core/shared/inversify';
+import { FrontendApplicationContribution, QuickInputService } from '@ogun/core/lib/browser';
+import { ILogger } from '@ogun/core/lib/common/logger';
 
 @injectable()
 export class ResolveMcpFrontendContribution

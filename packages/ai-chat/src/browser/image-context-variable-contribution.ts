@@ -17,14 +17,14 @@
 import {
     AIVariableContext, AIVariableContribution,
     AIVariableOpener, AIVariableResolutionRequest, AIVariableResolver, ResolvedAIContextVariable
-} from '@theia/ai-core';
-import { FrontendVariableService, AIVariablePasteResult, AIVariableCompletionContext } from '@theia/ai-core/lib/browser';
+} from '@ogun/ai-core';
+import { FrontendVariableService, AIVariablePasteResult, AIVariableCompletionContext } from '@ogun/ai-core/lib/browser';
 import * as monaco from '@theia/monaco-editor-core';
-import { ILogger, nls, Path, URI } from '@theia/core';
-import { LabelProvider, LabelProviderContribution, open, OpenerService } from '@theia/core/lib/browser';
-import { inject, injectable, named } from '@theia/core/shared/inversify';
-import { FileService } from '@theia/filesystem/lib/browser/file-service';
-import { WorkspaceService } from '@theia/workspace/lib/browser';
+import { ILogger, nls, Path, URI } from '@ogun/core';
+import { LabelProvider, LabelProviderContribution, open, OpenerService } from '@ogun/core/lib/browser';
+import { inject, injectable, named } from '@ogun/core/shared/inversify';
+import { FileService } from '@ogun/filesystem/lib/browser/file-service';
+import { WorkspaceService } from '@ogun/workspace/lib/browser';
 import { IMAGE_CONTEXT_VARIABLE, ImageContextVariable, ImageContextVariableRequest, ResolvedImageContextVariable } from '../common/image-context-variable';
 import { ChatSessionContext } from '../common/chat-agents';
 import { PendingImageRegistry } from './pending-image-registry';

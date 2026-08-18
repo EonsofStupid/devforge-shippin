@@ -14,15 +14,15 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { AbstractViewContribution, Widget, codicon } from '@theia/core/lib/browser';
-import { inject, injectable } from '@theia/core/shared/inversify';
+import { AbstractViewContribution, Widget, codicon } from '@ogun/core/lib/browser';
+import { inject, injectable } from '@ogun/core/shared/inversify';
 import { TestRun, TestService } from '../test-service';
-import { ContextKeyService } from '@theia/core/lib/browser/context-key-service';
+import { ContextKeyService } from '@ogun/core/lib/browser/context-key-service';
 import { TestRunTreeWidget } from './test-run-widget';
 import { TestOutputViewContribution } from './test-output-view-contribution';
 import { TEST_VIEW_CONTAINER_ID, TestViewCommands } from './test-view-contribution';
-import { Command, CommandRegistry, MenuModelRegistry, nls } from '@theia/core';
-import { TabBarToolbarContribution, TabBarToolbarRegistry } from '@theia/core/lib/browser/shell/tab-bar-toolbar';
+import { Command, CommandRegistry, MenuModelRegistry, nls } from '@ogun/core';
+import { TabBarToolbarContribution, TabBarToolbarRegistry } from '@ogun/core/lib/browser/shell/tab-bar-toolbar';
 
 export namespace TestRunViewCommands {
     export const SHOW_OUTPUT: Command = Command.toLocalizedCommand({

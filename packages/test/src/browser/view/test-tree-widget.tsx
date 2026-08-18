@@ -14,19 +14,19 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { injectable, inject, postConstruct } from '@theia/core/shared/inversify';
+import { injectable, inject, postConstruct } from '@ogun/core/shared/inversify';
 import {
     TreeWidget, TreeModel, TreeProps, CompositeTreeNode, ExpandableTreeNode, TreeNode, TreeImpl, NodeProps,
     TREE_NODE_SEGMENT_CLASS, TREE_NODE_TAIL_CLASS, SelectableTreeNode
-} from '@theia/core/lib/browser/tree';
-import { ACTION_ITEM, ContextMenuRenderer, KeybindingRegistry, codicon } from '@theia/core/lib/browser';
-import { IconThemeService } from '@theia/core/lib/browser/icon-theme-service';
-import { ThemeService } from '@theia/core/lib/browser/theming';
-import { ContextKeyService } from '@theia/core/lib/browser/context-key-service';
+} from '@ogun/core/lib/browser/tree';
+import { ACTION_ITEM, ContextMenuRenderer, KeybindingRegistry, codicon } from '@ogun/core/lib/browser';
+import { IconThemeService } from '@ogun/core/lib/browser/icon-theme-service';
+import { ThemeService } from '@ogun/core/lib/browser/theming';
+import { ContextKeyService } from '@ogun/core/lib/browser/context-key-service';
 import { TestController, TestExecutionState, TestItem, TestService } from '../test-service';
-import * as React from '@theia/core/shared/react';
+import * as React from '@ogun/core/shared/react';
 import { DeltaKind, TreeDelta } from '../../common/tree-delta';
-import { AcceleratorSource, CommandMenu, CommandRegistry, Disposable, DisposableCollection, Event, MenuModelRegistry, nls } from '@theia/core';
+import { AcceleratorSource, CommandMenu, CommandRegistry, Disposable, DisposableCollection, Event, MenuModelRegistry, nls } from '@ogun/core';
 import { TestExecutionStateManager } from './test-execution-state-manager';
 import { TestOutputUIModel } from './test-output-ui-model';
 import { TEST_VIEW_INLINE_MENU } from './test-view-contribution';

@@ -14,7 +14,7 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { session } from '@theia/electron/shared/electron';
+import { session } from '@ogun/electron/shared/electron';
 import { inject, injectable } from 'inversify';
 import { ElectronSecurityToken } from '../electron-common/electron-token';
 

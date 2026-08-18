@@ -13,10 +13,10 @@
 //
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
-import { inject, injectable } from '@theia/core/shared/inversify';
-import { FrontendApplicationContribution } from '@theia/core/lib/browser';
-import { ILogger, LogLevel, MeasurementResult, Stopwatch } from '@theia/core';
-import { TelemetryService } from '@theia/telemetry/lib/common';
+import { inject, injectable } from '@ogun/core/shared/inversify';
+import { FrontendApplicationContribution } from '@ogun/core/lib/browser';
+import { ILogger, LogLevel, MeasurementResult, Stopwatch } from '@ogun/core';
+import { TelemetryService } from '@ogun/telemetry/lib/common';
 import { reportMeasurement } from '../common';
 
 @injectable()

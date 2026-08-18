@@ -15,7 +15,7 @@
 // *****************************************************************************
 
 import * as fs from 'fs-extra';
-import { ApplicationPackage } from '@theia/application-package';
+import { ApplicationPackage } from '@ogun/application-package';
 
 export interface GeneratorOptions {
     mode?: 'development' | 'production'
@@ -48,7 +48,7 @@ export abstract class AbstractGenerator {
 
     protected ifMonaco(value: () => string, defaultValue: () => string = () => ''): string {
         return this.ifPackage([
-            '@theia/monaco',
+            '@ogun/monaco',
             '@theia/monaco-editor-core'
         ], value, defaultValue);
     }

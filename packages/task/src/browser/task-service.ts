@@ -14,24 +14,24 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { ApplicationShell, FrontendApplication, QuickPickValue, WidgetManager, WidgetOpenMode } from '@theia/core/lib/browser';
-import { open, OpenerService } from '@theia/core/lib/browser/opener-service';
-import { CommandService, ILogger, nls } from '@theia/core/lib/common';
-import { MessageService } from '@theia/core/lib/common/message-service';
-import { Deferred } from '@theia/core/lib/common/promise-util';
-import { QuickPickItemOrSeparator, QuickPickService } from '@theia/core/lib/common/quick-pick-service';
-import { LabelProvider } from '@theia/core/lib/browser/label-provider';
-import URI from '@theia/core/lib/common/uri';
-import { EditorManager } from '@theia/editor/lib/browser';
-import { ProblemManager } from '@theia/markers/lib/browser/problem/problem-manager';
-import { TerminalService } from '@theia/terminal/lib/browser/base/terminal-service';
-import { TerminalWidget } from '@theia/terminal/lib/browser/base/terminal-widget';
-import { TerminalWidgetFactoryOptions, nextTerminalCreationToken } from '@theia/terminal/lib/browser/terminal-widget-impl';
-import { VariableResolverService } from '@theia/variable-resolver/lib/browser';
-import { WorkspaceService } from '@theia/workspace/lib/browser/workspace-service';
-import { WorkspaceTrustService } from '@theia/workspace/lib/browser';
-import { inject, injectable, named, postConstruct } from '@theia/core/shared/inversify';
-import { DiagnosticSeverity, Range } from '@theia/core/shared/vscode-languageserver-protocol';
+import { ApplicationShell, FrontendApplication, QuickPickValue, WidgetManager, WidgetOpenMode } from '@ogun/core/lib/browser';
+import { open, OpenerService } from '@ogun/core/lib/browser/opener-service';
+import { CommandService, ILogger, nls } from '@ogun/core/lib/common';
+import { MessageService } from '@ogun/core/lib/common/message-service';
+import { Deferred } from '@ogun/core/lib/common/promise-util';
+import { QuickPickItemOrSeparator, QuickPickService } from '@ogun/core/lib/common/quick-pick-service';
+import { LabelProvider } from '@ogun/core/lib/browser/label-provider';
+import URI from '@ogun/core/lib/common/uri';
+import { EditorManager } from '@ogun/editor/lib/browser';
+import { ProblemManager } from '@ogun/markers/lib/browser/problem/problem-manager';
+import { TerminalService } from '@ogun/terminal/lib/browser/base/terminal-service';
+import { TerminalWidget } from '@ogun/terminal/lib/browser/base/terminal-widget';
+import { TerminalWidgetFactoryOptions, nextTerminalCreationToken } from '@ogun/terminal/lib/browser/terminal-widget-impl';
+import { VariableResolverService } from '@ogun/variable-resolver/lib/browser';
+import { WorkspaceService } from '@ogun/workspace/lib/browser/workspace-service';
+import { WorkspaceTrustService } from '@ogun/workspace/lib/browser';
+import { inject, injectable, named, postConstruct } from '@ogun/core/shared/inversify';
+import { DiagnosticSeverity, Range } from '@ogun/core/shared/vscode-languageserver-protocol';
 import {
     ApplyToKind,
     BackgroundTaskEndedEvent,
@@ -62,14 +62,14 @@ import { TaskSourceResolver } from './task-source-resolver';
 import { ProblemMatcherRegistry } from './task-problem-matcher-registry';
 import { TaskSchemaUpdater } from './task-schema-updater';
 import { TaskConfigurationManager } from './task-configuration-manager';
-import { PROBLEMS_WIDGET_ID, ProblemWidget } from '@theia/markers/lib/browser/problem/problem-widget';
+import { PROBLEMS_WIDGET_ID, ProblemWidget } from '@ogun/markers/lib/browser/problem/problem-widget';
 import { TaskNode } from './task-node';
-import { MonacoWorkspace } from '@theia/monaco/lib/browser/monaco-workspace';
+import { MonacoWorkspace } from '@ogun/monaco/lib/browser/monaco-workspace';
 import { TaskTerminalWidgetManager } from './task-terminal-widget-manager';
-import { ShellTerminalServerProxy } from '@theia/terminal/lib/common/shell-terminal-protocol';
+import { ShellTerminalServerProxy } from '@ogun/terminal/lib/common/shell-terminal-protocol';
 import { Mutex } from 'async-mutex';
 import { TaskContextKeyService } from './task-context-key-service';
-import { TerminalPreferences } from '@theia/terminal/lib/common/terminal-preferences';
+import { TerminalPreferences } from '@ogun/terminal/lib/common/terminal-preferences';
 
 export interface QuickPickProblemMatcherItem {
     problemMatchers: NamedProblemMatcher[] | undefined;

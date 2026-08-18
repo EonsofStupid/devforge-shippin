@@ -15,8 +15,8 @@
 // *****************************************************************************
 
 import * as stream from 'stream';
-import { inject, injectable } from '@theia/core/shared/inversify';
-import { Disposable } from '@theia/core/lib/common';
+import { inject, injectable } from '@ogun/core/shared/inversify';
+import { Disposable } from '@ogun/core/lib/common';
 
 /**
  * The MultiRingBuffer is a ring buffer implementation that allows

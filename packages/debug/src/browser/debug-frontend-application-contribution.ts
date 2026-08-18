@@ -16,13 +16,13 @@
 
 import {
     AbstractViewContribution, KeybindingRegistry, Widget, CompositeTreeNode, LabelProvider, codicon, OnWillStopAction, FrontendApplicationContribution, ConfirmDialog, Dialog
-} from '@theia/core/lib/browser';
-import { TreeElementNode } from '@theia/core/lib/browser/source-tree';
-import { injectable, inject, named } from '@theia/core/shared/inversify';
+} from '@ogun/core/lib/browser';
+import { TreeElementNode } from '@ogun/core/lib/browser/source-tree';
+import { injectable, inject, named } from '@ogun/core/shared/inversify';
 import * as monaco from '@theia/monaco-editor-core';
-import { MenuModelRegistry, CommandRegistry, Command, URI, Event, MessageService, CancellationError } from '@theia/core/lib/common';
-import { waitForEvent } from '@theia/core/lib/common/promise-util';
-import { EDITOR_CONTEXT_MENU, EDITOR_LINENUMBER_CONTEXT_MENU, EditorManager } from '@theia/editor/lib/browser';
+import { MenuModelRegistry, CommandRegistry, Command, URI, Event, MessageService, CancellationError } from '@ogun/core/lib/common';
+import { waitForEvent } from '@ogun/core/lib/common/promise-util';
+import { EDITOR_CONTEXT_MENU, EDITOR_LINENUMBER_CONTEXT_MENU, EditorManager } from '@ogun/editor/lib/browser';
 import { DebugSessionManager } from './debug-session-manager';
 import { DebugWidget } from './view/debug-widget';
 import { SourceBreakpoint } from './breakpoint/breakpoint-marker';
@@ -44,23 +44,23 @@ import { DebugConsoleContribution } from './console/debug-console-contribution';
 import { DebugService } from '../common/debug-service';
 import { DebugSchemaUpdater } from './debug-schema-updater';
 import { DebugPreferences } from '../common/debug-preferences';
-import { TabBarToolbarContribution, TabBarToolbarRegistry } from '@theia/core/lib/browser/shell/tab-bar-toolbar';
+import { TabBarToolbarContribution, TabBarToolbarRegistry } from '@ogun/core/lib/browser/shell/tab-bar-toolbar';
 import { DebugWatchWidget } from './view/debug-watch-widget';
 import { DebugWatchExpression } from './view/debug-watch-expression';
 import { DebugWatchManager } from './debug-watch-manager';
 import { DebugSessionOptions } from './debug-session-options';
-import { ColorContribution } from '@theia/core/lib/browser/color-application-contribution';
-import { ColorRegistry } from '@theia/core/lib/browser/color-registry';
+import { ColorContribution } from '@ogun/core/lib/browser/color-application-contribution';
+import { ColorRegistry } from '@ogun/core/lib/browser/color-registry';
 import { DebugFunctionBreakpoint } from './model/debug-function-breakpoint';
 import { DebugBreakpoint } from './model/debug-breakpoint';
-import { nls } from '@theia/core/lib/common/nls';
+import { nls } from '@ogun/core/lib/common/nls';
 import { DebugInstructionBreakpoint } from './model/debug-instruction-breakpoint';
 import { DebugConfiguration } from '../common/debug-configuration';
 import { DebugExceptionBreakpoint } from './view/debug-exception-breakpoint';
 import { DebugToolBar } from './view/debug-toolbar-widget';
-import { ConsoleWidget } from '@theia/console/lib/browser/console-widget';
-import { ConsoleContentWidget } from '@theia/console/lib/browser/console-content-widget';
-import { ConsoleContextMenu } from '@theia/console/lib/browser/console-contribution';
+import { ConsoleWidget } from '@ogun/console/lib/browser/console-widget';
+import { ConsoleContentWidget } from '@ogun/console/lib/browser/console-content-widget';
+import { ConsoleContextMenu } from '@ogun/console/lib/browser/console-contribution';
 import { DebugHoverWidget } from './editor/debug-hover-widget';
 import { DebugExpressionProvider } from './editor/debug-expression-provider';
 import { AddOrEditDataBreakpointAddress } from './breakpoint/debug-data-breakpoint-actions';
@@ -68,7 +68,7 @@ import {
     DebugMenus, DebugCommands, DebugThreadContextCommands, DebugSessionContextCommands,
     DebugEditorContextCommands, DebugBreakpointWidgetCommands, nlsEnableBreakpoint, nlsDisableBreakpoint
 } from './debug-commands';
-import { ILogger } from '@theia/core';
+import { ILogger } from '@ogun/core';
 
 @injectable()
 export class DebugFrontendApplicationContribution extends AbstractViewContribution<DebugWidget>

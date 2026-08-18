@@ -14,10 +14,10 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { injectable, inject } from '@theia/core/shared/inversify';
-import { nls } from '@theia/core/lib/common/nls';
-import { WorkspaceRestrictionContribution, WorkspaceRestriction } from '@theia/workspace/lib/browser/workspace-trust-service';
-import { AIActivationService } from '@theia/ai-core/lib/browser';
+import { injectable, inject } from '@ogun/core/shared/inversify';
+import { nls } from '@ogun/core/lib/common/nls';
+import { WorkspaceRestrictionContribution, WorkspaceRestriction } from '@ogun/workspace/lib/browser/workspace-trust-service';
+import { AIActivationService } from '@ogun/ai-core/lib/browser';
 
 @injectable()
 export class AIWorkspaceRestrictionContribution implements WorkspaceRestrictionContribution {

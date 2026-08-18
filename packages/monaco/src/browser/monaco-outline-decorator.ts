@@ -14,11 +14,11 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { injectable } from '@theia/core/shared/inversify';
-import { Event, Emitter } from '@theia/core/lib/common/event';
-import { Tree } from '@theia/core/lib/browser/tree/tree';
-import { DepthFirstTreeIterator } from '@theia/core/lib/browser/tree/tree-iterator';
-import { TreeDecorator, TreeDecoration } from '@theia/core/lib/browser/tree/tree-decorator';
+import { injectable } from '@ogun/core/shared/inversify';
+import { Event, Emitter } from '@ogun/core/lib/common/event';
+import { Tree } from '@ogun/core/lib/browser/tree/tree';
+import { DepthFirstTreeIterator } from '@ogun/core/lib/browser/tree/tree-iterator';
+import { TreeDecorator, TreeDecoration } from '@ogun/core/lib/browser/tree/tree-decorator';
 import { MonacoOutlineSymbolInformationNode } from './monaco-outline-contribution';
 
 @injectable()

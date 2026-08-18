@@ -12,10 +12,10 @@
 
 ## Description
 
-The `@theia/ai-chat-ui` extension contributes the `AI Chat` view.\
+The `@ogun/ai-chat-ui` extension contributes the `AI Chat` view.\
 The `AI Chat view` can be used to easily communicate with a language model.
 
-It is based on `@theia/ai-chat`.
+It is based on `@ogun/ai-chat`.
 
 ## Custom Tool Renderers
 
@@ -40,7 +40,7 @@ export class MyToolRenderer implements ChatResponsePartRenderer<ToolCallChatResp
 For custom confirmation UIs, use the `ToolConfirmationActions` component to reuse the standard Allow/Deny buttons with dropdown options:
 
 ```typescript
-import { ToolConfirmationActions } from '@theia/ai-chat-ui/lib/browser/chat-response-renderer/tool-confirmation';
+import { ToolConfirmationActions } from '@ogun/ai-chat-ui/lib/browser/chat-response-renderer/tool-confirmation';
 
 <ToolConfirmationActions
     toolName="my_tool"
@@ -52,7 +52,7 @@ import { ToolConfirmationActions } from '@theia/ai-chat-ui/lib/browser/chat-resp
 
 ## Additional Information
 
-- [API documentation for `@theia/ai-chat-ui`](https://eclipse-theia.github.io/theia/docs/next/modules/_theia_ai-chat-ui.html)
+- [API documentation for `@ogun/ai-chat-ui`](https://eclipse-theia.github.io/theia/docs/next/modules/_theia_ai-chat-ui.html)
 - [Theia - GitHub](https://github.com/eclipse-theia/theia)
 - [Theia - Website](https://theia-ide.org/)
 

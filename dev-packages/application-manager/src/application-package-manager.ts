@@ -18,7 +18,7 @@ import * as path from 'path';
 import * as fs from 'fs-extra';
 import * as cp from 'child_process';
 import * as semver from 'semver';
-import { ApplicationPackage, ApplicationPackageOptions } from '@theia/application-package';
+import { ApplicationPackage, ApplicationPackageOptions } from '@ogun/application-package';
 import { BundlerGenerator, FrontendGenerator, BackendGenerator } from './generator';
 import { ApplicationProcess } from './application-process';
 import { GeneratorOptions } from './generator/abstract-generator';
@@ -201,10 +201,10 @@ export class ApplicationPackageManager {
     protected async prepareElectron(): Promise<void> {
         let theiaElectron;
         try {
-            theiaElectron = await import('@theia/electron');
+            theiaElectron = await import('@ogun/electron');
         } catch (error) {
             if (error.code === 'ERR_MODULE_NOT_FOUND') {
-                throw new AbortError('Please install @theia/electron as part of your Theia Electron application');
+                throw new AbortError('Please install @ogun/electron as part of your Theia Electron application');
             }
             throw error;
         }
@@ -231,7 +231,7 @@ export class ApplicationPackageManager {
             const installScript = path.resolve(require.resolve('electron/package.json'), '..', 'install.js');
             cp.execFileSync(process.execPath, [installScript], { stdio: 'inherit' });
         }
-        const ffmpeg = await import('@theia/ffmpeg');
+        const ffmpeg = await import('@ogun/ffmpeg');
         await ffmpeg.replaceFfmpeg();
         await ffmpeg.checkFfmpeg();
     }

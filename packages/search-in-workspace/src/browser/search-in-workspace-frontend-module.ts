@@ -16,24 +16,24 @@
 
 import '../../src/browser/styles/index.css';
 
-import { ContainerModule, interfaces } from '@theia/core/shared/inversify';
+import { ContainerModule, interfaces } from '@ogun/core/shared/inversify';
 import { SearchInWorkspaceService, SearchInWorkspaceClientImpl } from './search-in-workspace-service';
 import { SearchInWorkspaceServer, SIW_WS_PATH } from '../common/search-in-workspace-interface';
 import {
     WidgetFactory, createTreeContainer, bindViewContribution, FrontendApplicationContribution, LabelProviderContribution,
     ApplicationShellLayoutMigration,
     StylingParticipant, RemoteConnectionProvider, ServiceConnectionProvider
-} from '@theia/core/lib/browser';
+} from '@ogun/core/lib/browser';
 import { SearchInWorkspaceWidget } from './search-in-workspace-widget';
 import { SearchInWorkspaceResultTreeWidget } from './search-in-workspace-result-tree-widget';
 import { SearchInWorkspaceFrontendContribution } from './search-in-workspace-frontend-contribution';
 import { SearchInWorkspaceContextKeyService } from './search-in-workspace-context-key-service';
-import { TabBarToolbarContribution } from '@theia/core/lib/browser/shell/tab-bar-toolbar';
+import { TabBarToolbarContribution } from '@ogun/core/lib/browser/shell/tab-bar-toolbar';
 import { bindSearchInWorkspacePreferences } from '../common/search-in-workspace-preferences';
 import { SearchInWorkspaceLabelProvider } from './search-in-workspace-label-provider';
 import { SearchInWorkspaceFactory } from './search-in-workspace-factory';
 import { SearchLayoutVersion3Migration } from './search-layout-migrations';
-import { WorkspaceSearchFilterProvider } from '@theia/workspace/lib/browser';
+import { WorkspaceSearchFilterProvider } from '@ogun/workspace/lib/browser';
 import { SearchExcludeFilterProvider } from './search-exclude-filter-provider';
 
 export default new ContainerModule(bind => {

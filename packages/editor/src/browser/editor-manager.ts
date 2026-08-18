@@ -14,18 +14,18 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { injectable, postConstruct, inject, named } from '@theia/core/shared/inversify';
-import URI from '@theia/core/lib/common/uri';
-import { RecursivePartial, Emitter, Event, CommandService, nls, ContributionProvider, Prioritizeable, Disposable } from '@theia/core/lib/common';
+import { injectable, postConstruct, inject, named } from '@ogun/core/shared/inversify';
+import URI from '@ogun/core/lib/common/uri';
+import { RecursivePartial, Emitter, Event, CommandService, nls, ContributionProvider, Prioritizeable, Disposable } from '@ogun/core/lib/common';
 import {
     WidgetOpenerOptions, NavigatableWidgetOpenHandler, NavigatableWidgetOptions, CommonCommands, getDefaultHandler, defaultHandlerPriority, DiffUris
-} from '@theia/core/lib/browser';
+} from '@ogun/core/lib/browser';
 import { EditorWidget } from './editor-widget';
 import { Range, Position, Location, TextEditor } from './editor';
 import { EditorWidgetFactory } from './editor-widget-factory';
 import { NavigationLocationService } from './navigation/navigation-location-service';
-import { PreferenceService } from '@theia/core/lib/common/preferences';
-import { ILogger } from '@theia/core';
+import { PreferenceService } from '@ogun/core/lib/common/preferences';
+import { ILogger } from '@ogun/core';
 
 export interface WidgetId {
     id: number;

@@ -14,9 +14,9 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { injectable } from '@theia/core/shared/inversify';
-import { Disposable, Emitter, Event } from '@theia/core/lib/common';
-import { URI } from '@theia/core/shared/vscode-uri';
+import { injectable } from '@ogun/core/shared/inversify';
+import { Disposable, Emitter, Event } from '@ogun/core/lib/common';
+import { URI } from '@ogun/core/shared/vscode-uri';
 import {
     InternalTimelineOptions,
     Timeline,

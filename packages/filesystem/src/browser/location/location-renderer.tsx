@@ -14,16 +14,16 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import URI from '@theia/core/lib/common/uri';
+import URI from '@ogun/core/lib/common/uri';
 import { LocationService } from './location-service';
-import * as React from '@theia/core/shared/react';
+import * as React from '@ogun/core/shared/react';
 import { FileService } from '../file-service';
-import { DisposableCollection, Emitter, Path } from '@theia/core/lib/common';
-import { injectable, inject, postConstruct } from '@theia/core/shared/inversify';
+import { DisposableCollection, Emitter, Path } from '@ogun/core/lib/common';
+import { injectable, inject, postConstruct } from '@ogun/core/shared/inversify';
 import { FileDialogModel } from '../file-dialog/file-dialog-model';
-import { EnvVariablesServer } from '@theia/core/lib/common/env-variables';
-import { ReactRenderer } from '@theia/core/lib/browser/widgets/react-renderer';
-import { codicon } from '@theia/core/lib/browser';
+import { EnvVariablesServer } from '@ogun/core/lib/common/env-variables';
+import { ReactRenderer } from '@ogun/core/lib/browser/widgets/react-renderer';
+import { codicon } from '@ogun/core/lib/browser';
 
 interface AutoSuggestDataEvent {
     parent: string;

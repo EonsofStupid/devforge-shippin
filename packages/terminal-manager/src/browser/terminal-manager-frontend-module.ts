@@ -14,23 +14,23 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { ContainerModule, interfaces } from '@theia/core/shared/inversify';
+import { ContainerModule, interfaces } from '@ogun/core/shared/inversify';
 import {
     bindViewContribution,
     WidgetFactory,
     WidgetManager,
     FrontendApplicationContribution,
-} from '@theia/core/lib/browser';
-import { TabBarToolbarContribution } from '@theia/core/lib/browser/shell/tab-bar-toolbar';
+} from '@ogun/core/lib/browser';
+import { TabBarToolbarContribution } from '@ogun/core/lib/browser/shell/tab-bar-toolbar';
 import { TerminalManagerWidget } from './terminal-manager-widget';
 import { TerminalManagerFrontendViewContribution } from './terminal-manager-frontend-view-contribution';
 import { TerminalManagerFrontendContribution } from './terminal-manager-frontend-contribution';
 import { TerminalManagerPreferenceContribution, TerminalManagerPreferences, TerminalManagerPreferenceSchema } from './terminal-manager-preferences';
 import { TerminalManagerTreeWidget } from './terminal-manager-tree-widget';
 import { TerminalManagerCreationHandler } from './terminal-manager-creation-handler';
-import { TerminalCreationHandler } from '@theia/terminal/lib/browser/terminal-creation-handler';
+import { TerminalCreationHandler } from '@ogun/terminal/lib/browser/terminal-creation-handler';
 import '../../src/browser/terminal-manager.css';
-import { PreferenceContribution, PreferenceProxyFactory } from '@theia/core';
+import { PreferenceContribution, PreferenceProxyFactory } from '@ogun/core';
 
 export default new ContainerModule((bind: interfaces.Bind) => {
     bindViewContribution(bind, TerminalManagerFrontendViewContribution);

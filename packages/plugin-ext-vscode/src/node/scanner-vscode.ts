@@ -15,10 +15,12 @@
 // *****************************************************************************
 
 import * as path from 'path';
-import { injectable } from '@theia/core/shared/inversify';
-import { PluginScanner, PluginEngine, PluginPackage, PluginModel, PluginLifecycle, PluginEntryPoint, buildFrontendModuleName, UIKind, PluginIdentifiers } from '@theia/plugin-ext';
-import { TheiaPluginScanner } from '@theia/plugin-ext/lib/hosted/node/scanners/scanner-theia';
-import { environment } from '@theia/core/shared/@theia/application-package/lib/environment';
+import { injectable } from '@ogun/core/shared/inversify';
+import {
+    PluginScanner, PluginEngine, PluginPackage, PluginModel, PluginLifecycle, PluginEntryPoint, buildFrontendModuleName, UIKind, PluginIdentifiers
+} from '@ogun/plugin-ext';
+import { TheiaPluginScanner } from '@ogun/plugin-ext/lib/hosted/node/scanners/scanner-theia';
+import { environment } from '@ogun/core/shared/@ogun/application-package/lib/environment';
 import { VSCodeExtensionUri } from '../common/plugin-vscode-uri';
 
 const uiKind = environment.electron.is() ? UIKind.Desktop : UIKind.Web;

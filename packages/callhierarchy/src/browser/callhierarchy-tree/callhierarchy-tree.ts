@@ -14,12 +14,12 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { injectable } from '@theia/core/shared/inversify';
-import { TreeNode, CompositeTreeNode, SelectableTreeNode, ExpandableTreeNode, TreeImpl } from '@theia/core/lib/browser';
+import { injectable } from '@ogun/core/shared/inversify';
+import { TreeNode, CompositeTreeNode, SelectableTreeNode, ExpandableTreeNode, TreeImpl } from '@ogun/core/lib/browser';
 import { CallHierarchyItem, CallHierarchyIncomingCall } from '../callhierarchy';
 import { CallHierarchyService } from '../callhierarchy-service';
 import { Md5 } from 'ts-md5';
-import { CancellationTokenSource } from '@theia/core/lib/common/cancellation';
+import { CancellationTokenSource } from '@ogun/core/lib/common/cancellation';
 
 @injectable()
 export class CallHierarchyTree extends TreeImpl {

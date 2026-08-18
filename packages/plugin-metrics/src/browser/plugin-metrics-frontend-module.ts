@@ -14,15 +14,15 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { ContainerModule } from '@theia/core/shared/inversify';
+import { ContainerModule } from '@ogun/core/shared/inversify';
 import { LanguagesMainPluginMetrics } from './plugin-metrics-languages-main';
 import { PluginMetrics, metricsJsonRpcPath } from '../common/metrics-protocol';
-import { WebSocketConnectionProvider } from '@theia/core/lib/browser/messaging/ws-connection-provider';
+import { WebSocketConnectionProvider } from '@ogun/core/lib/browser/messaging/ws-connection-provider';
 import { PluginMetricsCreator } from './plugin-metrics-creator';
 import { PluginMetricsResolver } from './plugin-metrics-resolver';
 import { PluginMetricsOutputChannelRegistry } from './plugin-metrics-output-registry';
-import { LanguagesMainImpl } from '@theia/plugin-ext/lib/main/browser/languages-main';
-import { OutputChannelRegistryMainImpl } from '@theia/plugin-ext/lib/main/browser/output-channel-registry-main';
+import { LanguagesMainImpl } from '@ogun/plugin-ext/lib/main/browser/languages-main';
+import { OutputChannelRegistryMainImpl } from '@ogun/plugin-ext/lib/main/browser/output-channel-registry-main';
 
 export default new ContainerModule((bind, unbind, isBound, rebind) => {
     bind(PluginMetricsResolver).toSelf().inSingletonScope();

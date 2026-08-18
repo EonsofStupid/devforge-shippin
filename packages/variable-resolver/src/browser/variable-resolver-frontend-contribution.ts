@@ -14,9 +14,9 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { injectable, inject, named } from '@theia/core/shared/inversify';
-import { FrontendApplicationContribution } from '@theia/core/lib/browser';
-import { Command, CommandContribution, CommandRegistry, ContributionProvider } from '@theia/core/lib/common';
+import { injectable, inject, named } from '@ogun/core/shared/inversify';
+import { FrontendApplicationContribution } from '@ogun/core/lib/browser';
+import { Command, CommandContribution, CommandRegistry, ContributionProvider } from '@ogun/core/lib/common';
 import { VariableContribution, VariableRegistry } from './variable';
 import { VariableQuickOpenService } from './variable-quick-open-service';
 

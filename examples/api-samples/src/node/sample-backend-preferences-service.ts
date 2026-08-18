@@ -13,10 +13,10 @@
 //
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 
-import { JSONValue } from '@theia/core/shared/@lumino/coreutils';
+import { JSONValue } from '@ogun/core/shared/@lumino/coreutils';
 import { SampleBackendPreferencesService } from '../common/preference-protocol';
-import { inject, injectable } from '@theia/core/shared/inversify';
-import { PreferenceInspection, PreferenceLanguageOverrideService, PreferenceScope, PreferenceService } from '@theia/core';
+import { inject, injectable } from '@ogun/core/shared/inversify';
+import { PreferenceInspection, PreferenceLanguageOverrideService, PreferenceScope, PreferenceService } from '@ogun/core';
 
 @injectable()
 export class SampleBackendPreferencesBackendServiceImpl implements SampleBackendPreferencesService {

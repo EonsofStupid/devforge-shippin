@@ -16,14 +16,14 @@
 import {
     ChatMode, ChatRequestModel, ChatService, ChatSession,
     MutableChatModel, MutableChatRequestModel
-} from '@theia/ai-chat/lib/common';
-import { TaskContextStorageService } from '@theia/ai-chat/lib/browser/task-context-service';
-import { LanguageModelRequirement } from '@theia/ai-core';
-import { inject, injectable } from '@theia/core/shared/inversify';
+} from '@ogun/ai-chat/lib/common';
+import { TaskContextStorageService } from '@ogun/ai-chat/lib/browser/task-context-service';
+import { LanguageModelRequirement } from '@ogun/ai-core';
+import { inject, injectable } from '@ogun/core/shared/inversify';
 import { architectSystemVariants, ARCHITECT_PLANNING_PROMPT_ID, ARCHITECT_SIMPLE_PROMPT_ID, ARCHITECT_PLANNING_NEXT_PROMPT_ID } from './architect-prompt-template';
-import { nls } from '@theia/core';
-import { FrontendApplicationConfigProvider } from '@theia/core/lib/browser/frontend-application-config-provider';
-import { MarkdownStringImpl } from '@theia/core/lib/common/markdown-rendering';
+import { nls } from '@ogun/core';
+import { FrontendApplicationConfigProvider } from '@ogun/core/lib/browser/frontend-application-config-provider';
+import { MarkdownStringImpl } from '@ogun/core/lib/common/markdown-rendering';
 import { AI_EXECUTE_PLAN_WITH_CODER } from '../common/summarize-session-commands';
 import { AbstractModeAwareChatAgent } from './mode-aware-chat-agent';
 import { ArchitectAgentId } from '../common/agent-ids';

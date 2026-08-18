@@ -14,7 +14,7 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { DEFAULT_SUPPORTED_API_VERSION } from '@theia/core/shared/@theia/application-package/lib/api';
+import { DEFAULT_SUPPORTED_API_VERSION } from '@ogun/core/shared/@ogun/application-package/lib/api';
 
 export const VSCODE_DEFAULT_API_VERSION = DEFAULT_SUPPORTED_API_VERSION;
 export const VSX_REGISTRY_URL_DEFAULT = 'https://open-vsx.org';

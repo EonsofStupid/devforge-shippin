@@ -14,11 +14,11 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { Diagnostic } from '@theia/core/shared/vscode-languageserver-protocol';
+import { Diagnostic } from '@ogun/core/shared/vscode-languageserver-protocol';
 import { ProtocolToMonacoConverter } from './protocol-to-monaco-converter';
 import * as monaco from '@theia/monaco-editor-core';
-import { Marker } from '@theia/markers/lib/common/marker';
-import URI from '@theia/core/lib/common/uri';
+import { Marker } from '@ogun/markers/lib/common/marker';
+import URI from '@ogun/core/lib/common/uri';
 
 export class MonacoMarkerCollection {
     protected readonly uri: monaco.Uri;

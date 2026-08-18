@@ -14,10 +14,10 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { AIVariableResolutionRequest } from '@theia/ai-core';
-import { URI } from '@theia/core';
-import { inject, injectable } from '@theia/core/shared/inversify';
-import { LabelProvider, LabelProviderContribution } from '@theia/core/lib/browser';
+import { AIVariableResolutionRequest } from '@ogun/ai-core';
+import { URI } from '@ogun/core';
+import { inject, injectable } from '@ogun/core/shared/inversify';
+import { LabelProvider, LabelProviderContribution } from '@ogun/core/lib/browser';
 import { ChangeSetFileService } from './change-set-file-service';
 
 @injectable()

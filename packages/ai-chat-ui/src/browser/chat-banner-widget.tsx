@@ -14,10 +14,10 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import * as React from '@theia/core/shared/react';
-import { inject, injectable, named, postConstruct } from '@theia/core/shared/inversify';
-import { ContributionProvider } from '@theia/core';
-import { ReactWidget } from '@theia/core/lib/browser';
+import * as React from '@ogun/core/shared/react';
+import { inject, injectable, named, postConstruct } from '@ogun/core/shared/inversify';
+import { ContributionProvider } from '@ogun/core';
+import { ReactWidget } from '@ogun/core/lib/browser';
 import { ChatBannerProvider } from './chat-banner-provider';
 
 /**

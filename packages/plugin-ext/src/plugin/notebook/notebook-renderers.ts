@@ -21,9 +21,9 @@
 import { NotebookRenderersExt, NotebookRenderersMain, PLUGIN_RPC_CONTEXT } from '../../common';
 import { RPCProtocol } from '../../common/rpc-protocol';
 import { NotebooksExtImpl } from './notebooks';
-import * as theia from '@theia/plugin';
+import * as theia from '@ogun/plugin';
 import { NotebookEditor } from './notebook-editor';
-import { Emitter } from '@theia/core';
+import { Emitter } from '@ogun/core';
 
 export class NotebookRenderersExtImpl implements NotebookRenderersExt {
     private readonly rendererMessageEmitters = new Map<string /* rendererId */, Emitter<{ editor: theia.NotebookEditor; message: unknown }>>();

@@ -18,7 +18,7 @@ import { enableJSDOM } from '../test/jsdom';
 const disableJSDOM = enableJSDOM();
 
 import { expect } from 'chai';
-import { Widget } from '@theia/core/shared/@lumino/widgets';
+import { Widget } from '@ogun/core/shared/@lumino/widgets';
 import * as sinon from 'sinon';
 import { DisposableCollection } from '../../common/disposable';
 import { ApplicationShell } from './application-shell';

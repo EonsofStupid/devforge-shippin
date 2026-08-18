@@ -14,10 +14,10 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { Command, CommandContribution, CommandRegistry } from '@theia/core';
-import { CommonCommands, codicon } from '@theia/core/lib/browser';
+import { Command, CommandContribution, CommandRegistry } from '@ogun/core';
+import { CommonCommands, codicon } from '@ogun/core/lib/browser';
 import { AICommandHandlerFactory } from './ai-command-handler-factory';
-import { injectable, inject } from '@theia/core/shared/inversify';
+import { injectable, inject } from '@ogun/core/shared/inversify';
 
 export const AI_SHOW_SETTINGS_COMMAND: Command = Command.toLocalizedCommand({
     id: 'ai-chat-ui.show-settings',

@@ -14,8 +14,8 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import * as theia from '@theia/plugin';
-import { URI } from '@theia/core/shared/vscode-uri';
+import * as theia from '@ogun/plugin';
+import { URI } from '@ogun/core/shared/vscode-uri';
 import { Selection, WorkspaceEditDto } from '../../common/plugin-api-rpc';
 import { Range, CodeActionContext, CodeAction } from '../../common/plugin-api-rpc-model';
 import * as Converter from '../type-converters';
@@ -23,8 +23,8 @@ import { DocumentsExtImpl } from '../documents';
 import { Diagnostics } from './diagnostics';
 import { CodeActionKind } from '../types-impl';
 import { CommandRegistryImpl } from '../command-registry';
-import { DisposableCollection } from '@theia/core/lib/common/disposable';
-import { isObject } from '@theia/core/lib/common';
+import { DisposableCollection } from '@ogun/core/lib/common/disposable';
+import { isObject } from '@ogun/core/lib/common';
 
 export class CodeActionAdapter {
 

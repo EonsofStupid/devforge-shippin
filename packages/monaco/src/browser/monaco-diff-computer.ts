@@ -14,10 +14,10 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { injectable } from '@theia/core/shared/inversify';
-import { Diff, DiffComputer } from '@theia/core/lib/common/diff';
-import URI from '@theia/core/lib/common/uri';
-import { Range } from '@theia/core/shared/vscode-languageserver-protocol';
+import { injectable } from '@ogun/core/shared/inversify';
+import { Diff, DiffComputer } from '@ogun/core/lib/common/diff';
+import URI from '@ogun/core/lib/common/uri';
+import { Range } from '@ogun/core/shared/vscode-languageserver-protocol';
 import { StandaloneServices } from '@theia/monaco-editor-core/esm/vs/editor/standalone/browser/standaloneServices';
 import { IEditorWorkerService } from '@theia/monaco-editor-core/esm/vs/editor/common/services/editorWorker';
 

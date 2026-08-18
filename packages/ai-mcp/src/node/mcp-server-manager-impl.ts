@@ -13,16 +13,16 @@
 //
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
-import { inject, injectable } from '@theia/core/shared/inversify';
+import { inject, injectable } from '@ogun/core/shared/inversify';
 import { isRemoteMCPServerDescription, MCPServerDescription, MCPServerManager, MCPFrontendNotificationService, RemoteMCPServerDescription } from '../common/mcp-server-manager';
 import { MCPServer } from './mcp-server';
-import { Disposable } from '@theia/core/lib/common/disposable';
+import { Disposable } from '@ogun/core/lib/common/disposable';
 import { CallToolResult, ListResourcesResult, ReadResourceResult } from '@modelcontextprotocol/sdk/types.js';
 import { MCPOAuthClientProviderFactory } from './mcp-oauth-client-provider-factory';
 import { MCPOAuthCredentialStore } from './mcp-oauth-credential-store';
 import { deriveCredentialScope, normalizeOAuthUrl } from './mcp-oauth-keystore';
-import { PreferenceUtils } from '@theia/core';
-import { JSONObject } from '@theia/core/shared/@lumino/coreutils';
+import { PreferenceUtils } from '@ogun/core';
+import { JSONObject } from '@ogun/core/shared/@lumino/coreutils';
 
 @injectable()
 export class MCPServerManagerImpl implements MCPServerManager {

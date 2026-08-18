@@ -14,23 +14,23 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { enableJSDOM } from '@theia/core/lib/browser/test/jsdom';
+import { enableJSDOM } from '@ogun/core/lib/browser/test/jsdom';
 let disableJSDOM = enableJSDOM();
-import { FrontendApplicationConfigProvider } from '@theia/core/lib/browser/frontend-application-config-provider';
+import { FrontendApplicationConfigProvider } from '@ogun/core/lib/browser/frontend-application-config-provider';
 FrontendApplicationConfigProvider.set({});
 import { expect } from 'chai';
 import * as sinon from 'sinon';
-import { Container } from '@theia/core/shared/inversify';
+import { Container } from '@ogun/core/shared/inversify';
 import { UserInteractionTool } from './user-interaction-tool';
 import { UserInteractionResult } from '../common/user-interaction-tool';
 import { WorkspaceFunctionScope } from './workspace-functions';
-import { OpenerService } from '@theia/core/lib/browser';
-import { EditorManager } from '@theia/editor/lib/browser';
-import { ScmService } from '@theia/scm/lib/browser/scm-service';
-import { URI } from '@theia/core/lib/common/uri';
-import { CancellationTokenSource } from '@theia/core/lib/common/cancellation';
-import { MEMORY_TEXT, MEMORY_TEXT_READONLY, ResourceProvider } from '@theia/core/lib/common/resource';
-import { DiffUris } from '@theia/core/lib/browser/diff-uris';
+import { OpenerService } from '@ogun/core/lib/browser';
+import { EditorManager } from '@ogun/editor/lib/browser';
+import { ScmService } from '@ogun/scm/lib/browser/scm-service';
+import { URI } from '@ogun/core/lib/common/uri';
+import { CancellationTokenSource } from '@ogun/core/lib/common/cancellation';
+import { MEMORY_TEXT, MEMORY_TEXT_READONLY, ResourceProvider } from '@ogun/core/lib/common/resource';
+import { DiffUris } from '@ogun/core/lib/browser/diff-uris';
 
 disableJSDOM();
 

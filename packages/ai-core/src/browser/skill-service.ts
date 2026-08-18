@@ -14,14 +14,14 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { inject, injectable, named, postConstruct } from '@theia/core/shared/inversify';
-import { Deferred } from '@theia/core/lib/common/promise-util';
-import { DisposableCollection, Emitter, Event, ILogger, URI } from '@theia/core';
-import { Path } from '@theia/core/lib/common/path';
-import { EnvVariablesServer } from '@theia/core/lib/common/env-variables';
-import { FileService } from '@theia/filesystem/lib/browser/file-service';
-import { FileChangesEvent, FileChangeType } from '@theia/filesystem/lib/common/files';
-import { WorkspaceService } from '@theia/workspace/lib/browser';
+import { inject, injectable, named, postConstruct } from '@ogun/core/shared/inversify';
+import { Deferred } from '@ogun/core/lib/common/promise-util';
+import { DisposableCollection, Emitter, Event, ILogger, URI } from '@ogun/core';
+import { Path } from '@ogun/core/lib/common/path';
+import { EnvVariablesServer } from '@ogun/core/lib/common/env-variables';
+import { FileService } from '@ogun/filesystem/lib/browser/file-service';
+import { FileChangesEvent, FileChangeType } from '@ogun/filesystem/lib/common/files';
+import { WorkspaceService } from '@ogun/workspace/lib/browser';
 import { AICorePreferences, PREFERENCE_NAME_SKILL_DIRECTORIES } from '../common/ai-core-preferences';
 import {
     Skill,

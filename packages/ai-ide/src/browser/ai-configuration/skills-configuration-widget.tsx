@@ -14,15 +14,15 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { nls, URI } from '@theia/core';
-import { codicon, OpenerService, open, ReactWidget } from '@theia/core/lib/browser';
-import { inject, injectable, postConstruct } from '@theia/core/shared/inversify';
-import * as React from '@theia/core/shared/react';
-import { Skill } from '@theia/ai-core/lib/common/skill';
-import { SkillService } from '@theia/ai-core/lib/browser/skill-service';
-import { PromptFragment, PromptService } from '@theia/ai-core/lib/common/prompt-service';
-import { Agent, AgentService } from '@theia/ai-core';
-import { isChatAgent } from '@theia/ai-chat';
+import { nls, URI } from '@ogun/core';
+import { codicon, OpenerService, open, ReactWidget } from '@ogun/core/lib/browser';
+import { inject, injectable, postConstruct } from '@ogun/core/shared/inversify';
+import * as React from '@ogun/core/shared/react';
+import { Skill } from '@ogun/ai-core/lib/common/skill';
+import { SkillService } from '@ogun/ai-core/lib/browser/skill-service';
+import { PromptFragment, PromptService } from '@ogun/ai-core/lib/common/prompt-service';
+import { Agent, AgentService } from '@ogun/ai-core';
+import { isChatAgent } from '@ogun/ai-chat';
 
 @injectable()
 export class AISkillsConfigurationWidget extends ReactWidget {

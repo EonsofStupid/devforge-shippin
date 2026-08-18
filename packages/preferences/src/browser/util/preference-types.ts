@@ -19,10 +19,10 @@ import {
     CompositeTreeNode as BaseCompositeTreeNode,
     SelectableTreeNode,
     CommonCommands,
-} from '@theia/core/lib/browser';
-import { Command, MenuPath, PreferenceDataProperty, PreferenceInspection, PreferenceScope } from '@theia/core';
-import { JSONValue } from '@theia/core/shared/@lumino/coreutils';
-import { JsonType } from '@theia/core/lib/common/json-schema';
+} from '@ogun/core/lib/browser';
+import { Command, MenuPath, PreferenceDataProperty, PreferenceInspection, PreferenceScope } from '@ogun/core';
+import { JSONValue } from '@ogun/core/shared/@lumino/coreutils';
+import { JsonType } from '@ogun/core/lib/common/json-schema';
 
 export namespace Preference {
 

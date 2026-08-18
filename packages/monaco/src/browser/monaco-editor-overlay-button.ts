@@ -14,8 +14,8 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { Disposable, DisposableCollection, Emitter } from '@theia/core';
-import { DISABLED_CLASS, onDomEvent } from '@theia/core/lib/browser';
+import { Disposable, DisposableCollection, Emitter } from '@ogun/core';
+import { DISABLED_CLASS, onDomEvent } from '@ogun/core/lib/browser';
 import * as monaco from '@theia/monaco-editor-core';
 import { MonacoEditor } from './monaco-editor';
 

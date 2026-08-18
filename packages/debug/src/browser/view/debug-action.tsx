@@ -14,9 +14,9 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import * as React from '@theia/core/shared/react';
-import { codiconArray, DISABLED_CLASS } from '@theia/core/lib/browser';
-import { MenuPath } from '@theia/core';
+import * as React from '@ogun/core/shared/react';
+import { codiconArray, DISABLED_CLASS } from '@ogun/core/lib/browser';
+import { MenuPath } from '@ogun/core';
 
 export class DebugAction extends React.Component<DebugAction.Props> {
 

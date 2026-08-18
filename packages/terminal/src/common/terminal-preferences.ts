@@ -16,15 +16,15 @@
 
 /* eslint-disable max-len */
 
-import { interfaces } from '@theia/core/shared/inversify';
-import { IJSONSchema } from '@theia/core/lib/common/json-schema';
-import { PreferenceService } from '@theia/core/lib/common';
-import { createPreferenceProxy, PreferenceProxy } from '@theia/core/lib/common/preferences/preference-proxy';
-import { nls } from '@theia/core/lib/common/nls';
-import { editorGeneratedPreferenceProperties } from '@theia/editor/lib/common/editor-generated-preference-schema';
-import { OS } from '@theia/core';
-import { PreferenceContribution, PreferenceSchema } from '@theia/core/lib/common/preferences/preference-schema';
-import { ColorDefaults } from '@theia/core/lib/common/color';
+import { interfaces } from '@ogun/core/shared/inversify';
+import { IJSONSchema } from '@ogun/core/lib/common/json-schema';
+import { PreferenceService } from '@ogun/core/lib/common';
+import { createPreferenceProxy, PreferenceProxy } from '@ogun/core/lib/common/preferences/preference-proxy';
+import { nls } from '@ogun/core/lib/common/nls';
+import { editorGeneratedPreferenceProperties } from '@ogun/editor/lib/common/editor-generated-preference-schema';
+import { OS } from '@ogun/core';
+import { PreferenceContribution, PreferenceSchema } from '@ogun/core/lib/common/preferences/preference-schema';
+import { ColorDefaults } from '@ogun/core/lib/common/color';
 
 /**
  * It should be aligned with https://github.com/microsoft/vscode/blob/0dfa355b3ad185a6289ba28a99c141ab9e72d2be/src/vs/workbench/contrib/terminal/common/terminalColorRegistry.ts#L40

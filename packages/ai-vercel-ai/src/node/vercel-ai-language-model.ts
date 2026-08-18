@@ -27,8 +27,8 @@ import {
     LanguageModelTextResponse,
     ToolCall,
     UserRequest,
-} from '@theia/ai-core';
-import { CancellationToken, Disposable, ILogger } from '@theia/core';
+} from '@ogun/ai-core';
+import { CancellationToken, Disposable, ILogger } from '@ogun/core';
 import {
     CoreMessage,
     generateObject,

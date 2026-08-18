@@ -14,21 +14,21 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { injectable, inject, named, postConstruct } from '@theia/core/shared/inversify';
-import { MenuModelRegistry } from '@theia/core/lib/common/menu';
-import { ApplicationShell } from '@theia/core/lib/browser/shell';
-import { KeybindingRegistry } from '@theia/core/lib/browser/keybinding';
-import { Command, CommandRegistry } from '@theia/core/lib/common/command';
-import { EDITOR_CONTEXT_MENU } from '@theia/editor/lib/browser/editor-menu';
-import { EditorAccess, EditorManager } from '@theia/editor/lib/browser/editor-manager';
-import { AbstractViewContribution, OpenViewArguments } from '@theia/core/lib/browser/shell/view-contribution';
+import { injectable, inject, named, postConstruct } from '@ogun/core/shared/inversify';
+import { MenuModelRegistry } from '@ogun/core/lib/common/menu';
+import { ApplicationShell } from '@ogun/core/lib/browser/shell';
+import { KeybindingRegistry } from '@ogun/core/lib/browser/keybinding';
+import { Command, CommandRegistry } from '@ogun/core/lib/common/command';
+import { EDITOR_CONTEXT_MENU } from '@ogun/editor/lib/browser/editor-menu';
+import { EditorAccess, EditorManager } from '@ogun/editor/lib/browser/editor-manager';
+import { AbstractViewContribution, OpenViewArguments } from '@ogun/core/lib/browser/shell/view-contribution';
 import { TypeHierarchyTree } from './tree/typehierarchy-tree';
 import { TypeHierarchyTreeWidget } from './tree/typehierarchy-tree-widget';
 import { TypeHierarchyDirection } from './typehierarchy-provider';
 import { TypeHierarchyServiceProvider } from './typehierarchy-service';
-import URI from '@theia/core/lib/common/uri';
+import URI from '@ogun/core/lib/common/uri';
 
-import { ContextKey, ContextKeyService } from '@theia/core/lib/browser/context-key-service';
+import { ContextKey, ContextKeyService } from '@ogun/core/lib/browser/context-key-service';
 
 @injectable()
 export class TypeHierarchyContribution extends AbstractViewContribution<TypeHierarchyTreeWidget> {

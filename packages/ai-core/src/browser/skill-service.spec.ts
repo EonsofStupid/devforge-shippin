@@ -14,18 +14,18 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { enableJSDOM } from '@theia/core/lib/browser/test/jsdom';
+import { enableJSDOM } from '@ogun/core/lib/browser/test/jsdom';
 const disableJSDOM = enableJSDOM();
 
-import { FrontendApplicationConfigProvider } from '@theia/core/lib/browser/frontend-application-config-provider';
+import { FrontendApplicationConfigProvider } from '@ogun/core/lib/browser/frontend-application-config-provider';
 FrontendApplicationConfigProvider.set({});
 
 import { expect } from 'chai';
 import * as sinon from 'sinon';
 import { parseSkillFile, combineSkillDirectories } from '../common/skill';
-import { Path } from '@theia/core/lib/common/path';
-import { Disposable, Emitter, ILogger, Logger, URI } from '@theia/core';
-import { FileChangesEvent } from '@theia/filesystem/lib/common/files';
+import { Path } from '@ogun/core/lib/common/path';
+import { Disposable, Emitter, ILogger, Logger, URI } from '@ogun/core';
+import { FileChangesEvent } from '@ogun/filesystem/lib/common/files';
 import { DefaultSkillService } from './skill-service';
 
 disableJSDOM();

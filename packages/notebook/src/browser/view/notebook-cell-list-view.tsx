@@ -13,13 +13,13 @@
 //
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
-import * as React from '@theia/core/shared/react';
+import * as React from '@ogun/core/shared/react';
 import { CellEditType, CellKind, NotebookCellsChangeType } from '../../common';
 import { NotebookCellModel } from '../view-model/notebook-cell-model';
 import { NotebookModel } from '../view-model/notebook-model';
 import { NotebookCellToolbarFactory } from './notebook-cell-toolbar-factory';
-import { animationFrame, onDomEvent } from '@theia/core/lib/browser';
-import { CommandMenu, CommandRegistry, DisposableCollection, MenuModelRegistry, nls } from '@theia/core';
+import { animationFrame, onDomEvent } from '@ogun/core/lib/browser';
+import { CommandMenu, CommandRegistry, DisposableCollection, MenuModelRegistry, nls } from '@ogun/core';
 import { NotebookCommands, NotebookMenus } from '../contributions/notebook-actions-contribution';
 import { NotebookCellActionContribution } from '../contributions/notebook-cell-actions-contribution';
 import { NotebookContextManager } from '../service/notebook-context-manager';

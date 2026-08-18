@@ -14,18 +14,18 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { DisposableCollection, Event } from '@theia/core';
-import { URI, UriComponents } from '@theia/core/lib/common/uri';
-import { interfaces } from '@theia/core/shared/inversify';
-import { NotebookModelResolverService } from '@theia/notebook/lib/browser';
-import { NotebookModel } from '@theia/notebook/lib/browser/view-model/notebook-model';
-import { NotebookCellsChangeType } from '@theia/notebook/lib/common';
-import { NotebookMonacoTextModelService } from '@theia/notebook/lib/browser/service/notebook-monaco-text-model-service';
+import { DisposableCollection, Event } from '@ogun/core';
+import { URI, UriComponents } from '@ogun/core/lib/common/uri';
+import { interfaces } from '@ogun/core/shared/inversify';
+import { NotebookModelResolverService } from '@ogun/notebook/lib/browser';
+import { NotebookModel } from '@ogun/notebook/lib/browser/view-model/notebook-model';
+import { NotebookCellsChangeType } from '@ogun/notebook/lib/common';
+import { NotebookMonacoTextModelService } from '@ogun/notebook/lib/browser/service/notebook-monaco-text-model-service';
 import { MAIN_RPC_CONTEXT, NotebookCellsChangedEventDto, NotebookDataDto, NotebookDocumentsExt, NotebookDocumentsMain, NotebookRawContentEventDto } from '../../../common';
 import { RPCProtocol } from '../../../common/rpc-protocol';
 import { NotebookDto } from './notebook-dto';
-import { MonacoEditorModel } from '@theia/monaco/lib/browser/monaco-editor-model';
-import { NotebookOpenHandler } from '@theia/notebook/lib/browser/notebook-open-handler';
+import { MonacoEditorModel } from '@ogun/monaco/lib/browser/monaco-editor-model';
+import { NotebookOpenHandler } from '@ogun/notebook/lib/browser/notebook-open-handler';
 
 export class NotebookDocumentsMainImpl implements NotebookDocumentsMain {
 

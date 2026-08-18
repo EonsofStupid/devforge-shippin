@@ -14,13 +14,13 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { enableJSDOM } from '@theia/core/lib/browser/test/jsdom';
+import { enableJSDOM } from '@ogun/core/lib/browser/test/jsdom';
 let disableJSDOM = enableJSDOM();
-import { FrontendApplicationConfigProvider } from '@theia/core/lib/browser/frontend-application-config-provider';
+import { FrontendApplicationConfigProvider } from '@ogun/core/lib/browser/frontend-application-config-provider';
 FrontendApplicationConfigProvider.set({});
 
 import { expect } from 'chai';
-import { CancellationTokenSource, PreferenceService } from '@theia/core';
+import { CancellationTokenSource, PreferenceService } from '@ogun/core';
 import {
     SuggestFileContent,
     WriteFileContent,
@@ -35,17 +35,17 @@ import {
     DefaultFileChangeSetTitleProvider,
     ReplaceContentInFileFunctionHelperV2
 } from './file-changeset-functions';
-import { ChatToolContext, MutableChatRequestModel, MutableChatResponseModel, MutableChatModel } from '@theia/ai-chat';
-import { ChangeSet, ChangeSetElement } from '@theia/ai-chat/lib/common/change-set';
-import { Container } from '@theia/core/shared/inversify';
+import { ChatToolContext, MutableChatRequestModel, MutableChatResponseModel, MutableChatModel } from '@ogun/ai-chat';
+import { ChangeSet, ChangeSetElement } from '@ogun/ai-chat/lib/common/change-set';
+import { Container } from '@ogun/core/shared/inversify';
 import { AccessibleRootContribution, WorkspaceFunctionScope } from './workspace-functions';
-import { bindRootContributionProvider } from '@theia/core/lib/common/contribution-provider';
-import { AiConfigurationService } from '@theia/ai-core';
-import { EnvVariablesServer } from '@theia/core/lib/common/env-variables';
-import { WorkspaceService } from '@theia/workspace/lib/browser';
-import { FileService } from '@theia/filesystem/lib/browser/file-service';
-import { ChangeSetElementArgs, ChangeSetFileElementFactory, ChangeSetFileElement } from '@theia/ai-chat/lib/browser/change-set-file-element';
-import { URI } from '@theia/core/lib/common/uri';
+import { bindRootContributionProvider } from '@ogun/core/lib/common/contribution-provider';
+import { AiConfigurationService } from '@ogun/ai-core';
+import { EnvVariablesServer } from '@ogun/core/lib/common/env-variables';
+import { WorkspaceService } from '@ogun/workspace/lib/browser';
+import { FileService } from '@ogun/filesystem/lib/browser/file-service';
+import { ChangeSetElementArgs, ChangeSetFileElementFactory, ChangeSetFileElement } from '@ogun/ai-chat/lib/browser/change-set-file-element';
+import { URI } from '@ogun/core/lib/common/uri';
 
 disableJSDOM();
 

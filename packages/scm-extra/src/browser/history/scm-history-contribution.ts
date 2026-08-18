@@ -14,22 +14,22 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { MenuModelRegistry, CommandRegistry, SelectionService } from '@theia/core';
-import { AbstractViewContribution } from '@theia/core/lib/browser';
-import { injectable, inject } from '@theia/core/shared/inversify';
-import { NavigatorContextMenu } from '@theia/navigator/lib/browser/navigator-contribution';
-import { UriCommandHandler, UriAwareCommandHandler } from '@theia/core/lib/common/uri-command-handler';
-import URI from '@theia/core/lib/common/uri';
+import { MenuModelRegistry, CommandRegistry, SelectionService } from '@ogun/core';
+import { AbstractViewContribution } from '@ogun/core/lib/browser';
+import { injectable, inject } from '@ogun/core/shared/inversify';
+import { NavigatorContextMenu } from '@ogun/navigator/lib/browser/navigator-contribution';
+import { UriCommandHandler, UriAwareCommandHandler } from '@ogun/core/lib/common/uri-command-handler';
+import URI from '@ogun/core/lib/common/uri';
 import { ScmHistoryWidget } from './scm-history-widget';
-import { ScmService } from '@theia/scm/lib/browser/scm-service';
+import { ScmService } from '@ogun/scm/lib/browser/scm-service';
 import { EDITOR_CONTEXT_MENU_SCM } from '../scm-extra-contribution';
 import { SCM_HISTORY_ID, SCM_HISTORY_LABEL, ScmHistoryCommands, SCM_HISTORY_TOGGLE_KEYBINDING, ScmHistoryOpenViewArguments } from './scm-history-constants';
 export { SCM_HISTORY_ID, SCM_HISTORY_LABEL, ScmHistoryCommands, SCM_HISTORY_TOGGLE_KEYBINDING, ScmHistoryOpenViewArguments };
 
 @injectable()
 /**
- * @deprecated since 1.75.0 - superseded by the SCM history graph in `@theia/scm`
- * and the Timeline view in `@theia/timeline`. This package will be removed in a
+ * @deprecated since 1.75.0 - superseded by the SCM history graph in `@ogun/scm`
+ * and the Timeline view in `@ogun/timeline`. This package will be removed in a
  * future release - see https://github.com/eclipse-theia/theia/issues/17457.
  */
 export class ScmHistoryContribution extends AbstractViewContribution<ScmHistoryWidget> {

@@ -14,14 +14,14 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { injectable, inject } from '@theia/core/shared/inversify';
-import { ILogger } from '@theia/core/lib/common/logger';
-import { BackendApplicationContribution } from '@theia/core/lib/node/backend-application';
+import { injectable, inject } from '@ogun/core/shared/inversify';
+import { ILogger } from '@ogun/core/lib/common/logger';
+import { BackendApplicationContribution } from '@ogun/core/lib/node/backend-application';
 import { McpServer } from '@modelcontextprotocol/sdk/server/mcp.js';
-import { generateUuid } from '@theia/core';
+import { generateUuid } from '@ogun/core';
 
 import { StreamableHTTPServerTransport } from '@modelcontextprotocol/sdk/server/streamableHttp.js';
-import * as express from '@theia/core/shared/express';
+import * as express from '@ogun/core/shared/express';
 import { randomUUID } from 'crypto';
 import { MCPTheiaServer } from './mcp-theia-server';
 import { MCPBackendContributionManager } from './mcp-backend-contribution-manager';

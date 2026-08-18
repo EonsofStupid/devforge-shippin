@@ -14,7 +14,7 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { ServerToolDescriptor } from '@theia/ai-core';
+import { ServerToolDescriptor } from '@ogun/ai-core';
 
 /** Native Anthropic server tool ids, used both as descriptor ids and as the API tool `name`. */
 export const ANTHROPIC_WEB_FETCH = 'web_fetch';

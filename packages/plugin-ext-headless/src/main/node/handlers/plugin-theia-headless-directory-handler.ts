@@ -14,10 +14,10 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { injectable } from '@theia/core/shared/inversify';
+import { injectable } from '@ogun/core/shared/inversify';
 
-import { PluginDeployerDirectoryHandlerContext, PluginDeployerEntryType, PluginPackage } from '@theia/plugin-ext';
-import { AbstractPluginDirectoryHandler } from '@theia/plugin-ext/lib/main/node/handlers/plugin-theia-directory-handler';
+import { PluginDeployerDirectoryHandlerContext, PluginDeployerEntryType, PluginPackage } from '@ogun/plugin-ext';
+import { AbstractPluginDirectoryHandler } from '@ogun/plugin-ext/lib/main/node/handlers/plugin-theia-directory-handler';
 
 @injectable()
 export class PluginTheiaHeadlessDirectoryHandler extends AbstractPluginDirectoryHandler {

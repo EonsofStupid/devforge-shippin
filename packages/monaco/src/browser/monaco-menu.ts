@@ -14,10 +14,10 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { MAIN_MENU_BAR, MenuAction, MenuContribution, MenuModelRegistry, MenuPath } from '@theia/core/lib/common';
-import { nls } from '@theia/core/lib/common/nls';
-import { inject, injectable } from '@theia/core/shared/inversify';
-import { EDITOR_CONTEXT_MENU, EditorMainMenu } from '@theia/editor/lib/browser';
+import { MAIN_MENU_BAR, MenuAction, MenuContribution, MenuModelRegistry, MenuPath } from '@ogun/core/lib/common';
+import { nls } from '@ogun/core/lib/common/nls';
+import { inject, injectable } from '@ogun/core/shared/inversify';
+import { EDITOR_CONTEXT_MENU, EditorMainMenu } from '@ogun/editor/lib/browser';
 import { IMenuItem, MenuId, MenuRegistry, isIMenuItem } from '@theia/monaco-editor-core/esm/vs/platform/actions/common/actions';
 import { MonacoCommands } from './monaco-command';
 import { MonacoCommandRegistry } from './monaco-command-registry';

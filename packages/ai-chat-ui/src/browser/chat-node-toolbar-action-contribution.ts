@@ -13,10 +13,10 @@
 //
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
-import { Command, nls } from '@theia/core';
-import { codicon } from '@theia/core/lib/browser';
+import { Command, nls } from '@ogun/core';
+import { codicon } from '@ogun/core/lib/browser';
 import { isRequestNode, RequestNode, ResponseNode } from './chat-tree-view';
-import { EditableChatRequestModel } from '@theia/ai-chat';
+import { EditableChatRequestModel } from '@ogun/ai-chat';
 
 export interface ChatNodeToolbarAction {
     /**

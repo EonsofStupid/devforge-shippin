@@ -14,9 +14,9 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { injectable, inject } from '@theia/core/shared/inversify';
-import { CommandService } from '@theia/core/lib/common/command';
-import { OutputCommands } from '@theia/output/lib/browser/output-commands';
+import { injectable, inject } from '@ogun/core/shared/inversify';
+import { CommandService } from '@ogun/core/lib/common/command';
+import { OutputCommands } from '@ogun/output/lib/browser/output-commands';
 import { OutputChannelRegistryMain, PluginInfo } from '../../common/plugin-api-rpc';
 
 @injectable()

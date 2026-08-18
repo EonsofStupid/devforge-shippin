@@ -18,17 +18,17 @@
 describe('SCM', function () {
 
     const { assert } = chai;
-    const { timeout } = require('@theia/core/lib/common/promise-util');
+    const { timeout } = require('@ogun/core/lib/common/promise-util');
 
-    const { HostedPluginSupport } = require('@theia/plugin-ext/lib/hosted/browser/hosted-plugin');
-    const Uri = require('@theia/core/lib/common/uri');
-    const { ApplicationShell } = require('@theia/core/lib/browser/shell/application-shell');
-    const { ContextKeyService } = require('@theia/core/lib/browser/context-key-service');
-    const { ScmContribution } = require('@theia/scm/lib/browser/scm-contribution');
-    const { ScmService } = require('@theia/scm/lib/browser/scm-service');
-    const { ScmWidget } = require('@theia/scm/lib/browser/scm-widget');
-    const { CommandRegistry } = require('@theia/core/lib/common');
-    const { PreferenceService } = require('@theia/core/lib/browser');
+    const { HostedPluginSupport } = require('@ogun/plugin-ext/lib/hosted/browser/hosted-plugin');
+    const Uri = require('@ogun/core/lib/common/uri');
+    const { ApplicationShell } = require('@ogun/core/lib/browser/shell/application-shell');
+    const { ContextKeyService } = require('@ogun/core/lib/browser/context-key-service');
+    const { ScmContribution } = require('@ogun/scm/lib/browser/scm-contribution');
+    const { ScmService } = require('@ogun/scm/lib/browser/scm-service');
+    const { ScmWidget } = require('@ogun/scm/lib/browser/scm-widget');
+    const { CommandRegistry } = require('@ogun/core/lib/common');
+    const { PreferenceService } = require('@ogun/core/lib/browser');
 
 
     /** @type {import('inversify').Container} */

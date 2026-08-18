@@ -14,17 +14,17 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import * as React from '@theia/core/shared/react';
-import { injectable, postConstruct, inject, named } from '@theia/core/shared/inversify';
-import { ReactWidget, Message, codicon } from '@theia/core/lib/browser/widgets';
-import { ContextMenuRenderer } from '@theia/core/lib/browser';
-import { ContributionProvider } from '@theia/core/lib/common/contribution-provider';
-import { PreferenceService } from '@theia/core/lib/common/preferences/preference-service';
+import * as React from '@ogun/core/shared/react';
+import { injectable, postConstruct, inject, named } from '@ogun/core/shared/inversify';
+import { ReactWidget, Message, codicon } from '@ogun/core/lib/browser/widgets';
+import { ContextMenuRenderer } from '@ogun/core/lib/browser';
+import { ContributionProvider } from '@ogun/core/lib/common/contribution-provider';
+import { PreferenceService } from '@ogun/core/lib/common/preferences/preference-service';
 import { VSXExtensionsSearchModel } from './vsx-extensions-search-model';
 import { VSXExtensionsModel } from './vsx-extensions-model';
 import { ExtensionsSourceContribution } from './extensions-source-contribution';
 import { EXTENSIONS_FILTER_BY_TYPE_MENU } from './vsx-extensions-filter-contribution';
-import { nls } from '@theia/core/lib/common/nls';
+import { nls } from '@ogun/core/lib/common/nls';
 
 @injectable()
 export class VSXExtensionsSearchBar extends ReactWidget {

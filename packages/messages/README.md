@@ -12,11 +12,11 @@
 
 ## Description
 
-The `@theia/messages` extension provides the ability to display user notifications in the application.
+The `@ogun/messages` extension provides the ability to display user notifications in the application.
 
 ## Additional Information
 
-- [API documentation for `@theia/messages`](https://eclipse-theia.github.io/theia/docs/next/modules/_theia_messages.html)
+- [API documentation for `@ogun/messages`](https://eclipse-theia.github.io/theia/docs/next/modules/_theia_messages.html)
 - [Theia - GitHub](https://github.com/eclipse-theia/theia)
 - [Theia - Website](https://theia-ide.org/)
 

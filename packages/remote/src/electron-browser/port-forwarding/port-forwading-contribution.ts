@@ -14,9 +14,9 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { Command, nls } from '@theia/core';
-import { AbstractViewContribution } from '@theia/core/lib/browser';
-import { injectable } from '@theia/core/shared/inversify';
+import { Command, nls } from '@ogun/core';
+import { AbstractViewContribution } from '@ogun/core/lib/browser';
+import { injectable } from '@ogun/core/shared/inversify';
 import { PortForwardingWidget, PORT_FORWARDING_WIDGET_ID } from './port-forwarding-widget';
 
 export namespace PortForwardingCommands {

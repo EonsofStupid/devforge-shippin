@@ -14,16 +14,16 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { injectable, inject, postConstruct } from '@theia/core/shared/inversify';
-import URI from '@theia/core/lib/common/uri';
-import { FileNode, FileTreeModel } from '@theia/filesystem/lib/browser';
-import { OpenerService, open, TreeNode, ExpandableTreeNode, CompositeTreeNode, SelectableTreeNode } from '@theia/core/lib/browser';
+import { injectable, inject, postConstruct } from '@ogun/core/shared/inversify';
+import URI from '@ogun/core/lib/common/uri';
+import { FileNode, FileTreeModel } from '@ogun/filesystem/lib/browser';
+import { OpenerService, open, TreeNode, ExpandableTreeNode, CompositeTreeNode, SelectableTreeNode } from '@ogun/core/lib/browser';
 import { FileNavigatorTree, WorkspaceRootNode, WorkspaceNode } from './navigator-tree';
-import { WorkspaceService } from '@theia/workspace/lib/browser';
-import { FrontendApplicationStateService } from '@theia/core/lib/browser/frontend-application-state';
-import { ProgressService } from '@theia/core/lib/common/progress-service';
-import { Deferred } from '@theia/core/lib/common/promise-util';
-import { Disposable } from '@theia/core/lib/common/disposable';
+import { WorkspaceService } from '@ogun/workspace/lib/browser';
+import { FrontendApplicationStateService } from '@ogun/core/lib/browser/frontend-application-state';
+import { ProgressService } from '@ogun/core/lib/common/progress-service';
+import { Deferred } from '@ogun/core/lib/common/promise-util';
+import { Disposable } from '@ogun/core/lib/common/disposable';
 
 @injectable()
 export class FileNavigatorModel extends FileTreeModel {

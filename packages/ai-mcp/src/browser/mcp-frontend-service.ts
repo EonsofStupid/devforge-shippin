@@ -13,11 +13,11 @@
 //
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
-import { injectable, inject, named } from '@theia/core/shared/inversify';
-import { MessageService, nls, ILogger } from '@theia/core';
-import { WorkspaceTrustService } from '@theia/workspace/lib/browser/workspace-trust-service';
+import { injectable, inject, named } from '@ogun/core/shared/inversify';
+import { MessageService, nls, ILogger } from '@ogun/core';
+import { WorkspaceTrustService } from '@ogun/workspace/lib/browser/workspace-trust-service';
 import { isRemoteMCPServerDescription, MCPFrontendService, MCPServerDescription, MCPServerManager, MCPServerStatus } from '../common/mcp-server-manager';
-import { ToolInvocationRegistry, ToolRequest, PromptService, ToolCallContent, ToolCallContentResult } from '@theia/ai-core';
+import { ToolInvocationRegistry, ToolRequest, PromptService, ToolCallContent, ToolCallContentResult } from '@ogun/ai-core';
 import { ListToolsResult, TextContent } from '@modelcontextprotocol/sdk/types';
 
 @injectable()

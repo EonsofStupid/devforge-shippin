@@ -17,7 +17,7 @@
 
 /* eslint-disable @typescript-eslint/no-explicit-any */
 
-import { inject, injectable, named } from '@theia/core/shared/inversify';
+import { inject, injectable, named } from '@ogun/core/shared/inversify';
 import { IRawTheme } from 'vscode-textmate';
 import * as monaco from '@theia/monaco-editor-core';
 import { IStandaloneThemeService } from '@theia/monaco-editor-core/esm/vs/editor/standalone/common/standaloneTheme';
@@ -25,8 +25,8 @@ import { StandaloneServices } from '@theia/monaco-editor-core/esm/vs/editor/stan
 import { StandaloneThemeService } from '@theia/monaco-editor-core/esm/vs/editor/standalone/browser/standaloneThemeService';
 import { Color } from '@theia/monaco-editor-core/esm/vs/base/common/color';
 import { MixStandaloneTheme, MonacoThemeColor, TextmateRegistryFactory, ThemeMix } from './monaco-theme-types';
-import { ILogger } from '@theia/core';
-import { ThemeType } from '@theia/core/lib/common/theme';
+import { ILogger } from '@ogun/core';
+import { ThemeType } from '@ogun/core/lib/common/theme';
 
 @injectable()
 export class MonacoThemeRegistry {

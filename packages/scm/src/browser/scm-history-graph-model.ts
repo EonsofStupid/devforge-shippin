@@ -14,10 +14,10 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { injectable, inject, postConstruct } from '@theia/core/shared/inversify';
-import { Disposable, DisposableCollection } from '@theia/core/lib/common/disposable';
-import { Emitter } from '@theia/core/lib/common/event';
-import { CancellationTokenSource } from '@theia/core/lib/common/cancellation';
+import { injectable, inject, postConstruct } from '@ogun/core/shared/inversify';
+import { Disposable, DisposableCollection } from '@ogun/core/lib/common/disposable';
+import { Emitter } from '@ogun/core/lib/common/event';
+import { CancellationTokenSource } from '@ogun/core/lib/common/cancellation';
 import { ScmService } from './scm-service';
 import { ScmHistoryItem, ScmHistoryItemRef, ScmHistoryProvider, ScmHistoryOptions } from './scm-provider';
 import { computeGraphRows, GraphRow } from './scm-history-graph-lanes';

@@ -23,7 +23,7 @@
 
 // https://github.com/microsoft/vscode/issues/176316 @joyceerhl
 
-export module '@theia/plugin' {
+export module '@ogun/plugin' {
 
     /**
      * Data about an item which can be shared.

@@ -14,17 +14,17 @@
  * SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
  ********************************************************************************/
 
-import { AbstractViewContribution, FrontendApplicationContribution, Widget } from '@theia/core/lib/browser';
-import { ColorContribution } from '@theia/core/lib/browser/color-application-contribution';
-import { ColorRegistry } from '@theia/core/lib/browser/color-registry';
-import { FrontendApplicationStateService } from '@theia/core/lib/browser/frontend-application-state';
-import { TabBarToolbarContribution, TabBarToolbarRegistry } from '@theia/core/lib/browser/shell/tab-bar-toolbar';
-import { Command, CommandRegistry, MenuModelRegistry } from '@theia/core/lib/common';
-import { Color } from '@theia/core/lib/common/color';
-import { inject, injectable, postConstruct } from '@theia/core/shared/inversify';
-import { DebugScope, DebugVariable } from '@theia/debug/lib/browser/console/debug-console-items';
-import { DebugFrontendApplicationContribution } from '@theia/debug/lib/browser/debug-frontend-application-contribution';
-import { DebugVariablesWidget } from '@theia/debug/lib/browser/view/debug-variables-widget';
+import { AbstractViewContribution, FrontendApplicationContribution, Widget } from '@ogun/core/lib/browser';
+import { ColorContribution } from '@ogun/core/lib/browser/color-application-contribution';
+import { ColorRegistry } from '@ogun/core/lib/browser/color-registry';
+import { FrontendApplicationStateService } from '@ogun/core/lib/browser/frontend-application-state';
+import { TabBarToolbarContribution, TabBarToolbarRegistry } from '@ogun/core/lib/browser/shell/tab-bar-toolbar';
+import { Command, CommandRegistry, MenuModelRegistry } from '@ogun/core/lib/common';
+import { Color } from '@ogun/core/lib/common/color';
+import { inject, injectable, postConstruct } from '@ogun/core/shared/inversify';
+import { DebugScope, DebugVariable } from '@ogun/debug/lib/browser/console/debug-console-items';
+import { DebugFrontendApplicationContribution } from '@ogun/debug/lib/browser/debug-frontend-application-contribution';
+import { DebugVariablesWidget } from '@ogun/debug/lib/browser/view/debug-variables-widget';
 import { MemoryEditableTableWidget } from './editable-widget/memory-editable-table-widget';
 import { MemoryProviderService } from './memory-provider/memory-provider-service';
 import { MemoryTableWidget } from './memory-widget/memory-table-widget';
@@ -39,7 +39,7 @@ import { MemoryWidgetManager } from './utils/memory-widget-manager';
 import { VariableRange } from './utils/memory-widget-variable-utils';
 import { MemoryDockPanel } from './wrapper-widgets/memory-dock-panel';
 import { MemoryLayoutWidget } from './wrapper-widgets/memory-layout-widget';
-import { nls } from '@theia/core/lib/common/nls';
+import { nls } from '@ogun/core/lib/common/nls';
 import Long from 'long';
 
 const ONE_HALF_OPACITY = 0.5;

@@ -14,7 +14,7 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { isWindows } from '@theia/core';
+import { isWindows } from '@ogun/core';
 import * as assert from 'assert';
 import * as types from './types-impl';
 

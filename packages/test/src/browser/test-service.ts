@@ -14,14 +14,14 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { CancellationToken, ContributionProvider, Disposable, Emitter, Event, QuickPickService, isObject, nls } from '@theia/core/lib/common';
-import { CancellationTokenSource, Location, Range, Position, DocumentUri } from '@theia/core/shared/vscode-languageserver-protocol';
+import { CancellationToken, ContributionProvider, Disposable, Emitter, Event, QuickPickService, isObject, nls } from '@ogun/core/lib/common';
+import { CancellationTokenSource, Location, Range, Position, DocumentUri } from '@ogun/core/shared/vscode-languageserver-protocol';
 import { CollectionDelta, TreeDelta } from '../common/tree-delta';
-import { MarkdownString } from '@theia/core/lib/common/markdown-rendering';
-import URI from '@theia/core/lib/common/uri';
-import { inject, injectable, named, postConstruct } from '@theia/core/shared/inversify';
+import { MarkdownString } from '@ogun/core/lib/common/markdown-rendering';
+import URI from '@ogun/core/lib/common/uri';
+import { inject, injectable, named, postConstruct } from '@ogun/core/shared/inversify';
 import { groupBy } from '../common/collections';
-import { codiconArray } from '@theia/core/lib/browser';
+import { codiconArray } from '@ogun/core/lib/browser';
 
 export enum TestRunProfileKind {
     Run = 1,

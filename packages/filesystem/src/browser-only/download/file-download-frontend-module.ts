@@ -14,10 +14,10 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { ContainerModule } from '@theia/core/shared/inversify';
+import { ContainerModule } from '@ogun/core/shared/inversify';
 import { FileDownloadService } from '../../common/download/file-download';
 import { FileDownloadServiceImpl } from './file-download-service';
-import { CommandContribution } from '@theia/core/lib/common';
+import { CommandContribution } from '@ogun/core/lib/common';
 import { FileDownloadCommandContribution } from './file-download-command-contribution';
 
 export default new ContainerModule(bind => {

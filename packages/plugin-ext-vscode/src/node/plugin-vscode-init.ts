@@ -17,9 +17,9 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 
 import { register } from 'node:module';
-import * as theia from '@theia/plugin';
-import { isEqualOrParent } from '@theia/core/lib/common/paths';
-import { BackendInitializationFn, PluginAPIFactory, Plugin, emptyPlugin } from '@theia/plugin-ext';
+import * as theia from '@ogun/plugin';
+import { isEqualOrParent } from '@ogun/core/lib/common/paths';
+import { BackendInitializationFn, PluginAPIFactory, Plugin, emptyPlugin } from '@ogun/plugin-ext';
 import { VSCODE_DEFAULT_API_VERSION } from '../common/plugin-vscode-types';
 
 process.env['VSCODE_PID'] = process.env['THEIA_PARENT_PID'];

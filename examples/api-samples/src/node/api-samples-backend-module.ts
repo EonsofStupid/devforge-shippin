@@ -14,20 +14,20 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { ContainerModule } from '@theia/core/shared/inversify';
-import { BackendApplicationContribution, BackendApplicationServer } from '@theia/core/lib/node';
+import { ContainerModule } from '@ogun/core/shared/inversify';
+import { BackendApplicationContribution, BackendApplicationServer } from '@ogun/core/lib/node';
 import { SampleBackendApplicationServer } from './sample-backend-application-server';
 import { SampleMockOpenVsxServer } from './sample-mock-open-vsx-server';
 import { SampleAppInfo } from '../common/vsx/sample-app-info';
 import { SampleBackendAppInfo } from './sample-backend-app-info';
 import { rebindOVSXClientFactory } from '../common/vsx/sample-ovsx-client-factory';
-import { ConnectionHandler, PreferenceContribution, RpcConnectionHandler } from '@theia/core';
+import { ConnectionHandler, PreferenceContribution, RpcConnectionHandler } from '@ogun/core';
 import { FileWatchingPreferencesSchema } from '../common/preference-schema';
-import { MCPBackendContribution } from '@theia/ai-mcp-server/lib/node/mcp-theia-server';
+import { MCPBackendContribution } from '@ogun/ai-mcp-server/lib/node/mcp-theia-server';
 import { MCPTestContribution } from './sample-mcp-test-contribution';
 import { SampleBackendPreferencesService, sampleBackendPreferencesServicePath } from '../common/preference-protocol';
 import { SampleBackendPreferencesBackendServiceImpl } from './sample-backend-preferences-service';
-import { TelemetrySink } from '@theia/telemetry/lib/node';
+import { TelemetrySink } from '@ogun/telemetry/lib/node';
 import { ConsoleTelemetrySink } from './telemetry-sample/console-telemetry-sink';
 
 export default new ContainerModule((bind, unbind, isBound, rebind) => {

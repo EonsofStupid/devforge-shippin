@@ -14,11 +14,11 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import * as theia from '@theia/plugin';
+import * as theia from '@ogun/plugin';
 import * as rpc from '../../common/plugin-api-rpc';
 import { DocumentsExtImpl } from '../documents';
 import { LinkedEditingRanges } from '../../common/plugin-api-rpc-model';
-import { URI } from '@theia/core/shared/vscode-uri';
+import { URI } from '@ogun/core/shared/vscode-uri';
 import { coalesce } from '../../common/arrays';
 import { fromRange, toPosition } from '../type-converters';
 import { serializeRegExp } from '../languages-utils';

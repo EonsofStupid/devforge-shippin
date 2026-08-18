@@ -14,11 +14,11 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { injectable, inject } from '@theia/core/shared/inversify';
-import { LabelProvider, LabelProviderContribution, DidChangeLabelEvent } from '@theia/core/lib/browser/label-provider';
+import { injectable, inject } from '@ogun/core/shared/inversify';
+import { LabelProvider, LabelProviderContribution, DidChangeLabelEvent } from '@ogun/core/lib/browser/label-provider';
 import { BulkEditInfoNode } from './bulk-edit-tree';
-import { TreeLabelProvider } from '@theia/core/lib/browser/tree/tree-label-provider';
-import { WorkspaceService } from '@theia/workspace/lib/browser';
+import { TreeLabelProvider } from '@ogun/core/lib/browser/tree/tree-label-provider';
+import { WorkspaceService } from '@ogun/workspace/lib/browser';
 
 @injectable()
 export class BulkEditTreeLabelProvider implements LabelProviderContribution {

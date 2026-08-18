@@ -14,9 +14,9 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { SelectionService } from '@theia/core/lib/common/selection-service';
-import { SelectionCommandHandler } from '@theia/core/lib/common/selection-command-handler';
-import { isObject } from '@theia/core/lib/common';
+import { SelectionService } from '@ogun/core/lib/common/selection-service';
+import { SelectionCommandHandler } from '@ogun/core/lib/common/selection-command-handler';
+import { isObject } from '@ogun/core/lib/common';
 import { Marker } from '../../common/marker';
 import { ProblemMarker } from '../../common/problem-marker';
 

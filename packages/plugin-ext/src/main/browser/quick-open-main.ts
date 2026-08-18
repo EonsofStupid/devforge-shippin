@@ -15,8 +15,8 @@
 // *****************************************************************************
 /* eslint-disable @typescript-eslint/no-explicit-any */
 
-import { InputBoxOptions } from '@theia/plugin';
-import { interfaces } from '@theia/core/shared/inversify';
+import { InputBoxOptions } from '@ogun/plugin';
+import { interfaces } from '@ogun/core/shared/inversify';
 import { RPCProtocol } from '../../common/rpc-protocol';
 import {
     QuickOpenExt,
@@ -37,15 +37,15 @@ import {
     QuickPickItem,
     QuickPickItemOrSeparator,
     codiconArray
-} from '@theia/core/lib/browser';
-import { DisposableCollection, Disposable } from '@theia/core/lib/common/disposable';
-import { CancellationToken } from '@theia/core/lib/common/cancellation';
-import { Severity } from '@theia/core/lib/common/severity';
-import { MonacoQuickInputService } from '@theia/monaco/lib/browser/monaco-quick-input-service';
+} from '@ogun/core/lib/browser';
+import { DisposableCollection, Disposable } from '@ogun/core/lib/common/disposable';
+import { CancellationToken } from '@ogun/core/lib/common/cancellation';
+import { Severity } from '@ogun/core/lib/common/severity';
+import { MonacoQuickInputService } from '@ogun/monaco/lib/browser/monaco-quick-input-service';
 import { QuickInputButtons } from '../../plugin/types-impl';
 import { ThemeIcon } from '@theia/monaco-editor-core/esm/vs/base/common/themables';
 import { PluginSharedStyle } from './plugin-shared-style';
-import { QuickPickSeparator } from '@theia/core';
+import { QuickPickSeparator } from '@ogun/core';
 
 export interface QuickInputSession {
     input: QuickInput;

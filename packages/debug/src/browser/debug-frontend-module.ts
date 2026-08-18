@@ -16,7 +16,7 @@
 
 import '../../src/browser/style/index.css';
 
-import { ContainerModule, interfaces } from '@theia/core/shared/inversify';
+import { ContainerModule, interfaces } from '@ogun/core/shared/inversify';
 import { DebugConfigurationManager } from './debug-configuration-manager';
 import { DebugWidget } from './view/debug-widget';
 import { DebugPath, DebugService } from '../common/debug-service';
@@ -24,7 +24,7 @@ import {
     WidgetFactory, WebSocketConnectionProvider, FrontendApplicationContribution,
     bindViewContribution,
     OpenHandler
-} from '@theia/core/lib/browser';
+} from '@ogun/core/lib/browser';
 import { DebugSessionManager } from './debug-session-manager';
 import { DebugResourceResolver } from './debug-resource';
 import {
@@ -34,8 +34,8 @@ import {
     DebugSessionContributionRegistry,
     DebugSessionContributionRegistryImpl
 } from './debug-session-contribution';
-import { bindRootContributionProvider, nls, ResourceResolver } from '@theia/core';
-import { ContextKeyService } from '@theia/core/lib/browser/context-key-service';
+import { bindRootContributionProvider, nls, ResourceResolver } from '@ogun/core';
+import { ContextKeyService } from '@ogun/core/lib/browser/context-key-service';
 import { DebugFrontendApplicationContribution } from './debug-frontend-application-contribution';
 import { DebugConsoleContribution } from './console/debug-console-contribution';
 import { BreakpointManager } from './breakpoint/breakpoint-manager';
@@ -46,18 +46,18 @@ import { DebugSchemaUpdater } from './debug-schema-updater';
 import { DebugCallStackItemTypeKey } from './debug-call-stack-item-type-key';
 import { bindLaunchPreferences } from '../common/launch-preferences';
 import { DebugPrefixConfiguration } from './debug-prefix-configuration';
-import { CommandContribution } from '@theia/core/lib/common/command';
-import { TabBarToolbarContribution } from '@theia/core/lib/browser/shell/tab-bar-toolbar';
-import { ColorContribution } from '@theia/core/lib/browser/color-application-contribution';
+import { CommandContribution } from '@ogun/core/lib/common/command';
+import { TabBarToolbarContribution } from '@ogun/core/lib/browser/shell/tab-bar-toolbar';
+import { ColorContribution } from '@ogun/core/lib/browser/color-application-contribution';
 import { DebugWatchManager } from './debug-watch-manager';
 import { DebugExpressionProvider } from './editor/debug-expression-provider';
 import { DebugBreakpointWidget } from './editor/debug-breakpoint-widget';
 import { DebugInlineValueDecorator } from './editor/debug-inline-value-decorator';
-import { JsonSchemaContribution } from '@theia/core/lib/browser/json-schema-store';
-import { TabBarDecorator } from '@theia/core/lib/browser/shell/tab-bar-decorator';
+import { JsonSchemaContribution } from '@ogun/core/lib/browser/json-schema-store';
+import { TabBarDecorator } from '@ogun/core/lib/browser/shell/tab-bar-decorator';
 import { DebugTabBarDecorator } from './debug-tab-bar-decorator';
 import { DebugContribution } from './debug-contribution';
-import { QuickAccessContribution } from '@theia/core/lib/browser/quick-input/quick-access';
+import { QuickAccessContribution } from '@ogun/core/lib/browser/quick-input/quick-access';
 import { DebugViewModel } from './view/debug-view-model';
 import { DebugToolBar } from './view/debug-toolbar-widget';
 import { DebugSessionWidget } from './view/debug-session-widget';
@@ -66,7 +66,7 @@ import { StandaloneServices } from '@theia/monaco-editor-core/esm/vs/editor/stan
 import { ICodeEditorService } from '@theia/monaco-editor-core/esm/vs/editor/browser/services/codeEditorService';
 import { DebugSessionConfigurationLabelProvider } from './debug-session-configuration-label-provider';
 import { AddOrEditDataBreakpointAddress } from './breakpoint/debug-data-breakpoint-actions';
-import { WorkspaceRestrictionContribution, WorkspaceRestriction } from '@theia/workspace/lib/browser/workspace-trust-service';
+import { WorkspaceRestrictionContribution, WorkspaceRestriction } from '@ogun/workspace/lib/browser/workspace-trust-service';
 import { DebugBreakpointOpener } from './model/debug-breakpoint-opener';
 
 export default new ContainerModule((bind: interfaces.Bind) => {

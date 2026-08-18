@@ -14,12 +14,12 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { ChatResponsePartRenderer } from '@theia/ai-chat-ui/lib/browser/chat-response-part-renderer';
-import { Agent, AIVariableContribution } from '@theia/ai-core/lib/common';
-import { bindToolProvider } from '@theia/ai-core/lib/common/tool-invocation-registry';
-import { CommandContribution, MenuContribution, PreferenceContribution } from '@theia/core';
-import { KeybindingContribution, WebSocketConnectionProvider } from '@theia/core/lib/browser';
-import { ContainerModule } from '@theia/core/shared/inversify';
+import { ChatResponsePartRenderer } from '@ogun/ai-chat-ui/lib/browser/chat-response-part-renderer';
+import { Agent, AIVariableContribution } from '@ogun/ai-core/lib/common';
+import { bindToolProvider } from '@ogun/ai-core/lib/common/tool-invocation-registry';
+import { CommandContribution, MenuContribution, PreferenceContribution } from '@ogun/core';
+import { KeybindingContribution, WebSocketConnectionProvider } from '@ogun/core/lib/browser';
+import { ContainerModule } from '@ogun/core/shared/inversify';
 import { AiTerminalAgent } from './ai-terminal-agent';
 import { AiTerminalCommandContribution } from './ai-terminal-contribution';
 import { ShellExecutionTool } from './shell-execution-tool';

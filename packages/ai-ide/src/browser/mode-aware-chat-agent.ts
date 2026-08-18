@@ -15,9 +15,9 @@
 // *****************************************************************************
 import {
     AbstractStreamParsingChatAgent, ChatMode, ChatSessionContext, SystemMessageDescription
-} from '@theia/ai-chat/lib/common';
-import { AIVariableContext } from '@theia/ai-core';
-import { injectable } from '@theia/core/shared/inversify';
+} from '@ogun/ai-chat/lib/common';
+import { AIVariableContext } from '@ogun/ai-core';
+import { injectable } from '@ogun/core/shared/inversify';
 
 /**
  * An abstract chat agent that supports mode selection for selecting prompt variants.

@@ -14,9 +14,9 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { injectable, inject, named } from '@theia/core/shared/inversify';
-import { nls } from '@theia/core/lib/common/nls';
-import { environment, ILogger } from '@theia/core';
+import { injectable, inject, named } from '@ogun/core/shared/inversify';
+import { nls } from '@ogun/core/lib/common/nls';
+import { environment, ILogger } from '@ogun/core';
 import { AgentNotificationKind, AGENT_NOTIFICATION_KIND_INPUT_NEEDED } from '../common/notification-types';
 
 /**

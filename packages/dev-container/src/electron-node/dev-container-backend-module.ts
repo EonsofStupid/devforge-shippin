@@ -14,22 +14,22 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { ContainerModule } from '@theia/core/shared/inversify';
-import { ConnectionContainerModule } from '@theia/core/lib/node/messaging/connection-container-module';
+import { ContainerModule } from '@ogun/core/shared/inversify';
+import { ConnectionContainerModule } from '@ogun/core/lib/node/messaging/connection-container-module';
 import { DevContainerCliContribution } from './dev-container-cli-contribution';
-import { CliContribution } from '@theia/core/lib/node';
+import { CliContribution } from '@ogun/core/lib/node';
 import { DevContainerConnectionProvider } from './remote-container-connection-provider';
 import { RemoteContainerConnectionProvider, RemoteContainerConnectionProviderPath } from '../electron-common/remote-container-connection-provider';
 import { ContainerCreationContribution, DockerContainerService } from './docker-container-service';
-import { bindContributionProvider, ConnectionHandler, RpcConnectionHandler } from '@theia/core';
+import { bindContributionProvider, ConnectionHandler, RpcConnectionHandler } from '@ogun/core';
 import { registerContainerCreationContributions } from './devcontainer-contributions/main-container-creation-contributions';
 import { DevContainerFileService } from './dev-container-file-service';
 import { ContainerOutputProvider } from '../electron-common/container-output-provider';
 import { ExtensionsContribution, registerTheiaStartOptionsContributions, SettingsContribution } from './devcontainer-contributions/cli-enhancing-creation-contributions';
-import { RemoteCliContribution } from '@theia/core/lib/node/remote/remote-cli-contribution';
+import { RemoteCliContribution } from '@ogun/core/lib/node/remote/remote-cli-contribution';
 import { ProfileFileModificationContribution } from './devcontainer-contributions/profile-file-modification-contribution';
 import { DevContainerWorkspaceHandler } from './dev-container-workspace-handler';
-import { WorkspaceHandlerContribution } from '@theia/workspace/lib/node/default-workspace-server';
+import { WorkspaceHandlerContribution } from '@ogun/workspace/lib/node/default-workspace-server';
 import { registerVariableResolverContributions, VariableResolverContribution } from './devcontainer-contributions/variable-resolver-contribution';
 import { DockerComposeService } from './docker-compose/compose-service';
 

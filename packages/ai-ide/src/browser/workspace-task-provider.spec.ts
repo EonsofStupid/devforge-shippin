@@ -15,19 +15,19 @@
 // *****************************************************************************
 
 import { expect } from 'chai';
-import { CancellationTokenSource, PreferenceService } from '@theia/core';
-import URI from '@theia/core/lib/common/uri';
+import { CancellationTokenSource, PreferenceService } from '@ogun/core';
+import URI from '@ogun/core/lib/common/uri';
 import { GLOBAL_SCOPE_TOKEN, TaskListProvider, TaskRunnerProvider, WORKSPACE_SCOPE_TOKEN } from './workspace-task-provider';
-import { AiConfigurationService, ToolInvocationContext } from '@theia/ai-core';
-import { Container } from '@theia/core/shared/inversify';
-import { TaskService } from '@theia/task/lib/browser/task-service';
-import { TerminalService } from '@theia/terminal/lib/browser/base/terminal-service';
-import { TaskConfiguration, TaskInfo, TaskScope } from '@theia/task/lib/common';
-import { TerminalWidget } from '@theia/terminal/lib/browser/base/terminal-widget';
+import { AiConfigurationService, ToolInvocationContext } from '@ogun/ai-core';
+import { Container } from '@ogun/core/shared/inversify';
+import { TaskService } from '@ogun/task/lib/browser/task-service';
+import { TerminalService } from '@ogun/terminal/lib/browser/base/terminal-service';
+import { TaskConfiguration, TaskInfo, TaskScope } from '@ogun/task/lib/common';
+import { TerminalWidget } from '@ogun/terminal/lib/browser/base/terminal-widget';
 import { WorkspaceFunctionScope } from './workspace-functions';
-import { EnvVariablesServer } from '@theia/core/lib/common/env-variables';
-import { WorkspaceService } from '@theia/workspace/lib/browser';
-import { FileService } from '@theia/filesystem/lib/browser/file-service';
+import { EnvVariablesServer } from '@ogun/core/lib/common/env-variables';
+import { WorkspaceService } from '@ogun/workspace/lib/browser';
+import { FileService } from '@ogun/filesystem/lib/browser/file-service';
 
 const makeTrustAwareReader = (): AiConfigurationService => ({
     get: <T>(_name: string, fallback?: T) => fallback,

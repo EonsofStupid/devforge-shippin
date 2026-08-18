@@ -14,7 +14,7 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { Container } from '@theia/core/shared/inversify';
+import { Container } from '@ogun/core/shared/inversify';
 import { expect } from 'chai';
 import { TelemetryService } from '../common/telemetry-service';
 import { BrowserOnlyTelemetryService } from './browser-only-telemetry-service';

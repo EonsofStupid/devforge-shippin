@@ -125,7 +125,7 @@ import {
 } from './breadcrumbs';
 import { DockPanel, RendererHost } from './widgets';
 import { TooltipService, TooltipServiceImpl } from './tooltip-service';
-import { BackendRequestService, RequestService, REQUEST_SERVICE_PATH } from '@theia/request';
+import { BackendRequestService, RequestService, REQUEST_SERVICE_PATH } from '@ogun/request';
 import { bindFrontendStopwatch, bindBackendStopwatch } from './performance';
 import { SaveableService, SaveErrorChecker } from './saveable-service';
 import { SecondaryWindowHandler } from './secondary-window-handler';

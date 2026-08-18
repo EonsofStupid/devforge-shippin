@@ -14,12 +14,12 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { nls } from '@theia/core/lib/common/nls';
-import { PreferenceScope } from '@theia/core/lib/common/preferences/preference-scope';
-import { createPreferenceProxy, PreferenceProxy } from '@theia/core/lib/common/preferences/preference-proxy';
-import { PreferenceContribution, PreferenceSchema } from '@theia/core/lib/common/preferences/preference-schema';
-import { PreferenceService } from '@theia/core/lib/common/preferences/preference-service';
-import { interfaces } from '@theia/core/shared/inversify';
+import { nls } from '@ogun/core/lib/common/nls';
+import { PreferenceScope } from '@ogun/core/lib/common/preferences/preference-scope';
+import { createPreferenceProxy, PreferenceProxy } from '@ogun/core/lib/common/preferences/preference-proxy';
+import { PreferenceContribution, PreferenceSchema } from '@ogun/core/lib/common/preferences/preference-schema';
+import { PreferenceService } from '@ogun/core/lib/common/preferences/preference-service';
+import { interfaces } from '@ogun/core/shared/inversify';
 import { TelemetryLevel } from './telemetry-types';
 
 /** @experimental */

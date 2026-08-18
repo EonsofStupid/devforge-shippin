@@ -14,15 +14,15 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { enableJSDOM } from '@theia/core/lib/browser/test/jsdom';
+import { enableJSDOM } from '@ogun/core/lib/browser/test/jsdom';
 const disableJSDOM = enableJSDOM();
 
-import { FrontendApplicationConfigProvider } from '@theia/core/lib/browser/frontend-application-config-provider';
+import { FrontendApplicationConfigProvider } from '@ogun/core/lib/browser/frontend-application-config-provider';
 FrontendApplicationConfigProvider.set({});
 
 import * as assert from 'assert';
-import { URI } from '@theia/core';
-import { Disposable } from '@theia/core/lib/common/disposable';
+import { URI } from '@ogun/core';
+import { Disposable } from '@ogun/core/lib/common/disposable';
 import { UriComponents } from '../../common/uri-components';
 import { MainFileSystemEventService } from './main-file-system-event-service';
 

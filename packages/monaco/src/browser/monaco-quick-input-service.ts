@@ -19,8 +19,8 @@ import {
     InputBox, InputOptions, KeybindingRegistry, PickOptions,
     QuickInputButton, QuickInputHideReason, QuickInputService, QuickPick, QuickPickItem,
     QuickPickItemButtonEvent, QuickPickItemHighlights, QuickPickOptions, QuickPickSeparator
-} from '@theia/core/lib/browser';
-import { injectable, inject, postConstruct } from '@theia/core/shared/inversify';
+} from '@ogun/core/lib/browser';
+import { injectable, inject, postConstruct } from '@ogun/core/shared/inversify';
 import {
     IInputBox, IInputOptions, IKeyMods, IPickOptions, IQuickInput, IQuickInputButton,
     IQuickInputService, IQuickNavigateConfiguration, IQuickPick, IQuickPickItem, IQuickPickItemButtonEvent,
@@ -37,15 +37,15 @@ import { ResolvedKeybinding } from '@theia/monaco-editor-core/esm/vs/base/common
 import { IInstantiationService } from '@theia/monaco-editor-core/esm/vs/platform/instantiation/common/instantiation';
 import { StandaloneServices } from '@theia/monaco-editor-core/esm/vs/editor/standalone/browser/standaloneServices';
 import { IMatch } from '@theia/monaco-editor-core/esm/vs/base/common/filters';
-import { CancellationToken, Event } from '@theia/core';
+import { CancellationToken, Event } from '@ogun/core';
 import { MonacoColorRegistry } from './monaco-color-registry';
-import { ThemeService } from '@theia/core/lib/browser/theming';
+import { ThemeService } from '@ogun/core/lib/browser/theming';
 import { IStandaloneThemeService } from '@theia/monaco-editor-core/esm/vs/editor/standalone/common/standaloneTheme';
 import { ILayoutService } from '@theia/monaco-editor-core/esm/vs/platform/layout/browser/layoutService';
 import { IHoverDelegate, IHoverDelegateOptions } from '@theia/monaco-editor-core/esm/vs/base/browser/ui/hover/hoverDelegate';
 import { IHoverWidget } from '@theia/monaco-editor-core/esm/vs/base/browser/ui/hover/hover';
 import MonacoSeverity from '@theia/monaco-editor-core/esm/vs/base/common/severity';
-import { Severity } from '@theia/core/lib/common/severity';
+import { Severity } from '@ogun/core/lib/common/severity';
 import { IStorageService } from '@theia/monaco-editor-core/esm/vs/platform/storage/common/storage';
 import { IContextMenuService } from '@theia/monaco-editor-core/esm/vs/platform/contextview/browser/contextView';
 

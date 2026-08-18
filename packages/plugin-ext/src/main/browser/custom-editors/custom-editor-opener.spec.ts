@@ -14,13 +14,13 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { enableJSDOM } from '@theia/core/lib/browser/test/jsdom';
+import { enableJSDOM } from '@ogun/core/lib/browser/test/jsdom';
 let disableJSDOM = enableJSDOM();
 
 import * as chai from 'chai';
-import URI from '@theia/core/lib/common/uri';
-import { PreferenceService } from '@theia/core';
-import { EditorOpenerOptions } from '@theia/editor/lib/browser';
+import URI from '@ogun/core/lib/common/uri';
+import { PreferenceService } from '@ogun/core';
+import { EditorOpenerOptions } from '@ogun/editor/lib/browser';
 import { CustomEditorOpener } from './custom-editor-opener';
 import { CustomEditor, CustomEditorPriority } from '../../../common';
 

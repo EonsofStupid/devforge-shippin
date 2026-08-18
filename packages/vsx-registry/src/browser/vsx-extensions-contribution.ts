@@ -14,25 +14,25 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { PreferenceScope } from '@theia/core/lib/common/preferences/preference-scope';
-import { CommonMenus, LabelProvider, QuickInputService, QuickPickItem } from '@theia/core/lib/browser';
-import { PreferenceService } from '@theia/core/lib/common/preferences/preference-service';
-import { ClipboardService } from '@theia/core/lib/browser/clipboard-service';
-import { ColorContribution } from '@theia/core/lib/browser/color-application-contribution';
-import { ColorRegistry } from '@theia/core/lib/browser/color-registry';
-import { FrontendApplication } from '@theia/core/lib/browser/frontend-application';
-import { FrontendApplicationContribution } from '@theia/core/lib/browser/frontend-application-contribution';
-import { AbstractViewContribution } from '@theia/core/lib/browser/shell/view-contribution';
-import { MenuModelRegistry, MessageService, SelectionService, nls } from '@theia/core/lib/common';
-import { Color } from '@theia/core/lib/common/color';
-import { Command, CommandRegistry } from '@theia/core/lib/common/command';
-import URI from '@theia/core/lib/common/uri';
-import { UriAwareCommandHandler } from '@theia/core/lib/common/uri-command-handler';
-import { inject, injectable, named, postConstruct } from '@theia/core/shared/inversify';
-import { FileDialogService, OpenFileDialogProps } from '@theia/filesystem/lib/browser';
-import { NAVIGATOR_CONTEXT_MENU } from '@theia/navigator/lib/browser/navigator-contribution';
-import { VSXExtensionRaw } from '@theia/ovsx-client';
-import { VscodeCommands } from '@theia/plugin-ext-vscode/lib/browser/plugin-vscode-commands-contribution';
+import { PreferenceScope } from '@ogun/core/lib/common/preferences/preference-scope';
+import { CommonMenus, LabelProvider, QuickInputService, QuickPickItem } from '@ogun/core/lib/browser';
+import { PreferenceService } from '@ogun/core/lib/common/preferences/preference-service';
+import { ClipboardService } from '@ogun/core/lib/browser/clipboard-service';
+import { ColorContribution } from '@ogun/core/lib/browser/color-application-contribution';
+import { ColorRegistry } from '@ogun/core/lib/browser/color-registry';
+import { FrontendApplication } from '@ogun/core/lib/browser/frontend-application';
+import { FrontendApplicationContribution } from '@ogun/core/lib/browser/frontend-application-contribution';
+import { AbstractViewContribution } from '@ogun/core/lib/browser/shell/view-contribution';
+import { MenuModelRegistry, MessageService, SelectionService, nls } from '@ogun/core/lib/common';
+import { Color } from '@ogun/core/lib/common/color';
+import { Command, CommandRegistry } from '@ogun/core/lib/common/command';
+import URI from '@ogun/core/lib/common/uri';
+import { UriAwareCommandHandler } from '@ogun/core/lib/common/uri-command-handler';
+import { inject, injectable, named, postConstruct } from '@ogun/core/shared/inversify';
+import { FileDialogService, OpenFileDialogProps } from '@ogun/filesystem/lib/browser';
+import { NAVIGATOR_CONTEXT_MENU } from '@ogun/navigator/lib/browser/navigator-contribution';
+import { VSXExtensionRaw } from '@ogun/ovsx-client';
+import { VscodeCommands } from '@ogun/plugin-ext-vscode/lib/browser/plugin-vscode-commands-contribution';
 import { DateTime } from 'luxon';
 import { VSXRegistryService } from '../common/vsx-registry-service';
 import { IGNORE_RECOMMENDATIONS_ID } from '../common/recommended-extensions-preference-contribution';
@@ -41,10 +41,10 @@ import { VSXExtensionsCommands } from './vsx-extension-commands';
 import { VSXExtensionsModel } from './vsx-extensions-model';
 import { BUILTIN_QUERY, INSTALLED_QUERY, RECOMMENDED_QUERY } from './vsx-extensions-search-model';
 import { VSXExtensionsViewContainer } from './vsx-extensions-view-container';
-import { ApplicationServer } from '@theia/core/lib/common/application-protocol';
-import { ContributionProvider } from '@theia/core/lib/common/contribution-provider';
+import { ApplicationServer } from '@ogun/core/lib/common/application-protocol';
+import { ContributionProvider } from '@ogun/core/lib/common/contribution-provider';
 import { ExtensionsSourceContribution } from './extensions-source-contribution';
-import debounce = require('@theia/core/shared/lodash.debounce');
+import debounce = require('@ogun/core/shared/lodash.debounce');
 
 export namespace VSXCommands {
     export const TOGGLE_EXTENSIONS: Command = {

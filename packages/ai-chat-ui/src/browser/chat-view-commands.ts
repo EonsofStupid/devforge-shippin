@@ -14,8 +14,8 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { Command, nls } from '@theia/core';
-import { codicon } from '@theia/core/lib/browser';
+import { Command, nls } from '@ogun/core';
+import { codicon } from '@ogun/core/lib/browser';
 
 export namespace ChatCommands {
     export const CHAT_CATEGORY = 'Chat';

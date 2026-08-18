@@ -16,9 +16,9 @@
 
 import '../../src/browser/style/index.css';
 
-import { ContainerModule, interfaces } from '@theia/core/shared/inversify';
-import { CommandContribution, MenuContribution, bindRootContributionProvider } from '@theia/core/lib/common';
-import { FrontendApplicationContribution, KeybindingContribution, ServiceConnectionProvider } from '@theia/core/lib/browser';
+import { ContainerModule, interfaces } from '@ogun/core/shared/inversify';
+import { CommandContribution, MenuContribution, bindRootContributionProvider } from '@ogun/core/lib/common';
+import { FrontendApplicationContribution, KeybindingContribution, ServiceConnectionProvider } from '@ogun/core/lib/browser';
 import {
     OpenFileDialogFactory,
     SaveFileDialogFactory,
@@ -28,10 +28,10 @@ import {
     createSaveFileDialogContainer,
     OpenFileDialog,
     SaveFileDialog,
-} from '@theia/filesystem/lib/browser';
-import { StorageService } from '@theia/core/lib/browser/storage-service';
-import { LabelProviderContribution } from '@theia/core/lib/browser/label-provider';
-import { VariableContribution } from '@theia/variable-resolver/lib/browser';
+} from '@ogun/filesystem/lib/browser';
+import { StorageService } from '@ogun/core/lib/browser/storage-service';
+import { LabelProviderContribution } from '@ogun/core/lib/browser/label-provider';
+import { VariableContribution } from '@ogun/variable-resolver/lib/browser';
 import { WorkspaceServer, workspacePath, UntitledWorkspaceService, WorkspaceFileService } from '../common';
 import { WorkspaceFrontendContribution } from './workspace-frontend-contribution';
 import { WorkspaceHandlingContribution, WorkspaceOpenHandlerContribution, WorkspaceService } from './workspace-service';
@@ -46,15 +46,15 @@ import { WorkspaceDuplicateHandler } from './workspace-duplicate-handler';
 import { WorkspaceUtils } from './workspace-utils';
 import { WorkspaceCompareHandler } from './workspace-compare-handler';
 import { DiffService } from './diff-service';
-import { JsonSchemaContribution } from '@theia/core/lib/browser/json-schema-store';
+import { JsonSchemaContribution } from '@ogun/core/lib/browser/json-schema-store';
 import { WorkspaceSchemaUpdater } from './workspace-schema-updater';
 import { WorkspaceBreadcrumbsContribution } from './workspace-breadcrumbs-contribution';
-import { FilepathBreadcrumbsContribution } from '@theia/filesystem/lib/browser/breadcrumbs/filepath-breadcrumbs-contribution';
+import { FilepathBreadcrumbsContribution } from '@ogun/filesystem/lib/browser/breadcrumbs/filepath-breadcrumbs-contribution';
 import { WorkspaceTrustService, WorkspaceRestrictionContribution } from './workspace-trust-service';
 import { bindWorkspaceTrustPreferences } from '../common/workspace-trust-preferences';
-import { UserWorkingDirectoryProvider } from '@theia/core/lib/browser/user-working-directory-provider';
+import { UserWorkingDirectoryProvider } from '@ogun/core/lib/browser/user-working-directory-provider';
 import { WorkspaceUserWorkingDirectoryProvider } from './workspace-user-working-directory-provider';
-import { WindowTitleUpdater } from '@theia/core/lib/browser/window/window-title-updater';
+import { WindowTitleUpdater } from '@ogun/core/lib/browser/window/window-title-updater';
 import { WorkspaceWindowTitleUpdater } from './workspace-window-title-updater';
 import { CanonicalUriService } from './canonical-uri-service';
 import { WorkspaceMetadataStorageService, WorkspaceMetadataStorageServiceImpl, WorkspaceMetadataStoreFactory } from './metadata-storage';

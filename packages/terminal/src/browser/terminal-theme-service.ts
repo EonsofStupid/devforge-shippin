@@ -15,11 +15,11 @@
 // *****************************************************************************
 
 import { ITheme } from 'xterm';
-import { injectable, inject } from '@theia/core/shared/inversify';
-import { ColorRegistry } from '@theia/core/lib/browser/color-registry';
-import { ThemeService } from '@theia/core/lib/browser/theming';
-import { ThemeChangeEvent } from '@theia/core/lib/common/theme';
-import { Event } from '@theia/core';
+import { injectable, inject } from '@ogun/core/shared/inversify';
+import { ColorRegistry } from '@ogun/core/lib/browser/color-registry';
+import { ThemeService } from '@ogun/core/lib/browser/theming';
+import { ThemeChangeEvent } from '@ogun/core/lib/common/theme';
+import { Event } from '@ogun/core';
 import { terminalAnsiColorMap } from '../common/terminal-preferences';
 
 @injectable()

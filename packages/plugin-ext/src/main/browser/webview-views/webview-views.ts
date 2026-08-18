@@ -19,7 +19,7 @@
 *--------------------------------------------------------------------------------------------*/
 // copied and modified from https://github.com/microsoft/vscode/blob/a4a4cf5ace4472bc4f5176396bb290cafa15c518/src/vs/workbench/contrib/webviewView/browser/webviewViewService.ts
 
-import { CancellationToken, Event } from '@theia/core/lib/common';
+import { CancellationToken, Event } from '@ogun/core/lib/common';
 import { WebviewWidget } from '../webview/webview';
 
 export interface WebviewView {

@@ -14,14 +14,14 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { inject, injectable, named } from '@theia/core/shared/inversify';
-import { ILogger } from '@theia/core/lib/common/logger';
-import { OpenerService, OpenerOptions, open } from '@theia/core/lib/browser/opener-service';
+import { inject, injectable, named } from '@ogun/core/shared/inversify';
+import { ILogger } from '@ogun/core/lib/common/logger';
+import { OpenerService, OpenerOptions, open } from '@ogun/core/lib/browser/opener-service';
 import { EditorOpenerOptions } from '../editor-manager';
 import { NavigationLocationUpdater } from './navigation-location-updater';
 import { NavigationLocationSimilarity } from './navigation-location-similarity';
 import { NavigationLocation, Range, ContentChangeLocation, RecentlyClosedEditor } from './navigation-location';
-import URI from '@theia/core/lib/common/uri';
+import URI from '@ogun/core/lib/common/uri';
 
 /**
  * The navigation location service.

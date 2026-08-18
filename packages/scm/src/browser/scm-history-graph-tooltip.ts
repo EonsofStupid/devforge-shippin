@@ -14,13 +14,13 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { MarkdownRenderer } from '@theia/core/lib/browser/markdown-rendering/markdown-renderer';
-import { wireMarkdownLinkHandler } from '@theia/core/lib/browser/markdown-rendering/markdown-link-handler';
-import { MarkdownString, MarkdownStringImpl } from '@theia/core/lib/common/markdown-rendering/markdown-string';
-import { OpenerService } from '@theia/core/lib/browser/opener-service';
-import { DisposableCollection } from '@theia/core/lib/common/disposable';
-import { codicon } from '@theia/core/lib/browser/widgets/widget';
-import { nls } from '@theia/core/lib/common/nls';
+import { MarkdownRenderer } from '@ogun/core/lib/browser/markdown-rendering/markdown-renderer';
+import { wireMarkdownLinkHandler } from '@ogun/core/lib/browser/markdown-rendering/markdown-link-handler';
+import { MarkdownString, MarkdownStringImpl } from '@ogun/core/lib/common/markdown-rendering/markdown-string';
+import { OpenerService } from '@ogun/core/lib/browser/opener-service';
+import { DisposableCollection } from '@ogun/core/lib/common/disposable';
+import { codicon } from '@ogun/core/lib/browser/widgets/widget';
+import { nls } from '@ogun/core/lib/common/nls';
 import { ScmHistoryItem, ScmHistoryItemRef, ScmHistoryProvider } from './scm-provider';
 import { HistoryGraphEntry } from './scm-history-graph-model';
 import { laneColor, getRefBadgeClass, getRefBadgePresentation, deduplicateRefs, isTagRef, isRemoteRef } from './scm-history-graph-helpers';

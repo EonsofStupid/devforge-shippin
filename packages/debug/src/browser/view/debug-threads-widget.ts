@@ -14,17 +14,17 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { injectable, inject, postConstruct, interfaces, Container } from '@theia/core/shared/inversify';
-import { MenuPath } from '@theia/core';
-import { TreeNode, NodeProps, SelectableTreeNode, CompositeTreeNode } from '@theia/core/lib/browser';
-import { SourceTreeWidget, TreeElementNode } from '@theia/core/lib/browser/source-tree';
-import { ExpandableTreeNode } from '@theia/core/lib/browser/tree/tree-expansion';
+import { injectable, inject, postConstruct, interfaces, Container } from '@ogun/core/shared/inversify';
+import { MenuPath } from '@ogun/core';
+import { TreeNode, NodeProps, SelectableTreeNode, CompositeTreeNode } from '@ogun/core/lib/browser';
+import { SourceTreeWidget, TreeElementNode } from '@ogun/core/lib/browser/source-tree';
+import { ExpandableTreeNode } from '@ogun/core/lib/browser/tree/tree-expansion';
 import { DebugThreadsSource } from './debug-threads-source';
 import { DebugSession } from '../debug-session';
 import { DebugThread } from '../model/debug-thread';
 import { DebugViewModel } from '../view/debug-view-model';
 import { DebugCallStackItemTypeKey } from '../debug-call-stack-item-type-key';
-import { nls } from '@theia/core/lib/common/nls';
+import { nls } from '@ogun/core/lib/common/nls';
 
 @injectable()
 export class DebugThreadsWidget extends SourceTreeWidget {

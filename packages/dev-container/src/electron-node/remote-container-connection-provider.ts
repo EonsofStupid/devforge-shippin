@@ -20,12 +20,12 @@ import {
     AttachContainerArgs, AttachContainerOptions, ContainerConnectionOptions, ContainerConnectionResult,
     DevContainerFile, RemoteContainerConnectionProvider, RunningContainerInfo, WorkspaceCandidate
 } from '../electron-common/remote-container-connection-provider';
-import { RemoteConnectionService } from '@theia/remote/lib/electron-node/remote-connection-service';
-import { RemoteSetupService } from '@theia/remote/lib/electron-node/setup/remote-setup-service';
-import { RemoteProxyServerProvider } from '@theia/remote/lib/electron-node/remote-proxy-server-provider';
-import { RemoteStatusReport } from '@theia/remote/lib/electron-node/remote-types';
-import { RpcServer, ILogger, MessageService, generateUuid, URI } from '@theia/core';
-import { inject, injectable, named } from '@theia/core/shared/inversify';
+import { RemoteConnectionService } from '@ogun/remote/lib/electron-node/remote-connection-service';
+import { RemoteSetupService } from '@ogun/remote/lib/electron-node/setup/remote-setup-service';
+import { RemoteProxyServerProvider } from '@ogun/remote/lib/electron-node/remote-proxy-server-provider';
+import { RemoteStatusReport } from '@ogun/remote/lib/electron-node/remote-types';
+import { RpcServer, ILogger, MessageService, generateUuid, URI } from '@ogun/core';
+import { inject, injectable, named } from '@ogun/core/shared/inversify';
 import * as Docker from 'dockerode';
 import { DevContainerFileService } from './dev-container-file-service';
 import { DockerContainerService } from './docker-container-service';

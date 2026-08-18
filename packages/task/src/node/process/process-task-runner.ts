@@ -19,9 +19,9 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { injectable, inject, named } from '@theia/core/shared/inversify';
-import { deepClone, isWindows, isOSX, ILogger } from '@theia/core';
-import { FileUri } from '@theia/core/lib/node';
+import { injectable, inject, named } from '@ogun/core/shared/inversify';
+import { deepClone, isWindows, isOSX, ILogger } from '@ogun/core';
+import { FileUri } from '@ogun/core/lib/node';
 import {
     RawProcessFactory,
     ProcessErrorEvent,
@@ -29,17 +29,17 @@ import {
     TerminalProcessOptions,
     TaskTerminalProcessFactory,
     TaskTerminalProcess,
-} from '@theia/process/lib/node';
+} from '@ogun/process/lib/node';
 import {
     ShellQuotedString, ShellQuotingFunctions, BashQuotingFunctions, CmdQuotingFunctions, PowershellQuotingFunctions, createShellCommandLine, ShellQuoting,
-} from '@theia/process/lib/common/shell-quoting';
+} from '@ogun/process/lib/common/shell-quoting';
 import { TaskFactory } from './process-task';
 import { TaskRunner } from '../task-runner-protocol';
 import { Task } from '../task';
 import { TaskConfiguration } from '../../common/task-protocol';
 import { ProcessTaskError, CommandOptions } from '../../common/process/task-protocol';
 import * as fs from 'fs';
-import { ShellProcess } from '@theia/terminal/lib/node/shell-process';
+import { ShellProcess } from '@ogun/terminal/lib/node/shell-process';
 
 export interface OsSpecificCommand {
     command: string,

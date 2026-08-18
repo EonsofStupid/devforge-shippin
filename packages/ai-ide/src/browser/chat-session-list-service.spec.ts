@@ -14,15 +14,15 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { enableJSDOM } from '@theia/core/lib/browser/test/jsdom';
+import { enableJSDOM } from '@ogun/core/lib/browser/test/jsdom';
 let disableJSDOM = enableJSDOM();
-import { FrontendApplicationConfigProvider } from '@theia/core/lib/browser/frontend-application-config-provider';
+import { FrontendApplicationConfigProvider } from '@ogun/core/lib/browser/frontend-application-config-provider';
 FrontendApplicationConfigProvider.set({});
 import { expect } from 'chai';
-import { Emitter } from '@theia/core';
-import { ChatAgentLocation, ChatService, ChatSession, ChatSessionMetadata, ChatSessionStatus } from '@theia/ai-chat';
-import { ChatViewWidget } from '@theia/ai-chat-ui/lib/browser/chat-view-widget';
-import { ApplicationShell, Widget } from '@theia/core/lib/browser';
+import { Emitter } from '@ogun/core';
+import { ChatAgentLocation, ChatService, ChatSession, ChatSessionMetadata, ChatSessionStatus } from '@ogun/ai-chat';
+import { ChatViewWidget } from '@ogun/ai-chat-ui/lib/browser/chat-view-widget';
+import { ApplicationShell, Widget } from '@ogun/core/lib/browser';
 import { ChatSessionListService } from './chat-session-list-service';
 import { SectionedSessions, SessionRow, computeVisibleSessionSlots } from './chat-session-list-components';
 disableJSDOM();

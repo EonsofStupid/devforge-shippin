@@ -14,9 +14,9 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { Command, MessageService, nls, QuickInputService, QuickPickInput } from '@theia/core';
-import { inject, injectable } from '@theia/core/shared/inversify';
-import { VariableResolverService } from '@theia/variable-resolver/lib/browser';
+import { Command, MessageService, nls, QuickInputService, QuickPickInput } from '@ogun/core';
+import { inject, injectable } from '@ogun/core/shared/inversify';
+import { VariableResolverService } from '@ogun/variable-resolver/lib/browser';
 import { RemoteSSHConnectionProvider } from '../electron-common/remote-ssh-connection-provider';
 import { AbstractRemoteRegistryContribution, RemoteRegistry } from './remote-registry-contribution';
 import { RemotePreferences } from '../electron-common/remote-preferences';

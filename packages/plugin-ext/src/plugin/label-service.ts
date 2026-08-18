@@ -14,8 +14,8 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { ResourceLabelFormatter } from '@theia/plugin';
-import { Disposable } from '@theia/core/lib/common/disposable';
+import { ResourceLabelFormatter } from '@ogun/plugin';
+import { Disposable } from '@ogun/core/lib/common/disposable';
 import { LabelServiceExt, LabelServiceMain, PLUGIN_RPC_CONTEXT } from '../common/plugin-api-rpc';
 import { RPCProtocol } from '../common/rpc-protocol';
 

@@ -14,21 +14,21 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { inject, injectable, postConstruct, named } from '@theia/core/shared/inversify';
-import { OpenerService, open, WidgetOpenerOptions, Widget } from '@theia/core/lib/browser';
-import { KeybindingRegistry, KeybindingScope, ScopedKeybinding } from '@theia/core/lib/browser/keybinding';
-import { Keybinding, RawKeybinding } from '@theia/core/lib/common/keybinding';
-import { UserStorageUri } from '@theia/userstorage/lib/browser';
+import { inject, injectable, postConstruct, named } from '@ogun/core/shared/inversify';
+import { OpenerService, open, WidgetOpenerOptions, Widget } from '@ogun/core/lib/browser';
+import { KeybindingRegistry, KeybindingScope, ScopedKeybinding } from '@ogun/core/lib/browser/keybinding';
+import { Keybinding, RawKeybinding } from '@ogun/core/lib/common/keybinding';
+import { UserStorageUri } from '@ogun/userstorage/lib/browser';
 import * as jsoncparser from 'jsonc-parser';
-import { Emitter } from '@theia/core/lib/common/event';
-import { MonacoTextModelService } from '@theia/monaco/lib/browser/monaco-text-model-service';
-import { MonacoEditorModel } from '@theia/monaco/lib/browser/monaco-editor-model';
-import { Deferred } from '@theia/core/lib/common/promise-util';
-import URI from '@theia/core/lib/common/uri';
-import { MonacoWorkspace } from '@theia/monaco/lib/browser/monaco-workspace';
-import { MessageService } from '@theia/core/lib/common/message-service';
-import { MonacoJSONCEditor } from '@theia/preferences/lib/browser/monaco-jsonc-editor';
-import { ILogger } from '@theia/core';
+import { Emitter } from '@ogun/core/lib/common/event';
+import { MonacoTextModelService } from '@ogun/monaco/lib/browser/monaco-text-model-service';
+import { MonacoEditorModel } from '@ogun/monaco/lib/browser/monaco-editor-model';
+import { Deferred } from '@ogun/core/lib/common/promise-util';
+import URI from '@ogun/core/lib/common/uri';
+import { MonacoWorkspace } from '@ogun/monaco/lib/browser/monaco-workspace';
+import { MessageService } from '@ogun/core/lib/common/message-service';
+import { MonacoJSONCEditor } from '@ogun/preferences/lib/browser/monaco-jsonc-editor';
+import { ILogger } from '@ogun/core';
 
 @injectable()
 export class KeymapsService {

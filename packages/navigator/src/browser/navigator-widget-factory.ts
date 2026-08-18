@@ -14,17 +14,17 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { inject, injectable } from '@theia/core/shared/inversify';
+import { inject, injectable } from '@ogun/core/shared/inversify';
 import {
     codicon,
     ViewContainer,
     ViewContainerTitleOptions,
     WidgetFactory,
     WidgetManager
-} from '@theia/core/lib/browser';
+} from '@ogun/core/lib/browser';
 import { FILE_NAVIGATOR_ID } from './navigator-widget';
 import { OpenEditorsWidget } from './open-editors-widget/navigator-open-editors-widget';
-import { nls } from '@theia/core/lib/common/nls';
+import { nls } from '@ogun/core/lib/common/nls';
 
 export const EXPLORER_VIEW_CONTAINER_ID = 'explorer-view-container';
 export const EXPLORER_VIEW_CONTAINER_TITLE_OPTIONS: ViewContainerTitleOptions = {

@@ -14,16 +14,16 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import debounce = require('@theia/core/shared/lodash.debounce');
+import debounce = require('@ogun/core/shared/lodash.debounce');
 
-import { MenuPath } from '@theia/core';
-import { Key } from '@theia/core/lib/browser';
-import { SourceTreeWidget } from '@theia/core/lib/browser/source-tree';
-import { Disposable, DisposableCollection } from '@theia/core/lib/common/disposable';
-import { Message } from '@theia/core/shared/@lumino/messaging';
-import { Widget } from '@theia/core/shared/@lumino/widgets';
-import { Container, inject, injectable, interfaces, postConstruct } from '@theia/core/shared/inversify';
-import { URI as CodeUri } from '@theia/core/shared/vscode-uri';
+import { MenuPath } from '@ogun/core';
+import { Key } from '@ogun/core/lib/browser';
+import { SourceTreeWidget } from '@ogun/core/lib/browser/source-tree';
+import { Disposable, DisposableCollection } from '@ogun/core/lib/common/disposable';
+import { Message } from '@ogun/core/shared/@lumino/messaging';
+import { Widget } from '@ogun/core/shared/@lumino/widgets';
+import { Container, inject, injectable, interfaces, postConstruct } from '@ogun/core/shared/inversify';
+import { URI as CodeUri } from '@ogun/core/shared/vscode-uri';
 import * as monaco from '@theia/monaco-editor-core';
 import { IEditorHoverOptions } from '@theia/monaco-editor-core/esm/vs/editor/common/config/editorOptions';
 import { StandaloneServices } from '@theia/monaco-editor-core/esm/vs/editor/standalone/browser/standaloneServices';

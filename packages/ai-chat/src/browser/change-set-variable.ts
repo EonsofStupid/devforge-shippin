@@ -14,10 +14,10 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { MaybePromise, nls } from '@theia/core';
-import { inject, injectable } from '@theia/core/shared/inversify';
-import { AIVariable, ResolvedAIVariable, AIVariableContribution, AIVariableResolver, AIVariableService, AIVariableResolutionRequest, AIVariableContext } from '@theia/ai-core';
-import { WorkspaceService } from '@theia/workspace/lib/browser';
+import { MaybePromise, nls } from '@ogun/core';
+import { inject, injectable } from '@ogun/core/shared/inversify';
+import { AIVariable, ResolvedAIVariable, AIVariableContribution, AIVariableResolver, AIVariableService, AIVariableResolutionRequest, AIVariableContext } from '@ogun/ai-core';
+import { WorkspaceService } from '@ogun/workspace/lib/browser';
 import { CHANGE_SET_SUMMARY_VARIABLE_ID, ChatSessionContext } from '../common';
 
 export const CHANGE_SET_SUMMARY_VARIABLE: AIVariable = {

@@ -19,15 +19,15 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { EOL } from '@theia/core/lib/common/os';
-import { Diagnostic, DiagnosticSeverity, Range } from '@theia/core/shared/vscode-languageserver-protocol';
+import { EOL } from '@ogun/core/lib/common/os';
+import { Diagnostic, DiagnosticSeverity, Range } from '@ogun/core/shared/vscode-languageserver-protocol';
 import {
     FileLocationKind, ProblemMatcher, ProblemPattern,
     ProblemMatch, ProblemMatchData, ProblemLocationKind
 } from '../common/problem-matcher-protocol';
-import URI from '@theia/core/lib/common/uri';
-import { Severity } from '@theia/core/lib/common/severity';
-import { MAX_SAFE_INTEGER } from '@theia/core/lib/common/numbers';
+import URI from '@ogun/core/lib/common/uri';
+import { Severity } from '@ogun/core/lib/common/severity';
+import { MAX_SAFE_INTEGER } from '@ogun/core/lib/common/numbers';
 import { join } from 'path';
 
 const endOfLine: string = EOL;

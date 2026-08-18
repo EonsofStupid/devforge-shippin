@@ -15,16 +15,16 @@
 // *****************************************************************************
 
 const vhost = require('vhost');
-import express = require('@theia/core/shared/express');
-import * as fs from '@theia/core/shared/fs-extra';
+import express = require('@ogun/core/shared/express');
+import * as fs from '@ogun/core/shared/fs-extra';
 import { lookup } from 'mime-types';
-import { injectable, inject, named } from '@theia/core/shared/inversify';
-import { Application, Request, Response } from '@theia/core/shared/express';
-import { FileUri } from '@theia/core/lib/common/file-uri';
-import { ILogger } from '@theia/core/lib/common/logger';
-import { MaybePromise } from '@theia/core/lib/common/types';
-import { ContributionProvider } from '@theia/core/lib/common/contribution-provider';
-import { BackendApplicationContribution } from '@theia/core/lib/node/backend-application';
+import { injectable, inject, named } from '@ogun/core/shared/inversify';
+import { Application, Request, Response } from '@ogun/core/shared/express';
+import { FileUri } from '@ogun/core/lib/common/file-uri';
+import { ILogger } from '@ogun/core/lib/common/logger';
+import { MaybePromise } from '@ogun/core/lib/common/types';
+import { ContributionProvider } from '@ogun/core/lib/common/contribution-provider';
+import { BackendApplicationContribution } from '@ogun/core/lib/node/backend-application';
 import { MiniBrowserService } from '../common/mini-browser-service';
 import { MiniBrowserEndpoint as MiniBrowserEndpointNS } from '../common/mini-browser-endpoint';
 

@@ -14,12 +14,12 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { inject, injectable, postConstruct } from '@theia/core/shared/inversify';
-import { JsonSchemaContribution, JsonSchemaDataStore, JsonSchemaRegisterContext } from '@theia/core/lib/browser/json-schema-store';
-import { isArray, isObject, nls } from '@theia/core/lib/common';
-import { IJSONSchema } from '@theia/core/lib/common/json-schema';
-import URI from '@theia/core/lib/common/uri';
-import { Deferred } from '@theia/core/lib/common/promise-util';
+import { inject, injectable, postConstruct } from '@ogun/core/shared/inversify';
+import { JsonSchemaContribution, JsonSchemaDataStore, JsonSchemaRegisterContext } from '@ogun/core/lib/browser/json-schema-store';
+import { isArray, isObject, nls } from '@ogun/core/lib/common';
+import { IJSONSchema } from '@ogun/core/lib/common/json-schema';
+import URI from '@ogun/core/lib/common/uri';
+import { Deferred } from '@ogun/core/lib/common/promise-util';
 import { WorkspaceFileService } from '../common';
 
 export interface SchemaUpdateMessage {

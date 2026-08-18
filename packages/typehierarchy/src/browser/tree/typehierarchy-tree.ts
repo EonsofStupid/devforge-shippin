@@ -16,12 +16,12 @@
 
 /* eslint-disable @typescript-eslint/no-explicit-any */
 
-import { injectable } from '@theia/core/shared/inversify';
-import { generateUuid } from '@theia/core/lib/common/uuid';
-import URI from '@theia/core/lib/common/uri';
-import { Location } from '@theia/editor/lib/browser/editor';
-import { TreeDecoration, DecoratedTreeNode } from '@theia/core/lib/browser/tree/tree-decorator';
-import { TreeImpl, TreeNode, CompositeTreeNode, ExpandableTreeNode, SelectableTreeNode } from '@theia/core/lib/browser/tree';
+import { injectable } from '@ogun/core/shared/inversify';
+import { generateUuid } from '@ogun/core/lib/common/uuid';
+import URI from '@ogun/core/lib/common/uri';
+import { Location } from '@ogun/editor/lib/browser/editor';
+import { TreeDecoration, DecoratedTreeNode } from '@ogun/core/lib/browser/tree/tree-decorator';
+import { TreeImpl, TreeNode, CompositeTreeNode, ExpandableTreeNode, SelectableTreeNode } from '@ogun/core/lib/browser/tree';
 import { TypeHierarchyProvider, TypeHierarchyDirection, ResolveTypeHierarchyItemParams, TypeHierarchyItem } from '../typehierarchy-provider';
 
 @injectable()

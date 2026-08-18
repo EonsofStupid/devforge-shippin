@@ -14,11 +14,11 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { Endpoint, FrontendApplicationContribution } from '@theia/core/lib/browser';
-import { EnvVariablesServer } from '@theia/core/lib/common/env-variables';
-import { environment } from '@theia/core/shared/@theia/application-package/lib/environment';
-import { inject, injectable, postConstruct } from '@theia/core/shared/inversify';
-import { generateUuid } from '@theia/core/lib/common/uuid';
+import { Endpoint, FrontendApplicationContribution } from '@ogun/core/lib/browser';
+import { EnvVariablesServer } from '@ogun/core/lib/common/env-variables';
+import { environment } from '@ogun/core/shared/@ogun/application-package/lib/environment';
+import { inject, injectable, postConstruct } from '@ogun/core/shared/inversify';
+import { generateUuid } from '@ogun/core/lib/common/uuid';
 import { MiniBrowserEndpoint } from '../../common/mini-browser-endpoint';
 
 /**

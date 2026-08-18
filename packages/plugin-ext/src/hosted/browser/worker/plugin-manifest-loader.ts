@@ -17,8 +17,8 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 
 import { PluginIdentifiers, PluginModel, PluginPackage } from '../../../common/plugin-protocol';
-import { Endpoint } from '@theia/core/lib/browser/endpoint';
-import URI from '@theia/core/lib/common/uri';
+import { Endpoint } from '@ogun/core/lib/browser/endpoint';
+import URI from '@ogun/core/lib/common/uri';
 
 const NLS_REGEX = /^%([\w\d.-]+)%$/i;
 
@@ -65,7 +65,7 @@ export async function loadManifest(pluginModel: PluginModel): Promise<any> {
         loadTranslations(pluginModel)
     ]);
     // translate vscode builtins, as they are published with a prefix.
-    const built_prefix = '@theia/vscode-builtin-';
+    const built_prefix = '@ogun/vscode-builtin-';
     if (manifest && manifest.name && manifest.name.startsWith(built_prefix)) {
         manifest.name = manifest.name.substring(built_prefix.length);
     }

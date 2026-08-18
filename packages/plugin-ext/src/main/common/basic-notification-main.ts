@@ -15,10 +15,10 @@
 // *****************************************************************************
 
 import { NotificationExt, NotificationMain } from '../../common';
-import { ProgressService, Progress, ProgressMessage } from '@theia/core/lib/common';
-import { interfaces } from '@theia/core/shared/inversify';
+import { ProgressService, Progress, ProgressMessage } from '@ogun/core/lib/common';
+import { interfaces } from '@ogun/core/shared/inversify';
 import { ProxyIdentifier, RPCProtocol } from '../../common/rpc-protocol';
-import { Disposable, DisposableCollection } from '@theia/core/lib/common/disposable';
+import { Disposable, DisposableCollection } from '@ogun/core/lib/common/disposable';
 
 export class BasicNotificationMainImpl implements NotificationMain, Disposable {
     protected readonly progressService: ProgressService;

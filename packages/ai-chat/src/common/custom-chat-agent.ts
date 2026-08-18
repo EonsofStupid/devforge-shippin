@@ -14,9 +14,9 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { CustomAgentPromptVariant, LanguageModelRequirement } from '@theia/ai-core';
+import { CustomAgentPromptVariant, LanguageModelRequirement } from '@ogun/ai-core';
 import { AbstractStreamParsingChatAgent } from './chat-agents';
-import { injectable } from '@theia/core/shared/inversify';
+import { injectable } from '@ogun/core/shared/inversify';
 
 @injectable()
 export class CustomChatAgent extends AbstractStreamParsingChatAgent {

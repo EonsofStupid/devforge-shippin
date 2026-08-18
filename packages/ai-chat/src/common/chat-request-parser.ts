@@ -19,7 +19,7 @@
  *--------------------------------------------------------------------------------------------*/
 // Partially copied from https://github.com/microsoft/vscode/blob/a2cab7255c0df424027be05d58e1b7b941f4ea60/src/vs/workbench/contrib/chat/common/chatRequestParser.ts
 
-import { inject, injectable } from '@theia/core/shared/inversify';
+import { inject, injectable } from '@ogun/core/shared/inversify';
 import { ChatAgentService } from './chat-agent-service';
 import { ChatAgentLocation } from './chat-agents';
 import { ChatContext, ChatRequest } from './chat-model';
@@ -38,8 +38,8 @@ import {
 } from './parsed-chat-request';
 import {
     AIVariable, AIVariableService, createAIResolveVariableCache, getAllResolvedAIVariables, parseFunctionReference, PromptService, ToolInvocationRegistry, ToolRequest
-} from '@theia/ai-core';
-import { ILogger } from '@theia/core';
+} from '@ogun/ai-core';
+import { ILogger } from '@ogun/core';
 
 const agentReg = /^@([\w_\-\.]+)(?=(\s|$|\b))/i; // An @-agent
 // A ~ tool function. The optional `?` prefix marks the tool as deferred,

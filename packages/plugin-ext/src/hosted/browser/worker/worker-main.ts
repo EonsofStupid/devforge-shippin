@@ -15,8 +15,8 @@
 // *****************************************************************************
 // eslint-disable-next-line import/no-extraneous-dependencies
 import 'reflect-metadata';
-import { Container } from '@theia/core/shared/inversify';
-import * as theia from '@theia/plugin';
+import { Container } from '@ogun/core/shared/inversify';
+import * as theia from '@ogun/plugin';
 import { emptyPlugin, MAIN_RPC_CONTEXT, Plugin } from '../../../common/plugin-api-rpc';
 import { ExtPluginApi } from '../../../common/plugin-ext-api-contribution';
 import { getPluginId, PluginMetadata } from '../../../common/plugin-protocol';

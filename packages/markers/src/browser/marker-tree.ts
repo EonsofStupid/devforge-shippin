@@ -14,14 +14,14 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { injectable, unmanaged } from '@theia/core/shared/inversify';
-import { TreeImpl, CompositeTreeNode, TreeNode, SelectableTreeNode, ExpandableTreeNode } from '@theia/core/lib/browser';
+import { injectable, unmanaged } from '@ogun/core/shared/inversify';
+import { TreeImpl, CompositeTreeNode, TreeNode, SelectableTreeNode, ExpandableTreeNode } from '@ogun/core/lib/browser';
 import { MarkerManager } from './marker-manager';
 import { Marker } from '../common/marker';
-import { UriSelection } from '@theia/core/lib/common/selection';
-import URI from '@theia/core/lib/common/uri';
+import { UriSelection } from '@ogun/core/lib/common/selection';
+import URI from '@ogun/core/lib/common/uri';
 import { ProblemSelection } from './problem/problem-selection';
-import { DiagnosticSeverity } from '@theia/core/shared/vscode-languageserver-protocol';
+import { DiagnosticSeverity } from '@ogun/core/shared/vscode-languageserver-protocol';
 
 export const MarkerOptions = Symbol('MarkerOptions');
 export interface MarkerOptions {

@@ -14,11 +14,11 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { injectable } from '@theia/core/shared/inversify';
-import { UserStorageUri } from '@theia/userstorage/lib/browser/user-storage-uri';
-import { FileServiceContribution, FileService } from '@theia/filesystem/lib/browser/file-service';
-import { Schemes } from '@theia/plugin-ext/lib/common/uri-components';
-import { DelegatingFileSystemProvider } from '@theia/filesystem/lib/common/delegating-file-system-provider';
+import { injectable } from '@ogun/core/shared/inversify';
+import { UserStorageUri } from '@ogun/userstorage/lib/browser/user-storage-uri';
+import { FileServiceContribution, FileService } from '@ogun/filesystem/lib/browser/file-service';
+import { Schemes } from '@ogun/plugin-ext/lib/common/uri-components';
+import { DelegatingFileSystemProvider } from '@ogun/filesystem/lib/common/delegating-file-system-provider';
 
 @injectable()
 export class PluginVSCodeContribution implements FileServiceContribution {

@@ -1410,7 +1410,7 @@
               "mdDescription": "用于安装此服务器的注册表批准内容的哈希值。",
               "title": "注册表配置哈希"
             },
-            "mdDescription": "从 AI 注册表安装的服务器所对应的来源元数据。由 `@theia/ai-registry` 编写;用户无法编辑。",
+            "mdDescription": "从 AI 注册表安装的服务器所对应的来源元数据。由 `@ogun/ai-registry` 编写;用户无法编辑。",
             "serverId": {
               "mdDescription": "标识了安装此服务器的 AI 注册表项。",
               "title": "注册表服务器 ID"

@@ -14,19 +14,19 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { inject, injectable, optional, postConstruct } from '@theia/core/shared/inversify';
-import { Command, CommandContribution, CommandHandler, CommandRegistry } from '@theia/core/lib/common/command';
+import { inject, injectable, optional, postConstruct } from '@ogun/core/shared/inversify';
+import { Command, CommandContribution, CommandHandler, CommandRegistry } from '@ogun/core/lib/common/command';
 import { DebugSessionManager } from './debug-session-manager';
 import { DebugConfigurationManager } from './debug-configuration-manager';
 import { DebugCommands } from './debug-commands';
 import { DebugSessionOptions } from './debug-session-options';
-import { WorkspaceService } from '@theia/workspace/lib/browser';
-import { LabelProvider } from '@theia/core/lib/browser/label-provider';
-import URI from '@theia/core/lib/common/uri';
-import { QuickAccessContribution, QuickAccessProvider, QuickAccessRegistry, QuickInputService, StatusBar, StatusBarAlignment } from '@theia/core/lib/browser';
+import { WorkspaceService } from '@ogun/workspace/lib/browser';
+import { LabelProvider } from '@ogun/core/lib/browser/label-provider';
+import URI from '@ogun/core/lib/common/uri';
+import { QuickAccessContribution, QuickAccessProvider, QuickAccessRegistry, QuickInputService, StatusBar, StatusBarAlignment } from '@ogun/core/lib/browser';
 import { DebugPreferences } from '../common/debug-preferences';
-import { filterItems, QuickPickItemOrSeparator, QuickPicks } from '@theia/core/lib/browser/quick-input/quick-input-service';
-import { CancellationToken, nls } from '@theia/core/lib/common';
+import { filterItems, QuickPickItemOrSeparator, QuickPicks } from '@ogun/core/lib/browser/quick-input/quick-input-service';
+import { CancellationToken, nls } from '@ogun/core/lib/common';
 
 @injectable()
 export class DebugPrefixConfiguration implements CommandContribution, CommandHandler, QuickAccessContribution, QuickAccessProvider {

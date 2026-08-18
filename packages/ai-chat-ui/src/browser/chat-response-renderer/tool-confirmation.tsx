@@ -14,16 +14,16 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import * as React from '@theia/core/shared/react';
-import { nls } from '@theia/core/lib/common/nls';
-import { codicon, ContextMenuRenderer, LocalizedMarkdown, MarkdownRenderer, OpenerService } from '@theia/core/lib/browser';
-import { ToolCallChatResponseContent } from '@theia/ai-chat/lib/common';
-import { ToolRequest } from '@theia/ai-core';
-import { CommandMenu, ContextExpressionMatcher, MenuPath } from '@theia/core/lib/common/menu';
-import { GroupImpl } from '@theia/core/lib/browser/menu/composite-menu-node';
-import { ToolConfirmationMode as ToolConfirmationPreferenceMode } from '@theia/ai-chat/lib/common/chat-tool-preferences';
-import { ToolConfirmationManager } from '@theia/ai-chat/lib/browser/chat-tool-preference-bindings';
-import { PendingToolConfirmationTracker } from '@theia/ai-chat/lib/browser/pending-tool-confirmation-tracker';
+import * as React from '@ogun/core/shared/react';
+import { nls } from '@ogun/core/lib/common/nls';
+import { codicon, ContextMenuRenderer, LocalizedMarkdown, MarkdownRenderer, OpenerService } from '@ogun/core/lib/browser';
+import { ToolCallChatResponseContent } from '@ogun/ai-chat/lib/common';
+import { ToolRequest } from '@ogun/ai-core';
+import { CommandMenu, ContextExpressionMatcher, MenuPath } from '@ogun/core/lib/common/menu';
+import { GroupImpl } from '@ogun/core/lib/browser/menu/composite-menu-node';
+import { ToolConfirmationMode as ToolConfirmationPreferenceMode } from '@ogun/ai-chat/lib/common/chat-tool-preferences';
+import { ToolConfirmationManager } from '@ogun/ai-chat/lib/browser/chat-tool-preference-bindings';
+import { PendingToolConfirmationTracker } from '@ogun/ai-chat/lib/browser/pending-tool-confirmation-tracker';
 import { MarkdownRender } from './markdown-part-renderer';
 import { condenseArguments, formatArgsForTooltip } from './toolcall-utils';
 

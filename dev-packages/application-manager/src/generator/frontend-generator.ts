@@ -78,8 +78,8 @@ export class FrontendGenerator extends AbstractGenerator {
 require('reflect-metadata');
 ${this.emitStartupLogger('Frontend', 'frontend page start')}
 ${this.emitStartupLog('loading modules...')}
-const { Container } = require('@theia/core/shared/inversify');
-const { FrontendApplicationConfigProvider } = require('@theia/core/lib/browser/frontend-application-config-provider');
+const { Container } = require('@ogun/core/shared/inversify');
+const { FrontendApplicationConfigProvider } = require('@ogun/core/lib/browser/frontend-application-config-provider');
 
 FrontendApplicationConfigProvider.set(${this.prettyStringify(this.pck.props.frontend.config)});
 
@@ -99,7 +99,7 @@ async function preload(container) {
     try {
 ${Array.from(frontendPreloadModules.values(), jsModulePath => `\
         await load(container, ${this.importOrRequire()}('${jsModulePath}'));`).join(EOL)}
-        const { Preloader } = require('@theia/core/lib/browser/preload/preloader');
+        const { Preloader } = require('@ogun/core/lib/browser/preload/preloader');
         const preloader = container.get(Preloader);
         await preloader.initialize();
     } catch (reason) {
@@ -111,12 +111,12 @@ ${Array.from(frontendPreloadModules.values(), jsModulePath => `\
 }
 
 module.exports = (async () => {
-    const { messagingFrontendModule } = require('@theia/core/lib/${this.pck.isBrowser() || this.pck.isBrowserOnly()
+    const { messagingFrontendModule } = require('@ogun/core/lib/${this.pck.isBrowser() || this.pck.isBrowserOnly()
                 ? 'browser/messaging/messaging-frontend-module'
                 : 'electron-browser/messaging/electron-messaging-frontend-module'}');
     const container = new Container();
     container.load(messagingFrontendModule);
-    ${this.ifBrowserOnly(`const { messagingFrontendOnlyModule } = require('@theia/core/lib/browser-only/messaging/messaging-frontend-only-module');
+    ${this.ifBrowserOnly(`const { messagingFrontendOnlyModule } = require('@ogun/core/lib/browser-only/messaging/messaging-frontend-only-module');
     container.load(messagingFrontendOnlyModule);`)}
 
     ${this.emitStartupLog('container created')}
@@ -125,19 +125,19 @@ module.exports = (async () => {
     ${this.emitStartupLog('preloaded')}
 
     ${this.ifMonaco(() => `
-    const { MonacoInit } = require('@theia/monaco/lib/browser/monaco-init');
+    const { MonacoInit } = require('@ogun/monaco/lib/browser/monaco-init');
     `)};
 
-    const { FrontendApplication } = require('@theia/core/lib/browser');
-    const { frontendApplicationModule } = require('@theia/core/lib/browser/frontend-application-module');
-    const { loggerFrontendModule } = require('@theia/core/lib/browser/logger-frontend-module');
+    const { FrontendApplication } = require('@ogun/core/lib/browser');
+    const { frontendApplicationModule } = require('@ogun/core/lib/browser/frontend-application-module');
+    const { loggerFrontendModule } = require('@ogun/core/lib/browser/logger-frontend-module');
 
     container.load(frontendApplicationModule);
-    ${this.pck.ifBrowserOnly(`const { frontendOnlyApplicationModule } = require('@theia/core/lib/browser-only/frontend-only-application-module');
+    ${this.pck.ifBrowserOnly(`const { frontendOnlyApplicationModule } = require('@ogun/core/lib/browser-only/frontend-only-application-module');
     container.load(frontendOnlyApplicationModule);`)}
 
     container.load(loggerFrontendModule);
-    ${this.ifBrowserOnly(`const { loggerFrontendOnlyModule } = require('@theia/core/lib/browser-only/logger-frontend-only-module');
+    ${this.ifBrowserOnly(`const { loggerFrontendOnlyModule } = require('@ogun/core/lib/browser-only/logger-frontend-only-module');
     container.load(loggerFrontendOnlyModule);`)}
 
     ${this.emitStartupLog('core modules loaded')}
@@ -213,10 +213,10 @@ ${Array.from(frontendModules.values(), jsModulePath => `\
         return `\
 // @ts-check
 require('reflect-metadata');
-const { Container } = require('@theia/core/shared/inversify');
+const { Container } = require('@ogun/core/shared/inversify');
 
 module.exports = Promise.resolve().then(() => {
-    const { frontendApplicationModule } = require('@theia/core/lib/browser/frontend-application-module');
+    const { frontendApplicationModule } = require('@ogun/core/lib/browser/frontend-application-module');
     const container = new Container();
     container.load(frontendApplicationModule);
 ${Array.from(secondaryWindowModules.values(), jsModulePath => `\

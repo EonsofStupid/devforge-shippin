@@ -12,11 +12,11 @@
 
 ## Description
 
-The `@theia/file-search` extension adds the command and ability to quickly open any file in a given workspace.
+The `@ogun/file-search` extension adds the command and ability to quickly open any file in a given workspace.
 
 ## Additional Information
 
-- [API documentation for `@theia/file-search`](https://eclipse-theia.github.io/theia/docs/next/modules/_theia_file-search.html)
+- [API documentation for `@ogun/file-search`](https://eclipse-theia.github.io/theia/docs/next/modules/_theia_file-search.html)
 - [Theia - GitHub](https://github.com/eclipse-theia/theia)
 - [Theia - Website](https://theia-ide.org/)
 

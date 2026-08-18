@@ -14,9 +14,9 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { codiconArray } from '@theia/core/lib/browser';
-import { injectable, interfaces } from '@theia/core/shared/inversify';
-import { IJSONSchema } from '@theia/core/lib/common/json-schema';
+import { codiconArray } from '@ogun/core/lib/browser';
+import { injectable, interfaces } from '@ogun/core/shared/inversify';
+import { IJSONSchema } from '@ogun/core/lib/common/json-schema';
 import { Preference } from '../../util/preference-types';
 import { PreferenceLeafNodeRenderer, PreferenceNodeRenderer } from './preference-node-renderer';
 import { PreferenceLeafNodeRendererContribution } from './preference-node-renderer-creator';

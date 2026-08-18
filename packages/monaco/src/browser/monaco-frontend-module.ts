@@ -15,16 +15,16 @@
 // *****************************************************************************
 
 import '../../src/browser/style/index.css';
-import { ContainerModule, interfaces } from '@theia/core/shared/inversify';
+import { ContainerModule, interfaces } from '@ogun/core/shared/inversify';
 import {
     MenuContribution, CommandContribution, quickInputServicePath, createPreferenceProxy,
     OVERRIDE_PROPERTY_PATTERN, PreferenceChange, PreferenceScope, PreferenceService,
     PreferenceSchemaService
-} from '@theia/core/lib/common';
+} from '@ogun/core/lib/common';
 import {
     FrontendApplicationContribution, KeybindingContribution, QuickInputService, StylingParticipant, WebSocketConnectionProvider, UndoRedoHandler, WidgetStatusBarContribution
-} from '@theia/core/lib/browser';
-import { TextEditorProvider, DiffNavigatorProvider, TextEditor, FormatterService } from '@theia/editor/lib/browser';
+} from '@ogun/core/lib/browser';
+import { TextEditorProvider, DiffNavigatorProvider, TextEditor, FormatterService } from '@ogun/editor/lib/browser';
 import { MonacoEditorProvider, MonacoEditorFactory, SaveParticipant } from './monaco-editor-provider';
 import { MonacoEditorMenuContribution } from './monaco-menu';
 import { MonacoEditorCommandHandlers } from './monaco-command';
@@ -44,21 +44,21 @@ import { MonacoFrontendApplicationContribution } from './monaco-frontend-applica
 import MonacoTextmateModuleBinder from './textmate/monaco-textmate-frontend-bindings';
 import { MonacoBulkEditService } from './monaco-bulk-edit-service';
 import { MonacoOutlineDecorator } from './monaco-outline-decorator';
-import { OutlineTreeDecorator } from '@theia/outline-view/lib/browser/outline-decorator-service';
+import { OutlineTreeDecorator } from '@ogun/outline-view/lib/browser/outline-decorator-service';
 import { MonacoSnippetSuggestProvider } from './monaco-snippet-suggest-provider';
-import { ContextKeyService } from '@theia/core/lib/browser/context-key-service';
+import { ContextKeyService } from '@ogun/core/lib/browser/context-key-service';
 import { MonacoContextKeyService } from './monaco-context-key-service';
 import { MonacoMimeService } from './monaco-mime-service';
-import { MimeService } from '@theia/core/lib/browser/mime-service';
+import { MimeService } from '@ogun/core/lib/browser/mime-service';
 import { MonacoEditorServices } from './monaco-editor';
 import { MonacoColorRegistry } from './monaco-color-registry';
-import { ColorRegistry } from '@theia/core/lib/browser/color-registry';
+import { ColorRegistry } from '@ogun/core/lib/browser/color-registry';
 import { MonacoIconRegistry } from './monaco-icon-registry';
-import { IconRegistry } from '@theia/core/lib/browser/icon-registry';
+import { IconRegistry } from '@ogun/core/lib/browser/icon-registry';
 import { MonacoThemingService } from './monaco-theming-service';
-import { bindRootContributionProvider } from '@theia/core';
+import { bindRootContributionProvider } from '@ogun/core';
 import { WorkspaceSymbolCommand } from './workspace-symbol-command';
-import { LanguageService } from '@theia/core/lib/browser/language-service';
+import { LanguageService } from '@ogun/core/lib/browser/language-service';
 import { MonacoToProtocolConverter } from './monaco-to-protocol-converter';
 import { ProtocolToMonacoConverter } from './protocol-to-monaco-converter';
 import { MonacoFormattingConflictsContribution } from './monaco-formatting-conflicts';
@@ -66,14 +66,14 @@ import { MonacoFormatterService } from './monaco-formatter-service';
 import { MonacoQuickInputImplementation, MonacoQuickInputService } from './monaco-quick-input-service';
 import { GotoLineQuickAccessContribution } from './monaco-gotoline-quick-access';
 import { GotoSymbolQuickAccessContribution } from './monaco-gotosymbol-quick-access';
-import { QuickAccessContribution, QuickAccessRegistry } from '@theia/core/lib/browser/quick-input/quick-access';
+import { QuickAccessContribution, QuickAccessRegistry } from '@ogun/core/lib/browser/quick-input/quick-access';
 import { MonacoQuickAccessRegistry } from './monaco-quick-access-registry';
 import { ConfigurationTarget, IConfigurationChangeEvent, IConfigurationService } from '@theia/monaco-editor-core/esm/vs/platform/configuration/common/configuration.js';
 import { StandaloneConfigurationService, StandaloneServices } from '@theia/monaco-editor-core/esm/vs/editor/standalone/browser/standaloneServices';
 import { Configuration } from '@theia/monaco-editor-core/esm/vs/platform/configuration/common/configurationModels.js';
-import { MarkdownRenderer } from '@theia/core/lib/browser/markdown-rendering/markdown-renderer';
+import { MarkdownRenderer } from '@ogun/core/lib/browser/markdown-rendering/markdown-renderer';
 import { MonacoMarkdownRenderer } from './markdown-renderer/monaco-markdown-renderer';
-import { ThemeService } from '@theia/core/lib/browser/theming';
+import { ThemeService } from '@ogun/core/lib/browser/theming';
 import { ThemeServiceWithDB } from './monaco-indexed-db';
 import { IContextKeyService } from '@theia/monaco-editor-core/esm/vs/platform/contextkey/common/contextkey.js';
 import { IThemeService } from '@theia/monaco-editor-core/esm/vs/platform/theme/common/themeService.js';
@@ -84,7 +84,7 @@ import { MonacoWorkspaceContextService } from './monaco-workspace-context-servic
 import { MonacoCodeActionSaveParticipant } from './monaco-code-action-save-participant';
 import { MonacoCodeActionService, MonacoCodeActionServiceImpl } from './monaco-code-action-service';
 import { MonacoDiffComputer } from './monaco-diff-computer';
-import { DiffComputer } from '@theia/core/lib/common/diff';
+import { DiffComputer } from '@ogun/core/lib/common/diff';
 import { MonacoEditorContentMenuContribution } from './monaco-editor-content-menu';
 
 export default new ContainerModule((bind, unbind, isBound, rebind) => {

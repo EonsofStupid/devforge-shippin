@@ -22,12 +22,12 @@ import {
     MutableChatRequestModel,
     ThinkingChatResponseContentImpl,
     ToolCallChatResponseContent,
-} from '@theia/ai-chat';
-import { TokenUsageService } from '@theia/ai-core';
-import { PromptText } from '@theia/ai-core/lib/common/prompt-text';
-import { generateUuid, nls, ILogger } from '@theia/core';
-import { URI } from '@theia/core/lib/common/uri';
-import { inject, injectable, named } from '@theia/core/shared/inversify';
+} from '@ogun/ai-chat';
+import { TokenUsageService } from '@ogun/ai-core';
+import { PromptText } from '@ogun/ai-core/lib/common/prompt-text';
+import { generateUuid, nls, ILogger } from '@ogun/core';
+import { URI } from '@ogun/core/lib/common/uri';
+import { inject, injectable, named } from '@ogun/core/shared/inversify';
 import type {
     ItemStartedEvent,
     ItemUpdatedEvent,
@@ -43,9 +43,9 @@ import type {
     Usage,
     TodoListItem
 } from '@openai/codex-sdk';
-import { FileService } from '@theia/filesystem/lib/browser/file-service';
-import { WorkspaceService } from '@theia/workspace/lib/browser';
-import { ChangeSetFileElementFactory } from '@theia/ai-chat/lib/browser/change-set-file-element';
+import { FileService } from '@ogun/filesystem/lib/browser/file-service';
+import { WorkspaceService } from '@ogun/workspace/lib/browser';
+import { ChangeSetFileElementFactory } from '@ogun/ai-chat/lib/browser/change-set-file-element';
 import { CodexToolCallChatResponseContent } from './codex-tool-call-content';
 import { CodexFrontendService } from './codex-frontend-service';
 

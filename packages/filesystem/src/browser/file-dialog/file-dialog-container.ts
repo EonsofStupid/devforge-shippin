@@ -14,8 +14,8 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { interfaces, Container } from '@theia/core/shared/inversify';
-import { Tree, TreeModel, TreeProps, defaultTreeProps } from '@theia/core/lib/browser';
+import { interfaces, Container } from '@ogun/core/shared/inversify';
+import { Tree, TreeModel, TreeProps, defaultTreeProps } from '@ogun/core/lib/browser';
 import { createFileTreeContainer, FileTreeModel, FileTreeWidget } from '../file-tree';
 import { OpenFileDialog, OpenFileDialogProps, SaveFileDialog, SaveFileDialogProps } from './file-dialog';
 import { FileDialogModel } from './file-dialog-model';

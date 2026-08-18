@@ -13,9 +13,9 @@
 //
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // ****************************************************************************
-import { URI } from '@theia/core';
-import * as fs from '@theia/core/shared/fs-extra';
-import { WorkspaceHandlerContribution } from '@theia/workspace/lib/node/default-workspace-server';
+import { URI } from '@ogun/core';
+import * as fs from '@ogun/core/shared/fs-extra';
+import { WorkspaceHandlerContribution } from '@ogun/workspace/lib/node/default-workspace-server';
 
 export class WslWorkspaceHandler implements WorkspaceHandlerContribution {
     canHandle(uri: URI): boolean {

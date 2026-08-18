@@ -1,6 +1,6 @@
 {
   "private": true,
-  "name": "@theia/re-exports",
+  "name": "@ogun/re-exports",
   "version": "1.74.0",
   "description": "Theia re-export helper functions and scripts.",
   "main": "lib/index.js",

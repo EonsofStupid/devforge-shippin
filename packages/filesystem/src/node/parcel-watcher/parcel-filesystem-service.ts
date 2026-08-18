@@ -17,14 +17,14 @@
 import path = require('path');
 import { promises as fsp } from 'fs';
 import { Minimatch } from 'minimatch';
-import { FileUri } from '@theia/core/lib/common/file-uri';
+import { FileUri } from '@ogun/core/lib/common/file-uri';
 import {
     FileChangeType, FileSystemWatcherService, FileSystemWatcherServiceClient, WatchOptions
 } from '../../common/filesystem-watcher-protocol';
 import { FileChangeCollection } from '../file-change-collection';
-import { Deferred, timeout } from '@theia/core/lib/common/promise-util';
-import { subscribe, Options, AsyncSubscription, Event } from '@theia/core/shared/@parcel/watcher';
-import { isOSX, isWindows } from '@theia/core';
+import { Deferred, timeout } from '@ogun/core/lib/common/promise-util';
+import { subscribe, Options, AsyncSubscription, Event } from '@ogun/core/shared/@parcel/watcher';
+import { isOSX, isWindows } from '@ogun/core';
 
 export interface ParcelWatcherOptions {
     /** Compiled exclude patterns, used to filter events after they arrive. */

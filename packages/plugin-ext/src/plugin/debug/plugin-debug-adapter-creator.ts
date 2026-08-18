@@ -14,11 +14,11 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import * as theia from '@theia/plugin';
-import { DebugAdapter } from '@theia/debug/lib/common/debug-model';
+import * as theia from '@ogun/plugin';
+import { DebugAdapter } from '@ogun/debug/lib/common/debug-model';
 import { PluginPackageDebuggersContribution } from '../../common';
 import { DebugAdapterInlineImplementation } from '../types-impl';
-import { InlineDebugAdapter } from '@theia/debug/lib/common/inline-debug-adapter';
+import { InlineDebugAdapter } from '@ogun/debug/lib/common/inline-debug-adapter';
 
 export class PluginDebugAdapterCreator {
     public async resolveDebugAdapterExecutable(_pluginPath: string, _debuggerContribution: PluginPackageDebuggersContribution): Promise<theia.DebugAdapterExecutable | undefined> {

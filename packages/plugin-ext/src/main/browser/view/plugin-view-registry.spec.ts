@@ -14,16 +14,16 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { enableJSDOM } from '@theia/core/lib/browser/test/jsdom';
+import { enableJSDOM } from '@ogun/core/lib/browser/test/jsdom';
 // PluginViewRegistry transitively imports browser widgets (Lumino) that touch `document` at load time.
 const disableJSDOM = enableJSDOM();
 
-import { FrontendApplicationConfigProvider } from '@theia/core/lib/browser/frontend-application-config-provider';
+import { FrontendApplicationConfigProvider } from '@ogun/core/lib/browser/frontend-application-config-provider';
 // Some transitively imported modules read the frontend config at load time.
 FrontendApplicationConfigProvider.set({});
 
 import { expect } from 'chai';
-import { Disposable } from '@theia/core/lib/common';
+import { Disposable } from '@ogun/core/lib/common';
 import { PluginViewRegistry, ViewContainerInfo, PLUGIN_VIEW_DATA_FACTORY_ID } from './plugin-view-registry';
 import type { ViewWelcome } from '../../../common';
 

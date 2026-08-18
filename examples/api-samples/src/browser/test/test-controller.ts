@@ -15,17 +15,17 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { CancellationToken, Emitter, Event, URI } from '@theia/core';
-import { Range, Location, CancellationTokenSource } from '@theia/core/shared/vscode-languageserver-protocol';
+import { CancellationToken, Emitter, Event, URI } from '@ogun/core';
+import { Range, Location, CancellationTokenSource } from '@ogun/core/shared/vscode-languageserver-protocol';
 
-import { MarkdownString } from '@theia/core/lib/common/markdown-rendering';
-import { SimpleObservableCollection, TreeCollection, observableProperty } from '@theia/test/lib/common/collections';
+import { MarkdownString } from '@ogun/core/lib/common/markdown-rendering';
+import { SimpleObservableCollection, TreeCollection, observableProperty } from '@ogun/test/lib/common/collections';
 import {
     TestController, TestExecutionState, TestFailure, TestItem,
     TestOutputItem, TestRun, TestRunProfile, TestState, TestStateChangedEvent
-} from '@theia/test/lib/browser/test-service';
-import { AccumulatingTreeDeltaEmitter, CollectionDelta, TreeDelta, TreeDeltaBuilder } from '@theia/test/lib/common/tree-delta';
-import { timeout } from '@theia/core/lib/common/promise-util';
+} from '@ogun/test/lib/browser/test-service';
+import { AccumulatingTreeDeltaEmitter, CollectionDelta, TreeDelta, TreeDeltaBuilder } from '@ogun/test/lib/common/tree-delta';
+import { timeout } from '@ogun/core/lib/common/promise-util';
 
 export class TestItemCollection extends TreeCollection<string, TestItemImpl, TestItemImpl | TestControllerImpl> {
     override add(item: TestItemImpl): TestItemImpl | undefined {

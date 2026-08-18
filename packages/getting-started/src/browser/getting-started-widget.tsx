@@ -14,19 +14,19 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { codicon, CommonCommands, Key, KeyCode, LabelProvider, LocalizedMarkdown, Message, ReactWidget } from '@theia/core/lib/browser';
-import { FrontendApplicationConfigProvider } from '@theia/core/lib/browser/frontend-application-config-provider';
-import { WindowService } from '@theia/core/lib/browser/window/window-service';
-import { CommandRegistry, environment, isOSX, Path, PreferenceService } from '@theia/core/lib/common';
-import { ApplicationInfo, ApplicationServer } from '@theia/core/lib/common/application-protocol';
-import { EnvVariablesServer } from '@theia/core/lib/common/env-variables';
-import { nls } from '@theia/core/lib/common/nls';
-import URI from '@theia/core/lib/common/uri';
-import { inject, injectable, postConstruct } from '@theia/core/shared/inversify';
-import * as React from '@theia/core/shared/react';
-import { KeymapsCommands } from '@theia/keymaps/lib/browser';
-import { WorkspaceCommands, WorkspaceService } from '@theia/workspace/lib/browser';
-import { MarkdownRenderer } from '@theia/core/lib/browser/markdown-rendering/markdown-renderer';
+import { codicon, CommonCommands, Key, KeyCode, LabelProvider, LocalizedMarkdown, Message, ReactWidget } from '@ogun/core/lib/browser';
+import { FrontendApplicationConfigProvider } from '@ogun/core/lib/browser/frontend-application-config-provider';
+import { WindowService } from '@ogun/core/lib/browser/window/window-service';
+import { CommandRegistry, environment, isOSX, Path, PreferenceService } from '@ogun/core/lib/common';
+import { ApplicationInfo, ApplicationServer } from '@ogun/core/lib/common/application-protocol';
+import { EnvVariablesServer } from '@ogun/core/lib/common/env-variables';
+import { nls } from '@ogun/core/lib/common/nls';
+import URI from '@ogun/core/lib/common/uri';
+import { inject, injectable, postConstruct } from '@ogun/core/shared/inversify';
+import * as React from '@ogun/core/shared/react';
+import { KeymapsCommands } from '@ogun/keymaps/lib/browser';
+import { WorkspaceCommands, WorkspaceService } from '@ogun/workspace/lib/browser';
+import { MarkdownRenderer } from '@ogun/core/lib/browser/markdown-rendering/markdown-renderer';
 
 /**
  * Default implementation of the `GettingStartedWidget`.
@@ -129,7 +129,7 @@ export class GettingStartedWidget extends ReactWidget {
         this.home = new URI(await this.environments.getHomeDirUri()).path.toString();
 
         const extensions = await this.appServer.getExtensionsInfos();
-        this.aiIsIncluded = extensions.find(ext => ext.name === '@theia/ai-core') !== undefined;
+        this.aiIsIncluded = extensions.find(ext => ext.name === '@ogun/ai-core') !== undefined;
         this.update();
     }
 

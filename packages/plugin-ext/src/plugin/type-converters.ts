@@ -14,25 +14,25 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import * as theia from '@theia/plugin';
-import * as lstypes from '@theia/core/shared/vscode-languageserver-protocol';
+import * as theia from '@ogun/plugin';
+import * as lstypes from '@ogun/core/shared/vscode-languageserver-protocol';
 import { InlineValueEvaluatableExpression, InlineValueText, InlineValueVariableLookup, QuickPickItemKind, ThemeIcon, URI } from './types-impl';
 import * as rpc from '../common/plugin-api-rpc';
 import {
     DecorationOptions, EditorPosition, Plugin, Position, WorkspaceTextEditDto, WorkspaceFileEditDto, Selection, TaskDto, WorkspaceEditDto
 } from '../common/plugin-api-rpc';
 import * as model from '../common/plugin-api-rpc-model';
-import { LanguageFilter, LanguageSelector } from '@theia/editor/lib/common/language-selector';
+import { LanguageFilter, LanguageSelector } from '@ogun/editor/lib/common/language-selector';
 import { MarkdownString as PluginMarkdownStringImpl } from './markdown-string';
 import * as types from './types-impl';
 import { UriComponents } from '../common/uri-components';
 import { isReadonlyArray } from '../common/arrays';
-import { DisposableCollection, Mutable, isEmptyObject, isObject } from '@theia/core/lib/common';
-import * as notebooks from '@theia/notebook/lib/common';
+import { DisposableCollection, Mutable, isEmptyObject, isObject } from '@ogun/core/lib/common';
+import * as notebooks from '@ogun/notebook/lib/common';
 import { CommandsConverter } from './command-registry';
-import { BinaryBuffer } from '@theia/core/lib/common/buffer';
-import { CellRange, isTextStreamMime } from '@theia/notebook/lib/common';
-import { MarkdownString as MarkdownStringDTO } from '@theia/core/lib/common/markdown-rendering';
+import { BinaryBuffer } from '@ogun/core/lib/common/buffer';
+import { CellRange, isTextStreamMime } from '@ogun/notebook/lib/common';
+import { MarkdownString as MarkdownStringDTO } from '@ogun/core/lib/common/markdown-rendering';
 
 import { TestItemDTO, TestMessageDTO, TestMessageStackFrameDTO } from '../common/test-types';
 import { PluginIconPath } from './plugin-icon-path';

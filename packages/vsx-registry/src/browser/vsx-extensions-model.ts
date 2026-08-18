@@ -14,28 +14,28 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { injectable, inject, postConstruct, named } from '@theia/core/shared/inversify';
+import { injectable, inject, postConstruct, named } from '@ogun/core/shared/inversify';
 import debounce from 'p-debounce';
-import * as markdownit from '@theia/core/shared/markdown-it';
-import * as DOMPurify from '@theia/core/shared/dompurify';
-import { Emitter, Event } from '@theia/core/lib/common/event';
-import { CancellationToken, CancellationTokenSource } from '@theia/core/lib/common/cancellation';
-import { HostedPluginSupport } from '@theia/plugin-ext/lib/hosted/browser/hosted-plugin';
+import * as markdownit from '@ogun/core/shared/markdown-it';
+import * as DOMPurify from '@ogun/core/shared/dompurify';
+import { Emitter, Event } from '@ogun/core/lib/common/event';
+import { CancellationToken, CancellationTokenSource } from '@ogun/core/lib/common/cancellation';
+import { HostedPluginSupport } from '@ogun/plugin-ext/lib/hosted/browser/hosted-plugin';
 import { VSXExtension, VSXExtensionFactory } from './vsx-extension';
-import { ProgressService } from '@theia/core/lib/common/progress-service';
+import { ProgressService } from '@ogun/core/lib/common/progress-service';
 import { VSXExtensionsSearchModel } from './vsx-extensions-search-model';
-import { PreferenceInspection, PreferenceInspectionScope, PreferenceService } from '@theia/core/lib/common/preferences/preference-service';
-import { WorkspaceService } from '@theia/workspace/lib/browser';
+import { PreferenceInspection, PreferenceInspectionScope, PreferenceService } from '@ogun/core/lib/common/preferences/preference-service';
+import { WorkspaceService } from '@ogun/workspace/lib/browser';
 import { RecommendedExtensions } from '../common/recommended-extensions-preference-contribution';
-import URI from '@theia/core/lib/common/uri';
-import { VSXAllVersions, VSXExtensionRaw, VSXSearchEntry, VSXSearchOptions, VSXTargetPlatform } from '@theia/ovsx-client/lib/ovsx-types';
-import { OVSXApiFilterProvider } from '@theia/ovsx-client';
-import { ApplicationServer } from '@theia/core/lib/common/application-protocol';
+import URI from '@ogun/core/lib/common/uri';
+import { VSXAllVersions, VSXExtensionRaw, VSXSearchEntry, VSXSearchOptions, VSXTargetPlatform } from '@ogun/ovsx-client/lib/ovsx-types';
+import { OVSXApiFilterProvider } from '@ogun/ovsx-client';
+import { ApplicationServer } from '@ogun/core/lib/common/application-protocol';
 import { VSXRegistryService } from '../common/vsx-registry-service';
-import { RequestContext, RequestService } from '@theia/core/shared/@theia/request';
-import { HostedPluginServer, PluginIdentifiers, PluginType } from '@theia/plugin-ext';
-import { HostedPluginWatcher } from '@theia/plugin-ext/lib/hosted/browser/hosted-plugin-watcher';
-import { ILogger } from '@theia/core';
+import { RequestContext, RequestService } from '@ogun/core/shared/@ogun/request';
+import { HostedPluginServer, PluginIdentifiers, PluginType } from '@ogun/plugin-ext';
+import { HostedPluginWatcher } from '@ogun/plugin-ext/lib/hosted/browser/hosted-plugin-watcher';
+import { ILogger } from '@ogun/core';
 
 @injectable()
 export class VSXExtensionsModel {

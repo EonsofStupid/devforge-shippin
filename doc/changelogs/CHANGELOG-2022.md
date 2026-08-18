@@ -114,7 +114,7 @@ generating the main code bundle (as before), the second serves to generate a *.c
 
 - [core] added functionality ot listen to keyboard layout changes [#11689](https://github.com/eclipse-theia/theia/pull/11689)
 - [core] added support for moving webview-based views into a secondary window for browser applications [#11048](https://github.com/eclipse-theia/theia/pull/11048) - Contributed on behalf of ST Microelectronics and Ericsson and by ARM and EclipseSource
-  - Added the new `@theia/secondary-window` extension which contributes the UI to enable the new feature.
+  - Added the new `@ogun/secondary-window` extension which contributes the UI to enable the new feature.
 - [core] fixed RPC decoding errors on large objects [#11636](https://github.com/eclipse-theia/theia/pull/11636)
 - [core] fixed `about` dialog rendering when closed and re-opened [#11687](https://github.com/eclipse-theia/theia/pull/11687)
 - [core] fixed programmatic movement of views [#11576](https://github.com/eclipse-theia/theia/pull/11576)
@@ -176,7 +176,7 @@ generating the main code bundle (as before), the second serves to generate a *.c
 - [ffmpeg] updated `@electron/get` to `v2.0.0` [#11573](https://github.com/eclipse-theia/theia/pull/11573)
 - [git] fixed an issue with blame annotations [#11540](https://github.com/eclipse-theia/theia/pull/11540)
 - [git] fixed issue when performing `discard changes` on a new file [#11532](https://github.com/eclipse-theia/theia/pull/11532)
-- [memory-inspector] added the `@theia/memory-inspector` extension [#11394](https://github.com/eclipse-theia/theia/pull/11394)
+- [memory-inspector] added the `@ogun/memory-inspector` extension [#11394](https://github.com/eclipse-theia/theia/pull/11394)
 - [monaco] updated handling for invalid theming values [#11596](https://github.com/eclipse-theia/theia/pull/11596)
 - [plugin] added support for VS Code theme icons [#11527](https://github.com/eclipse-theia/theia/pull/11527)
 - [plugin] added support for `EvaluatableExpressions` [#11484](https://github.com/eclipse-theia/theia/pull/11484) - Contributed on behalf of STMicroelectronics
@@ -342,7 +342,7 @@ generating the main code bundle (as before), the second serves to generate a *.c
 - [plugin-ext] renamed `debug` file to `debug-ext` [#10748](https://github.com/eclipse-theia/theia/pull/10748)
 - [plugin-ext] updated method `registerDebuggersContributions` to include an additional parameter in the signature `pluginType` to specify `frontend` or `backend` [#10748](https://github.com/eclipse-theia/theia/pull/10748)
 - [plugin] removed `TreeItem2` from the proposed plugin API, `TreeItem` can be used instead [#11288](https://github.com/eclipse-theia/theia/pull/11288) - Contributed on behalf of STMicroelectronics
-- [plugin] moved and renamed interface from: `@theia/debug/lib/browser/debug-contribution/DebugPluginConfiguration` to: `plugin-dev/src/common/PluginDebugConfiguration` [#11224](https://github.com/eclipse-theia/theia/pull/11224)
+- [plugin] moved and renamed interface from: `@ogun/debug/lib/browser/debug-contribution/DebugPluginConfiguration` to: `plugin-dev/src/common/PluginDebugConfiguration` [#11224](https://github.com/eclipse-theia/theia/pull/11224)
 - [repo] removed low hanging-fruit deprecations:
   - [callhierarchy] removed the deprecated `current-editor-access.ts` file [#11185](https://github.com/eclipse-theia/theia/pull/11185)
   - [core] `ColorRegistry` no longer exports `Color`, `ColorDefaults`, `ColorDefinition` and `ColorCssVariable`. Import from `core/lib/common/color` instead [#11185](https://github.com/eclipse-theia/theia/pull/11185)
@@ -400,7 +400,7 @@ generating the main code bundle (as before), the second serves to generate a *.c
 - [plugin] added support for the `Terminal#exitStatus` VS Code API [#11175](https://github.com/eclipse-theia/theia/pull/11175)
 - [plugin] fixed document path for callhierarchy [#11178](https://github.com/eclipse-theia/theia/pull/11178)
 - [repo] updated imports to avoid circular errors [#11142](https://github.com/eclipse-theia/theia/pull/11142)
-- [request] introduced `@theia/request` package to send proxy-aware http requests to other services [#11043](https://github.com/eclipse-theia/theia/pull/11043)
+- [request] introduced `@ogun/request` package to send proxy-aware http requests to other services [#11043](https://github.com/eclipse-theia/theia/pull/11043)
 - [task] fixed problem matchers when `kind` is a file [#11190](https://github.com/eclipse-theia/theia/pull/11190)
 - [workspace] added support to open multi-root workspaces from the cli [#11034](https://github.com/eclipse-theia/theia/pull/11034)
 
@@ -409,15 +409,15 @@ generating the main code bundle (as before), the second serves to generate a *.c
 - [callhierarchy] `paths.ts` and `glob.ts` moved to `core/src/common`; `language-selector.ts` moved to `editor/src/common`. Any imports will need to be updated [#11083](https://github.com/eclipse-theia/theia/pull/11083)
 - [electron] removed redundant config option `disallowReloadKeybinding` from `dev-packages/application-package/src/application-props.ts` file and corresponding test [#11099](https://github.com/eclipse-theia/theia/pull/11099)
 - [filesystem] remove deprecated APIs [#11176](https://github.com/eclipse-theia/theia/pull/1176):
-  - Deleted `@theia/filesystem/lib/browser/filesystem-watcher`:
+  - Deleted `@ogun/filesystem/lib/browser/filesystem-watcher`:
     - `FileChangeType`, `FileChange`, `FileChangeEvent`, `FileMoveEvent`, `FileEvent`, `FileOperationEmitter`, `FileSystemWatcher`
-  - Deleted `@theia/filesystem/lib/node/node-file-upload`:
+  - Deleted `@ogun/filesystem/lib/node/node-file-upload`:
     - `NodeFileUpload`
-  - Deleted `@theia/filesystem/lib/node/nsfw-watcher/nsfw-filesystem-watcher`:
+  - Deleted `@ogun/filesystem/lib/node/nsfw-watcher/nsfw-filesystem-watcher`:
     - `WatcherOptions`, `NsfwFileSystemWatcherServer`
-  - Removed from `@theia/filesystem/lib/common/filesystem`:
+  - Removed from `@ogun/filesystem/lib/common/filesystem`:
     - `FileSystem`, `FileMoveOptions`, `FileDeleteOptions`, `FileStat`, `FileSystemError`
-- [filesystem] updated `FileStatNodeData.fileStat` to use the non-deprecated `FileStat` from `@theia/core/lib/common/files` [#11176](https://github.com/eclipse-theia/theia/pull/1176)
+- [filesystem] updated `FileStatNodeData.fileStat` to use the non-deprecated `FileStat` from `@ogun/core/lib/common/files` [#11176](https://github.com/eclipse-theia/theia/pull/1176)
 
 ## v1.25.0 - 4/28/2022
 
@@ -625,7 +625,7 @@ generating the main code bundle (as before), the second serves to generate a *.c
 - [repo] added browser compound launch configuration [#10720](https://github.com/eclipse-theia/theia/pull/10720)
 - [repo] removed unused dependencies [#10717](https://github.com/eclipse-theia/theia/pull/10717)
 - [repo] upgraded `typescript` to `v4.5.5` [#10355](https://github.com/eclipse-theia/theia/pull/10355)
-- [toolbar] added a new `@theia/toolbar` extension to contribute a global toolbar to the framework [#10731](https://github.com/eclipse-theia/theia/pull/10731)
+- [toolbar] added a new `@ogun/toolbar` extension to contribute a global toolbar to the framework [#10731](https://github.com/eclipse-theia/theia/pull/10731)
 - [workspace] added handling to ensure correct `recentworkspace.json` format and entries [#10711](https://github.com/eclipse-theia/theia/pull/10711)
 
 <a name="breaking_changes_1.23.0">[Breaking Changes:](#breaking_changes_1.23.0)</a>

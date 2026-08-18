@@ -22,7 +22,7 @@ import {
 import {
     CompactionMessage, isServerToolCallResponsePart, isUsageResponsePart, LanguageModelMessage, LanguageModelRequest,
     LanguageModelStreamResponsePart, ReasoningApi, ReasoningSupport, UserRequest
-} from '@theia/ai-core';
+} from '@ogun/ai-core';
 import type { Anthropic } from '@anthropic-ai/sdk';
 import type { MessageParam } from '@anthropic-ai/sdk/resources';
 

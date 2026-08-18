@@ -14,9 +14,9 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { CancellationToken, ContributionProvider, DisposableCollection, disposableTimeout, isOSX } from '@theia/core';
-import { PreferenceService } from '@theia/core/lib/common';
-import { inject, injectable, interfaces, named, postConstruct } from '@theia/core/shared/inversify';
+import { CancellationToken, ContributionProvider, DisposableCollection, disposableTimeout, isOSX } from '@ogun/core';
+import { PreferenceService } from '@ogun/core/lib/common';
+import { inject, injectable, interfaces, named, postConstruct } from '@ogun/core/shared/inversify';
 import { IBufferRange, ILink, ILinkDecorations } from 'xterm';
 import { TerminalWidget } from './base/terminal-widget';
 import { TerminalContribution } from './terminal-contribution';

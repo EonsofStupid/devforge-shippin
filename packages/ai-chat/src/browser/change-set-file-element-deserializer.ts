@@ -14,8 +14,8 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { inject, injectable } from '@theia/core/shared/inversify';
-import { URI } from '@theia/core';
+import { inject, injectable } from '@ogun/core/shared/inversify';
+import { URI } from '@ogun/core';
 import { ChangeSetElement } from '../common/change-set';
 import { ChangeSetElementDeserializerContribution, ChangeSetElementDeserializerRegistry, ChangeSetDeserializationContext } from '../common/change-set-element-deserializer';
 import { SerializableChangeSetElement, SerializableChangeSetFileElementData } from '../common/chat-model-serialization';

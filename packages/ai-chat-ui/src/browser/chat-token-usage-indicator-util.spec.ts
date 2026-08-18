@@ -15,8 +15,8 @@
 // *****************************************************************************
 
 import { expect } from 'chai';
-import { Emitter, Event } from '@theia/core';
-import { ChatModel, ChatRequestModel, ResponseTokenUsage } from '@theia/ai-chat';
+import { Emitter, Event } from '@ogun/core';
+import { ChatModel, ChatRequestModel, ResponseTokenUsage } from '@ogun/ai-chat';
 import {
     buildBarTooltip,
     computeCumulativeTokenUsage,

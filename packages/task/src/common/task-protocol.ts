@@ -14,9 +14,9 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { Event } from '@theia/core';
-import { RpcServer } from '@theia/core/lib/common/messaging/proxy-factory';
-import { IJSONSchema } from '@theia/core/lib/common/json-schema';
+import { Event } from '@ogun/core';
+import { RpcServer } from '@ogun/core/lib/common/messaging/proxy-factory';
+import { IJSONSchema } from '@ogun/core/lib/common/json-schema';
 import { ProblemMatcher, ProblemMatch, WatchingMatcherContribution, ProblemMatcherContribution, ProblemPatternContribution } from './problem-matcher-protocol';
 export { WatchingMatcherContribution, ProblemMatcherContribution, ProblemPatternContribution };
 

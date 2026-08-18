@@ -14,12 +14,12 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { injectable, inject, optional } from '@theia/core/shared/inversify';
-import { MessageService } from '@theia/core/lib/common/message-service';
-import URI from '@theia/core/lib/common/uri';
+import { injectable, inject, optional } from '@ogun/core/shared/inversify';
+import { MessageService } from '@ogun/core/lib/common/message-service';
+import URI from '@ogun/core/lib/common/uri';
 import { ScmService } from './scm-service';
-import { LabelProvider } from '@theia/core/lib/browser/label-provider';
-import { QuickInputService } from '@theia/core/lib/browser';
+import { LabelProvider } from '@ogun/core/lib/browser/label-provider';
+import { QuickInputService } from '@ogun/core/lib/browser';
 
 @injectable()
 export class ScmQuickOpenService {

@@ -14,7 +14,7 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { interfaces } from '@theia/core/shared/inversify';
+import { interfaces } from '@ogun/core/shared/inversify';
 import { MAIN_RPC_CONTEXT, TreeViewsMain, TreeViewsExt, TreeViewRevealOptions, RegisterTreeDataProviderOptions } from '../../../common/plugin-api-rpc';
 import { RPCProtocol } from '../../../common/rpc-protocol';
 import { PluginViewRegistry, PLUGIN_VIEW_DATA_FACTORY_ID } from './plugin-view-registry';
@@ -24,13 +24,13 @@ import {
     CompositeTreeNode,
     WidgetManager,
     BadgeService
-} from '@theia/core/lib/browser';
-import { Disposable, DisposableCollection } from '@theia/core';
+} from '@ogun/core/lib/browser';
+import { Disposable, DisposableCollection } from '@ogun/core';
 import { TreeViewWidget, TreeViewNode, PluginTreeModel, TreeViewWidgetOptions } from './tree-view-widget';
 import { PluginViewWidget } from './plugin-view-widget';
-import { BinaryBuffer } from '@theia/core/lib/common/buffer';
+import { BinaryBuffer } from '@ogun/core/lib/common/buffer';
 import { DnDFileContentStore } from './dnd-file-content-store';
-import { ViewBadge } from '@theia/plugin';
+import { ViewBadge } from '@ogun/plugin';
 
 export class TreeViewsMainImpl implements TreeViewsMain, Disposable {
 

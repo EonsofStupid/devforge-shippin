@@ -15,14 +15,14 @@
 // *****************************************************************************
 
 import * as path from 'path';
-import { bindRootContributionProvider } from '@theia/core/lib/common/contribution-provider';
-import { BackendApplicationContribution } from '@theia/core/lib/node';
-import { ContainerModule, interfaces } from '@theia/core/shared/inversify';
-import { ExtPluginApiProvider, HostedPluginServer, PluginHostEnvironmentVariable, PluginScanner } from '@theia/plugin-ext';
-import { HostedPluginSupport } from '@theia/plugin-ext/lib/hosted/node/hosted-plugin';
-import { HostedPluginProcess, HostedPluginProcessConfiguration } from '@theia/plugin-ext/lib/hosted/node/hosted-plugin-process';
-import { BackendPluginHostableFilter } from '@theia/plugin-ext/lib/hosted/node/plugin-service';
-import { MaybePromise } from '@theia/core';
+import { bindRootContributionProvider } from '@ogun/core/lib/common/contribution-provider';
+import { BackendApplicationContribution } from '@ogun/core/lib/node';
+import { ContainerModule, interfaces } from '@ogun/core/shared/inversify';
+import { ExtPluginApiProvider, HostedPluginServer, PluginHostEnvironmentVariable, PluginScanner } from '@ogun/plugin-ext';
+import { HostedPluginSupport } from '@ogun/plugin-ext/lib/hosted/node/hosted-plugin';
+import { HostedPluginProcess, HostedPluginProcessConfiguration } from '@ogun/plugin-ext/lib/hosted/node/hosted-plugin-process';
+import { BackendPluginHostableFilter } from '@ogun/plugin-ext/lib/hosted/node/plugin-service';
+import { MaybePromise } from '@ogun/core';
 import { HeadlessPluginContainerModule } from '../../common/headless-plugin-container';
 import { HeadlessHostedPluginSupport, isHeadlessPlugin } from './headless-hosted-plugin';
 import { TheiaHeadlessPluginScanner } from './scanners/scanner-theia-headless';

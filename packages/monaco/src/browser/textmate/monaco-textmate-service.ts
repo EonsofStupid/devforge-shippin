@@ -14,16 +14,16 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { injectable, inject, named } from '@theia/core/shared/inversify';
+import { injectable, inject, named } from '@ogun/core/shared/inversify';
 import { Registry } from 'vscode-textmate';
-import { ILogger, ContributionProvider, DisposableCollection, Disposable } from '@theia/core';
-import { FrontendApplicationContribution, isBasicWasmSupported } from '@theia/core/lib/browser';
-import { ThemeService } from '@theia/core/lib/browser/theming';
+import { ILogger, ContributionProvider, DisposableCollection, Disposable } from '@ogun/core';
+import { FrontendApplicationContribution, isBasicWasmSupported } from '@ogun/core/lib/browser';
+import { ThemeService } from '@ogun/core/lib/browser/theming';
 import { LanguageGrammarDefinitionContribution, getEncodedLanguageId } from './textmate-contribution';
 import { createTextmateTokenizer, TokenizerOption } from './textmate-tokenizer';
 import { TextmateRegistry } from './textmate-registry';
 import { MonacoThemeRegistry } from './monaco-theme-registry';
-import { EditorPreferences } from '@theia/editor/lib/common/editor-preferences';
+import { EditorPreferences } from '@ogun/editor/lib/common/editor-preferences';
 import * as monaco from '@theia/monaco-editor-core';
 import { TokenizationRegistry } from '@theia/monaco-editor-core/esm/vs/editor/common/languages';
 import { IStandaloneThemeService } from '@theia/monaco-editor-core/esm/vs/editor/standalone/common/standaloneTheme';

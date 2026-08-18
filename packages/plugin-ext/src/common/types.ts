@@ -19,7 +19,7 @@
 *  Licensed under the MIT License. See License.txt in the project root for license information.
 *--------------------------------------------------------------------------------------------*/
 
-import { isObject as isObject0 } from '@theia/core/lib/common';
+import { isObject as isObject0 } from '@ogun/core/lib/common';
 
 /**
  * Returns `true` if the parameter has type "object" and not null, an array, a regexp, a date.

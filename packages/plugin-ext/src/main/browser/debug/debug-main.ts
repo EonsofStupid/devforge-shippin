@@ -16,7 +16,7 @@
 
 /* eslint-disable @typescript-eslint/no-explicit-any */
 
-import { interfaces } from '@theia/core/shared/inversify';
+import { interfaces } from '@ogun/core/shared/inversify';
 import { RPCProtocol } from '../../../common/rpc-protocol';
 import {
     DebugConfigurationProviderDescriptor,
@@ -24,29 +24,29 @@ import {
     DebugExt,
     MAIN_RPC_CONTEXT
 } from '../../../common/plugin-api-rpc';
-import { DebugSessionManager } from '@theia/debug/lib/browser/debug-session-manager';
+import { DebugSessionManager } from '@ogun/debug/lib/browser/debug-session-manager';
 import { Breakpoint, DebugStackFrameDTO, DebugThreadDTO, WorkspaceFolder } from '../../../common/plugin-api-rpc-model';
-import { BreakpointManager, BreakpointsChangeEvent } from '@theia/debug/lib/browser/breakpoint/breakpoint-manager';
-import { URI as Uri } from '@theia/core/shared/vscode-uri';
-import { SourceBreakpoint, FunctionBreakpoint, BaseBreakpoint } from '@theia/debug/lib/browser/breakpoint/breakpoint-marker';
-import { DebugConfiguration, DebugSessionOptions } from '@theia/debug/lib/common/debug-configuration';
-import { DebuggerDescription } from '@theia/debug/lib/common/debug-service';
+import { BreakpointManager, BreakpointsChangeEvent } from '@ogun/debug/lib/browser/breakpoint/breakpoint-manager';
+import { URI as Uri } from '@ogun/core/shared/vscode-uri';
+import { SourceBreakpoint, FunctionBreakpoint, BaseBreakpoint } from '@ogun/debug/lib/browser/breakpoint/breakpoint-marker';
+import { DebugConfiguration, DebugSessionOptions } from '@ogun/debug/lib/common/debug-configuration';
+import { DebuggerDescription } from '@ogun/debug/lib/common/debug-service';
 import { DebugProtocol } from '@vscode/debugprotocol';
-import { DebugConfigurationManager } from '@theia/debug/lib/browser/debug-configuration-manager';
+import { DebugConfigurationManager } from '@ogun/debug/lib/browser/debug-configuration-manager';
 import { PluginDebugAdapterContribution } from './plugin-debug-adapter-contribution';
 import { PluginDebugConfigurationProvider } from './plugin-debug-configuration-provider';
 import { PluginDebugSessionContributionRegistrator, PluginDebugSessionContributionRegistry } from './plugin-debug-session-contribution-registry';
-import { Disposable, DisposableCollection } from '@theia/core/lib/common/disposable';
+import { Disposable, DisposableCollection } from '@ogun/core/lib/common/disposable';
 import { PluginDebugSessionFactory } from './plugin-debug-session-factory';
 import { PluginDebugService } from './plugin-debug-service';
 import { HostedPluginSupport } from '../../../hosted/browser/hosted-plugin';
-import { ConsoleSessionManager } from '@theia/console/lib/browser/console-session-manager';
-import { DebugConsoleSession } from '@theia/debug/lib/browser/console/debug-console-session';
+import { ConsoleSessionManager } from '@ogun/console/lib/browser/console-session-manager';
+import { DebugConsoleSession } from '@ogun/debug/lib/browser/console/debug-console-session';
 import { ConnectionImpl } from '../../../common/connection';
-import { DebugSessionOptions as TheiaDebugSessionOptions } from '@theia/debug/lib/browser/debug-session-options';
-import { DebugStackFrame } from '@theia/debug/lib/browser/model/debug-stack-frame';
-import { DebugThread } from '@theia/debug/lib/browser/model/debug-thread';
-import { DebugBreakpoint } from '@theia/debug/lib/browser/model/debug-breakpoint';
+import { DebugSessionOptions as TheiaDebugSessionOptions } from '@ogun/debug/lib/browser/debug-session-options';
+import { DebugStackFrame } from '@ogun/debug/lib/browser/model/debug-stack-frame';
+import { DebugThread } from '@ogun/debug/lib/browser/model/debug-thread';
+import { DebugBreakpoint } from '@ogun/debug/lib/browser/model/debug-breakpoint';
 
 function toOrigin<T extends BaseBreakpoint>(input: DebugBreakpoint<T>): T {
     return input.origin;

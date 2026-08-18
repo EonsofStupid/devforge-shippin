@@ -15,11 +15,11 @@
 // *****************************************************************************
 
 import { LabelServiceMain } from '../../common/plugin-api-rpc';
-import { interfaces } from '@theia/core/shared/inversify';
-import { Disposable, DisposableCollection } from '@theia/core/lib/common/disposable';
-import { DefaultUriLabelProviderContribution, LabelProviderContribution } from '@theia/core/lib/browser';
-import { ContributionProvider } from '@theia/core/lib/common';
-import { ResourceLabelFormatter } from '@theia/core/lib/common/label-protocol';
+import { interfaces } from '@ogun/core/shared/inversify';
+import { Disposable, DisposableCollection } from '@ogun/core/lib/common/disposable';
+import { DefaultUriLabelProviderContribution, LabelProviderContribution } from '@ogun/core/lib/browser';
+import { ContributionProvider } from '@ogun/core/lib/common';
+import { ResourceLabelFormatter } from '@ogun/core/lib/common/label-protocol';
 
 export class LabelServiceMainImpl implements LabelServiceMain {
     private readonly resourceLabelFormatters = new Map<number, Disposable>();

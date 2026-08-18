@@ -19,18 +19,18 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { inject, injectable, postConstruct, named } from '@theia/core/shared/inversify';
-import { Event, Emitter, nls } from '@theia/core/lib/common';
-import { Disposable, DisposableCollection } from '@theia/core/lib/common/disposable';
+import { inject, injectable, postConstruct, named } from '@ogun/core/shared/inversify';
+import { Event, Emitter, nls } from '@ogun/core/lib/common';
+import { Disposable, DisposableCollection } from '@ogun/core/lib/common/disposable';
 import {
     ApplyToKind, FileLocationKind, NamedProblemMatcher,
     ProblemPattern, ProblemMatcher, ProblemMatcherContribution, WatchingMatcher,
     fromVariableName
 } from '../common';
 import { ProblemPatternRegistry } from './task-problem-pattern-registry';
-import { Severity } from '@theia/core/lib/common/severity';
-import { Deferred } from '@theia/core/lib/common/promise-util';
-import { ILogger } from '@theia/core';
+import { Severity } from '@ogun/core/lib/common/severity';
+import { Deferred } from '@ogun/core/lib/common/promise-util';
+import { ILogger } from '@ogun/core';
 
 @injectable()
 export class ProblemMatcherRegistry {

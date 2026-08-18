@@ -15,11 +15,11 @@
 // *****************************************************************************
 
 import { PLUGIN_RPC_CONTEXT, NotificationExt, NotificationMain } from '../common/plugin-api-rpc';
-import { CancellationToken, Progress, ProgressOptions } from '@theia/plugin';
+import { CancellationToken, Progress, ProgressOptions } from '@ogun/plugin';
 import { RPCProtocol } from '../common/rpc-protocol';
-import { CancellationTokenSource } from '@theia/core/lib/common/cancellation';
+import { CancellationTokenSource } from '@ogun/core/lib/common/cancellation';
 import { ProgressLocation } from './types-impl';
-import { Deferred } from '@theia/core/lib/common/promise-util';
+import { Deferred } from '@ogun/core/lib/common/promise-util';
 
 export class NotificationExtImpl implements NotificationExt {
     private readonly proxy: NotificationMain;

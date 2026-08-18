@@ -14,16 +14,16 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { inject, injectable } from '@theia/core/shared/inversify';
-import { Position, Range } from '@theia/core/shared/vscode-languageserver-protocol';
-import { CommandMenu, Disposable, Emitter, Event, MenuModelRegistry, MenuPath, URI, nls } from '@theia/core';
-import { codicon } from '@theia/core/lib/browser';
-import { ContextKeyService } from '@theia/core/lib/browser/context-key-service';
-import { MonacoEditor } from '@theia/monaco/lib/browser/monaco-editor';
-import { MonacoDiffEditor } from '@theia/monaco/lib/browser/monaco-diff-editor';
-import { MonacoEditorProvider } from '@theia/monaco/lib/browser/monaco-editor-provider';
+import { inject, injectable } from '@ogun/core/shared/inversify';
+import { Position, Range } from '@ogun/core/shared/vscode-languageserver-protocol';
+import { CommandMenu, Disposable, Emitter, Event, MenuModelRegistry, MenuPath, URI, nls } from '@ogun/core';
+import { codicon } from '@ogun/core/lib/browser';
+import { ContextKeyService } from '@ogun/core/lib/browser/context-key-service';
+import { MonacoEditor } from '@ogun/monaco/lib/browser/monaco-editor';
+import { MonacoDiffEditor } from '@ogun/monaco/lib/browser/monaco-diff-editor';
+import { MonacoEditorProvider } from '@ogun/monaco/lib/browser/monaco-editor-provider';
 import { MonacoEditorPeekViewWidget, peekViewBorder, peekViewTitleBackground, peekViewTitleForeground, peekViewTitleInfoForeground }
-    from '@theia/monaco/lib/browser/monaco-editor-peek-view-widget';
+    from '@ogun/monaco/lib/browser/monaco-editor-peek-view-widget';
 import { Change, LineRange } from './diff-computer';
 import { ScmColors } from '../scm-colors';
 import * as monaco from '@theia/monaco-editor-core';

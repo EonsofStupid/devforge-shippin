@@ -14,15 +14,15 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { ChatResponseContent } from '@theia/ai-chat';
-import { ChatResponsePartRenderer } from '@theia/ai-chat-ui/lib/browser/chat-response-part-renderer';
-import { codicon } from '@theia/core/lib/browser';
-import { injectable } from '@theia/core/shared/inversify';
-import * as React from '@theia/core/shared/react';
-import { ReactNode } from '@theia/core/shared/react';
+import { ChatResponseContent } from '@ogun/ai-chat';
+import { ChatResponsePartRenderer } from '@ogun/ai-chat-ui/lib/browser/chat-response-part-renderer';
+import { codicon } from '@ogun/core/lib/browser';
+import { injectable } from '@ogun/core/shared/inversify';
+import * as React from '@ogun/core/shared/react';
+import { ReactNode } from '@ogun/core/shared/react';
 import type { CommandExecutionItem } from '@openai/codex-sdk';
 import { CodexToolCallChatResponseContent } from '../codex-tool-call-content';
-import { nls } from '@theia/core';
+import { nls } from '@ogun/core';
 
 @injectable()
 export class CommandExecutionRenderer implements ChatResponsePartRenderer<CodexToolCallChatResponseContent> {

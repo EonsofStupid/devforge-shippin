@@ -14,11 +14,11 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { LanguageModelRegistry, LanguageModelStatus } from '@theia/ai-core';
-import { inject, injectable, named } from '@theia/core/shared/inversify';
+import { LanguageModelRegistry, LanguageModelStatus } from '@ogun/ai-core';
+import { inject, injectable, named } from '@ogun/core/shared/inversify';
 import { VercelAiModel } from './vercel-ai-language-model';
 import { VercelAiLanguageModelsManager, VercelAiModelDescription } from '../common';
-import { ILogger } from '@theia/core';
+import { ILogger } from '@ogun/core';
 import { VercelAiLanguageModelFactory, VercelAiProvider, VercelAiProviderConfig } from './vercel-ai-language-model-factory';
 
 @injectable()

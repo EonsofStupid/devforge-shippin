@@ -14,21 +14,21 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { injectable, inject } from '@theia/core/shared/inversify';
+import { injectable, inject } from '@ogun/core/shared/inversify';
 import {
     FrontendApplicationContribution, StatusBar, FrontendApplication, StatusBarAlignment,
     KeybindingContribution, KeybindingRegistry, StylingParticipant, ColorTheme, CssStyleCollector
-} from '@theia/core/lib/browser';
-import { ClipboardService } from '@theia/core/lib/browser/clipboard-service';
+} from '@ogun/core/lib/browser';
+import { ClipboardService } from '@ogun/core/lib/browser/clipboard-service';
 import { NotificationsCommands, NOTIFICATION_CONTEXT_MENU } from './notifications-commands';
-import { CommandContribution, CommandRegistry, MenuContribution, MenuModelRegistry } from '@theia/core';
+import { CommandContribution, CommandRegistry, MenuContribution, MenuModelRegistry } from '@ogun/core';
 import { Notification, NotificationManager } from './notifications-manager';
 import { NotificationsRenderer } from './notifications-renderer';
-import { ColorContribution } from '@theia/core/lib/browser/color-application-contribution';
-import { ColorRegistry } from '@theia/core/lib/browser/color-registry';
-import { Color } from '@theia/core/lib/common/color';
-import { nls } from '@theia/core/lib/common/nls';
-import { isHighContrast } from '@theia/core/lib/common/theme';
+import { ColorContribution } from '@ogun/core/lib/browser/color-application-contribution';
+import { ColorRegistry } from '@ogun/core/lib/browser/color-registry';
+import { Color } from '@ogun/core/lib/common/color';
+import { nls } from '@ogun/core/lib/common/nls';
+import { isHighContrast } from '@ogun/core/lib/common/theme';
 
 @injectable()
 export class NotificationsContribution implements FrontendApplicationContribution, CommandContribution,

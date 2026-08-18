@@ -14,10 +14,10 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { ChatSessionMetadata } from '@theia/ai-chat';
-import { buttonKeyboardProps, isActivationKey } from '@theia/core/lib/browser';
-import { nls } from '@theia/core/lib/common/nls';
-import * as React from '@theia/core/shared/react';
+import { ChatSessionMetadata } from '@ogun/ai-chat';
+import { buttonKeyboardProps, isActivationKey } from '@ogun/core/lib/browser';
+import { nls } from '@ogun/core/lib/common/nls';
+import * as React from '@ogun/core/shared/react';
 
 /** When both Active and Restored sections are non-empty, keep at least this many Restored slots. */
 const RESTORED_MIN_RESERVATION = 5;

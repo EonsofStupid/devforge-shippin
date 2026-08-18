@@ -15,13 +15,13 @@
 // *****************************************************************************
 
 import * as idb from 'idb';
-import { Disposable, DisposableCollection } from '@theia/core/lib/common/disposable';
-import { ThemeService } from '@theia/core/lib/browser/theming';
+import { Disposable, DisposableCollection } from '@ogun/core/lib/common/disposable';
+import { ThemeService } from '@ogun/core/lib/browser/theming';
 import * as monaco from '@theia/monaco-editor-core';
-import { injectable } from '@theia/core/shared/inversify';
+import { injectable } from '@ogun/core/shared/inversify';
 import type { ThemeMix } from './textmate/monaco-theme-types';
-import { Theme } from '@theia/core/lib/common/theme';
-import { Emitter, Event, isObject } from '@theia/core';
+import { Theme } from '@ogun/core/lib/common/theme';
+import { Emitter, Event, isObject } from '@ogun/core';
 
 let _monacoDB: Promise<idb.IDBPDatabase> | undefined;
 if ('indexedDB' in window) {
