@@ -15,7 +15,8 @@
 // *****************************************************************************
 
 import { DisposableCollection } from '@theia/core';
-import { ApplicationShell, FrontendApplicationContribution, HoverService } from '@theia/core/lib/browser';
+import { ApplicationShell, FrontendApplicationContribution, HoverService, Widget } from '@theia/core/lib/browser';
+import { TabBarToolbarRegistry } from '@theia/core/lib/browser/shell/tab-bar-toolbar';
 import { inject, injectable } from '@theia/core/shared/inversify';
 import { WebForgeCatalogHints } from './webforge-catalog-hints';
 
@@ -52,6 +53,9 @@ export class WebForgeTooltips implements FrontendApplicationContribution {
 
     @inject(ApplicationShell)
     protected readonly shell: ApplicationShell;
+
+    @inject(TabBarToolbarRegistry)
+    protected readonly toolbars: TabBarToolbarRegistry;
 
     protected readonly toDispose = new DisposableCollection();
     protected showing: HTMLElement | undefined;
@@ -106,7 +110,7 @@ export class WebForgeTooltips implements FrontendApplicationContribution {
      */
     protected improveToolbarTitle(target: HTMLElement): void {
         const item = target.closest<HTMLElement>(`${TOOLBAR} [id]`);
-        const widget = item && this.shell.widgets.find(candidate => candidate.node.contains(item));
+        const widget = item && this.ownerOf(item.id);
         if (!item || !widget) {
             return;
         }
@@ -114,6 +118,34 @@ export class WebForgeTooltips implements FrontendApplicationContribution {
         if (description && item.title !== description) {
             item.title = description;
         }
+    }
+
+    /**
+     * Which view does this button belong to?
+     *
+     * Not the DOM's answer: a view's toolbar is rendered on the *tab bar*, outside the
+     * widget's own node, so containment never finds it. The registry knows, because it is
+     * what decided the button should be shown for that widget at all — and preferring a
+     * visible widget settles the case where two views contribute the same action id.
+     */
+    protected ownerOf(itemId: string): Widget | undefined {
+        let fallback: Widget | undefined;
+        for (const widget of this.shell.widgets) {
+            let owns = false;
+            try {
+                owns = this.toolbars.visibleItems(widget).some(item => item.id === itemId);
+            } catch {
+                continue;
+            }
+            if (!owns) {
+                continue;
+            }
+            if (widget.isVisible) {
+                return widget;
+            }
+            fallback ??= widget;
+        }
+        return fallback;
     }
 
     protected hide(): void {

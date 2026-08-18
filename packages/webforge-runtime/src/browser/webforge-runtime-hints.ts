@@ -43,6 +43,41 @@ export class WebForgeRuntimeHints implements WebForgeCatalogContribution {
                 zone: 'palette',
                 danger: 'safe'
             },
+            // The controls a newcomer meets in their first ten minutes. Theia's own
+            // tooltips name the control ("Collapse All"); these say what it is FOR,
+            // which is the difference between a label and an explanation.
+            'button:files/file.newFile.toolbar': {
+                description: nls.localize('theia/webforge/button/newFile',
+                    'Make a new file inside the folder you have selected.'),
+                zone: 'toolbar'
+            },
+            'button:files/file.newFolder.toolbar': {
+                description: nls.localize('theia/webforge/button/newFolder',
+                    'Make a new folder to group files together.'),
+                zone: 'toolbar'
+            },
+            'button:files/navigator.collapse.all': {
+                description: nls.localize('theia/webforge/button/collapseAll',
+                    'Fold every folder shut, so you can see the shape of the whole project at once.'),
+                zone: 'toolbar',
+                danger: 'safe'
+            },
+            'button:files/navigator.refresh': {
+                description: nls.localize('theia/webforge/button/refreshExplorer',
+                    'Re-read the folder from disk. Use this if something changed outside the editor and the list looks stale.'),
+                zone: 'toolbar',
+                danger: 'safe'
+            },
+            'button:theia-open-editors-widget/navigator.save.all.editors.toolbar': {
+                description: nls.localize('theia/webforge/button/saveAll',
+                    'Save every file you have edited but not yet saved.'),
+                zone: 'toolbar'
+            },
+            'button:theia-open-editors-widget/navigator.close.all.editors.toolbar': {
+                description: nls.localize('theia/webforge/button/closeAll',
+                    'Close every open tab. Your files are not deleted — you can reopen them from the explorer.'),
+                zone: 'toolbar'
+            },
             'preview:app': {
                 description: nls.localize('theia/webforge/preview/app',
                     'Your app, running, right beside the code. It reloads by itself when you change something.'),

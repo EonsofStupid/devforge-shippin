@@ -108,12 +108,15 @@ export class WebForgeChannelClientImpl implements WebForgeChannelClient {
         });
     }
 
+    // Sensing is not an act, but it still has an author. A catalog read Clyffy performed
+    // must not appear on the tape as the operator having looked around: the whole value of
+    // the record is being able to answer "who did this, and why" for every row.
     async listSurfaces(query: SurfaceQuery): Promise<SurfaceDescriptor[]> {
-        return this.surfaces.list(query ?? {});
+        return this.asClyffy('look for a surface', () => this.surfaces.list(query ?? {}));
     }
 
     async readSurface(id: string): Promise<SurfaceActionResult> {
-        return this.surfaces.read(id);
+        return this.asClyffy(`read ${id}`, () => this.surfaces.read(id));
     }
 
     async setSurface(id: string, value: string): Promise<SurfaceActionResult> {

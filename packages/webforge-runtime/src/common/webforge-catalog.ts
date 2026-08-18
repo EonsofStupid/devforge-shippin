@@ -32,30 +32,30 @@ export interface CatalogHint {
 }
 
 /**
- * Commands whose ids say plainly that they destroy something.
+ * Verbs that say plainly the thing destroys something.
  *
  * A heuristic, not a security boundary: it exists so that thousands of contributed
  * commands get a sane default label without anyone hand-writing an entry for each. An
  * explicit hint always wins over this.
  */
-const DESTRUCTIVE = new RegExp(
-    '(^|[.:_-])(delete|remove|clear|reset|revert|discard|uninstall|trash|destroy|kill|purge|clean)([.:_-]|$)'
-    + '|closeAll|deleteAll', 'i');
+const DESTRUCTIVE = /\b(delete|remove|clear|reset|revert|discard|uninstall|trash|destroy|kill|purge|clean|wipe)\b/i;
 
-/** Commands that change the world in a way the operator would want to know about. */
+/** Verbs that change the world in a way the operator would want to know about. */
 const CAUTION = new RegExp(
-    '(^|[.:_-])(install|publish|push|commit|stage|rename|move|create|new|write|save|format'
-    + '|restart|reload|run|start|stop|apply|replace|merge|rebase|checkout|import|export)([.:_-]|$)', 'i');
+    '\\b(install|publish|push|commit|stage|rename|move|create|new|write|save|format|close'
+    + '|restart|reload|run|start|stop|apply|replace|merge|rebase|checkout|import|export)\\b', 'i');
 
 /**
- * Classify a surface by its address when nobody has said otherwise.
- *
- * Deliberately pessimistic in ordering — destructive is tested first — because the cost
- * of under-labelling something that deletes work is much higher than the cost of calling
- * a harmless command `caution`.
+ * Word boundaries have to survive both naming worlds the workbench mixes: dotted command
+ * ids (`debug.breakpoint.removeAll`) and human labels ("Remove All Breakpoints"). Split
+ * camelCase and turn separators into spaces, and one `\b` pattern then reads both.
  */
+function words(id: string, label?: string): string {
+    return `${id} ${label ?? ''}`.replace(/([a-z0-9])([A-Z])/g, '$1 $2').replace(/[._:\-/]+/g, ' ');
+}
+
 export function classifyDanger(id: string, label?: string): SurfaceDanger {
-    const text = `${id} ${label ?? ''}`;
+    const text = words(id, label);
     if (DESTRUCTIVE.test(text)) {
         return 'destructive';
     }

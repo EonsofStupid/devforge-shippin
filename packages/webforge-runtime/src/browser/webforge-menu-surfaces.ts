@@ -30,6 +30,9 @@ function tail(id: string): string {
     return id.slice(id.indexOf(':') + 1);
 }
 
+/** Theia's toolbar container — a view's buttons live here, not inside the view. */
+const TOOLBAR = '.lm-TabBar-toolbar';
+
 /** Menus nest a few levels; a cycle would be a bug, but a bound makes it a harmless one. */
 const MAX_MENU_DEPTH = 6;
 
@@ -270,7 +273,11 @@ export class ButtonSurfaceProvider implements WebForgeSurfaceProvider {
         const { widget } = this.resolve(id);
         await this.shell.activateWidget(widget.id);
         const { itemId } = this.split(id);
-        const element = widget.node.querySelector<HTMLElement>(`[id="${CSS.escape(itemId)}"]`);
+        // A view's toolbar is rendered on the tab bar, OUTSIDE the widget's own node, so
+        // searching the widget finds nothing. Search the toolbars, and take the one that
+        // is actually on screen: the same action id can be contributed to more than one.
+        const candidates = document.querySelectorAll<HTMLElement>(`${TOOLBAR} [id="${CSS.escape(itemId)}"]`);
+        const element = [...candidates].find(candidate => !!candidate.offsetParent) ?? candidates[0];
         if (!element) {
             return;
         }
