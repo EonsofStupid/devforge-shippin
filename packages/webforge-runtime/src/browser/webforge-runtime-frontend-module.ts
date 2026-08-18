@@ -26,7 +26,9 @@ import { ButtonSurfaceProvider, MenuSurfaceProvider } from './webforge-menu-surf
 import { WebForgePreview } from './webforge-preview';
 import { WebForgeRealTyping } from './webforge-real-typing';
 import { WebForgeRuntimeBus } from './webforge-runtime-bus';
+import { WebForgeRuntimeHints } from './webforge-runtime-hints';
 import { WebForgeRuntimeObserver } from './webforge-runtime-observer';
+import { WebForgeTooltips } from './webforge-tooltips';
 import {
     CommandSurfaceProvider, EditorSurfaceProvider, InputSurfaceProvider,
     SettingSurfaceProvider, TerminalSurfaceProvider, ViewSurfaceProvider
@@ -42,6 +44,12 @@ export default new ContainerModule(bind => {
 
     bindContributionProvider(bind, WebForgeCatalogContribution);
     bind(WebForgeCatalogHints).toSelf().inSingletonScope();
+    bind(WebForgeRuntimeHints).toSelf().inSingletonScope();
+    bind(WebForgeCatalogContribution).toService(WebForgeRuntimeHints);
+
+    // The catalog explains itself to the operator as well as to Clyffy: same sentence.
+    bind(WebForgeTooltips).toSelf().inSingletonScope();
+    bind(FrontendApplicationContribution).toService(WebForgeTooltips);
 
     bindContributionProvider(bind, WebForgeSurfaceProvider);
     bind(WebForgeSurfaceRegistry).toSelf().inSingletonScope();
