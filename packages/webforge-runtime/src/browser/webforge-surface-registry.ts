@@ -16,7 +16,7 @@
 
 import { ContributionProvider, ILogger } from '@theia/core';
 import { inject, injectable, named } from '@theia/core/shared/inversify';
-import { SurfaceActionResult, SurfaceDescriptor, SurfaceKind, SurfaceQuery } from '../common/webforge-surfaces';
+import { dangerExceeds, SURFACE_KINDS, SurfaceActionResult, SurfaceDescriptor, SurfaceKind, SurfaceQuery } from '../common/webforge-surfaces';
 import { WebForgeRuntimeBus } from './webforge-runtime-bus';
 
 export const WebForgeSurfaceProvider = Symbol('WebForgeSurfaceProvider');
@@ -39,9 +39,7 @@ export interface WebForgeSurfaceProvider {
 /** Surface addresses are `<kind>:<rest>`; the kind routes to its provider. */
 export function surfaceKindOf(id: string): SurfaceKind | undefined {
     const kind = id.split(':', 1)[0];
-    return ['input', 'setting', 'command', 'view', 'editor', 'terminal', 'preview'].includes(kind)
-        ? kind as SurfaceKind
-        : undefined;
+    return (SURFACE_KINDS as readonly string[]).includes(kind) ? kind as SurfaceKind : undefined;
 }
 
 /**
@@ -88,13 +86,32 @@ export class WebForgeSurfaceRegistry {
                 this.logger.warn(`[webforge-runtime] surface provider '${provider.kind}' failed to list`, error);
             }
         }
-        const match = query.match?.toLowerCase();
-        const filtered = match
-            ? collected.filter(s => s.id.toLowerCase().includes(match) || s.label.toLowerCase().includes(match))
-            : collected;
+        const filtered = collected.filter(surface => this.matches(surface, query));
         const limited = filtered.slice(0, Math.max(1, Math.min(500, query.limit ?? 100)));
         this.bus.emit('sense.surface.listed', { count: limited.length, filter: query.match ?? '' });
         return limited;
+    }
+
+    /**
+     * The catalog is large on purpose, so narrowing it is a first-class operation:
+     * by words, by where it lives, and by how much damage it could do. `maxDanger` is
+     * what lets the simplified layer offer a newcomer only the surfaces that cannot
+     * bite, out of the same catalog the full layer serves.
+     */
+    protected matches(surface: SurfaceDescriptor, query: SurfaceQuery): boolean {
+        const match = query.match?.toLowerCase();
+        if (match && !surface.id.toLowerCase().includes(match)
+            && !surface.label.toLowerCase().includes(match)
+            && !surface.description?.toLowerCase().includes(match)) {
+            return false;
+        }
+        if (query.zone && surface.zone !== query.zone) {
+            return false;
+        }
+        if (query.maxDanger && dangerExceeds(surface.danger, query.maxDanger)) {
+            return false;
+        }
+        return true;
     }
 
     /** Sensing. Never an act, never on the act plane. */

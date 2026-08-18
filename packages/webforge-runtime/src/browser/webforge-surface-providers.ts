@@ -15,13 +15,14 @@
 // *****************************************************************************
 
 import { CommandRegistry, PreferenceSchemaService, PreferenceScope, PreferenceService } from '@theia/core';
-import { ApplicationShell } from '@theia/core/lib/browser';
+import { ApplicationShell, Widget } from '@theia/core/lib/browser';
 import { inject, injectable } from '@theia/core/shared/inversify';
 import * as monaco from '@theia/monaco-editor-core';
 import { EditorManager, EditorWidget } from '@theia/editor/lib/browser';
 import { TerminalService } from '@theia/terminal/lib/browser/base/terminal-service';
 import { TerminalWidget } from '@theia/terminal/lib/browser/base/terminal-widget';
-import { SurfaceDescriptor, SurfaceKind, SurfaceQuery } from '../common/webforge-surfaces';
+import { classifyDanger } from '../common/webforge-catalog';
+import { SurfaceDescriptor, SurfaceKind, SurfaceQuery, SurfaceZone } from '../common/webforge-surfaces';
 import { WebForgeSurfaceProvider } from './webforge-surface-registry';
 
 function tail(id: string): string {
@@ -52,7 +53,8 @@ export class SettingSurfaceProvider implements WebForgeSurfaceProvider {
                 id: `setting:${name}`,
                 kind: 'setting',
                 label: name,
-                area: 'settings',
+                zone: 'settings',
+                danger: 'caution',
                 capabilities: ['read', 'set'],
                 description: typeof property.description === 'string' ? property.description : undefined,
                 value: query.withValues ? brief(this.preferences.get(name)) : undefined
@@ -101,8 +103,9 @@ export class CommandSurfaceProvider implements WebForgeSurfaceProvider {
                 id: `command:${command.id}`,
                 kind: 'command' as SurfaceKind,
                 label: command.category ? `${command.category}: ${command.label}` : command.label!,
-                area: 'palette',
-                capabilities: ['invoke' as const]
+                zone: 'palette',
+                capabilities: ['invoke' as const],
+                danger: classifyDanger(command.id, command.label)
             }));
     }
 
@@ -124,9 +127,23 @@ export class ViewSurfaceProvider implements WebForgeSurfaceProvider {
             id: `view:${widget.id}`,
             kind: 'view' as SurfaceKind,
             label: widget.title.label || widget.id,
-            area: this.shell.getAreaFor(widget) ?? undefined,
+            zone: this.zoneOf(widget),
             capabilities: ['focus' as const]
         }));
+    }
+
+    /**
+     * Shell areas are layout words (`left`, `right`, `bottom`); zones are the words an
+     * operator uses pointing at the screen. The catalog speaks the operator's.
+     */
+    protected zoneOf(widget: Widget): SurfaceZone {
+        switch (this.shell.getAreaFor(widget)) {
+            case 'left': return 'sidebar';
+            case 'right': return 'secondary';
+            case 'bottom': return 'panel';
+            case 'top': return 'toolbar';
+            default: return 'editor';
+        }
     }
 
     async focus(id: string): Promise<void> {
@@ -148,7 +165,7 @@ export class EditorSurfaceProvider implements WebForgeSurfaceProvider {
             id: `editor:${widget.editor.uri.path.fsPath()}`,
             kind: 'editor' as SurfaceKind,
             label: widget.title.label,
-            area: 'main',
+            zone: 'editor',
             capabilities: ['read', 'focus', 'type'] as const as SurfaceDescriptor['capabilities'],
             value: query.withValues ? brief(widget.editor.document.getText()) : undefined
         }));
@@ -184,7 +201,7 @@ export class TerminalSurfaceProvider implements WebForgeSurfaceProvider {
             id: `terminal:${terminal.title.label}`,
             kind: 'terminal' as SurfaceKind,
             label: terminal.title.label,
-            area: 'bottom',
+            zone: 'terminal',
             capabilities: ['focus', 'type'] as const as SurfaceDescriptor['capabilities']
         }));
     }
