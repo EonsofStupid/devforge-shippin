@@ -19,6 +19,7 @@ import { inject, injectable, named } from '@theia/core/shared/inversify';
 import { BackendApplicationContribution } from '@theia/core/lib/node';
 import * as express from '@theia/core/shared/express';
 import { WebForgeEvents } from '@theia/webforge-runtime/lib/common/webforge-runtime-events';
+import { DANGER_ORDER, SURFACE_KINDS, SURFACE_ZONES } from '@theia/webforge-runtime/lib/common/webforge-surfaces';
 import { WebForgeRuntimeTape } from '@theia/webforge-runtime/lib/node/webforge-runtime-tape';
 import { WebForgeChannelServiceImpl } from './webforge-channel-service-impl';
 
@@ -196,7 +197,18 @@ export class WebForgeChannelEndpoint implements BackendApplicationContribution {
                 res.status(401).json({ error: 'unauthorized' });
                 return;
             }
-            res.json({ events: WebForgeEvents.all() });
+            res.json({
+                events: WebForgeEvents.all(),
+                // The vocabulary itself, so a client never has to hardcode ours: what an
+                // address can start with, where a surface can live, and how much damage
+                // each danger level admits to.
+                surfaces: {
+                    kinds: SURFACE_KINDS,
+                    zones: SURFACE_ZONES,
+                    danger: DANGER_ORDER,
+                    addressing: '<kind>:<name> — list with surface.list, then use a declared capability'
+                }
+            });
         });
 
         // The tape, readable: last N CloudEvents rows (token-guarded like the channel).

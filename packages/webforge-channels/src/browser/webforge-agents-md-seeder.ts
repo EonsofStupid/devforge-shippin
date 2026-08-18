@@ -100,19 +100,33 @@ You do not need a bespoke op per feature. Every part of the application is a
 thing, then use it, the way a person would.
 
 - \`{"op":"surface.list","match":"font","kind":"setting","withValues":true}\` — search
-  inputs, settings, commands, views, editors and terminals
+  inputs, settings, commands, **menus**, **buttons**, views, editors and terminals.
+  Narrow with \`zone\` (\`menubar\`, \`sidebar\`, \`toolbar\`, \`panel\`, …) and with
+  \`maxDanger\` (\`safe\` | \`caution\` | \`destructive\`) — every surface is classified,
+  so you can ask for only what cannot bite before offering it to a newcomer.
 - \`{"op":"surface.read","surface":"setting:editor.fontSize"}\` — read a value (sensing,
   never counted as an act)
 - \`{"op":"surface.set","surface":"setting:editor.fontSize","value":"16"}\` — set one
 - \`{"op":"surface.focus","surface":"view:explorer-view-container"}\` — bring it forward
 - \`{"op":"surface.invoke","surface":"command:workbench.action.files.save"}\` — trigger it
+- \`{"op":"surface.list","kind":"menu"}\` — **the whole menu tree as data.** This is the
+  answer to "what can I do from here": every entry carries its breadcrumb label
+  (\`File › Save All\`), whether it is currently enabled, and its danger. Walk it a level
+  at a time with \`{"op":"surface.list","kind":"menu","parent":"menu:menubar/1_file"}\`,
+  and run an entry with \`surface.invoke\`. Never screenshot a menu — read it.
+- \`{"op":"surface.list","kind":"button"}\` — the icon buttons in every open view's title
+  bar, with the tooltip their author wrote. \`surface.focus\` on one **points at it**:
+  the button pulses amber in the operator's window, which is how you teach where a
+  control lives instead of just using it for them.
 - \`{"op":"type.real","surface":"input:ask-a-question","text":"…","submit":true}\` —
   **type it for real**, character by character at a human cadence, with the field marked
   so the operator can see you at the keyboard. Prefer this over setting a value outright
   whenever the operator is watching: the pace is the lesson.
 
-\`GET /webforge/catalog\` returns the declared runtime-event catalog — every event this
-instance can emit, its plane and what its fields mean. Read it rather than inferring.
+\`GET /webforge/catalog\` returns this instance's vocabulary: the declared runtime-event
+catalog (every event it can emit, its plane, what its fields mean) and the surface
+vocabulary (the address kinds, the zones, the danger levels). Read it rather than
+inferring — it is generated from the code, so it cannot drift.
 
 Use the channels instead of screenshots or blind guesses: the state is typed, the
 actions are visible, and everything is recorded to the instance's event tape with

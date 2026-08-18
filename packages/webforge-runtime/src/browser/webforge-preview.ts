@@ -154,7 +154,7 @@ export class WebForgePreview implements FrontendApplicationContribution, WebForg
             id: 'preview:app',
             kind: 'preview',
             label: 'Preview',
-            area: 'main',
+            zone: 'main',
             capabilities: ['read', 'set', 'focus', 'invoke'],
             description: 'The running application. Set it to a URL to navigate; invoke it to reload.',
             value: this.currentUrl

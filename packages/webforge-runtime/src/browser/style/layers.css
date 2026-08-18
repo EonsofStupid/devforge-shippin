@@ -76,3 +76,28 @@ body[data-webforge-layer="simplified"] .theia-ai-chat-node-content {
         animation: none;
     }
 }
+
+/*
+ * Clyffy pointing at a control.
+ *
+ * The guided layer has to be able to say "that button, there" — an operator who is only
+ * ever shown the result never learns where anything lives. Same amber as the walkthrough
+ * art, so pointing always looks like the same gesture wherever it happens.
+ */
+.webforge-clyffy-pointing {
+    outline: 2px solid var(--wf-a2, #f5a524);
+    outline-offset: 2px;
+    border-radius: 3px;
+    animation: webforge-pointing-pulse 1.6s ease-in-out infinite;
+}
+
+@keyframes webforge-pointing-pulse {
+    0%, 100% { outline-color: var(--wf-a2, #f5a524); }
+    50% { outline-color: transparent; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .webforge-clyffy-pointing {
+        animation: none;
+    }
+}

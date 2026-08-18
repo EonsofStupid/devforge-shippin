@@ -20,7 +20,9 @@ import { bindContributionProvider, CommandContribution } from '@theia/core';
 import { FrontendApplicationContribution, RemoteConnectionProvider, ServiceConnectionProvider } from '@theia/core/lib/browser';
 import { ContainerModule } from '@theia/core/shared/inversify';
 import { WEBFORGE_RUNTIME_SERVICE_PATH, WebForgeRuntimeSink } from '../common/webforge-runtime-protocol';
+import { WebForgeCatalogContribution, WebForgeCatalogHints } from './webforge-catalog-hints';
 import { WebForgeLayerService } from './webforge-layers';
+import { ButtonSurfaceProvider, MenuSurfaceProvider } from './webforge-menu-surfaces';
 import { WebForgePreview } from './webforge-preview';
 import { WebForgeRealTyping } from './webforge-real-typing';
 import { WebForgeRuntimeBus } from './webforge-runtime-bus';
@@ -38,12 +40,16 @@ export default new ContainerModule(bind => {
     bind(WebForgeLayerService).toSelf().inSingletonScope();
     bind(CommandContribution).toService(WebForgeLayerService);
 
+    bindContributionProvider(bind, WebForgeCatalogContribution);
+    bind(WebForgeCatalogHints).toSelf().inSingletonScope();
+
     bindContributionProvider(bind, WebForgeSurfaceProvider);
     bind(WebForgeSurfaceRegistry).toSelf().inSingletonScope();
 
     for (const provider of [
         SettingSurfaceProvider, CommandSurfaceProvider, ViewSurfaceProvider,
-        EditorSurfaceProvider, TerminalSurfaceProvider, InputSurfaceProvider
+        EditorSurfaceProvider, TerminalSurfaceProvider, InputSurfaceProvider,
+        MenuSurfaceProvider, ButtonSurfaceProvider
     ]) {
         bind(provider).toSelf().inSingletonScope();
         bind(WebForgeSurfaceProvider).toService(provider);
