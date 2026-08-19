@@ -22,6 +22,7 @@ import { FileService } from '@ogun/filesystem/lib/browser/file-service';
 import { WorkspaceService } from '@ogun/workspace/lib/browser';
 import { OgunRuntimeBus } from '@ogun/runtime/lib/browser/ogun-runtime-bus';
 import { OgunChannelClientImpl } from './ogun-channel-client-impl';
+import { OgunDialogue } from '@ogun/clyffy/lib/browser/dialogue';
 import { OGUN_GUIDED_TYPING_THRESHOLD, OGUN_WALKTHROUGH_LINEAGE, OgunLineage } from './ogun-preferences';
 import { SceneAct, WalkthroughScene, walkthroughScenes } from './ogun-walkthrough-scenes';
 
@@ -78,6 +79,7 @@ export class OgunWalkthrough {
     protected scenes: WalkthroughScene[] = [];
     protected index = 0;
     protected root: HTMLElement | undefined;
+    protected dialogue?: OgunDialogue;
     protected escListener: ((e: KeyboardEvent) => void) | undefined;
     protected readonly toDisposeOnClose = new DisposableCollection();
 
@@ -133,7 +135,7 @@ export class OgunWalkthrough {
                 <div class="og-copy">
                     <div class="og-step" aria-live="polite"></div>
                     <h3 class="og-title"></h3>
-                    <p class="og-body"></p>
+                    <div class="og-dialogue-slot"></div>
                     <div class="og-actions">
                         <button type="button" class="og-btn og-btn-primary"></button>
                         <button type="button" class="og-btn og-btn-ghost"></button>
@@ -143,6 +145,15 @@ export class OgunWalkthrough {
             </div>`;
         document.body.appendChild(root);
         this.root = root;
+
+        // One dialogue frame for the whole walkthrough: Clyffy is a character who changes
+        // expression, not a component that is rebuilt per step.
+        this.dialogue = new OgunDialogue({
+            speaker: nls.localize('ogun/walkthrough/speaker', 'Clyffy'),
+            role: nls.localize('ogun/walkthrough/speakerRole', 'your guide')
+        });
+        this.toDisposeOnClose.push(this.dialogue);
+        this.query('.og-dialogue-slot').appendChild(this.dialogue.node);
 
         this.query('.og-btn-primary').addEventListener('click', () => this.advance());
         this.query('.og-btn-ghost').addEventListener('click', () => this.leave());
@@ -184,7 +195,9 @@ export class OgunWalkthrough {
         this.query('.og-art-slot').innerHTML = scene.art;
         this.query('.og-step').textContent = nls.localizeByDefault('Step {0} of {1}', this.index + 1, total);
         this.query('.og-title').textContent = scene.title;
-        this.query('.og-body').textContent = scene.body;
+        this.dialogue!.mood = scene.mood ?? 'idle';
+        this.dialogue!.role = nls.localize('ogun/walkthrough/speakerStep', 'step {0} of {1}', this.index + 1, total);
+        this.dialogue!.say(scene.body);
 
         const primary = this.query('.og-btn-primary');
         primary.textContent = scene.actionLabel;

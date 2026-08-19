@@ -1,0 +1,201 @@
+/********************************************************************************
+ * Copyright (C) 2026 Shippin.
+ *
+ * This program and the accompanying materials are made available under the
+ * terms of the Eclipse Public License v. 2.0 which is available at
+ * http://www.eclipse.org/legal/epl-2.0.
+ *
+ * This Source Code may also be made available under the following Secondary
+ * Licenses when the conditions for such availability set forth in the Eclipse
+ * Public License v. 2.0 are satisfied: GNU General Public License, version 2
+ * with the GNU Classpath Exception which is available at
+ * https://www.gnu.org/software/classpath/license.html.
+ *
+ * SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
+ ********************************************************************************/
+
+/*
+ * Clyffy's chat.
+ *
+ * Two voices and a third thing. The operator and Clyffy are turns; his ACTS are a thinner
+ * line between them, because an act is not something said — it is something that happened,
+ * and it should read as a receipt rather than as a claim.
+ */
+
+.ogun-chat {
+    /* Structural surfaces, matching the walkthrough's palette exactly. */
+    --og-a1: #FFB000;
+    --og-a2: #FF7A3D;
+    --og-a4: #6C8CFF;
+    --og-ground: #101119;
+    --og-plate: #1B1E2C;
+
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    background: var(--theia-sideBar-background);
+    color: var(--theia-foreground);
+}
+
+/* ── header ───────────────────────────────────────────────────────────────── */
+
+.ogun-chat-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 14px 14px 13px;
+    border-bottom: 1px solid color-mix(in srgb, var(--og-a2) 24%, transparent);
+    flex: none;
+}
+
+.ogun-chat-portrait {
+    width: 54px;
+    height: 54px;
+    flex: none;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 2px solid var(--og-a2);
+    background: var(--og-ground);
+    box-shadow: 4px 5px 0 color-mix(in srgb, var(--og-a2) 24%, transparent);
+}
+
+.ogun-chat-name {
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: .06em;
+    text-transform: uppercase;
+    color: var(--og-a1);
+    line-height: 1.2;
+}
+
+.ogun-chat-presence {
+    font-size: 12px;
+    color: var(--theia-descriptionForeground);
+}
+
+/* ── transcript ───────────────────────────────────────────────────────────── */
+
+.ogun-chat-transcript {
+    flex: 1 1 auto;
+    overflow-y: auto;
+    padding: 16px 14px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.ogun-turn-body {
+    font-size: 13.5px;
+    line-height: 1.6;
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+}
+
+.ogun-turn-operator .ogun-turn-body {
+    align-self: flex-end;
+    background: color-mix(in srgb, var(--og-a4) 22%, transparent);
+    border: 1px solid color-mix(in srgb, var(--og-a4) 40%, transparent);
+    border-radius: 10px 10px 3px 10px;
+    padding: 9px 12px;
+    max-width: 88%;
+    margin-left: auto;
+}
+
+.ogun-turn-clyffy .ogun-turn-body {
+    border-left: 2px solid var(--og-a2);
+    padding-left: 11px;
+    color: var(--theia-foreground);
+}
+
+.ogun-turn.is-greeting .ogun-turn-body {
+    color: var(--theia-descriptionForeground);
+    border-left-color: color-mix(in srgb, var(--og-a2) 45%, transparent);
+}
+
+/* ── acts: what he DID, not what he said ──────────────────────────────────── */
+
+.ogun-act {
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+    font-size: 12px;
+    color: var(--theia-descriptionForeground);
+    padding: 3px 0 3px 2px;
+}
+
+.ogun-act-dot {
+    flex: none;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--og-a2);
+    transform: translateY(-1px);
+}
+
+.ogun-act-text {
+    flex: 1 1 auto;
+    overflow-wrap: anywhere;
+    font-family: var(--theia-code-font-family, ui-monospace, monospace);
+    font-size: 11.5px;
+    color: color-mix(in srgb, var(--theia-foreground) 78%, transparent);
+}
+
+.ogun-act-by {
+    flex: none;
+    font-size: 10.5px;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    color: color-mix(in srgb, var(--og-a1) 65%, transparent);
+}
+
+/* ── composer ─────────────────────────────────────────────────────────────── */
+
+.ogun-chat-composer {
+    flex: none;
+    display: flex;
+    gap: 8px;
+    align-items: flex-end;
+    padding: 12px 14px 14px;
+    border-top: 1px solid var(--theia-editorGroup-border, rgba(255, 255, 255, .1));
+}
+
+.ogun-chat-input {
+    flex: 1 1 auto;
+    resize: none;
+    font-family: inherit;
+    font-size: 13.5px;
+    line-height: 1.5;
+    padding: 9px 11px;
+    border-radius: 9px;
+    color: var(--theia-input-foreground);
+    background: var(--theia-input-background);
+    border: 1px solid var(--theia-input-border, rgba(255, 255, 255, .16));
+}
+
+.ogun-chat-input:focus {
+    outline: none;
+    border-color: var(--og-a2);
+}
+
+.ogun-chat-send {
+    flex: none;
+    font: inherit;
+    font-size: 13px;
+    font-weight: 600;
+    color: #1A1206;
+    background: var(--og-a2);
+    border: 0;
+    border-radius: 8px;
+    padding: 9px 16px;
+    cursor: pointer;
+}
+
+.ogun-chat-send:disabled {
+    opacity: .5;
+    cursor: default;
+}
+
+.ogun-chat-send:focus-visible {
+    outline: 2px solid var(--og-a1);
+    outline-offset: 2px;
+}

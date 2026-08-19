@@ -10,6 +10,12 @@
   ],
   "references": [
     {
+      "path": "../ai-chat"
+    },
+    {
+      "path": "../clyffy"
+    },
+    {
       "path": "../core"
     },
     {

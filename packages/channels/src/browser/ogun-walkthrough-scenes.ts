@@ -15,6 +15,7 @@
 // *****************************************************************************
 
 import { nls } from '@ogun/core';
+import { ClyffyMood } from '@ogun/clyffy/lib/browser/portrait';
 
 /**
  * The walkthrough scenes, drawn in "Phosphor Flat".
@@ -46,6 +47,8 @@ export interface WalkthroughScene {
     /** Label of the button that performs the act. */
     actionLabel: string;
     act: SceneAct;
+    /** Which face Clyffy wears while saying this. */
+    mood?: ClyffyMood;
     /** Inline SVG markup; all fills are palette tokens. */
     art: string;
 }

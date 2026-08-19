@@ -46,6 +46,17 @@ export interface RuntimeEventDescriptor {
     plane: EventPlane;
     /** One line, written for whoever reads the tape — including an AI. */
     description: string;
+    /**
+     * The same event said out loud, to the person it happened to.
+     *
+     * `{field}` is replaced from the payload. This is the difference between a tape only
+     * a machine can read and a record the operator can watch scroll past: `description`
+     * explains the event to whoever is debugging the system, `sentence` explains it to
+     * whoever is sitting in front of it. An act without one cannot be shown in the chat,
+     * which is deliberate — if we cannot say plainly what Clyffy just did, we should not
+     * be doing it behind their back.
+     */
+    sentence?: string;
     /** Payload field names, in the order a reader should think about them. */
     fields: string[];
 }
@@ -63,38 +74,66 @@ export interface RuntimeEvent {
  */
 export const OGUN_EVENT_CATALOG: RuntimeEventDescriptor[] = [
     // ── act ───────────────────────────────────────────────────────────────────
-    { name: 'act.file.opened', plane: 'act', description: 'A file was opened in an editor.', fields: ['path', 'line'] },
-    { name: 'act.file.changed', plane: 'act', description: 'A file was edited.', fields: ['path', 'added', 'removed'] },
-    { name: 'act.command.executed', plane: 'act', description: 'A workbench command ran.', fields: ['command', 'args'] },
-    { name: 'act.terminal.typed', plane: 'act', description: 'Text was typed into a terminal.', fields: ['terminal', 'chars', 'submitted'] },
-    { name: 'act.surface.set', plane: 'act', description: 'A surface value was set (input, setting, toggle).', fields: ['surface', 'kind', 'chars'] },
-    { name: 'act.surface.focused', plane: 'act', description: 'A surface was focused.', fields: ['surface', 'kind'] },
-    { name: 'act.surface.invoked', plane: 'act', description: 'A surface was invoked (button, command, submit).', fields: ['surface', 'kind'] },
-    { name: 'act.setting.changed', plane: 'act', description: 'A preference changed.', fields: ['key', 'scope'] },
-    { name: 'act.notice.shown', plane: 'act', description: 'A message was shown to the operator.', fields: ['chars', 'kind'] },
-    { name: 'act.preview.opened', plane: 'act', description: 'The running application was put on screen.', fields: ['url'] },
-    { name: 'act.preview.navigated', plane: 'act', description: 'The preview was pointed at a different URL.', fields: ['url'] },
+    { name: 'act.file.opened', plane: 'act', description: 'A file was opened in an editor.', sentence: 'Opened {path}', fields: ['path', 'line'] },
+    { name: 'act.file.changed', plane: 'act', description: 'A file was edited.', sentence: 'Edited {path}', fields: ['path', 'added', 'removed'] },
+    { name: 'act.command.executed', plane: 'act', description: 'A workbench command ran.', sentence: 'Ran the {command} command', fields: ['command', 'args'] },
+    {
+        name: 'act.terminal.typed', plane: 'act',
+        description: 'Text was typed into a terminal.',
+        sentence: 'Typed {chars} characters in the terminal', fields: ['terminal', 'chars', 'submitted']
+    },
+    {
+        name: 'act.surface.set', plane: 'act',
+        description: 'A surface value was set (input, setting, toggle).',
+        sentence: 'Changed {surface}', fields: ['surface', 'kind', 'chars']
+    },
+    { name: 'act.surface.focused', plane: 'act', description: 'A surface was focused.', sentence: 'Pointed at {surface}', fields: ['surface', 'kind'] },
+    { name: 'act.surface.invoked', plane: 'act', description: 'A surface was invoked (button, command, submit).', sentence: 'Used {surface}', fields: ['surface', 'kind'] },
+    { name: 'act.setting.changed', plane: 'act', description: 'A preference changed.', sentence: 'Changed the {key} setting to {value}', fields: ['key', 'scope'] },
+    { name: 'act.notice.shown', plane: 'act', description: 'A message was shown to the operator.', sentence: 'Left you a note', fields: ['chars', 'kind'] },
+    { name: 'act.preview.opened', plane: 'act', description: 'The running application was put on screen.', sentence: 'Opened a preview of your app', fields: ['url'] },
+    { name: 'act.preview.navigated', plane: 'act', description: 'The preview was pointed at a different URL.', sentence: 'Moved the preview to {url}', fields: ['url'] },
 
     // ── sense ─────────────────────────────────────────────────────────────────
     { name: 'sense.state.read', plane: 'sense', description: 'The workbench state snapshot was read.', fields: ['editors', 'terminals'] },
     { name: 'sense.surface.listed', plane: 'sense', description: 'The surface registry was enumerated.', fields: ['count', 'filter'] },
 
     // ── teach ─────────────────────────────────────────────────────────────────
-    { name: 'teach.guide.shown', plane: 'teach', description: 'A guided command was offered.', fields: ['command', 'chars'] },
+    { name: 'teach.guide.shown', plane: 'teach', description: 'A guided command was offered.', sentence: 'Offered you a command to type: {command}', fields: ['command', 'chars'] },
     // eslint-disable-next-line max-len
-    { name: 'teach.guide.completed', plane: 'teach', description: 'A guided command was completed; typedRatio is what the learner typed by hand.', fields: ['command', 'typedRatio'] },
-    { name: 'teach.guide.abandoned', plane: 'teach', description: 'A guided command was left unfinished.', fields: ['command', 'typedRatio'] },
-    { name: 'teach.walkthrough.started', plane: 'teach', description: 'The guided walkthrough opened.', fields: ['scene', 'index', 'total'] },
-    { name: 'teach.walkthrough.scene', plane: 'teach', description: 'A walkthrough scene was shown.', fields: ['scene', 'index', 'total'] },
-    { name: 'teach.walkthrough.completed', plane: 'teach', description: 'The walkthrough was finished.', fields: ['scene', 'index', 'total'] },
-    { name: 'teach.walkthrough.skipped', plane: 'teach', description: 'The walkthrough was left early.', fields: ['scene', 'index', 'total'] },
+    {
+        name: 'teach.guide.completed', plane: 'teach',
+        description: 'A guided command was completed; typedRatio is what the learner typed by hand.',
+        sentence: 'You typed {command} yourself', fields: ['command', 'typedRatio']
+    },
+    {
+        name: 'teach.guide.abandoned', plane: 'teach',
+        description: 'A guided command was left unfinished.',
+        sentence: 'Set aside the command {command}', fields: ['command', 'typedRatio']
+    },
+    { name: 'teach.walkthrough.started', plane: 'teach', description: 'The guided walkthrough opened.', sentence: 'Started the walkthrough', fields: ['scene', 'index', 'total'] },
+    { name: 'teach.walkthrough.scene', plane: 'teach', description: 'A walkthrough scene was shown.', sentence: 'Walkthrough step {index}', fields: ['scene', 'index', 'total'] },
+    {
+        name: 'teach.walkthrough.completed', plane: 'teach',
+        description: 'The walkthrough was finished.',
+        sentence: 'You finished the walkthrough', fields: ['scene', 'index', 'total']
+    },
+    { name: 'teach.walkthrough.skipped', plane: 'teach', description: 'The walkthrough was left early.', sentence: 'Left the walkthrough', fields: ['scene', 'index', 'total'] },
 
     // ── state ─────────────────────────────────────────────────────────────────
-    { name: 'state.workbench.ready', plane: 'state', description: 'The workbench finished starting.', fields: ['perspective'] },
-    { name: 'state.perspective.changed', plane: 'state', description: 'The active perspective changed.', fields: ['perspective'] },
-    { name: 'state.layer.changed', plane: 'state', description: 'The operator moved between the simplified and the full layer.', fields: ['layer'] },
+    { name: 'state.workbench.ready', plane: 'state', description: 'The workbench finished starting.', sentence: 'The workbench is ready', fields: ['perspective'] },
+    { name: 'state.perspective.changed', plane: 'state', description: 'The active perspective changed.', sentence: 'Rearranged the workbench', fields: ['perspective'] },
+    {
+        name: 'state.layer.changed', plane: 'state',
+        description: 'The operator moved between the simplified and the full layer.',
+        sentence: 'Switched to the {layer} view', fields: ['layer']
+    },
     // eslint-disable-next-line max-len
-    { name: 'state.devserver.detected', plane: 'state', description: 'A dev server announced itself in a terminal; the preview follows automatically.', fields: ['port'] }
+    {
+        name: 'state.devserver.detected', plane: 'state',
+        description: 'A dev server announced itself in a terminal; the preview follows automatically.',
+        sentence: 'Noticed your app is running on port {port}', fields: ['port']
+    }
 ];
 
 export namespace OgunEvents {
@@ -111,6 +150,24 @@ export namespace OgunEvents {
     /** Register an event the catalog didn't ship with. Growth is declaration, not drift. */
     export function declare(descriptor: RuntimeEventDescriptor): void {
         byName.set(descriptor.name, descriptor);
+    }
+
+    /**
+     * Say what happened, to the person it happened to.
+     *
+     * Returns undefined when the event has no sentence — the caller must then show
+     * nothing rather than inventing prose or dumping the raw name. A record the operator
+     * cannot read is not transparency, it is noise wearing transparency's clothes.
+     */
+    export function humanize(event: { name: string; data?: Record<string, unknown> }): string | undefined {
+        const template = get(event.name)?.sentence;
+        if (!template) {
+            return undefined;
+        }
+        return template.replace(/\{(\w+)\}/g, (whole, field) => {
+            const value = event.data?.[field];
+            return value === undefined || value === '' ? whole : String(value);
+        });
     }
 
     export function isDeclared(name: string): boolean {

@@ -3,13 +3,15 @@
   "version": "1.74.0",
   "description": "Ogun direct channels \u2014 the Act plane: lets Clyffy (and, later, the Shippin chat webapp) manipulate the application visibly: open files, type in the terminal, teach while working.",
   "dependencies": {
+    "@ogun/ai-chat": "1.74.0",
     "@ogun/ai-chat-ui": "1.74.0",
+    "@ogun/clyffy": "1.74.0",
     "@ogun/core": "1.74.0",
     "@ogun/editor": "1.74.0",
     "@ogun/filesystem": "1.74.0",
     "@ogun/navigator": "1.74.0",
-    "@ogun/terminal": "1.74.0",
     "@ogun/runtime": "1.74.0",
+    "@ogun/terminal": "1.74.0",
     "@ogun/workspace": "1.74.0",
     "tslib": "^2.6.2"
   },
