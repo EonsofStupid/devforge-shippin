@@ -14,11 +14,11 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { ContainerModule } from '@theia/core/shared/inversify';
-import URI from '@theia/core/lib/common/uri';
-import { CommandContribution, MenuContribution, bindRootContributionProvider, ResourceProvider } from '@theia/core/lib/common';
-import { OpenHandler, WidgetFactory, FrontendApplicationContribution, NavigatableWidgetOptions } from '@theia/core/lib/browser';
-import { TabBarToolbarContribution } from '@theia/core/lib/browser/shell/tab-bar-toolbar';
+import { ContainerModule } from '@ogun/core/shared/inversify';
+import URI from '@ogun/core/lib/common/uri';
+import { CommandContribution, MenuContribution, bindRootContributionProvider, ResourceProvider } from '@ogun/core/lib/common';
+import { OpenHandler, WidgetFactory, FrontendApplicationContribution, NavigatableWidgetOptions } from '@ogun/core/lib/browser';
+import { TabBarToolbarContribution } from '@ogun/core/lib/browser/shell/tab-bar-toolbar';
 import { PreviewContribution } from './preview-contribution';
 import { PreviewWidget, PreviewWidgetOptions } from './preview-widget';
 import { PreviewHandler, PreviewHandlerProvider } from './preview-handler';

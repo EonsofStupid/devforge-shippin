@@ -38,7 +38,7 @@ module.exports = {
         function checkModuleImport(node) {
             const module = /** @type {string} */(node.value);
             const extension = path.parse(module).ext;
-            const re = /^@theia\/\S+\/src\//;
+            const re = /^@ogun\/\S+\/src\//;
             if (re.test(module) && extension === '') {
                 context.report({
                     node,

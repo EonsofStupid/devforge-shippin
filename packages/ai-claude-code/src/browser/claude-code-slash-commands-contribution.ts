@@ -14,13 +14,13 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { PromptService } from '@theia/ai-core/lib/common/prompt-service';
-import { DisposableCollection, ILogger, nls, URI } from '@theia/core';
-import { FrontendApplicationContribution } from '@theia/core/lib/browser';
-import { inject, injectable, named } from '@theia/core/shared/inversify';
-import { FileService } from '@theia/filesystem/lib/browser/file-service';
-import { FileChangeType } from '@theia/filesystem/lib/common/files';
-import { WorkspaceService } from '@theia/workspace/lib/browser';
+import { PromptService } from '@ogun/ai-core/lib/common/prompt-service';
+import { DisposableCollection, ILogger, nls, URI } from '@ogun/core';
+import { FrontendApplicationContribution } from '@ogun/core/lib/browser';
+import { inject, injectable, named } from '@ogun/core/shared/inversify';
+import { FileService } from '@ogun/filesystem/lib/browser/file-service';
+import { FileChangeType } from '@ogun/filesystem/lib/common/files';
+import { WorkspaceService } from '@ogun/workspace/lib/browser';
 import { CLAUDE_CHAT_AGENT_ID } from './claude-code-chat-agent';
 
 const CLAUDE_COMMANDS = '.claude/commands';

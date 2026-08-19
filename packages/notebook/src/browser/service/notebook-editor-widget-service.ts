@@ -19,11 +19,11 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { Emitter } from '@theia/core';
-import { inject, injectable, postConstruct } from '@theia/core/shared/inversify';
-import { ApplicationShell } from '@theia/core/lib/browser';
+import { Emitter } from '@ogun/core';
+import { inject, injectable, postConstruct } from '@ogun/core/shared/inversify';
+import { ApplicationShell } from '@ogun/core/lib/browser';
 import { NotebookEditorWidget } from '../notebook-editor-widget';
-import { ContextKeyService } from '@theia/core/lib/browser/context-key-service';
+import { ContextKeyService } from '@ogun/core/lib/browser/context-key-service';
 import { NOTEBOOK_EDITOR_FOCUSED } from '../contributions/notebook-context-keys';
 
 @injectable()

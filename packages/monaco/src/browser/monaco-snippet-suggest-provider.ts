@@ -19,15 +19,15 @@
  *--------------------------------------------------------------------------------------------*/
 
 import * as jsoncparser from 'jsonc-parser';
-import { injectable, inject, named } from '@theia/core/shared/inversify';
-import URI from '@theia/core/lib/common/uri';
-import { Disposable, DisposableCollection } from '@theia/core/lib/common/disposable';
-import { FileService } from '@theia/filesystem/lib/browser/file-service';
-import { FileOperationError } from '@theia/filesystem/lib/common/files';
+import { injectable, inject, named } from '@ogun/core/shared/inversify';
+import URI from '@ogun/core/lib/common/uri';
+import { Disposable, DisposableCollection } from '@ogun/core/lib/common/disposable';
+import { FileService } from '@ogun/filesystem/lib/browser/file-service';
+import { FileOperationError } from '@ogun/filesystem/lib/common/files';
 import * as monaco from '@theia/monaco-editor-core';
 import { SnippetParser } from '@theia/monaco-editor-core/esm/vs/editor/contrib/snippet/browser/snippetParser';
-import { isObject } from '@theia/core/lib/common';
-import { ILogger } from '@theia/core';
+import { isObject } from '@ogun/core/lib/common';
+import { ILogger } from '@ogun/core';
 
 @injectable()
 export class MonacoSnippetSuggestProvider implements monaco.languages.CompletionItemProvider {

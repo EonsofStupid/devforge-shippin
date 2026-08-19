@@ -14,12 +14,12 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { createProxyIdentifier } from '@theia/plugin-ext/lib/common/rpc-protocol';
-import { AbstractPluginManagerExt, EnvInit } from '@theia/plugin-ext';
-import { KeysToKeysToAnyValue } from '@theia/plugin-ext/lib/common/types';
+import { createProxyIdentifier } from '@ogun/plugin-ext/lib/common/rpc-protocol';
+import { AbstractPluginManagerExt, EnvInit } from '@ogun/plugin-ext';
+import { KeysToKeysToAnyValue } from '@ogun/plugin-ext/lib/common/types';
 import {
     MAIN_RPC_CONTEXT, PLUGIN_RPC_CONTEXT
-} from '@theia/plugin-ext/lib/common/plugin-api-rpc';
+} from '@ogun/plugin-ext/lib/common/plugin-api-rpc';
 import { ExtPluginApi } from './plugin-ext-headless-api-contribution';
 
 export const HEADLESSPLUGIN_RPC_CONTEXT = {

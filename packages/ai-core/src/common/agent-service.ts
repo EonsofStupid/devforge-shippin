@@ -13,8 +13,8 @@
 //
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
-import { inject, injectable, optional, postConstruct } from '@theia/core/shared/inversify';
-import { Emitter, Event } from '@theia/core';
+import { inject, injectable, optional, postConstruct } from '@ogun/core/shared/inversify';
+import { Emitter, Event } from '@ogun/core';
 import { Agent } from './agent';
 import { AISettingsService } from './settings-service';
 import { PromptService } from './prompt-service';

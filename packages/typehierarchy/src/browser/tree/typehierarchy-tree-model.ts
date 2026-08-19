@@ -14,9 +14,9 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { inject, injectable } from '@theia/core/shared/inversify';
-import { TreeNode } from '@theia/core/lib/browser/tree/tree';
-import { TreeModelImpl } from '@theia/core/lib/browser/tree/tree-model';
+import { inject, injectable } from '@ogun/core/shared/inversify';
+import { TreeNode } from '@ogun/core/lib/browser/tree/tree';
+import { TreeModelImpl } from '@ogun/core/lib/browser/tree/tree-model';
 import { TypeHierarchyRegistry, TypeHierarchyDirection, TypeHierarchyParams } from '../typehierarchy-provider';
 import { TypeHierarchyTree } from './typehierarchy-tree';
 

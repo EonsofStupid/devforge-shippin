@@ -1,5 +1,5 @@
 {
-  "name": "@theia/ai-ide",
+  "name": "@ogun/ai-ide",
   "version": "1.74.0",
   "description": "AI IDE Agents Extension",
   "license": "EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0",
@@ -15,25 +15,25 @@
     "theia-extension"
   ],
   "dependencies": {
-    "@theia/ai-chat": "1.74.0",
-    "@theia/ai-chat-ui": "1.74.0",
-    "@theia/ai-core": "1.74.0",
-    "@theia/ai-mcp": "1.74.0",
-    "@theia/ai-terminal": "1.74.0",
-    "@theia/core": "1.74.0",
-    "@theia/debug": "1.74.0",
-    "@theia/editor": "1.74.0",
-    "@theia/file-search": "1.74.0",
-    "@theia/filesystem": "1.74.0",
-    "@theia/markers": "1.74.0",
-    "@theia/monaco": "1.74.0",
-    "@theia/navigator": "1.74.0",
-    "@theia/preferences": "1.74.0",
-    "@theia/scm": "1.74.0",
-    "@theia/search-in-workspace": "1.74.0",
-    "@theia/task": "1.74.0",
-    "@theia/terminal": "1.74.0",
-    "@theia/workspace": "1.74.0",
+    "@ogun/ai-chat": "1.74.0",
+    "@ogun/ai-chat-ui": "1.74.0",
+    "@ogun/ai-core": "1.74.0",
+    "@ogun/ai-mcp": "1.74.0",
+    "@ogun/ai-terminal": "1.74.0",
+    "@ogun/core": "1.74.0",
+    "@ogun/debug": "1.74.0",
+    "@ogun/editor": "1.74.0",
+    "@ogun/file-search": "1.74.0",
+    "@ogun/filesystem": "1.74.0",
+    "@ogun/markers": "1.74.0",
+    "@ogun/monaco": "1.74.0",
+    "@ogun/navigator": "1.74.0",
+    "@ogun/preferences": "1.74.0",
+    "@ogun/scm": "1.74.0",
+    "@ogun/search-in-workspace": "1.74.0",
+    "@ogun/task": "1.74.0",
+    "@ogun/terminal": "1.74.0",
+    "@ogun/workspace": "1.74.0",
     "date-fns": "^4.4.0",
     "ignore": "^6.0.2",
     "js-yaml": "^4.3.1",
@@ -45,8 +45,8 @@
     "access": "public"
   },
   "devDependencies": {
-    "@theia/cli": "1.74.0",
-    "@theia/test": "1.74.0"
+    "@ogun/cli": "1.74.0",
+    "@ogun/test": "1.74.0"
   },
   "theiaExtensions": [
     {

@@ -14,16 +14,16 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { ContainerModule } from '@theia/core/shared/inversify';
-import { BackendApplicationContribution } from '@theia/core/lib/node/backend-application';
-import { ConnectionHandler, PreferenceContribution, RpcConnectionHandler } from '@theia/core';
+import { ContainerModule } from '@ogun/core/shared/inversify';
+import { BackendApplicationContribution } from '@ogun/core/lib/node/backend-application';
+import { ConnectionHandler, PreferenceContribution, RpcConnectionHandler } from '@ogun/core';
 import { MCPServerManagerImpl } from './mcp-server-manager-impl';
 import {
     MCPFrontendNotificationService,
     MCPServerManager,
     MCPServerManagerPath
 } from '../common/mcp-server-manager';
-import { ConnectionContainerModule } from '@theia/core/lib/node/messaging/connection-container-module';
+import { ConnectionContainerModule } from '@ogun/core/lib/node/messaging/connection-container-module';
 import { McpServersPreferenceSchema } from '../common/mcp-preferences';
 import { MCPServerManagerServerImpl } from './mcp-server-manager-server';
 import { MCPServerManagerServer, MCPServerManagerServerClient, MCPServerManagerServerPath } from '../common/mcp-protocol';

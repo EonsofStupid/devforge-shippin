@@ -16,19 +16,19 @@
 import {
     ChatResponseContent,
     CodeChatResponseContent,
-} from '@theia/ai-chat/lib/common';
-import { ContributionProvider, UntitledResourceResolver, URI } from '@theia/core';
-import { ContextMenuRenderer, TreeNode } from '@theia/core/lib/browser';
-import { ClipboardService } from '@theia/core/lib/browser/clipboard-service';
-import { inject, injectable, named } from '@theia/core/shared/inversify';
-import * as React from '@theia/core/shared/react';
-import { ReactNode } from '@theia/core/shared/react';
-import { nls } from '@theia/core/lib/common/nls';
-import { Position } from '@theia/core/shared/vscode-languageserver-protocol';
-import { EditorManager, EditorWidget } from '@theia/editor/lib/browser';
-import { SimpleMonacoEditor } from '@theia/monaco/lib/browser/simple-monaco-editor';
-import { MonacoEditorProvider } from '@theia/monaco/lib/browser/monaco-editor-provider';
-import { MonacoLanguages } from '@theia/monaco/lib/browser/monaco-languages';
+} from '@ogun/ai-chat/lib/common';
+import { ContributionProvider, UntitledResourceResolver, URI } from '@ogun/core';
+import { ContextMenuRenderer, TreeNode } from '@ogun/core/lib/browser';
+import { ClipboardService } from '@ogun/core/lib/browser/clipboard-service';
+import { inject, injectable, named } from '@ogun/core/shared/inversify';
+import * as React from '@ogun/core/shared/react';
+import { ReactNode } from '@ogun/core/shared/react';
+import { nls } from '@ogun/core/lib/common/nls';
+import { Position } from '@ogun/core/shared/vscode-languageserver-protocol';
+import { EditorManager, EditorWidget } from '@ogun/editor/lib/browser';
+import { SimpleMonacoEditor } from '@ogun/monaco/lib/browser/simple-monaco-editor';
+import { MonacoEditorProvider } from '@ogun/monaco/lib/browser/monaco-editor-provider';
+import { MonacoLanguages } from '@ogun/monaco/lib/browser/monaco-languages';
 import { ChatResponsePartRenderer } from '../chat-response-part-renderer';
 import { ChatViewTreeWidget, ResponseNode } from '../chat-tree-view/chat-view-tree-widget';
 import { IMouseEvent } from '@theia/monaco-editor-core';

@@ -14,10 +14,10 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { nls } from '@theia/core/lib/common/nls';
-import { PreferenceProxy, PreferenceScope, PreferenceService, createPreferenceProxy } from '@theia/core/lib/common/preferences';
-import { interfaces } from '@theia/core/shared/inversify';
-import { PreferenceContribution, PreferenceSchema } from '@theia/core/lib/common/preferences/preference-schema';
+import { nls } from '@ogun/core/lib/common/nls';
+import { PreferenceProxy, PreferenceScope, PreferenceService, createPreferenceProxy } from '@ogun/core/lib/common/preferences';
+import { interfaces } from '@ogun/core/shared/inversify';
+import { PreferenceContribution, PreferenceSchema } from '@ogun/core/lib/common/preferences/preference-schema';
 
 export const searchInWorkspacePreferencesSchema: PreferenceSchema = {
     scope: PreferenceScope.Folder,

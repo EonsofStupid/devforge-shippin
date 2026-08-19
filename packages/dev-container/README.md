@@ -12,7 +12,7 @@
 
 ## Description
 
-The `@theia/dev-container` extension provides functionality to create, start and connect to development containers similiar to the
+The `@ogun/dev-container` extension provides functionality to create, start and connect to development containers similiar to the
 [vscode Dev Containers extension](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers).
 
 The full devcontainer.json Schema can be found [here](https://containers.dev/implementors/json_reference/).
@@ -39,7 +39,7 @@ Usage: `"composeUpArgs": ["--force-recreate"]`
 
 ## Additional Information
 
-- [API documentation for `@theia/dev-container`](https://eclipse-theia.github.io/theia/docs/next/modules/_theia_dev-container.html)
+- [API documentation for `@ogun/dev-container`](https://eclipse-theia.github.io/theia/docs/next/modules/_theia_dev-container.html)
 - [Theia - GitHub](https://github.com/eclipse-theia/theia)
 - [Theia - Website](https://theia-ide.org/)
 

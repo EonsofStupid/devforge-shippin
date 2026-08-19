@@ -18,8 +18,8 @@
 
 import * as path from 'path';
 import { pathToFileURL } from 'node:url';
-import { dynamicRequire, removeFromCache } from '@theia/core/lib/node/dynamic-require';
-import { ContainerModule, inject, injectable, postConstruct, unmanaged } from '@theia/core/shared/inversify';
+import { dynamicRequire, removeFromCache } from '@ogun/core/lib/node/dynamic-require';
+import { ContainerModule, inject, injectable, postConstruct, unmanaged } from '@ogun/core/shared/inversify';
 import { AbstractPluginManagerExtImpl, PluginHost, PluginManagerExtImpl } from '../../plugin/plugin-manager';
 import {
     MAIN_RPC_CONTEXT, Plugin, PluginAPIFactory, PluginManager,

@@ -13,8 +13,8 @@
 //
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 
-import { Event, Emitter } from '@theia/core/lib/common/event';
-import { cloneAndChange } from '@theia/core';
+import { Event, Emitter } from '@ogun/core/lib/common/event';
+import { cloneAndChange } from '@ogun/core';
 import { mixin } from '../common/types';
 import { TelemetryTrustedValue, TelemetryLoggerOptions } from './types-impl';
 

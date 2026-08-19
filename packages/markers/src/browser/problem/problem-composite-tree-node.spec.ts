@@ -14,23 +14,23 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { enableJSDOM } from '@theia/core/lib/browser/test/jsdom';
+import { enableJSDOM } from '@ogun/core/lib/browser/test/jsdom';
 let disableJSDOM = enableJSDOM();
 
-import { FrontendApplicationConfigProvider } from '@theia/core/lib/browser/frontend-application-config-provider';
+import { FrontendApplicationConfigProvider } from '@ogun/core/lib/browser/frontend-application-config-provider';
 FrontendApplicationConfigProvider.set({});
 
-import URI from '@theia/core/lib/common/uri';
+import URI from '@ogun/core/lib/common/uri';
 import { expect } from 'chai';
-import { Container } from '@theia/core/shared/inversify';
-import { Diagnostic, Range, DiagnosticSeverity } from '@theia/core/shared/vscode-languageserver-protocol';
-import { Event } from '@theia/core/lib/common/event';
+import { Container } from '@ogun/core/shared/inversify';
+import { Diagnostic, Range, DiagnosticSeverity } from '@ogun/core/shared/vscode-languageserver-protocol';
+import { Event } from '@ogun/core/lib/common/event';
 import { MarkerManager } from '../marker-manager';
 import { MarkerInfoNode, MarkerNode, MarkerOptions, MarkerRootNode } from '../marker-tree';
 import { PROBLEM_OPTIONS } from './problem-container';
 import { ProblemManager } from './problem-manager';
 import { ProblemTree } from './problem-tree-model';
-import { FileService } from '@theia/filesystem/lib/browser/file-service';
+import { FileService } from '@ogun/filesystem/lib/browser/file-service';
 import { ProblemCompositeTreeNode } from './problem-composite-tree-node';
 import { Marker } from '../../common/marker';
 

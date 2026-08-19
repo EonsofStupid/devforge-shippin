@@ -15,11 +15,11 @@
 // *****************************************************************************
 
 import { expect } from 'chai';
-import { Container } from '@theia/core/shared/inversify';
-import { MessageService, PreferenceService } from '@theia/core';
-import { MCP_SERVERS_PREF } from '@theia/ai-mcp/lib/common/mcp-preferences';
-import { MCPFrontendService } from '@theia/ai-mcp/lib/common/mcp-server-manager';
-import { MCPServerEditor, MCPServerEditorImpl, MCPServerEditDialogFactory } from '@theia/ai-mcp/lib/browser/mcp-server-editor';
+import { Container } from '@ogun/core/shared/inversify';
+import { MessageService, PreferenceService } from '@ogun/core';
+import { MCP_SERVERS_PREF } from '@ogun/ai-mcp/lib/common/mcp-preferences';
+import { MCPFrontendService } from '@ogun/ai-mcp/lib/common/mcp-server-manager';
+import { MCPServerEditor, MCPServerEditorImpl, MCPServerEditDialogFactory } from '@ogun/ai-mcp/lib/browser/mcp-server-editor';
 import { ResolvedRegistryEntry } from '../../common/mcp/mcp-registry-types';
 import { MCPInstallService, MCPInstallServiceImpl } from './mcp-install-service';
 

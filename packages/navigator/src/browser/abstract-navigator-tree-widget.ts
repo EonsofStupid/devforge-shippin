@@ -14,11 +14,11 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { injectable, inject, postConstruct } from '@theia/core/shared/inversify';
+import { injectable, inject, postConstruct } from '@ogun/core/shared/inversify';
 import { FileNavigatorPreferences } from '../common/navigator-preferences';
-import { FileTreeWidget } from '@theia/filesystem/lib/browser';
-import { Attributes, HTMLAttributes } from '@theia/core/shared/react';
-import { TreeNode } from '@theia/core/lib/browser';
+import { FileTreeWidget } from '@ogun/filesystem/lib/browser';
+import { Attributes, HTMLAttributes } from '@ogun/core/shared/react';
+import { TreeNode } from '@ogun/core/lib/browser';
 
 @injectable()
 export class AbstractNavigatorTreeWidget extends FileTreeWidget {

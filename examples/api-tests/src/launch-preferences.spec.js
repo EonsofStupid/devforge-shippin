@@ -30,23 +30,23 @@ describe('Launch Preferences', function () {
 
     const { assert } = chai;
 
-    const { PreferenceProvider } = require('@theia/core/lib/common');
-    const { PreferenceService } = require('@theia/core/lib/common/preferences/preference-service');
-    const { PreferenceScope } = require('@theia/core/lib/common/preferences/preference-scope');
-    const { WorkspaceService } = require('@theia/workspace/lib/browser/workspace-service');
-    const { FileService } = require('@theia/filesystem/lib/browser/file-service');
-    const { FileResourceResolver } = require('@theia/filesystem/lib/browser/file-resource');
-    const { AbstractResourcePreferenceProvider } = require('@theia/preferences/lib/common/abstract-resource-preference-provider');
-    const { waitForEvent } = require('@theia/core/lib/common/promise-util');
+    const { PreferenceProvider } = require('@ogun/core/lib/common');
+    const { PreferenceService } = require('@ogun/core/lib/common/preferences/preference-service');
+    const { PreferenceScope } = require('@ogun/core/lib/common/preferences/preference-scope');
+    const { WorkspaceService } = require('@ogun/workspace/lib/browser/workspace-service');
+    const { FileService } = require('@ogun/filesystem/lib/browser/file-service');
+    const { FileResourceResolver } = require('@ogun/filesystem/lib/browser/file-resource');
+    const { AbstractResourcePreferenceProvider } = require('@ogun/preferences/lib/common/abstract-resource-preference-provider');
+    const { waitForEvent } = require('@ogun/core/lib/common/promise-util');
 
     const container = window.theia.container;
-    /** @type {import('@theia/core/lib/browser/preferences/preference-service').PreferenceService} */
+    /** @type {import('@ogun/core/lib/browser/preferences/preference-service').PreferenceService} */
     const preferences = container.get(PreferenceService);
-    /** @type {import('@theia/preferences/lib/browser/user-configs-preference-provider').UserConfigsPreferenceProvider} */
+    /** @type {import('@ogun/preferences/lib/browser/user-configs-preference-provider').UserConfigsPreferenceProvider} */
     const userPreferences = container.getNamed(PreferenceProvider, PreferenceScope.User);
-    /** @type {import('@theia/preferences/lib/browser/workspace-preference-provider').WorkspacePreferenceProvider} */
+    /** @type {import('@ogun/preferences/lib/browser/workspace-preference-provider').WorkspacePreferenceProvider} */
     const workspacePreferences = container.getNamed(PreferenceProvider, PreferenceScope.Workspace);
-    /** @type {import('@theia/preferences/lib/browser/folders-preferences-provider').FoldersPreferencesProvider} */
+    /** @type {import('@ogun/preferences/lib/browser/folders-preferences-provider').FoldersPreferencesProvider} */
     const folderPreferences = container.getNamed(PreferenceProvider, PreferenceScope.Folder);
     const workspaceService = container.get(WorkspaceService);
     const fileService = container.get(FileService);
@@ -353,7 +353,7 @@ describe('Launch Preferences', function () {
     }
 
     /**
-     * @typedef {Partial<import('@theia/core/src/browser/preferences/preference-service').PreferenceInspection<any>>} PreferenceInspection
+     * @typedef {Partial<import('@ogun/core/src/browser/preferences/preference-service').PreferenceInspection<any>>} PreferenceInspection
      */
 
     /**
@@ -543,7 +543,7 @@ describe('Launch Preferences', function () {
         describe(JSON.stringify(configMode, undefined, 2), () => {
             const configPaths = Array.isArray(configMode) ? configMode : [configMode];
 
-            /** @typedef {import('@theia/monaco-editor-core/esm/vs/base/common/lifecycle').IReference<import('@theia/monaco/lib/browser/monaco-editor-model').MonacoEditorModel>} ConfigModelReference */
+            /** @typedef {import('@theia/monaco-editor-core/esm/vs/base/common/lifecycle').IReference<import('@ogun/monaco/lib/browser/monaco-editor-model').MonacoEditorModel>} ConfigModelReference */
             /** @type {ConfigModelReference[]} */
             beforeEach(async () => {
                 /** @type {Promise<void>[]} */

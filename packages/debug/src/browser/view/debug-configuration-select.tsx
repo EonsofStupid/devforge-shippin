@@ -14,13 +14,13 @@
  * SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
  ********************************************************************************/
 
-import URI from '@theia/core/lib/common/uri';
-import * as React from '@theia/core/shared/react';
+import URI from '@ogun/core/lib/common/uri';
+import * as React from '@ogun/core/shared/react';
 import { DebugConfigurationManager } from '../debug-configuration-manager';
 import { DebugSessionOptions } from '../debug-session-options';
-import { SelectComponent, SelectOption } from '@theia/core/lib/browser/widgets/select-component';
-import { QuickInputService } from '@theia/core/lib/browser';
-import { nls } from '@theia/core/lib/common/nls';
+import { SelectComponent, SelectOption } from '@ogun/core/lib/browser/widgets/select-component';
+import { QuickInputService } from '@ogun/core/lib/browser';
+import { nls } from '@ogun/core/lib/common/nls';
 import { DebugSessionConfigurationLabelProvider } from '../debug-session-configuration-label-provider';
 import { DynamicDebugConfigurationProvider } from '../../common/debug-service';
 

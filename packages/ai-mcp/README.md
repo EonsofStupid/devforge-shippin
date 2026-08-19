@@ -21,11 +21,11 @@ The AI MCP package provides an integration that allows users to start and use MC
 
 ### Commands
 
-- Include `@theia/ai-mcp-ui` to gain access to the MCP server commands: start, stop, sign in to and sign out from OAuth-enabled servers, and `"MCP: Get MCP OAuth Redirect URL"`.
+- Include `@ogun/ai-mcp-ui` to gain access to the MCP server commands: start, stop, sign in to and sign out from OAuth-enabled servers, and `"MCP: Get MCP OAuth Redirect URL"`.
 
 ### Configuration
 
-To configure MCP servers, include `@theia/mcp-ui` or `bind` the included `mcp-preferences`.
+To configure MCP servers, include `@ogun/mcp-ui` or `bind` the included `mcp-preferences`.
 
 Afterwards, open the preferences and add entries to the `MCP Servers Configuration` section. Each server requires a unique identifier (e.g., `"brave-search"` or `"filesystem"`) and configuration details such as the command, arguments, optional environment variables, and autostart (true by default).
 
@@ -124,7 +124,7 @@ Search the internet for XYZ
 
 ## Additional Information
 
-- [API documentation for `@theia/mcp`](https://eclipse-theia.github.io/theia/docs/next/modules/_theia_ai-mcp.html)
+- [API documentation for `@ogun/mcp`](https://eclipse-theia.github.io/theia/docs/next/modules/_theia_ai-mcp.html)
 - [Theia - GitHub](https://github.com/eclipse-theia/theia)
 - [Theia - Website](https://theia-ide.org/)
 

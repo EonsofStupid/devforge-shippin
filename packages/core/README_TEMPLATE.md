@@ -12,7 +12,7 @@
 
 ## Description
 
-The `@theia/core` extension is the main extension for all Theia-based applications, and provides the main framework for all dependent extensions.
+The `@ogun/core` extension is the main extension for all Theia-based applications, and provides the main framework for all dependent extensions.
 The extension provides the base APIs for all Theia-based applications, including:
 
 - Application APIs
@@ -53,14 +53,14 @@ A Theia application is a node package listing [Theia extensions](#theia-extensio
 
 ## Re-Exports Mechanism
 
-In order to make application builds more stable `@theia/core` re-exports some common dependencies for Theia extensions to re-use. This is especially useful when having to re-use the same dependencies as `@theia/core` does: Since those dependencies will be pulled by Theia, instead of trying to match the same version in your own packages, you can use re-exports to consume it from the framework directly.
+In order to make application builds more stable `@ogun/core` re-exports some common dependencies for Theia extensions to re-use. This is especially useful when having to re-use the same dependencies as `@ogun/core` does: Since those dependencies will be pulled by Theia, instead of trying to match the same version in your own packages, you can use re-exports to consume it from the framework directly.
 
 ### Usage Example
 
-Let's take inversify as an example since you will most likely use this package, you can import it by prefixing with `@theia/core/shared/`:
+Let's take inversify as an example since you will most likely use this package, you can import it by prefixing with `@ogun/core/shared/`:
 
 ```ts
-import { injectable } from '@theia/core/shared/inversify';
+import { injectable } from '@ogun/core/shared/inversify';
 
 @injectable()
 export class SomeClass {
@@ -71,7 +71,7 @@ export class SomeClass {
 ## Re-Exports
 
 {{#reExportsDirectories}}
-- `@theia/core/{{&directory}}/...`
+- `@ogun/core/{{&directory}}/...`
     {{#packages}}
     {{#modules}}
   - `{{&moduleName}}` (from [`{{&packageName}}@{{&versionRange}}`]({{&npmUrl}}))
@@ -141,7 +141,7 @@ Where `root` is the name of the logger and `INFO` is the log level. These are op
 
 ## Additional Information
 
-- [API documentation for `@theia/core`](https://eclipse-theia.github.io/theia/docs/next/modules/_theia_core.html)
+- [API documentation for `@ogun/core`](https://eclipse-theia.github.io/theia/docs/next/modules/_theia_core.html)
 - [Theia - GitHub](https://github.com/eclipse-theia/theia)
 - [Theia - Website](https://theia-ide.org/)
 

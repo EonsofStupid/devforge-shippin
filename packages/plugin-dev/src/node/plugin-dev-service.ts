@@ -15,13 +15,13 @@
 // *****************************************************************************
 
 import { PluginDebugConfiguration, PluginDevServer, PluginDevClient } from '../common/plugin-dev-protocol';
-import { injectable, inject } from '@theia/core/shared/inversify';
+import { injectable, inject } from '@ogun/core/shared/inversify';
 import { HostedInstanceManager } from './hosted-instance-manager';
-import { PluginMetadata } from '@theia/plugin-ext/lib/common/plugin-protocol';
-import URI from '@theia/core/lib/common/uri';
+import { PluginMetadata } from '@ogun/plugin-ext/lib/common/plugin-protocol';
+import URI from '@ogun/core/lib/common/uri';
 import { HostedPluginReader } from './hosted-plugin-reader';
 import { HostedPluginsManager } from './hosted-plugins-manager';
-import { HostedPluginSupport } from '@theia/plugin-ext/lib/hosted/node/hosted-plugin';
+import { HostedPluginSupport } from '@ogun/plugin-ext/lib/hosted/node/hosted-plugin';
 
 @injectable()
 export class PluginDevServerImpl implements PluginDevServer {

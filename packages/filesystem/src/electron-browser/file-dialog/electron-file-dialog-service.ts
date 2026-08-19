@@ -14,10 +14,10 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { inject, injectable } from '@theia/core/shared/inversify';
-import URI from '@theia/core/lib/common/uri';
-import { MaybeArray } from '@theia/core/lib/common/types';
-import { MessageService } from '@theia/core/lib/common/message-service';
+import { inject, injectable } from '@ogun/core/shared/inversify';
+import URI from '@ogun/core/lib/common/uri';
+import { MaybeArray } from '@ogun/core/lib/common/types';
+import { MessageService } from '@ogun/core/lib/common/message-service';
 import { FileStat } from '../../common/files';
 import { FileAccess } from '../../common/filesystem';
 import { DefaultFileDialogService, OpenFileDialogProps, SaveFileDialogProps } from '../../browser/file-dialog';
@@ -27,11 +27,11 @@ import { DefaultFileDialogService, OpenFileDialogProps, SaveFileDialogProps } fr
 // and at packaging time, clients can decide whether they need the native or the browser-based
 // solution.
 //
-// eslint-disable-next-line @theia/runtime-import-check
-import { FileUri } from '@theia/core/lib/common/file-uri';
+// eslint-disable-next-line @ogun/runtime-import-check
+import { FileUri } from '@ogun/core/lib/common/file-uri';
 import { OpenDialogOptions, SaveDialogOptions } from '../../electron-common/electron-api';
 
-import '@theia/core/lib/electron-common/electron-api';
+import '@ogun/core/lib/electron-common/electron-api';
 
 @injectable()
 export class ElectronFileDialogService extends DefaultFileDialogService {

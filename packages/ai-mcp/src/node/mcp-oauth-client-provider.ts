@@ -17,8 +17,8 @@
 import { OAuthClientProvider, OAuthDiscoveryState } from '@modelcontextprotocol/sdk/client/auth.js';
 import { OAuthClientInformationMixed, OAuthClientMetadata, OAuthTokens } from '@modelcontextprotocol/sdk/shared/auth.js';
 import { checkResourceAllowed } from '@modelcontextprotocol/sdk/shared/auth-utils.js';
-import { KeyStoreService } from '@theia/core/lib/common/key-store';
-import { nls } from '@theia/core/lib/common/nls';
+import { KeyStoreService } from '@ogun/core/lib/common/key-store';
+import { nls } from '@ogun/core/lib/common/nls';
 import { MCPOAuthConfig, MCPOAuthFrontendDelegate } from '../common/mcp-oauth';
 import { MCPOAuthCallbackService } from './mcp-oauth-callback-service';
 import { MCPOAuthAuthorizationRequiredError, MCPOAuthAuthorizationServerError } from './mcp-oauth-errors';

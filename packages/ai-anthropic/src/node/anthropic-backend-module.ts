@@ -14,11 +14,11 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { ContainerModule } from '@theia/core/shared/inversify';
+import { ContainerModule } from '@ogun/core/shared/inversify';
 import { ANTHROPIC_LANGUAGE_MODELS_MANAGER_PATH, AnthropicLanguageModelsManager } from '../common/anthropic-language-models-manager';
-import { ConnectionHandler, PreferenceContribution, RpcConnectionHandler } from '@theia/core';
+import { ConnectionHandler, PreferenceContribution, RpcConnectionHandler } from '@ogun/core';
 import { AnthropicLanguageModelsManagerImpl } from './anthropic-language-models-manager-impl';
-import { ConnectionContainerModule } from '@theia/core/lib/node/messaging/connection-container-module';
+import { ConnectionContainerModule } from '@ogun/core/lib/node/messaging/connection-container-module';
 import { AnthropicPreferencesSchema } from '../common/anthropic-preferences';
 
 // We use a connection module to handle AI services separately for each frontend.

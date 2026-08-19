@@ -15,8 +15,8 @@
 // *****************************************************************************
 
 import * as chai from 'chai';
-import { Emitter, Event } from '@theia/core/lib/common/event';
-import { DisposableCollection } from '@theia/core/lib/common/disposable';
+import { Emitter, Event } from '@ogun/core/lib/common/event';
+import { DisposableCollection } from '@ogun/core/lib/common/disposable';
 
 const expect = chai.expect;
 

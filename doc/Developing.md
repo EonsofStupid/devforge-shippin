@@ -152,8 +152,8 @@ Theia repository has multiple folders:
 
 - `packages` folder contains runtime packages, as the core package and extensions to it
 - `dev-packages` folder contains devtime packages
-  - [@theia/cli](../dev-packages/cli/README.md) is a command line tool to manage Theia applications
-  - [@theia/ext-scripts](../dev-packages/private-ext-scripts/README.md) is a command line tool to share scripts between Theia runtime packages
+  - [@ogun/cli](../dev-packages/cli/README.md) is a command line tool to manage Theia applications
+  - [@ogun/ext-scripts](../dev-packages/private-ext-scripts/README.md) is a command line tool to share scripts between Theia runtime packages
 - `examples` folder contains example applications, both Electron-based and browser-based
 - `doc` folder provides documentation about how Theia works
 - `scripts` folder contains JavaScript scripts used by npm scripts when
@@ -215,7 +215,7 @@ Note that `npm run all` does linting.
 From the root:
 
 ```sh
-npx lerna run compile --scope @theia/core
+npx lerna run compile --scope @ogun/core
 ```
 
 From the package:
@@ -282,7 +282,7 @@ npm run watch:electron
 You can use `npx` to watch a single package:
 
 ```sh
-npx lerna run watch --scope @theia/package-name
+npx lerna run watch --scope @ogun/package-name
 ```
 
 ### Watch a specific package and its local upstream dependencies
@@ -299,10 +299,10 @@ In this mode, TypeScript only compiles what changed along with its dependents.
 
 #### Using Theia's `run` utility
 
-Let assume you have to work for instance in the `@theia/navigator` extension. But you might have to apply changes in any of its upstream dependencies such as `@theia/filesystem` or `@theia/core`, you can either do `npm run watch` which could be super expensive, as it watches all the packages. Or you can do `npx run watch @theia/navigator` and `npx run watch @theia/filesystem` and `npx run watch @theia/core` in three individual shells. Or you can do the following single-liner:
+Let assume you have to work for instance in the `@ogun/navigator` extension. But you might have to apply changes in any of its upstream dependencies such as `@ogun/filesystem` or `@ogun/core`, you can either do `npm run watch` which could be super expensive, as it watches all the packages. Or you can do `npx run watch @ogun/navigator` and `npx run watch @ogun/filesystem` and `npx run watch @ogun/core` in three individual shells. Or you can do the following single-liner:
 
 ```sh
-npx lerna run watch --scope @theia/navigator --include-filtered-dependencies --parallel
+npx lerna run watch --scope @ogun/navigator --include-filtered-dependencies --parallel
 ```
 
 ## Debugging

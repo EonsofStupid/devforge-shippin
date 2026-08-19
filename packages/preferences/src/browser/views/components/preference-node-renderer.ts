@@ -14,20 +14,20 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { injectable, inject, postConstruct } from '@theia/core/shared/inversify';
+import { injectable, inject, postConstruct } from '@ogun/core/shared/inversify';
 import {
     ContextMenuRenderer, codicon, OpenerService, open
-} from '@theia/core/lib/browser';
+} from '@ogun/core/lib/browser';
 import { Preference, PreferenceMenus } from '../../util/preference-types';
 import { PreferenceTreeLabelProvider } from '../../util/preference-tree-label-provider';
 import { PreferencesScopeTabBar } from '../preference-scope-tabbar-widget';
-import { Disposable, nls, PreferenceDataProperty, PreferenceInspection, PreferenceScope, PreferenceService } from '@theia/core/lib/common';
-import { JSONValue } from '@theia/core/shared/@lumino/coreutils';
-import debounce = require('@theia/core/shared/lodash.debounce');
+import { Disposable, nls, PreferenceDataProperty, PreferenceInspection, PreferenceScope, PreferenceService } from '@ogun/core/lib/common';
+import { JSONValue } from '@ogun/core/shared/@lumino/coreutils';
+import debounce = require('@ogun/core/shared/lodash.debounce');
 import { PreferenceTreeModel } from '../../preference-tree-model';
 import { PreferencesSearchbarWidget } from '../preference-searchbar-widget';
-import * as DOMPurify from '@theia/core/shared/dompurify';
-import URI from '@theia/core/lib/common/uri';
+import * as DOMPurify from '@ogun/core/shared/dompurify';
+import URI from '@ogun/core/lib/common/uri';
 import { PreferenceMarkdownRenderer } from './preference-markdown-renderer';
 
 export const PreferenceNodeRendererFactory = Symbol('PreferenceNodeRendererFactory');

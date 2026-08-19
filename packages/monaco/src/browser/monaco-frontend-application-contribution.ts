@@ -14,23 +14,23 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { injectable, inject, postConstruct } from '@theia/core/shared/inversify';
-import { ColorTheme, CssStyleCollector, FrontendApplicationContribution, QuickAccessRegistry, StylingParticipant } from '@theia/core/lib/browser';
+import { injectable, inject, postConstruct } from '@ogun/core/shared/inversify';
+import { ColorTheme, CssStyleCollector, FrontendApplicationContribution, QuickAccessRegistry, StylingParticipant } from '@ogun/core/lib/browser';
 import { MonacoSnippetSuggestProvider } from './monaco-snippet-suggest-provider';
 import * as monaco from '@theia/monaco-editor-core';
 import { setSnippetSuggestSupport } from '@theia/monaco-editor-core/esm/vs/editor/contrib/suggest/browser/suggest';
 import { CompletionItemProvider } from '@theia/monaco-editor-core/esm/vs/editor/common/languages';
 import { MonacoTextModelService } from './monaco-text-model-service';
 import { MonacoThemingService } from './monaco-theming-service';
-import { isHighContrast } from '@theia/core/lib/common/theme';
+import { isHighContrast } from '@ogun/core/lib/common/theme';
 import { editorOptionsRegistry, IEditorOption } from '@theia/monaco-editor-core/esm/vs/editor/common/config/editorOptions';
-import { DisposableCollection, MAX_SAFE_INTEGER, PreferenceSchemaService } from '@theia/core';
-import { editorGeneratedPreferenceProperties } from '@theia/editor/lib/common/editor-generated-preference-schema';
-import { WorkspaceFileService } from '@theia/workspace/lib/common/workspace-file-service';
+import { DisposableCollection, MAX_SAFE_INTEGER, PreferenceSchemaService } from '@ogun/core';
+import { editorGeneratedPreferenceProperties } from '@ogun/editor/lib/common/editor-generated-preference-schema';
+import { WorkspaceFileService } from '@ogun/workspace/lib/common/workspace-file-service';
 import { StandaloneServices } from '@theia/monaco-editor-core/esm/vs/editor/standalone/browser/standaloneServices';
 import { IStandaloneThemeService } from '@theia/monaco-editor-core/esm/vs/editor/standalone/common/standaloneTheme';
 import { MonacoStandaloneThemeService } from './monaco-standalone-theme-service';
-import { SecondaryWindowService } from '@theia/core/lib/browser/window/secondary-window-service';
+import { SecondaryWindowService } from '@ogun/core/lib/browser/window/secondary-window-service';
 import { registerWindow } from '@theia/monaco-editor-core/esm/vs/base/browser/dom';
 
 type CodeWindow = Window & typeof globalThis & {

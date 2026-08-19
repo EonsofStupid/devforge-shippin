@@ -14,9 +14,9 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { nls } from '@theia/core';
-import { inject } from '@theia/core/shared/inversify';
-import { AbstractDialog, Dialog, DialogProps, Message } from '@theia/core/lib/browser';
+import { nls } from '@ogun/core';
+import { inject } from '@ogun/core/shared/inversify';
+import { AbstractDialog, Dialog, DialogProps, Message } from '@ogun/core/lib/browser';
 
 export class UntitledWorkspaceExitDialog extends AbstractDialog<UntitledWorkspaceExitDialog.Options> {
     protected readonly dontSaveButton: HTMLButtonElement;

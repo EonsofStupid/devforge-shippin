@@ -14,7 +14,7 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { nls } from '@theia/core';
+import { nls } from '@ogun/core';
 
 export const NOTIFICATION_TYPE_OFF = 'off';
 export const NOTIFICATION_TYPE_OS_NOTIFICATION = 'os-notification';

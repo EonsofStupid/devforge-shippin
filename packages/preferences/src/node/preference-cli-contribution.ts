@@ -14,10 +14,10 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { injectable } from '@theia/core/shared/inversify';
-import { Argv } from '@theia/core/shared/yargs';
-import { CliContribution } from '@theia/core/lib/node/cli';
-import { RemoteCliContext, RemoteCliContribution } from '@theia/core/lib/node/remote/remote-cli-contribution';
+import { injectable } from '@ogun/core/shared/inversify';
+import { Argv } from '@ogun/core/shared/yargs';
+import { CliContribution } from '@ogun/core/lib/node/cli';
+import { RemoteCliContext, RemoteCliContribution } from '@ogun/core/lib/node/remote/remote-cli-contribution';
 import { CliPreferences } from '../common/cli-preferences';
 
 @injectable()

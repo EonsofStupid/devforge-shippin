@@ -14,11 +14,11 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { injectable, inject, unmanaged } from '@theia/core/shared/inversify';
-import { ElementExt } from '@theia/core/shared/@lumino/domutils';
-import URI from '@theia/core/lib/common/uri';
-import { ContextKeyService } from '@theia/core/lib/browser/context-key-service';
-import { DisposableCollection, Disposable, Emitter, Event, nullToUndefined, MaybeNull } from '@theia/core/lib/common';
+import { injectable, inject, unmanaged } from '@ogun/core/shared/inversify';
+import { ElementExt } from '@ogun/core/shared/@lumino/domutils';
+import URI from '@ogun/core/lib/common/uri';
+import { ContextKeyService } from '@ogun/core/lib/browser/context-key-service';
+import { DisposableCollection, Disposable, Emitter, Event, nullToUndefined, MaybeNull } from '@ogun/core/lib/common';
 import {
     Dimension,
     EditorManager,
@@ -37,12 +37,12 @@ import {
     EncodingMode,
     EditorDecorationOptions,
     MouseTargetType
-} from '@theia/editor/lib/browser';
+} from '@ogun/editor/lib/browser';
 import { MonacoEditorModel } from './monaco-editor-model';
 import { MonacoToProtocolConverter } from './monaco-to-protocol-converter';
 import { ProtocolToMonacoConverter } from './protocol-to-monaco-converter';
-import { TextEdit } from '@theia/core/shared/vscode-languageserver-protocol';
-import { UTF8 } from '@theia/core/lib/common/encodings';
+import { TextEdit } from '@ogun/core/shared/vscode-languageserver-protocol';
+import { UTF8 } from '@ogun/core/lib/common/encodings';
 import * as monaco from '@theia/monaco-editor-core';
 import { StandaloneServices } from '@theia/monaco-editor-core/esm/vs/editor/standalone/browser/standaloneServices';
 import { ILanguageService } from '@theia/monaco-editor-core/esm/vs/editor/common/languages/language';
@@ -50,7 +50,7 @@ import { IInstantiationService, ServiceIdentifier } from '@theia/monaco-editor-c
 import { ICodeEditor, IMouseTargetMargin } from '@theia/monaco-editor-core/esm/vs/editor/browser/editorBrowser';
 import { IStandaloneEditorConstructionOptions, StandaloneCodeEditor, StandaloneEditor } from '@theia/monaco-editor-core/esm/vs/editor/standalone/browser/standaloneCodeEditor';
 import { ServiceCollection } from '@theia/monaco-editor-core/esm/vs/platform/instantiation/common/serviceCollection';
-import { MarkdownString } from '@theia/core/lib/common/markdown-rendering';
+import { MarkdownString } from '@ogun/core/lib/common/markdown-rendering';
 import { ConfigurationChangedEvent, IEditorOptions, ShowLightbulbIconMode } from '@theia/monaco-editor-core/esm/vs/editor/common/config/editorOptions';
 import { ICodeEditorService } from '@theia/monaco-editor-core/esm/vs/editor/browser/services/codeEditorService';
 import { ICommandService } from '@theia/monaco-editor-core/esm/vs/platform/commands/common/commands';
@@ -62,7 +62,7 @@ import { IAccessibilityService } from '@theia/monaco-editor-core/esm/vs/platform
 import { ILanguageConfigurationService } from '@theia/monaco-editor-core/esm/vs/editor/common/languages/languageConfigurationRegistry';
 import { ILanguageFeaturesService } from '@theia/monaco-editor-core/esm/vs/editor/common/services/languageFeatures';
 import * as objects from '@theia/monaco-editor-core/esm/vs/base/common/objects';
-import { Selection } from '@theia/editor/lib/browser/editor';
+import { Selection } from '@ogun/editor/lib/browser/editor';
 import { IHoverService, WorkbenchHoverDelegate } from '@theia/monaco-editor-core/esm/vs/platform/hover/browser/hover';
 import { setHoverDelegateFactory } from '@theia/monaco-editor-core/esm/vs/base/browser/ui/hover/hoverDelegateFactory';
 import { IMarkdownRendererService } from '@theia/monaco-editor-core/esm/vs/platform/markdown/browser/markdownRenderer';

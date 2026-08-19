@@ -24,8 +24,8 @@ import {
     ToolResultPartDto,
     uint8ArrayToBase64,
 } from '../../common/lm-tool-protocol';
-import { ToolCallContentResult } from '@theia/ai-core/lib/common/language-model';
-import { BinaryBuffer } from '@theia/core/lib/common/buffer';
+import { ToolCallContentResult } from '@ogun/ai-core/lib/common/language-model';
+import { BinaryBuffer } from '@ogun/core/lib/common/buffer';
 
 // Access private methods for testing
 interface LmToolMainInternals {

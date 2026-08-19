@@ -14,12 +14,12 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { inject, injectable, postConstruct } from '@theia/core/shared/inversify';
-import { JSONValue } from '@theia/core/shared/@lumino/coreutils';
-import { Emitter, Event } from '@theia/core';
-import { Deferred } from '@theia/core/lib/common/promise-util';
-import { PreferenceInspection, PreferenceService } from '@theia/core/lib/common/preferences';
-import { WorkspaceTrustService } from '@theia/workspace/lib/browser/workspace-trust-service';
+import { inject, injectable, postConstruct } from '@ogun/core/shared/inversify';
+import { JSONValue } from '@ogun/core/shared/@lumino/coreutils';
+import { Emitter, Event } from '@ogun/core';
+import { Deferred } from '@ogun/core/lib/common/promise-util';
+import { PreferenceInspection, PreferenceService } from '@ogun/core/lib/common/preferences';
+import { WorkspaceTrustService } from '@ogun/workspace/lib/browser/workspace-trust-service';
 
 /**
  * Helper for reading AI preferences that must ignore workspace/folder scopes

@@ -14,7 +14,7 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { Emitter } from '@theia/core';
+import { Emitter } from '@ogun/core';
 import { DebugConfiguration } from '../common/debug-common';
 import { DebugCompound } from '../common/debug-compound';
 

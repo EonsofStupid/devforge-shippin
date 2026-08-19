@@ -14,10 +14,10 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { ReactRenderer } from '@theia/core/lib/browser/widgets/react-renderer';
+import { ReactRenderer } from '@ogun/core/lib/browser/widgets/react-renderer';
 import { FileDialogTree } from './file-dialog-tree';
-import * as React from '@theia/core/shared/react';
-import { inject, injectable } from '@theia/core/shared/inversify';
+import * as React from '@ogun/core/shared/react';
+import { inject, injectable } from '@ogun/core/shared/inversify';
 
 export const FILE_TREE_FILTERS_LIST_CLASS = 'theia-FileTreeFiltersList';
 

@@ -14,14 +14,14 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { Message } from '@theia/core/shared/@lumino/messaging';
-import { Disposable, SelectionService } from '@theia/core';
-import { BaseWidget, codicon, MessageLoop, Widget } from '@theia/core/lib/browser/widgets/widget';
-import { DisposableCollection } from '@theia/core/lib/common/disposable';
-import { inject, injectable, postConstruct } from '@theia/core/shared/inversify';
+import { Message } from '@ogun/core/shared/@lumino/messaging';
+import { Disposable, SelectionService } from '@ogun/core';
+import { BaseWidget, codicon, MessageLoop, Widget } from '@ogun/core/lib/browser/widgets/widget';
+import { DisposableCollection } from '@ogun/core/lib/common/disposable';
+import { inject, injectable, postConstruct } from '@ogun/core/shared/inversify';
 import { PropertyViewContentWidget } from './property-view-content-widget';
 import { PropertyViewService } from './property-view-service';
-import { nls } from '@theia/core/lib/common/nls';
+import { nls } from '@ogun/core/lib/common/nls';
 
 /**
  * The main container for the selection-specific property widgets.

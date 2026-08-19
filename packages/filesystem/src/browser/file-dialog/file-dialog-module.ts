@@ -14,7 +14,7 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { ContainerModule } from '@theia/core/shared/inversify';
+import { ContainerModule } from '@ogun/core/shared/inversify';
 import { LocationListRenderer, LocationListRendererFactory, LocationListRendererOptions } from '../location';
 import { FileDialogHiddenFilesToggleRenderer, HiddenFilesToggleRendererFactory } from './file-dialog-hidden-files-renderer';
 import { DefaultFileDialogService, FileDialogService } from './file-dialog-service';

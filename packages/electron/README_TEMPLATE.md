@@ -12,12 +12,12 @@
 
 ## Description
 
-The `@theia/electron` extension bundles all Electron-specific dependencies and core functionalities.
+The `@ogun/electron` extension bundles all Electron-specific dependencies and core functionalities.
 
 ## Re-Exports
 
 {{#reExportsDirectories}}
-- `@theia/electron/{{&directory}}/...`
+- `@ogun/electron/{{&directory}}/...`
     {{#packages}}
     {{#modules}}
   - `{{&moduleName}}` (from [`{{&packageName}}@{{&versionRange}}`]({{&npmUrl}}))

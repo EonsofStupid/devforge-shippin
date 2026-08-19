@@ -14,11 +14,11 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { MessageService, nls } from '@theia/core';
-import URI from '@theia/core/lib/common/uri';
-import { ConfirmDialog } from '@theia/core/lib/browser/dialogs';
-import { OpenHandler } from '@theia/core/lib/browser/opener-service';
-import { inject, injectable } from '@theia/core/shared/inversify';
+import { MessageService, nls } from '@ogun/core';
+import URI from '@ogun/core/lib/common/uri';
+import { ConfirmDialog } from '@ogun/core/lib/browser/dialogs';
+import { OpenHandler } from '@ogun/core/lib/browser/opener-service';
+import { inject, injectable } from '@ogun/core/shared/inversify';
 import { RegistryFetchService } from '../../common/registry-fetch-service';
 import { ResolvedSkillEntry } from '../../common/skill/skill-registry-types';
 import { SkillInstallService } from './skill-install-service';

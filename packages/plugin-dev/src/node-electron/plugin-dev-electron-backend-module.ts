@@ -15,8 +15,8 @@
 // *****************************************************************************
 
 import { HostedInstanceManager, ElectronNodeHostedPluginRunner } from '../node/hosted-instance-manager';
-import { ContainerModule } from '@theia/core/shared/inversify';
-import { ConnectionContainerModule } from '@theia/core/lib/node/messaging/connection-container-module';
+import { ContainerModule } from '@ogun/core/shared/inversify';
+import { ConnectionContainerModule } from '@ogun/core/lib/node/messaging/connection-container-module';
 import { bindCommonHostedBackend } from '../node/plugin-dev-backend-module';
 
 const hostedBackendConnectionModule = ConnectionContainerModule.create(({ bind }) => {

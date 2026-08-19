@@ -16,8 +16,8 @@
 
 import { expect } from 'chai';
 import { RemoteAutoShutdownService } from './remote-auto-shutdown-service';
-import { ILogger } from '@theia/core';
-import { Arguments } from '@theia/core/shared/yargs';
+import { ILogger } from '@ogun/core';
+import { Arguments } from '@ogun/core/shared/yargs';
 import * as http from 'http';
 import { EventEmitter } from 'events';
 import { Socket } from 'socket.io';

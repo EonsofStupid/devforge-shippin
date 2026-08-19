@@ -14,22 +14,22 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { inject, injectable, optional } from '@theia/core/shared/inversify';
+import { inject, injectable, optional } from '@ogun/core/shared/inversify';
 import { TaskService } from './task-service';
 import { TaskInfo, TaskConfiguration, TaskCustomization, TaskScope, TaskConfigurationScope, TaskDefinition } from '../common/task-protocol';
 import { TaskDefinitionRegistry } from './task-definition-registry';
-import URI from '@theia/core/lib/common/uri';
-import { LabelProvider, QuickAccessProvider, QuickAccessRegistry, QuickInputService, QuickPick } from '@theia/core/lib/browser';
-import { WorkspaceService } from '@theia/workspace/lib/browser';
-import { TerminalService } from '@theia/terminal/lib/browser/base/terminal-service';
+import URI from '@ogun/core/lib/common/uri';
+import { LabelProvider, QuickAccessProvider, QuickAccessRegistry, QuickInputService, QuickPick } from '@ogun/core/lib/browser';
+import { WorkspaceService } from '@ogun/workspace/lib/browser';
+import { TerminalService } from '@ogun/terminal/lib/browser/base/terminal-service';
 import { ALL_TASK_TYPES } from './provided-task-configurations';
 import { TaskNameResolver } from './task-name-resolver';
 import { TaskSourceResolver } from './task-source-resolver';
 import { TaskConfigurationManager } from './task-configuration-manager';
 import { filterItems, QuickInputButton, QuickPickItem, QuickPickItemOrSeparator, QuickPicks, QuickPickInput, QuickPickValue } from
-    '@theia/core/lib/browser/quick-input/quick-input-service';
-import { CancellationToken, PreferenceService } from '@theia/core/lib/common';
-import { nls } from '@theia/core/lib/common/nls';
+    '@ogun/core/lib/browser/quick-input/quick-input-service';
+import { CancellationToken, PreferenceService } from '@ogun/core/lib/common';
+import { nls } from '@ogun/core/lib/common/nls';
 import { TriggerAction } from '@theia/monaco-editor-core/esm/vs/platform/quickinput/browser/pickerQuickAccess';
 
 export namespace ConfigureTaskAction {

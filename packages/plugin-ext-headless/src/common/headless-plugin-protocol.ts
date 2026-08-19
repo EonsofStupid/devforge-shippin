@@ -14,9 +14,9 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-export * from '@theia/plugin-ext';
+export * from '@ogun/plugin-ext';
 
-declare module '@theia/plugin-ext' {
+declare module '@ogun/plugin-ext' {
   /**
    * Extension of the package manifest interface defined by the core plugin framework.
    */

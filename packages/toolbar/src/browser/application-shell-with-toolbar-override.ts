@@ -19,11 +19,11 @@ import {
     Layout,
     MAXIMIZED_CLASS,
     TheiaSplitPanel,
-} from '@theia/core/lib/browser';
-import { inject, injectable, interfaces, postConstruct } from '@theia/core/shared/inversify';
+} from '@ogun/core/lib/browser';
+import { inject, injectable, interfaces, postConstruct } from '@ogun/core/shared/inversify';
 import { Toolbar, ToolbarFactory } from './toolbar-interfaces';
 import { ToolbarPreferences, TOOLBAR_ENABLE_PREFERENCE_ID } from '../common/toolbar-preference-contribution';
-import { PreferenceService } from '@theia/core';
+import { PreferenceService } from '@ogun/core';
 
 @injectable()
 export class ApplicationShellWithToolbarOverride extends ApplicationShell {

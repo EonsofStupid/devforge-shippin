@@ -12,7 +12,7 @@
 
 ## Description
 
-The `@theia/ai-codex` integrates OpenAI's Codex agent into the Theia platform, providing natural language coding assistance through the chat interface.
+The `@ogun/ai-codex` integrates OpenAI's Codex agent into the Theia platform, providing natural language coding assistance through the chat interface.
 
 ## Features
 
@@ -54,7 +54,7 @@ If you already use OpenAI features in Theia, Codex will automatically use that A
 
 ## Additional Information
 
-- [API documentation for `@theia/ai-codex`](https://eclipse-theia.github.io/theia/docs/next/modules/_theia_ai-codex.html)
+- [API documentation for `@ogun/ai-codex`](https://eclipse-theia.github.io/theia/docs/next/modules/_theia_ai-codex.html)
 - [Theia - GitHub](https://github.com/eclipse-theia/theia)
 - [Theia - Website](https://theia-ide.org/)
 - [OpenAI Codex SDK](https://github.com/openai/codex)

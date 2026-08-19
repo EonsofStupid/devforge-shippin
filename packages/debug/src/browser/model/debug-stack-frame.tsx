@@ -20,18 +20,18 @@
  *--------------------------------------------------------------------------------------------*/
 // Based on https://github.com/theia-ide/vscode/blob/standalone/0.19.x/src/vs/workbench/contrib/debug/common/debugModel.ts
 
-import * as React from '@theia/core/shared/react';
-import { DISABLED_CLASS } from '@theia/core/lib/browser';
-import { EditorWidget, Range, Position, EditorOpenerOptions } from '@theia/editor/lib/browser';
+import * as React from '@ogun/core/shared/react';
+import { DISABLED_CLASS } from '@ogun/core/lib/browser';
+import { EditorWidget, Range, Position, EditorOpenerOptions } from '@ogun/editor/lib/browser';
 import { DebugProtocol } from '@vscode/debugprotocol/lib/debugProtocol';
-import { TreeElement } from '@theia/core/lib/browser/source-tree';
+import { TreeElement } from '@ogun/core/lib/browser/source-tree';
 import { DebugScope } from '../console/debug-console-items';
 import { DebugSource } from './debug-source';
-import { RecursivePartial } from '@theia/core';
+import { RecursivePartial } from '@ogun/core';
 import { DebugSession } from '../debug-session';
 import { DebugThread } from './debug-thread';
 import * as monaco from '@theia/monaco-editor-core';
-import { stringHash } from '@theia/core/lib/common/hash';
+import { stringHash } from '@ogun/core/lib/common/hash';
 
 export class DebugStackFrameData {
     readonly raw: DebugProtocol.StackFrame;

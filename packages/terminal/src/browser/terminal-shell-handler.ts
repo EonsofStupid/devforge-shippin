@@ -14,9 +14,9 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { inject, injectable } from '@theia/core/shared/inversify';
-import { ViewColumn } from '@theia/core/lib/common';
-import { ApplicationShell, WidgetOpenerOptions } from '@theia/core/lib/browser';
+import { inject, injectable } from '@ogun/core/shared/inversify';
+import { ViewColumn } from '@ogun/core/lib/common';
+import { ApplicationShell, WidgetOpenerOptions } from '@ogun/core/lib/browser';
 import { TerminalCreationHandler } from './terminal-creation-handler';
 import { TerminalWidget, TerminalLocation } from './base/terminal-widget';
 import { TerminalService } from './base/terminal-service';

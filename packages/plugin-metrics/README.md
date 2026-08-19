@@ -12,7 +12,7 @@
 
 ## Description
 
-The `@theia/plugin-metrics` extension contributes metrics for plugins in the [Prometheus](https://prometheus.io/) format.
+The `@ogun/plugin-metrics` extension contributes metrics for plugins in the [Prometheus](https://prometheus.io/) format.
 
 ### What Metrics it Detects
 
@@ -49,7 +49,7 @@ Then, when you load up the /metrics endpoint you will see the new language metri
 
 ## Additional Information
 
-- [API documentation for `@theia/plugin-metrics`](https://eclipse-theia.github.io/theia/docs/next/modules/_theia_plugin-metrics.html)
+- [API documentation for `@ogun/plugin-metrics`](https://eclipse-theia.github.io/theia/docs/next/modules/_theia_plugin-metrics.html)
 - [Theia - GitHub](https://github.com/eclipse-theia/theia)
 - [Theia - Website](https://theia-ide.org/)
 

@@ -12,11 +12,11 @@
 
 ## Description
 
-The `@theia/ai-claude-code` integrates Anthropic's Claude Code as an agent into the Theia platform.
+The `@ogun/ai-claude-code` integrates Anthropic's Claude Code as an agent into the Theia platform.
 
 ## Additional Information
 
-- [API documentation for `@theia/ai-claude-code`](https://eclipse-theia.github.io/theia/docs/next/modules/_theia_ai-claude-code.html)
+- [API documentation for `@ogun/ai-claude-code`](https://eclipse-theia.github.io/theia/docs/next/modules/_theia_ai-claude-code.html)
 - [Theia - GitHub](https://github.com/eclipse-theia/theia)
 - [Theia - Website](https://theia-ide.org/)
 

@@ -14,8 +14,8 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { Event } from '@theia/core/lib/common/event';
-import { TreeElement } from '@theia/core/lib/browser/source-tree';
+import { Event } from '@ogun/core/lib/common/event';
+import { TreeElement } from '@ogun/core/lib/browser/source-tree';
 
 export const ExtensionsSourceContribution = Symbol('ExtensionsSourceContribution');
 
@@ -28,7 +28,7 @@ export interface SearchContext {
      * Toggled by the `extensions.onlyShowVerifiedExtensions` preference. The preference
      * was introduced to filter the OVSX result set down to namespace-verified publishers,
      * but the same flag also drives "verified" filters in other contributions - each one
-     * decides what "verified" means in its domain (e.g. `@theia/ai-registry` reads it as
+     * decides what "verified" means in its domain (e.g. `@ogun/ai-registry` reads it as
      * "approved in the AI registry"). Document this domain mapping next to any consumer.
      */
     readonly verifiedOnly: boolean;

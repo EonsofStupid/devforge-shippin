@@ -15,13 +15,13 @@
 // *****************************************************************************
 
 import { PluginDeployerFileHandler, PluginDeployerEntry, PluginDeployerFileHandlerContext, PluginType } from '../../../common/plugin-protocol';
-import type { URI } from '@theia/core';
-import { inject, injectable } from '@theia/core/shared/inversify';
-import { Deferred } from '@theia/core/lib/common/promise-util';
+import type { URI } from '@ogun/core';
+import { inject, injectable } from '@ogun/core/shared/inversify';
+import { Deferred } from '@ogun/core/lib/common/promise-util';
 import { getTempDirPathAsync } from '../temp-dir-util';
-import * as fs from '@theia/core/shared/fs-extra';
+import * as fs from '@ogun/core/shared/fs-extra';
 import * as filenamify from 'filenamify';
-import { FileUri } from '@theia/core/lib/common/file-uri';
+import { FileUri } from '@ogun/core/lib/common/file-uri';
 import { PluginTheiaEnvironment } from '../../common/plugin-theia-environment';
 
 @injectable()

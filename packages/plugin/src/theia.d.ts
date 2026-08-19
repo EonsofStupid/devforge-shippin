@@ -54,7 +54,7 @@ import './theia.proposed.statusBarItemTooltip';
 /* eslint-disable @typescript-eslint/no-explicit-any */
 /* eslint-disable max-len */
 
-export module '@theia/plugin' {
+export module '@ogun/plugin' {
 
     /**
      * The version of the Theia API.

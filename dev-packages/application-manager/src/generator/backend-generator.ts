@@ -35,7 +35,7 @@ export class BackendGenerator extends AbstractGenerator {
     protected compileElectronMain(electronMainModules?: Map<string, string>): string {
         return `// @ts-check
 
-require('@theia/core/shared/reflect-metadata');
+require('@ogun/core/shared/reflect-metadata');
 ${this.emitStartupLogger('Electron main', 'electron main start', { requirePerformance: true })}
 ${this.emitStartupLog('loading modules...')}
 
@@ -53,14 +53,14 @@ process.env.LC_NUMERIC = 'C';
     // in your dotfiles (.bashrc/.bash_profile/.zshrc/etc).
     // https://github.com/electron/electron/issues/550#issuecomment-162037357
     // https://github.com/eclipse-theia/theia/pull/3534#issuecomment-439689082
-    (await require('@theia/core/electron-shared/fix-path')).default();
+    (await require('@ogun/core/electron-shared/fix-path')).default();
 
     const { resolve } = require('path');
     const theiaAppProjectPath = resolve(__dirname, '..', '..');
     process.env.THEIA_APP_PROJECT_PATH = theiaAppProjectPath;
-    const { default: electronMainApplicationModule } = require('@theia/core/lib/electron-main/electron-main-application-module');
-    const { ElectronMainApplication, ElectronMainApplicationGlobals } = require('@theia/core/lib/electron-main/electron-main-application');
-    const { Container } = require('@theia/core/shared/inversify');
+    const { default: electronMainApplicationModule } = require('@ogun/core/lib/electron-main/electron-main-application-module');
+    const { ElectronMainApplication, ElectronMainApplicationGlobals } = require('@ogun/core/lib/electron-main/electron-main-application');
+    const { Container } = require('@ogun/core/shared/inversify');
     const { app } = require('electron');
 
     const config = ${this.prettyStringify(this.pck.props.frontend.config)};
@@ -131,12 +131,12 @@ if ('ELECTRON_RUN_AS_NODE' in process.env) {
 
 const path = require('path');
 process.env.THEIA_APP_PROJECT_PATH = path.resolve(__dirname, '..', '..')
-const express = require('@theia/core/shared/express');
-const { Container } = require('@theia/core/shared/inversify');
-const { BackendApplication, BackendApplicationServer, CliManager } = require('@theia/core/lib/node');
-const { backendApplicationModule } = require('@theia/core/lib/node/backend-application-module');
-const { messagingBackendModule } = require('@theia/core/lib/node/messaging/messaging-backend-module');
-const { loggerBackendModule } = require('@theia/core/lib/node/logger-backend-module');
+const express = require('@ogun/core/shared/express');
+const { Container } = require('@ogun/core/shared/inversify');
+const { BackendApplication, BackendApplicationServer, CliManager } = require('@ogun/core/lib/node');
+const { backendApplicationModule } = require('@ogun/core/lib/node/backend-application-module');
+const { messagingBackendModule } = require('@ogun/core/lib/node/messaging/messaging-backend-module');
+const { loggerBackendModule } = require('@ogun/core/lib/node/logger-backend-module');
 
 const container = new Container();
 container.load(backendApplicationModule);
@@ -198,8 +198,8 @@ ${Array.from(backendModules.values(), jsModulePath => `\
         return `// @ts-check
 ${this.emitStartupLogger('Backend main', 'backend process start', { requirePerformance: true })}
 ${this.emitStartupLog('entry point loaded')}
-const { BackendApplicationConfigProvider } = require('@theia/core/lib/node/backend-application-config-provider');
-const main = require('@theia/core/lib/node/main');
+const { BackendApplicationConfigProvider } = require('@ogun/core/lib/node/backend-application-config-provider');
+const main = require('@ogun/core/lib/node/main');
 
 BackendApplicationConfigProvider.set(${this.prettyStringify(this.pck.props.backend.config)});
 

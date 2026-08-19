@@ -15,15 +15,15 @@
 // *****************************************************************************
 
 import { PreferenceLeafNodeRenderer, PreferenceNodeRenderer } from './preference-node-renderer';
-import { injectable, interfaces } from '@theia/core/shared/inversify';
-import { JSONValue } from '@theia/core/shared/@lumino/coreutils';
-import { SelectComponent, SelectOption } from '@theia/core/lib/browser/widgets/select-component';
+import { injectable, interfaces } from '@ogun/core/shared/inversify';
+import { JSONValue } from '@ogun/core/shared/@lumino/coreutils';
+import { SelectComponent, SelectOption } from '@ogun/core/lib/browser/widgets/select-component';
 import { Preference } from '../../util/preference-types';
 import { PreferenceLeafNodeRendererContribution } from './preference-node-renderer-creator';
-import * as React from '@theia/core/shared/react';
-import { createRoot } from '@theia/core/shared/react-dom/client';
-import { escapeInvisibleChars } from '@theia/core/lib/common/strings';
-import { PreferenceUtils } from '@theia/core';
+import * as React from '@ogun/core/shared/react';
+import { createRoot } from '@ogun/core/shared/react-dom/client';
+import { escapeInvisibleChars } from '@ogun/core/lib/common/strings';
+import { PreferenceUtils } from '@ogun/core';
 
 @injectable()
 export class PreferenceSelectInputRenderer extends PreferenceLeafNodeRenderer<JSONValue, HTMLDivElement> {

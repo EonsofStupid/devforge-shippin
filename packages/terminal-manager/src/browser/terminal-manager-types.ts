@@ -14,7 +14,7 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { Command, MenuPath } from '@theia/core';
+import { Command, MenuPath } from '@ogun/core';
 import {
     SelectableTreeNode,
     CompositeTreeNode,
@@ -22,8 +22,8 @@ import {
     codicon,
     ExpandableTreeNode,
     Widget,
-} from '@theia/core/lib/browser';
-import { TerminalWidgetFactoryOptions, TerminalWidgetImpl } from '@theia/terminal/lib/browser/terminal-widget-impl';
+} from '@ogun/core/lib/browser';
+import { TerminalWidgetFactoryOptions, TerminalWidgetImpl } from '@ogun/terminal/lib/browser/terminal-widget-impl';
 
 export namespace TerminalManagerCommands {
     export const MANAGER_NEW_TERMINAL_GROUP = Command.toLocalizedCommand({

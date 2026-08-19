@@ -1410,7 +1410,7 @@
               "mdDescription": "Skrót treści zatwierdzenia rejestru użytego do zainstalowania tego serwera.",
               "title": "Skrót konfiguracji rejestru"
             },
-            "mdDescription": "Metadane pochodzenia dla serwera zainstalowanego z rejestru AI. Autor: `@theia/ai-registry`; nie można edytować.",
+            "mdDescription": "Metadane pochodzenia dla serwera zainstalowanego z rejestru AI. Autor: `@ogun/ai-registry`; nie można edytować.",
             "serverId": {
               "mdDescription": "Określa wpis w rejestrze AI, z którego zainstalowano ten serwer.",
               "title": "Identyfikator serwera rejestru"

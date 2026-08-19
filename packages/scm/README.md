@@ -12,11 +12,11 @@
 
 ## Description
 
-The `@theia/scm` extension adds support for handling multiple source control managers, and includes a `SCM` (Source Control Manager) View which different source control providers (such as `Git` and `Mercurial`) can contribute to.
+The `@ogun/scm` extension adds support for handling multiple source control managers, and includes a `SCM` (Source Control Manager) View which different source control providers (such as `Git` and `Mercurial`) can contribute to.
 
 ## Additional Information
 
-- [API documentation for `@theia/scm`](https://eclipse-theia.github.io/theia/docs/next/modules/_theia_scm.html)
+- [API documentation for `@ogun/scm`](https://eclipse-theia.github.io/theia/docs/next/modules/_theia_scm.html)
 - [Theia - GitHub](https://github.com/eclipse-theia/theia)
 - [Theia - Website](https://theia-ide.org/)
 - [VS Code SCM Documentation](https://code.visualstudio.com/docs/editor/versioncontrol)

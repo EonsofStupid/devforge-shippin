@@ -14,19 +14,19 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import * as React from '@theia/core/shared/react';
-import { injectable, inject, named } from '@theia/core/shared/inversify';
-import { DisposableCollection, Disposable } from '@theia/core/lib/common/disposable';
-import URI from '@theia/core/lib/common/uri';
-import { UriSelection } from '@theia/core/lib/common/selection';
-import { isCancelled } from '@theia/core/lib/common/cancellation';
-import { ContextMenuRenderer, NodeProps, TreeProps, TreeNode, CompositeTreeNode, CompressedTreeWidget, CompressedNodeProps } from '@theia/core/lib/browser';
+import * as React from '@ogun/core/shared/react';
+import { injectable, inject, named } from '@ogun/core/shared/inversify';
+import { DisposableCollection, Disposable } from '@ogun/core/lib/common/disposable';
+import URI from '@ogun/core/lib/common/uri';
+import { UriSelection } from '@ogun/core/lib/common/selection';
+import { isCancelled } from '@ogun/core/lib/common/cancellation';
+import { ContextMenuRenderer, NodeProps, TreeProps, TreeNode, CompositeTreeNode, CompressedTreeWidget, CompressedNodeProps } from '@ogun/core/lib/browser';
 import { DirNode, FileStatNode, FileStatNodeData } from './file-tree';
 import { FileTreeModel } from './file-tree-model';
-import { IconThemeService } from '@theia/core/lib/browser/icon-theme-service';
-import { ApplicationShell } from '@theia/core/lib/browser/shell';
+import { IconThemeService } from '@ogun/core/lib/browser/icon-theme-service';
+import { ApplicationShell } from '@ogun/core/lib/browser/shell';
 import { FileStat, FileType } from '../../common/files';
-import { isOSX, ILogger } from '@theia/core';
+import { isOSX, ILogger } from '@ogun/core';
 import { FileUploadService } from '../../common/upload/file-upload';
 
 export const FILE_TREE_CLASS = 'theia-FileTree';

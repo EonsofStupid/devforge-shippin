@@ -14,12 +14,12 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { enableJSDOM } from '@theia/core/lib/browser/test/jsdom';
+import { enableJSDOM } from '@ogun/core/lib/browser/test/jsdom';
 let disableJSDOM = enableJSDOM();
 
-import URI from '@theia/core/lib/common/uri';
+import URI from '@ogun/core/lib/common/uri';
 import { expect } from 'chai';
-import * as React from '@theia/core/shared/react';
+import * as React from '@ogun/core/shared/react';
 import type { FileDialogModel } from '../file-dialog/file-dialog-model';
 import { LocationListRenderer } from './location-renderer';
 import type { LocationService } from './location-service';

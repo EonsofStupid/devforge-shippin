@@ -12,7 +12,7 @@
 
 ## Description
 
-The `@theia/preferences` extension implements the preferences API defined in `@theia/core`, including the four preference providers:
+The `@ogun/preferences` extension implements the preferences API defined in `@ogun/core`, including the four preference providers:
 
 - `Default` Preference, which serves as default values of preferences,
 - `User` Preference for the user home directory, which has precedence over the default values,
@@ -60,7 +60,7 @@ Example of a workspace file below:
 
 ## Additional Information
 
-- [API documentation for `@theia/preferences`](https://eclipse-theia.github.io/theia/docs/next/modules/_theia_preferences.html)
+- [API documentation for `@ogun/preferences`](https://eclipse-theia.github.io/theia/docs/next/modules/_theia_preferences.html)
 - [Theia - GitHub](https://github.com/eclipse-theia/theia)
 - [Theia - Website](https://theia-ide.org/)
 

@@ -16,9 +16,9 @@
 
 /* eslint-disable @typescript-eslint/no-explicit-any */
 
-import { inject, injectable, postConstruct } from '@theia/core/shared/inversify';
-import { nls } from '@theia/core';
-import { Localization } from '@theia/core/lib/common/i18n/localization';
+import { inject, injectable, postConstruct } from '@ogun/core/shared/inversify';
+import { nls } from '@ogun/core';
+import { Localization } from '@ogun/core/lib/common/i18n/localization';
 import { LocalizationExt, LocalizationMain, Plugin, PLUGIN_RPC_CONTEXT, StringDetails } from '../common';
 import { LanguagePackBundle } from '../common/language-pack-service';
 import { RPCProtocol } from '../common/rpc-protocol';

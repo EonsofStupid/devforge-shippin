@@ -14,9 +14,9 @@
  * SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
  ********************************************************************************/
 
-import { Key, KeyCode, Message, ReactWidget } from '@theia/core/lib/browser';
-import { inject, injectable, postConstruct } from '@theia/core/shared/inversify';
-import * as React from '@theia/core/shared/react';
+import { Key, KeyCode, Message, ReactWidget } from '@ogun/core/lib/browser';
+import { inject, injectable, postConstruct } from '@ogun/core/shared/inversify';
+import * as React from '@ogun/core/shared/react';
 import Long from 'long';
 import { MemoryWidget } from '../memory-widget/memory-widget';
 import { RegisterWidget } from '../register-widget/register-widget-types';
@@ -25,7 +25,7 @@ import { MemoryWidgetManager } from '../utils/memory-widget-manager';
 import { Interfaces } from '../utils/memory-widget-utils';
 import { VariableRange } from '../utils/memory-widget-variable-utils';
 import { MemoryDiffWidget } from './memory-diff-table-widget';
-import { nls } from '@theia/core/lib/common/nls';
+import { nls } from '@ogun/core/lib/common/nls';
 
 export interface DiffMemory {
     beforeAddress: Long;

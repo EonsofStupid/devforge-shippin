@@ -14,12 +14,12 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { bindRootContributionProvider, CommandContribution, CommandHandler, ResourceResolver } from '@theia/core';
+import { bindRootContributionProvider, CommandContribution, CommandHandler, ResourceResolver } from '@ogun/core';
 import {
     RemoteConnectionProvider,
     ServiceConnectionProvider,
-} from '@theia/core/lib/browser/messaging/service-connection-provider';
-import { ContainerModule } from '@theia/core/shared/inversify';
+} from '@ogun/core/lib/browser/messaging/service-connection-provider';
+import { ContainerModule } from '@ogun/core/shared/inversify';
 import { DefaultLanguageModelAliasRegistry } from './frontend-language-model-alias-registry';
 import { TrustAwarePreferenceReader } from './trust-aware-preference-reader';
 import { AiConfigurationServiceImpl } from './ai-configuration-service-impl';
@@ -54,9 +54,9 @@ import {
     FrontendLanguageModelRegistryImpl,
     LanguageModelDelegateClientImpl,
 } from './frontend-language-model-registry';
-import { FrontendApplicationContribution, LabelProviderContribution } from '@theia/core/lib/browser';
-import { TabBarToolbarContribution } from '@theia/core/lib/browser/shell/tab-bar-toolbar';
-import { LanguageGrammarDefinitionContribution } from '@theia/monaco/lib/browser/textmate';
+import { FrontendApplicationContribution, LabelProviderContribution } from '@ogun/core/lib/browser';
+import { TabBarToolbarContribution } from '@ogun/core/lib/browser/shell/tab-bar-toolbar';
+import { LanguageGrammarDefinitionContribution } from '@ogun/monaco/lib/browser/textmate';
 import { AICoreFrontendApplicationContribution } from './ai-core-frontend-application-contribution';
 import { bindAICorePreferences } from '../common/ai-core-preferences';
 import { AISettingsServiceImpl } from './ai-settings-service';

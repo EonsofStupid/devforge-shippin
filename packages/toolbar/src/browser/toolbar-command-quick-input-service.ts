@@ -14,9 +14,9 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { Command, CommandRegistry, CommandService, nls } from '@theia/core';
-import { QuickCommandService, QuickInputService, QuickPickItem } from '@theia/core/lib/browser';
-import { injectable, inject } from '@theia/core/shared/inversify';
+import { Command, CommandRegistry, CommandService, nls } from '@ogun/core';
+import { QuickCommandService, QuickInputService, QuickPickItem } from '@ogun/core/lib/browser';
+import { injectable, inject } from '@ogun/core/shared/inversify';
 import { ToolbarIconDialogFactory } from './toolbar-icon-selector-dialog';
 import { ToolbarAlignment, ToolbarAlignmentString } from './toolbar-interfaces';
 import { ToolbarController } from './toolbar-controller';

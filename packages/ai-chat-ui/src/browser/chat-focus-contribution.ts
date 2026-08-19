@@ -14,9 +14,9 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { Command, CommandContribution, CommandRegistry } from '@theia/core';
-import { ApplicationShell, KeybindingContribution, KeybindingRegistry } from '@theia/core/lib/browser';
-import { inject, injectable } from '@theia/core/shared/inversify';
+import { Command, CommandContribution, CommandRegistry } from '@ogun/core';
+import { ApplicationShell, KeybindingContribution, KeybindingRegistry } from '@ogun/core/lib/browser';
+import { inject, injectable } from '@ogun/core/shared/inversify';
 import { ChatViewWidget } from './chat-view-widget';
 import { ChatCommands } from './chat-view-commands';
 

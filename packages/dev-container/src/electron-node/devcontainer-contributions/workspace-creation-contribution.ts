@@ -14,9 +14,9 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { injectable } from '@theia/core/shared/inversify';
+import { injectable } from '@ogun/core/shared/inversify';
 import { ContainerCreationContribution } from '../docker-container-service';
-import { MaybePromise } from '@theia/core';
+import { MaybePromise } from '@ogun/core';
 import { ContainerCreateOptions } from 'dockerode';
 import { ContainerOutputProvider } from '../../electron-common/container-output-provider';
 import { DevContainerConfiguration } from '../devcontainer-file';

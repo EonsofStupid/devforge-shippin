@@ -13,11 +13,11 @@
 //
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
-import { AICommandHandlerFactory } from '@theia/ai-core/lib/browser/ai-command-handler-factory';
-import { CommandContribution, CommandRegistry, MessageService, nls, ILogger } from '@theia/core';
-import { QuickInputService } from '@theia/core/lib/browser';
-import { inject, injectable, named } from '@theia/core/shared/inversify';
-import { isRemoteMCPServerDescription, MCPFrontendService, MCPOAuthFrontendDelegate, MCPServerDescription, MCPServerStatus } from '@theia/ai-mcp';
+import { AICommandHandlerFactory } from '@ogun/ai-core/lib/browser/ai-command-handler-factory';
+import { CommandContribution, CommandRegistry, MessageService, nls, ILogger } from '@ogun/core';
+import { QuickInputService } from '@ogun/core/lib/browser';
+import { inject, injectable, named } from '@ogun/core/shared/inversify';
+import { isRemoteMCPServerDescription, MCPFrontendService, MCPOAuthFrontendDelegate, MCPServerDescription, MCPServerStatus } from '@ogun/ai-mcp';
 
 export const StartMCPServer = {
     id: 'mcp.startserver',

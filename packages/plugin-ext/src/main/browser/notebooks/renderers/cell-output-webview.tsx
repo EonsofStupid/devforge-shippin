@@ -18,33 +18,33 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import * as React from '@theia/core/shared/react';
-import { inject, injectable, interfaces, named } from '@theia/core/shared/inversify';
-import { generateUuid } from '@theia/core/lib/common/uuid';
+import * as React from '@ogun/core/shared/react';
+import { inject, injectable, interfaces, named } from '@ogun/core/shared/inversify';
+import { generateUuid } from '@ogun/core/lib/common/uuid';
 import {
     NotebookRendererMessagingService, CellOutputWebview, NotebookRendererRegistry,
     NotebookEditorWidgetService, NotebookKernelService, NotebookEditorWidget,
     OutputRenderEvent,
     NotebookCellOutputsSplice,
     NotebookContentChangedEvent
-} from '@theia/notebook/lib/browser';
+} from '@ogun/notebook/lib/browser';
 import { WebviewWidget } from '../../webview/webview';
-import { Message, WidgetManager } from '@theia/core/lib/browser';
+import { Message, WidgetManager } from '@ogun/core/lib/browser';
 import { outputWebviewPreload, PreloadContext } from './output-webview-internal';
-import { WorkspaceTrustService } from '@theia/workspace/lib/browser';
+import { WorkspaceTrustService } from '@ogun/workspace/lib/browser';
 import {
     CellOutputChange, CellsChangedMessage, CellsMoved, CellsSpliced,
     ChangePreferredMimetypeMessage, FromWebviewMessage, Output, OutputChangedMessage
 } from './webview-communication';
-import { Disposable, DisposableCollection, Emitter, ILogger, QuickPickService, nls } from '@theia/core';
-import { NotebookModel } from '@theia/notebook/lib/browser/view-model/notebook-model';
-import { NotebookOptionsService, NotebookOutputOptions } from '@theia/notebook/lib/browser/service/notebook-options';
-import { NotebookCellModel } from '@theia/notebook/lib/browser/view-model/notebook-cell-model';
-import { CellOutput, NotebookCellsChangeType } from '@theia/notebook/lib/common';
-import { NotebookCellOutputModel } from '@theia/notebook/lib/browser/view-model/notebook-cell-output-model';
-import { Deferred } from '@theia/core/lib/common/promise-util';
-import { ContextKeyService } from '@theia/core/lib/browser/context-key-service';
-import { NOTEBOOK_OUTPUT_FOCUSED } from '@theia/notebook/lib/browser/contributions/notebook-context-keys';
+import { Disposable, DisposableCollection, Emitter, ILogger, QuickPickService, nls } from '@ogun/core';
+import { NotebookModel } from '@ogun/notebook/lib/browser/view-model/notebook-model';
+import { NotebookOptionsService, NotebookOutputOptions } from '@ogun/notebook/lib/browser/service/notebook-options';
+import { NotebookCellModel } from '@ogun/notebook/lib/browser/view-model/notebook-cell-model';
+import { CellOutput, NotebookCellsChangeType } from '@ogun/notebook/lib/common';
+import { NotebookCellOutputModel } from '@ogun/notebook/lib/browser/view-model/notebook-cell-output-model';
+import { Deferred } from '@ogun/core/lib/common/promise-util';
+import { ContextKeyService } from '@ogun/core/lib/browser/context-key-service';
+import { NOTEBOOK_OUTPUT_FOCUSED } from '@ogun/notebook/lib/browser/contributions/notebook-context-keys';
 
 export const AdditionalNotebookCellOutputCss = Symbol('AdditionalNotebookCellOutputCss');
 

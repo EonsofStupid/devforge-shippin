@@ -14,10 +14,10 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { inject } from '@theia/core/shared/inversify';
+import { inject } from '@ogun/core/shared/inversify';
 import { isLanguageModelStreamResponse, LanguageModel, LanguageModelRegistry, LanguageModelResponse, LanguageModelStreamResponsePart, UserRequest } from './language-model';
 import { LanguageModelExchangeRequest, LanguageModelSession } from './language-model-interaction-model';
-import { Emitter } from '@theia/core';
+import { Emitter } from '@ogun/core';
 
 export interface RequestAddedEvent {
     type: 'requestAdded',

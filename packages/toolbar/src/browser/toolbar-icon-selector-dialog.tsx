@@ -14,21 +14,21 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { Command, Disposable, nls } from '@theia/core';
-import { DEFAULT_SCROLL_OPTIONS, Dialog, DialogProps, Message } from '@theia/core/lib/browser';
-import { ReactDialog } from '@theia/core/lib/browser/dialogs/react-dialog';
-import { FuzzySearch } from '@theia/core/lib/browser/tree/fuzzy-search';
-import { SelectComponent, SelectOption } from '@theia/core/lib/browser/widgets/select-component';
-import { Deferred } from '@theia/core/lib/common/promise-util';
-import { inject, injectable, interfaces, postConstruct } from '@theia/core/shared/inversify';
-import * as React from '@theia/core/shared/react';
-import { createRoot, Root } from '@theia/core/shared/react-dom/client';
-import { FileService } from '@theia/filesystem/lib/browser/file-service';
+import { Command, Disposable, nls } from '@ogun/core';
+import { DEFAULT_SCROLL_OPTIONS, Dialog, DialogProps, Message } from '@ogun/core/lib/browser';
+import { ReactDialog } from '@ogun/core/lib/browser/dialogs/react-dialog';
+import { FuzzySearch } from '@ogun/core/lib/browser/tree/fuzzy-search';
+import { SelectComponent, SelectOption } from '@ogun/core/lib/browser/widgets/select-component';
+import { Deferred } from '@ogun/core/lib/common/promise-util';
+import { inject, injectable, interfaces, postConstruct } from '@ogun/core/shared/inversify';
+import * as React from '@ogun/core/shared/react';
+import { createRoot, Root } from '@ogun/core/shared/react-dom/client';
+import { FileService } from '@ogun/filesystem/lib/browser/file-service';
 import PerfectScrollbar from 'perfect-scrollbar';
 import { IconSetProvider } from './icons/icon-set-provider';
 import { ReactInteraction, ReactKeyboardEvent } from './toolbar-constants';
 import { IconSet } from './toolbar-interfaces';
-import debounce = require('@theia/core/shared/lodash.debounce');
+import debounce = require('@ogun/core/shared/lodash.debounce');
 
 export interface ToolbarIconDialogFactory {
     (command: Command): ToolbarIconSelectorDialog;

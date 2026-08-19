@@ -14,11 +14,11 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { inject, injectable, postConstruct } from '@theia/core/shared/inversify';
-import { Disposable, DisposableCollection, URI } from '@theia/core';
-import { ContextKey, ContextKeyService } from '@theia/core/lib/browser/context-key-service';
-import { EditorManager, EditorMouseEvent, MouseTargetType, TextEditor } from '@theia/editor/lib/browser';
-import { MonacoEditor } from '@theia/monaco/lib/browser/monaco-editor';
+import { inject, injectable, postConstruct } from '@ogun/core/shared/inversify';
+import { Disposable, DisposableCollection, URI } from '@ogun/core';
+import { ContextKey, ContextKeyService } from '@ogun/core/lib/browser/context-key-service';
+import { EditorManager, EditorMouseEvent, MouseTargetType, TextEditor } from '@ogun/editor/lib/browser';
+import { MonacoEditor } from '@ogun/monaco/lib/browser/monaco-editor';
 import { Change, LineRange } from './diff-computer';
 import { DirtyDiffUpdate } from './dirty-diff-decorator';
 import { DirtyDiffWidget, DirtyDiffWidgetFactory } from './dirty-diff-widget';

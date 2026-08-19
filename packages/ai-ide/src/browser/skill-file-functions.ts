@@ -14,12 +14,12 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { ToolProvider, ToolRequest } from '@theia/ai-core';
-import { inject, injectable } from '@theia/core/shared/inversify';
-import { URI } from '@theia/core';
-import { FileService } from '@theia/filesystem/lib/browser/file-service';
-import { SkillService } from '@theia/ai-core/lib/browser/skill-service';
-import { parseSkillFile } from '@theia/ai-core/lib/common/skill';
+import { ToolProvider, ToolRequest } from '@ogun/ai-core';
+import { inject, injectable } from '@ogun/core/shared/inversify';
+import { URI } from '@ogun/core';
+import { FileService } from '@ogun/filesystem/lib/browser/file-service';
+import { SkillService } from '@ogun/ai-core/lib/browser/skill-service';
+import { parseSkillFile } from '@ogun/ai-core/lib/common/skill';
 import { GET_SKILL_FILE_CONTENT_FUNCTION_ID } from '../common/workspace-functions';
 
 @injectable()

@@ -15,10 +15,10 @@
 // *****************************************************************************
 
 import { expect } from 'chai';
-import { Disposable, DisposableCollection } from '@theia/core/lib/common/disposable';
+import { Disposable, DisposableCollection } from '@ogun/core/lib/common/disposable';
 import { DeployedPlugin, PluginIdentifiers } from '../../common/plugin-protocol';
 import { AbstractHostedPluginSupport, PluginContributions } from './hosted-plugin';
-import { Measurement } from '@theia/core/lib/common/performance/measurement';
+import { Measurement } from '@ogun/core/lib/common/performance/measurement';
 
 /* eslint-disable @typescript-eslint/no-explicit-any */
 

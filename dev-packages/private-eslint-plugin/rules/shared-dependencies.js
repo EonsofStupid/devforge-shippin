@@ -19,9 +19,9 @@
 
 const fs = require('fs');
 const path = require('path');
-const { PackageReExports } = require('@theia/re-exports');
+const { PackageReExports } = require('@ogun/re-exports');
 
-const coreReExports = PackageReExports.FromPackageSync('@theia/core');
+const coreReExports = PackageReExports.FromPackageSync('@ogun/core');
 
 /** @type {import('eslint').Rule.RuleModule} */
 module.exports = {
@@ -29,7 +29,7 @@ module.exports = {
         type: 'problem',
         fixable: 'code',
         docs: {
-            description: 'Errors when a dependency shared by @theia/core is used implicitly, or when a package depends on a shared dependency instead of reusing it from @theia/core/shared. This rule only affects files from packages that depend on @theia/core.',
+            description: 'Errors when a dependency shared by @ogun/core is used implicitly, or when a package depends on a shared dependency instead of reusing it from @ogun/core/shared. This rule only affects files from packages that depend on @ogun/core.',
             recommended: true,
         },
     },
@@ -44,7 +44,7 @@ module.exports = {
                 if (redundantDeps.length > 0) {
                     context.report({
                         loc: { line: 0, column: 0 },
-                        message: `"${packageJson.__filename}" depends on some @theia/core shared dependencies: [${redundantDeps}]`,
+                        message: `"${packageJson.__filename}" depends on some @ogun/core shared dependencies: [${redundantDeps}]`,
                     });
                 }
             }
@@ -54,7 +54,7 @@ module.exports = {
                 if (reExport) {
                     context.report({
                         node,
-                        message: `"${moduleName}" is a @theia/core shared dependency, please use "${reExport.externalImport}" instead.`,
+                        message: `"${moduleName}" is a @ogun/core shared dependency, please use "${reExport.externalImport}" instead.`,
                         fix(fixer) {
                             if (node.range) {
                                 const [start, end] = node.range;
@@ -146,12 +146,12 @@ function isRoot(parsed) {
  */
 function dependsOnTheiaCore(packageJson) {
     return typeof packageJson.dependencies === 'object'
-        && '@theia/core' in packageJson.dependencies;
+        && '@ogun/core' in packageJson.dependencies;
 }
 
 /**
  * Return a list of packages from `packageJson`'s dependencies that can be
- * required using `@theia/core/(electron-)shared/...`.
+ * required using `@ogun/core/(electron-)shared/...`.
  * @param {object} packageJson
  * @return {string[]}
  */

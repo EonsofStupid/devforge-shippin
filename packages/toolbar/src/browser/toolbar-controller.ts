@@ -14,11 +14,11 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { Command, CommandRegistry, ContributionProvider, Emitter, MaybePromise, MessageService, nls } from '@theia/core';
-import { KeybindingRegistry, Widget } from '@theia/core/lib/browser';
-import { FrontendApplicationStateService } from '@theia/core/lib/browser/frontend-application-state';
-import { Deferred } from '@theia/core/lib/common/promise-util';
-import { injectable, inject, postConstruct, named } from '@theia/core/shared/inversify';
+import { Command, CommandRegistry, ContributionProvider, Emitter, MaybePromise, MessageService, nls } from '@ogun/core';
+import { KeybindingRegistry, Widget } from '@ogun/core/lib/browser';
+import { FrontendApplicationStateService } from '@ogun/core/lib/browser/frontend-application-state';
+import { Deferred } from '@ogun/core/lib/common/promise-util';
+import { injectable, inject, postConstruct, named } from '@ogun/core/shared/inversify';
 import {
     DeflatedToolbarTree,
     ToolbarContribution,
@@ -27,9 +27,9 @@ import {
     ToolbarItemPosition,
 } from './toolbar-interfaces';
 import { ToolbarStorageProvider, TOOLBAR_BAD_JSON_ERROR_MESSAGE } from './toolbar-storage-provider';
-import { ReactToolbarItemImpl, RenderedToolbarItemImpl, TabBarToolbarItem } from '@theia/core/lib/browser/shell/tab-bar-toolbar/tab-toolbar-item';
-import { ContextKeyService } from '@theia/core/lib/browser/context-key-service';
-import { LabelParser } from '@theia/core/lib/browser/label-parser';
+import { ReactToolbarItemImpl, RenderedToolbarItemImpl, TabBarToolbarItem } from '@ogun/core/lib/browser/shell/tab-bar-toolbar/tab-toolbar-item';
+import { ContextKeyService } from '@ogun/core/lib/browser/context-key-service';
+import { LabelParser } from '@ogun/core/lib/browser/label-parser';
 import { ToolbarCommands } from './toolbar-constants';
 
 @injectable()

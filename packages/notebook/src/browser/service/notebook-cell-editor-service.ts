@@ -14,12 +14,12 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { Emitter, URI } from '@theia/core';
-import { inject, injectable, postConstruct } from '@theia/core/shared/inversify';
-import { SimpleMonacoEditor } from '@theia/monaco/lib/browser/simple-monaco-editor';
+import { Emitter, URI } from '@ogun/core';
+import { inject, injectable, postConstruct } from '@ogun/core/shared/inversify';
+import { SimpleMonacoEditor } from '@ogun/monaco/lib/browser/simple-monaco-editor';
 import { NotebookEditorWidgetService } from './notebook-editor-widget-service';
 import { CellUri } from '../../common';
-import { ActiveMonacoEditorContribution, MonacoEditorService } from '@theia/monaco/lib/browser/monaco-editor-service';
+import { ActiveMonacoEditorContribution, MonacoEditorService } from '@ogun/monaco/lib/browser/monaco-editor-service';
 import { ICodeEditor } from '@theia/monaco-editor-core/esm/vs/editor/browser/editorBrowser';
 
 @injectable()

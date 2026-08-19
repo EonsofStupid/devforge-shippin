@@ -14,11 +14,11 @@
  * SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
  ********************************************************************************/
 
-import { CommandContribution, CommandRegistry } from '@theia/core';
-import { inject, injectable, interfaces } from '@theia/core/shared/inversify';
-import { RemoteFileSystemProvider } from '@theia/filesystem/lib/common/remote-file-system-provider';
-import { FileSystemProviderCapabilities } from '@theia/filesystem/lib/common/files';
-import { MarkdownStringImpl } from '@theia/core/lib/common/markdown-rendering';
+import { CommandContribution, CommandRegistry } from '@ogun/core';
+import { inject, injectable, interfaces } from '@ogun/core/shared/inversify';
+import { RemoteFileSystemProvider } from '@ogun/filesystem/lib/common/remote-file-system-provider';
+import { FileSystemProviderCapabilities } from '@ogun/filesystem/lib/common/files';
+import { MarkdownStringImpl } from '@ogun/core/lib/common/markdown-rendering';
 
 @injectable()
 export class SampleFileSystemCapabilities implements CommandContribution {

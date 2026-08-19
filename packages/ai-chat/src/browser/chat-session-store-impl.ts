@@ -14,15 +14,15 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { inject, injectable, named, postConstruct } from '@theia/core/shared/inversify';
-import { FileService } from '@theia/filesystem/lib/browser/file-service';
-import { WorkspaceService, WorkspaceMetadataStorageService, WorkspaceMetadataStore } from '@theia/workspace/lib/browser';
-import { PreferenceService } from '@theia/core/lib/common';
-import { StorageService } from '@theia/core/lib/browser';
-import { DisposableCollection, URI } from '@theia/core';
-import { BinaryBuffer } from '@theia/core/lib/common/buffer';
-import { ILogger } from '@theia/core/lib/common/logger';
-import { EnvVariablesServer } from '@theia/core/lib/common/env-variables';
+import { inject, injectable, named, postConstruct } from '@ogun/core/shared/inversify';
+import { FileService } from '@ogun/filesystem/lib/browser/file-service';
+import { WorkspaceService, WorkspaceMetadataStorageService, WorkspaceMetadataStore } from '@ogun/workspace/lib/browser';
+import { PreferenceService } from '@ogun/core/lib/common';
+import { StorageService } from '@ogun/core/lib/browser';
+import { DisposableCollection, URI } from '@ogun/core';
+import { BinaryBuffer } from '@ogun/core/lib/common/buffer';
+import { ILogger } from '@ogun/core/lib/common/logger';
+import { EnvVariablesServer } from '@ogun/core/lib/common/env-variables';
 import { ChatModel } from '../common/chat-model';
 import { ChatSessionIndex, ChatSessionStore, ChatModelWithMetadata, ChatSessionMetadata } from '../common/chat-session-store';
 import {

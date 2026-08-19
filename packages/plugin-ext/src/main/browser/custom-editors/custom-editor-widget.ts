@@ -14,17 +14,17 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { injectable, inject, postConstruct } from '@theia/core/shared/inversify';
-import URI from '@theia/core/lib/common/uri';
-import { FileOperation } from '@theia/filesystem/lib/common/files';
-import { ApplicationShell, DelegatingSaveable, Message, NavigatableWidget, Saveable, SaveableSource, TabBarTracker } from '@theia/core/lib/browser';
-import { SaveableService } from '@theia/core/lib/browser/saveable-service';
-import { Disposable, Event, SelectionService } from '@theia/core/lib/common';
-import { Reference } from '@theia/core/lib/common/reference';
-import { PreviewTabWidget, PreviewTabSupport } from '@theia/editor-preview/lib/browser/preview-tab-widget';
+import { injectable, inject, postConstruct } from '@ogun/core/shared/inversify';
+import URI from '@ogun/core/lib/common/uri';
+import { FileOperation } from '@ogun/filesystem/lib/common/files';
+import { ApplicationShell, DelegatingSaveable, Message, NavigatableWidget, Saveable, SaveableSource, TabBarTracker } from '@ogun/core/lib/browser';
+import { SaveableService } from '@ogun/core/lib/browser/saveable-service';
+import { Disposable, Event, SelectionService } from '@ogun/core/lib/common';
+import { Reference } from '@ogun/core/lib/common/reference';
+import { PreviewTabWidget, PreviewTabSupport } from '@ogun/editor-preview/lib/browser/preview-tab-widget';
 import { WebviewWidget } from '../webview/webview';
 import { CustomEditorModel } from './custom-editors-main';
-import { CustomEditorWidget as CustomEditorWidgetShape } from '@theia/editor/lib/browser';
+import { CustomEditorWidget as CustomEditorWidgetShape } from '@ogun/editor/lib/browser';
 
 @injectable()
 export class CustomEditorWidget extends WebviewWidget implements CustomEditorWidgetShape, SaveableSource, NavigatableWidget, PreviewTabWidget {

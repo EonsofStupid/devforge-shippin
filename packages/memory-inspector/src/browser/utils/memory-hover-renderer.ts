@@ -14,9 +14,9 @@
  * SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
  ********************************************************************************/
 
-import { Disposable } from '@theia/core';
-import { Anchor } from '@theia/core/lib/browser';
-import { injectable } from '@theia/core/shared/inversify';
+import { Disposable } from '@ogun/core';
+import { Anchor } from '@ogun/core/lib/browser';
+import { injectable } from '@ogun/core/shared/inversify';
 
 export interface EasilyMappedObject {
     [key: string]: string | number;

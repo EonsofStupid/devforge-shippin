@@ -14,9 +14,9 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { Emitter, Event } from '@theia/core/lib/common/event';
+import { Emitter, Event } from '@ogun/core/lib/common/event';
 import { DebugAdapter } from './debug-model';
-import * as theia from '@theia/plugin';
+import * as theia from '@ogun/plugin';
 
 /**
  * A debug adapter for using the inline implementation from a plugin.

@@ -14,24 +14,24 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { enableJSDOM } from '@theia/core/lib/browser/test/jsdom';
+import { enableJSDOM } from '@ogun/core/lib/browser/test/jsdom';
 const disableJSDOM = enableJSDOM();
 
 import { expect } from 'chai';
-import { Container } from '@theia/core/shared/inversify';
+import { Container } from '@ogun/core/shared/inversify';
 import { TerminalManagerTreeModel } from './terminal-manager-tree-model';
 import { TerminalManagerTreeTypes } from './terminal-manager-types';
-import { TreeImpl, Tree } from '@theia/core/lib/browser/tree/tree';
-import { TreeSelectionServiceImpl } from '@theia/core/lib/browser/tree/tree-selection-impl';
-import { TreeSelectionService } from '@theia/core/lib/browser/tree/tree-selection';
-import { TreeExpansionServiceImpl, TreeExpansionService } from '@theia/core/lib/browser/tree/tree-expansion';
-import { TreeNavigationService } from '@theia/core/lib/browser/tree/tree-navigation';
-import { TreeFocusServiceImpl, TreeFocusService } from '@theia/core/lib/browser/tree/tree-focus-service';
-import { TreeSearch } from '@theia/core/lib/browser/tree/tree-search';
-import { FuzzySearch } from '@theia/core/lib/browser/tree/fuzzy-search';
-import { MockLogger } from '@theia/core/lib/common/test/mock-logger';
-import { ILogger, bindContributionProvider } from '@theia/core/lib/common';
-import { LabelProvider, LabelProviderContribution } from '@theia/core/lib/browser/label-provider';
+import { TreeImpl, Tree } from '@ogun/core/lib/browser/tree/tree';
+import { TreeSelectionServiceImpl } from '@ogun/core/lib/browser/tree/tree-selection-impl';
+import { TreeSelectionService } from '@ogun/core/lib/browser/tree/tree-selection';
+import { TreeExpansionServiceImpl, TreeExpansionService } from '@ogun/core/lib/browser/tree/tree-expansion';
+import { TreeNavigationService } from '@ogun/core/lib/browser/tree/tree-navigation';
+import { TreeFocusServiceImpl, TreeFocusService } from '@ogun/core/lib/browser/tree/tree-focus-service';
+import { TreeSearch } from '@ogun/core/lib/browser/tree/tree-search';
+import { FuzzySearch } from '@ogun/core/lib/browser/tree/fuzzy-search';
+import { MockLogger } from '@ogun/core/lib/common/test/mock-logger';
+import { ILogger, bindContributionProvider } from '@ogun/core/lib/common';
+import { LabelProvider, LabelProviderContribution } from '@ogun/core/lib/browser/label-provider';
 
 describe('TerminalManagerTreeModel', () => {
     let container: Container;

@@ -14,15 +14,15 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { inject, injectable } from '@theia/core/shared/inversify';
-import URI from '@theia/core/lib/common/uri';
-import { DisposableCollection } from '@theia/core/lib/common/disposable';
-import { EnvVariablesServer } from '@theia/core/lib/common/env-variables';
-import { FileSystemProvider } from '@theia/filesystem/lib/common/files';
-import { FileService, FileServiceContribution } from '@theia/filesystem/lib/browser/file-service';
-import { DelegatingFileSystemProvider } from '@theia/filesystem/lib/common/delegating-file-system-provider';
+import { inject, injectable } from '@ogun/core/shared/inversify';
+import URI from '@ogun/core/lib/common/uri';
+import { DisposableCollection } from '@ogun/core/lib/common/disposable';
+import { EnvVariablesServer } from '@ogun/core/lib/common/env-variables';
+import { FileSystemProvider } from '@ogun/filesystem/lib/common/files';
+import { FileService, FileServiceContribution } from '@ogun/filesystem/lib/browser/file-service';
+import { DelegatingFileSystemProvider } from '@ogun/filesystem/lib/common/delegating-file-system-provider';
 import { UserStorageUri } from './user-storage-uri';
-import { MaybePromise } from '@theia/core';
+import { MaybePromise } from '@ogun/core';
 
 @injectable()
 export class UserStorageContribution implements FileServiceContribution {

@@ -14,15 +14,15 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { ChatAgentLocation, ChatRequest, ChatService } from '@theia/ai-chat';
-import { AICommandHandlerFactory, ENABLE_AI_CONTEXT_KEY } from '@theia/ai-core/lib/browser';
-import { isObject, isString, MenuContribution, MenuModelRegistry } from '@theia/core';
-import { ApplicationShell, codicon, KeybindingContribution, KeybindingRegistry } from '@theia/core/lib/browser';
-import { Command, CommandContribution, CommandRegistry } from '@theia/core/lib/common';
-import { inject, injectable } from '@theia/core/shared/inversify';
-import { EditorContextMenu, EditorWidget } from '@theia/editor/lib/browser';
-import { MonacoCommandRegistry, MonacoEditorCommandHandler } from '@theia/monaco/lib/browser/monaco-command-registry';
-import { MonacoEditor } from '@theia/monaco/lib/browser/monaco-editor';
+import { ChatAgentLocation, ChatRequest, ChatService } from '@ogun/ai-chat';
+import { AICommandHandlerFactory, ENABLE_AI_CONTEXT_KEY } from '@ogun/ai-core/lib/browser';
+import { isObject, isString, MenuContribution, MenuModelRegistry } from '@ogun/core';
+import { ApplicationShell, codicon, KeybindingContribution, KeybindingRegistry } from '@ogun/core/lib/browser';
+import { Command, CommandContribution, CommandRegistry } from '@ogun/core/lib/common';
+import { inject, injectable } from '@ogun/core/shared/inversify';
+import { EditorContextMenu, EditorWidget } from '@ogun/editor/lib/browser';
+import { MonacoCommandRegistry, MonacoEditorCommandHandler } from '@ogun/monaco/lib/browser/monaco-command-registry';
+import { MonacoEditor } from '@ogun/monaco/lib/browser/monaco-editor';
 import { AskAIInputMonacoZoneWidget } from './ask-ai-input-monaco-zone-widget';
 import { AskAIInputFactory } from './ask-ai-input-widget';
 

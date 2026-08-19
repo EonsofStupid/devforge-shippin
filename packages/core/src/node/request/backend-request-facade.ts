@@ -15,7 +15,7 @@
  ********************************************************************************/
 
 import { inject, injectable, named, optional } from 'inversify';
-import { RequestConfiguration, RequestContext, RequestOptions, RequestService } from '@theia/request';
+import { RequestConfiguration, RequestContext, RequestOptions, RequestService } from '@ogun/request';
 import { ContributionProvider, MaybePromise } from '../../common';
 import { BackendApplicationConfigProvider } from '../backend-application-config-provider';
 

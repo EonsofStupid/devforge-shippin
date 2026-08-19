@@ -14,28 +14,28 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { ConfirmDialog, Dialog, StorageService } from '@theia/core/lib/browser';
-import { MarkdownString, MarkdownStringImpl } from '@theia/core/lib/common/markdown-rendering/markdown-string';
-import { StatusBar, StatusBarAlignment } from '@theia/core/lib/browser/status-bar/status-bar';
-import { OS, ContributionProvider, DisposableCollection } from '@theia/core';
-import { Emitter, Event } from '@theia/core/lib/common';
-import URI from '@theia/core/lib/common/uri';
-import { PreferenceChange, PreferenceSchemaService, PreferenceScope, PreferenceService } from '@theia/core/lib/common/preferences';
-import { MessageService } from '@theia/core/lib/common/message-service';
-import { nls } from '@theia/core/lib/common/nls';
-import { Deferred } from '@theia/core/lib/common/promise-util';
-import { inject, injectable, named, postConstruct, preDestroy } from '@theia/core/shared/inversify';
-import { WindowService } from '@theia/core/lib/browser/window/window-service';
+import { ConfirmDialog, Dialog, StorageService } from '@ogun/core/lib/browser';
+import { MarkdownString, MarkdownStringImpl } from '@ogun/core/lib/common/markdown-rendering/markdown-string';
+import { StatusBar, StatusBarAlignment } from '@ogun/core/lib/browser/status-bar/status-bar';
+import { OS, ContributionProvider, DisposableCollection } from '@ogun/core';
+import { Emitter, Event } from '@ogun/core/lib/common';
+import URI from '@ogun/core/lib/common/uri';
+import { PreferenceChange, PreferenceSchemaService, PreferenceScope, PreferenceService } from '@ogun/core/lib/common/preferences';
+import { MessageService } from '@ogun/core/lib/common/message-service';
+import { nls } from '@ogun/core/lib/common/nls';
+import { Deferred } from '@ogun/core/lib/common/promise-util';
+import { inject, injectable, named, postConstruct, preDestroy } from '@ogun/core/shared/inversify';
+import { WindowService } from '@ogun/core/lib/browser/window/window-service';
 import {
     WorkspaceTrustPreferences, WORKSPACE_TRUST_EMPTY_WINDOW, WORKSPACE_TRUST_ENABLED, WORKSPACE_TRUST_STARTUP_PROMPT, WORKSPACE_TRUST_TRUSTED_FOLDERS, WorkspaceTrustPrompt
 } from '../common/workspace-trust-preferences';
-import { FrontendApplicationConfigProvider } from '@theia/core/lib/browser/frontend-application-config-provider';
+import { FrontendApplicationConfigProvider } from '@ogun/core/lib/browser/frontend-application-config-provider';
 import { WorkspaceService } from './workspace-service';
 import { WorkspaceCommands } from './workspace-commands';
-import { ContextKeyService } from '@theia/core/lib/browser/context-key-service';
+import { ContextKeyService } from '@ogun/core/lib/browser/context-key-service';
 import { WorkspaceTrustDialog } from './workspace-trust-dialog';
 import { UntitledWorkspaceService } from '../common/untitled-workspace-service';
-import { EnvVariablesServer } from '@theia/core/lib/common/env-variables';
+import { EnvVariablesServer } from '@ogun/core/lib/common/env-variables';
 
 const STORAGE_TRUSTED = 'trusted';
 export const WORKSPACE_TRUST_STATUS_BAR_ID = 'workspace-trust-status';

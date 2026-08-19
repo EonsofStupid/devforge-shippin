@@ -1410,7 +1410,7 @@
               "mdDescription": "이 서버를 설치하는 데 사용된 레지스트리 승인 내용의 해시 값입니다.",
               "title": "레지스트리 구성 해시"
             },
-            "mdDescription": "AI 레지스트리에서 설치된 서버에 대한 출처 메타데이터입니다. `@theia/ai-registry`가 작성했으며, 사용자가 편집할 수 없습니다.",
+            "mdDescription": "AI 레지스트리에서 설치된 서버에 대한 출처 메타데이터입니다. `@ogun/ai-registry`가 작성했으며, 사용자가 편집할 수 없습니다.",
             "serverId": {
               "mdDescription": "이 서버가 설치된 AI 레지스트리 항목을 식별합니다.",
               "title": "레지스트리 서버 ID"

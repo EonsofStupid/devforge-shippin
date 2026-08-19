@@ -14,14 +14,14 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { postConstruct, injectable, inject, interfaces, named } from '@theia/core/shared/inversify';
+import { postConstruct, injectable, inject, interfaces, named } from '@ogun/core/shared/inversify';
 import {
     FrontendApplicationContribution, LabelProvider,
-} from '@theia/core/lib/browser';
-import { ILogger } from '@theia/core/lib/common/logger';
-import { FileService } from '@theia/filesystem/lib/browser/file-service';
-import { WorkspaceService } from '@theia/workspace/lib/browser';
-import { createPreferenceProxy, PreferenceService, PreferenceProxy, PreferenceContribution } from '@theia/core';
+} from '@ogun/core/lib/browser';
+import { ILogger } from '@ogun/core/lib/common/logger';
+import { FileService } from '@ogun/filesystem/lib/browser/file-service';
+import { WorkspaceService } from '@ogun/workspace/lib/browser';
+import { createPreferenceProxy, PreferenceService, PreferenceProxy, PreferenceContribution } from '@ogun/core';
 import { FileWatchingPreferencesSchema } from '../../common/preference-schema';
 
 export function bindSampleFileWatching(bind: interfaces.Bind): void {

@@ -15,11 +15,11 @@
 // *****************************************************************************
 
 import { expect } from 'chai';
-import { ILogger, QuickInputService } from '@theia/core';
-import { AIVariableContext, AIVariableResolutionRequest } from '@theia/ai-core';
-import { Container } from '@theia/core/shared/inversify';
-import { TerminalService } from '@theia/terminal/lib/browser/base/terminal-service';
-import { TerminalBlock, TerminalWidget } from '@theia/terminal/lib/browser/base/terminal-widget';
+import { ILogger, QuickInputService } from '@ogun/core';
+import { AIVariableContext, AIVariableResolutionRequest } from '@ogun/ai-core';
+import { Container } from '@ogun/core/shared/inversify';
+import { TerminalService } from '@ogun/terminal/lib/browser/base/terminal-service';
+import { TerminalBlock, TerminalWidget } from '@ogun/terminal/lib/browser/base/terminal-widget';
 import { AiTerminalCommandBlockVariableContribution } from './ai-terminal-command-block-variable';
 
 function createMockTerminal(overrides: Partial<{

@@ -230,8 +230,8 @@ command = Command.toDefaultLocalizedCommand(
 }} />
 
 // good - using MarkdownRenderer
-import { MarkdownRenderer } from '@theia/core/lib/browser/markdown-rendering/markdown-renderer';
-import { MarkdownString } from '@theia/core/lib/common/markdown-rendering/markdown-string';
+import { MarkdownRenderer } from '@ogun/core/lib/browser/markdown-rendering/markdown-renderer';
+import { MarkdownString } from '@ogun/core/lib/common/markdown-rendering/markdown-string';
 
 @injectable()
 export class MyService {

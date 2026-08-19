@@ -14,17 +14,17 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { inject, injectable, postConstruct } from '@theia/core/shared/inversify';
-import { WidgetOpenerOptions } from '@theia/core/lib/browser';
-import { TerminalWidget } from '@theia/terminal/lib/browser/base/terminal-widget';
-import { TerminalWidgetFactoryOptions } from '@theia/terminal/lib/browser/terminal-widget-impl';
-import { TerminalService } from '@theia/terminal/lib/browser/base/terminal-service';
+import { inject, injectable, postConstruct } from '@ogun/core/shared/inversify';
+import { WidgetOpenerOptions } from '@ogun/core/lib/browser';
+import { TerminalWidget } from '@ogun/terminal/lib/browser/base/terminal-widget';
+import { TerminalWidgetFactoryOptions } from '@ogun/terminal/lib/browser/terminal-widget-impl';
+import { TerminalService } from '@ogun/terminal/lib/browser/base/terminal-service';
 import { PanelKind, TaskConfiguration, TaskWatcher, TaskExitedEvent, TaskServer, TaskOutputPresentation, TaskInfo } from '../common';
 import { ProcessTaskInfo } from '../common/process/task-protocol';
 import { TaskDefinitionRegistry } from './task-definition-registry';
-import { WorkspaceService } from '@theia/workspace/lib/browser/workspace-service';
-import URI from '@theia/core/lib/common/uri';
-import { nls } from '@theia/core';
+import { WorkspaceService } from '@ogun/workspace/lib/browser/workspace-service';
+import URI from '@ogun/core/lib/common/uri';
+import { nls } from '@ogun/core';
 
 export interface TaskTerminalWidget extends TerminalWidget {
     readonly kind: 'task';

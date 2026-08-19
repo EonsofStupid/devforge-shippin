@@ -14,11 +14,11 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { ContainerModule } from '@theia/core/shared/inversify';
+import { ContainerModule } from '@ogun/core/shared/inversify';
 import { LlamafileManagerImpl } from './llamafile-manager-impl';
 import { LlamafileManager, LlamafileServerManagerClient, LlamafileManagerPath } from '../common/llamafile-manager';
-import { ConnectionHandler, RpcConnectionHandler } from '@theia/core';
-import { ConnectionContainerModule } from '@theia/core/lib/node/messaging/connection-container-module';
+import { ConnectionHandler, RpcConnectionHandler } from '@ogun/core';
+import { ConnectionContainerModule } from '@ogun/core/lib/node/messaging/connection-container-module';
 import { bindAILlamafilePreferences } from '../common/llamafile-preferences';
 
 // We use a connection module to handle AI services separately for each frontend.

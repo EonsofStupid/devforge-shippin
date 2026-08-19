@@ -20,7 +20,7 @@ import { FrontendApplicationConfigProvider } from '../frontend-application-confi
 import { FrontendApplicationPreferenceConfig } from './preference-contribution';
 import { PreferenceLanguageOverrideService } from '../../common/preferences/preference-language-override-service';
 import { PreferenceScope } from '../../common/preferences';
-import { DefaultTheme } from '@theia/application-package/lib/application-props';
+import { DefaultTheme } from '@ogun/application-package/lib/application-props';
 import { ILogger } from '../../common/logger';
 
 @injectable()

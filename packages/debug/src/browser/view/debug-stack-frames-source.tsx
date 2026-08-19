@@ -14,13 +14,13 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import * as React from '@theia/core/shared/react';
-import { injectable, inject, postConstruct } from '@theia/core/shared/inversify';
-import { TreeSource, TreeElement } from '@theia/core/lib/browser/source-tree';
+import * as React from '@ogun/core/shared/react';
+import { injectable, inject, postConstruct } from '@ogun/core/shared/inversify';
+import { TreeSource, TreeElement } from '@ogun/core/lib/browser/source-tree';
 import { DebugThread } from '../model/debug-thread';
 import { DebugViewModel } from './debug-view-model';
 import debounce = require('p-debounce');
-import { nls } from '@theia/core';
+import { nls } from '@ogun/core';
 
 @injectable()
 export class DebugStackFramesSource extends TreeSource {

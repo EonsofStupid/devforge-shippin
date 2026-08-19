@@ -13,11 +13,11 @@
 //
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
-import { FrontendApplicationStateService } from '@theia/core/lib/browser/frontend-application-state';
-import { FrontendApplicationConfigProvider } from '@theia/core/lib/browser/frontend-application-config-provider';
-import { nls } from '@theia/core/lib/common/nls';
-import { inject, injectable } from '@theia/core/shared/inversify';
-import { VariableRegistry, VariableResolverService } from '@theia/variable-resolver/lib/browser';
+import { FrontendApplicationStateService } from '@ogun/core/lib/browser/frontend-application-state';
+import { FrontendApplicationConfigProvider } from '@ogun/core/lib/browser/frontend-application-config-provider';
+import { nls } from '@ogun/core/lib/common/nls';
+import { inject, injectable } from '@ogun/core/shared/inversify';
+import { VariableRegistry, VariableResolverService } from '@ogun/variable-resolver/lib/browser';
 import { AIVariableContribution, AIVariableResolver, AIVariableService, AIVariableResolutionRequest, AIVariableContext, ResolvedAIVariable } from '../common';
 
 /**

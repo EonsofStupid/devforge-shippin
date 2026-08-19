@@ -14,8 +14,8 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { injectable } from '@theia/core/shared/inversify';
-import { ApplicationShell, FrontendApplication, FrontendApplicationContribution } from '@theia/core/lib/browser';
+import { injectable } from '@ogun/core/shared/inversify';
+import { ApplicationShell, FrontendApplication, FrontendApplicationContribution } from '@ogun/core/lib/browser';
 import { SetActualHeightForContentHoverWidgetParams } from './content-hover-widget-patcher';
 import { contentHoverWidgetPatcher } from './monaco-init';
 

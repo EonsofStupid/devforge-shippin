@@ -14,12 +14,12 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { inject, injectable } from '@theia/core/shared/inversify';
-import { ILogger } from '@theia/core/lib/common/logger';
-import { LanguageInfo } from '@theia/core/lib/common/i18n/localization';
-import { RequestContext, RequestService } from '@theia/core/shared/@theia/request';
-import { OVSXApiFilterProvider } from '@theia/ovsx-client';
-import { VSXExtensionRaw, VSXQueryOptions, VSXQueryResult, VSXSearchOptions, VSXSearchResult } from '@theia/ovsx-client/lib/ovsx-types';
+import { inject, injectable } from '@ogun/core/shared/inversify';
+import { ILogger } from '@ogun/core/lib/common/logger';
+import { LanguageInfo } from '@ogun/core/lib/common/i18n/localization';
+import { RequestContext, RequestService } from '@ogun/core/shared/@ogun/request';
+import { OVSXApiFilterProvider } from '@ogun/ovsx-client';
+import { VSXExtensionRaw, VSXQueryOptions, VSXQueryResult, VSXSearchOptions, VSXSearchResult } from '@ogun/ovsx-client/lib/ovsx-types';
 import { OVSXClientProvider } from '../common/ovsx-client-provider';
 import { VSXEnvironment } from '../common/vsx-environment';
 import { VSXRegistryService } from '../common/vsx-registry-service';

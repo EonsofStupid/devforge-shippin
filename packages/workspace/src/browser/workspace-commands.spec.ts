@@ -14,29 +14,29 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { enableJSDOM } from '@theia/core/lib/browser/test/jsdom';
+import { enableJSDOM } from '@ogun/core/lib/browser/test/jsdom';
 let disableJSDOM = enableJSDOM();
 
-import { FrontendApplicationConfigProvider } from '@theia/core/lib/browser/frontend-application-config-provider';
+import { FrontendApplicationConfigProvider } from '@ogun/core/lib/browser/frontend-application-config-provider';
 FrontendApplicationConfigProvider.set({});
 
 import { expect } from 'chai';
-import URI from '@theia/core/lib/common/uri';
-import { Container } from '@theia/core/shared/inversify';
-import { FileDialogService } from '@theia/filesystem/lib/browser';
-import { FileService } from '@theia/filesystem/lib/browser/file-service';
-import { FileStat } from '@theia/filesystem/lib/common/files';
-import { LabelProvider, OpenerService, FrontendApplication } from '@theia/core/lib/browser';
-import { MessageService, OS } from '@theia/core/lib/common';
-import { SelectionService } from '@theia/core/lib/common/selection-service';
+import URI from '@ogun/core/lib/common/uri';
+import { Container } from '@ogun/core/shared/inversify';
+import { FileDialogService } from '@ogun/filesystem/lib/browser';
+import { FileService } from '@ogun/filesystem/lib/browser/file-service';
+import { FileStat } from '@ogun/filesystem/lib/common/files';
+import { LabelProvider, OpenerService, FrontendApplication } from '@ogun/core/lib/browser';
+import { MessageService, OS } from '@ogun/core/lib/common';
+import { SelectionService } from '@ogun/core/lib/common/selection-service';
 import { WorkspaceCommandContribution } from './workspace-commands';
 import { WorkspaceCompareHandler } from './workspace-compare-handler';
 import { WorkspaceDeleteHandler } from './workspace-delete-handler';
 import { WorkspaceDuplicateHandler } from './workspace-duplicate-handler';
 import { WorkspacePreferences } from '../common/workspace-preferences';
 import { WorkspaceService } from './workspace-service';
-import { ApplicationServer } from '@theia/core/lib/common/application-protocol';
-import { ClipboardService } from '@theia/core/lib/browser/clipboard-service';
+import { ApplicationServer } from '@ogun/core/lib/common/application-protocol';
+import { ClipboardService } from '@ogun/core/lib/browser/clipboard-service';
 
 disableJSDOM();
 

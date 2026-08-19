@@ -14,14 +14,14 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { URI } from '@theia/core/shared/vscode-uri';
-import * as theia from '@theia/plugin';
+import { URI } from '@ogun/core/shared/vscode-uri';
+import * as theia from '@ogun/plugin';
 import { DocumentsExtImpl } from '../documents';
 import { CodeLensSymbol } from '../../common/plugin-api-rpc-model';
 import * as Converter from '../type-converters';
 import { ObjectIdentifier } from '../../common/object-identifier';
 import { CommandRegistryImpl } from '../command-registry';
-import { DisposableCollection } from '@theia/core/lib/common/disposable';
+import { DisposableCollection } from '@ogun/core/lib/common/disposable';
 
 /** Adapts the calls from main to extension thread for providing/resolving the code lenses. */
 export class CodeLensAdapter {

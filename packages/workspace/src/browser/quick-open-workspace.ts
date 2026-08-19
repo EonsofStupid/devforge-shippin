@@ -14,12 +14,12 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { injectable, inject, optional, named } from '@theia/core/shared/inversify';
-import { QuickPickItem, LabelProvider, QuickInputService, QuickInputButton, QuickPickSeparator } from '@theia/core/lib/browser';
-import { EnvVariablesServer } from '@theia/core/lib/common/env-variables';
+import { injectable, inject, optional, named } from '@ogun/core/shared/inversify';
+import { QuickPickItem, LabelProvider, QuickInputService, QuickInputButton, QuickPickSeparator } from '@ogun/core/lib/browser';
+import { EnvVariablesServer } from '@ogun/core/lib/common/env-variables';
 import { WorkspaceOpenHandlerContribution, WorkspaceService } from './workspace-service';
-import URI from '@theia/core/lib/common/uri';
-import { ContributionProvider, nls, Path } from '@theia/core/lib/common';
+import URI from '@ogun/core/lib/common/uri';
+import { ContributionProvider, nls, Path } from '@ogun/core/lib/common';
 import { UntitledWorkspaceService } from '../common/untitled-workspace-service';
 
 interface RecentlyOpenedPick extends QuickPickItem {

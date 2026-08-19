@@ -14,11 +14,11 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { inject, injectable, optional } from '@theia/core/shared/inversify';
-import { MessageService } from '@theia/core/lib/common/message-service';
+import { inject, injectable, optional } from '@ogun/core/shared/inversify';
+import { MessageService } from '@ogun/core/lib/common/message-service';
 import { VariableRegistry, Variable } from './variable';
 import { VariableResolverService } from './variable-resolver-service';
-import { QuickPickItem, QuickInputService } from '@theia/core/lib/browser';
+import { QuickPickItem, QuickInputService } from '@ogun/core/lib/browser';
 
 @injectable()
 export class VariableQuickOpenService {

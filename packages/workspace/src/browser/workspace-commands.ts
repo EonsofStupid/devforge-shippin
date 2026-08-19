@@ -14,31 +14,31 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { inject, injectable } from '@theia/core/shared/inversify';
-import URI from '@theia/core/lib/common/uri';
-import { SelectionService } from '@theia/core/lib/common/selection-service';
-import { Command, CommandContribution, CommandRegistry } from '@theia/core/lib/common/command';
-import { MenuContribution, MenuModelRegistry } from '@theia/core/lib/common/menu';
-import { CommonMenus } from '@theia/core/lib/browser/common-menus';
-import { FileDialogService } from '@theia/filesystem/lib/browser';
-import { SingleTextInputDialog, ConfirmDialog, Dialog } from '@theia/core/lib/browser/dialogs';
-import { OpenerService, OpenHandler, open, FrontendApplication, LabelProvider, CommonCommands } from '@theia/core/lib/browser';
-import { UriCommandHandler, UriAwareCommandHandler } from '@theia/core/lib/common/uri-command-handler';
+import { inject, injectable } from '@ogun/core/shared/inversify';
+import URI from '@ogun/core/lib/common/uri';
+import { SelectionService } from '@ogun/core/lib/common/selection-service';
+import { Command, CommandContribution, CommandRegistry } from '@ogun/core/lib/common/command';
+import { MenuContribution, MenuModelRegistry } from '@ogun/core/lib/common/menu';
+import { CommonMenus } from '@ogun/core/lib/browser/common-menus';
+import { FileDialogService } from '@ogun/filesystem/lib/browser';
+import { SingleTextInputDialog, ConfirmDialog, Dialog } from '@ogun/core/lib/browser/dialogs';
+import { OpenerService, OpenHandler, open, FrontendApplication, LabelProvider, CommonCommands } from '@ogun/core/lib/browser';
+import { UriCommandHandler, UriAwareCommandHandler } from '@ogun/core/lib/common/uri-command-handler';
 import { WorkspaceService } from './workspace-service';
-import { MessageService } from '@theia/core/lib/common/message-service';
+import { MessageService } from '@ogun/core/lib/common/message-service';
 import { WorkspacePreferences } from '../common/workspace-preferences';
 import { WorkspaceDeleteHandler } from './workspace-delete-handler';
 import { WorkspaceDuplicateHandler } from './workspace-duplicate-handler';
-import { FileSystemUtils } from '@theia/filesystem/lib/common';
+import { FileSystemUtils } from '@ogun/filesystem/lib/common';
 import { WorkspaceCompareHandler } from './workspace-compare-handler';
-import { FileDownloadCommands } from '@theia/filesystem/lib/browser/download/file-download-command-contribution';
-import { FileSystemCommands } from '@theia/filesystem/lib/browser/filesystem-frontend-contribution';
+import { FileDownloadCommands } from '@ogun/filesystem/lib/browser/download/file-download-command-contribution';
+import { FileSystemCommands } from '@ogun/filesystem/lib/browser/filesystem-frontend-contribution';
 import { WorkspaceInputDialog } from './workspace-input-dialog';
-import { Emitter, EOL, Event, OS } from '@theia/core/lib/common';
-import { FileService } from '@theia/filesystem/lib/browser/file-service';
-import { FileStat } from '@theia/filesystem/lib/common/files';
-import { nls } from '@theia/core/lib/common/nls';
-import { ClipboardService } from '@theia/core/lib/browser/clipboard-service';
+import { Emitter, EOL, Event, OS } from '@ogun/core/lib/common';
+import { FileService } from '@ogun/filesystem/lib/browser/file-service';
+import { FileStat } from '@ogun/filesystem/lib/common/files';
+import { nls } from '@ogun/core/lib/common/nls';
+import { ClipboardService } from '@ogun/core/lib/browser/clipboard-service';
 
 const validFilename: (arg: string) => boolean = require('valid-filename');
 

@@ -14,8 +14,8 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { Disposable, Emitter, Event, QueueableEmitter, Resource, URI, ILogger } from '@theia/core';
-import { Saveable, SaveOptions } from '@theia/core/lib/browser';
+import { Disposable, Emitter, Event, QueueableEmitter, Resource, URI, ILogger } from '@ogun/core';
+import { Saveable, SaveOptions } from '@ogun/core/lib/browser';
 import {
     CellData, CellEditType, CellUri, NotebookCellInternalMetadata,
     NotebookCellMetadata,
@@ -28,13 +28,13 @@ import {
     NullablePartialNotebookCellMetadata
 } from '../notebook-types';
 import { NotebookSerializer } from '../service/notebook-service';
-import { FileService } from '@theia/filesystem/lib/browser/file-service';
+import { FileService } from '@ogun/filesystem/lib/browser/file-service';
 import { NotebookCellModel, NotebookCellModelFactory, NotebookCodeEditorFindMatch } from './notebook-cell-model';
-import { inject, injectable, interfaces, postConstruct, named } from '@theia/core/shared/inversify';
-import { UndoRedoService } from '@theia/editor/lib/browser/undo-redo-service';
-import { MarkdownString } from '@theia/core/lib/common/markdown-rendering';
+import { inject, injectable, interfaces, postConstruct, named } from '@ogun/core/shared/inversify';
+import { UndoRedoService } from '@ogun/editor/lib/browser/undo-redo-service';
+import { MarkdownString } from '@ogun/core/lib/common/markdown-rendering';
 import type { NotebookModelResolverService } from '../service/notebook-model-resolver-service';
-import { BinaryBuffer } from '@theia/core/lib/common/buffer';
+import { BinaryBuffer } from '@ogun/core/lib/common/buffer';
 import { NotebookEditorFindMatch, NotebookEditorFindMatchOptions } from '../view/notebook-find-widget';
 
 export const NotebookModelFactory = Symbol('NotebookModelFactory');

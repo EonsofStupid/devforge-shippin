@@ -16,7 +16,7 @@
 
 import { expect } from 'chai';
 import { ApplicationProcess } from './application-process';
-import { ApplicationPackage } from '@theia/application-package';
+import { ApplicationPackage } from '@ogun/application-package';
 
 describe('ApplicationProcess', () => {
 

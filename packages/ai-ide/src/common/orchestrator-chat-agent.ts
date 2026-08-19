@@ -14,13 +14,13 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { AIVariableContext, getJsonOfText, getTextOfResponse, LanguageModel, LanguageModelMessage, LanguageModelRequirement, LanguageModelResponse } from '@theia/ai-core';
-import { inject, injectable } from '@theia/core/shared/inversify';
-import { ChatAgentService } from '@theia/ai-chat/lib/common/chat-agent-service';
-import { ChatToolRequest } from '@theia/ai-chat/lib/common/chat-tool-request-service';
-import { AbstractStreamParsingChatAgent, SystemMessageDescription } from '@theia/ai-chat/lib/common/chat-agents';
-import { MutableChatRequestModel, InformationalChatResponseContentImpl } from '@theia/ai-chat/lib/common/chat-model';
-import { generateUuid, nls, PreferenceService } from '@theia/core';
+import { AIVariableContext, getJsonOfText, getTextOfResponse, LanguageModel, LanguageModelMessage, LanguageModelRequirement, LanguageModelResponse } from '@ogun/ai-core';
+import { inject, injectable } from '@ogun/core/shared/inversify';
+import { ChatAgentService } from '@ogun/ai-chat/lib/common/chat-agent-service';
+import { ChatToolRequest } from '@ogun/ai-chat/lib/common/chat-tool-request-service';
+import { AbstractStreamParsingChatAgent, SystemMessageDescription } from '@ogun/ai-chat/lib/common/chat-agents';
+import { MutableChatRequestModel, InformationalChatResponseContentImpl } from '@ogun/ai-chat/lib/common/chat-model';
+import { generateUuid, nls, PreferenceService } from '@ogun/core';
 import { orchestratorTemplate } from './orchestrator-prompt-template';
 import { PREFERENCE_NAME_ORCHESTRATOR_EXCLUSION_LIST } from './ai-ide-preferences';
 

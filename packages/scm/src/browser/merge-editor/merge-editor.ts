@@ -14,14 +14,14 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { inject, injectable, postConstruct } from '@theia/core/shared/inversify';
-import { ArrayUtils, Disposable, DisposableCollection, nls, URI } from '@theia/core';
+import { inject, injectable, postConstruct } from '@ogun/core/shared/inversify';
+import { ArrayUtils, Disposable, DisposableCollection, nls, URI } from '@ogun/core';
 import {
     ApplicationShell, BaseWidget, FocusTracker, LabelProvider, Message, Navigatable, NavigatableWidgetOpenHandler, PanelLayout,
     Saveable, SaveableSource, SplitPanel, StatefulWidget, StorageService, Widget, WidgetOpenerOptions
-} from '@theia/core/lib/browser';
-import { Autorun, DerivedObservable, Observable, SettableObservable } from '@theia/core/lib/common/observable';
-import { Range } from '@theia/editor/lib/browser';
+} from '@ogun/core/lib/browser';
+import { Autorun, DerivedObservable, Observable, SettableObservable } from '@ogun/core/lib/common/observable';
+import { Range } from '@ogun/editor/lib/browser';
 import { MergeRange } from './model/merge-range';
 import { MergeEditorModel } from './model/merge-editor-model';
 import { MergeEditorBasePane, MergeEditorPane, MergeEditorResultPane, MergeEditorSide1Pane, MergeEditorSide2Pane, MergeEditorSidePane } from './view/merge-editor-panes';

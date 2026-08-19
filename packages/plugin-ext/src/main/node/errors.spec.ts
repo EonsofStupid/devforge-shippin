@@ -17,7 +17,7 @@
 import { rejects } from 'assert';
 import { strictEqual } from 'assert/strict';
 import { promises as fs } from 'fs';
-import { generateUuid } from '@theia/core/lib/common/uuid';
+import { generateUuid } from '@ogun/core/lib/common/uuid';
 import { isENOENT } from '../../common/errors';
 
 describe('errors', () => {

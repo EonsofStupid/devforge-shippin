@@ -14,18 +14,18 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { DisposableCollection, Emitter, Event, MessageService, nls, ProgressService, WaitUntilEvent, ILogger } from '@theia/core';
-import { ApplicationShell, ConfirmDialog } from '@theia/core/lib/browser';
-import { ContextKey, ContextKeyService } from '@theia/core/lib/browser/context-key-service';
-import { WindowService } from '@theia/core/lib/browser/window/window-service';
-import URI from '@theia/core/lib/common/uri';
-import { inject, injectable, postConstruct, named } from '@theia/core/shared/inversify';
+import { DisposableCollection, Emitter, Event, MessageService, nls, ProgressService, WaitUntilEvent, ILogger } from '@ogun/core';
+import { ApplicationShell, ConfirmDialog } from '@ogun/core/lib/browser';
+import { ContextKey, ContextKeyService } from '@ogun/core/lib/browser/context-key-service';
+import { WindowService } from '@ogun/core/lib/browser/window/window-service';
+import URI from '@ogun/core/lib/common/uri';
+import { inject, injectable, postConstruct, named } from '@ogun/core/shared/inversify';
 import * as monaco from '@theia/monaco-editor-core';
-import { QuickOpenTask } from '@theia/task/lib/browser/quick-open-task';
-import { TaskEndedInfo, TaskEndedTypes, TaskService } from '@theia/task/lib/browser/task-service';
-import { TaskIdentifier } from '@theia/task/lib/common';
-import { VariableResolverService } from '@theia/variable-resolver/lib/browser';
-import { WorkspaceTrustService } from '@theia/workspace/lib/browser';
+import { QuickOpenTask } from '@ogun/task/lib/browser/quick-open-task';
+import { TaskEndedInfo, TaskEndedTypes, TaskService } from '@ogun/task/lib/browser/task-service';
+import { TaskIdentifier } from '@ogun/task/lib/common';
+import { VariableResolverService } from '@ogun/variable-resolver/lib/browser';
+import { WorkspaceTrustService } from '@ogun/workspace/lib/browser';
 import { DebugConfiguration } from '../common/debug-common';
 import { DebugPreferences } from '../common/debug-preferences';
 import { DebugError, DebugService } from '../common/debug-service';

@@ -14,7 +14,7 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { Disposable, Event } from '@theia/core';
+import { Disposable, Event } from '@ogun/core';
 import * as net from 'net';
 
 export type RemoteStatusReport = (message: string) => void;

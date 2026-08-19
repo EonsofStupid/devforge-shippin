@@ -16,13 +16,13 @@
 
 import '../../../src/browser/style/merge-editor.css';
 
-import { Container, interfaces } from '@theia/core/shared/inversify';
-import { CommandContribution, DisposableCollection, MEMORY_TEXT_READONLY, MenuContribution, generateUuid, URI } from '@theia/core';
-import { TabBarToolbarContribution } from '@theia/core/lib/browser/shell/tab-bar-toolbar';
-import { FrontendApplicationContribution, KeybindingContribution, NavigatableWidgetOptions, OpenHandler, WidgetFactory } from '@theia/core/lib/browser';
-import { ColorContribution } from '@theia/core/lib/browser/color-application-contribution';
-import { EditorManager, EditorWidget } from '@theia/editor/lib/browser';
-import { MonacoEditor } from '@theia/monaco/lib/browser/monaco-editor';
+import { Container, interfaces } from '@ogun/core/shared/inversify';
+import { CommandContribution, DisposableCollection, MEMORY_TEXT_READONLY, MenuContribution, generateUuid, URI } from '@ogun/core';
+import { TabBarToolbarContribution } from '@ogun/core/lib/browser/shell/tab-bar-toolbar';
+import { FrontendApplicationContribution, KeybindingContribution, NavigatableWidgetOptions, OpenHandler, WidgetFactory } from '@ogun/core/lib/browser';
+import { ColorContribution } from '@ogun/core/lib/browser/color-application-contribution';
+import { EditorManager, EditorWidget } from '@ogun/editor/lib/browser';
+import { MonacoEditor } from '@ogun/monaco/lib/browser/monaco-editor';
 import { MergeEditorModel, MergeEditorModelProps } from './model/merge-editor-model';
 import { MergeEditorBasePane, MergeEditorPaneHeader, MergeEditorResultPane, MergeEditorSide1Pane, MergeEditorSide2Pane } from './view/merge-editor-panes';
 import { DiffSpacerService } from './view/diff-spacers';

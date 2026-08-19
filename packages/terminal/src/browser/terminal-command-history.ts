@@ -14,9 +14,9 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { DisposableCollection, Event, Emitter } from '@theia/core';
+import { DisposableCollection, Event, Emitter } from '@ogun/core';
 import { TerminalBlock, TerminalCommandHistoryState } from './base/terminal-widget';
-import { injectable } from '@theia/core/shared/inversify';
+import { injectable } from '@ogun/core/shared/inversify';
 
 export const TerminalCommandHistoryStateFactory = Symbol('TerminalCommandHistoryStateFactory');
 export type TerminalCommandHistoryStateFactory = () => TerminalCommandHistoryState;

@@ -14,8 +14,8 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { Loggable } from '@theia/core/lib/common';
-import { MockLogger } from '@theia/core/lib/common/test/mock-logger';
+import { Loggable } from '@ogun/core/lib/common';
+import { MockLogger } from '@ogun/core/lib/common/test/mock-logger';
 
 export class RecordingLogger extends MockLogger {
     readonly warnings: string[] = [];

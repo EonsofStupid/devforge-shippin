@@ -21,21 +21,21 @@
 
 /* eslint-disable @typescript-eslint/no-explicit-any */
 
-import debounce = require('@theia/core/shared/lodash.debounce');
-import { injectable, inject, interfaces, named, postConstruct, unmanaged } from '@theia/core/shared/inversify';
+import debounce = require('@ogun/core/shared/lodash.debounce');
+import { injectable, inject, interfaces, named, postConstruct, unmanaged } from '@ogun/core/shared/inversify';
 import { PluginMetadata, HostedPluginServer, DeployedPlugin, PluginServer, PluginIdentifiers } from '../../common/plugin-protocol';
 import { AbstractPluginManagerExt, ConfigStorage } from '../../common/plugin-api-rpc';
 import {
     Disposable, DisposableCollection, Emitter,
     ILogger, ContributionProvider,
     RpcProxy
-} from '@theia/core';
+} from '@ogun/core';
 import { MainPluginApiProvider } from '../../common/plugin-ext-api-contribution';
 import { PluginPathsService } from '../../main/common/plugin-paths-protocol';
-import { Deferred } from '@theia/core/lib/common/promise-util';
-import { EnvVariablesServer } from '@theia/core/lib/common/env-variables';
-import { environment } from '@theia/core/shared/@theia/application-package/lib/environment';
-import { Measurement, Stopwatch } from '@theia/core/lib/common';
+import { Deferred } from '@ogun/core/lib/common/promise-util';
+import { EnvVariablesServer } from '@ogun/core/lib/common/env-variables';
+import { environment } from '@ogun/core/shared/@ogun/application-package/lib/environment';
+import { Measurement, Stopwatch } from '@ogun/core/lib/common';
 
 export type PluginHost = 'frontend' | string;
 

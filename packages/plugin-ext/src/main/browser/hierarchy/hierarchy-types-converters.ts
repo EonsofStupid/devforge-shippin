@@ -14,10 +14,10 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { CallHierarchyIncomingCall, CallHierarchyItem, CallHierarchyOutgoingCall } from '@theia/callhierarchy/lib/browser';
-import * as languageProtocol from '@theia/core/shared/vscode-languageserver-protocol';
-import { URI } from '@theia/core/shared/vscode-uri';
-import { TypeHierarchyItem } from '@theia/typehierarchy/lib/browser';
+import { CallHierarchyIncomingCall, CallHierarchyItem, CallHierarchyOutgoingCall } from '@ogun/callhierarchy/lib/browser';
+import * as languageProtocol from '@ogun/core/shared/vscode-languageserver-protocol';
+import { URI } from '@ogun/core/shared/vscode-uri';
+import { TypeHierarchyItem } from '@ogun/typehierarchy/lib/browser';
 import * as rpc from '../../../common/plugin-api-rpc';
 import * as model from '../../../common/plugin-api-rpc-model';
 import { UriComponents } from '../../../common/uri-components';

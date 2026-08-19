@@ -14,16 +14,16 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { interfaces } from '@theia/core/shared/inversify';
-import { CommandRegistry } from '@theia/core/lib/common/command';
-import * as theia from '@theia/plugin';
-import { Disposable, DisposableCollection } from '@theia/core/lib/common/disposable';
+import { interfaces } from '@ogun/core/shared/inversify';
+import { CommandRegistry } from '@ogun/core/lib/common/command';
+import * as theia from '@ogun/plugin';
+import { Disposable, DisposableCollection } from '@ogun/core/lib/common/disposable';
 import { CommandRegistryMain, CommandRegistryExt, MAIN_RPC_CONTEXT } from '../../common/plugin-api-rpc';
 import { RPCProtocol } from '../../common/rpc-protocol';
-import { KeybindingRegistry } from '@theia/core/lib/browser';
+import { KeybindingRegistry } from '@ogun/core/lib/browser';
 import { PluginContributionHandler } from './plugin-contribution-handler';
 import { ArgumentProcessor } from '../../common/commands';
-import { ContributionProvider } from '@theia/core';
+import { ContributionProvider } from '@ogun/core';
 
 export const ArgumentProcessorContribution = Symbol('ArgumentProcessorContribution');
 

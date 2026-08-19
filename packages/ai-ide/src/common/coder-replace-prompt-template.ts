@@ -9,8 +9,8 @@
 // SPDX-License-Identifier: MIT
 // *****************************************************************************
 
-import { AGENT_DELEGATION_FUNCTION_ID, BasePromptFragment } from '@theia/ai-core/lib/common';
-import { CHANGE_SET_SUMMARY_VARIABLE_ID } from '@theia/ai-chat';
+import { AGENT_DELEGATION_FUNCTION_ID, BasePromptFragment } from '@ogun/ai-core/lib/common';
+import { CHANGE_SET_SUMMARY_VARIABLE_ID } from '@ogun/ai-chat';
 import {
     GET_WORKSPACE_FILE_LIST_FUNCTION_ID,
     FILE_CONTENT_FUNCTION_ID,

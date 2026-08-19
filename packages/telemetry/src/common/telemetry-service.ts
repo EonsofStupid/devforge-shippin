@@ -14,8 +14,8 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { deepClone, deepFreeze } from '@theia/core/lib/common/objects';
-import { isObject } from '@theia/core/lib/common/types';
+import { deepClone, deepFreeze } from '@ogun/core/lib/common/objects';
+import { isObject } from '@ogun/core/lib/common/types';
 
 /** @experimental */
 export type TelemetryPrimitive = string | number | boolean;

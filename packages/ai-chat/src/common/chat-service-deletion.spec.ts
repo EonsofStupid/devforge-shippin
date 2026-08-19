@@ -15,13 +15,13 @@
 // *****************************************************************************
 
 import { expect } from 'chai';
-import { Container } from '@theia/core/shared/inversify';
+import { Container } from '@ogun/core/shared/inversify';
 import { ChatServiceImpl } from './chat-service';
 import { ChatSessionStore, ChatSessionIndex, ChatModelWithMetadata } from './chat-session-store';
 import { ChatAgentService } from './chat-agent-service';
 import { ChatRequestParser } from './chat-request-parser';
-import { AIVariableService, ToolInvocationRegistry } from '@theia/ai-core';
-import { ILogger } from '@theia/core';
+import { AIVariableService, ToolInvocationRegistry } from '@ogun/ai-core';
+import { ILogger } from '@ogun/core';
 import { ChatContentDeserializerRegistry, ChatContentDeserializerRegistryImpl, DefaultChatContentDeserializerContribution } from './chat-content-deserializer';
 import { ChangeSetElementDeserializerRegistry, ChangeSetElementDeserializerRegistryImpl } from './change-set-element-deserializer';
 import { ChatAgentLocation } from './chat-agents';

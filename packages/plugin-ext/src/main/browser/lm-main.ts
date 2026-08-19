@@ -14,7 +14,7 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { interfaces } from '@theia/core/shared/inversify';
+import { interfaces } from '@ogun/core/shared/inversify';
 import { RPCProtocol } from '../../common/rpc-protocol';
 import {
     McpServerDefinitionRegistryMain,
@@ -23,8 +23,8 @@ import {
     isMcpHttpServerDefinitionDto,
 } from '../../common/lm-protocol';
 import { MAIN_RPC_CONTEXT } from '../../common/plugin-api-rpc';
-import { MCPServerManager, MCPServerDescription, RemoteMCPServerDescription } from '@theia/ai-mcp/lib/common';
-import { URI } from '@theia/core';
+import { MCPServerManager, MCPServerDescription, RemoteMCPServerDescription } from '@ogun/ai-mcp/lib/common';
+import { URI } from '@ogun/core';
 
 export class McpServerDefinitionRegistryMainImpl implements McpServerDefinitionRegistryMain {
     private readonly proxy: McpServerDefinitionRegistryExt;

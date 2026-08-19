@@ -14,28 +14,28 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import * as React from '@theia/core/shared/react';
-import { Virtuoso } from '@theia/core/shared/react-virtuoso';
-import { injectable, inject, postConstruct } from '@theia/core/shared/inversify';
-import { ReactWidget } from '@theia/core/lib/browser/widgets/react-widget';
-import { LabelProvider } from '@theia/core/lib/browser/label-provider';
-import { HoverService } from '@theia/core/lib/browser/hover-service';
-import { ClipboardService } from '@theia/core/lib/browser/clipboard-service';
-import { MarkdownRenderer, MarkdownRendererFactory } from '@theia/core/lib/browser/markdown-rendering/markdown-renderer';
+import * as React from '@ogun/core/shared/react';
+import { Virtuoso } from '@ogun/core/shared/react-virtuoso';
+import { injectable, inject, postConstruct } from '@ogun/core/shared/inversify';
+import { ReactWidget } from '@ogun/core/lib/browser/widgets/react-widget';
+import { LabelProvider } from '@ogun/core/lib/browser/label-provider';
+import { HoverService } from '@ogun/core/lib/browser/hover-service';
+import { ClipboardService } from '@ogun/core/lib/browser/clipboard-service';
+import { MarkdownRenderer, MarkdownRendererFactory } from '@ogun/core/lib/browser/markdown-rendering/markdown-renderer';
 import { ScmHistoryGraphModel, HistoryGraphEntry } from './scm-history-graph-model';
 import { ScmHistoryItemRef, ScmHistoryItemChange } from './scm-provider';
 import { ScmService } from './scm-service';
 import { GraphRow } from './scm-history-graph-lanes';
-import URI from '@theia/core/lib/common/uri';
-import { nls } from '@theia/core/lib/common/nls';
-import { CancellationTokenSource } from '@theia/core/lib/common/cancellation';
-import { DisposableCollection } from '@theia/core/lib/common/disposable';
-import { Emitter, Event } from '@theia/core/lib/common/event';
-import { DynamicToolbarWidget } from '@theia/core/lib/browser/view-container';
-import { MenuPath } from '@theia/core/lib/common/menu/menu-types';
-import { ContextMenuRenderer } from '@theia/core/lib/browser/context-menu-renderer';
-import { OpenerService, open } from '@theia/core/lib/browser/opener-service';
-import { DiffUris } from '@theia/core/lib/browser/diff-uris';
+import URI from '@ogun/core/lib/common/uri';
+import { nls } from '@ogun/core/lib/common/nls';
+import { CancellationTokenSource } from '@ogun/core/lib/common/cancellation';
+import { DisposableCollection } from '@ogun/core/lib/common/disposable';
+import { Emitter, Event } from '@ogun/core/lib/common/event';
+import { DynamicToolbarWidget } from '@ogun/core/lib/browser/view-container';
+import { MenuPath } from '@ogun/core/lib/common/menu/menu-types';
+import { ContextMenuRenderer } from '@ogun/core/lib/browser/context-menu-renderer';
+import { OpenerService, open } from '@ogun/core/lib/browser/opener-service';
+import { DiffUris } from '@ogun/core/lib/browser/diff-uris';
 import { ScmContextKeyService } from './scm-context-key-service';
 import { ScmPreferences } from '../common/scm-preferences';
 import {

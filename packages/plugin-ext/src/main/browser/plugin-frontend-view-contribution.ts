@@ -14,8 +14,8 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { injectable } from '@theia/core/shared/inversify';
-import { AbstractViewContribution } from '@theia/core/lib/browser/shell/view-contribution';
+import { injectable } from '@ogun/core/shared/inversify';
+import { AbstractViewContribution } from '@ogun/core/lib/browser/shell/view-contribution';
 import { PLUGINS_LABEL, PluginWidget } from './plugin-ext-widget';
 
 @injectable()

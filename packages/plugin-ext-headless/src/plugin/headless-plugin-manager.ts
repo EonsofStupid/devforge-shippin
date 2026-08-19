@@ -14,10 +14,10 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { injectable } from '@theia/core/shared/inversify';
-import { AbstractPluginManagerExtImpl } from '@theia/plugin-ext/lib/plugin/plugin-manager';
+import { injectable } from '@ogun/core/shared/inversify';
+import { AbstractPluginManagerExtImpl } from '@ogun/plugin-ext/lib/plugin/plugin-manager';
 import { HeadlessPluginManagerExt, HeadlessPluginManagerInitializeParams } from '../common/headless-plugin-rpc';
-import { Plugin } from '@theia/plugin-ext';
+import { Plugin } from '@ogun/plugin-ext';
 
 @injectable()
 export class HeadlessPluginManagerExtImpl extends AbstractPluginManagerExtImpl<HeadlessPluginManagerInitializeParams> implements HeadlessPluginManagerExt {

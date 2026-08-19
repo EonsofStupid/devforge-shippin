@@ -14,8 +14,8 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { nls } from '@theia/core';
-import { PreferenceSchema } from '@theia/core/lib/common';
+import { nls } from '@ogun/core';
+import { PreferenceSchema } from '@ogun/core/lib/common';
 
 /**
  * These preferences are not intended to reflect real settings.

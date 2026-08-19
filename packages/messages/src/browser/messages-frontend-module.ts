@@ -16,15 +16,15 @@
 
 import '../../src/browser/style/index.css';
 
-import { ContainerModule } from '@theia/core/shared/inversify';
-import { MessageClient } from '@theia/core/lib/common';
+import { ContainerModule } from '@ogun/core/shared/inversify';
+import { MessageClient } from '@ogun/core/lib/common';
 import { NotificationManager } from './notifications-manager';
 import { bindNotificationPreferences } from '../common/notification-preferences';
 import { NotificationsRenderer } from './notifications-renderer';
 import { NotificationsContribution } from './notifications-contribution';
-import { FrontendApplicationContribution, KeybindingContribution, StylingParticipant } from '@theia/core/lib/browser';
-import { CommandContribution, MenuContribution } from '@theia/core';
-import { ColorContribution } from '@theia/core/lib/browser/color-application-contribution';
+import { FrontendApplicationContribution, KeybindingContribution, StylingParticipant } from '@ogun/core/lib/browser';
+import { CommandContribution, MenuContribution } from '@ogun/core';
+import { ColorContribution } from '@ogun/core/lib/browser/color-application-contribution';
 import { NotificationContentRenderer } from './notification-content-renderer';
 
 export default new ContainerModule((bind, unbind, isBound, rebind) => {

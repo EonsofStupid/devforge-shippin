@@ -14,8 +14,8 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { Deferred } from '@theia/core/lib/common/promise-util';
-import { injectable } from '@theia/core/shared/inversify';
+import { Deferred } from '@ogun/core/lib/common/promise-util';
+import { injectable } from '@ogun/core/shared/inversify';
 import * as net from 'net';
 
 @injectable()

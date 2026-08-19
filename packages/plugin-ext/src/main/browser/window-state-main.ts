@@ -14,15 +14,15 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { URI } from '@theia/core/shared/vscode-uri';
-import CoreURI from '@theia/core/lib/common/uri';
-import { interfaces } from '@theia/core/shared/inversify';
+import { URI } from '@ogun/core/shared/vscode-uri';
+import CoreURI from '@ogun/core/lib/common/uri';
+import { interfaces } from '@ogun/core/shared/inversify';
 import { WindowStateExt, MAIN_RPC_CONTEXT, WindowMain } from '../../common/plugin-api-rpc';
 import { RPCProtocol } from '../../common/rpc-protocol';
 import { UriComponents } from '../../common/uri-components';
-import { Disposable, DisposableCollection } from '@theia/core/lib/common/disposable';
-import { open, OpenerService } from '@theia/core/lib/browser/opener-service';
-import { ExternalUriService } from '@theia/core/lib/browser/external-uri-service';
+import { Disposable, DisposableCollection } from '@ogun/core/lib/common/disposable';
+import { open, OpenerService } from '@ogun/core/lib/browser/opener-service';
+import { ExternalUriService } from '@ogun/core/lib/browser/external-uri-service';
 import { WindowActivityTracker } from './window-activity-tracker';
 
 export class WindowStateMain implements WindowMain, Disposable {

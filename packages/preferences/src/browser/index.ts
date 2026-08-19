@@ -14,7 +14,7 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-export * from '@theia/core/lib/browser/preferences';
+export * from '@ogun/core/lib/browser/preferences';
 export * from './workspace-preference-provider';
 export * from './folders-preferences-provider';
 export * from './folder-preference-provider';

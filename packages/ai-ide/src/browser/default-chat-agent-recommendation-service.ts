@@ -14,9 +14,9 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { injectable } from '@theia/core/shared/inversify';
-import { ChatAgentRecommendationService, RecommendedAgent } from '@theia/ai-chat/lib/common';
-import { nls } from '@theia/core/lib/common/nls';
+import { injectable } from '@ogun/core/shared/inversify';
+import { ChatAgentRecommendationService, RecommendedAgent } from '@ogun/ai-chat/lib/common';
+import { nls } from '@ogun/core/lib/common/nls';
 import { CoderAgentId } from './coder-agent';
 import { ArchitectAgentId } from './architect-agent';
 

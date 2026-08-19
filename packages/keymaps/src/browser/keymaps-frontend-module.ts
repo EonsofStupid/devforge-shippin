@@ -16,16 +16,16 @@
 
 import './keymaps-monaco-contribution';
 import '../../src/browser/style/index.css';
-import { ContainerModule } from '@theia/core/shared/inversify';
+import { ContainerModule } from '@ogun/core/shared/inversify';
 import { KeymapsService } from './keymaps-service';
 import { KeymapsFrontendContribution } from './keymaps-frontend-contribution';
-import { CommandContribution, MenuContribution } from '@theia/core/lib/common';
-import { KeybindingContribution } from '@theia/core/lib/browser/keybinding';
-import { TabBarToolbarContribution } from '@theia/core/lib/browser/shell/tab-bar-toolbar';
-import { noopWidgetStatusBarContribution, WidgetFactory, WidgetStatusBarContribution } from '@theia/core/lib/browser';
+import { CommandContribution, MenuContribution } from '@ogun/core/lib/common';
+import { KeybindingContribution } from '@ogun/core/lib/browser/keybinding';
+import { TabBarToolbarContribution } from '@ogun/core/lib/browser/shell/tab-bar-toolbar';
+import { noopWidgetStatusBarContribution, WidgetFactory, WidgetStatusBarContribution } from '@ogun/core/lib/browser';
 import { KeybindingWidget } from './keybindings-widget';
 import { KeybindingSchemaUpdater } from './keybinding-schema-updater';
-import { JsonSchemaContribution } from '@theia/core/lib/browser/json-schema-store';
+import { JsonSchemaContribution } from '@ogun/core/lib/browser/json-schema-store';
 
 export default new ContainerModule(bind => {
     bind(KeymapsService).toSelf().inSingletonScope();

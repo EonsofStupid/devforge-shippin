@@ -19,20 +19,20 @@ describe('Find and Replace', function () {
     this.timeout(20_000);
     const { assert } = chai;
 
-    const { animationFrame } = require('@theia/core/lib/browser/browser');
-    const { DisposableCollection } = require('@theia/core/lib/common/disposable');
-    const { CommonCommands } = require('@theia/core/lib/browser/common-frontend-contribution');
-    const { EditorManager } = require('@theia/editor/lib/browser/editor-manager');
-    const { WorkspaceService } = require('@theia/workspace/lib/browser/workspace-service');
-    const { CommandRegistry } = require('@theia/core/lib/common/command');
-    const { KeybindingRegistry } = require('@theia/core/lib/browser/keybinding');
-    const { ContextKeyService } = require('@theia/core/lib/browser/context-key-service');
-    const { FileNavigatorContribution } = require('@theia/navigator/lib/browser/navigator-contribution');
-    const { ApplicationShell } = require('@theia/core/lib/browser/shell/application-shell');
-    const { HostedPluginSupport } = require('@theia/plugin-ext/lib/hosted/browser/hosted-plugin');
-    const { ProgressStatusBarItem } = require('@theia/core/lib/browser/progress-status-bar-item');
-    const { EXPLORER_VIEW_CONTAINER_ID } = require('@theia/navigator/lib/browser/navigator-widget-factory');
-    const { MonacoEditor } = require('@theia/monaco/lib/browser/monaco-editor');
+    const { animationFrame } = require('@ogun/core/lib/browser/browser');
+    const { DisposableCollection } = require('@ogun/core/lib/common/disposable');
+    const { CommonCommands } = require('@ogun/core/lib/browser/common-frontend-contribution');
+    const { EditorManager } = require('@ogun/editor/lib/browser/editor-manager');
+    const { WorkspaceService } = require('@ogun/workspace/lib/browser/workspace-service');
+    const { CommandRegistry } = require('@ogun/core/lib/common/command');
+    const { KeybindingRegistry } = require('@ogun/core/lib/browser/keybinding');
+    const { ContextKeyService } = require('@ogun/core/lib/browser/context-key-service');
+    const { FileNavigatorContribution } = require('@ogun/navigator/lib/browser/navigator-contribution');
+    const { ApplicationShell } = require('@ogun/core/lib/browser/shell/application-shell');
+    const { HostedPluginSupport } = require('@ogun/plugin-ext/lib/hosted/browser/hosted-plugin');
+    const { ProgressStatusBarItem } = require('@ogun/core/lib/browser/progress-status-bar-item');
+    const { EXPLORER_VIEW_CONTAINER_ID } = require('@ogun/navigator/lib/browser/navigator-widget-factory');
+    const { MonacoEditor } = require('@ogun/monaco/lib/browser/monaco-editor');
     const container = window.theia.container;
     const editorManager = container.get(EditorManager);
     const workspaceService = container.get(WorkspaceService);
@@ -88,7 +88,7 @@ describe('Find and Replace', function () {
     });
 
     /**
-     * @param {import('@theia/core/lib/common/command').Command} command
+     * @param {import('@ogun/core/lib/common/command').Command} command
      */
     async function assertEditorFindReplace(command) {
         assert.isFalse(contextKeyService.match('findWidgetVisible'));

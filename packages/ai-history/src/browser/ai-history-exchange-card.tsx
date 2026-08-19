@@ -18,9 +18,9 @@ import {
     LanguageModelExchange,
     LanguageModelMonitoredStreamResponse,
     LanguageModelExchangeRequestResponse
-} from '@theia/ai-core/lib/common/language-model-interaction-model';
-import { nls } from '@theia/core';
-import * as React from '@theia/core/shared/react';
+} from '@ogun/ai-core/lib/common/language-model-interaction-model';
+import { nls } from '@ogun/core';
+import * as React from '@ogun/core/shared/react';
 
 const getTextFromResponse = (response: LanguageModelExchangeRequestResponse): string => {
     // Handle monitored stream response

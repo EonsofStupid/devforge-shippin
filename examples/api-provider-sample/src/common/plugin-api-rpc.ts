@@ -13,9 +13,9 @@
 //
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
-import { createProxyIdentifier } from '@theia/plugin-ext/lib/common/rpc-protocol';
+import { createProxyIdentifier } from '@ogun/plugin-ext/lib/common/rpc-protocol';
 import type { greeting } from '../gotd';
-import { Event } from '@theia/core';
+import { Event } from '@ogun/core';
 
 export enum GreetingKind {
     DIRECT = 1,

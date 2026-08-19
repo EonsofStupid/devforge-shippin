@@ -20,7 +20,7 @@
  *--------------------------------------------------------------------------------------------*/
 // code copied and modified from https://github.com/microsoft/vscode/blob/1.103.2/src/vscode-dts/vscode.proposed.interactiveWindow.d.ts
 
-export module '@theia/plugin' {
+export module '@ogun/plugin' {
     /**
      * The tab represents an interactive window.
      */

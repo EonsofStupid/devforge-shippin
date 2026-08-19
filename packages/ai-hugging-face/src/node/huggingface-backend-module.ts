@@ -14,10 +14,10 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { ContainerModule } from '@theia/core/shared/inversify';
+import { ContainerModule } from '@ogun/core/shared/inversify';
 import { HUGGINGFACE_LANGUAGE_MODELS_MANAGER_PATH, HuggingFaceLanguageModelsManager } from '../common/huggingface-language-models-manager';
-import { ConnectionHandler, PreferenceContribution, RpcConnectionHandler } from '@theia/core';
-import { ConnectionContainerModule } from '@theia/core/lib/node/messaging/connection-container-module';
+import { ConnectionHandler, PreferenceContribution, RpcConnectionHandler } from '@ogun/core';
+import { ConnectionContainerModule } from '@ogun/core/lib/node/messaging/connection-container-module';
 import { HuggingFaceLanguageModelsManagerImpl } from './huggingface-language-models-manager-impl';
 import { HuggingFacePreferencesSchema } from '../common/huggingface-preferences';
 

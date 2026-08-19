@@ -14,9 +14,9 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { nls } from '@theia/core';
-import * as React from '@theia/core/shared/react';
-import { codicon } from '@theia/core/lib/browser';
+import { nls } from '@ogun/core';
+import * as React from '@ogun/core/shared/react';
+import { codicon } from '@ogun/core/lib/browser';
 import { BreakpointManager } from '../breakpoint/breakpoint-manager';
 import { InstructionBreakpoint } from '../breakpoint/breakpoint-marker';
 import { DebugBreakpoint, DebugBreakpointDecoration, DebugBreakpointOptions } from './debug-breakpoint';

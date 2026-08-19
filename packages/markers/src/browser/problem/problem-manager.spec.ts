@@ -14,21 +14,21 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { enableJSDOM } from '@theia/core/lib/browser/test/jsdom';
+import { enableJSDOM } from '@ogun/core/lib/browser/test/jsdom';
 
 const disableJSDOM = enableJSDOM();
 
 import * as chai from 'chai';
-import URI from '@theia/core/lib/common/uri';
+import URI from '@ogun/core/lib/common/uri';
 
-import { Container } from '@theia/core/shared/inversify';
+import { Container } from '@ogun/core/shared/inversify';
 import { ProblemManager } from './problem-manager';
-import { Event } from '@theia/core/lib/common/event';
-import { ILogger } from '@theia/core/lib/common/logger';
-import { DiagnosticSeverity, Range } from '@theia/core/shared/vscode-languageserver-protocol';
-import { MockLogger } from '@theia/core/lib/common/test/mock-logger';
-import { FileService } from '@theia/filesystem/lib/browser/file-service';
-import { LocalStorageService, StorageService } from '@theia/core/lib/browser/storage-service';
+import { Event } from '@ogun/core/lib/common/event';
+import { ILogger } from '@ogun/core/lib/common/logger';
+import { DiagnosticSeverity, Range } from '@ogun/core/shared/vscode-languageserver-protocol';
+import { MockLogger } from '@ogun/core/lib/common/test/mock-logger';
+import { FileService } from '@ogun/filesystem/lib/browser/file-service';
+import { LocalStorageService, StorageService } from '@ogun/core/lib/browser/storage-service';
 
 disableJSDOM();
 

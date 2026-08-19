@@ -16,10 +16,10 @@
 
 import * as monaco from '@theia/monaco-editor-core';
 
-import { AIActivationService } from '@theia/ai-core/lib/browser';
-import { Disposable, PreferenceService, ILogger } from '@theia/core';
-import { FrontendApplicationContribution, KeybindingContribution, KeybindingRegistry } from '@theia/core/lib/browser';
-import { inject, injectable, named } from '@theia/core/shared/inversify';
+import { AIActivationService } from '@ogun/ai-core/lib/browser';
+import { Disposable, PreferenceService, ILogger } from '@ogun/core';
+import { FrontendApplicationContribution, KeybindingContribution, KeybindingRegistry } from '@ogun/core/lib/browser';
+import { inject, injectable, named } from '@ogun/core/shared/inversify';
 import { InlineCompletionTriggerKind } from '@theia/monaco-editor-core/esm/vs/editor/common/languages';
 import {
     PREF_AI_INLINE_COMPLETION_AUTOMATIC_ENABLE,

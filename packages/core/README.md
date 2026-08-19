@@ -12,7 +12,7 @@
 
 ## Description
 
-The `@theia/core` extension is the main extension for all Theia-based applications, and provides the main framework for all dependent extensions.
+The `@ogun/core` extension is the main extension for all Theia-based applications, and provides the main framework for all dependent extensions.
 The extension provides the base APIs for all Theia-based applications, including:
 
 - Application APIs
@@ -53,14 +53,14 @@ A Theia application is a node package listing [Theia extensions](#theia-extensio
 
 ## Re-Exports Mechanism
 
-In order to make application builds more stable `@theia/core` re-exports some common dependencies for Theia extensions to re-use. This is especially useful when having to re-use the same dependencies as `@theia/core` does: Since those dependencies will be pulled by Theia, instead of trying to match the same version in your own packages, you can use re-exports to consume it from the framework directly.
+In order to make application builds more stable `@ogun/core` re-exports some common dependencies for Theia extensions to re-use. This is especially useful when having to re-use the same dependencies as `@ogun/core` does: Since those dependencies will be pulled by Theia, instead of trying to match the same version in your own packages, you can use re-exports to consume it from the framework directly.
 
 ### Usage Example
 
-Let's take inversify as an example since you will most likely use this package, you can import it by prefixing with `@theia/core/shared/`:
+Let's take inversify as an example since you will most likely use this package, you can import it by prefixing with `@ogun/core/shared/`:
 
 ```ts
-import { injectable } from '@theia/core/shared/inversify';
+import { injectable } from '@ogun/core/shared/inversify';
 
 @injectable()
 export class SomeClass {
@@ -70,11 +70,11 @@ export class SomeClass {
 
 ## Re-Exports
 
-- `@theia/core/electron-shared/...`
+- `@ogun/core/electron-shared/...`
   - `native-keymap` (from [`native-keymap@^2.5.0`](https://www.npmjs.com/package/native-keymap))
   - `electron` (from [`electron@42.3.0`](https://www.npmjs.com/package/electron/v/42.3.0))
   - `electron-store` (from [`electron-store@^8.2.0`](https://www.npmjs.com/package/electron-store))
-- `@theia/core/shared/...`
+- `@ogun/core/shared/...`
   - `@lumino/algorithm` (from [`@lumino/algorithm@^2.0.5`](https://www.npmjs.com/package/@lumino/algorithm))
   - `@lumino/commands` (from [`@lumino/commands@^2.3.4`](https://www.npmjs.com/package/@lumino/commands))
   - `@lumino/coreutils` (from [`@lumino/coreutils@^2.2.3`](https://www.npmjs.com/package/@lumino/coreutils))
@@ -85,12 +85,12 @@ export class SomeClass {
   - `@lumino/signaling` (from [`@lumino/signaling@^2.1.6`](https://www.npmjs.com/package/@lumino/signaling))
   - `@lumino/virtualdom` (from [`@lumino/virtualdom@^2.0.5`](https://www.npmjs.com/package/@lumino/virtualdom))
   - `@lumino/widgets` (from [`@lumino/widgets@2.7.5`](https://www.npmjs.com/package/@lumino/widgets/v/2.7.5))
-  - `@theia/application-package` (from [`@theia/application-package@1.74.0`](https://www.npmjs.com/package/@theia/application-package/v/1.74.0))
-  - `@theia/application-package/lib/api` (from [`@theia/application-package@1.74.0`](https://www.npmjs.com/package/@theia/application-package/v/1.74.0))
-  - `@theia/application-package/lib/environment` (from [`@theia/application-package@1.74.0`](https://www.npmjs.com/package/@theia/application-package/v/1.74.0))
-  - `@theia/request` (from [`@theia/request@1.74.0`](https://www.npmjs.com/package/@theia/request/v/1.74.0))
-  - `@theia/request/lib/proxy` (from [`@theia/request@1.74.0`](https://www.npmjs.com/package/@theia/request/v/1.74.0))
-  - `@theia/request/lib/node-request-service` (from [`@theia/request@1.74.0`](https://www.npmjs.com/package/@theia/request/v/1.74.0))
+  - `@ogun/application-package` (from [`@ogun/application-package@1.74.0`](https://www.npmjs.com/package/@ogun/application-package/v/1.74.0))
+  - `@ogun/application-package/lib/api` (from [`@ogun/application-package@1.74.0`](https://www.npmjs.com/package/@ogun/application-package/v/1.74.0))
+  - `@ogun/application-package/lib/environment` (from [`@ogun/application-package@1.74.0`](https://www.npmjs.com/package/@ogun/application-package/v/1.74.0))
+  - `@ogun/request` (from [`@ogun/request@1.74.0`](https://www.npmjs.com/package/@ogun/request/v/1.74.0))
+  - `@ogun/request/lib/proxy` (from [`@ogun/request@1.74.0`](https://www.npmjs.com/package/@ogun/request/v/1.74.0))
+  - `@ogun/request/lib/node-request-service` (from [`@ogun/request@1.74.0`](https://www.npmjs.com/package/@ogun/request/v/1.74.0))
   - `fs-extra` (from [`fs-extra@^4.0.3`](https://www.npmjs.com/package/fs-extra))
   - `fuzzy` (from [`fuzzy@^0.1.3`](https://www.npmjs.com/package/fuzzy))
   - `inversify` (from [`inversify@^6.2.2`](https://www.npmjs.com/package/inversify))
@@ -173,7 +173,7 @@ Where `root` is the name of the logger and `INFO` is the log level. These are op
 
 ## Additional Information
 
-- [API documentation for `@theia/core`](https://eclipse-theia.github.io/theia/docs/next/modules/_theia_core.html)
+- [API documentation for `@ogun/core`](https://eclipse-theia.github.io/theia/docs/next/modules/_theia_core.html)
 - [Theia - GitHub](https://github.com/eclipse-theia/theia)
 - [Theia - Website](https://theia-ide.org/)
 

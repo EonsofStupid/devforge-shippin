@@ -14,12 +14,12 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { injectable, inject, postConstruct } from '@theia/core/shared/inversify';
-import { Emitter, Event, nls } from '@theia/core';
+import { injectable, inject, postConstruct } from '@ogun/core/shared/inversify';
+import { Emitter, Event, nls } from '@ogun/core';
 import { LanguageModelAlias, LanguageModelAliasRegistry } from '../common/language-model-alias';
-import { PreferenceScope } from '@theia/core/lib/common';
+import { PreferenceScope } from '@ogun/core/lib/common';
 import { LANGUAGE_MODEL_ALIASES_PREFERENCE } from '../common/ai-core-preferences';
-import { Deferred } from '@theia/core/lib/common/promise-util';
+import { Deferred } from '@ogun/core/lib/common/promise-util';
 import { AiConfigurationService } from '../common/ai-configuration-service';
 
 @injectable()

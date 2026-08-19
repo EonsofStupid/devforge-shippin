@@ -14,17 +14,17 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { injectable, inject, optional } from '@theia/core/shared/inversify';
-import { Position, Location } from '@theia/core/shared/vscode-languageserver-protocol';
-import { URI as CodeURI } from '@theia/core/shared/vscode-uri';
-import { cloneAndChange, URI } from '@theia/core';
-import { CommandContribution, CommandRegistry, CommandHandler } from '@theia/core/lib/common/command';
-import { CommonCommands, QuickInputService, ApplicationShell } from '@theia/core/lib/browser';
-import { EditorCommands, EditorManager, EditorWidget } from '@theia/editor/lib/browser';
+import { injectable, inject, optional } from '@ogun/core/shared/inversify';
+import { Position, Location } from '@ogun/core/shared/vscode-languageserver-protocol';
+import { URI as CodeURI } from '@ogun/core/shared/vscode-uri';
+import { cloneAndChange, URI } from '@ogun/core';
+import { CommandContribution, CommandRegistry, CommandHandler } from '@ogun/core/lib/common/command';
+import { CommonCommands, QuickInputService, ApplicationShell } from '@ogun/core/lib/browser';
+import { EditorCommands, EditorManager, EditorWidget } from '@ogun/editor/lib/browser';
 import { MonacoEditor } from './monaco-editor';
 import { MonacoCommandRegistry, MonacoEditorCommandHandler } from './monaco-command-registry';
 import { ProtocolToMonacoConverter } from './protocol-to-monaco-converter';
-import { nls } from '@theia/core/lib/common/nls';
+import { nls } from '@ogun/core/lib/common/nls';
 import { EditorExtensionsRegistry } from '@theia/monaco-editor-core/esm/vs/editor/browser/editorExtensions';
 import { CommandsRegistry, ICommandService } from '@theia/monaco-editor-core/esm/vs/platform/commands/common/commands';
 import * as monaco from '@theia/monaco-editor-core';
@@ -124,7 +124,7 @@ export class MonacoEditorCommandHandlers implements CommandContribution {
      * Namely: `undo`, `redo` and `editor.action.selectAll`. They depend on `ICodeEditorService`.
      * They will try to delegate to the current editor and if it is not available delegate to the browser.
      * They are registered as handlers for corresponding core commands always.
-     * Other Theia extensions can provide alternative implementations by introducing a dependency to `@theia/monaco` extension.
+     * Other Theia extensions can provide alternative implementations by introducing a dependency to `@ogun/monaco` extension.
      *
      * #### Global Language Commands
      *

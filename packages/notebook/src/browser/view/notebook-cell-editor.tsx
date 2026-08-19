@@ -14,22 +14,22 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import * as React from '@theia/core/shared/react';
+import * as React from '@ogun/core/shared/react';
 import { NotebookModel } from '../view-model/notebook-model';
 import { NotebookCellModel, NotebookCodeEditorFindMatch } from '../view-model/notebook-cell-model';
-import { SimpleMonacoEditor } from '@theia/monaco/lib/browser/simple-monaco-editor';
-import { MonacoEditor, MonacoEditorServices } from '@theia/monaco/lib/browser/monaco-editor';
-import { MonacoEditorProvider } from '@theia/monaco/lib/browser/monaco-editor-provider';
+import { SimpleMonacoEditor } from '@ogun/monaco/lib/browser/simple-monaco-editor';
+import { MonacoEditor, MonacoEditorServices } from '@ogun/monaco/lib/browser/monaco-editor';
+import { MonacoEditorProvider } from '@ogun/monaco/lib/browser/monaco-editor-provider';
 import { IContextKeyService } from '@theia/monaco-editor-core/esm/vs/platform/contextkey/common/contextkey';
 import { NotebookContextManager } from '../service/notebook-context-manager';
-import { DisposableCollection, OS } from '@theia/core';
+import { DisposableCollection, OS } from '@ogun/core';
 import { NotebookViewportService } from './notebook-viewport-service';
 import { BareFontInfo } from '@theia/monaco-editor-core/esm/vs/editor/common/config/fontInfo';
 import { NOTEBOOK_CELL_CURSOR_FIRST_LINE, NOTEBOOK_CELL_CURSOR_LAST_LINE } from '../contributions/notebook-context-keys';
 import { EditorExtensionsRegistry } from '@theia/monaco-editor-core/esm/vs/editor/browser/editorExtensions';
 import { ModelDecorationOptions } from '@theia/monaco-editor-core/esm/vs/editor/common/model/textModel';
 import { IModelDeltaDecoration, OverviewRulerLane, TrackedRangeStickiness } from '@theia/monaco-editor-core/esm/vs/editor/common/model';
-import { animationFrame } from '@theia/core/lib/browser';
+import { animationFrame } from '@ogun/core/lib/browser';
 import { NotebookCellEditorService } from '../service/notebook-cell-editor-service';
 import { NotebookViewModel } from '../view-model/notebook-view-model';
 

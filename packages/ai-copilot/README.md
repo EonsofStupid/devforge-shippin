@@ -12,7 +12,7 @@
 
 ## Description
 
-The `@theia/ai-copilot` extension integrates GitHub Copilot language models with Theia AI.
+The `@ogun/ai-copilot` extension integrates GitHub Copilot language models with Theia AI.
 This allows users to authenticate with their GitHub Copilot subscription and use Copilot models (e.g., GPT-4o, Claude Sonnet) through Theia's AI features.
 
 ### Authentication
@@ -58,7 +58,7 @@ For GitHub Enterprise users, configure the enterprise URL via the `ai-features.c
 
 ## Additional Information
 
-- [API documentation for `@theia/ai-copilot`](https://eclipse-theia.github.io/theia/docs/next/modules/_theia_ai-copilot.html)
+- [API documentation for `@ogun/ai-copilot`](https://eclipse-theia.github.io/theia/docs/next/modules/_theia_ai-copilot.html)
 - [Theia - GitHub](https://github.com/eclipse-theia/theia)
 - [Theia - Website](https://theia-ide.org/)
 

@@ -14,14 +14,14 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { ConfigurableInMemoryResources, ConfigurableMutableReferenceResource } from '@theia/ai-core';
-import { CancellationToken, DisposableCollection, Emitter, nls, URI, ILogger } from '@theia/core';
-import { ConfirmDialog } from '@theia/core/lib/browser';
-import { Replacement } from '@theia/core/lib/common/content-replacer';
-import { inject, injectable, postConstruct, named } from '@theia/core/shared/inversify';
-import { EditorPreferences } from '@theia/editor/lib/common/editor-preferences';
-import { FileSystemPreferences } from '@theia/filesystem/lib/common';
-import { FileService } from '@theia/filesystem/lib/browser/file-service';
+import { ConfigurableInMemoryResources, ConfigurableMutableReferenceResource } from '@ogun/ai-core';
+import { CancellationToken, DisposableCollection, Emitter, nls, URI, ILogger } from '@ogun/core';
+import { ConfirmDialog } from '@ogun/core/lib/browser';
+import { Replacement } from '@ogun/core/lib/common/content-replacer';
+import { inject, injectable, postConstruct, named } from '@ogun/core/shared/inversify';
+import { EditorPreferences } from '@ogun/editor/lib/common/editor-preferences';
+import { FileSystemPreferences } from '@ogun/filesystem/lib/common';
+import { FileService } from '@ogun/filesystem/lib/browser/file-service';
 import { IReference } from '@theia/monaco-editor-core/esm/vs/base/common/lifecycle';
 import { TrimTrailingWhitespaceCommand } from '@theia/monaco-editor-core/esm/vs/editor/common/commands/trimTrailingWhitespaceCommand';
 import { Selection } from '@theia/monaco-editor-core/esm/vs/editor/common/core/selection';
@@ -29,16 +29,16 @@ import { CommandExecutor } from '@theia/monaco-editor-core/esm/vs/editor/common/
 import { formatDocumentWithSelectedProvider, FormattingMode } from '@theia/monaco-editor-core/esm/vs/editor/contrib/format/browser/format';
 import { StandaloneServices } from '@theia/monaco-editor-core/esm/vs/editor/standalone/browser/standaloneServices';
 import { IInstantiationService } from '@theia/monaco-editor-core/esm/vs/platform/instantiation/common/instantiation';
-import { MonacoTextModelService } from '@theia/monaco/lib/browser/monaco-text-model-service';
-import { insertFinalNewline } from '@theia/monaco/lib/browser/monaco-utilities';
-import { MonacoEditorModel } from '@theia/monaco/lib/browser/monaco-editor-model';
-import { MonacoWorkspace } from '@theia/monaco/lib/browser/monaco-workspace';
+import { MonacoTextModelService } from '@ogun/monaco/lib/browser/monaco-text-model-service';
+import { insertFinalNewline } from '@ogun/monaco/lib/browser/monaco-utilities';
+import { MonacoEditorModel } from '@ogun/monaco/lib/browser/monaco-editor-model';
+import { MonacoWorkspace } from '@ogun/monaco/lib/browser/monaco-workspace';
 import { ChangeSetElement } from '../common';
 import { SerializableChangeSetElement } from '../common/chat-model-serialization';
 import { createChangeSetFileUri } from './change-set-file-resource';
 import { ChangeSetFileService } from './change-set-file-service';
-import { Deferred } from '@theia/core/lib/common/promise-util';
-import { MonacoCodeActionService } from '@theia/monaco/lib/browser';
+import { Deferred } from '@ogun/core/lib/common/promise-util';
+import { MonacoCodeActionService } from '@ogun/monaco/lib/browser';
 
 export const ChangeSetFileElementFactory = Symbol('ChangeSetFileElementFactory');
 export type ChangeSetFileElementFactory = (elementProps: ChangeSetElementArgs) => ChangeSetFileElement;

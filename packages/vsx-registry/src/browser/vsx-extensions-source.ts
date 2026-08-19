@@ -14,15 +14,15 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { injectable, inject, postConstruct, named } from '@theia/core/shared/inversify';
-import { TreeElement, TreeSource } from '@theia/core/lib/browser/source-tree';
-import { ContributionProvider } from '@theia/core/lib/common/contribution-provider';
-import { PreferenceService } from '@theia/core/lib/common/preferences/preference-service';
-import { FuzzySearch } from '@theia/core/lib/common/fuzzy-search';
+import { injectable, inject, postConstruct, named } from '@ogun/core/shared/inversify';
+import { TreeElement, TreeSource } from '@ogun/core/lib/browser/source-tree';
+import { ContributionProvider } from '@ogun/core/lib/common/contribution-provider';
+import { PreferenceService } from '@ogun/core/lib/common/preferences/preference-service';
+import { FuzzySearch } from '@ogun/core/lib/common/fuzzy-search';
 import { VSXExtensionsModel } from './vsx-extensions-model';
 import { ExtensionsSourceContribution, SearchContext } from './extensions-source-contribution';
 import { VSXExtensionsSearchModel } from './vsx-extensions-search-model';
-import debounce = require('@theia/core/shared/lodash.debounce');
+import debounce = require('@ogun/core/shared/lodash.debounce');
 
 @injectable()
 export class VSXExtensionsSourceOptions {

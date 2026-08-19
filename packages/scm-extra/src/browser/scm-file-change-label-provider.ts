@@ -14,16 +14,16 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { injectable, inject } from '@theia/core/shared/inversify';
-import { LabelProviderContribution, DidChangeLabelEvent, LabelProvider } from '@theia/core/lib/browser/label-provider';
+import { injectable, inject } from '@ogun/core/shared/inversify';
+import { LabelProviderContribution, DidChangeLabelEvent, LabelProvider } from '@ogun/core/lib/browser/label-provider';
 import { ScmFileChangeNode } from './scm-file-change-node';
-import URI from '@theia/core/lib/common/uri';
-import { ScmService } from '@theia/scm/lib/browser/scm-service';
+import URI from '@ogun/core/lib/common/uri';
+import { ScmService } from '@ogun/scm/lib/browser/scm-service';
 
 @injectable()
 /**
- * @deprecated since 1.75.0 - superseded by the SCM history graph in `@theia/scm`
- * and the Timeline view in `@theia/timeline`. This package will be removed in a
+ * @deprecated since 1.75.0 - superseded by the SCM history graph in `@ogun/scm`
+ * and the Timeline view in `@ogun/timeline`. This package will be removed in a
  * future release - see https://github.com/eclipse-theia/theia/issues/17457.
  */
 export class ScmFileChangeLabelProvider implements LabelProviderContribution {

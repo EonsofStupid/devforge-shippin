@@ -18,10 +18,10 @@ import {
     MarkdownChatResponseContentImpl,
     MutableChatRequestModel,
     QuestionResponseContentImpl
-} from '@theia/ai-chat/lib/common';
-import { inject, injectable } from '@theia/core/shared/inversify';
-import { nls, PreferenceScope, PreferenceService } from '@theia/core';
-import { Deferred } from '@theia/core/lib/common/promise-util';
+} from '@ogun/ai-chat/lib/common';
+import { inject, injectable } from '@ogun/core/shared/inversify';
+import { nls, PreferenceScope, PreferenceService } from '@ogun/core';
+import { Deferred } from '@ogun/core/lib/common/promise-util';
 import { PREFERENCE_NAME_AGENT_MODE_ENABLED } from '../common/ai-ide-preferences';
 
 export const AgentModeConfirmationService = Symbol('AgentModeConfirmationService');

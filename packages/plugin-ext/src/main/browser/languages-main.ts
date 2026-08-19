@@ -39,26 +39,26 @@ import {
     IdentifiableInlineCompletions,
     HoverWithId
 } from '../../common/plugin-api-rpc';
-import { injectable, inject, named } from '@theia/core/shared/inversify';
+import { injectable, inject, named } from '@ogun/core/shared/inversify';
 import {
     SerializedDocumentFilter, MarkerData, Range, RelatedInformation,
     MarkerSeverity, DocumentLink, WorkspaceSymbolParams, CodeAction, CompletionDto,
     CodeActionProviderDocumentation, InlayHint, InlayHintLabelPart, CodeActionContext, DocumentDropEditProviderMetadata, SignatureHelpContext
 } from '../../common/plugin-api-rpc-model';
 import { RPCProtocol } from '../../common/rpc-protocol';
-import { MonacoLanguages, WorkspaceSymbolProvider } from '@theia/monaco/lib/browser/monaco-languages';
-import { URI } from '@theia/core/lib/common/uri';
-import { Disposable, DisposableCollection } from '@theia/core/lib/common/disposable';
-import { Emitter, Event } from '@theia/core/lib/common/event';
-import { ProblemManager } from '@theia/markers/lib/browser';
-import * as vst from '@theia/core/shared/vscode-languageserver-protocol';
-import * as theia from '@theia/plugin';
+import { MonacoLanguages, WorkspaceSymbolProvider } from '@ogun/monaco/lib/browser/monaco-languages';
+import { URI } from '@ogun/core/lib/common/uri';
+import { Disposable, DisposableCollection } from '@ogun/core/lib/common/disposable';
+import { Emitter, Event } from '@ogun/core/lib/common/event';
+import { ProblemManager } from '@ogun/markers/lib/browser';
+import * as vst from '@ogun/core/shared/vscode-languageserver-protocol';
+import * as theia from '@ogun/plugin';
 import { UriComponents } from '../../common/uri-components';
-import { CancellationToken } from '@theia/core/lib/common';
-import { CallHierarchyService, CallHierarchyServiceProvider, CallHierarchyItem } from '@theia/callhierarchy/lib/browser';
+import { CancellationToken } from '@ogun/core/lib/common';
+import { CallHierarchyService, CallHierarchyServiceProvider, CallHierarchyItem } from '@ogun/callhierarchy/lib/browser';
 import { toItemHierarchyDefinition, toUriComponents, fromItemHierarchyDefinition, fromPosition, toCaller, toCallee } from './hierarchy/hierarchy-types-converters';
-import { TypeHierarchyService, TypeHierarchyServiceProvider } from '@theia/typehierarchy/lib/browser';
-import { Position, DocumentUri, DiagnosticTag } from '@theia/core/shared/vscode-languageserver-protocol';
+import { TypeHierarchyService, TypeHierarchyServiceProvider } from '@ogun/typehierarchy/lib/browser';
+import { Position, DocumentUri, DiagnosticTag } from '@ogun/core/shared/vscode-languageserver-protocol';
 import { ObjectIdentifier } from '../../common/object-identifier';
 import { mixin } from '../../common/types';
 import { relative } from '../../common/paths-util';
@@ -70,8 +70,8 @@ import { IMarkerService } from '@theia/monaco-editor-core/esm/vs/platform/marker
 import * as MonacoLanguageSelector from '@theia/monaco-editor-core/esm/vs/editor/common/languageSelector';
 import * as MonacoPath from '@theia/monaco-editor-core/esm/vs/base/common/path';
 import { IRelativePattern } from '@theia/monaco-editor-core/esm/vs/base/common/glob';
-import { EditorLanguageStatusService, LanguageStatus as EditorLanguageStatus } from '@theia/editor/lib/browser/language-status/editor-language-status-service';
-import { LanguageSelector, RelativePattern } from '@theia/editor/lib/common/language-selector';
+import { EditorLanguageStatusService, LanguageStatus as EditorLanguageStatus } from '@ogun/editor/lib/browser/language-status/editor-language-status-service';
+import { LanguageSelector, RelativePattern } from '@ogun/editor/lib/common/language-selector';
 import { ILanguageFeaturesService } from '@theia/monaco-editor-core/esm/vs/editor/common/services/languageFeatures';
 import {
     DocumentDropEditProvider,
@@ -86,8 +86,8 @@ import {
 import { ITextModel } from '@theia/monaco-editor-core/esm/vs/editor/common/model';
 import { CodeActionTriggerKind } from '../../plugin/types-impl';
 import { IReadonlyVSDataTransfer } from '@theia/monaco-editor-core/esm/vs/base/common/dataTransfer';
-import { FileUploadService } from '@theia/filesystem/lib/common/upload/file-upload';
-import { ILogger } from '@theia/core';
+import { FileUploadService } from '@ogun/filesystem/lib/common/upload/file-upload';
+import { ILogger } from '@ogun/core';
 
 @injectable()
 export class LanguagesMainImpl implements LanguagesMain, Disposable {

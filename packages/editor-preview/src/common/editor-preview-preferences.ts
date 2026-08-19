@@ -14,9 +14,9 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { interfaces } from '@theia/core/shared/inversify';
-import { createPreferenceProxy, PreferenceContribution, PreferenceProxy, PreferenceSchema, PreferenceService } from '@theia/core/lib/common';
-import { nls } from '@theia/core/lib/common/nls';
+import { interfaces } from '@ogun/core/shared/inversify';
+import { createPreferenceProxy, PreferenceContribution, PreferenceProxy, PreferenceSchema, PreferenceService } from '@ogun/core/lib/common';
+import { nls } from '@ogun/core/lib/common/nls';
 
 export const ENABLE_PREVIEW_PREFERENCE = 'editor.enablePreview';
 

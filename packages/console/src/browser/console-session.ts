@@ -14,11 +14,11 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { injectable } from '@theia/core/shared/inversify';
-import { MaybePromise } from '@theia/core/lib/common/types';
-import { TreeSource, TreeElement, CompositeTreeElement } from '@theia/core/lib/browser/source-tree';
-import { Emitter, Event } from '@theia/core/lib/common/event';
-import { Severity } from '@theia/core/lib/common/severity';
+import { injectable } from '@ogun/core/shared/inversify';
+import { MaybePromise } from '@ogun/core/lib/common/types';
+import { TreeSource, TreeElement, CompositeTreeElement } from '@ogun/core/lib/browser/source-tree';
+import { Emitter, Event } from '@ogun/core/lib/common/event';
+import { Severity } from '@ogun/core/lib/common/severity';
 
 export interface ConsoleItem extends TreeElement {
     readonly severity?: Severity;

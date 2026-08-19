@@ -12,7 +12,7 @@
 
 ## Description
 
-The `@theia/keymaps` allows the user to reconfigure default keybindings with custom keymaps.\
+The `@ogun/keymaps` allows the user to reconfigure default keybindings with custom keymaps.\
 By modifying the appropriate `keymaps.json`, the user can modify existing keybindings, or add keybindings to commands that do not yet have a keybinding associated to them.
 
 Example of a valid `keymaps.json` file
@@ -49,7 +49,7 @@ Key sequences like: `ctrl+x ctrl+a` or `ctrl+a b c` are supported.  With the fol
 
 ## Additional Information
 
-- [API documentation for `@theia/keymaps`](https://eclipse-theia.github.io/theia/docs/next/modules/_theia_keymaps.html)
+- [API documentation for `@ogun/keymaps`](https://eclipse-theia.github.io/theia/docs/next/modules/_theia_keymaps.html)
 - [Theia - GitHub](https://github.com/eclipse-theia/theia)
 - [Theia - Website](https://theia-ide.org/)
 

@@ -18,9 +18,9 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { Command, CommandService, Disposable, Emitter, Event, URI } from '@theia/core';
-import { inject, injectable, postConstruct } from '@theia/core/shared/inversify';
-import { StorageService } from '@theia/core/lib/browser';
+import { Command, CommandService, Disposable, Emitter, Event, URI } from '@ogun/core';
+import { inject, injectable, postConstruct } from '@ogun/core/shared/inversify';
+import { StorageService } from '@ogun/core/lib/browser';
 import { NotebookKernelSourceAction } from '../../common';
 import { NotebookModel } from '../view-model/notebook-model';
 import { NotebookService } from './notebook-service';

@@ -14,16 +14,16 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { BaseWidget, BoxLayout, codicon, DockPanel, WidgetManager } from '@theia/core/lib/browser';
-import { TheiaDockPanel } from '@theia/core/lib/browser/shell/theia-dock-panel';
-import { inject, injectable, postConstruct } from '@theia/core/shared/inversify';
+import { BaseWidget, BoxLayout, codicon, DockPanel, WidgetManager } from '@ogun/core/lib/browser';
+import { TheiaDockPanel } from '@ogun/core/lib/browser/shell/theia-dock-panel';
+import { inject, injectable, postConstruct } from '@ogun/core/shared/inversify';
 import { AIAgentConfigurationWidget } from './agent-configuration-widget';
 import { AIVariableConfigurationWidget } from './variable-configuration-widget';
 import { AIToolsConfigurationWidget } from './tools-configuration-widget';
 import { AISkillsConfigurationWidget } from './skills-configuration-widget';
 import { AIConfigurationSelectionService } from './ai-configuration-service';
-import { nls } from '@theia/core';
-import { AIMCPConfigurationWidget } from '@theia/ai-mcp/lib/browser/mcp-configuration-widget';
+import { nls } from '@ogun/core';
+import { AIMCPConfigurationWidget } from '@ogun/ai-mcp/lib/browser/mcp-configuration-widget';
 import { AITokenUsageConfigurationWidget } from './token-usage-configuration-widget';
 import { AIPromptFragmentsConfigurationWidget } from './prompt-fragments-configuration-widget';
 import { ModelAliasesConfigurationWidget } from './model-aliases-configuration-widget';

@@ -14,10 +14,10 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import * as React from '@theia/core/shared/react';
+import * as React from '@ogun/core/shared/react';
 // eslint-disable-next-line import/no-extraneous-dependencies
 import { renderToStaticMarkup } from 'react-dom/server';
-import { nls } from '@theia/core/lib/common/nls';
+import { nls } from '@ogun/core/lib/common/nls';
 
 export interface BlockedResourcePlaceholderProps {
     resources: string[];

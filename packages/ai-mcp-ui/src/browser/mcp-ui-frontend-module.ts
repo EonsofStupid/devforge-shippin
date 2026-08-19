@@ -14,11 +14,11 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { CommandContribution } from '@theia/core';
-import { ContainerModule } from '@theia/core/shared/inversify';
+import { CommandContribution } from '@ogun/core';
+import { ContainerModule } from '@ogun/core/shared/inversify';
 import { MCPCommandContribution } from './mcp-command-contribution';
-import { PreferenceContribution } from '@theia/core/lib/common';
-import { McpServersPreferenceSchema } from '@theia/ai-mcp/lib/common/mcp-preferences';
+import { PreferenceContribution } from '@ogun/core/lib/common';
+import { McpServersPreferenceSchema } from '@ogun/ai-mcp/lib/common/mcp-preferences';
 
 export default new ContainerModule(bind => {
     bind(PreferenceContribution).toConstantValue({ schema: McpServersPreferenceSchema });

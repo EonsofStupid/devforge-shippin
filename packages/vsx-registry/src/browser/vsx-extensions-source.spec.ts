@@ -14,8 +14,8 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { FrontendApplicationConfigProvider } from '@theia/core/lib/browser/frontend-application-config-provider';
-import { enableJSDOM } from '@theia/core/lib/browser/test/jsdom';
+import { FrontendApplicationConfigProvider } from '@ogun/core/lib/browser/frontend-application-config-provider';
+import { enableJSDOM } from '@ogun/core/lib/browser/test/jsdom';
 const disableJSDOM = enableJSDOM();
 // xterm.js (pulled in transitively via plugin-ext from VSXExtensionsModel) calls
 // HTMLCanvasElement.prototype.getContext at module-load time. JSDOM's default impl
@@ -28,12 +28,12 @@ if (canvasProto) {
 try { FrontendApplicationConfigProvider.set({}); } catch { /* already set by a sibling spec */ }
 
 import { expect } from 'chai';
-import { Container } from '@theia/core/shared/inversify';
-import { Emitter } from '@theia/core';
-import { PreferenceService } from '@theia/core/lib/common/preferences/preference-service';
-import { FuzzySearch } from '@theia/core/lib/common/fuzzy-search';
-import { ContributionProvider } from '@theia/core/lib/common/contribution-provider';
-import { TreeElement } from '@theia/core/lib/browser/source-tree';
+import { Container } from '@ogun/core/shared/inversify';
+import { Emitter } from '@ogun/core';
+import { PreferenceService } from '@ogun/core/lib/common/preferences/preference-service';
+import { FuzzySearch } from '@ogun/core/lib/common/fuzzy-search';
+import { ContributionProvider } from '@ogun/core/lib/common/contribution-provider';
+import { TreeElement } from '@ogun/core/lib/browser/source-tree';
 import { VSXExtensionsModel } from './vsx-extensions-model';
 import { VSXExtensionsSearchModel } from './vsx-extensions-search-model';
 import { VSXExtensionsSource, VSXExtensionsSourceOptions } from './vsx-extensions-source';

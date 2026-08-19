@@ -14,16 +14,16 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import * as React from '@theia/core/shared/react';
+import * as React from '@ogun/core/shared/react';
 import { DebugProtocol } from '@vscode/debugprotocol/lib/debugProtocol';
-import URI from '@theia/core/lib/common/uri';
-import { CommandService } from '@theia/core/lib/common';
-import { LabelProvider, DISABLED_CLASS, OpenerService, TreeWidget } from '@theia/core/lib/browser';
-import { TreeElement } from '@theia/core/lib/browser/source-tree';
-import { SelectableTreeNode } from '@theia/core/lib/browser/tree/tree-selection';
+import URI from '@ogun/core/lib/common/uri';
+import { CommandService } from '@ogun/core/lib/common';
+import { LabelProvider, DISABLED_CLASS, OpenerService, TreeWidget } from '@ogun/core/lib/browser';
+import { TreeElement } from '@ogun/core/lib/browser/source-tree';
+import { SelectableTreeNode } from '@ogun/core/lib/browser/tree/tree-selection';
 import { BaseBreakpoint } from '../breakpoint/breakpoint-marker';
 import { BreakpointManager } from '../breakpoint/breakpoint-manager';
-import { nls } from '@theia/core';
+import { nls } from '@ogun/core';
 
 export interface DebugBreakpointOptions {
     readonly labelProvider: LabelProvider;

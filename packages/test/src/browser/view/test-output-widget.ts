@@ -16,11 +16,11 @@
 import { Terminal } from 'xterm';
 import { FitAddon } from 'xterm-addon-fit';
 
-import { BaseWidget, Message, Widget, codicon, isFirefox } from '@theia/core/lib/browser';
-import { inject, injectable, postConstruct } from '@theia/core/shared/inversify';
-import { Disposable, DisposableCollection } from '@theia/core';
-import { TerminalPreferences } from '@theia/terminal/lib/common/terminal-preferences';
-import { TerminalThemeService } from '@theia/terminal/lib/browser/terminal-theme-service';
+import { BaseWidget, Message, Widget, codicon, isFirefox } from '@ogun/core/lib/browser';
+import { inject, injectable, postConstruct } from '@ogun/core/shared/inversify';
+import { Disposable, DisposableCollection } from '@ogun/core';
+import { TerminalPreferences } from '@ogun/terminal/lib/common/terminal-preferences';
+import { TerminalThemeService } from '@ogun/terminal/lib/browser/terminal-theme-service';
 import { TestOutputSource, TestOutputUIModel } from './test-output-ui-model';
 import debounce = require('p-debounce');
 

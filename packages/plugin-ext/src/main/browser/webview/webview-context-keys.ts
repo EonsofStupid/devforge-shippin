@@ -14,9 +14,9 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { ApplicationShell, FocusTracker, Widget } from '@theia/core/lib/browser';
-import { ContextKey, ContextKeyService } from '@theia/core/lib/browser/context-key-service';
-import { inject, injectable, postConstruct } from '@theia/core/shared/inversify';
+import { ApplicationShell, FocusTracker, Widget } from '@ogun/core/lib/browser';
+import { ContextKey, ContextKeyService } from '@ogun/core/lib/browser/context-key-service';
+import { inject, injectable, postConstruct } from '@ogun/core/shared/inversify';
 import { CustomEditorWidget } from '../custom-editors/custom-editor-widget';
 import { WebviewWidget } from './webview';
 

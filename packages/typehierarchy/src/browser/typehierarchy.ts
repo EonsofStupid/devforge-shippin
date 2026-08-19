@@ -14,8 +14,8 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { UriComponents } from '@theia/core/lib/common/uri';
-import { Range, SymbolKind, SymbolTag } from '@theia/core/shared/vscode-languageserver-protocol';
+import { UriComponents } from '@ogun/core/lib/common/uri';
+import { Range, SymbolKind, SymbolTag } from '@ogun/core/shared/vscode-languageserver-protocol';
 
 export interface TypeHierarchyItem {
     _sessionId?: string;

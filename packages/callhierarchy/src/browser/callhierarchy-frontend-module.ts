@@ -15,12 +15,12 @@
 // *****************************************************************************
 
 import { CallHierarchyContribution } from './callhierarchy-contribution';
-import { bindRootContributionProvider } from '@theia/core/lib/common';
+import { bindRootContributionProvider } from '@ogun/core/lib/common';
 import { CallHierarchyService, CallHierarchyServiceProvider } from './callhierarchy-service';
-import { WidgetFactory, bindViewContribution } from '@theia/core/lib/browser';
+import { WidgetFactory, bindViewContribution } from '@ogun/core/lib/browser';
 import { CALLHIERARCHY_ID } from './callhierarchy';
 import { createHierarchyTreeWidget } from './callhierarchy-tree';
-import { ContainerModule } from '@theia/core/shared/inversify';
+import { ContainerModule } from '@ogun/core/shared/inversify';
 
 import '../../src/browser/style/index.css';
 

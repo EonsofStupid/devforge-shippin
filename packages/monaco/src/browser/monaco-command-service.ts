@@ -14,10 +14,10 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { inject, injectable, postConstruct } from '@theia/core/shared/inversify';
-import { CommandRegistry } from '@theia/core/lib/common/command';
-import { Emitter } from '@theia/core/lib/common/event';
-import { Disposable, DisposableCollection } from '@theia/core/lib/common/disposable';
+import { inject, injectable, postConstruct } from '@ogun/core/shared/inversify';
+import { CommandRegistry } from '@ogun/core/lib/common/command';
+import { Emitter } from '@ogun/core/lib/common/event';
+import { Disposable, DisposableCollection } from '@ogun/core/lib/common/disposable';
 import { ICommandEvent, ICommandService } from '@theia/monaco-editor-core/esm/vs/platform/commands/common/commands';
 import { StandaloneCommandService, StandaloneServices } from '@theia/monaco-editor-core/esm/vs/editor/standalone/browser/standaloneServices';
 import * as monaco from '@theia/monaco-editor-core';

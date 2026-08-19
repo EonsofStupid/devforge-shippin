@@ -14,8 +14,8 @@
  * SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
  ********************************************************************************/
 
-import { inject, injectable } from '@theia/core/shared/inversify';
-import * as React from '@theia/core/shared/react';
+import { inject, injectable } from '@ogun/core/shared/inversify';
+import * as React from '@ogun/core/shared/react';
 import Long from 'long';
 import { MemoryTable, MemoryTableWidget } from '../memory-widget/memory-table-widget';
 import { MemoryWidget } from '../memory-widget/memory-widget';

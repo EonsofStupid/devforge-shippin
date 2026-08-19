@@ -14,8 +14,8 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { AI_CORE_PREFERENCES_TITLE } from '@theia/ai-core/lib/common';
-import { nls, PreferenceSchema, PreferenceScope } from '@theia/core';
+import { AI_CORE_PREFERENCES_TITLE } from '@ogun/ai-core/lib/common';
+import { nls, PreferenceSchema, PreferenceScope } from '@ogun/core';
 
 // We reuse the context key for the preference name
 export const PREFERENCE_NAME_ENABLE_AI = 'ai-features.AiEnable.enableAI';

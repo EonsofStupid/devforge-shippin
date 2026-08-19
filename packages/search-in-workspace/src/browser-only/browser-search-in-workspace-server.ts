@@ -13,7 +13,7 @@
 //
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
-import { inject, injectable, named } from '@theia/core/shared/inversify';
+import { inject, injectable, named } from '@ogun/core/shared/inversify';
 import type {
     SearchInWorkspaceClient,
     SearchInWorkspaceOptions,
@@ -21,12 +21,12 @@ import type {
     SearchInWorkspaceServer,
     SearchMatch
 } from '../common/search-in-workspace-interface';
-import { FileUri } from '@theia/core/lib/common/file-uri';
-import { URI, ILogger } from '@theia/core';
-import { FileService, TextFileOperationError, TextFileOperationResult } from '@theia/filesystem/lib/browser/file-service';
-import { normalizeGlob, matchesPattern, createIgnoreMatcher, getIgnorePatterns } from '@theia/filesystem/lib/browser-only/file-search';
-import { escapeRegExpCharacters } from '@theia/core/lib/common/strings';
-import { BinarySize, type FileStatWithMetadata } from '@theia/filesystem/lib/common/files';
+import { FileUri } from '@ogun/core/lib/common/file-uri';
+import { URI, ILogger } from '@ogun/core';
+import { FileService, TextFileOperationError, TextFileOperationResult } from '@ogun/filesystem/lib/browser/file-service';
+import { normalizeGlob, matchesPattern, createIgnoreMatcher, getIgnorePatterns } from '@ogun/filesystem/lib/browser-only/file-search';
+import { escapeRegExpCharacters } from '@ogun/core/lib/common/strings';
+import { BinarySize, type FileStatWithMetadata } from '@ogun/filesystem/lib/common/files';
 
 interface SearchController {
     regex: RegExp;

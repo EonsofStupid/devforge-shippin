@@ -16,7 +16,7 @@
 
 /* eslint-disable @typescript-eslint/no-explicit-any */
 
-import { injectable, optional, multiInject, inject, named } from '@theia/core/shared/inversify';
+import { injectable, optional, multiInject, inject, named } from '@ogun/core/shared/inversify';
 import * as semver from 'semver';
 import {
     PluginDeployerResolver, PluginDeployerFileHandler, PluginDeployerDirectoryHandler,
@@ -32,9 +32,9 @@ import {
 import { ProxyPluginDeployerEntry } from './plugin-deployer-proxy-entry-impl';
 import { PluginDeployerFileHandlerContextImpl } from './plugin-deployer-file-handler-context-impl';
 import { PluginDeployerDirectoryHandlerContextImpl } from './plugin-deployer-directory-handler-context-impl';
-import { ILogger, Emitter, ContributionProvider } from '@theia/core';
+import { ILogger, Emitter, ContributionProvider } from '@ogun/core';
 import { PluginCliContribution } from './plugin-cli-contribution';
-import { Measurement, Stopwatch } from '@theia/core/lib/common';
+import { Measurement, Stopwatch } from '@ogun/core/lib/common';
 
 @injectable()
 export class PluginDeployerImpl implements PluginDeployer {

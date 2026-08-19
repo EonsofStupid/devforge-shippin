@@ -113,7 +113,7 @@ const resolvePackagePath = require('resolve-package-path');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const CompressionPlugin = require('compression-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const { MonacoWebpackPlugin } = require('@theia/bundle-plugin');
+const { MonacoWebpackPlugin } = require('@ogun/bundle-plugin');
 
 const outputPath = path.resolve(__dirname, 'lib', 'frontend');
 const { mode, staticCompression }  = yargs.option('mode', {
@@ -133,22 +133,22 @@ const plugins = [
             {
                 // copy secondary window html file to lib folder
                 from: path.resolve(__dirname, 'src-gen/frontend/secondary-window.html')
-            }${this.ifPackage('@theia/plugin-ext', `,
+            }${this.ifPackage('@ogun/plugin-ext', `,
             {
                 // copy webview files to lib folder
-                from: path.join(resolvePackagePath('@theia/plugin-ext', __dirname), '..', 'src', 'main', 'browser', 'webview', 'pre'),
+                from: path.join(resolvePackagePath('@ogun/plugin-ext', __dirname), '..', 'src', 'main', 'browser', 'webview', 'pre'),
                 to: path.resolve(__dirname, 'lib', 'webview', 'pre')
             }`)}
-            ${this.ifPackage('@theia/plugin-ext-vscode', `,
+            ${this.ifPackage('@ogun/plugin-ext-vscode', `,
             {
                 // copy frontend plugin host files
-                from: path.join(resolvePackagePath('@theia/plugin-ext-vscode', __dirname), '..', 'lib', 'node', 'context', 'plugin-vscode-init-fe.js'),
+                from: path.join(resolvePackagePath('@ogun/plugin-ext-vscode', __dirname), '..', 'lib', 'node', 'context', 'plugin-vscode-init-fe.js'),
                 to: path.resolve(__dirname, 'lib', 'frontend', 'context', 'plugin-vscode-init-fe.js')
             }`)}
-            ${this.ifPackage('@theia/terminal', `,
+            ${this.ifPackage('@ogun/terminal', `,
             {
                 // copy shell integration scripts
-                from: path.join(resolvePackagePath('@theia/terminal', __dirname), '..', 'src', 'node', 'shell-integrations'),
+                from: path.join(resolvePackagePath('@ogun/terminal', __dirname), '..', 'src', 'node', 'shell-integrations'),
                 to: path.resolve(__dirname, 'lib', 'backend', 'shell-integrations')
             }`)}
         ]
@@ -170,7 +170,7 @@ module.exports = [{
     devtool: 'source-map',
     entry: {
         bundle: path.resolve(__dirname, 'src-gen/frontend/index.js'),
-        ${this.ifPackage('@theia/plugin-ext', "'plugin-worker': '@theia/plugin-ext/lib/hosted/browser/worker/worker-main.js',")}
+        ${this.ifPackage('@ogun/plugin-ext', "'plugin-worker': '@ogun/plugin-ext/lib/hosted/browser/worker/worker-main.js',")}
     },
     output: {
         filename: '[name].js',
@@ -267,7 +267,7 @@ module.exports = [{
             // (e.g. '@theia/monaco-editor-core/esm/vs/nls') and internal relative
             // imports within Monaco (e.g. '../nls.js') are redirected.
             [path.join(resolvePackagePath('@theia/monaco-editor-core', __dirname), '..', 'esm', 'vs', 'nls.js')]:
-                path.join(resolvePackagePath('@theia/monaco', __dirname), '..', 'lib', 'browser', 'monaco-nls.js')
+                path.join(resolvePackagePath('@ogun/monaco', __dirname), '..', 'lib', 'browser', 'monaco-nls.js')
         },`)}
         extensions: ['.js']
     },
@@ -287,7 +287,7 @@ module.exports = [{
 },
 ${this.ifMonaco(() => `{
     // The Monaco editor worker must be built separately without the NLS alias.
-    // The NLS alias redirects to monaco-nls.ts which imports from @theia/core,
+    // The NLS alias redirects to monaco-nls.ts which imports from @ogun/core,
     // and those modules are not available in the web worker context.
     mode,
     devtool: 'source-map',
@@ -364,7 +364,7 @@ ${this.ifMonaco(() => `{
             // (e.g. '@theia/monaco-editor-core/esm/vs/nls') and internal relative
             // imports within Monaco (e.g. '../nls.js') are redirected.
             [path.join(resolvePackagePath('@theia/monaco-editor-core', __dirname), '..', 'esm', 'vs', 'nls.js')]:
-                path.join(resolvePackagePath('@theia/monaco', __dirname), '..', 'lib', 'browser', 'monaco-nls.js')
+                path.join(resolvePackagePath('@ogun/monaco', __dirname), '..', 'lib', 'browser', 'monaco-nls.js')
         },`)}
         extensions: ['.js']
     },
@@ -411,11 +411,11 @@ ${this.ifBrowserOnly('', `const nodeConfig = require('./${paths.basename(this.ge
 
 /**
  * Expose bundled modules on window.theia.moduleName namespace, e.g.
- * window['theia']['@theia/core/lib/common/uri'].
+ * window['theia']['@ogun/core/lib/common/uri'].
  * Such syntax can be used by external code, for instance, for testing.
 configs[0].module.rules.push({
     test: /\\.js$/,
-    loader: require.resolve('@theia/application-manager/lib/expose-loader')
+    loader: require.resolve('@ogun/application-manager/lib/expose-loader')
 }); */
 
 ${this.ifBrowserOnly('module.exports = configs;', `module.exports = [
@@ -435,7 +435,7 @@ const path = require('path');
 const yargs = require('yargs');
 const webpack = require('webpack');
 const TerserPlugin = require('terser-webpack-plugin');
-const { NativeWebpackPlugin, MonacoWebpackPlugin } = require('@theia/bundle-plugin');
+const { NativeWebpackPlugin, MonacoWebpackPlugin } = require('@ogun/bundle-plugin');
 
 const { mode } = yargs.option('mode', {
     description: "Mode to use",
@@ -448,10 +448,10 @@ const production = mode === 'production';
 /** @type {import('webpack').EntryObject} */
 const commonJsLibraries = {};
 for (const [entryPointName, entryPointPath] of Object.entries({
-    ${this.ifPackage('@theia/plugin-ext', "'backend-init-theia': '@theia/plugin-ext/lib/hosted/node/scanners/backend-init-theia',")}
-    ${this.ifPackage('@theia/filesystem', "'parcel-watcher': '@theia/filesystem/lib/node/parcel-watcher',")}
-    ${this.ifPackage('@theia/plugin-ext-vscode', "'plugin-vscode-init': '@theia/plugin-ext-vscode/lib/node/plugin-vscode-init',")}
-    ${this.ifPackage('@theia/api-provider-sample', "'gotd-api-init': '@theia/api-provider-sample/lib/plugin/gotd-api-init',")}
+    ${this.ifPackage('@ogun/plugin-ext', "'backend-init-theia': '@ogun/plugin-ext/lib/hosted/node/scanners/backend-init-theia',")}
+    ${this.ifPackage('@ogun/filesystem', "'parcel-watcher': '@ogun/filesystem/lib/node/parcel-watcher',")}
+    ${this.ifPackage('@ogun/plugin-ext-vscode', "'plugin-vscode-init': '@ogun/plugin-ext-vscode/lib/node/plugin-vscode-init',")}
+    ${this.ifPackage('@ogun/api-provider-sample', "'gotd-api-init': '@ogun/api-provider-sample/lib/plugin/gotd-api-init',")}
 })) {
     commonJsLibraries[entryPointName] = {
         import: require.resolve(entryPointPath),
@@ -470,15 +470,15 @@ if (process.platform !== 'win32') {
 
 const nativePlugin = new NativeWebpackPlugin({
     out: 'native',
-    trash: ${this.ifPackage('@theia/filesystem', 'true', 'false')},
-    ripgrep: ${this.ifPackage(['@theia/search-in-workspace', '@theia/file-search'], 'true', 'false')},
-    pty: ${this.ifPackage('@theia/process', 'true', 'false')},
+    trash: ${this.ifPackage('@ogun/filesystem', 'true', 'false')},
+    ripgrep: ${this.ifPackage(['@ogun/search-in-workspace', '@ogun/file-search'], 'true', 'false')},
+    pty: ${this.ifPackage('@ogun/process', 'true', 'false')},
     nativeBindings: {
         drivelist: 'drivelist/build/Release/drivelist.node'
     }
 });
 
-${this.ifPackage('@theia/process', () => `// Ensure that node-pty is correctly hoisted
+${this.ifPackage('@ogun/process', () => `// Ensure that node-pty is correctly hoisted
 try {
     require.resolve('node-pty');
 } catch {
@@ -512,17 +512,17 @@ const config = {
         // Main entry point of the Theia application backend:
         'main': require.resolve('./src-gen/backend/main'),
         // Theia's IPC mechanism:
-        'ipc-bootstrap': require.resolve('@theia/core/lib/node/messaging/ipc-bootstrap'),
-        ${this.ifPackage('@theia/plugin-ext', () => `// VS Code extension support:
-        'plugin-host': require.resolve('@theia/plugin-ext/lib/hosted/node/plugin-host'),`)}
-        ${this.ifPackage('@theia/plugin-ext-headless', () => `// Theia Headless Plugin support:
-        'plugin-host-headless': require.resolve('@theia/plugin-ext-headless/lib/hosted/node/plugin-host-headless'),`)}
-        ${this.ifPackage('@theia/process', () => `// Make sure the node-pty thread workers can be executed:
+        'ipc-bootstrap': require.resolve('@ogun/core/lib/node/messaging/ipc-bootstrap'),
+        ${this.ifPackage('@ogun/plugin-ext', () => `// VS Code extension support:
+        'plugin-host': require.resolve('@ogun/plugin-ext/lib/hosted/node/plugin-host'),`)}
+        ${this.ifPackage('@ogun/plugin-ext-headless', () => `// Theia Headless Plugin support:
+        'plugin-host-headless': require.resolve('@ogun/plugin-ext-headless/lib/hosted/node/plugin-host-headless'),`)}
+        ${this.ifPackage('@ogun/process', () => `// Make sure the node-pty thread workers can be executed:
         'worker/conoutSocketWorker': require.resolve('node-pty/lib/worker/conoutSocketWorker'),
         'conpty_console_list_agent': require.resolve('node-pty/lib/conpty_console_list_agent'),`)}        
         ${this.ifElectron("'electron-main': require.resolve('./src-gen/backend/electron-main'),")}
-        ${this.ifPackage('@theia/dev-container', () => `// VS Code Dev-Container communication:
-        'dev-container-server': require.resolve('@theia/dev-container/lib/dev-container-server/dev-container-server'),`)}
+        ${this.ifPackage('@ogun/dev-container', () => `// VS Code Dev-Container communication:
+        'dev-container-server': require.resolve('@ogun/dev-container/lib/dev-container-server/dev-container-server'),`)}
         ...commonJsLibraries
     },
     module: {
@@ -580,7 +580,7 @@ const config = {
         minimize: production,
         minimizer: [
             new TerserPlugin({
-                exclude: /^(lib|builtins)\\//${this.ifPackage(['@theia/scanoss', '@theia/ai-anthropic', '@theia/ai-openai'], () => `,
+                exclude: /^(lib|builtins)\\//${this.ifPackage(['@ogun/scanoss', '@ogun/ai-anthropic', '@ogun/ai-openai'], () => `,
                 terserOptions: {
                     keep_classnames: /AbortSignal/
                 }`)}
@@ -626,7 +626,7 @@ module.exports = {
  */
 import { nodeModulesPolyfillPlugin } from 'esbuild-plugins-node-modules-polyfill';
 import { copy } from 'esbuild-plugin-copy';
-import { monacoNlsPlugin, problemMatcherPlugin, sourceMapPathsPlugin } from '@theia/bundle-plugin';
+import { monacoNlsPlugin, problemMatcherPlugin, sourceMapPathsPlugin } from '@ogun/bundle-plugin';
 import yargs from 'yargs';
 import { hideBin } from 'yargs/helpers';
 import resolvePackagePath from 'resolve-package-path';
@@ -681,7 +681,7 @@ export const browserOptions = {
         'bundle': './src-gen/frontend/index.js',
         'secondary-window': './src-gen/frontend/secondary-index.js',
         ${this.ifMonaco(() => "'editor.worker': '@theia/monaco-editor-core/esm/vs/editor/common/services/editorWebWorkerMain.js',")}
-        ${this.ifPackage('@theia/plugin-ext', "'plugin-worker': '@theia/plugin-ext/lib/hosted/browser/worker/worker-main.js',")}
+        ${this.ifPackage('@ogun/plugin-ext', "'plugin-worker': '@ogun/plugin-ext/lib/hosted/browser/worker/worker-main.js',")}
     },
     assetNames: '[name]',
     bundle: true,
@@ -708,15 +708,15 @@ export const browserOptions = {
                     // copy secondary window html file to lib folder
                     from: join(__dirname, 'src-gen/frontend/secondary-window.html'),
                     to: join(__dirname, 'lib', 'frontend')
-                }${this.ifPackage('@theia/plugin-ext', `,
+                }${this.ifPackage('@ogun/plugin-ext', `,
                 {
                     // copy webview files to lib folder
-                    from: join(resolvePackagePath('@theia/plugin-ext', __dirname), '..', 'src', 'main', 'browser', 'webview', 'pre', '*'),
+                    from: join(resolvePackagePath('@ogun/plugin-ext', __dirname), '..', 'src', 'main', 'browser', 'webview', 'pre', '*'),
                     to: join(__dirname, 'lib', 'webview', 'pre')
-                }`)}${this.ifPackage('@theia/plugin-ext-vscode', `,
+                }`)}${this.ifPackage('@ogun/plugin-ext-vscode', `,
                 {
                     // copy frontend plugin host files
-                    from: join(resolvePackagePath('@theia/plugin-ext-vscode', __dirname), '..', 'lib', 'node', 'context', 'plugin-vscode-init-fe.js'),
+                    from: join(resolvePackagePath('@ogun/plugin-ext-vscode', __dirname), '..', 'lib', 'node', 'context', 'plugin-vscode-init-fe.js'),
                     to: join(__dirname, 'lib', 'frontend', 'context')
                 }`)}
             ]
@@ -732,7 +732,7 @@ export const browserOptions = {
  * Don't touch this file. It will be regenerated by theia build.
  * To customize the build process, change ./esbuild.mjs
  */
-import { nativeDependenciesPlugin, problemMatcherPlugin, sourceMapPathsPlugin } from '@theia/bundle-plugin';
+import { nativeDependenciesPlugin, problemMatcherPlugin, sourceMapPathsPlugin } from '@ogun/bundle-plugin';
 import { watch, loader, minify, sourcemap, join, __dirname } from './gen-esbuild.browser.mjs';
 import { copy } from 'esbuild-plugin-copy';
 import resolvePackagePath from 'resolve-package-path';
@@ -750,22 +750,22 @@ export const nativeBindings = {
 export const nodeOptions = {
     entryPoints: {
         'main': './src-gen/backend/main',
-        'ipc-bootstrap': '@theia/core/lib/node/messaging/ipc-bootstrap',
+        'ipc-bootstrap': '@ogun/core/lib/node/messaging/ipc-bootstrap',
         ${this.ifElectron("'electron-main': './src-gen/backend/electron-main',")}
-        ${this.ifPackage('@theia/plugin-ext', () => `// VS Code extension support:
-        'plugin-host': '@theia/plugin-ext/lib/hosted/node/plugin-host',`)}
-        ${this.ifPackage('@theia/plugin-ext-headless', () => `// Theia Headless Plugin support:
-        'plugin-host-headless': '@theia/plugin-ext-headless/lib/hosted/node/plugin-host-headless',`)}
-        ${this.ifPackage('@theia/process', () => `// Make sure the node-pty thread workers can be executed:
+        ${this.ifPackage('@ogun/plugin-ext', () => `// VS Code extension support:
+        'plugin-host': '@ogun/plugin-ext/lib/hosted/node/plugin-host',`)}
+        ${this.ifPackage('@ogun/plugin-ext-headless', () => `// Theia Headless Plugin support:
+        'plugin-host-headless': '@ogun/plugin-ext-headless/lib/hosted/node/plugin-host-headless',`)}
+        ${this.ifPackage('@ogun/process', () => `// Make sure the node-pty thread workers can be executed:
         'worker/conoutSocketWorker': 'node-pty/lib/worker/conoutSocketWorker',
         'conpty_console_list_agent': 'node-pty/lib/conpty_console_list_agent',`)}
-        ${this.ifPackage('@theia/dev-container', () => `// VS Code Dev-Container communication:
-        'dev-container-server': '@theia/dev-container/lib/dev-container-server/dev-container-server',`)}
-        ${this.ifPackage('@theia/plugin-ext', "'backend-init-theia': '@theia/plugin-ext/lib/hosted/node/scanners/backend-init-theia',")}
-        ${this.ifPackage('@theia/filesystem', "'parcel-watcher': '@theia/filesystem/lib/node/parcel-watcher',")}
-        ${this.ifPackage('@theia/plugin-ext-vscode', "'plugin-vscode-init': '@theia/plugin-ext-vscode/lib/node/plugin-vscode-init',")}
-        ${this.ifPackage('@theia/api-provider-sample', "'gotd-api-init': '@theia/api-provider-sample/lib/plugin/gotd-api-init',")}
-        ${this.ifPackage('@theia/git', "'git-locator-host': '@theia/git/lib/node/git-locator/git-locator-host',")}
+        ${this.ifPackage('@ogun/dev-container', () => `// VS Code Dev-Container communication:
+        'dev-container-server': '@ogun/dev-container/lib/dev-container-server/dev-container-server',`)}
+        ${this.ifPackage('@ogun/plugin-ext', "'backend-init-theia': '@ogun/plugin-ext/lib/hosted/node/scanners/backend-init-theia',")}
+        ${this.ifPackage('@ogun/filesystem', "'parcel-watcher': '@ogun/filesystem/lib/node/parcel-watcher',")}
+        ${this.ifPackage('@ogun/plugin-ext-vscode', "'plugin-vscode-init': '@ogun/plugin-ext-vscode/lib/node/plugin-vscode-init',")}
+        ${this.ifPackage('@ogun/api-provider-sample', "'gotd-api-init': '@ogun/api-provider-sample/lib/plugin/gotd-api-init',")}
+        ${this.ifPackage('@ogun/git', "'git-locator-host': '@ogun/git/lib/node/git-locator/git-locator-host',")}
     },
     assetNames: 'native/[name]',
     bundle: true,
@@ -779,16 +779,16 @@ export const nodeOptions = {
     plugins: [
         problemMatcherPlugin(watch, 'node'),
         nativeDependenciesPlugin({
-            pty: ${this.ifPackage('@theia/process', 'true', 'false')},
-            ripgrep: ${this.ifPackage(['@theia/search-in-workspace', '@theia/file-search'], 'true', 'false')},
-            trash: ${this.ifPackage('@theia/filesystem', 'true', 'false')},
+            pty: ${this.ifPackage('@ogun/process', 'true', 'false')},
+            ripgrep: ${this.ifPackage(['@ogun/search-in-workspace', '@ogun/file-search'], 'true', 'false')},
+            trash: ${this.ifPackage('@ogun/filesystem', 'true', 'false')},
             nativeBindings
         }),
         copy({
-            assets: [${this.ifPackage('@theia/terminal', `
+            assets: [${this.ifPackage('@ogun/terminal', `
                 {
                     // copy shell integration scripts
-                    from: join(resolvePackagePath('@theia/terminal', __dirname), '..', 'src', 'node', 'shell-integrations', '**', '*'),
+                    from: join(resolvePackagePath('@ogun/terminal', __dirname), '..', 'src', 'node', 'shell-integrations', '**', '*'),
                     to: join(__dirname, 'lib', 'backend', 'shell-integrations')
                 },`)}
             ]
@@ -852,7 +852,7 @@ if (watch) {
  * Don't touch this file. It will be regenerated by theia build.
  * To customize the build process, change ./esbuild.mjs
  */
-import { problemMatcherPlugin, sourceMapPathsPlugin } from '@theia/bundle-plugin';
+import { problemMatcherPlugin, sourceMapPathsPlugin } from '@ogun/bundle-plugin';
 import { watch, loader, minify, sourcemap } from './gen-esbuild.browser.mjs';
 
 /**

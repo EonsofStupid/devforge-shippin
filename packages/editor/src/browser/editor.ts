@@ -14,13 +14,13 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { Position, Range, Location } from '@theia/core/shared/vscode-languageserver-protocol';
-import * as lsp from '@theia/core/shared/vscode-languageserver-protocol';
-import URI from '@theia/core/lib/common/uri';
-import { Event, Disposable, TextDocumentContentChangeDelta, Reference, isObject } from '@theia/core/lib/common';
-import { Saveable, Navigatable, Widget } from '@theia/core/lib/browser';
+import { Position, Range, Location } from '@ogun/core/shared/vscode-languageserver-protocol';
+import * as lsp from '@ogun/core/shared/vscode-languageserver-protocol';
+import URI from '@ogun/core/lib/common/uri';
+import { Event, Disposable, TextDocumentContentChangeDelta, Reference, isObject } from '@ogun/core/lib/common';
+import { Saveable, Navigatable, Widget } from '@ogun/core/lib/browser';
 import { EditorDecoration } from './decorations/editor-decoration';
-import { MarkdownString } from '@theia/core/lib/common/markdown-rendering';
+import { MarkdownString } from '@ogun/core/lib/common/markdown-rendering';
 
 export { Position, Range, Location };
 

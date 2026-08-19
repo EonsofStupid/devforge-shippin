@@ -14,17 +14,17 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { BaseWidget, LabelProvider, Message, OpenerService, codicon } from '@theia/core/lib/browser';
-import { inject, injectable, postConstruct } from '@theia/core/shared/inversify';
+import { BaseWidget, LabelProvider, Message, OpenerService, codicon } from '@ogun/core/lib/browser';
+import { inject, injectable, postConstruct } from '@ogun/core/shared/inversify';
 import { TestOutputUIModel } from './test-output-ui-model';
-import { Disposable, DisposableCollection, nls } from '@theia/core';
+import { Disposable, DisposableCollection, nls } from '@ogun/core';
 import { TestFailure, TestMessage, TestMessageStackFrame } from '../test-service';
-import { MarkdownRenderer } from '@theia/core/lib/browser/markdown-rendering/markdown-renderer';
-import { MarkdownString } from '@theia/core/lib/common/markdown-rendering';
-import { URI } from '@theia/core/lib/common/uri';
-import { FileService } from '@theia/filesystem/lib/browser/file-service';
-import { NavigationLocationService } from '@theia/editor/lib/browser/navigation/navigation-location-service';
-import { NavigationLocation, Position } from '@theia/editor/lib/browser/navigation/navigation-location';
+import { MarkdownRenderer } from '@ogun/core/lib/browser/markdown-rendering/markdown-renderer';
+import { MarkdownString } from '@ogun/core/lib/common/markdown-rendering';
+import { URI } from '@ogun/core/lib/common/uri';
+import { FileService } from '@ogun/filesystem/lib/browser/file-service';
+import { NavigationLocationService } from '@ogun/editor/lib/browser/navigation/navigation-location-service';
+import { NavigationLocation, Position } from '@ogun/editor/lib/browser/navigation/navigation-location';
 @injectable()
 export class TestResultWidget extends BaseWidget {
 

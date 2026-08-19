@@ -14,16 +14,16 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { injectable, inject } from '@theia/core/shared/inversify';
-import { CommandService, DisposableCollection, MenuNode, CommandMenu, nls } from '@theia/core';
-import { Message } from '@theia/core/shared/@lumino/messaging';
-import * as React from '@theia/core/shared/react';
-import { codicon, ContextMenuRenderer, ReactWidget } from '@theia/core/lib/browser';
+import { injectable, inject } from '@ogun/core/shared/inversify';
+import { CommandService, DisposableCollection, MenuNode, CommandMenu, nls } from '@ogun/core';
+import { Message } from '@ogun/core/shared/@lumino/messaging';
+import * as React from '@ogun/core/shared/react';
+import { codicon, ContextMenuRenderer, ReactWidget } from '@ogun/core/lib/browser';
 import { ScmService } from './scm-service';
 import { ScmRepository } from './scm-repository';
 import { ScmActionButton, ScmCommand, ScmProvider } from './scm-provider';
-import { LabelParser } from '@theia/core/lib/browser/label-parser';
-import { BrowserMenuNodeFactory } from '@theia/core/lib/browser/menu/browser-menu-node-factory';
+import { LabelParser } from '@ogun/core/lib/browser/label-parser';
+import { BrowserMenuNodeFactory } from '@ogun/core/lib/browser/menu/browser-menu-node-factory';
 
 @injectable()
 export class ScmActionButtonWidget extends ReactWidget {

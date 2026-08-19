@@ -14,10 +14,10 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { injectable, unmanaged } from '@theia/core/shared/inversify';
-import { ILogger, Emitter, Event, isObject } from '@theia/core/lib/common';
-import { FileUri } from '@theia/core/lib/node';
-import { isOSX, isWindows } from '@theia/core';
+import { injectable, unmanaged } from '@ogun/core/shared/inversify';
+import { ILogger, Emitter, Event, isObject } from '@ogun/core/lib/common';
+import { FileUri } from '@ogun/core/lib/node';
+import { isOSX, isWindows } from '@ogun/core';
 import { Readable, Writable } from 'stream';
 import { exec } from 'child_process';
 import * as fs from 'fs';

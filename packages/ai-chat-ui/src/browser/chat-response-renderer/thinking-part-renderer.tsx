@@ -15,11 +15,11 @@
 // *****************************************************************************
 
 import { ChatResponsePartRenderer } from '../chat-response-part-renderer';
-import { injectable } from '@theia/core/shared/inversify';
-import { ChatResponseContent, ThinkingChatResponseContent } from '@theia/ai-chat/lib/common';
-import { ReactNode } from '@theia/core/shared/react';
-import { nls } from '@theia/core/lib/common/nls';
-import * as React from '@theia/core/shared/react';
+import { injectable } from '@ogun/core/shared/inversify';
+import { ChatResponseContent, ThinkingChatResponseContent } from '@ogun/ai-chat/lib/common';
+import { ReactNode } from '@ogun/core/shared/react';
+import { nls } from '@ogun/core/lib/common/nls';
+import * as React from '@ogun/core/shared/react';
 
 @injectable()
 export class ThinkingPartRenderer implements ChatResponsePartRenderer<ThinkingChatResponseContent> {

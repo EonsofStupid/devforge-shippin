@@ -14,10 +14,10 @@
  * SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
  ********************************************************************************/
 
-import { Key, KeyCode } from '@theia/core/lib/browser';
-import { Deferred } from '@theia/core/lib/common/promise-util';
-import { injectable } from '@theia/core/shared/inversify';
-import * as React from '@theia/core/shared/react';
+import { Key, KeyCode } from '@ogun/core/lib/browser';
+import { Deferred } from '@ogun/core/lib/common/promise-util';
+import { injectable } from '@ogun/core/shared/inversify';
+import * as React from '@ogun/core/shared/react';
 import Long from 'long';
 import { DebugProtocol } from '@vscode/debugprotocol';
 import { hexStrToUnsignedLong } from '../../common/util';
@@ -26,7 +26,7 @@ import { MemoryTable, MemoryTableWidget } from '../memory-widget/memory-table-wi
 import { MemoryWidget } from '../memory-widget/memory-widget';
 import { EasilyMappedObject } from '../utils/memory-hover-renderer';
 import { Constants, Interfaces } from '../utils/memory-widget-utils';
-import { nls } from '@theia/core/lib/common/nls';
+import { nls } from '@ogun/core/lib/common/nls';
 
 export type EditableMemoryWidget = MemoryWidget<MemoryOptionsWidget, MemoryEditableTableWidget>;
 export namespace EditableMemoryWidget {

@@ -14,13 +14,13 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { injectable, inject } from '@theia/core/shared/inversify';
-import URI from '@theia/core/lib/common/uri';
-import { Deferred } from '@theia/core/lib/common/promise-util';
-import { Resource, ResourceResolver } from '@theia/core/lib/common/resource';
-import { Emitter, Event, Disposable, DisposableCollection } from '@theia/core';
-import { MonacoEditorModel } from '@theia/monaco/lib/browser/monaco-editor-model';
-import { MonacoTextModelService } from '@theia/monaco/lib/browser/monaco-text-model-service';
+import { injectable, inject } from '@ogun/core/shared/inversify';
+import URI from '@ogun/core/lib/common/uri';
+import { Deferred } from '@ogun/core/lib/common/promise-util';
+import { Resource, ResourceResolver } from '@ogun/core/lib/common/resource';
+import { Emitter, Event, Disposable, DisposableCollection } from '@ogun/core';
+import { MonacoEditorModel } from '@ogun/monaco/lib/browser/monaco-editor-model';
+import { MonacoTextModelService } from '@ogun/monaco/lib/browser/monaco-text-model-service';
 import { OutputUri } from '../common/output-uri';
 import { OutputResource } from '../browser/output-resource';
 import { OutputPreferences } from '../common/output-preferences';

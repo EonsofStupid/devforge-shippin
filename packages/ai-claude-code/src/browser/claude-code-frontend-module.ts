@@ -14,12 +14,12 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { ChatAgent } from '@theia/ai-chat';
-import { ChatResponsePartRenderer } from '@theia/ai-chat-ui/lib/browser/chat-response-part-renderer';
-import { Agent } from '@theia/ai-core';
-import { CommandContribution, PreferenceContribution } from '@theia/core';
-import { FrontendApplicationContribution, RemoteConnectionProvider, ServiceConnectionProvider } from '@theia/core/lib/browser';
-import { ContainerModule } from '@theia/core/shared/inversify';
+import { ChatAgent } from '@ogun/ai-chat';
+import { ChatResponsePartRenderer } from '@ogun/ai-chat-ui/lib/browser/chat-response-part-renderer';
+import { Agent } from '@ogun/ai-core';
+import { CommandContribution, PreferenceContribution } from '@ogun/core';
+import { FrontendApplicationContribution, RemoteConnectionProvider, ServiceConnectionProvider } from '@ogun/core/lib/browser';
+import { ContainerModule } from '@ogun/core/shared/inversify';
 import '../../src/browser/style/claude-code-tool-renderers.css';
 import {
     CLAUDE_CODE_SERVICE_PATH,

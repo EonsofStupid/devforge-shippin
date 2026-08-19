@@ -14,12 +14,12 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { injectable, inject, named } from '@theia/core/shared/inversify';
+import { injectable, inject, named } from '@ogun/core/shared/inversify';
 import { FileSearchService, WHITESPACE_QUERY_SEPARATOR } from '../common/file-search-service';
-import { FileService } from '@theia/filesystem/lib/browser/file-service';
-import * as fuzzy from '@theia/core/shared/fuzzy';
-import { CancellationTokenSource, CancellationToken, ILogger, URI } from '@theia/core';
-import { matchesPattern, createIgnoreMatcher, getIgnorePatterns } from '@theia/filesystem/lib/browser-only/file-search';
+import { FileService } from '@ogun/filesystem/lib/browser/file-service';
+import * as fuzzy from '@ogun/core/shared/fuzzy';
+import { CancellationTokenSource, CancellationToken, ILogger, URI } from '@ogun/core';
+import { matchesPattern, createIgnoreMatcher, getIgnorePatterns } from '@ogun/filesystem/lib/browser-only/file-search';
 
 @injectable()
 export class FileSearchServiceImpl implements FileSearchService {

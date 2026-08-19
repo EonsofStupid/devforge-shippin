@@ -14,14 +14,14 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { Command, CommandContribution, CommandRegistry } from '@theia/core';
-import { inject, injectable } from '@theia/core/shared/inversify';
-import { codicon } from '@theia/core/lib/browser';
-import { EditorManager } from '@theia/editor/lib/browser';
-import { FileService } from '@theia/filesystem/lib/browser/file-service';
-import { WorkspaceService } from '@theia/workspace/lib/browser';
-import { ChatCommands } from '@theia/ai-chat-ui/lib/browser/chat-view-commands';
-import { AIActivationService } from '@theia/ai-core/lib/browser';
+import { Command, CommandContribution, CommandRegistry } from '@ogun/core';
+import { inject, injectable } from '@ogun/core/shared/inversify';
+import { codicon } from '@ogun/core/lib/browser';
+import { EditorManager } from '@ogun/editor/lib/browser';
+import { FileService } from '@ogun/filesystem/lib/browser/file-service';
+import { WorkspaceService } from '@ogun/workspace/lib/browser';
+import { ChatCommands } from '@ogun/ai-chat-ui/lib/browser/chat-view-commands';
+import { AIActivationService } from '@ogun/ai-core/lib/browser';
 
 export const OPEN_CLAUDE_CODE_CONFIG = Command.toLocalizedCommand({
     id: 'chat:open-claude-code-config',

@@ -14,11 +14,11 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { ReactWidget, QuickInputService } from '@theia/core/lib/browser';
-import { CommandRegistry, Disposable, DisposableCollection, MessageService } from '@theia/core/lib/common';
-import { inject, injectable, postConstruct } from '@theia/core/shared/inversify';
-import * as React from '@theia/core/shared/react';
-import { WorkspaceService } from '@theia/workspace/lib/browser';
+import { ReactWidget, QuickInputService } from '@ogun/core/lib/browser';
+import { CommandRegistry, Disposable, DisposableCollection, MessageService } from '@ogun/core/lib/common';
+import { inject, injectable, postConstruct } from '@ogun/core/shared/inversify';
+import * as React from '@ogun/core/shared/react';
+import { WorkspaceService } from '@ogun/workspace/lib/browser';
 import { DebugConsoleContribution } from '../console/debug-console-contribution';
 import { DebugConfigurationManager } from '../debug-configuration-manager';
 import { DebugCommands } from '../debug-commands';
@@ -26,7 +26,7 @@ import { DebugSessionManager } from '../debug-session-manager';
 import { DebugAction } from './debug-action';
 import { DebugConfigurationSelect } from './debug-configuration-select';
 import { DebugViewModel } from './debug-view-model';
-import { nls } from '@theia/core/lib/common/nls';
+import { nls } from '@ogun/core/lib/common/nls';
 import { DebugSessionOptions } from '../debug-session-options';
 import { DebugSessionConfigurationLabelProvider } from '../debug-session-configuration-label-provider';
 

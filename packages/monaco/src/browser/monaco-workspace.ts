@@ -16,20 +16,20 @@
 
 /* eslint-disable no-null/no-null */
 
-import { URI as Uri } from '@theia/core/shared/vscode-uri';
-import { injectable, inject, postConstruct, named } from '@theia/core/shared/inversify';
-import URI from '@theia/core/lib/common/uri';
-import { Emitter } from '@theia/core/lib/common/event';
-import { ILogger } from '@theia/core';
-import { FileSystemPreferences } from '@theia/filesystem/lib/common';
-import { EditorManager } from '@theia/editor/lib/browser';
+import { URI as Uri } from '@ogun/core/shared/vscode-uri';
+import { injectable, inject, postConstruct, named } from '@ogun/core/shared/inversify';
+import URI from '@ogun/core/lib/common/uri';
+import { Emitter } from '@ogun/core/lib/common/event';
+import { ILogger } from '@ogun/core';
+import { FileSystemPreferences } from '@ogun/filesystem/lib/common';
+import { EditorManager } from '@ogun/editor/lib/browser';
 import { MonacoTextModelService } from './monaco-text-model-service';
 import { MonacoEditorModel, MonacoModelContentChangedEvent } from './monaco-editor-model';
 import { MonacoEditor } from './monaco-editor';
-import { ProblemManager } from '@theia/markers/lib/browser';
-import { ArrayUtils } from '@theia/core/lib/common/types';
-import { FileService } from '@theia/filesystem/lib/browser/file-service';
-import { FileSystemProviderCapabilities } from '@theia/filesystem/lib/common/files';
+import { ProblemManager } from '@ogun/markers/lib/browser';
+import { ArrayUtils } from '@ogun/core/lib/common/types';
+import { FileService } from '@ogun/filesystem/lib/browser/file-service';
+import { FileSystemProviderCapabilities } from '@ogun/filesystem/lib/common/files';
 import * as monaco from '@theia/monaco-editor-core';
 import {
     IBulkEditOptions,
@@ -42,9 +42,9 @@ import { EndOfLineSequence } from '@theia/monaco-editor-core/esm/vs/editor/commo
 import { SnippetParser } from '@theia/monaco-editor-core/esm/vs/editor/contrib/snippet/browser/snippetParser';
 import { TextEdit } from '@theia/monaco-editor-core/esm/vs/editor/common/languages';
 import { SnippetController2 } from '@theia/monaco-editor-core/esm/vs/editor/contrib/snippet/browser/snippetController2';
-import { isObject, MaybePromise, nls } from '@theia/core/lib/common';
-import { SaveableService } from '@theia/core/lib/browser';
-import { EditorPreferences } from '@theia/editor/lib/common/editor-preferences';
+import { isObject, MaybePromise, nls } from '@ogun/core/lib/common';
+import { SaveableService } from '@ogun/core/lib/browser';
+import { EditorPreferences } from '@ogun/editor/lib/common/editor-preferences';
 
 export namespace WorkspaceFileEdit {
     export function is(arg: Edit): arg is monaco.languages.IWorkspaceFileEdit {

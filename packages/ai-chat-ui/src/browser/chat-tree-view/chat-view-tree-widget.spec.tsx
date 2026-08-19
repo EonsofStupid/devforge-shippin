@@ -14,19 +14,19 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { enableJSDOM } from '@theia/core/lib/browser/test/jsdom';
+import { enableJSDOM } from '@ogun/core/lib/browser/test/jsdom';
 
 let disableJSDOM = enableJSDOM();
 
-import { FrontendApplicationConfigProvider } from '@theia/core/lib/browser/frontend-application-config-provider';
+import { FrontendApplicationConfigProvider } from '@ogun/core/lib/browser/frontend-application-config-provider';
 FrontendApplicationConfigProvider.set({});
 
 import 'reflect-metadata';
 
 import { expect } from 'chai';
-import * as React from '@theia/core/shared/react';
-import { createRoot, Root } from '@theia/core/shared/react-dom/client';
-import { OpenerService } from '@theia/core/lib/browser';
+import * as React from '@ogun/core/shared/react';
+import { createRoot, Root } from '@ogun/core/shared/react-dom/client';
+import { OpenerService } from '@ogun/core/lib/browser';
 import { MarkdownRender } from '../chat-response-renderer/markdown-part-renderer';
 import { BLOCKED_RESOURCE_CLASS } from '../chat-response-renderer/block-external-resources';
 import { ChatRequestRender, RequestNode } from './chat-view-tree-widget';

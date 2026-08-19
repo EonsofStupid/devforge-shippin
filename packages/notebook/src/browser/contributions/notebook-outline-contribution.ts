@@ -14,14 +14,14 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { inject, injectable } from '@theia/core/shared/inversify';
-import { codicon, FrontendApplicationContribution, LabelProvider, TreeNode } from '@theia/core/lib/browser';
+import { inject, injectable } from '@ogun/core/shared/inversify';
+import { codicon, FrontendApplicationContribution, LabelProvider, TreeNode } from '@ogun/core/lib/browser';
 import { NotebookEditorWidgetService } from '../service/notebook-editor-widget-service';
-import { OutlineViewService } from '@theia/outline-view/lib/browser/outline-view-service';
+import { OutlineViewService } from '@ogun/outline-view/lib/browser/outline-view-service';
 import { NotebookModel } from '../view-model/notebook-model';
-import { OutlineSymbolInformationNode } from '@theia/outline-view/lib/browser/outline-view-widget';
+import { OutlineSymbolInformationNode } from '@ogun/outline-view/lib/browser/outline-view-widget';
 import { NotebookEditorWidget } from '../notebook-editor-widget';
-import { DisposableCollection, isObject, URI } from '@theia/core';
+import { DisposableCollection, isObject, URI } from '@ogun/core';
 import { CellKind, CellUri } from '../../common';
 import { NotebookService } from '../service/notebook-service';
 import { NotebookViewModel } from '../view-model/notebook-view-model';

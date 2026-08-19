@@ -14,10 +14,10 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { KeybindingRegistry, QuickPickItem, QuickPickSeparator } from '@theia/core/lib/browser';
-import { QuickAccessProviderDescriptor, QuickAccessRegistry } from '@theia/core/lib/browser/quick-input/quick-access';
-import { CancellationToken, Disposable } from '@theia/core/lib/common';
-import { inject, injectable } from '@theia/core/shared/inversify';
+import { KeybindingRegistry, QuickPickItem, QuickPickSeparator } from '@ogun/core/lib/browser';
+import { QuickAccessProviderDescriptor, QuickAccessRegistry } from '@ogun/core/lib/browser/quick-input/quick-access';
+import { CancellationToken, Disposable } from '@ogun/core/lib/common';
+import { inject, injectable } from '@ogun/core/shared/inversify';
 import { MonacoQuickPickItem } from './monaco-quick-input-service';
 import {
     IPickerQuickAccessProviderOptions, PickerQuickAccessProvider, Picks, Pick, IPickerQuickAccessItem

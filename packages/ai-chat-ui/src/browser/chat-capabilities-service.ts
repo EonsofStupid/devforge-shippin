@@ -14,8 +14,8 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { inject, injectable, postConstruct } from '@theia/core/shared/inversify';
-import { Emitter, Event } from '@theia/core';
+import { inject, injectable, postConstruct } from '@ogun/core/shared/inversify';
+import { Emitter, Event } from '@ogun/core';
 import {
     PromptService,
     parseCapabilitiesFromTemplate,
@@ -24,8 +24,8 @@ import {
     matchFunctionsRegEx,
     matchVariablesRegEx,
     parseFunctionReference
-} from '@theia/ai-core';
-import { ChatAgentService } from '@theia/ai-chat';
+} from '@ogun/ai-core';
+import { ChatAgentService } from '@ogun/ai-chat';
 
 export const ChatCapabilitiesService = Symbol('ChatCapabilitiesService');
 

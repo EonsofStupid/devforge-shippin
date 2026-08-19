@@ -14,10 +14,10 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { ColorContribution } from '@theia/core/lib/browser/color-application-contribution';
-import { ColorRegistry } from '@theia/core/lib/browser/color-registry';
-import { Color } from '@theia/core/lib/common/color';
-import { injectable } from '@theia/core/shared/inversify';
+import { ColorContribution } from '@ogun/core/lib/browser/color-application-contribution';
+import { ColorRegistry } from '@ogun/core/lib/browser/color-registry';
+import { Color } from '@ogun/core/lib/common/color';
+import { injectable } from '@ogun/core/shared/inversify';
 
 @injectable()
 export class NotebookColorContribution implements ColorContribution {

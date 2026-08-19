@@ -14,12 +14,12 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import '@theia/core/shared/reflect-metadata';
-import { ContainerModule } from '@theia/core/shared/inversify';
+import '@ogun/core/shared/reflect-metadata';
+import { ContainerModule } from '@ogun/core/shared/inversify';
 import { RPCProtocol, RPCProtocolImpl } from '../../common/rpc-protocol';
 import { AbstractPluginHostRPC, PluginHostRPC, PluginContainerModuleLoader } from './plugin-host-rpc';
 import { AbstractPluginManagerExtImpl, MinimalTerminalServiceExt, PluginManagerExtImpl } from '../../plugin/plugin-manager';
-import { IPCChannel } from '@theia/core/lib/node';
+import { IPCChannel } from '@ogun/core/lib/node';
 import { InternalPluginContainerModule } from '../../plugin/node/plugin-container-module';
 import { LocalizationExt } from '../../common/plugin-api-rpc';
 import { EnvExtImpl } from '../../plugin/env';
@@ -38,7 +38,7 @@ import { InternalSecretsExt, SecretsExtImpl } from '../../plugin/secrets-ext';
 import { setupPluginHostLogger } from './plugin-host-logger';
 import { LmExtImpl } from '../../plugin/lm-ext';
 import { LanguageModelToolsExtImpl } from '../../plugin/lm-tool-ext';
-import { EncodingService } from '@theia/core/lib/common/encoding-service';
+import { EncodingService } from '@ogun/core/lib/common/encoding-service';
 
 export default new ContainerModule(bind => {
     const channel = new IPCChannel();

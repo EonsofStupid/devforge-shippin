@@ -14,11 +14,11 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { FilepathBreadcrumb } from '@theia/filesystem/lib/browser/breadcrumbs/filepath-breadcrumb';
-import { FilepathBreadcrumbClassNameFactory, FilepathBreadcrumbsContribution } from '@theia/filesystem/lib/browser/breadcrumbs/filepath-breadcrumbs-contribution';
-import { inject, injectable } from '@theia/core/shared/inversify';
+import { FilepathBreadcrumb } from '@ogun/filesystem/lib/browser/breadcrumbs/filepath-breadcrumb';
+import { FilepathBreadcrumbClassNameFactory, FilepathBreadcrumbsContribution } from '@ogun/filesystem/lib/browser/breadcrumbs/filepath-breadcrumbs-contribution';
+import { inject, injectable } from '@ogun/core/shared/inversify';
 import { WorkspaceService } from './workspace-service';
-import URI from '@theia/core/lib/common/uri';
+import URI from '@ogun/core/lib/common/uri';
 
 @injectable()
 export class WorkspaceBreadcrumbsContribution extends FilepathBreadcrumbsContribution {

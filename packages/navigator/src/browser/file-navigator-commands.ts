@@ -14,9 +14,9 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { codicon, CommonCommands } from '@theia/core/lib/browser';
-import { Command } from '@theia/core/lib/common';
-import { WorkspaceCommands } from '@theia/workspace/lib/browser';
+import { codicon, CommonCommands } from '@ogun/core/lib/browser';
+import { Command } from '@ogun/core/lib/common';
+import { WorkspaceCommands } from '@ogun/workspace/lib/browser';
 
 export namespace FileNavigatorCommands {
     export const REVEAL_IN_NAVIGATOR = Command.toLocalizedCommand({

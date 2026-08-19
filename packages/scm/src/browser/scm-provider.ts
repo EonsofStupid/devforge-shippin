@@ -16,10 +16,10 @@
 
 /* eslint-disable @typescript-eslint/no-explicit-any */
 
-import { Disposable, Event } from '@theia/core/lib/common';
-import URI from '@theia/core/lib/common/uri';
-import { CancellationToken } from '@theia/core/lib/common/cancellation';
-import { MarkdownString } from '@theia/core/lib/common/markdown-rendering/markdown-string';
+import { Disposable, Event } from '@ogun/core/lib/common';
+import URI from '@ogun/core/lib/common/uri';
+import { CancellationToken } from '@ogun/core/lib/common/cancellation';
+import { MarkdownString } from '@ogun/core/lib/common/markdown-rendering/markdown-string';
 
 export interface ScmProvider extends Disposable {
     readonly id: string;

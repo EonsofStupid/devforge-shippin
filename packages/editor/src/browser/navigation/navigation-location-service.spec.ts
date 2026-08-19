@@ -13,17 +13,17 @@
 //
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
-import { enableJSDOM } from '@theia/core/lib/browser/test/jsdom';
+import { enableJSDOM } from '@ogun/core/lib/browser/test/jsdom';
 
 let disableJSDOM = enableJSDOM();
 
 import { expect } from 'chai';
-import { Container } from '@theia/core/shared/inversify';
-import URI from '@theia/core/lib/common/uri';
-import { ILogger } from '@theia/core/lib/common/logger';
-import { MockLogger } from '@theia/core/lib/common/test/mock-logger';
-import { OpenerService } from '@theia/core/lib/browser/opener-service';
-import { MockOpenerService } from '@theia/core/lib/browser/test/mock-opener-service';
+import { Container } from '@ogun/core/shared/inversify';
+import URI from '@ogun/core/lib/common/uri';
+import { ILogger } from '@ogun/core/lib/common/logger';
+import { MockLogger } from '@ogun/core/lib/common/test/mock-logger';
+import { OpenerService } from '@ogun/core/lib/browser/opener-service';
+import { MockOpenerService } from '@ogun/core/lib/browser/test/mock-opener-service';
 import { NavigationLocationUpdater } from './navigation-location-updater';
 import { NoopNavigationLocationUpdater } from './test/mock-navigation-location-updater';
 import { NavigationLocationSimilarity } from './navigation-location-similarity';

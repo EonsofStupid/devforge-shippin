@@ -14,14 +14,14 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { ToolInvocationContext, ToolProvider, ToolRequest } from '@theia/ai-core';
-import { CancellationToken } from '@theia/core';
-import URI from '@theia/core/lib/common/uri';
-import { inject, injectable } from '@theia/core/shared/inversify';
-import { DebugConfigurationManager } from '@theia/debug/lib/browser/debug-configuration-manager';
-import { DebugSessionManager } from '@theia/debug/lib/browser/debug-session-manager';
-import { DebugSessionOptions } from '@theia/debug/lib/browser/debug-session-options';
-import { DebugSession } from '@theia/debug/lib/browser/debug-session';
+import { ToolInvocationContext, ToolProvider, ToolRequest } from '@ogun/ai-core';
+import { CancellationToken } from '@ogun/core';
+import URI from '@ogun/core/lib/common/uri';
+import { inject, injectable } from '@ogun/core/shared/inversify';
+import { DebugConfigurationManager } from '@ogun/debug/lib/browser/debug-configuration-manager';
+import { DebugSessionManager } from '@ogun/debug/lib/browser/debug-session-manager';
+import { DebugSessionOptions } from '@ogun/debug/lib/browser/debug-session-options';
+import { DebugSession } from '@ogun/debug/lib/browser/debug-session';
 import {
     LIST_LAUNCH_CONFIGURATIONS_FUNCTION_ID,
     RUN_LAUNCH_CONFIGURATION_FUNCTION_ID,

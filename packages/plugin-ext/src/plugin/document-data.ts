@@ -14,7 +14,7 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import * as theia from '@theia/plugin';
+import * as theia from '@ogun/plugin';
 import { ModelChangedEvent, DocumentsMain } from '../common/plugin-api-rpc';
 import { Range as ARange } from '../common/plugin-api-rpc-model';
 import { EndOfLine, Position, Range, URI } from './types-impl';

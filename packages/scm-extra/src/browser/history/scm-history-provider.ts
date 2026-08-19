@@ -14,20 +14,20 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { ScmProvider } from '@theia/scm/lib/browser/scm-provider';
+import { ScmProvider } from '@ogun/scm/lib/browser/scm-provider';
 import { ScmHistorySupport } from './scm-history-constants';
 
 /**
- * @deprecated since 1.75.0 - superseded by the SCM history graph in `@theia/scm`
- * and the Timeline view in `@theia/timeline`. This package will be removed in a
+ * @deprecated since 1.75.0 - superseded by the SCM history graph in `@ogun/scm`
+ * and the Timeline view in `@ogun/timeline`. This package will be removed in a
  * future release - see https://github.com/eclipse-theia/theia/issues/17457.
  */
 export interface ScmHistoryProvider extends ScmProvider {
     historySupport?: ScmHistorySupport;
 }
 /**
- * @deprecated since 1.75.0 - superseded by the SCM history graph in `@theia/scm`
- * and the Timeline view in `@theia/timeline`. This package will be removed in a
+ * @deprecated since 1.75.0 - superseded by the SCM history graph in `@ogun/scm`
+ * and the Timeline view in `@ogun/timeline`. This package will be removed in a
  * future release - see https://github.com/eclipse-theia/theia/issues/17457.
  */
 export namespace ScmHistoryProvider {

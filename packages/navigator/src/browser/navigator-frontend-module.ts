@@ -17,33 +17,33 @@
 import '../../src/browser/style/index.css';
 import '../../src/browser/open-editors-widget/open-editors.css';
 
-import { ContainerModule } from '@theia/core/shared/inversify';
+import { ContainerModule } from '@ogun/core/shared/inversify';
 import {
     bindViewContribution,
     FrontendApplicationContribution,
     ApplicationShellLayoutMigration
-} from '@theia/core/lib/browser';
+} from '@ogun/core/lib/browser';
 import { FileNavigatorWidget, FILE_NAVIGATOR_ID } from './navigator-widget';
 import { FileNavigatorContribution } from './navigator-contribution';
 import { createFileNavigatorWidget } from './navigator-container';
-import { WidgetFactory } from '@theia/core/lib/browser/widget-manager';
+import { WidgetFactory } from '@ogun/core/lib/browser/widget-manager';
 import { bindFileNavigatorPreferences } from '../common/navigator-preferences';
 import { FileNavigatorFilter } from './navigator-filter';
 import { NavigatorContextKeyService } from './navigator-context-key-service';
-import { TabBarToolbarContribution } from '@theia/core/lib/browser/shell/tab-bar-toolbar';
+import { TabBarToolbarContribution } from '@ogun/core/lib/browser/shell/tab-bar-toolbar';
 import { NavigatorDiff } from './navigator-diff';
 import { NavigatorLayoutVersion3Migration, NavigatorLayoutVersion5Migration } from './navigator-layout-migrations';
 import { NavigatorTabBarDecorator } from './navigator-tab-bar-decorator';
-import { TabBarDecorator } from '@theia/core/lib/browser/shell/tab-bar-decorator';
+import { TabBarDecorator } from '@ogun/core/lib/browser/shell/tab-bar-decorator';
 import { NavigatorWidgetFactory } from './navigator-widget-factory';
-import { bindRootContributionProvider } from '@theia/core/lib/common';
+import { bindRootContributionProvider } from '@ogun/core/lib/common';
 import { OpenEditorsTreeDecorator } from './open-editors-widget/navigator-open-editors-decorator-service';
 import { OpenEditorsWidget } from './open-editors-widget/navigator-open-editors-widget';
 import { NavigatorTreeDecorator } from './navigator-decorator-service';
 import { NavigatorDeletedEditorDecorator } from './open-editors-widget/navigator-deleted-editor-decorator';
 import { NavigatorSymlinkDecorator } from './navigator-symlink-decorator';
 import { NavigatorFileClipboard } from './navigator-file-clipboard';
-import { FileTreeDecoratorAdapter } from '@theia/filesystem/lib/browser';
+import { FileTreeDecoratorAdapter } from '@ogun/filesystem/lib/browser';
 
 export default new ContainerModule(bind => {
     bindFileNavigatorPreferences(bind);

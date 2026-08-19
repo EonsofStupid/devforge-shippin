@@ -14,7 +14,7 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { injectable } from '@theia/core/shared/inversify';
+import { injectable } from '@ogun/core/shared/inversify';
 import {
     EditorDecoration,
     EditorDecorationOptions,
@@ -22,9 +22,9 @@ import {
     EditorDecorator,
     TextEditor,
     MinimapPosition
-} from '@theia/editor/lib/browser';
+} from '@ogun/editor/lib/browser';
 import { DirtyDiff, LineRange, Change } from './diff-computer';
-import { URI } from '@theia/core';
+import { URI } from '@ogun/core';
 
 export enum DirtyDiffDecorationType {
     AddedLine = 'dirty-diff-added-line',

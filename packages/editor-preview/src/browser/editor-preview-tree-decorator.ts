@@ -14,10 +14,10 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { injectable, inject } from '@theia/core/shared/inversify';
-import { TreeDecorator, TreeDecoration } from '@theia/core/lib/browser/tree/tree-decorator';
-import { Emitter } from '@theia/core/lib/common/event';
-import { Tree } from '@theia/core/lib/browser/tree/tree';
+import { injectable, inject } from '@ogun/core/shared/inversify';
+import { TreeDecorator, TreeDecoration } from '@ogun/core/lib/browser/tree/tree-decorator';
+import { Emitter } from '@ogun/core/lib/common/event';
+import { Tree } from '@ogun/core/lib/browser/tree/tree';
 import {
     ApplicationShell,
     DepthFirstTreeIterator,
@@ -26,9 +26,9 @@ import {
     NavigatableWidget,
     Saveable,
     Widget,
-} from '@theia/core/lib/browser';
-import { Disposable } from '@theia/core/lib/common';
-import { OpenEditorNode } from '@theia/navigator/lib/browser/open-editors-widget/navigator-open-editors-tree-model';
+} from '@ogun/core/lib/browser';
+import { Disposable } from '@ogun/core/lib/common';
+import { OpenEditorNode } from '@ogun/navigator/lib/browser/open-editors-widget/navigator-open-editors-tree-model';
 import { EditorPreviewWidget } from './editor-preview-widget';
 
 @injectable()

@@ -14,22 +14,22 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { enableJSDOM } from '@theia/core/lib/browser/test/jsdom';
+import { enableJSDOM } from '@ogun/core/lib/browser/test/jsdom';
 
 let disableJSDOM = enableJSDOM();
 
-import { FrontendApplicationConfigProvider } from '@theia/core/lib/browser/frontend-application-config-provider';
+import { FrontendApplicationConfigProvider } from '@ogun/core/lib/browser/frontend-application-config-provider';
 FrontendApplicationConfigProvider.set({});
 
 import { expect } from 'chai';
-import { Container } from '@theia/core/shared/inversify';
+import { Container } from '@ogun/core/shared/inversify';
 import { ResourcePropertyDataService } from './resource-property-data-service';
-import { FileService } from '@theia/filesystem/lib/browser/file-service';
-import URI from '@theia/core/lib/common/uri';
+import { FileService } from '@ogun/filesystem/lib/browser/file-service';
+import URI from '@ogun/core/lib/common/uri';
 import { PropertyDataService } from '../property-data-service';
-import { FileSelection } from '@theia/filesystem/lib/browser/file-selection';
-import { Navigatable } from '@theia/core/lib/browser/navigatable';
-import { FileStat } from '@theia/filesystem/lib/common/files';
+import { FileSelection } from '@ogun/filesystem/lib/browser/file-selection';
+import { Navigatable } from '@ogun/core/lib/browser/navigatable';
+import { FileStat } from '@ogun/filesystem/lib/common/files';
 
 disableJSDOM();
 

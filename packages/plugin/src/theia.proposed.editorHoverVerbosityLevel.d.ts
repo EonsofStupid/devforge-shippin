@@ -21,7 +21,7 @@
 
 // Copied from https://github.com/microsoft/vscode/blob/1.104.0/src/vscode-dts/vscode.proposed.editorHoverVerbosityLevel.d.ts
 
-export module '@theia/plugin' {
+export module '@ogun/plugin' {
 
     /**
      * A hover represents additional information for a symbol or word. Hovers are

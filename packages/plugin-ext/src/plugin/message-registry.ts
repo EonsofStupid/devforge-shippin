@@ -13,12 +13,12 @@
 //
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
-import { inject, injectable, postConstruct } from '@theia/core/shared/inversify';
+import { inject, injectable, postConstruct } from '@ogun/core/shared/inversify';
 import {
     PLUGIN_RPC_CONTEXT as Ext, MessageRegistryMain, MainMessageOptions, MainMessageType
 } from '../common/plugin-api-rpc';
 import { RPCProtocol } from '../common/rpc-protocol';
-import { MessageItem, MessageOptions } from '@theia/plugin';
+import { MessageItem, MessageOptions } from '@ogun/plugin';
 
 @injectable()
 export class MessageRegistryExt {

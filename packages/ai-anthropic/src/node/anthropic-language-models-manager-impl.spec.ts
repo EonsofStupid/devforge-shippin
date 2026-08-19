@@ -16,7 +16,7 @@
 
 import { expect } from 'chai';
 import type { ModelInfo } from '@anthropic-ai/sdk/resources/models';
-import { ReasoningApi } from '@theia/ai-core';
+import { ReasoningApi } from '@ogun/ai-core';
 import { AnthropicLanguageModelsManagerImpl } from './anthropic-language-models-manager-impl';
 import { AnthropicModelDescription } from '../common';
 

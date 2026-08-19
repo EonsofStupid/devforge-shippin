@@ -27,8 +27,8 @@ import {
     PLUGIN_RPC_CONTEXT
 } from '../common/plugin-api-rpc';
 import { RPCProtocol } from '../common/rpc-protocol';
-import { Emitter, Event } from '@theia/core/lib/common/event';
-import * as theia from '@theia/plugin';
+import { Emitter, Event } from '@ogun/core/lib/common/event';
+import * as theia from '@ogun/plugin';
 
 export class AuthenticationExtImpl implements AuthenticationExt {
     private proxy: AuthenticationMain;

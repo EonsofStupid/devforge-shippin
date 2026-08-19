@@ -14,23 +14,23 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { Widget, Message, BaseWidget, Key, StatefulWidget, MessageLoop, KeyCode, codicon } from '@theia/core/lib/browser';
-import { inject, injectable, postConstruct } from '@theia/core/shared/inversify';
+import { Widget, Message, BaseWidget, Key, StatefulWidget, MessageLoop, KeyCode, codicon } from '@ogun/core/lib/browser';
+import { inject, injectable, postConstruct } from '@ogun/core/shared/inversify';
 import { SearchInWorkspaceResultTreeWidget } from './search-in-workspace-result-tree-widget';
 import { SearchInWorkspaceOptions } from '../common/search-in-workspace-interface';
-import * as React from '@theia/core/shared/react';
-import { createRoot, Root } from '@theia/core/shared/react-dom/client';
-import { Event, Emitter, Disposable } from '@theia/core/lib/common';
-import { WorkspaceSearchFilterService, WorkspaceService } from '@theia/workspace/lib/browser';
+import * as React from '@ogun/core/shared/react';
+import { createRoot, Root } from '@ogun/core/shared/react-dom/client';
+import { Event, Emitter, Disposable } from '@ogun/core/lib/common';
+import { WorkspaceSearchFilterService, WorkspaceService } from '@ogun/workspace/lib/browser';
 import { SearchInWorkspaceContextKeyService } from './search-in-workspace-context-key-service';
-import { CancellationTokenSource } from '@theia/core';
-import { ProgressBarFactory } from '@theia/core/lib/browser/progress-bar-factory';
-import { EditorManager } from '@theia/editor/lib/browser';
+import { CancellationTokenSource } from '@ogun/core';
+import { ProgressBarFactory } from '@ogun/core/lib/browser/progress-bar-factory';
+import { EditorManager } from '@ogun/editor/lib/browser';
 import { SearchInWorkspacePreferences } from '../common/search-in-workspace-preferences';
 import { SearchInWorkspaceInput } from './components/search-in-workspace-input';
 import { SearchInWorkspaceTextArea } from './components/search-in-workspace-textarea';
-import { nls } from '@theia/core/lib/common/nls';
-import { Deferred } from '@theia/core/lib/common/promise-util';
+import { nls } from '@ogun/core/lib/common/nls';
+import { Deferred } from '@ogun/core/lib/common/promise-util';
 
 export interface SearchFieldState {
     className: string;

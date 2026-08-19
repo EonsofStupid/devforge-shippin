@@ -14,17 +14,17 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { CancellationToken, RecursivePartial, URI } from '@theia/core';
-import { inject, injectable } from '@theia/core/shared/inversify';
-import { EditorOpenerOptions, EditorWidget, Range } from '@theia/editor/lib/browser';
+import { CancellationToken, RecursivePartial, URI } from '@ogun/core';
+import { inject, injectable } from '@ogun/core/shared/inversify';
+import { EditorOpenerOptions, EditorWidget, Range } from '@ogun/editor/lib/browser';
 
-import { EditorSelectionResolver } from '@theia/editor/lib/browser/editor-manager';
+import { EditorSelectionResolver } from '@ogun/editor/lib/browser/editor-manager';
 import { DocumentSymbol } from '@theia/monaco-editor-core/esm/vs/editor/common/languages';
 import { TextModel } from '@theia/monaco-editor-core/esm/vs/editor/common/model/textModel';
 import { ILanguageFeaturesService } from '@theia/monaco-editor-core/esm/vs/editor/common/services/languageFeatures';
 import { StandaloneServices } from '@theia/monaco-editor-core/esm/vs/editor/standalone/browser/standaloneServices';
-import { MonacoEditor } from '@theia/monaco/lib/browser/monaco-editor';
-import { MonacoToProtocolConverter } from '@theia/monaco/lib/browser/monaco-to-protocol-converter';
+import { MonacoEditor } from '@ogun/monaco/lib/browser/monaco-editor';
+import { MonacoToProtocolConverter } from '@ogun/monaco/lib/browser/monaco-to-protocol-converter';
 
 /** Regex to match GitHub-style position and range declaration with line (L) and column (C) */
 export const LOCATION_REGEX = /#L(\d+)?(?:C(\d+))?(?:-L(\d+)?(?:C(\d+))?)?$/;

@@ -14,8 +14,8 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import type * as theia from '@theia/plugin';
-import { CancellationToken } from '@theia/core/lib/common/cancellation';
+import type * as theia from '@ogun/plugin';
+import { CancellationToken } from '@ogun/core/lib/common/cancellation';
 
 import { RPCProtocol } from '../common/rpc-protocol';
 import {

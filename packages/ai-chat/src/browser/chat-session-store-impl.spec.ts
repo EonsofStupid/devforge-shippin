@@ -14,23 +14,23 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { enableJSDOM } from '@theia/core/lib/browser/test/jsdom';
+import { enableJSDOM } from '@ogun/core/lib/browser/test/jsdom';
 let disableJSDOM = enableJSDOM();
-import { FrontendApplicationConfigProvider } from '@theia/core/lib/browser/frontend-application-config-provider';
+import { FrontendApplicationConfigProvider } from '@ogun/core/lib/browser/frontend-application-config-provider';
 FrontendApplicationConfigProvider.set({});
 
 import { expect } from 'chai';
 import * as sinon from 'sinon';
-import { Container } from '@theia/core/shared/inversify';
+import { Container } from '@ogun/core/shared/inversify';
 import { ChatSessionStoreImpl } from './chat-session-store-impl';
-import { FileService } from '@theia/filesystem/lib/browser/file-service';
-import { WorkspaceService, WorkspaceMetadataStorageService, WorkspaceMetadataStore } from '@theia/workspace/lib/browser';
-import { EnvVariablesServer } from '@theia/core/lib/common/env-variables';
-import { PreferenceService } from '@theia/core/lib/common';
-import { StorageService } from '@theia/core/lib/browser';
-import { ILogger } from '@theia/core/lib/common/logger';
-import { URI, Emitter } from '@theia/core';
-import { BinaryBuffer } from '@theia/core/lib/common/buffer';
+import { FileService } from '@ogun/filesystem/lib/browser/file-service';
+import { WorkspaceService, WorkspaceMetadataStorageService, WorkspaceMetadataStore } from '@ogun/workspace/lib/browser';
+import { EnvVariablesServer } from '@ogun/core/lib/common/env-variables';
+import { PreferenceService } from '@ogun/core/lib/common';
+import { StorageService } from '@ogun/core/lib/browser';
+import { ILogger } from '@ogun/core/lib/common/logger';
+import { URI, Emitter } from '@ogun/core';
+import { BinaryBuffer } from '@ogun/core/lib/common/buffer';
 import { ChatSessionIndex, ChatSessionMetadata } from '../common/chat-session-store';
 import {
     PERSISTED_SESSION_LIMIT_PREF,
@@ -38,7 +38,7 @@ import {
     SessionStorageScope
 } from '../common/ai-chat-preferences';
 import { ChatAgentLocation } from '../common/chat-agents';
-import { FileStat } from '@theia/filesystem/lib/common/files';
+import { FileStat } from '@ogun/filesystem/lib/common/files';
 
 disableJSDOM();
 

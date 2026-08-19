@@ -15,9 +15,9 @@
 // *****************************************************************************
 
 import { GettingStartedContribution } from './getting-started-contribution';
-import { ContainerModule, interfaces } from '@theia/core/shared/inversify';
+import { ContainerModule, interfaces } from '@ogun/core/shared/inversify';
 import { GettingStartedWidget } from './getting-started-widget';
-import { WidgetFactory, FrontendApplicationContribution, bindViewContribution, noopWidgetStatusBarContribution, WidgetStatusBarContribution } from '@theia/core/lib/browser';
+import { WidgetFactory, FrontendApplicationContribution, bindViewContribution, noopWidgetStatusBarContribution, WidgetStatusBarContribution } from '@ogun/core/lib/browser';
 import { bindGettingStartedPreferences } from '../common/getting-started-preferences';
 import '../../src/browser/style/index.css';
 

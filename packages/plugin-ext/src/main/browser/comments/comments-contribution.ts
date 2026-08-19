@@ -14,18 +14,18 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { inject, injectable } from '@theia/core/shared/inversify';
+import { inject, injectable } from '@ogun/core/shared/inversify';
 import * as monaco from '@theia/monaco-editor-core';
 import { CommentingRangeDecorator } from './comments-decorator';
-import { EditorManager, EditorMouseEvent, EditorWidget } from '@theia/editor/lib/browser';
-import { MonacoDiffEditor } from '@theia/monaco/lib/browser/monaco-diff-editor';
+import { EditorManager, EditorMouseEvent, EditorWidget } from '@ogun/editor/lib/browser';
+import { MonacoDiffEditor } from '@ogun/monaco/lib/browser/monaco-diff-editor';
 import { CommentThreadWidget } from './comment-thread-widget';
 import { CommentsService, CommentInfoMain } from './comments-service';
 import { CommentThread } from '../../../common/plugin-api-rpc-model';
-import { CommandRegistry, DisposableCollection, MenuModelRegistry } from '@theia/core/lib/common';
-import { URI } from '@theia/core/shared/vscode-uri';
-import { ContextKeyService } from '@theia/core/lib/browser/context-key-service';
-import { Uri } from '@theia/plugin';
+import { CommandRegistry, DisposableCollection, MenuModelRegistry } from '@ogun/core/lib/common';
+import { URI } from '@ogun/core/shared/vscode-uri';
+import { ContextKeyService } from '@ogun/core/lib/browser/context-key-service';
+import { Uri } from '@ogun/plugin';
 import { CommentsContext } from './comments-context';
 
 /*---------------------------------------------------------------------------------------------

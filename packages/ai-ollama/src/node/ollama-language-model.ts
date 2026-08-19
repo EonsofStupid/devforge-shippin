@@ -31,10 +31,10 @@ import {
     LanguageModelStatus,
     LanguageModelTextResponse,
     UserRequest
-} from '@theia/ai-core';
-import { CancellationToken } from '@theia/core';
+} from '@ogun/ai-core';
+import { CancellationToken } from '@ogun/core';
 import { ChatRequest, Message, Ollama, Options, Tool, ToolCall as OllamaToolCall } from 'ollama';
-import { createProxyFetch } from '@theia/ai-core/lib/node';
+import { createProxyFetch } from '@ogun/ai-core/lib/node';
 import { ollamaThinkParamFor } from './ollama-reasoning';
 
 export const OllamaModelIdentifier = Symbol('OllamaModelIdentifier');

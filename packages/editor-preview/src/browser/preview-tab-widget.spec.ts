@@ -14,13 +14,13 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { enableJSDOM } from '@theia/core/lib/browser/test/jsdom';
+import { enableJSDOM } from '@ogun/core/lib/browser/test/jsdom';
 let disableJSDOM = enableJSDOM();
 
 import { expect } from 'chai';
-import { DisposableCollection, Emitter } from '@theia/core/lib/common';
-import { PINNED_CLASS, Saveable } from '@theia/core/lib/browser';
-import { TabBar, Widget } from '@theia/core/shared/@lumino/widgets';
+import { DisposableCollection, Emitter } from '@ogun/core/lib/common';
+import { PINNED_CLASS, Saveable } from '@ogun/core/lib/browser';
+import { TabBar, Widget } from '@ogun/core/shared/@lumino/widgets';
 import { PREVIEW_TITLE_CLASS, PreviewTabHost, PreviewTabSupport } from './preview-tab-widget';
 
 disableJSDOM();

@@ -14,8 +14,8 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { injectable } from '@theia/core/shared/inversify';
-import { HostedPluginServerImpl } from '@theia/plugin-ext/lib/hosted/node/plugin-service';
+import { injectable } from '@ogun/core/shared/inversify';
+import { HostedPluginServerImpl } from '@ogun/plugin-ext/lib/hosted/node/plugin-service';
 
 @injectable()
 export class HeadlessHostedPluginServerImpl extends HostedPluginServerImpl {

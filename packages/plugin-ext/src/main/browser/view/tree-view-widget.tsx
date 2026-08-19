@@ -14,7 +14,7 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { injectable, inject, postConstruct } from '@theia/core/shared/inversify';
+import { injectable, inject, postConstruct } from '@ogun/core/shared/inversify';
 import { TreeViewsExt, TreeViewItemCollapsibleState, TreeViewItem, TreeViewItemReference, ThemeIcon, DataTransferFileDTO } from '../../../common/plugin-api-rpc';
 import { Command } from '../../../common/plugin-api-rpc-model';
 import {
@@ -34,24 +34,24 @@ import {
     HoverService,
     ApplicationShell,
     KeybindingRegistry
-} from '@theia/core/lib/browser';
-import { MenuPath, MenuModelRegistry, CommandMenu, AcceleratorSource } from '@theia/core/lib/common/menu';
-import * as React from '@theia/core/shared/react';
+} from '@ogun/core/lib/browser';
+import { MenuPath, MenuModelRegistry, CommandMenu, AcceleratorSource } from '@ogun/core/lib/common/menu';
+import * as React from '@ogun/core/shared/react';
 import { PluginSharedStyle } from '../plugin-shared-style';
-import { ACTION_ITEM, Widget } from '@theia/core/lib/browser/widgets/widget';
-import { Emitter, Event } from '@theia/core/lib/common/event';
-import { MessageService } from '@theia/core/lib/common/message-service';
+import { ACTION_ITEM, Widget } from '@ogun/core/lib/browser/widgets/widget';
+import { Emitter, Event } from '@ogun/core/lib/common/event';
+import { MessageService } from '@ogun/core/lib/common/message-service';
 import { View } from '../../../common/plugin-protocol';
-import { URI } from '@theia/core/lib/common/uri';
-import { ContextKeyService } from '@theia/core/lib/browser/context-key-service';
-import { MarkdownString } from '@theia/core/lib/common/markdown-rendering';
-import { AccessibilityInformation } from '@theia/plugin';
-import { ColorRegistry } from '@theia/core/lib/browser/color-registry';
-import { DecoratedTreeNode } from '@theia/core/lib/browser/tree/tree-decorator';
-import { WidgetDecoration } from '@theia/core/lib/browser/widget-decoration';
-import { CancellationTokenSource, CancellationToken, Mutable } from '@theia/core/lib/common';
+import { URI } from '@ogun/core/lib/common/uri';
+import { ContextKeyService } from '@ogun/core/lib/browser/context-key-service';
+import { MarkdownString } from '@ogun/core/lib/common/markdown-rendering';
+import { AccessibilityInformation } from '@ogun/plugin';
+import { ColorRegistry } from '@ogun/core/lib/browser/color-registry';
+import { DecoratedTreeNode } from '@ogun/core/lib/browser/tree/tree-decorator';
+import { WidgetDecoration } from '@ogun/core/lib/browser/widget-decoration';
+import { CancellationTokenSource, CancellationToken, Mutable } from '@ogun/core/lib/common';
 import { mixin } from '../../../common/types';
-import { Deferred } from '@theia/core/lib/common/promise-util';
+import { Deferred } from '@ogun/core/lib/common/promise-util';
 import { DnDFileContentStore } from './dnd-file-content-store';
 
 export const TREE_NODE_HYPERLINK = 'theia-TreeNodeHyperlink';

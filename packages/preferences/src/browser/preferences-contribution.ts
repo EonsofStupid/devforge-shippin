@@ -14,8 +14,8 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { injectable, inject, optional } from '@theia/core/shared/inversify';
-import { MenuModelRegistry, CommandRegistry, nls, PreferenceScope, PreferenceService } from '@theia/core';
+import { injectable, inject, optional } from '@ogun/core/shared/inversify';
+import { MenuModelRegistry, CommandRegistry, nls, PreferenceScope, PreferenceService } from '@ogun/core';
 import {
     CommonMenus,
     AbstractViewContribution,
@@ -25,17 +25,17 @@ import {
     QuickInputService,
     QuickPickItem,
     isFirefox,
-} from '@theia/core/lib/browser';
-import { isOSX } from '@theia/core/lib/common/os';
-import { TabBarToolbarRegistry } from '@theia/core/lib/browser/shell/tab-bar-toolbar';
-import { EditorManager, EditorWidget } from '@theia/editor/lib/browser';
-import URI from '@theia/core/lib/common/uri';
+} from '@ogun/core/lib/browser';
+import { isOSX } from '@ogun/core/lib/common/os';
+import { TabBarToolbarRegistry } from '@ogun/core/lib/browser/shell/tab-bar-toolbar';
+import { EditorManager, EditorWidget } from '@ogun/editor/lib/browser';
+import URI from '@ogun/core/lib/common/uri';
 import { PreferencesWidget } from './views/preference-widget';
 import { Preference, PreferencesCommands, PreferenceMenus } from './util/preference-types';
-import { ClipboardService } from '@theia/core/lib/browser/clipboard-service';
-import { FileService } from '@theia/filesystem/lib/browser/file-service';
-import { WorkspaceService } from '@theia/workspace/lib/browser';
-import { FileStat } from '@theia/filesystem/lib/common/files';
+import { ClipboardService } from '@ogun/core/lib/browser/clipboard-service';
+import { FileService } from '@ogun/filesystem/lib/browser/file-service';
+import { WorkspaceService } from '@ogun/workspace/lib/browser';
+import { FileStat } from '@ogun/filesystem/lib/common/files';
 
 @injectable()
 export class PreferencesContribution extends AbstractViewContribution<PreferencesWidget> {

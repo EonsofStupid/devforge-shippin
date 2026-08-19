@@ -17,49 +17,49 @@ import {
     ChangeSet, ChangeSetElement, ChatAgent, ChatChangeEvent, ChatHierarchyBranch,
     ChatModel, ChatRequestModel, ChatService, ChatSuggestion, EditableChatRequestModel,
     ChatRequestParser, ChatMode, ChatSession, MutableChatModel, ChatSessionSettings
-} from '@theia/ai-chat';
-import { ChatAgentService } from '@theia/ai-chat/lib/common/chat-agent-service';
-import { ParsedChatRequest } from '@theia/ai-chat/lib/common/parsed-chat-request';
+} from '@ogun/ai-chat';
+import { ChatAgentService } from '@ogun/ai-chat/lib/common/chat-agent-service';
+import { ParsedChatRequest } from '@ogun/ai-chat/lib/common/parsed-chat-request';
 import {
     GenericCapabilitySelections, AIVariableResolutionRequest, ParsedCapability,
     FrontendLanguageModelRegistry, LanguageModel, ReasoningLevel, ReasoningSettings, ReasoningSupport,
     PREFERENCE_NAME_REASONING, ReasoningPreferenceEntry, ServerToolDescriptor
-} from '@theia/ai-core';
-import { mergeReasoningSettings } from '@theia/ai-core/lib/browser/frontend-language-model-service';
-import { ChangeSetDecoratorService } from '@theia/ai-chat/lib/browser/change-set-decorator-service';
-import { ImageContextVariable } from '@theia/ai-chat/lib/common/image-context-variable';
-import { FrontendVariableService, AIActivationService } from '@theia/ai-core/lib/browser';
-import { AISettingsService, PromptService } from '@theia/ai-core/lib/common';
-import { CommandService, DisposableCollection, Emitter, InMemoryResources, MessageService, URI, nls, Disposable, ILogger } from '@theia/core';
-import { CommonCommands, ContextMenuRenderer, HoverService, LabelProvider, Message, OpenerService, ReactWidget } from '@theia/core/lib/browser';
-import { MarkdownString } from '@theia/core/lib/common/markdown-rendering';
-import { SelectComponent, SelectOption } from '@theia/core/lib/browser/widgets/select-component';
-import { ContextKey, ContextKeyService } from '@theia/core/lib/browser/context-key-service';
-import { KeybindingRegistry } from '@theia/core/lib/browser/keybinding';
-import { Deferred } from '@theia/core/lib/common/promise-util';
-import { inject, injectable, optional, postConstruct, named } from '@theia/core/shared/inversify';
-import * as React from '@theia/core/shared/react';
+} from '@ogun/ai-core';
+import { mergeReasoningSettings } from '@ogun/ai-core/lib/browser/frontend-language-model-service';
+import { ChangeSetDecoratorService } from '@ogun/ai-chat/lib/browser/change-set-decorator-service';
+import { ImageContextVariable } from '@ogun/ai-chat/lib/common/image-context-variable';
+import { FrontendVariableService, AIActivationService } from '@ogun/ai-core/lib/browser';
+import { AISettingsService, PromptService } from '@ogun/ai-core/lib/common';
+import { CommandService, DisposableCollection, Emitter, InMemoryResources, MessageService, URI, nls, Disposable, ILogger } from '@ogun/core';
+import { CommonCommands, ContextMenuRenderer, HoverService, LabelProvider, Message, OpenerService, ReactWidget } from '@ogun/core/lib/browser';
+import { MarkdownString } from '@ogun/core/lib/common/markdown-rendering';
+import { SelectComponent, SelectOption } from '@ogun/core/lib/browser/widgets/select-component';
+import { ContextKey, ContextKeyService } from '@ogun/core/lib/browser/context-key-service';
+import { KeybindingRegistry } from '@ogun/core/lib/browser/keybinding';
+import { Deferred } from '@ogun/core/lib/common/promise-util';
+import { inject, injectable, optional, postConstruct, named } from '@ogun/core/shared/inversify';
+import * as React from '@ogun/core/shared/react';
 import { IMouseEvent, Range } from '@theia/monaco-editor-core';
-import { MonacoEditorProvider } from '@theia/monaco/lib/browser/monaco-editor-provider';
-import { SimpleMonacoEditor } from '@theia/monaco/lib/browser/simple-monaco-editor';
+import { MonacoEditorProvider } from '@ogun/monaco/lib/browser/monaco-editor-provider';
+import { SimpleMonacoEditor } from '@ogun/monaco/lib/browser/simple-monaco-editor';
 import { ChangeSetActionRenderer, ChangeSetActionService } from './change-set-actions/change-set-action-service';
 import { ChatInputAgentSuggestions } from './chat-input-agent-suggestions';
 import { CHAT_VIEW_LANGUAGE_EXTENSION } from './chat-view-language-contribution';
 import { ContextVariablePicker } from './context-variable-picker';
-import { TASK_CONTEXT_VARIABLE } from '@theia/ai-chat/lib/browser/task-context-variable';
+import { TASK_CONTEXT_VARIABLE } from '@ogun/ai-chat/lib/browser/task-context-variable';
 import { IModelDeltaDecoration } from '@theia/monaco-editor-core/esm/vs/editor/common/model';
 import { EditorOption } from '@theia/monaco-editor-core/esm/vs/editor/common/config/editorOptions';
 import { SuggestController } from '@theia/monaco-editor-core/esm/vs/editor/contrib/suggest/browser/suggestController';
 import { ChatInputHistoryService, ChatInputNavigationState } from './chat-input-history';
-import { ContextFileValidationService, FileValidationResult, FileValidationState } from '@theia/ai-chat/lib/browser/context-file-validation-service';
-import { PendingImageRegistry } from '@theia/ai-chat/lib/browser/pending-image-registry';
+import { ContextFileValidationService, FileValidationResult, FileValidationState } from '@ogun/ai-chat/lib/browser/context-file-validation-service';
+import { PendingImageRegistry } from '@ogun/ai-chat/lib/browser/pending-image-registry';
 import { ChatCapabilitiesService } from './chat-capabilities-service';
 import { CapabilityChip, CapabilityChipsRow } from './chat-capabilities-panel';
 import { ChatInputFocusService } from './chat-input-focus-service';
 import { AvailableGenericCapabilities, GenericCapabilitiesService } from './generic-capabilities-service';
 import { GenericCapabilitiesSection } from './generic-capabilities-section';
 import { ServerToolsSection } from './generic-capabilities-tree';
-import { PreferenceService } from '@theia/core/lib/common/preferences';
+import { PreferenceService } from '@ogun/core/lib/common/preferences';
 import {
     CHAT_VIEW_TOKEN_USAGE_ENABLED,
     CHAT_VIEW_TOKEN_USAGE_WARNING_ENABLED,

@@ -16,9 +16,9 @@
 
 import '../../src/browser/style/index.css';
 
-import { ContainerModule } from '@theia/core/shared/inversify';
-import { ChatAgent, ChatAgentRecommendationService } from '@theia/ai-chat/lib/common';
-import { Agent, AIVariableContribution, bindToolProvider } from '@theia/ai-core/lib/common';
+import { ContainerModule } from '@ogun/core/shared/inversify';
+import { ChatAgent, ChatAgentRecommendationService } from '@ogun/ai-chat/lib/common';
+import { Agent, AIVariableContribution, bindToolProvider } from '@ogun/ai-core/lib/common';
 import { ArchitectAgent } from './architect-agent';
 import { CoderAgent } from './coder-agent';
 import { SummarizeSessionCommandContribution } from './summarize-session-command-contribution';
@@ -39,7 +39,7 @@ import {
     bindViewContribution,
     RemoteConnectionProvider,
     ServiceConnectionProvider
-} from '@theia/core/lib/browser';
+} from '@ogun/core/lib/browser';
 import { TaskListProvider, TaskRunnerProvider } from './workspace-task-provider';
 import {
     LaunchListProvider,
@@ -76,22 +76,22 @@ import { AIConfigurationContainerWidget } from './ai-configuration/ai-configurat
 import { AIVariableConfigurationWidget } from './ai-configuration/variable-configuration-widget';
 import { ContextFilesVariableContribution } from '../common/context-files-variable';
 import { AIToolsConfigurationWidget } from './ai-configuration/tools-configuration-widget';
-import { TabBarToolbarContribution } from '@theia/core/lib/browser/shell/tab-bar-toolbar';
+import { TabBarToolbarContribution } from '@ogun/core/lib/browser/shell/tab-bar-toolbar';
 import { TemplatePreferenceContribution } from './template-preference-contribution';
-import { ChatWelcomeMessageProvider } from '@theia/ai-chat-ui/lib/browser/chat-tree-view';
+import { ChatWelcomeMessageProvider } from '@ogun/ai-chat-ui/lib/browser/chat-tree-view';
 import { IdeChatWelcomeMessageProvider } from './ide-chat-welcome-message-provider';
 import { ChatSessionsWelcomeMessageProvider } from './chat-sessions-welcome-message-provider';
 import { ChatSessionItemActionContribution, DefaultChatSessionItemActionContribution } from './chat-session-item-action-contribution';
 import { AiAllowAllModeChatBanner } from './ai-allow-all-mode-chat-banner';
-import { ChatBannerProvider } from '@theia/ai-chat-ui/lib/browser/chat-banner-provider';
+import { ChatBannerProvider } from '@ogun/ai-chat-ui/lib/browser/chat-banner-provider';
 import { DefaultChatAgentRecommendationService } from './default-chat-agent-recommendation-service';
 import { AITokenUsageConfigurationWidget } from './ai-configuration/token-usage-configuration-widget';
 import { AISkillsConfigurationWidget } from './ai-configuration/skills-configuration-widget';
 import { TaskContextSummaryVariableContribution } from './task-background-summary-variable';
 import { GitHubRepoVariableContribution } from './github-repo-variable-contribution';
 import { TaskContextFileStorageService } from './task-context-file-storage-service';
-import { TaskContextStorageService } from '@theia/ai-chat/lib/browser/task-context-service';
-import { bindRootContributionProvider, CommandContribution, PreferenceContribution } from '@theia/core';
+import { TaskContextStorageService } from '@ogun/ai-chat/lib/browser/task-context-service';
+import { bindRootContributionProvider, CommandContribution, PreferenceContribution } from '@ogun/core';
 import { AIPromptFragmentsConfigurationWidget } from './ai-configuration/prompt-fragments-configuration-widget';
 import { BrowserAutomation, browserAutomationPath } from '../common/browser-automation-protocol';
 import { GitHubRepoService, githubRepoServicePath } from '../common/github-repo-protocol';
@@ -99,10 +99,10 @@ import { CloseBrowserProvider, IsBrowserRunningProvider, LaunchBrowserProvider, 
 import { GetSkillFileContent } from './skill-file-functions';
 import { ModelAliasesConfigurationWidget } from './ai-configuration/model-aliases-configuration-widget';
 import { aiIdePreferenceSchema } from '../common/ai-ide-preferences';
-import { AIActivationService } from '@theia/ai-core/lib/browser';
+import { AIActivationService } from '@ogun/ai-core/lib/browser';
 import { AIIdeActivationServiceImpl } from './ai-ide-activation-service';
 import { AiConfigurationPreferences } from '../common/ai-configuration-preferences';
-import { WorkspaceRestrictionContribution } from '@theia/workspace/lib/browser/workspace-trust-service';
+import { WorkspaceRestrictionContribution } from '@ogun/workspace/lib/browser/workspace-trust-service';
 import { AIWorkspaceRestrictionContribution } from './ai-workspace-restriction-contribution';
 
 import { ProjectInfoAgent } from './project-info-agent';
@@ -112,8 +112,8 @@ import { TodoWriteTool } from './todo-tool';
 import { TodoToolRenderer } from './todo-tool-renderer';
 import { UserInteractionTool } from './user-interaction-tool';
 import { UserInteractionToolRenderer } from './user-interaction-tool-renderer';
-import { ChatResponsePartRenderer } from '@theia/ai-chat-ui/lib/browser/chat-response-part-renderer';
-import { ContextFileValidationService } from '@theia/ai-chat/lib/browser/context-file-validation-service';
+import { ChatResponsePartRenderer } from '@ogun/ai-chat-ui/lib/browser/chat-response-part-renderer';
+import { ContextFileValidationService } from '@ogun/ai-chat/lib/browser/context-file-validation-service';
 import { ContextFileValidationServiceImpl } from './context-file-validation-service-impl';
 import { RememberCommandContribution } from './remember-command-contribution';
 import { CreateTaskContextFunction, GetTaskContextFunction, EditTaskContextFunction, ListTaskContextsFunction, RewriteTaskContextFunction } from './task-context-functions';
@@ -130,7 +130,7 @@ import { CodeReviewerAgent } from './code-reviewer-agent';
 import { CodeReviewCapabilityContribution } from './code-review-capability-contribution';
 import { PRReviewAgent } from './review/pr-review-agent';
 import { PRReviewCapabilityContribution } from './review/pr-review-capability-contribution';
-import { PerspectiveContribution } from '@theia/core/lib/browser/perspective-service';
+import { PerspectiveContribution } from '@ogun/core/lib/browser/perspective-service';
 import { AIFirstPerspectiveContribution } from './ai-first-perspective-contribution';
 import { ChatSessionListService } from './chat-session-list-service';
 import { AISessionsWidget } from './ai-sessions-widget';
@@ -144,7 +144,7 @@ export default new ContainerModule((bind, _unbind, _isBound, rebind) => {
     bind(AgentModeConfirmationService).toService(AgentModeConfirmationServiceImpl);
 
     bind(AIIdeActivationServiceImpl).toSelf().inSingletonScope();
-    // rebinds the default implementation of '@theia/ai-core'
+    // rebinds the default implementation of '@ogun/ai-core'
     rebind(AIActivationService).toService(AIIdeActivationServiceImpl);
 
     bind(AIWorkspaceRestrictionContribution).toSelf().inSingletonScope();

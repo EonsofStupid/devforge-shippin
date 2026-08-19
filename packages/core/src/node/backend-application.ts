@@ -68,7 +68,7 @@ export const BackendApplicationServer = Symbol('BackendApplicationServer');
 /**
  * This service is responsible for serving the frontend files.
  *
- * When not bound, `@theia/cli` generators will bind it on the fly to serve files according to its own layout.
+ * When not bound, `@ogun/cli` generators will bind it on the fly to serve files according to its own layout.
  */
 export interface BackendApplicationServer extends BackendApplicationContribution { }
 

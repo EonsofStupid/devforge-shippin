@@ -17,10 +17,10 @@
 import * as fs from 'fs/promises';
 import * as os from 'os';
 import * as path from 'path';
-import { AsyncSubscription, subscribe } from '@theia/core/shared/@parcel/watcher';
-import { inject, injectable, named, postConstruct } from '@theia/core/shared/inversify';
-import { Disposable, ILogger, PreferenceService } from '@theia/core';
-import { Headers, RequestContext, RequestService } from '@theia/core/shared/@theia/request';
+import { AsyncSubscription, subscribe } from '@ogun/core/shared/@parcel/watcher';
+import { inject, injectable, named, postConstruct } from '@ogun/core/shared/inversify';
+import { Disposable, ILogger, PreferenceService } from '@ogun/core';
+import { Headers, RequestContext, RequestService } from '@ogun/core/shared/@ogun/request';
 import { SkillInstallBackendService, SkillInstallClient } from '../common/skill/skill-install-protocol';
 import { InstalledSkillInfo, ResolvedSkillEntry } from '../common/skill/skill-registry-types';
 import { computeSkillContentHash, SkillFileContent } from '../common/skill/skill-content-hash';

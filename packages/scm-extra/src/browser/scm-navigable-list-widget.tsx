@@ -14,22 +14,22 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { SELECTED_CLASS, Key, Widget } from '@theia/core/lib/browser';
-import { ScmService } from '@theia/scm/lib/browser/scm-service';
-import URI from '@theia/core/lib/common/uri';
-import { LabelProvider } from '@theia/core/lib/browser/label-provider';
-import { Message } from '@theia/core/shared/@lumino/messaging';
-import { ElementExt } from '@theia/core/shared/@lumino/domutils';
-import { inject, injectable } from '@theia/core/shared/inversify';
-import { ReactWidget } from '@theia/core/lib/browser/widgets/react-widget';
-import * as React from '@theia/core/shared/react';
+import { SELECTED_CLASS, Key, Widget } from '@ogun/core/lib/browser';
+import { ScmService } from '@ogun/scm/lib/browser/scm-service';
+import URI from '@ogun/core/lib/common/uri';
+import { LabelProvider } from '@ogun/core/lib/browser/label-provider';
+import { Message } from '@ogun/core/shared/@lumino/messaging';
+import { ElementExt } from '@ogun/core/shared/@lumino/domutils';
+import { inject, injectable } from '@ogun/core/shared/inversify';
+import { ReactWidget } from '@ogun/core/lib/browser/widgets/react-widget';
+import * as React from '@ogun/core/shared/react';
 import { ScmFileChangeLabelProvider } from './scm-file-change-label-provider';
 import { ScmFileChangeNode } from './scm-file-change-node';
 
 @injectable()
 /**
- * @deprecated since 1.75.0 - superseded by the SCM history graph in `@theia/scm`
- * and the Timeline view in `@theia/timeline`. This package will be removed in a
+ * @deprecated since 1.75.0 - superseded by the SCM history graph in `@ogun/scm`
+ * and the Timeline view in `@ogun/timeline`. This package will be removed in a
  * future release - see https://github.com/eclipse-theia/theia/issues/17457.
  */
 export abstract class ScmNavigableListWidget<T extends { selected?: boolean }> extends ReactWidget {
@@ -164,8 +164,8 @@ export abstract class ScmNavigableListWidget<T extends { selected?: boolean }> e
 }
 
 /**
- * @deprecated since 1.75.0 - superseded by the SCM history graph in `@theia/scm`
- * and the Timeline view in `@theia/timeline`. This package will be removed in a
+ * @deprecated since 1.75.0 - superseded by the SCM history graph in `@ogun/scm`
+ * and the Timeline view in `@ogun/timeline`. This package will be removed in a
  * future release - see https://github.com/eclipse-theia/theia/issues/17457.
  */
 export namespace ScmItemComponent {
@@ -178,8 +178,8 @@ export namespace ScmItemComponent {
     }
 }
 /**
- * @deprecated since 1.75.0 - superseded by the SCM history graph in `@theia/scm`
- * and the Timeline view in `@theia/timeline`. This package will be removed in a
+ * @deprecated since 1.75.0 - superseded by the SCM history graph in `@ogun/scm`
+ * and the Timeline view in `@ogun/timeline`. This package will be removed in a
  * future release - see https://github.com/eclipse-theia/theia/issues/17457.
  */
 export class ScmItemComponent extends React.Component<ScmItemComponent.Props> {

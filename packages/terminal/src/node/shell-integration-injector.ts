@@ -18,7 +18,7 @@ import path = require('path');
 import * as fs from 'fs';
 import { GeneralShellType, guessShellTypeFromExecutable } from '../common/shell-type';
 import { ShellProcess, ShellProcessOptions } from './shell-process';
-import { injectable } from '@theia/core/shared/inversify';
+import { injectable } from '@ogun/core/shared/inversify';
 
 @injectable()
 export class ShellIntegrationInjector {

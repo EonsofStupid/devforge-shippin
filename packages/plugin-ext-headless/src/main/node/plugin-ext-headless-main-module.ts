@@ -14,13 +14,13 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { interfaces } from '@theia/core/shared/inversify';
+import { interfaces } from '@ogun/core/shared/inversify';
 import {
     MessageClient, MessageService,
     ProgressClient, ProgressService,
     bindRootContributionProvider
-} from '@theia/core';
-import { MainPluginApiProvider, PluginDeployerDirectoryHandler } from '@theia/plugin-ext';
+} from '@ogun/core';
+import { MainPluginApiProvider, PluginDeployerDirectoryHandler } from '@ogun/plugin-ext';
 import { PluginTheiaHeadlessDirectoryHandler } from './handlers/plugin-theia-headless-directory-handler';
 import { HeadlessProgressClient } from './headless-progress-client';
 

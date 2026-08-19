@@ -15,7 +15,7 @@
 // *****************************************************************************
 
 import { CustomEditorWidget } from '../custom-editors/custom-editor-widget';
-import { interfaces } from '@theia/core/shared/inversify';
+import { interfaces } from '@ogun/core/shared/inversify';
 import { WebviewWidgetIdentifier, WebviewWidgetExternalEndpoint } from '../webview/webview';
 import { WebviewEnvironment } from '../webview/webview-environment';
 

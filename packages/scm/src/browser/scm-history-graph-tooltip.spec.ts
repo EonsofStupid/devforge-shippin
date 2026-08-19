@@ -14,16 +14,16 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { enableJSDOM } from '@theia/core/lib/browser/test/jsdom';
+import { enableJSDOM } from '@ogun/core/lib/browser/test/jsdom';
 const disableJSDOM = enableJSDOM();
 
 import { expect } from 'chai';
-import { MarkdownRenderer } from '@theia/core/lib/browser/markdown-rendering/markdown-renderer';
-import { MarkdownString, MarkdownStringImpl } from '@theia/core/lib/common/markdown-rendering/markdown-string';
-import { OpenerService } from '@theia/core/lib/browser/opener-service';
-import { markMarkdownLinksWired } from '@theia/core/lib/browser/markdown-rendering/markdown-link-handler';
-import { DisposableCollection } from '@theia/core/lib/common/disposable';
-import URI from '@theia/core/lib/common/uri';
+import { MarkdownRenderer } from '@ogun/core/lib/browser/markdown-rendering/markdown-renderer';
+import { MarkdownString, MarkdownStringImpl } from '@ogun/core/lib/common/markdown-rendering/markdown-string';
+import { OpenerService } from '@ogun/core/lib/browser/opener-service';
+import { markMarkdownLinksWired } from '@ogun/core/lib/browser/markdown-rendering/markdown-link-handler';
+import { DisposableCollection } from '@ogun/core/lib/common/disposable';
+import URI from '@ogun/core/lib/common/uri';
 import { ScmHistoryItem } from './scm-provider';
 import { HistoryGraphEntry } from './scm-history-graph-model';
 import { buildHtmlTooltip, buildProviderTooltip, HistoryTooltipActions } from './scm-history-graph-tooltip';

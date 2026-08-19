@@ -14,12 +14,12 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { Command, CommandContribution, CommandRegistry } from '@theia/core';
-import { inject, injectable } from '@theia/core/shared/inversify';
+import { Command, CommandContribution, CommandRegistry } from '@ogun/core';
+import { inject, injectable } from '@ogun/core/shared/inversify';
 import { NotebookEditorWidgetService } from '../service/notebook-editor-widget-service';
 import { CellOutput, CellUri } from '../../common';
 import { NotebookCellModel } from '../view-model/notebook-cell-model';
-import { EditorManager } from '@theia/editor/lib/browser';
+import { EditorManager } from '@ogun/editor/lib/browser';
 
 export namespace NotebookOutputCommands {
     export const ENABLE_SCROLLING: Command = {

@@ -19,15 +19,15 @@
  *--------------------------------------------------------------------------------------------*/
 // based on https://github.com/microsoft/vscode/blob/04c36be045a94fee58e5f8992d3e3fd980294a84/src/vs/workbench/api/browser/mainThreadFileSystemEventService.ts
 
-import { interfaces } from '@theia/core/shared/inversify';
+import { interfaces } from '@ogun/core/shared/inversify';
 import { RPCProtocol } from '../../common/rpc-protocol';
 import { MAIN_RPC_CONTEXT, FileSystemEvents, MainFileSystemEventServiceShape } from '../../common/plugin-api-rpc';
 import { UriComponents } from '../../common/uri-components';
-import { URI } from '@theia/core';
-import { Disposable, DisposableCollection } from '@theia/core/lib/common/disposable';
-import { FileService } from '@theia/filesystem/lib/browser/file-service';
-import { FileChangeType, WatchOptions } from '@theia/filesystem/lib/common/files';
-import { WorkspaceService } from '@theia/workspace/lib/browser';
+import { URI } from '@ogun/core';
+import { Disposable, DisposableCollection } from '@ogun/core/lib/common/disposable';
+import { FileService } from '@ogun/filesystem/lib/browser/file-service';
+import { FileChangeType, WatchOptions } from '@ogun/filesystem/lib/common/files';
+import { WorkspaceService } from '@ogun/workspace/lib/browser';
 
 export class MainFileSystemEventService implements MainFileSystemEventServiceShape {
 

@@ -15,19 +15,19 @@
 // *****************************************************************************
 
 import { ChatResponsePartRenderer } from '../chat-response-part-renderer';
-import { inject, injectable } from '@theia/core/shared/inversify';
-import { ChatResponseContent, ToolCallChatResponseContent } from '@theia/ai-chat/lib/common';
-import { ReactNode } from '@theia/core/shared/react';
-import { nls } from '@theia/core/lib/common/nls';
-import { codicon, ContextMenuRenderer, HoverService, KeybindingRegistry, MarkdownRenderer, OpenerService } from '@theia/core/lib/browser';
-import * as React from '@theia/core/shared/react';
+import { inject, injectable } from '@ogun/core/shared/inversify';
+import { ChatResponseContent, ToolCallChatResponseContent } from '@ogun/ai-chat/lib/common';
+import { ReactNode } from '@ogun/core/shared/react';
+import { nls } from '@ogun/core/lib/common/nls';
+import { codicon, ContextMenuRenderer, HoverService, KeybindingRegistry, MarkdownRenderer, OpenerService } from '@ogun/core/lib/browser';
+import * as React from '@ogun/core/shared/react';
 import { createConfirmationHandlers, ToolConfirmation, ToolConfirmationKeybindingHints, useToolConfirmationState } from './tool-confirmation';
-import { ToolConfirmationMode } from '@theia/ai-chat/lib/common/chat-tool-preferences';
+import { ToolConfirmationMode } from '@ogun/ai-chat/lib/common/chat-tool-preferences';
 import { ResponseNode } from '../chat-tree-view';
-import { ToolInvocationRegistry, ToolRequest } from '@theia/ai-core';
+import { ToolInvocationRegistry, ToolRequest } from '@ogun/ai-core';
 import { renderToolCallResult } from './toolcall-result';
-import { ToolConfirmationManager } from '@theia/ai-chat/lib/browser/chat-tool-preference-bindings';
-import { PendingToolConfirmationTracker } from '@theia/ai-chat/lib/browser/pending-tool-confirmation-tracker';
+import { ToolConfirmationManager } from '@ogun/ai-chat/lib/browser/chat-tool-preference-bindings';
+import { PendingToolConfirmationTracker } from '@ogun/ai-chat/lib/browser/pending-tool-confirmation-tracker';
 import {
     APPROVE_LATEST_TOOL_CONFIRMATION_COMMAND,
     DENY_LATEST_TOOL_CONFIRMATION_COMMAND

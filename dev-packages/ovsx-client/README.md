@@ -12,7 +12,7 @@
 
 ## Description
 
-The `@theia/ovsx-client` package is used to interact with `open-vsx` through its REST APIs.
+The `@ogun/ovsx-client` package is used to interact with `open-vsx` through its REST APIs.
 The package allows clients to fetch extensions and their metadata, search the registry, and
 includes the necessary logic to determine compatibility based on a provided supported API version.
 

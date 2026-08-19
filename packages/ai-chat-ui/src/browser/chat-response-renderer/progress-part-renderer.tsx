@@ -15,10 +15,10 @@
 // *****************************************************************************
 
 import { ChatResponsePartRenderer } from '../chat-response-part-renderer';
-import { injectable } from '@theia/core/shared/inversify';
-import { ChatResponseContent, ProgressChatResponseContent } from '@theia/ai-chat/lib/common';
-import { ReactNode } from '@theia/core/shared/react';
-import * as React from '@theia/core/shared/react';
+import { injectable } from '@ogun/core/shared/inversify';
+import { ChatResponseContent, ProgressChatResponseContent } from '@ogun/ai-chat/lib/common';
+import { ReactNode } from '@ogun/core/shared/react';
+import * as React from '@ogun/core/shared/react';
 import { ProgressMessage } from '../chat-progress-message';
 
 @injectable()

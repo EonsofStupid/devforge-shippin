@@ -15,7 +15,7 @@ Architecture canon: `shippin-forge/docs/ARCHITECTURE.md`
 
 ### W1 — Branded baseline · `356c5c28d`
 New app package `examples/webforge` (name `webforge`, `applicationName: WebForge`),
-carrying the full Theia AI suite, `@theia/mini-browser`, the Open VSX router wiring,
+carrying the full Theia AI suite, `@ogun/mini-browser`, the Open VSX router wiring,
 and first tailored preferences. Root scripts `build:webforge` / `start:webforge`.
 `examples/browser` deliberately untouched at upstream parity — the brand lives only in
 our package so Theia merges never fight identity.
@@ -38,7 +38,7 @@ WebForge, installed in-UI, deployed by the backend in 1.9s, button flipped to
 Uninstall.
 
 ### W4 — Clyffy's direct channels (the Act plane) · `3ddf73d44`, `58768f6d4`
-New Theia extension **`@theia/webforge-channels`**:
+New Theia extension **`@ogun/channels`**:
 - `POST /webforge/channel` — bearer-guarded by `WEBFORGE_CHANNEL_TOKEN`; **dark (503)
   when unset**, never open by default. Ops: `app.open`, `terminal.type`, `notify`,
   `guide.type`, `state.get`.
@@ -89,7 +89,7 @@ key**, so menus/commands/views can be gated with `when` clauses instead of forki
 workbench. Nothing is deleted; the command palette still reaches everything.
 
 New `webforge.guided` perspective
-(`packages/webforge-channels/src/browser/webforge-guided-perspective.ts`): the work in the
+(`packages/channels/src/browser/webforge-guided-perspective.ts`): the work in the
 centre, Clyffy on the right, explorer left but collapsed, bottom panel collapsed. The
 terminal and the tree appear when a lesson opens them through the channels rather than as
 a wall of chrome on boot. Reachable from **View → Switch Perspective (Experimental)**.
@@ -103,7 +103,7 @@ The naming + guided-surface canon (Clyffy's address scheme, the competence ladde
 art direction) lives in `shippin-forge/docs/CLYFFY-ORCHESTRATION.md`.
 
 ### W9b — The Clyffy walkthrough, in Phosphor Flat
-The mock made real. New in `@theia/webforge-channels`:
+The mock made real. New in `@ogun/channels`:
 
 - **`webforge-walkthrough-scenes.ts`** — five scenes drawn as inline SVG in the house
   art language. Every fill is a palette token (`--wf-a1`…`--wf-a6`), so switching
@@ -132,7 +132,7 @@ The mock made real. New in `@theia/webforge-channels`:
 
 ### W10 — The engine: Theia becomes WebForge
 Bolting features onto upstream was the wrong shape. New package
-**`@theia/webforge-runtime`** — the layer underneath the IDE that everything else stands
+**`@ogun/runtime`** — the layer underneath the IDE that everything else stands
 on. Nothing upstream had to be patched to get here; the hooks were already there.
 
 - **Two layers, one application.** `webforge.layer` context key + `data-webforge-layer`

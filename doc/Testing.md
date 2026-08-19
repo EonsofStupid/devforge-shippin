@@ -12,7 +12,7 @@ This will run all CI enabled tests.
 
 If you want to run all tests for a particular Theia extension, execute the following command from the root:
 
-`npx lerna run test --scope @theia/extension-name`
+`npx lerna run test --scope @ogun/extension-name`
 
 Add the following npm script to the `package.json` of the desired Theia extension, if you would like to enable the watch mode for the tests.
 
@@ -22,7 +22,7 @@ Add the following npm script to the `package.json` of the desired Theia extensio
 
 After editing the `package.json` you can run the tests in watch mode with:
 
-`npx lerna run test:watch --scope @theia/extension-name`
+`npx lerna run test:watch --scope @ogun/extension-name`
 
 ## Test directory structure
 

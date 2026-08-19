@@ -14,12 +14,12 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { interfaces } from '@theia/core/shared/inversify';
-import { createPreferenceProxy, PreferenceProxy } from '@theia/core/lib/common/preferences/preference-proxy';
-import { PreferenceScope } from '@theia/core/lib/common/preferences/preference-scope';
-import { nls } from '@theia/core/lib/common/nls';
-import { PreferenceContribution, PreferenceSchema } from '@theia/core/lib/common/preferences/preference-schema';
-import { PreferenceService } from '@theia/core';
+import { interfaces } from '@ogun/core/shared/inversify';
+import { createPreferenceProxy, PreferenceProxy } from '@ogun/core/lib/common/preferences/preference-proxy';
+import { PreferenceScope } from '@ogun/core/lib/common/preferences/preference-scope';
+import { nls } from '@ogun/core/lib/common/nls';
+import { PreferenceContribution, PreferenceSchema } from '@ogun/core/lib/common/preferences/preference-schema';
+import { PreferenceService } from '@ogun/core';
 
 export const TestConfigSchema: PreferenceSchema = {
     properties: {

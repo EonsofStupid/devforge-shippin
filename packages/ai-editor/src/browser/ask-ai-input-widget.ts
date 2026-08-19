@@ -14,11 +14,11 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { ChatAgentLocation, ChatRequest, MutableChatModel } from '@theia/ai-chat';
-import { AIChatInputConfiguration, AIChatInputWidget } from '@theia/ai-chat-ui/lib/browser/chat-input-widget';
-import { CHAT_VIEW_LANGUAGE_EXTENSION } from '@theia/ai-chat-ui/lib/browser/chat-view-language-contribution';
-import { generateUuid, URI } from '@theia/core';
-import { inject, injectable, optional, postConstruct } from '@theia/core/shared/inversify';
+import { ChatAgentLocation, ChatRequest, MutableChatModel } from '@ogun/ai-chat';
+import { AIChatInputConfiguration, AIChatInputWidget } from '@ogun/ai-chat-ui/lib/browser/chat-input-widget';
+import { CHAT_VIEW_LANGUAGE_EXTENSION } from '@ogun/ai-chat-ui/lib/browser/chat-view-language-contribution';
+import { generateUuid, URI } from '@ogun/core';
+import { inject, injectable, optional, postConstruct } from '@ogun/core/shared/inversify';
 
 export const AskAIInputConfiguration = Symbol('AskAIInputConfiguration');
 export interface AskAIInputConfiguration extends AIChatInputConfiguration { }

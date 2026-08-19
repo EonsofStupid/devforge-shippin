@@ -15,7 +15,7 @@
 // *****************************************************************************
 
 import * as assert from 'assert';
-import { FileUri } from '@theia/core/lib/common/file-uri';
+import { FileUri } from '@ogun/core/lib/common/file-uri';
 import { FileChangeCollection } from './file-change-collection';
 import { FileChangeType } from '../common/files';
 

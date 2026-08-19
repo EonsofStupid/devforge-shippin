@@ -14,9 +14,9 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { injectable, inject, named } from '@theia/core/shared/inversify';
-import { MessageService } from '@theia/core/lib/common/message-service';
-import { nls } from '@theia/core/lib/common/nls';
+import { injectable, inject, named } from '@ogun/core/shared/inversify';
+import { MessageService } from '@ogun/core/lib/common/message-service';
+import { nls } from '@ogun/core/lib/common/nls';
 import {
     PREFERENCE_NAME_DEFAULT_NOTIFICATION_TYPE,
 } from '../common/ai-core-preferences';
@@ -33,7 +33,7 @@ import {
     AgentNotificationKind,
     AGENT_NOTIFICATION_KIND_INPUT_NEEDED,
 } from '../common/notification-types';
-import { PreferenceService, ILogger } from '@theia/core';
+import { PreferenceService, ILogger } from '@ogun/core';
 
 /**
  * Options for showing an agent notification.

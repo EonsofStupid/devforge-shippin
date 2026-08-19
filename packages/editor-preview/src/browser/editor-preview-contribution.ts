@@ -14,12 +14,12 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { ApplicationShell, CommonCommands, KeybindingContribution, KeybindingRegistry, SHELL_TABBAR_CONTEXT_PIN, Widget } from '@theia/core/lib/browser';
-import { nls } from '@theia/core/lib/common/nls';
-import { Command, CommandContribution, CommandRegistry, MenuContribution, MenuModelRegistry } from '@theia/core/lib/common';
-import { inject, injectable } from '@theia/core/shared/inversify';
+import { ApplicationShell, CommonCommands, KeybindingContribution, KeybindingRegistry, SHELL_TABBAR_CONTEXT_PIN, Widget } from '@ogun/core/lib/browser';
+import { nls } from '@ogun/core/lib/common/nls';
+import { Command, CommandContribution, CommandRegistry, MenuContribution, MenuModelRegistry } from '@ogun/core/lib/common';
+import { inject, injectable } from '@ogun/core/shared/inversify';
 import { EditorPreviewWidget } from './editor-preview-widget';
-import { CurrentWidgetCommandAdapter } from '@theia/core/lib/browser/shell/current-widget-command-adapter';
+import { CurrentWidgetCommandAdapter } from '@ogun/core/lib/browser/shell/current-widget-command-adapter';
 
 export namespace EditorPreviewCommands {
     export const PIN_PREVIEW_COMMAND = Command.toDefaultLocalizedCommand({

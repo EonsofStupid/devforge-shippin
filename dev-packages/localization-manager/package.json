@@ -1,5 +1,5 @@
 {
-  "name": "@theia/localization-manager",
+  "name": "@ogun/localization-manager",
   "version": "1.74.0",
   "description": "Theia localization manager API.",
   "publishConfig": {
@@ -41,7 +41,7 @@
     "typescript": "~5.9.3"
   },
   "devDependencies": {
-    "@theia/ext-scripts": "1.74.0"
+    "@ogun/ext-scripts": "1.74.0"
   },
   "nyc": {
     "extends": "../../configs/nyc.json"

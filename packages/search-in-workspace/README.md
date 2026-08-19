@@ -12,11 +12,11 @@
 
 ## Description
 
-The `@theia/search-in-workspace` extension provides the ability to perform searches over all files in a given workspace using different search techniques.
+The `@ogun/search-in-workspace` extension provides the ability to perform searches over all files in a given workspace using different search techniques.
 
 ## Search Widget
 
-The `@theia/search-in-workspace` extension contributes the `Search` widget which is capable of performing different types of searches include the possibility to:
+The `@ogun/search-in-workspace` extension contributes the `Search` widget which is capable of performing different types of searches include the possibility to:
 
 - Perform standard searches
 - Perform searches using regular expressions
@@ -27,7 +27,7 @@ The `@theia/search-in-workspace` extension contributes the `Search` widget which
 
 ## Additional Information
 
-- [API documentation for `@theia/search-in-workspace`](https://eclipse-theia.github.io/theia/docs/next/modules/_theia_search-in-workspace.html)
+- [API documentation for `@ogun/search-in-workspace`](https://eclipse-theia.github.io/theia/docs/next/modules/_theia_search-in-workspace.html)
 - [Theia - GitHub](https://github.com/eclipse-theia/theia)
 - [Theia - Website](https://theia-ide.org/)
 

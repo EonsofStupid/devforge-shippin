@@ -15,7 +15,7 @@
 // *****************************************************************************
 
 import { expect } from 'chai';
-import { Emitter } from '@theia/core/lib/common/event';
+import { Emitter } from '@ogun/core/lib/common/event';
 import { ScmService } from './scm-service';
 import { ScmProvider } from './scm-provider';
 

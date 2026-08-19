@@ -14,8 +14,8 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { interfaces } from '@theia/core/shared/inversify';
-import { OVSXUrlResolver } from '@theia/vsx-registry/lib/common';
+import { interfaces } from '@ogun/core/shared/inversify';
+import { OVSXUrlResolver } from '@ogun/vsx-registry/lib/common';
 import { SampleAppInfo } from './sample-app-info';
 
 export function rebindOVSXClientFactory(rebind: interfaces.Rebind): void {

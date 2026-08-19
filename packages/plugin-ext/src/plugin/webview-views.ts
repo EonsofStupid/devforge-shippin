@@ -22,12 +22,12 @@
 import { Disposable } from './types-impl';
 import { RPCProtocol } from '../common/rpc-protocol';
 import { PLUGIN_RPC_CONTEXT, WebviewViewsMain, WebviewViewsExt, Plugin } from '../common/plugin-api-rpc';
-import { CancellationToken } from '@theia/core/lib/common/cancellation';
+import { CancellationToken } from '@ogun/core/lib/common/cancellation';
 import { WebviewImpl, WebviewsExtImpl } from './webviews';
-import { WebviewViewProvider } from '@theia/plugin';
-import { Emitter, Event } from '@theia/core/lib/common/event';
-import * as theia from '@theia/plugin';
-import { hashValue } from '@theia/core/lib/common/uuid';
+import { WebviewViewProvider } from '@ogun/plugin';
+import { Emitter, Event } from '@ogun/core/lib/common/event';
+import * as theia from '@ogun/plugin';
+import { hashValue } from '@ogun/core/lib/common/uuid';
 
 export class WebviewViewsExtImpl implements WebviewViewsExt {
 

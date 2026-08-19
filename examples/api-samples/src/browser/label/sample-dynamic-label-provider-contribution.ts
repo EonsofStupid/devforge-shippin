@@ -14,10 +14,10 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { injectable } from '@theia/core/shared/inversify';
-import { DefaultUriLabelProviderContribution, DidChangeLabelEvent } from '@theia/core/lib/browser/label-provider';
-import URI from '@theia/core/lib/common/uri';
-import { Emitter, Event } from '@theia/core';
+import { injectable } from '@ogun/core/shared/inversify';
+import { DefaultUriLabelProviderContribution, DidChangeLabelEvent } from '@ogun/core/lib/browser/label-provider';
+import URI from '@ogun/core/lib/common/uri';
+import { Emitter, Event } from '@ogun/core';
 
 @injectable()
 export class SampleDynamicLabelProviderContribution extends DefaultUriLabelProviderContribution {

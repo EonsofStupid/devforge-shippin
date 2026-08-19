@@ -16,7 +16,7 @@
 
 import { expect } from 'chai';
 import * as sinon from 'sinon';
-import { PreferenceChange, PreferenceScope } from '@theia/core/lib/common/preferences';
+import { PreferenceChange, PreferenceScope } from '@ogun/core/lib/common/preferences';
 import { WorkspaceTrustService } from './workspace-trust-service';
 import {
     WORKSPACE_TRUST_EMPTY_WINDOW,
@@ -25,7 +25,7 @@ import {
     WORKSPACE_TRUST_TRUSTED_FOLDERS,
     WorkspaceTrustPrompt
 } from '../common/workspace-trust-preferences';
-import URI from '@theia/core/lib/common/uri';
+import URI from '@ogun/core/lib/common/uri';
 
 class TestableWorkspaceTrustService extends WorkspaceTrustService {
     public async testHandlePreferenceChange(change: PreferenceChange): Promise<void> {

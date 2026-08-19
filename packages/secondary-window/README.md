@@ -12,9 +12,9 @@
 
 ## Description
 
-The `@theia/secondary-window` extension contributes the extract command and toolbar item to move extractable widgets to secondary windows.
+The `@ogun/secondary-window` extension contributes the extract command and toolbar item to move extractable widgets to secondary windows.
 
-To mark a widget to be extractable, implement the `ExtractableWidget` interface from `@theia/core`.
+To mark a widget to be extractable, implement the `ExtractableWidget` interface from `@ogun/core`.
 
 ### Limitations
 
@@ -27,7 +27,7 @@ If the patches are not applied, the secondary window will show empty.
 
 ## Additional Information
 
-- [API documentation for `@theia/secondary-window`](https://eclipse-theia.github.io/theia/docs/next/modules/_theia_secondary-window.html)
+- [API documentation for `@ogun/secondary-window`](https://eclipse-theia.github.io/theia/docs/next/modules/_theia_secondary-window.html)
 - [Theia - GitHub](https://github.com/eclipse-theia/theia)
 - [Theia - Website](https://theia-ide.org/)
 

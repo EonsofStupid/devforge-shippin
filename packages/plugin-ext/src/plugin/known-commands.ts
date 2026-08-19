@@ -14,9 +14,9 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import * as theia from '@theia/plugin';
-import { Range as R, Position as P, Location as L } from '@theia/core/shared/vscode-languageserver-protocol';
-import { URI as TheiaURI } from '@theia/core/lib/common/uri';
+import * as theia from '@ogun/plugin';
+import { Range as R, Position as P, Location as L } from '@ogun/core/shared/vscode-languageserver-protocol';
+import { URI as TheiaURI } from '@ogun/core/lib/common/uri';
 import { cloneAndChange } from '../common/objects';
 import { Position, Range, Location, CallHierarchyItem, TypeHierarchyItem, URI, TextDocumentShowOptions } from './types-impl';
 import {

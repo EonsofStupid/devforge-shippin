@@ -14,20 +14,20 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { injectable, inject } from '@theia/core/shared/inversify';
-import { Resource, ResourceVersion, ResourceResolver, ResourceError, ResourceSaveOptions } from '@theia/core/lib/common/resource';
-import { DisposableCollection } from '@theia/core/lib/common/disposable';
-import { Emitter, Event } from '@theia/core/lib/common/event';
-import { Readable, ReadableStream } from '@theia/core/lib/common/stream';
-import URI from '@theia/core/lib/common/uri';
+import { injectable, inject } from '@ogun/core/shared/inversify';
+import { Resource, ResourceVersion, ResourceResolver, ResourceError, ResourceSaveOptions } from '@ogun/core/lib/common/resource';
+import { DisposableCollection } from '@ogun/core/lib/common/disposable';
+import { Emitter, Event } from '@ogun/core/lib/common/event';
+import { Readable, ReadableStream } from '@ogun/core/lib/common/stream';
+import URI from '@ogun/core/lib/common/uri';
 import { FileOperation, FileOperationError, FileOperationResult, ETAG_DISABLED, FileSystemProviderCapabilities, FileReadStreamOptions, BinarySize } from '../common/files';
 import { FileService, TextFileOperationError, TextFileOperationResult } from './file-service';
-import { ConfirmDialog, Dialog } from '@theia/core/lib/browser/dialogs';
-import { LabelProvider } from '@theia/core/lib/browser/label-provider';
+import { ConfirmDialog, Dialog } from '@ogun/core/lib/browser/dialogs';
+import { LabelProvider } from '@ogun/core/lib/browser/label-provider';
 import { GENERAL_MAX_FILE_SIZE_MB } from '../common/filesystem-preferences';
-import { FrontendApplicationStateService } from '@theia/core/lib/browser/frontend-application-state';
-import { nls } from '@theia/core';
-import { MarkdownString } from '@theia/core/lib/common/markdown-rendering';
+import { FrontendApplicationStateService } from '@ogun/core/lib/browser/frontend-application-state';
+import { nls } from '@ogun/core';
+import { MarkdownString } from '@ogun/core/lib/common/markdown-rendering';
 import { Mutex } from 'async-mutex';
 
 export interface FileResourceVersion extends ResourceVersion {

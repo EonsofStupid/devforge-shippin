@@ -14,8 +14,8 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import * as React from '@theia/core/shared/react';
-import { Container, inject, injectable, interfaces, postConstruct } from '@theia/core/shared/inversify';
+import * as React from '@ogun/core/shared/react';
+import { Container, inject, injectable, interfaces, postConstruct } from '@ogun/core/shared/inversify';
 import {
     codicon,
     CompositeTreeNode,
@@ -28,8 +28,8 @@ import {
     TreeNode,
     TreeWidget,
     TREE_NODE_INDENT_GUIDE_CLASS,
-} from '@theia/core/lib/browser';
-import { CommandRegistry, CompoundMenuNode, Emitter, MenuAction, MenuModelRegistry } from '@theia/core';
+} from '@ogun/core/lib/browser';
+import { CommandRegistry, CompoundMenuNode, Emitter, MenuAction, MenuModelRegistry } from '@ogun/core';
 import { TerminalManagerTreeModel } from './terminal-manager-tree-model';
 import {
     ReactInteraction, TerminalManagerCommands,

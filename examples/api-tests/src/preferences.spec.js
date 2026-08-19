@@ -19,21 +19,21 @@
 describe('Preferences', function () {
     this.timeout(5_000);
     const { assert } = chai;
-    const { PreferenceProvider } = require('@theia/core/lib/common/preferences/preference-provider');
-    const { PreferenceService, PreferenceScope } = require('@theia/core/lib/common/preferences');
-    const { FileService } = require('@theia/filesystem/lib/browser/file-service');
-    const { PreferenceLanguageOverrideService } = require('@theia/core/lib/common/preferences/preference-language-override-service');
-    const { MonacoTextModelService } = require('@theia/monaco/lib/browser/monaco-text-model-service');
-    const { PreferenceSchemaService } = require('@theia/core/lib/common/preferences')
+    const { PreferenceProvider } = require('@ogun/core/lib/common/preferences/preference-provider');
+    const { PreferenceService, PreferenceScope } = require('@ogun/core/lib/common/preferences');
+    const { FileService } = require('@ogun/filesystem/lib/browser/file-service');
+    const { PreferenceLanguageOverrideService } = require('@ogun/core/lib/common/preferences/preference-language-override-service');
+    const { MonacoTextModelService } = require('@ogun/monaco/lib/browser/monaco-text-model-service');
+    const { PreferenceSchemaService } = require('@ogun/core/lib/common/preferences')
     const { container } = window.theia;
-    /** @type {import ('@theia/core/lib/common/preferences/preference-service').PreferenceService} */
+    /** @type {import ('@ogun/core/lib/common/preferences/preference-service').PreferenceService} */
     const preferenceService = container.get(PreferenceService);
-    /** @type {import ('@theia/core/lib/common/preferences/preference-language-override-service').PreferenceLanguageOverrideService} */
+    /** @type {import ('@ogun/core/lib/common/preferences/preference-language-override-service').PreferenceLanguageOverrideService} */
     const overrideService = container.get(PreferenceLanguageOverrideService);
     const fileService = container.get(FileService);
-    /** @type {import ('@theia/core/lib/common/uri').default} */
+    /** @type {import ('@ogun/core/lib/common/uri').default} */
     const uri = preferenceService.getConfigUri(PreferenceScope.Workspace);
-    /** @type {import('@theia/preferences/lib/browser/folders-preferences-provider').FoldersPreferencesProvider} */
+    /** @type {import('@ogun/preferences/lib/browser/folders-preferences-provider').FoldersPreferencesProvider} */
     const folderPreferences = container.getNamed(PreferenceProvider, PreferenceScope.Folder);
     /** @type PreferenceSchemaService */
     const schemaService = container.get(PreferenceSchemaService);
@@ -79,7 +79,7 @@ describe('Preferences', function () {
         if (reference.object.dirty) {
             await reference.object.revert();
         }
-        /** @type {import ('@theia/preferences/lib/browser/folder-preference-provider').FolderPreferenceProvider} */
+        /** @type {import ('@ogun/preferences/lib/browser/folder-preference-provider').FolderPreferenceProvider} */
         const provider = Array.from(folderPreferences['providers'].values()).find(candidate => candidate.getConfigUri().isEqual(uri));
         assert.isDefined(provider);
         await provider['doSetPreference']('', [], value);
@@ -184,7 +184,7 @@ describe('Preferences', function () {
         let searchDebounce;
         let channelHistory;
         let hoverDelay;
-        /** @type import ('@theia/core/src/browser/preferences/preference-service').PreferenceChanges | undefined */
+        /** @type import ('@ogun/core/src/browser/preferences/preference-service').PreferenceChanges | undefined */
         let event;
         const toDispose = preferenceService.onPreferencesChanged(e => event = e);
         while (settings++ < 50) {

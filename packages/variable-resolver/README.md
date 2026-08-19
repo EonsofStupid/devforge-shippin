@@ -12,7 +12,7 @@
 
 ## Description
 
-The `@theia/variable-resolved` extension provides variable substitution mechanism inside of strings using `${variableName}` syntax.
+The `@ogun/variable-resolved` extension provides variable substitution mechanism inside of strings using `${variableName}` syntax.
 
 ### Variable Contribution Point
 
@@ -95,7 +95,7 @@ cursor is in file package.json on line 5
 
 ## Additional Information
 
-- [API documentation for `@theia/variable-resolver`](https://eclipse-theia.github.io/theia/docs/next/modules/_theia_variable-resolver.html)
+- [API documentation for `@ogun/variable-resolver`](https://eclipse-theia.github.io/theia/docs/next/modules/_theia_variable-resolver.html)
 - [Theia - GitHub](https://github.com/eclipse-theia/theia)
 - [Theia - Website](https://theia-ide.org/)
 

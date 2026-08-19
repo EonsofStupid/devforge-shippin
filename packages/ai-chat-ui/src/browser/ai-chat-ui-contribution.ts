@@ -14,36 +14,36 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { inject, injectable, named, postConstruct } from '@theia/core/shared/inversify';
+import { inject, injectable, named, postConstruct } from '@ogun/core/shared/inversify';
 import {
     CommandRegistry, Disposable, Emitter, Event, isOSX, MessageService, nls, PreferenceService,
     QuickInputButton, QuickInputService, QuickPickItem, QuickPickSeparator
-} from '@theia/core';
-import { ILogger } from '@theia/core/lib/common/logger';
-import { ConfirmDialog, FrontendApplicationContribution, KeybindingRegistry, Widget } from '@theia/core/lib/browser';
-import { ACTIVE_PERSPECTIVE_CONTEXT_KEY } from '@theia/core/lib/browser/perspective-service';
-import { ContextKey, ContextKeyService } from '@theia/core/lib/browser/context-key-service';
+} from '@ogun/core';
+import { ILogger } from '@ogun/core/lib/common/logger';
+import { ConfirmDialog, FrontendApplicationContribution, KeybindingRegistry, Widget } from '@ogun/core/lib/browser';
+import { ACTIVE_PERSPECTIVE_CONTEXT_KEY } from '@ogun/core/lib/browser/perspective-service';
+import { ContextKey, ContextKeyService } from '@ogun/core/lib/browser/context-key-service';
 import {
     AI_CHAT_HOME,
     AI_CHAT_OPEN_SESSION,
     AI_CHAT_SHOW_CHATS_COMMAND,
     ChatCommands
 } from './chat-view-commands';
-import { ChatAgent, ChatAgentLocation, ChatService, ChatSessionMetadata, isActiveSessionChangedEvent } from '@theia/ai-chat';
-import { ChatAgentService } from '@theia/ai-chat/lib/common/chat-agent-service';
-import { EditorManager } from '@theia/editor/lib/browser/editor-manager';
-import { AbstractViewContribution } from '@theia/core/lib/browser/shell/view-contribution';
-import { TabBarToolbarContribution, TabBarToolbarRegistry } from '@theia/core/lib/browser/shell/tab-bar-toolbar';
+import { ChatAgent, ChatAgentLocation, ChatService, ChatSessionMetadata, isActiveSessionChangedEvent } from '@ogun/ai-chat';
+import { ChatAgentService } from '@ogun/ai-chat/lib/common/chat-agent-service';
+import { EditorManager } from '@ogun/editor/lib/browser/editor-manager';
+import { AbstractViewContribution } from '@ogun/core/lib/browser/shell/view-contribution';
+import { TabBarToolbarContribution, TabBarToolbarRegistry } from '@ogun/core/lib/browser/shell/tab-bar-toolbar';
 import { ChatViewWidget } from './chat-view-widget';
-import { Deferred } from '@theia/core/lib/common/promise-util';
-import { SecondaryWindowHandler } from '@theia/core/lib/browser/secondary-window-handler';
+import { Deferred } from '@ogun/core/lib/common/promise-util';
+import { SecondaryWindowHandler } from '@ogun/core/lib/browser/secondary-window-handler';
 import { formatTimeAgo } from './chat-date-utils';
-import { AI_SHOW_SETTINGS_COMMAND, AIActivationService, ENABLE_AI_CONTEXT_KEY } from '@theia/ai-core/lib/browser';
+import { AI_SHOW_SETTINGS_COMMAND, AIActivationService, ENABLE_AI_CONTEXT_KEY } from '@ogun/ai-core/lib/browser';
 import { ChatNodeToolbarCommands } from './chat-node-toolbar-action-contribution';
 import { isEditableRequestNode, isResponseNode, type EditableRequestNode, type ResponseNode } from './chat-tree-view';
-import { TASK_CONTEXT_VARIABLE } from '@theia/ai-chat/lib/browser/task-context-variable';
-import { TaskContextService } from '@theia/ai-chat/lib/browser/task-context-service';
-import { SESSION_STORAGE_PREF } from '@theia/ai-chat/lib/common/ai-chat-preferences';
+import { TASK_CONTEXT_VARIABLE } from '@ogun/ai-chat/lib/browser/task-context-variable';
+import { TaskContextService } from '@ogun/ai-chat/lib/browser/task-context-service';
+import { SESSION_STORAGE_PREF } from '@ogun/ai-chat/lib/common/ai-chat-preferences';
 
 export const AI_CHAT_TOGGLE_COMMAND_ID = 'aiChat:toggle';
 

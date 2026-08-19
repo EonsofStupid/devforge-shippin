@@ -42,7 +42,7 @@ import { UriSelection } from '../common/selection';
 import { StorageService } from './storage-service';
 import { Navigatable, NavigatableWidget } from './navigatable';
 import { QuickViewService } from './quick-input/quick-view-service';
-import { environment } from '@theia/application-package/lib/environment';
+import { environment } from '@ogun/application-package/lib/environment';
 import { IconTheme, IconThemeService } from './icon-theme-service';
 import { ColorContribution } from './color-application-contribution';
 import { ColorRegistry } from './color-registry';

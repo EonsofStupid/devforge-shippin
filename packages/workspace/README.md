@@ -12,11 +12,11 @@
 
 ## Description
 
-The `@theia/workspace` extension provides functionality and services to handle workspaces (projects) within the application.
+The `@ogun/workspace` extension provides functionality and services to handle workspaces (projects) within the application.
 
 ## Additional Information
 
-- [API documentation for `@theia/workspace`](https://eclipse-theia.github.io/theia/docs/next/modules/_theia_workspace.html)
+- [API documentation for `@ogun/workspace`](https://eclipse-theia.github.io/theia/docs/next/modules/_theia_workspace.html)
 - [Theia - GitHub](https://github.com/eclipse-theia/theia)
 - [Theia - Website](https://theia-ide.org/)
 

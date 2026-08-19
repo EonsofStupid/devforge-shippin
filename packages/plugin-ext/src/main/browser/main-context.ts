@@ -13,7 +13,7 @@
 //
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
-import { interfaces } from '@theia/core/shared/inversify';
+import { interfaces } from '@ogun/core/shared/inversify';
 import { CommandRegistryMainImpl } from './command-registry-main';
 import { PreferenceRegistryMainImpl } from './preference-registry-main';
 import { QuickOpenMainImpl } from './quick-open-main';
@@ -41,8 +41,8 @@ import { ClipboardMainImpl } from './clipboard-main';
 import { DocumentsMainImpl } from './documents-main';
 import { TextEditorsMainImpl } from './text-editors-main';
 import { EditorModelService } from './text-editor-model-service';
-import { OpenerService } from '@theia/core/lib/browser/opener-service';
-import { ApplicationShell } from '@theia/core/lib/browser/shell/application-shell';
+import { OpenerService } from '@ogun/core/lib/browser/opener-service';
+import { ApplicationShell } from '@ogun/core/lib/browser/shell/application-shell';
 import { MainFileSystemEventService } from './main-file-system-event-service';
 import { LabelServiceMainImpl } from './label-service-main';
 import { TimelineMainImpl } from './timeline-main';
@@ -52,9 +52,9 @@ import { CommentsMainImp } from './comments/comments-main';
 import { CustomEditorsMainImpl } from './custom-editors/custom-editors-main';
 import { SecretsMainImpl } from './secrets-main';
 import { WebviewViewsMainImpl } from './webview-views/webview-views-main';
-import { MonacoLanguages } from '@theia/monaco/lib/browser/monaco-languages';
-import { UntitledResourceResolver } from '@theia/core/lib/common/resource';
-import { ThemeService } from '@theia/core/lib/browser/theming';
+import { MonacoLanguages } from '@ogun/monaco/lib/browser/monaco-languages';
+import { UntitledResourceResolver } from '@ogun/core/lib/common/resource';
+import { ThemeService } from '@ogun/core/lib/browser/theming';
 import { TabsMainImpl } from './tabs/tabs-main';
 import { NotebooksMainImpl } from './notebooks/notebooks-main';
 import { LocalizationMainImpl } from './localization-main';

@@ -21,8 +21,8 @@ import * as os from 'os';
 import * as path from 'path';
 import * as fs from 'fs';
 import { VsCodePluginScanner } from './scanner-vscode';
-import { PluginPackage } from '@theia/plugin-ext';
-import URI from '@theia/core/lib/common/uri';
+import { PluginPackage } from '@ogun/plugin-ext';
+import URI from '@ogun/core/lib/common/uri';
 
 function createVsCodePluginPackage(
     capabilities?: PluginPackage['capabilities'],

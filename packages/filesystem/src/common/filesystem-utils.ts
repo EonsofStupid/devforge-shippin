@@ -15,7 +15,7 @@
 // *****************************************************************************
 
 import { FileStat } from '../common/files';
-import URI from '@theia/core/lib/common/uri';
+import URI from '@ogun/core/lib/common/uri';
 
 export namespace FileSystemUtils {
     export const FILE_NAME_SEPARATOR = ' ';

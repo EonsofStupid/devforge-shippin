@@ -14,11 +14,11 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { inject, injectable, postConstruct } from '@theia/core/shared/inversify';
-import { JsonSchemaContribution, JsonSchemaDataStore, JsonSchemaRegisterContext } from '@theia/core/lib/browser/json-schema-store';
-import { IJSONSchema } from '@theia/core/lib/common/json-schema';
-import URI from '@theia/core/lib/common/uri';
-import { WorkspaceService } from '@theia/workspace/lib/browser';
+import { inject, injectable, postConstruct } from '@ogun/core/shared/inversify';
+import { JsonSchemaContribution, JsonSchemaDataStore, JsonSchemaRegisterContext } from '@ogun/core/lib/browser/json-schema-store';
+import { IJSONSchema } from '@ogun/core/lib/common/json-schema';
+import URI from '@ogun/core/lib/common/uri';
+import { WorkspaceService } from '@ogun/workspace/lib/browser';
 import { extensionsSchemaID } from '../../common/recommended-extensions-preference-contribution';
 
 export const extensionsConfigurationSchema: IJSONSchema = {

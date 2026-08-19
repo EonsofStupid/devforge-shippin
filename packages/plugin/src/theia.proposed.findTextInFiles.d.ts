@@ -20,7 +20,7 @@
  *--------------------------------------------------------------------------------------------*/
 // code copied and modified from https://github.com/microsoft/vscode/blob/1.77.0/src/vscode-dts/vscode.proposed.findTextInFiles.d.ts
 
-export module '@theia/plugin' {
+export module '@ogun/plugin' {
 
     /**
      * Options that can be set on a findTextInFiles search.

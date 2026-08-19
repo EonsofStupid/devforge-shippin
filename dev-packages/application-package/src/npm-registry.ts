@@ -16,8 +16,8 @@
 
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import * as nano from 'nano';
-import { RequestContext } from '@theia/request';
-import { NodeRequestService } from '@theia/request/lib/node-request-service';
+import { RequestContext } from '@ogun/request';
+import { NodeRequestService } from '@ogun/request/lib/node-request-service';
 import { NpmRegistryProps } from './application-props';
 
 export interface IChangeStream {

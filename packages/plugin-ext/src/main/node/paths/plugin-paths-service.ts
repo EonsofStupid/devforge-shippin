@@ -14,19 +14,19 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { injectable, inject } from '@theia/core/shared/inversify';
-import URI from '@theia/core/lib/common/uri';
+import { injectable, inject } from '@ogun/core/shared/inversify';
+import URI from '@ogun/core/lib/common/uri';
 import * as path from 'path';
-import * as fs from '@theia/core/shared/fs-extra';
+import * as fs from '@ogun/core/shared/fs-extra';
 import { readdir } from 'fs/promises';
-import { remove } from '@theia/core/shared/fs-extra';
+import { remove } from '@ogun/core/shared/fs-extra';
 import * as crypto from 'crypto';
-import { ILogger } from '@theia/core';
-import { FileUri } from '@theia/core/lib/node';
+import { ILogger } from '@ogun/core';
+import { FileUri } from '@ogun/core/lib/node';
 import { PluginPaths } from './const';
 import { PluginPathsService } from '../../common/plugin-paths-protocol';
-import { UntitledWorkspaceService } from '@theia/workspace/lib/common';
-import { EnvVariablesServer } from '@theia/core/lib/common/env-variables';
+import { UntitledWorkspaceService } from '@ogun/workspace/lib/common';
+import { EnvVariablesServer } from '@ogun/core/lib/common/env-variables';
 import { PluginCliContribution } from '../plugin-cli-contribution';
 
 const SESSION_TIMESTAMP_PATTERN = /^\d{8}T\d{6}$/;

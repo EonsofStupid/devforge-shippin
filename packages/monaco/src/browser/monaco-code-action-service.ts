@@ -14,14 +14,14 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { CancellationToken } from '@theia/core';
-import { inject, injectable } from '@theia/core/shared/inversify';
+import { CancellationToken } from '@ogun/core';
+import { inject, injectable } from '@ogun/core/shared/inversify';
 import { StandaloneServices } from '@theia/monaco-editor-core/esm/vs/editor/standalone/browser/standaloneServices';
 import { ILanguageFeaturesService } from '@theia/monaco-editor-core/esm/vs/editor/common/services/languageFeatures';
 import { CodeActionKind, CodeActionSet, CodeActionTriggerSource } from '@theia/monaco-editor-core/esm/vs/editor/contrib/codeAction/common/types';
 import { applyCodeAction, ApplyCodeActionReason, getCodeActions } from '@theia/monaco-editor-core/esm/vs/editor/contrib/codeAction/browser/codeAction';
 import { HierarchicalKind } from '@theia/monaco-editor-core/esm/vs/base/common/hierarchicalKind';
-import { EditorPreferences } from '@theia/editor/lib/common/editor-preferences';
+import { EditorPreferences } from '@ogun/editor/lib/common/editor-preferences';
 import { ITextModel } from '@theia/monaco-editor-core/esm/vs/editor/common/model';
 import { CodeActionProvider, CodeActionTriggerType } from '@theia/monaco-editor-core/esm/vs/editor/common/languages';
 import { IProgress } from '@theia/monaco-editor-core/esm/vs/platform/progress/common/progress';

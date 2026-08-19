@@ -14,9 +14,9 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { nls } from '@theia/core';
-import { ConfirmDialog, ReactWidget, codicon } from '@theia/core/lib/browser';
-import { inject, injectable, postConstruct } from '@theia/core/shared/inversify';
+import { nls } from '@ogun/core';
+import { ConfirmDialog, ReactWidget, codicon } from '@ogun/core/lib/browser';
+import { inject, injectable, postConstruct } from '@ogun/core/shared/inversify';
 import {
     CustomizedPromptFragment,
     PromptFragment,
@@ -24,12 +24,12 @@ import {
     isBasePromptFragment,
     PromptService,
     BasePromptFragment
-} from '@theia/ai-core/lib/common/prompt-service';
-import * as React from '@theia/core/shared/react';
-import { AgentService } from '@theia/ai-core/lib/common/agent-service';
-import { Agent } from '@theia/ai-core/lib/common/agent';
-import { CustomizationSource } from '@theia/ai-core/lib/browser/frontend-prompt-customization-service';
-import { isChatAgent } from '@theia/ai-chat/';
+} from '@ogun/ai-core/lib/common/prompt-service';
+import * as React from '@ogun/core/shared/react';
+import { AgentService } from '@ogun/ai-core/lib/common/agent-service';
+import { Agent } from '@ogun/ai-core/lib/common/agent';
+import { CustomizationSource } from '@ogun/ai-core/lib/browser/frontend-prompt-customization-service';
+import { isChatAgent } from '@ogun/ai-chat/';
 
 /**
  * Widget for configuring AI prompt fragments and prompt variant sets.

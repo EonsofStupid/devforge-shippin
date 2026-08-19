@@ -14,14 +14,14 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { FrontendApplicationContribution } from '@theia/core/lib/browser';
-import { CommandService } from '@theia/core/lib/common/command';
-import { DisposableCollection } from '@theia/core/lib/common/disposable';
-import { inject, injectable } from '@theia/core/shared/inversify';
+import { FrontendApplicationContribution } from '@ogun/core/lib/browser';
+import { CommandService } from '@ogun/core/lib/common/command';
+import { DisposableCollection } from '@ogun/core/lib/common/disposable';
+import { inject, injectable } from '@ogun/core/shared/inversify';
 import * as monaco from '@theia/monaco-editor-core';
-import { MonacoEditorService } from '@theia/monaco/lib/browser/monaco-editor-service';
-import { AIActivationService } from '@theia/ai-core/lib/browser/ai-activation-service';
-import { nls } from '@theia/core';
+import { MonacoEditorService } from '@ogun/monaco/lib/browser/monaco-editor-service';
+import { AIActivationService } from '@ogun/ai-core/lib/browser/ai-activation-service';
+import { nls } from '@ogun/core';
 
 export const AI_EDITOR_SEND_TO_CHAT = {
     id: 'ai-editor.sendToChat',

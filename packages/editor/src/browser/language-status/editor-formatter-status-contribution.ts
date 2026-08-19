@@ -14,10 +14,10 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { injectable, inject, optional } from '@theia/core/shared/inversify';
-import { QuickInputService, QuickPickItem, StatusBarEntry, StatusBarAlignment } from '@theia/core/lib/browser';
-import { nls, PreferenceScope } from '@theia/core';
-import { Severity } from '@theia/core/lib/common/severity';
+import { injectable, inject, optional } from '@ogun/core/shared/inversify';
+import { QuickInputService, QuickPickItem, StatusBarEntry, StatusBarAlignment } from '@ogun/core/lib/browser';
+import { nls, PreferenceScope } from '@ogun/core';
+import { Severity } from '@ogun/core/lib/common/severity';
 import { TextEditor } from '../editor';
 import { FormatterService, FormatterSettingScope, FormatterStatus, FormatterInfo } from '../editor-formatter-service';
 import { LanguageStatus } from './editor-language-status-service';

@@ -14,16 +14,16 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { inject, injectable } from '@theia/core/shared/inversify';
-import { ILogger } from '@theia/core/lib/common/logger';
-import { Event, Emitter } from '@theia/core/lib/common/event';
-import { Tree } from '@theia/core/lib/browser/tree/tree';
-import { TreeDecorator, TreeDecoration } from '@theia/core/lib/browser/tree/tree-decorator';
-import { DepthFirstTreeIterator } from '@theia/core/lib/browser';
-import { FileStatNode } from '@theia/filesystem/lib/browser';
-import URI from '@theia/core/lib/common/uri';
-import { ColorRegistry } from '@theia/core/lib/browser/color-registry';
-import { Decoration, DecorationsService } from '@theia/core/lib/browser/decorations-service';
+import { inject, injectable } from '@ogun/core/shared/inversify';
+import { ILogger } from '@ogun/core/lib/common/logger';
+import { Event, Emitter } from '@ogun/core/lib/common/event';
+import { Tree } from '@ogun/core/lib/browser/tree/tree';
+import { TreeDecorator, TreeDecoration } from '@ogun/core/lib/browser/tree/tree-decorator';
+import { DepthFirstTreeIterator } from '@ogun/core/lib/browser';
+import { FileStatNode } from '@ogun/filesystem/lib/browser';
+import URI from '@ogun/core/lib/common/uri';
+import { ColorRegistry } from '@ogun/core/lib/browser/color-registry';
+import { Decoration, DecorationsService } from '@ogun/core/lib/browser/decorations-service';
 
 /**
  * @deprecated since 1.25.0

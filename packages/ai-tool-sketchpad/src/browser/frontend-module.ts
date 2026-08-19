@@ -16,8 +16,8 @@
 
 import '../../src/browser/style/index.css';
 
-import { ContainerModule } from '@theia/core/shared/inversify';
-import { FrontendApplicationContribution, WidgetFactory, bindViewContribution } from '@theia/core/lib/browser';
+import { ContainerModule } from '@ogun/core/shared/inversify';
+import { FrontendApplicationContribution, WidgetFactory, bindViewContribution } from '@ogun/core/lib/browser';
 import { SketchedToolService } from '../common';
 import { SketchedToolServiceImpl } from './sketched-tool-service';
 import { SketchedToolWidget } from './sketched-tool-widget';

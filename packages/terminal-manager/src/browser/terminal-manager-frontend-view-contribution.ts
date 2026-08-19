@@ -14,7 +14,7 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { injectable, inject } from '@theia/core/shared/inversify';
+import { injectable, inject } from '@ogun/core/shared/inversify';
 import {
     AbstractViewContribution,
     codicon,
@@ -22,14 +22,14 @@ import {
     KeybindingRegistry,
     MAXIMIZED_CLASS,
     Widget,
-} from '@theia/core/lib/browser';
-import { CommandRegistry, Disposable, Event, MenuModelRegistry, nls } from '@theia/core';
-import { TabBarToolbarContribution, TabBarToolbarRegistry } from '@theia/core/lib/browser/shell/tab-bar-toolbar';
-import { BOTTOM_AREA_ID } from '@theia/core/lib/browser/shell/theia-dock-panel';
+} from '@ogun/core/lib/browser';
+import { CommandRegistry, Disposable, Event, MenuModelRegistry, nls } from '@ogun/core';
+import { TabBarToolbarContribution, TabBarToolbarRegistry } from '@ogun/core/lib/browser/shell/tab-bar-toolbar';
+import { BOTTOM_AREA_ID } from '@ogun/core/lib/browser/shell/theia-dock-panel';
 import { TerminalManagerCommands, TerminalManagerTreeTypes, TERMINAL_MANAGER_TREE_CONTEXT_MENU } from './terminal-manager-types';
 import { TerminalManagerWidget } from './terminal-manager-widget';
 import { TerminalManagerTreeWidget } from './terminal-manager-tree-widget';
-import { ConfirmDialog, Dialog } from '@theia/core/lib/browser/dialogs';
+import { ConfirmDialog, Dialog } from '@ogun/core/lib/browser/dialogs';
 import { TerminalManagerPreferences } from './terminal-manager-preferences';
 
 @injectable()

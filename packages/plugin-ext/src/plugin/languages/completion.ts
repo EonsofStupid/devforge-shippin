@@ -14,15 +14,15 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { URI } from '@theia/core/shared/vscode-uri';
-import * as theia from '@theia/plugin';
+import { URI } from '@ogun/core/shared/vscode-uri';
+import * as theia from '@ogun/plugin';
 import { CompletionItemTag, CompletionList, Range, SnippetString } from '../types-impl';
 import { DocumentsExtImpl } from '../documents';
 import * as Converter from '../type-converters';
 import { Position } from '../../common/plugin-api-rpc';
 import { CompletionContext, CompletionResultDto, Completion, CompletionDto, CompletionItemInsertTextRule, ChainedCacheId } from '../../common/plugin-api-rpc-model';
 import { CommandRegistryImpl } from '../command-registry';
-import { DisposableCollection } from '@theia/core/lib/common/disposable';
+import { DisposableCollection } from '@ogun/core/lib/common/disposable';
 
 export class CompletionAdapter {
     private cacheId = 0;

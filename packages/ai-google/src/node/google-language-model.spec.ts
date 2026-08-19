@@ -15,7 +15,7 @@
 // *****************************************************************************
 
 import { expect } from 'chai';
-import { LanguageModelRequest, ReasoningApi, ReasoningSupport } from '@theia/ai-core';
+import { LanguageModelRequest, ReasoningApi, ReasoningSupport } from '@ogun/ai-core';
 import { GoogleModel } from './google-language-model';
 
 const GEMINI_REASONING_SUPPORT: ReasoningSupport = {

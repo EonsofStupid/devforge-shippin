@@ -14,8 +14,8 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { inject, injectable, optional, postConstruct } from '@theia/core/shared/inversify';
-import { AbstractViewContribution } from '@theia/core/lib/browser/shell/view-contribution';
+import { inject, injectable, optional, postConstruct } from '@ogun/core/shared/inversify';
+import { AbstractViewContribution } from '@ogun/core/lib/browser/shell/view-contribution';
 import {
     CommonCommands,
     CompositeTreeNode,
@@ -31,8 +31,8 @@ import {
     Title,
     SHELL_TABBAR_CONTEXT_MENU,
     OpenWithService
-} from '@theia/core/lib/browser';
-import { FileDownloadCommands } from '@theia/filesystem/lib/browser/download/file-download-command-contribution';
+} from '@ogun/core/lib/browser';
+import { FileDownloadCommands } from '@ogun/filesystem/lib/browser/download/file-download-command-contribution';
 import {
     CommandRegistry,
     isOSX,
@@ -43,13 +43,13 @@ import {
     PreferenceScope,
     PreferenceService,
     QuickInputService,
-} from '@theia/core/lib/common';
+} from '@ogun/core/lib/common';
 import {
     DidCreateNewResourceEvent,
     WorkspaceCommandContribution,
     WorkspaceCommands,
     WorkspaceService
-} from '@theia/workspace/lib/browser';
+} from '@ogun/workspace/lib/browser';
 import { EXPLORER_VIEW_CONTAINER_ID, EXPLORER_VIEW_CONTAINER_TITLE_OPTIONS } from './navigator-widget-factory';
 import { FILE_NAVIGATOR_ID, FileNavigatorWidget } from './navigator-widget';
 import { FileNavigatorPreferences } from '../common/navigator-preferences';
@@ -60,22 +60,22 @@ import {
     RenderedToolbarAction,
     TabBarToolbarContribution,
     TabBarToolbarRegistry
-} from '@theia/core/lib/browser/shell/tab-bar-toolbar';
-import { FileSystemCommands } from '@theia/filesystem/lib/browser/filesystem-frontend-contribution';
+} from '@ogun/core/lib/browser/shell/tab-bar-toolbar';
+import { FileSystemCommands } from '@ogun/filesystem/lib/browser/filesystem-frontend-contribution';
 import { NavigatorDiff, NavigatorDiffCommands } from './navigator-diff';
-import { DirNode, FileNode } from '@theia/filesystem/lib/browser';
+import { DirNode, FileNode } from '@ogun/filesystem/lib/browser';
 import { FileNavigatorModel } from './navigator-model';
 import { NavigatorFileClipboard } from './navigator-file-clipboard';
-import { ClipboardService } from '@theia/core/lib/browser/clipboard-service';
-import { SelectionService } from '@theia/core/lib/common/selection-service';
+import { ClipboardService } from '@ogun/core/lib/browser/clipboard-service';
+import { SelectionService } from '@ogun/core/lib/common/selection-service';
 import { OpenEditorsWidget } from './open-editors-widget/navigator-open-editors-widget';
 import { OpenEditorsContextMenu } from './open-editors-widget/navigator-open-editors-menus';
 import { OpenEditorsCommands } from './open-editors-widget/navigator-open-editors-commands';
-import { nls } from '@theia/core/lib/common/nls';
-import URI from '@theia/core/lib/common/uri';
-import { UriAwareCommandHandler } from '@theia/core/lib/common/uri-command-handler';
+import { nls } from '@ogun/core/lib/common/nls';
+import URI from '@ogun/core/lib/common/uri';
+import { UriAwareCommandHandler } from '@ogun/core/lib/common/uri-command-handler';
 import { FileNavigatorCommands } from './file-navigator-commands';
-import { WorkspacePreferences } from '@theia/workspace/lib/common';
+import { WorkspacePreferences } from '@ogun/workspace/lib/common';
 export { FileNavigatorCommands };
 
 /**

@@ -14,7 +14,7 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { AIVariableContext } from '@theia/ai-core';
+import { AIVariableContext } from '@ogun/ai-core';
 import * as monaco from '@theia/monaco-editor-core';
 
 export interface CodeCompletionVariableContext {

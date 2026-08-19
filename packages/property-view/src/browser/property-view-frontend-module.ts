@@ -14,9 +14,9 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { bindViewContribution, WidgetFactory } from '@theia/core/lib/browser';
-import { bindRootContributionProvider } from '@theia/core/lib/common/contribution-provider';
-import { ContainerModule } from '@theia/core/shared/inversify';
+import { bindViewContribution, WidgetFactory } from '@ogun/core/lib/browser';
+import { bindRootContributionProvider } from '@ogun/core/lib/common/contribution-provider';
+import { ContainerModule } from '@ogun/core/shared/inversify';
 import { EmptyPropertyViewWidgetProvider } from './empty-property-view-widget-provider';
 import { PropertyDataService } from './property-data-service';
 import { PropertyViewContribution } from './property-view-contribution';

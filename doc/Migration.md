@@ -15,7 +15,7 @@ In addition to `webpack`, Theia is now also supporting [`ESBuild`](https://esbui
 
 In case you have added your own bundling instructions to the `webpack.config.js`, these need to be migrated to the ESBuild based bundler.
 
-Note that as a part of this change, the `@theia/native-webpack-plugin` dependency has been renamed to `@theia/bundle-plugin`.
+Note that as a part of this change, the `@ogun/native-webpack-plugin` dependency has been renamed to `@ogun/bundle-plugin`.
 
 The generated ESBuild configuration includes a `sourceMapPathsPlugin` that rewrites the `sources` field of emitted source maps to absolute `file://` URLs. This makes browser and Node debug launch configurations work without any custom `webRoot` or `sourceMapPathOverrides`: a minimal Chrome launch like
 
@@ -28,7 +28,7 @@ The generated ESBuild configuration includes a `sourceMapPathsPlugin` that rewri
 }
 ```
 
-is sufficient to bind breakpoints in the original sources. If you have a customized `esbuild.mjs` that is not automatically regenerated (because the `gen-esbuild` import was removed), either regenerate it (delete `esbuild.mjs` and rerun `theia build`) or manually add `sourceMapPathsPlugin()` from `@theia/bundle-plugin` to the `plugins` array of each build target. The plugin is a no-op when source maps are disabled (production builds).
+is sufficient to bind breakpoints in the original sources. If you have a customized `esbuild.mjs` that is not automatically regenerated (because the `gen-esbuild` import was removed), either regenerate it (delete `esbuild.mjs` and rerun `theia build`) or manually add `sourceMapPathsPlugin()` from `@ogun/bundle-plugin` to the `plugins` array of each build target. The plugin is a no-op when source maps are disabled (production builds).
 
 _Builtin Extension Pack_:
 
@@ -82,7 +82,7 @@ For example:
 
 _Terminal Shell Integration Scripts_:
 
-The `@theia/terminal` package now includes shell integration scripts for Bash and Zsh (`packages/terminal/src/node/shell-integrations/`). These scripts are used at runtime by `ShellIntegrationInjector` to inject shell integration into terminal sessions, enabling features such as command history tracking and command separators.
+The `@ogun/terminal` package now includes shell integration scripts for Bash and Zsh (`packages/terminal/src/node/shell-integrations/`). These scripts are used at runtime by `ShellIntegrationInjector` to inject shell integration into terminal sessions, enabling features such as command history tracking and command separators.
 
 For **browser** applications, the generated webpack configuration automatically copies these scripts to `lib/backend/shell-integrations/` via `CopyWebpackPlugin`.
 
@@ -103,14 +103,14 @@ The `lib/**/*` glob already covers `lib/backend/shell-integrations/`. If you use
 
 ### v1.74.0
 
-#### Deprecation of @theia/ai-vercel-ai package
+#### Deprecation of @ogun/ai-vercel-ai package
 
-The `@theia/ai-vercel-ai` package has been marked as deprecated and is no longer published on npm. It will be removed from the Theia codebase after a deprecation period. The package only wrapped OpenAI and Anthropic models, both of which are already covered by the dedicated `@theia/ai-openai` and `@theia/ai-anthropic` providers with first-class support.
+The `@ogun/ai-vercel-ai` package has been marked as deprecated and is no longer published on npm. It will be removed from the Theia codebase after a deprecation period. The package only wrapped OpenAI and Anthropic models, both of which are already covered by the dedicated `@ogun/ai-openai` and `@ogun/ai-anthropic` providers with first-class support.
 
-If your application depends on `@theia/ai-vercel-ai`, migrate as follows:
+If your application depends on `@ogun/ai-vercel-ai`, migrate as follows:
 
-- **OpenAI models**: use `@theia/ai-openai`. Move `ai-features.vercelAi.openaiApiKey` to `ai-features.openAiOfficial.openAiApiKey` and define models in `ai-features.openAiOfficial.officialOpenAiModels`.
-- **Anthropic models**: use `@theia/ai-anthropic`. Move `ai-features.vercelAi.anthropicApiKey` to `ai-features.anthropic.AnthropicApiKey` and define models in `ai-features.anthropic.AnthropicModels`.
+- **OpenAI models**: use `@ogun/ai-openai`. Move `ai-features.vercelAi.openaiApiKey` to `ai-features.openAiOfficial.openAiApiKey` and define models in `ai-features.openAiOfficial.officialOpenAiModels`.
+- **Anthropic models**: use `@ogun/ai-anthropic`. Move `ai-features.vercelAi.anthropicApiKey` to `ai-features.anthropic.AnthropicApiKey` and define models in `ai-features.anthropic.AnthropicModels`.
 - **Custom endpoints** (`ai-features.vercelAi.customModels`): split entries by their `provider` field into the matching provider-specific preference:
   - `provider: 'openai'` → `ai-features.openAiCustom.customOpenAiModels`
   - `provider: 'anthropic'` → `ai-features.anthropicCustom.customAnthropicModels`
@@ -119,7 +119,7 @@ The dedicated provider preferences offer the same fields plus additional ones (e
 
 #### `AiConfigurationService` for reading/writing AI preferences
 
-A new framework API, `AiConfigurationService` (`@theia/ai-core`), wraps `PreferenceService` for `ai-features.*` preferences and is the intended extension point for reading/writing AI configuration.
+A new framework API, `AiConfigurationService` (`@ogun/ai-core`), wraps `PreferenceService` for `ai-features.*` preferences and is the intended extension point for reading/writing AI configuration.
 
 **Adopter-facing:**
 
@@ -157,12 +157,12 @@ Custom agents are now scanned from both the `.agents/` and `.prompts/` folders o
 
 ### v1.70.0
 
-#### Removal of deprecated @theia/git extension from Theia codebase [#17148](https://github.com/eclipse-theia/theia/pull/17148)
+#### Removal of deprecated @ogun/git extension from Theia codebase [#17148](https://github.com/eclipse-theia/theia/pull/17148)
 
-The `@theia/git` extension has been completely removed from the Theia codebase.
+The `@ogun/git` extension has been completely removed from the Theia codebase.
 This extension was deprecated since v1.58.0 and stopped being published in v1.61.0.
 
-If your application still depends on `@theia/git`, you must migrate to the built-in VS Code Git extension, which provides the same feature set and is actively maintained. Remove any references to `@theia/git` from your application's dependencies and ensure the VS Code Git extension is included in your application, either through the builtin extension pack or by explicitly adding it to your plugins configuration.
+If your application still depends on `@ogun/git`, you must migrate to the built-in VS Code Git extension, which provides the same feature set and is actively maintained. Remove any references to `@ogun/git` from your application's dependencies and ensure the VS Code Git extension is included in your application, either through the builtin extension pack or by explicitly adding it to your plugins configuration.
 
 ### v1.65.0
 
@@ -173,7 +173,7 @@ Browser-only filesystem refactored to use OPFS API with web workers.
 Key changes:
 
 - `OPFSFileSystemProvider` completely rewritten - extensions inheriting from old implementation need alignment
-- `FileUploadService` moved from `@theia/filesystem/lib/browser/file-upload-service` to `@theia/filesystem/lib/common/upload/file-upload`, now bound with symbol key and separate `FileUploadServiceImpl`
+- `FileUploadService` moved from `@ogun/filesystem/lib/browser/file-upload-service` to `@ogun/filesystem/lib/common/upload/file-upload`, now bound with symbol key and separate `FileUploadServiceImpl`
 - `FileDownloadService` moved from `file-download-data.ts` to `file-download.ts`, now bound with symbol key and separate `FileDownloadServiceImpl`
 - `NodeFileUploadService` moved from `src/node/node-file-upload-service.ts` to `src/node/upload/node-file-upload-service.ts`
 - `OPFSInitialization.getRootDirectory()` returns `Promise<string> | string` instead of `Promise<FileSystemDirectoryHandle>` - Just return the root of your filesystem as a string instead of the directory handle
@@ -337,7 +337,7 @@ This version updates the Monaco code used in Theia to the state of VSCode 1.65.2
 
 Two kinds of changes may be required to consume Monaco using ESM modules.
 
-- If your application uses its own Webpack config rather than that generated by the @theia/dev-packages, you
+- If your application uses its own Webpack config rather than that generated by the @ogun/dev-packages, you
 will need to update that config to remove the `CopyWebpackPlugin` formerly used to place Monaco
 code in the build folder and to build a separate entrypoint for the `editor.worker`. See [the changes here](https://github.com/eclipse-theia/theia/pull/10736/files#diff-b4677f3ff57d8b952eeefc10493ed3600d2737f9b5c9b0630b172472acb9c3a2)
 - If your application uses its own frontend generator, you should modify the code that generates the `index.html` to load the `script` containing the bundle into the `body` element rather than the head. See [changes here](https://github.com/eclipse-theia/theia/pull/10947/files)
@@ -403,9 +403,9 @@ See Electron's [documentation](https://github.com/electron/electron/tree/15-x-y/
 
 Most notably the `electron.remote` API got deprecated and replaced with a `@electron/remote` package.
 
-Theia makes use of that package and re-exports it as `@theia/core/electron-shared/@electron/remote`.
+Theia makes use of that package and re-exports it as `@ogun/core/electron-shared/@electron/remote`.
 
-See `@theia/core` re-exports [documentation](../packages/core/README.md#re-exports).
+See `@ogun/core` re-exports [documentation](../packages/core/README.md#re-exports).
 
 Lastly, Electron must now be defined in your application's `package.json` under `devDependencies`.
 
@@ -419,7 +419,7 @@ The frontend's source map naming changed. If you had something like the followin
 
 ```json
       "sourceMapPathOverrides": {
-        "webpack://@theia/example-electron/*": "${workspaceFolder}/examples/electron/*"
+        "webpack://@ogun/example-electron/*": "${workspaceFolder}/examples/electron/*"
       }
 ```
 

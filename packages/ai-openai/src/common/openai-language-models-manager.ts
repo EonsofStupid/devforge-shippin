@@ -13,7 +13,7 @@
 //
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
-import { ReasoningSupport } from '@theia/ai-core';
+import { ReasoningSupport } from '@ogun/ai-core';
 
 export const OPENAI_LANGUAGE_MODELS_MANAGER_PATH = '/services/open-ai/language-model-manager';
 export const OpenAiLanguageModelsManager = Symbol('OpenAiLanguageModelsManager');

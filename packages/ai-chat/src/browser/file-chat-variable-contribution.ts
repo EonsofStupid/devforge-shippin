@@ -14,22 +14,22 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { AIVariableContext, AIVariableResolutionRequest, PromptText } from '@theia/ai-core';
-import { AIVariableCompletionContext, AIVariableDropResult, FrontendVariableContribution, FrontendVariableService } from '@theia/ai-core/lib/browser';
-import { FILE_VARIABLE } from '@theia/ai-core/lib/browser/file-variable-contribution';
-import { CancellationToken, ILogger, nls, QuickInputService, QuickPickItemOrSeparator, URI } from '@theia/core';
-import { inject, injectable } from '@theia/core/shared/inversify';
+import { AIVariableContext, AIVariableResolutionRequest, PromptText } from '@ogun/ai-core';
+import { AIVariableCompletionContext, AIVariableDropResult, FrontendVariableContribution, FrontendVariableService } from '@ogun/ai-core/lib/browser';
+import { FILE_VARIABLE } from '@ogun/ai-core/lib/browser/file-variable-contribution';
+import { CancellationToken, ILogger, nls, QuickInputService, QuickPickItemOrSeparator, URI } from '@ogun/core';
+import { inject, injectable } from '@ogun/core/shared/inversify';
 import * as monaco from '@theia/monaco-editor-core';
-import { FileQuickPickItem, QuickFileSelectService } from '@theia/file-search/lib/browser/quick-file-select-service';
-import { WorkspaceService } from '@theia/workspace/lib/browser';
-import { FileService } from '@theia/filesystem/lib/browser/file-service';
+import { FileQuickPickItem, QuickFileSelectService } from '@ogun/file-search/lib/browser/quick-file-select-service';
+import { WorkspaceService } from '@ogun/workspace/lib/browser';
+import { FileService } from '@ogun/filesystem/lib/browser/file-service';
 import { VARIABLE_ADD_CONTEXT_COMMAND } from './ai-chat-frontend-contribution';
 import { IMAGE_CONTEXT_VARIABLE, ImageContextVariable } from '../common/image-context-variable';
 import { fileToBase64, getMimeTypeFromExtension } from './image-file-utils';
-import { ApplicationShell, codiconArray, LabelProvider } from '@theia/core/lib/browser';
-import { NavigationLocationService } from '@theia/editor/lib/browser/navigation/navigation-location-service';
-import * as fuzzy from '@theia/core/shared/fuzzy';
-import { QuickPickItem } from '@theia/core/lib/common/quick-pick-service';
+import { ApplicationShell, codiconArray, LabelProvider } from '@ogun/core/lib/browser';
+import { NavigationLocationService } from '@ogun/editor/lib/browser/navigation/navigation-location-service';
+import * as fuzzy from '@ogun/core/shared/fuzzy';
+import { QuickPickItem } from '@ogun/core/lib/common/quick-pick-service';
 
 interface ClipboardQuickPickItem extends QuickPickItem {
     isClipboardOption: true;

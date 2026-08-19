@@ -14,9 +14,9 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { DisposableCollection } from '@theia/core';
-import { interfaces } from '@theia/core/shared/inversify';
-import { NotebookRendererMessagingService } from '@theia/notebook/lib/browser';
+import { DisposableCollection } from '@ogun/core';
+import { interfaces } from '@ogun/core/shared/inversify';
+import { NotebookRendererMessagingService } from '@ogun/notebook/lib/browser';
 import { MAIN_RPC_CONTEXT, NotebookRenderersExt, NotebookRenderersMain } from '../../../common';
 import { RPCProtocol } from '../../../common/rpc-protocol';
 

@@ -14,15 +14,15 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { injectable, inject, postConstruct } from '@theia/core/shared/inversify';
-import { JsonSchemaRegisterContext, JsonSchemaContribution, JsonSchemaDataStore } from '@theia/core/lib/browser/json-schema-store';
-import { deepClone, nls } from '@theia/core/lib/common';
-import { IJSONSchema } from '@theia/core/lib/common/json-schema';
-import URI from '@theia/core/lib/common/uri';
+import { injectable, inject, postConstruct } from '@ogun/core/shared/inversify';
+import { JsonSchemaRegisterContext, JsonSchemaContribution, JsonSchemaDataStore } from '@ogun/core/lib/browser/json-schema-store';
+import { deepClone, nls } from '@ogun/core/lib/common';
+import { IJSONSchema } from '@ogun/core/lib/common/json-schema';
+import URI from '@ogun/core/lib/common/uri';
 import { DebugService } from '../common/debug-service';
 import { debugPreferencesSchema } from '../common/debug-preferences';
-import { inputsSchema } from '@theia/variable-resolver/lib/browser/variable-input-schema';
-import { WorkspaceService } from '@theia/workspace/lib/browser';
+import { inputsSchema } from '@ogun/variable-resolver/lib/browser/variable-input-schema';
+import { WorkspaceService } from '@ogun/workspace/lib/browser';
 import { defaultCompound } from '../common/debug-compound';
 import { launchSchemaId } from '../common/launch-preferences';
 

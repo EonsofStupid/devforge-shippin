@@ -14,8 +14,8 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { LanguageModelRegistry, LanguageModelStatus, ReasoningApi, ReasoningSupport } from '@theia/ai-core';
-import { inject, injectable } from '@theia/core/shared/inversify';
+import { LanguageModelRegistry, LanguageModelStatus, ReasoningApi, ReasoningSupport } from '@ogun/ai-core';
+import { inject, injectable } from '@ogun/core/shared/inversify';
 import { GoogleGenAI, Model } from '@google/genai';
 import { GoogleModel } from './google-language-model';
 import { GOOGLE_SERVER_TOOLS } from './google-server-tools';

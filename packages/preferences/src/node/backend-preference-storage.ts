@@ -14,16 +14,16 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { Listener, ListenerList, URI } from '@theia/core';
-import { JSONValue } from '@theia/core/shared/@lumino/coreutils';
+import { Listener, ListenerList, URI } from '@ogun/core';
+import { JSONValue } from '@ogun/core/shared/@lumino/coreutils';
 import { FileContentStatus, PreferenceStorage } from '../common/abstract-resource-preference-provider';
-import { EncodingService } from '@theia/core/lib/common/encoding-service';
-import { BinaryBuffer } from '@theia/core/lib/common/buffer';
-import { Deferred } from '@theia/core/lib/common/promise-util';
-import debounce = require('@theia/core/shared/lodash.debounce');
+import { EncodingService } from '@ogun/core/lib/common/encoding-service';
+import { BinaryBuffer } from '@ogun/core/lib/common/buffer';
+import { Deferred } from '@ogun/core/lib/common/promise-util';
+import debounce = require('@ogun/core/shared/lodash.debounce');
 import { JSONCEditor } from '../common/jsonc-editor';
-import { DiskFileSystemProvider } from '@theia/filesystem/lib/node/disk-file-system-provider';
-import { UTF8 } from '@theia/core/lib/common/encodings';
+import { DiskFileSystemProvider } from '@ogun/filesystem/lib/node/disk-file-system-provider';
+import { UTF8 } from '@ogun/core/lib/common/encodings';
 
 interface WriteOperation {
     key: string,

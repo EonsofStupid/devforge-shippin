@@ -14,7 +14,7 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { inject, injectable, postConstruct, named } from '@theia/core/shared/inversify';
+import { inject, injectable, postConstruct, named } from '@ogun/core/shared/inversify';
 import {
     TaskConfiguration,
     TaskCustomization,
@@ -29,10 +29,10 @@ import { ProvidedTaskConfigurations } from './provided-task-configurations';
 import { TaskConfigurationManager, TasksChange } from './task-configuration-manager';
 import { TaskSchemaUpdater } from './task-schema-updater';
 import { TaskSourceResolver } from './task-source-resolver';
-import { Disposable, DisposableCollection } from '@theia/core/lib/common';
-import { FileChangeType } from '@theia/filesystem/lib/common/filesystem-watcher-protocol';
-import { WorkspaceService } from '@theia/workspace/lib/browser';
-import { ILogger } from '@theia/core';
+import { Disposable, DisposableCollection } from '@ogun/core/lib/common';
+import { FileChangeType } from '@ogun/filesystem/lib/common/filesystem-watcher-protocol';
+import { WorkspaceService } from '@ogun/workspace/lib/browser';
+import { ILogger } from '@ogun/core';
 
 export interface TaskConfigurationClient {
     /**

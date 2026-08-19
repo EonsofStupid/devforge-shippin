@@ -14,14 +14,14 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { environment, MessageService, nls } from '@theia/core';
-import { inject, injectable } from '@theia/core/shared/inversify';
-import { Navigatable, Saveable, SaveableSource, SaveOptions, Widget, open, OpenerService, ConfirmDialog, CommonCommands, LabelProvider } from '@theia/core/lib/browser';
-import { SaveableService } from '@theia/core/lib/browser/saveable-service';
-import URI from '@theia/core/lib/common/uri';
+import { environment, MessageService, nls } from '@ogun/core';
+import { inject, injectable } from '@ogun/core/shared/inversify';
+import { Navigatable, Saveable, SaveableSource, SaveOptions, Widget, open, OpenerService, ConfirmDialog, CommonCommands, LabelProvider } from '@ogun/core/lib/browser';
+import { SaveableService } from '@ogun/core/lib/browser/saveable-service';
+import URI from '@ogun/core/lib/common/uri';
 import { FileService } from './file-service';
 import { FileDialogService } from './file-dialog';
-import { BinaryBuffer } from '@theia/core/lib/common/buffer';
+import { BinaryBuffer } from '@ogun/core/lib/common/buffer';
 
 @injectable()
 export class FilesystemSaveableService extends SaveableService {

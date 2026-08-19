@@ -14,12 +14,12 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { ContainerModule } from '@theia/core/shared/inversify';
-import { CommandContribution } from '@theia/core';
+import { ContainerModule } from '@ogun/core/shared/inversify';
+import { CommandContribution } from '@ogun/core';
 import { PluginVscodeCommandsContribution } from './plugin-vscode-commands-contribution';
 import { PluginVSCodeEnvironment } from '../common/plugin-vscode-environment';
 import { PluginVSCodeContribution } from './plugin-vscode-contribution';
-import { FileServiceContribution } from '@theia/filesystem/lib/browser/file-service';
+import { FileServiceContribution } from '@ogun/filesystem/lib/browser/file-service';
 
 export default new ContainerModule(bind => {
     bind(PluginVSCodeEnvironment).toSelf().inSingletonScope();

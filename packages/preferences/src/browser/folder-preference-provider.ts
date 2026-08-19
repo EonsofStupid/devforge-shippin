@@ -14,12 +14,12 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { inject, injectable } from '@theia/core/shared/inversify';
-import URI from '@theia/core/lib/common/uri';
-import { FileStat } from '@theia/filesystem/lib/common/files';
+import { inject, injectable } from '@ogun/core/shared/inversify';
+import URI from '@ogun/core/lib/common/uri';
+import { FileStat } from '@ogun/filesystem/lib/common/files';
 import { SectionPreferenceProvider } from '../common/section-preference-provider';
-import { PreferenceScope } from '@theia/core';
-import { WorkspaceService } from '@theia/workspace/lib/browser';
+import { PreferenceScope } from '@ogun/core';
+import { WorkspaceService } from '@ogun/workspace/lib/browser';
 
 export const FolderPreferenceProviderFactory = Symbol('FolderPreferenceProviderFactory');
 export interface FolderPreferenceProviderFactory {

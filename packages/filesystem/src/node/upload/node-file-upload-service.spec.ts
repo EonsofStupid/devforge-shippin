@@ -17,8 +17,8 @@
 import { expect } from 'chai';
 import * as os from 'os';
 import * as path from 'path';
-import * as fs from '@theia/core/shared/fs-extra';
-import { FileUri } from '@theia/core/lib/common/file-uri';
+import * as fs from '@ogun/core/shared/fs-extra';
+import { FileUri } from '@ogun/core/lib/common/file-uri';
 import { NodeFileUploadService } from './node-file-upload-service';
 
 /** Captures what the upload handler wrote to the Express response. */

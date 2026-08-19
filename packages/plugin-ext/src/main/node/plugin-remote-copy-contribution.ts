@@ -14,10 +14,10 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { RemoteCopyContribution, RemoteCopyRegistry } from '@theia/core/lib/node/remote/remote-copy-contribution';
-import { inject, injectable } from '@theia/core/shared/inversify';
+import { RemoteCopyContribution, RemoteCopyRegistry } from '@ogun/core/lib/node/remote/remote-copy-contribution';
+import { inject, injectable } from '@ogun/core/shared/inversify';
 import { PluginCliContribution } from './plugin-cli-contribution';
-import { FileUri } from '@theia/core/lib/common/file-uri';
+import { FileUri } from '@ogun/core/lib/common/file-uri';
 
 @injectable()
 export class PluginRemoteCopyContribution implements RemoteCopyContribution {

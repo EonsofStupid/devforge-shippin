@@ -14,13 +14,13 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { injectable, inject } from '@theia/core/shared/inversify';
-import { Command, CommandContribution, CommandRegistry, MenuContribution, MenuModelRegistry, CommandHandler } from '@theia/core';
-import { FrontendApplicationContribution, KeybindingContribution, KeybindingRegistry, CommonCommands } from '@theia/core/lib/browser';
+import { injectable, inject } from '@ogun/core/shared/inversify';
+import { Command, CommandContribution, CommandRegistry, MenuContribution, MenuModelRegistry, CommandHandler } from '@ogun/core';
+import { FrontendApplicationContribution, KeybindingContribution, KeybindingRegistry, CommonCommands } from '@ogun/core/lib/browser';
 import { ConsoleManager } from './console-manager';
 import { ConsoleWidget } from './console-widget';
 import { ConsoleContentWidget } from './console-content-widget';
-import { nls } from '@theia/core/lib/common/nls';
+import { nls } from '@ogun/core/lib/common/nls';
 
 export namespace ConsoleCommands {
     export const SELECT_ALL: Command = {

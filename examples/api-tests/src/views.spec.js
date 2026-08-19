@@ -21,14 +21,14 @@ describe('Views', function () {
 
     const { assert } = chai;
 
-    const { timeout } = require('@theia/core/lib/common/promise-util');
-    const { ApplicationShell } = require('@theia/core/lib/browser/shell/application-shell');
-    const { FileNavigatorContribution } = require('@theia/navigator/lib/browser/navigator-contribution');
-    const { ScmContribution } = require('@theia/scm/lib/browser/scm-contribution');
-    const { OutlineViewContribution } = require('@theia/outline-view/lib/browser/outline-view-contribution');
-    const { ProblemContribution } = require('@theia/markers/lib/browser/problem/problem-contribution');
-    const { PropertyViewContribution } = require('@theia/property-view/lib/browser/property-view-contribution');
-    const { HostedPluginSupport } = require('@theia/plugin-ext/lib/hosted/browser/hosted-plugin');
+    const { timeout } = require('@ogun/core/lib/common/promise-util');
+    const { ApplicationShell } = require('@ogun/core/lib/browser/shell/application-shell');
+    const { FileNavigatorContribution } = require('@ogun/navigator/lib/browser/navigator-contribution');
+    const { ScmContribution } = require('@ogun/scm/lib/browser/scm-contribution');
+    const { OutlineViewContribution } = require('@ogun/outline-view/lib/browser/outline-view-contribution');
+    const { ProblemContribution } = require('@ogun/markers/lib/browser/problem/problem-contribution');
+    const { PropertyViewContribution } = require('@ogun/property-view/lib/browser/property-view-contribution');
+    const { HostedPluginSupport } = require('@ogun/plugin-ext/lib/hosted/browser/hosted-plugin');
 
     /** @type {import('inversify').Container} */
     const container = window['theia'].container;

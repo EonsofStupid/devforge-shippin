@@ -14,9 +14,9 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { Event } from '@theia/core';
-import { JSONValue } from '@theia/core/shared/@lumino/coreutils';
-import { PreferenceInspection, PreferenceScope } from '@theia/core/lib/common/preferences';
+import { Event } from '@ogun/core';
+import { JSONValue } from '@ogun/core/shared/@lumino/coreutils';
+import { PreferenceInspection, PreferenceScope } from '@ogun/core/lib/common/preferences';
 
 export const AiConfigurationService = Symbol('AiConfigurationService');
 

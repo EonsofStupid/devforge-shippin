@@ -12,7 +12,7 @@
 
 ## Description
 
-The `@theia/editor-preview` extension contributes the preview editor which  supports the same functionality as a regular editor widget with the exception:
+The `@ogun/editor-preview` extension contributes the preview editor which  supports the same functionality as a regular editor widget with the exception:
 
 - if a preview editor has not "transitioned to a permanent editor" at the time an additional request to
 preview a file is received, instead of opening a new editor, it will display the contents of the
@@ -43,7 +43,7 @@ must be set to "singleClick" to enable opening files in preview mode.
 
 ## Additional Information
 
-- [API documentation for `@theia/editor-preview`](https://eclipse-theia.github.io/theia/docs/next/modules/_theia_editor-preview.html)
+- [API documentation for `@ogun/editor-preview`](https://eclipse-theia.github.io/theia/docs/next/modules/_theia_editor-preview.html)
 - [Theia - GitHub](https://github.com/eclipse-theia/theia)
 - [Theia - Website](https://theia-ide.org/)
 

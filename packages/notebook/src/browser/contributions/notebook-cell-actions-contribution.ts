@@ -14,9 +14,9 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { Command, CommandContribution, CommandHandler, CommandRegistry, MenuContribution, MenuModelRegistry, nls } from '@theia/core';
-import { codicon, Key, KeybindingContribution, KeybindingRegistry, KeyCode, KeyModifier } from '@theia/core/lib/browser';
-import { inject, injectable, postConstruct } from '@theia/core/shared/inversify';
+import { Command, CommandContribution, CommandHandler, CommandRegistry, MenuContribution, MenuModelRegistry, nls } from '@ogun/core';
+import { codicon, Key, KeybindingContribution, KeybindingRegistry, KeyCode, KeyModifier } from '@ogun/core/lib/browser';
+import { inject, injectable, postConstruct } from '@ogun/core/shared/inversify';
 import { NotebookModel } from '../view-model/notebook-model';
 import { NotebookCellModel } from '../view-model/notebook-cell-model';
 import {
@@ -25,17 +25,17 @@ import {
     NOTEBOOK_CELL_FOCUSED,
     NOTEBOOK_CELL_LIST_FOCUSED
 } from './notebook-context-keys';
-import { ContextKeyService } from '@theia/core/lib/browser/context-key-service';
+import { ContextKeyService } from '@ogun/core/lib/browser/context-key-service';
 import { NotebookExecutionService } from '../service/notebook-execution-service';
 import { NotebookCellOutputModel } from '../view-model/notebook-cell-output-model';
 import { CellData, CellEditType, CellKind } from '../../common';
 import { NotebookEditorWidgetService } from '../service/notebook-editor-widget-service';
 import { NotebookCommands } from './notebook-actions-contribution';
 import { changeCellType } from './cell-operations';
-import { EditorLanguageQuickPickService } from '@theia/editor/lib/browser/editor-language-quick-pick-service';
+import { EditorLanguageQuickPickService } from '@ogun/editor/lib/browser/editor-language-quick-pick-service';
 import { NotebookService } from '../service/notebook-service';
 import { Selection } from '@theia/monaco-editor-core/esm/vs/editor/common/core/selection';
-import { Range } from '@theia/core/shared/vscode-languageserver-protocol';
+import { Range } from '@ogun/core/shared/vscode-languageserver-protocol';
 import { NOTEBOOK_EDITOR_ID_PREFIX } from '../notebook-editor-widget';
 
 export namespace NotebookCellCommands {

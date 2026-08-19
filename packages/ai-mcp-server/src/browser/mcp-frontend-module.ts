@@ -14,13 +14,13 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { ContainerModule } from '@theia/core/shared/inversify';
-import { bindRootContributionProvider } from '@theia/core';
-import { FrontendApplicationContribution } from '@theia/core/lib/browser';
+import { ContainerModule } from '@ogun/core/shared/inversify';
+import { bindRootContributionProvider } from '@ogun/core';
+import { FrontendApplicationContribution } from '@ogun/core/lib/browser';
 import {
     RemoteConnectionProvider,
     ServiceConnectionProvider,
-} from '@theia/core/lib/browser/messaging/service-connection-provider';
+} from '@ogun/core/lib/browser/messaging/service-connection-provider';
 import { MCPToolFrontendDelegate, MCPToolDelegateClient, mcpToolDelegatePath } from '../common/mcp-tool-delegate';
 import { MCPFrontendBootstrap } from './mcp-frontend-bootstrap';
 import { MCPFrontendContribution } from './mcp-frontend-contribution';

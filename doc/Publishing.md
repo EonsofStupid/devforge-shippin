@@ -196,7 +196,7 @@ It is recommend to first publish a next version of the new package, then we can 
 
 Once it is published to NPM, please update the settings of this package as follows:
 - Have your security key or 2FA ready
-- Go to `https://www.npmjs.com/package/@theia/<new-package>/access`
+- Go to `https://www.npmjs.com/package/@ogun/<new-package>/access`
 - Trusted `Publisher` > Select `GitHub Actions publisher` > Enter the required fields to our publish workflow (`publish-ci.yml`)
 - Set `Publishing access` to `Require two-factor authentication and disallow tokens (recommended)`
 
@@ -262,19 +262,19 @@ _NOTE:_ Performing the release locally will publish unsigned packages to NPM.
   lerna info
 
   Found 1 package to publish:
-  - @theia/some-package => x.y.z
+  - @ogun/some-package => x.y.z
 
   ✔ Are you sure you want to publish these packages? Yes
   lerna info publish Publishing packages to npm...
   ✔ This operation requires a one-time password: <enter your OTP>
-  lerna success published @theia/some-package x.y.z
+  lerna success published @ogun/some-package x.y.z
   lerna notice 
-  lerna notice 📦  @theia/some-package@x.y.z
+  lerna notice 📦  @ogun/some-package@x.y.z
   lerna notice === Tarball Contents === 
   ...
   lerna notice 
   Successfully published:
-  - @theia/some-package@x.y.z
+  - @ogun/some-package@x.y.z
   lerna success published 1 package
   Done in ...s.
   ```
@@ -290,7 +290,7 @@ _NOTE:_ Performing the release locally will publish unsigned packages to NPM.
 
   Select the appropriate version.
 
-- Verify the packages are published on npm and with the correct tag. (e.g., check the core package <https://www.npmjs.com/package/@theia/core?activeTab=versions>)
+- Verify the packages are published on npm and with the correct tag. (e.g., check the core package <https://www.npmjs.com/package/@ogun/core?activeTab=versions>)
 
 - Remove the auth token:
 
@@ -313,7 +313,7 @@ _NOTE:_ Performing the release locally will publish unsigned packages to NPM.
   npm run publish:latest
   ```
 
-- Verify the packages are published on npm and with the correct tag. (e.g., check the core package <https://www.npmjs.com/package/@theia/core?activeTab=versions>)
+- Verify the packages are published on npm and with the correct tag. (e.g., check the core package <https://www.npmjs.com/package/@ogun/core?activeTab=versions>)
 
 - Remove the auth token:
 

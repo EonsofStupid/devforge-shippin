@@ -20,8 +20,8 @@ import { ChatRequestParserImpl } from './chat-request-parser';
 import { ChatAgent, ChatAgentLocation } from './chat-agents';
 import { ChatContext, ChatRequest } from './chat-model';
 import { expect } from 'chai';
-import { AIVariable, DefaultAIVariableService, PromptService, ResolvedAIVariable, ToolInvocationRegistryImpl, ToolRequest } from '@theia/ai-core';
-import { ILogger, Logger } from '@theia/core';
+import { AIVariable, DefaultAIVariableService, PromptService, ResolvedAIVariable, ToolInvocationRegistryImpl, ToolRequest } from '@ogun/ai-core';
+import { ILogger, Logger } from '@ogun/core';
 import { ParsedChatRequestAgentPart, ParsedChatRequestFunctionPart, ParsedChatRequestTextPart, ParsedChatRequestVariablePart } from './parsed-chat-request';
 import { AgentDelegationTool } from '../browser/agent-delegation-tool';
 

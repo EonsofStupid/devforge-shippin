@@ -15,7 +15,7 @@
 // *****************************************************************************
 
 import type { CallToolResult, ListResourcesResult, ListToolsResult, ReadResourceResult } from '@modelcontextprotocol/sdk/types';
-import { Event } from '@theia/core/lib/common/event';
+import { Event } from '@ogun/core/lib/common/event';
 import { MCPOAuthConfig } from './mcp-oauth';
 
 export const MCPFrontendService = Symbol('MCPFrontendService');
@@ -162,7 +162,7 @@ export interface BaseMCPServerDescription {
 
     /**
      * If set, provenance metadata for a server installed from an AI registry.
-     * Written by `@theia/ai-registry` on install / link / fix / update; not user-editable.
+     * Written by `@ogun/ai-registry` on install / link / fix / update; not user-editable.
      */
     registryMetadata?: MCPRegistryMetadata;
 }
@@ -196,7 +196,7 @@ export interface MCPRegistryMetadata {
 /**
  * Subset of an MCP server's persisted configuration that an install flow may carry:
  * either set by a registry entry or hand-crafted in an install URL. Lives in `common`
- * so `@theia/ai-registry` (which resolves registry entries in `common`) can reference
+ * so `@ogun/ai-registry` (which resolves registry entries in `common`) can reference
  * the same canonical shape the browser-side install path writes.
  */
 export interface MCPInstallEntryConfig {

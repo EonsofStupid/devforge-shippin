@@ -14,11 +14,11 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { nls } from '@theia/core';
-import { injectable } from '@theia/core/shared/inversify';
-import { Disposable } from '@theia/core/shared/vscode-languageserver-protocol';
-import { FileStat } from '@theia/filesystem/lib/common/files';
-import { WorkspaceService } from '@theia/workspace/lib/browser';
+import { nls } from '@ogun/core';
+import { injectable } from '@ogun/core/shared/inversify';
+import { Disposable } from '@ogun/core/shared/vscode-languageserver-protocol';
+import { FileStat } from '@ogun/filesystem/lib/common/files';
+import { WorkspaceService } from '@ogun/workspace/lib/browser';
 import { Workspace, ProtocolBroadcastConnection } from 'open-collaboration-protocol';
 import { CollaborationURI } from './collaboration-file-system-provider';
 

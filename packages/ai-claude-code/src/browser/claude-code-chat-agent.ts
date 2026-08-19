@@ -23,15 +23,15 @@ import {
     MutableChatRequestModel,
     QuestionResponseContentImpl,
     ThinkingChatResponseContentImpl,
-} from '@theia/ai-chat';
-import { AI_CHAT_HOME, AI_CHAT_SHOW_CHATS_COMMAND } from '@theia/ai-chat-ui/lib/browser/chat-view-commands';
-import { PromptText } from '@theia/ai-core/lib/common/prompt-text';
-import { AIVariableResolutionRequest, BasePromptFragment, PromptService, ResolvedPromptFragment, TokenUsageService } from '@theia/ai-core';
-import { CommandService, ILogger, nls, SelectionService } from '@theia/core';
-import { inject, injectable, named } from '@theia/core/shared/inversify';
-import { EditorManager } from '@theia/editor/lib/browser';
-import { FileService } from '@theia/filesystem/lib/browser/file-service';
-import { WorkspaceService } from '@theia/workspace/lib/browser';
+} from '@ogun/ai-chat';
+import { AI_CHAT_HOME, AI_CHAT_SHOW_CHATS_COMMAND } from '@ogun/ai-chat-ui/lib/browser/chat-view-commands';
+import { PromptText } from '@ogun/ai-core/lib/common/prompt-text';
+import { AIVariableResolutionRequest, BasePromptFragment, PromptService, ResolvedPromptFragment, TokenUsageService } from '@ogun/ai-core';
+import { CommandService, ILogger, nls, SelectionService } from '@ogun/core';
+import { inject, injectable, named } from '@ogun/core/shared/inversify';
+import { EditorManager } from '@ogun/editor/lib/browser';
+import { FileService } from '@ogun/filesystem/lib/browser/file-service';
+import { WorkspaceService } from '@ogun/workspace/lib/browser';
 import {
     AskUserQuestionInput,
     ContentBlock,

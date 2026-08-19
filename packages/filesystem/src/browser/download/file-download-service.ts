@@ -14,13 +14,13 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { inject, injectable, named } from '@theia/core/shared/inversify';
-import URI from '@theia/core/lib/common/uri';
-import { ILogger } from '@theia/core/lib/common/logger';
-import { Endpoint } from '@theia/core/lib/browser/endpoint';
-import { MessageService } from '@theia/core/lib/common/message-service';
-import { addClipboardListener } from '@theia/core/lib/browser/widgets';
-import { nls } from '@theia/core';
+import { inject, injectable, named } from '@ogun/core/shared/inversify';
+import URI from '@ogun/core/lib/common/uri';
+import { ILogger } from '@ogun/core/lib/common/logger';
+import { Endpoint } from '@ogun/core/lib/browser/endpoint';
+import { MessageService } from '@ogun/core/lib/common/message-service';
+import { addClipboardListener } from '@ogun/core/lib/browser/widgets';
+import { nls } from '@ogun/core';
 import type { FileDownloadData, FileDownloadService } from '../../common/download/file-download';
 
 @injectable()

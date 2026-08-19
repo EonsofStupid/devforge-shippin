@@ -14,10 +14,10 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { interfaces } from '@theia/core/shared/inversify';
-import { PreferenceConfiguration } from '@theia/core/lib/common/preferences/preference-configurations';
-import { PreferenceContribution, PreferenceSchema } from '@theia/core/lib/common/preferences/preference-schema';
-import { PreferenceScope } from '@theia/core/lib/common/preferences/preference-scope';
+import { interfaces } from '@ogun/core/shared/inversify';
+import { PreferenceConfiguration } from '@ogun/core/lib/common/preferences/preference-configurations';
+import { PreferenceContribution, PreferenceSchema } from '@ogun/core/lib/common/preferences/preference-schema';
+import { PreferenceScope } from '@ogun/core/lib/common/preferences/preference-scope';
 
 export const taskSchemaId = 'vscode://schemas/tasks';
 

@@ -18,13 +18,13 @@ import { expect } from 'chai';
 import * as assert from 'assert';
 import * as path from 'path';
 import { FileSearchServiceImpl } from './file-search-service-impl';
-import { FileUri } from '@theia/core/lib/node';
-import { Container, ContainerModule } from '@theia/core/shared/inversify';
-import { CancellationTokenSource } from '@theia/core';
-import { bindLogger } from '@theia/core/lib/node/logger-backend-module';
-import URI from '@theia/core/lib/common/uri';
+import { FileUri } from '@ogun/core/lib/node';
+import { Container, ContainerModule } from '@ogun/core/shared/inversify';
+import { CancellationTokenSource } from '@ogun/core';
+import { bindLogger } from '@ogun/core/lib/node/logger-backend-module';
+import URI from '@ogun/core/lib/common/uri';
 import { FileSearchService } from '../common/file-search-service';
-import { RawProcessFactory } from '@theia/process/lib/node';
+import { RawProcessFactory } from '@ogun/process/lib/node';
 
 const testContainer = new Container();
 

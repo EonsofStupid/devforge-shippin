@@ -16,21 +16,21 @@
 
 /* eslint-disable @typescript-eslint/no-explicit-any */
 
-import { injectable, inject, postConstruct } from '@theia/core/shared/inversify';
-import URI from '@theia/core/lib/common/uri';
-import { CancellationTokenSource, CancellationToken, checkCancelled, cancelled, isCancelled } from '@theia/core/lib/common/cancellation';
-import { Deferred } from '@theia/core/lib/common/promise-util';
-import { MessageService } from '@theia/core/lib/common/message-service';
-import { Progress } from '@theia/core/lib/common/message-service-protocol';
-import { Endpoint } from '@theia/core/lib/browser/endpoint';
-import throttle = require('@theia/core/shared/lodash.throttle');
+import { injectable, inject, postConstruct } from '@ogun/core/shared/inversify';
+import URI from '@ogun/core/lib/common/uri';
+import { CancellationTokenSource, CancellationToken, checkCancelled, cancelled, isCancelled } from '@ogun/core/lib/common/cancellation';
+import { Deferred } from '@ogun/core/lib/common/promise-util';
+import { MessageService } from '@ogun/core/lib/common/message-service';
+import { Progress } from '@ogun/core/lib/common/message-service-protocol';
+import { Endpoint } from '@ogun/core/lib/browser/endpoint';
+import throttle = require('@ogun/core/shared/lodash.throttle');
 import { HTTP_FILE_UPLOAD_PATH } from '../../common/file-upload';
 import { Semaphore } from 'async-mutex';
 import { FileSystemPreferences } from '../../common/filesystem-preferences';
 import { FileService } from '../file-service';
-import { ConfirmDialog, Dialog } from '@theia/core/lib/browser';
-import { nls } from '@theia/core/lib/common/nls';
-import { Emitter, Event } from '@theia/core/lib/common/event';
+import { ConfirmDialog, Dialog } from '@ogun/core/lib/browser';
+import { nls } from '@ogun/core/lib/common/nls';
+import { Emitter, Event } from '@ogun/core/lib/common/event';
 import type { CustomDataTransfer, FileUploadService } from '../../common/upload/file-upload';
 
 interface UploadFilesParams {

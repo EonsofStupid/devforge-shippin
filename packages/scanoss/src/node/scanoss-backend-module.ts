@@ -14,8 +14,8 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { ContainerModule } from '@theia/core/shared/inversify';
-import { ConnectionHandler, PreferenceContribution, RpcConnectionHandler } from '@theia/core';
+import { ContainerModule } from '@ogun/core/shared/inversify';
+import { ConnectionHandler, PreferenceContribution, RpcConnectionHandler } from '@ogun/core';
 import { ScanOSSService, SCANOSS_SERVICE_PATH } from '../common';
 import { ScanOSSServiceImpl } from './scanoss-service-impl';
 import { ScanOSSPreferencesSchema } from '../common/scanoss-preferences';

@@ -14,14 +14,14 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { inject, injectable, named } from '@theia/core/shared/inversify';
-import { ChatRequestInvocation, ChatResponseContent, ChatResponseModel, InteractiveContent, ToolCallChatResponseContent } from '@theia/ai-chat';
-import { ChatAgentService } from '@theia/ai-chat/lib/common/chat-agent-service';
-import { ToolConfirmationManager } from '@theia/ai-chat/lib/browser/chat-tool-preference-bindings';
-import { PendingToolConfirmationTracker } from '@theia/ai-chat/lib/browser/pending-tool-confirmation-tracker';
-import { AGENT_DELEGATION_FUNCTION_ID } from '@theia/ai-core/lib/common/tool-constants';
-import { ToolInvocationRegistry } from '@theia/ai-core';
-import { AgentDelegationTool } from '@theia/ai-chat/lib/browser/agent-delegation-tool';
+import { inject, injectable, named } from '@ogun/core/shared/inversify';
+import { ChatRequestInvocation, ChatResponseContent, ChatResponseModel, InteractiveContent, ToolCallChatResponseContent } from '@ogun/ai-chat';
+import { ChatAgentService } from '@ogun/ai-chat/lib/common/chat-agent-service';
+import { ToolConfirmationManager } from '@ogun/ai-chat/lib/browser/chat-tool-preference-bindings';
+import { PendingToolConfirmationTracker } from '@ogun/ai-chat/lib/browser/pending-tool-confirmation-tracker';
+import { AGENT_DELEGATION_FUNCTION_ID } from '@ogun/ai-core/lib/common/tool-constants';
+import { ToolInvocationRegistry } from '@ogun/ai-core';
+import { AgentDelegationTool } from '@ogun/ai-chat/lib/browser/agent-delegation-tool';
 import { ChatResponsePartRenderer } from '../chat-response-part-renderer';
 import { ResponseNode } from '../chat-tree-view';
 import { SubChatWidgetFactory } from '../chat-tree-view/sub-chat-widget';
@@ -31,9 +31,9 @@ import {
     DENY_LATEST_TOOL_CONFIRMATION_COMMAND
 } from '../tool-confirmation-keybinding-contribution';
 import { extractJsonStringField } from './toolcall-utils';
-import { CompositeTreeNode, ContextMenuRenderer, KeybindingRegistry, MarkdownRenderer, OpenerService } from '@theia/core/lib/browser';
-import { ContributionProvider, DisposableCollection, nls } from '@theia/core';
-import * as React from '@theia/core/shared/react';
+import { CompositeTreeNode, ContextMenuRenderer, KeybindingRegistry, MarkdownRenderer, OpenerService } from '@ogun/core/lib/browser';
+import { ContributionProvider, DisposableCollection, nls } from '@ogun/core';
+import * as React from '@ogun/core/shared/react';
 
 @injectable()
 export class DelegationToolRenderer implements ChatResponsePartRenderer<ToolCallChatResponseContent> {

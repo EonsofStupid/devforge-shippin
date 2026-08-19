@@ -15,8 +15,8 @@
 // *****************************************************************************
 
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { postConstruct, injectable, inject } from '@theia/core/shared/inversify';
-import throttle = require('@theia/core/shared/lodash.throttle');
+import { postConstruct, injectable, inject } from '@ogun/core/shared/inversify';
+import throttle = require('@ogun/core/shared/lodash.throttle');
 import * as deepEqual from 'fast-deep-equal';
 import {
     CompositeTreeNode,
@@ -24,12 +24,12 @@ import {
     StatefulWidget,
     TopDownTreeIterator,
     ExpandableTreeNode,
-} from '@theia/core/lib/browser';
+} from '@ogun/core/lib/browser';
 import {
     Disposable, DisposableCollection, nls, PreferenceProviderDataChanges,
     PreferenceProviderProvider, PreferenceSchemaService, PreferenceService, unreachable
-} from '@theia/core';
-import { BaseWidget, DEFAULT_SCROLL_OPTIONS } from '@theia/core/lib/browser/widgets/widget';
+} from '@ogun/core';
+import { BaseWidget, DEFAULT_SCROLL_OPTIONS } from '@ogun/core/lib/browser/widgets/widget';
 import { PreferenceTreeModel, PreferenceFilterChangeEvent, PreferenceFilterChangeSource } from '../preference-tree-model';
 import { PreferenceNodeRendererFactory, GeneralPreferenceNodeRenderer } from './components/preference-node-renderer';
 import { Preference } from '../util/preference-types';

@@ -14,16 +14,16 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { ToolInvocationContext, ToolProvider, ToolRequest } from '@theia/ai-core';
-import { CancellationToken } from '@theia/core';
-import { inject, injectable } from '@theia/core/shared/inversify';
-import { TaskService } from '@theia/task/lib/browser/task-service';
-import { TaskConfiguration, TaskScope } from '@theia/task/lib/common/task-protocol';
-import { TerminalService } from '@theia/terminal/lib/browser/base/terminal-service';
+import { ToolInvocationContext, ToolProvider, ToolRequest } from '@ogun/ai-core';
+import { CancellationToken } from '@ogun/core';
+import { inject, injectable } from '@ogun/core/shared/inversify';
+import { TaskService } from '@ogun/task/lib/browser/task-service';
+import { TaskConfiguration, TaskScope } from '@ogun/task/lib/common/task-protocol';
+import { TerminalService } from '@ogun/terminal/lib/browser/base/terminal-service';
 import { LIST_TASKS_FUNCTION_ID, RUN_TASK_FUNCTION_ID } from '../common/workspace-functions';
 import { WorkspaceFunctionScope } from './workspace-functions';
 
-import URI from '@theia/core/lib/common/uri';
+import URI from '@ogun/core/lib/common/uri';
 
 /**
  * Sentinel value returned (and accepted) as `workspaceRoot` for tasks defined

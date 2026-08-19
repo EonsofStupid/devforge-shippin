@@ -14,10 +14,10 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { ILogger } from '@theia/core/lib/common/logger';
-import { inject, injectable, named } from '@theia/core/shared/inversify';
-import { TelemetryEvent } from '@theia/telemetry/lib/common';
-import { TelemetrySink } from '@theia/telemetry/lib/node';
+import { ILogger } from '@ogun/core/lib/common/logger';
+import { inject, injectable, named } from '@ogun/core/shared/inversify';
+import { TelemetryEvent } from '@ogun/telemetry/lib/common';
+import { TelemetrySink } from '@ogun/telemetry/lib/node';
 
 @injectable()
 export class ConsoleTelemetrySink implements TelemetrySink {

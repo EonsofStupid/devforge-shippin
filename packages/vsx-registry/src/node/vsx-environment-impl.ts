@@ -14,10 +14,10 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import URI from '@theia/core/lib/common/uri';
-import { inject, injectable } from '@theia/core/shared/inversify';
-import { OVSXRouterConfig } from '@theia/ovsx-client';
-import { PluginVsCodeCliContribution } from '@theia/plugin-ext-vscode/lib/node/plugin-vscode-cli-contribution';
+import URI from '@ogun/core/lib/common/uri';
+import { inject, injectable } from '@ogun/core/shared/inversify';
+import { OVSXRouterConfig } from '@ogun/ovsx-client';
+import { PluginVsCodeCliContribution } from '@ogun/plugin-ext-vscode/lib/node/plugin-vscode-cli-contribution';
 import { VSXEnvironment } from '../common/vsx-environment';
 import { VsxCli } from './vsx-cli';
 

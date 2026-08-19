@@ -16,12 +16,12 @@
 
 /* eslint-disable @typescript-eslint/no-explicit-any */
 
-import { injectable, inject, named } from '@theia/core/shared/inversify';
+import { injectable, inject, named } from '@ogun/core/shared/inversify';
 import { json } from 'body-parser';
-import { Application, Router, RequestHandler } from '@theia/core/shared/express';
-import { BackendApplicationContribution } from '@theia/core/lib/node/backend-application';
-import { HttpConnectionValidator } from '@theia/core/lib/node';
-import { FileUri } from '@theia/core/lib/common/file-uri';
+import { Application, Router, RequestHandler } from '@ogun/core/shared/express';
+import { BackendApplicationContribution } from '@ogun/core/lib/node/backend-application';
+import { HttpConnectionValidator } from '@ogun/core/lib/node';
+import { FileUri } from '@ogun/core/lib/common/file-uri';
 import { FileDownloadHandler } from './file-download-handler';
 
 @injectable()

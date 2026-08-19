@@ -14,31 +14,31 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { enableJSDOM } from '@theia/core/lib/browser/test/jsdom';
+import { enableJSDOM } from '@ogun/core/lib/browser/test/jsdom';
 let disableJSDOM = enableJSDOM();
-import { FrontendApplicationConfigProvider } from '@theia/core/lib/browser/frontend-application-config-provider';
+import { FrontendApplicationConfigProvider } from '@ogun/core/lib/browser/frontend-application-config-provider';
 FrontendApplicationConfigProvider.set({});
 
 import { expect } from 'chai';
-import { PreferenceService } from '@theia/core';
-import URI from '@theia/core/lib/common/uri';
-import { Container } from '@theia/core/shared/inversify';
+import { PreferenceService } from '@ogun/core';
+import URI from '@ogun/core/lib/common/uri';
+import { Container } from '@ogun/core/shared/inversify';
 import {
     LaunchListProvider,
     LaunchRunnerProvider,
     LaunchStopProvider,
 } from './workspace-launch-provider';
-import { DebugConfigurationManager } from '@theia/debug/lib/browser/debug-configuration-manager';
-import { DebugSessionManager } from '@theia/debug/lib/browser/debug-session-manager';
-import { DebugSessionOptions } from '@theia/debug/lib/browser/debug-session-options';
-import { DebugConfiguration } from '@theia/debug/lib/common/debug-common';
-import { DebugCompound } from '@theia/debug/lib/common/debug-compound';
-import { DebugSession } from '@theia/debug/lib/browser/debug-session';
+import { DebugConfigurationManager } from '@ogun/debug/lib/browser/debug-configuration-manager';
+import { DebugSessionManager } from '@ogun/debug/lib/browser/debug-session-manager';
+import { DebugSessionOptions } from '@ogun/debug/lib/browser/debug-session-options';
+import { DebugConfiguration } from '@ogun/debug/lib/common/debug-common';
+import { DebugCompound } from '@ogun/debug/lib/common/debug-compound';
+import { DebugSession } from '@ogun/debug/lib/browser/debug-session';
 import { WorkspaceFunctionScope } from './workspace-functions';
-import { AiConfigurationService } from '@theia/ai-core';
-import { EnvVariablesServer } from '@theia/core/lib/common/env-variables';
-import { WorkspaceService } from '@theia/workspace/lib/browser';
-import { FileService } from '@theia/filesystem/lib/browser/file-service';
+import { AiConfigurationService } from '@ogun/ai-core';
+import { EnvVariablesServer } from '@ogun/core/lib/common/env-variables';
+import { WorkspaceService } from '@ogun/workspace/lib/browser';
+import { FileService } from '@ogun/filesystem/lib/browser/file-service';
 
 const makeTrustAwareReader = (): AiConfigurationService => ({
     get: <T>(_name: string, fallback?: T) => fallback,

@@ -14,27 +14,27 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import * as React from '@theia/core/shared/react';
-import * as DOMPurify from '@theia/core/shared/dompurify';
-import { injectable, inject, postConstruct } from '@theia/core/shared/inversify';
-import URI from '@theia/core/lib/common/uri';
-import { TreeElement, TreeElementNode } from '@theia/core/lib/browser/source-tree';
-import { OpenerService, open, OpenerOptions } from '@theia/core/lib/browser/opener-service';
-import { HostedPluginSupport } from '@theia/plugin-ext/lib/hosted/browser/hosted-plugin';
-import { PluginServer, DeployedPlugin, PluginIdentifiers, PluginDeployOptions } from '@theia/plugin-ext/lib/common/plugin-protocol';
-import { WorkspaceTrustService } from '@theia/workspace/lib/browser/workspace-trust-service';
-import { VSCodeExtensionUri } from '@theia/plugin-ext-vscode/lib/common/plugin-vscode-uri';
-import { ProgressService } from '@theia/core/lib/common/progress-service';
-import { Endpoint } from '@theia/core/lib/browser/endpoint';
+import * as React from '@ogun/core/shared/react';
+import * as DOMPurify from '@ogun/core/shared/dompurify';
+import { injectable, inject, postConstruct } from '@ogun/core/shared/inversify';
+import URI from '@ogun/core/lib/common/uri';
+import { TreeElement, TreeElementNode } from '@ogun/core/lib/browser/source-tree';
+import { OpenerService, open, OpenerOptions } from '@ogun/core/lib/browser/opener-service';
+import { HostedPluginSupport } from '@ogun/plugin-ext/lib/hosted/browser/hosted-plugin';
+import { PluginServer, DeployedPlugin, PluginIdentifiers, PluginDeployOptions } from '@ogun/plugin-ext/lib/common/plugin-protocol';
+import { WorkspaceTrustService } from '@ogun/workspace/lib/browser/workspace-trust-service';
+import { VSCodeExtensionUri } from '@ogun/plugin-ext-vscode/lib/common/plugin-vscode-uri';
+import { ProgressService } from '@ogun/core/lib/common/progress-service';
+import { Endpoint } from '@ogun/core/lib/browser/endpoint';
 import { VSXEnvironment } from '../common/vsx-environment';
 import { VSXExtensionsSearchModel } from './vsx-extensions-search-model';
 import { TypeBadge } from './type-badge';
 import { ExtensionCard, ExtensionCardTrust } from './extension-card';
-import { CommandRegistry, MenuPath, nls } from '@theia/core/lib/common';
-import { codicon, ConfirmDialog, ContextMenuRenderer, HoverService, TreeWidget } from '@theia/core/lib/browser';
-import { VSXExtensionNamespaceAccess, VSXUser } from '@theia/ovsx-client/lib/ovsx-types';
-import { WindowService } from '@theia/core/lib/browser/window/window-service';
-import { MarkdownStringImpl } from '@theia/core/lib/common/markdown-rendering';
+import { CommandRegistry, MenuPath, nls } from '@ogun/core/lib/common';
+import { codicon, ConfirmDialog, ContextMenuRenderer, HoverService, TreeWidget } from '@ogun/core/lib/browser';
+import { VSXExtensionNamespaceAccess, VSXUser } from '@ogun/ovsx-client/lib/ovsx-types';
+import { WindowService } from '@ogun/core/lib/browser/window/window-service';
+import { MarkdownStringImpl } from '@ogun/core/lib/common/markdown-rendering';
 import { VSXExtensionsModel } from './vsx-extensions-model';
 
 export const EXTENSIONS_CONTEXT_MENU: MenuPath = ['extensions_context_menu'];

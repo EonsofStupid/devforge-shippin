@@ -14,19 +14,19 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { DisposableCollection, Emitter, Event, nls, URI } from '@theia/core';
-import { FrontendApplicationContribution, QuickInputService } from '@theia/core/lib/browser';
-import { EnvVariablesServer } from '@theia/core/lib/common/env-variables';
-import { BinaryBuffer } from '@theia/core/lib/common/buffer';
-import { inject, injectable, postConstruct } from '@theia/core/shared/inversify';
-import { FileService } from '@theia/filesystem/lib/browser/file-service';
-import { FileChangesEvent } from '@theia/filesystem/lib/common/files';
+import { DisposableCollection, Emitter, Event, nls, URI } from '@ogun/core';
+import { FrontendApplicationContribution, QuickInputService } from '@ogun/core/lib/browser';
+import { EnvVariablesServer } from '@ogun/core/lib/common/env-variables';
+import { BinaryBuffer } from '@ogun/core/lib/common/buffer';
+import { inject, injectable, postConstruct } from '@ogun/core/shared/inversify';
+import { FileService } from '@ogun/filesystem/lib/browser/file-service';
+import { FileChangesEvent } from '@ogun/filesystem/lib/common/files';
 import {
     ToolInvocationRegistry,
     ToolRequest,
     ToolRequestParameters,
     ToolRequestParameterProperty
-} from '@theia/ai-core';
+} from '@ogun/ai-core';
 import { dump, load } from 'js-yaml';
 import {
     SketchedToolDefinition,

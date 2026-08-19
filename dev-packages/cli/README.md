@@ -44,23 +44,23 @@
 
 ## Description
 
-The `@theia/cli` package provides helpful scripts and commands for extension and application development.
+The `@ogun/cli` package provides helpful scripts and commands for extension and application development.
 The contributed `theia`, is a command line tool to manage Theia-based applications.
 
 ## Getting Started
 
-Install `@theia/cli` as a dev dependency in your application.
+Install `@ogun/cli` as a dev dependency in your application.
 
 With yarn:
 
 ```bash
-yarn add @theia/cli@next --dev
+yarn add @ogun/cli@next --dev
 ```
 
 With npm:
 
 ```bash
-npm install @theia/cli@next --save-dev
+npm install @ogun/cli@next --save-dev
 ```
 
 ## Configure
@@ -126,12 +126,12 @@ The target can be configured in the `package.json` via `theia/target` property, 
         "target": "electron"
     },
     "dependencies": {
-        "@theia/electron": "latest"
+        "@ogun/electron": "latest"
     }
 }
 ```
 
-For `electron` target applications, is it mandatory to include **Electron** runtime dependencies. The `@theia/electron` package is the easiest way to install the necessary dependencies.
+For `electron` target applications, is it mandatory to include **Electron** runtime dependencies. The `@ogun/electron` package is the easiest way to install the necessary dependencies.
 
 ### Electron Frontend Application Config
 
@@ -244,11 +244,11 @@ by un-commenting:
 ```js
 /**
  * Expose bundled modules on window.theia.moduleName namespace, e.g.
- * window['theia']['@theia/core/lib/common/uri'].
+ * window['theia']['@ogun/core/lib/common/uri'].
  * Such syntax can be used by external code, for instance, for testing.
 config.module.rules.push({
     test: /\.js$/,
-    loader: require.resolve('@theia/application-manager/lib/expose-loader')
+    loader: require.resolve('@ogun/application-manager/lib/expose-loader')
 }); */
 ```
 
@@ -301,7 +301,7 @@ This command executes tests and generate test coverage files consumable by [Ista
 
 ## Downloading Plugins
 
-The `@theia/cli` package provides a utility for applications to define and download a list of plugins it requires as part of their application using the command:
+The `@ogun/cli` package provides a utility for applications to define and download a list of plugins it requires as part of their application using the command:
 
     theia download:plugins
 
@@ -347,10 +347,10 @@ This package can auto-generate application code for both the backend and fronten
 When targeting Electron, the `electron-main.js` script will spawn the backend process in a Node.js sub-process, where Electron's API won't be available. To prevent the generated application from forking the backend, you can pass a `--no-cluster` flag. This flag is mostly useful/used for debugging.
 
 ```sh
-# when developing a Theia application with @theia/cli:
+# when developing a Theia application with @ogun/cli:
 yarn theia start --no-cluster
 
-# when starting a bundled application made using @theia/cli:
+# when starting a bundled application made using @ogun/cli:
 bundled-application.exe --no-cluster
 ```
 

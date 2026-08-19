@@ -15,13 +15,13 @@
 // *****************************************************************************
 /* eslint-disable @typescript-eslint/no-explicit-any */
 
-import { Emitter } from '@theia/core/shared/vscode-languageserver-protocol';
-import * as theia from '@theia/plugin';
+import { Emitter } from '@ogun/core/shared/vscode-languageserver-protocol';
+import * as theia from '@ogun/plugin';
 
 import { OutputChannelRegistryMain, PluginInfo } from '../../common/plugin-api-rpc';
 import { OutputChannelImpl } from './output-channel-item';
 import { LogLevel } from '../types-impl';
-import { isArray, isObject } from '@theia/core';
+import { isArray, isObject } from '@ogun/core';
 
 export class LogOutputChannelImpl extends OutputChannelImpl implements theia.LogOutputChannel {
 

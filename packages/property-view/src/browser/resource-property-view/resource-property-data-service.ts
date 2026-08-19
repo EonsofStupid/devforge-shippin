@@ -14,12 +14,12 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { Navigatable } from '@theia/core/lib/browser';
-import URI from '@theia/core/lib/common/uri';
-import { FileSelection } from '@theia/filesystem/lib/browser/file-selection';
-import { FileService } from '@theia/filesystem/lib/browser/file-service';
-import { FileStat } from '@theia/filesystem/lib/common/files';
-import { inject, injectable } from '@theia/core/shared/inversify';
+import { Navigatable } from '@ogun/core/lib/browser';
+import URI from '@ogun/core/lib/common/uri';
+import { FileSelection } from '@ogun/filesystem/lib/browser/file-selection';
+import { FileService } from '@ogun/filesystem/lib/browser/file-service';
+import { FileStat } from '@ogun/filesystem/lib/common/files';
+import { inject, injectable } from '@ogun/core/shared/inversify';
 import { PropertyDataService } from '../property-data-service';
 
 /**

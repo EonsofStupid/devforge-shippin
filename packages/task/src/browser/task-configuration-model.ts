@@ -14,13 +14,13 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import URI from '@theia/core/lib/common/uri';
-import { Emitter, Event } from '@theia/core/lib/common/event';
-import { Disposable, DisposableCollection } from '@theia/core/lib/common/disposable';
+import URI from '@ogun/core/lib/common/uri';
+import { Emitter, Event } from '@ogun/core/lib/common/event';
+import { Disposable, DisposableCollection } from '@ogun/core/lib/common/disposable';
 import { TaskCustomization, TaskConfiguration, TaskConfigurationScope } from '../common/task-protocol';
-import { PreferenceProviderDataChanges, PreferenceProviderDataChange, isObject } from '@theia/core/lib/common';
-import { PreferenceProvider } from '@theia/core/lib/common/preferences/preference-provider';
-import { JSONValue } from '@theia/core/shared/@lumino/coreutils';
+import { PreferenceProviderDataChanges, PreferenceProviderDataChange, isObject } from '@ogun/core/lib/common';
+import { PreferenceProvider } from '@ogun/core/lib/common/preferences/preference-provider';
+import { JSONValue } from '@ogun/core/shared/@lumino/coreutils';
 
 /**
  * Holds the task configurations associated with a particular file. Uses an editor model to facilitate

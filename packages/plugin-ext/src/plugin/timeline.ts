@@ -16,7 +16,7 @@
 import { Plugin, PLUGIN_RPC_CONTEXT, TimelineCommandArg, TimelineExt, TimelineMain } from '../common';
 import { RPCProtocol } from '../common/rpc-protocol';
 import { Disposable, ThemeIcon, URI } from './types-impl';
-import { DisposableCollection } from '@theia/core/lib/common/disposable';
+import { DisposableCollection } from '@ogun/core/lib/common/disposable';
 import { CommandRegistryImpl } from './command-registry';
 import type {
     InternalTimelineOptions,
@@ -24,9 +24,9 @@ import type {
     TimelineItem,
     TimelineOptions,
     TimelineProvider
-} from '@theia/timeline/lib/common/timeline-model';
-import * as theia from '@theia/plugin';
-import { CancellationToken } from '@theia/core/lib/common/cancellation';
+} from '@ogun/timeline/lib/common/timeline-model';
+import * as theia from '@ogun/plugin';
+import { CancellationToken } from '@ogun/core/lib/common/cancellation';
 import { UriComponents } from '../common/uri-components';
 import { convertIconPath } from './type-converters';
 import { PluginIconPath } from './plugin-icon-path';

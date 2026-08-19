@@ -14,16 +14,16 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { inject, injectable } from '@theia/core/shared/inversify';
-import { Command, CommandContribution, CommandRegistry } from '@theia/core/lib/common';
-import { EnvVariablesServer } from '@theia/core/lib/common/env-variables';
-import { KeybindingContribution, KeybindingRegistry, LabelProvider } from '@theia/core/lib/browser';
-import { EditorManager } from '@theia/editor/lib/browser/editor-manager';
-import { WorkspaceService } from '@theia/workspace/lib/browser';
+import { inject, injectable } from '@ogun/core/shared/inversify';
+import { Command, CommandContribution, CommandRegistry } from '@ogun/core/lib/common';
+import { EnvVariablesServer } from '@ogun/core/lib/common/env-variables';
+import { KeybindingContribution, KeybindingRegistry, LabelProvider } from '@ogun/core/lib/browser';
+import { EditorManager } from '@ogun/editor/lib/browser/editor-manager';
+import { WorkspaceService } from '@ogun/workspace/lib/browser';
 import { ExternalTerminalService } from '../common/external-terminal';
 import { ExternalTerminalPreferenceService } from './external-terminal-preference';
-import { QuickPickService } from '@theia/core/lib/common/quick-pick-service';
-import { nls } from '@theia/core/lib/common/nls';
+import { QuickPickService } from '@ogun/core/lib/common/quick-pick-service';
+import { nls } from '@ogun/core/lib/common/nls';
 
 export namespace ExternalTerminalCommands {
     export const OPEN_NATIVE_CONSOLE = Command.toDefaultLocalizedCommand({

@@ -14,12 +14,12 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { inject, injectable, named } from '@theia/core/shared/inversify';
+import { inject, injectable, named } from '@ogun/core/shared/inversify';
 import { RemoteWslConnectionProvider, WslDistribution, WslConnectionOptions, WslConnectionResult } from '../electron-common/remote-wsl-connection-provider';
-import { RemoteConnectionService } from '@theia/remote/lib/electron-node/remote-connection-service';
-import { RemoteSetupService } from '@theia/remote/lib/electron-node/setup/remote-setup-service';
+import { RemoteConnectionService } from '@ogun/remote/lib/electron-node/remote-connection-service';
+import { RemoteSetupService } from '@ogun/remote/lib/electron-node/setup/remote-setup-service';
 import { exec } from 'child_process';
-import { MessageService, generateUuid, ILogger } from '@theia/core';
+import { MessageService, generateUuid, ILogger } from '@ogun/core';
 import { RemoteWslConnection } from './remote-wsl-connection';
 
 @injectable()

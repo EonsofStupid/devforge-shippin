@@ -14,16 +14,16 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { enableJSDOM, enableReactActEnvironment } from '@theia/core/lib/browser/test/jsdom';
+import { enableJSDOM, enableReactActEnvironment } from '@ogun/core/lib/browser/test/jsdom';
 let disableJSDOM = enableJSDOM();
 let disableReactActEnvironment = enableReactActEnvironment();
 
 import { expect } from 'chai';
-import * as React from '@theia/core/shared/react';
-import { createRoot, Root } from '@theia/core/shared/react-dom/client';
-import { MessageLoop } from '@theia/core/shared/@lumino/messaging';
-import { Emitter } from '@theia/core/lib/common/event';
-import { LabelParser } from '@theia/core/lib/browser/label-parser';
+import * as React from '@ogun/core/shared/react';
+import { createRoot, Root } from '@ogun/core/shared/react-dom/client';
+import { MessageLoop } from '@ogun/core/shared/@lumino/messaging';
+import { Emitter } from '@ogun/core/lib/common/event';
+import { LabelParser } from '@ogun/core/lib/browser/label-parser';
 import { ScmRepositoriesWidget } from './scm-repositories-widget';
 import { ScmRepository } from './scm-repository';
 

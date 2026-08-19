@@ -15,9 +15,9 @@
 // *****************************************************************************
 
 import { URI } from './types-impl';
-import { WindowState } from '@theia/plugin';
+import { WindowState } from '@ogun/plugin';
 import { WindowStateExt, WindowMain, PLUGIN_RPC_CONTEXT } from '../common/plugin-api-rpc';
-import { Event, Emitter } from '@theia/core/lib/common/event';
+import { Event, Emitter } from '@ogun/core/lib/common/event';
 import { RPCProtocol } from '../common/rpc-protocol';
 
 export class WindowStateExtImpl implements WindowStateExt {

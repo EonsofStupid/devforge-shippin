@@ -14,8 +14,8 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { createTreeContainer, LabelProviderContribution, TreeProps } from '@theia/core/lib/browser';
-import { interfaces } from '@theia/core/shared/inversify';
+import { createTreeContainer, LabelProviderContribution, TreeProps } from '@ogun/core/lib/browser';
+import { interfaces } from '@ogun/core/shared/inversify';
 import { PropertyDataService } from '../property-data-service';
 import { PropertyViewWidgetProvider } from '../property-view-widget-provider';
 import { ResourcePropertyDataService } from './resource-property-data-service';

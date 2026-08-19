@@ -14,9 +14,9 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { inject, injectable, named } from '@theia/core/shared/inversify';
-import { ILogger } from '@theia/core/lib/common/logger';
-import { ContributionProvider } from '@theia/core/lib/common/contribution-provider';
+import { inject, injectable, named } from '@ogun/core/shared/inversify';
+import { ILogger } from '@ogun/core/lib/common/logger';
+import { ContributionProvider } from '@ogun/core/lib/common/contribution-provider';
 import { McpServer } from '@modelcontextprotocol/sdk/server/mcp.js';
 import { MCPBackendContribution } from './mcp-theia-server';
 

@@ -20,7 +20,7 @@
  *--------------------------------------------------------------------------------------------*/
 // code copied and modified from https://github.com/microsoft/vscode/blob/1.106.1/src/vscode-dts/vscode.proposed.notebookKernelSource.d.ts
 
-export module '@theia/plugin' {
+export module '@ogun/plugin' {
     export interface NotebookControllerDetectionTask {
         /**
          * Dispose and remove the detection task.

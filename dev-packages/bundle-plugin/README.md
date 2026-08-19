@@ -12,7 +12,7 @@
 
 ## Description
 
-The `@theia/bundle-plugin` package contains bundler plugins for bundling Theia based applications.
+The `@ogun/bundle-plugin` package contains bundler plugins for bundling Theia based applications.
 
 ## Additional Information
 

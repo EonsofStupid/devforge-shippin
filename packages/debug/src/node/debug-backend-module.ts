@@ -14,8 +14,8 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { bindContributionProvider } from '@theia/core/lib/common';
-import { ContainerModule } from '@theia/core/shared/inversify';
+import { bindContributionProvider } from '@ogun/core/lib/common';
+import { ContainerModule } from '@ogun/core/shared/inversify';
 import {
     DebugPath,
     DebugService
@@ -24,8 +24,8 @@ import {
     LaunchBasedDebugAdapterFactory,
     DebugAdapterSessionFactoryImpl
 } from './debug-adapter-factory';
-import { MessagingService } from '@theia/core/lib/node/messaging/messaging-service';
-import { ConnectionContainerModule } from '@theia/core/lib/node/messaging/connection-container-module';
+import { MessagingService } from '@ogun/core/lib/node/messaging/messaging-service';
+import { ConnectionContainerModule } from '@ogun/core/lib/node/messaging/connection-container-module';
 import {
     DebugAdapterContribution,
     DebugAdapterSessionFactory,

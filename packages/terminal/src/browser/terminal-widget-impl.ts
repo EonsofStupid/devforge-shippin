@@ -17,14 +17,14 @@
 import { Terminal, IMarker } from 'xterm';
 import { FitAddon } from 'xterm-addon-fit';
 import { WebglAddon } from 'xterm-addon-webgl';
-import { inject, injectable, named, postConstruct } from '@theia/core/shared/inversify';
-import { ContributionProvider, Disposable, Event, Emitter, ILogger, DisposableCollection, Channel, OS, generateUuid } from '@theia/core';
+import { inject, injectable, named, postConstruct } from '@ogun/core/shared/inversify';
+import { ContributionProvider, Disposable, Event, Emitter, ILogger, DisposableCollection, Channel, OS, generateUuid } from '@ogun/core';
 import {
     Widget, Message, StatefulWidget, isFirefox, MessageLoop, KeyCode, ExtractableWidget, ContextMenuRenderer,
     DecorationStyle
-} from '@theia/core/lib/browser';
-import { isOSX } from '@theia/core/lib/common';
-import { WorkspaceService } from '@theia/workspace/lib/browser';
+} from '@ogun/core/lib/browser';
+import { isOSX } from '@ogun/core/lib/common';
+import { WorkspaceService } from '@ogun/workspace/lib/browser';
 import { ShellTerminalServerProxy, IShellTerminalPreferences } from '../common/shell-terminal-protocol';
 import { terminalsPath } from '../common/terminal-protocol';
 import { IBaseTerminalServer, TerminalProcessInfo, TerminalExitReason } from '../common/base-terminal-protocol';
@@ -36,24 +36,24 @@ import {
     TerminalBlock,
     TerminalCommandHistoryState
 } from './base/terminal-widget';
-import { Deferred } from '@theia/core/lib/common/promise-util';
+import { Deferred } from '@ogun/core/lib/common/promise-util';
 import { TerminalPreferences } from '../common/terminal-preferences';
-import URI from '@theia/core/lib/common/uri';
+import URI from '@ogun/core/lib/common/uri';
 import { TerminalService } from './base/terminal-service';
 import { TerminalSearchWidgetFactory, TerminalSearchWidget } from './search/terminal-search-widget';
 import { TerminalCopyOnSelectionHandler } from './terminal-copy-on-selection-handler';
 import { TerminalThemeService } from './terminal-theme-service';
-import { CommandLineOptions, ShellCommandBuilder } from '@theia/process/lib/common/shell-command-builder';
-import { Key } from '@theia/core/lib/browser/keys';
-import { nls } from '@theia/core/lib/common/nls';
+import { CommandLineOptions, ShellCommandBuilder } from '@ogun/process/lib/common/shell-command-builder';
+import { Key } from '@ogun/core/lib/browser/keys';
+import { nls } from '@ogun/core/lib/common/nls';
 import { TerminalMenus } from './terminal-frontend-contribution';
 import debounce = require('p-debounce');
-import { MarkdownString, MarkdownStringImpl } from '@theia/core/lib/common/markdown-rendering/markdown-string';
-import { EnhancedPreviewWidget } from '@theia/core/lib/browser/widgets/enhanced-preview-widget';
-import { MarkdownRenderer, MarkdownRendererFactory } from '@theia/core/lib/browser/markdown-rendering/markdown-renderer';
-import { RemoteConnectionProvider, ServiceConnectionProvider } from '@theia/core/lib/browser/messaging/service-connection-provider';
-import { ColorRegistry } from '@theia/core/lib/browser/color-registry';
-import { ContextKeyService } from '@theia/core/lib/browser/context-key-service';
+import { MarkdownString, MarkdownStringImpl } from '@ogun/core/lib/common/markdown-rendering/markdown-string';
+import { EnhancedPreviewWidget } from '@ogun/core/lib/browser/widgets/enhanced-preview-widget';
+import { MarkdownRenderer, MarkdownRendererFactory } from '@ogun/core/lib/browser/markdown-rendering/markdown-renderer';
+import { RemoteConnectionProvider, ServiceConnectionProvider } from '@ogun/core/lib/browser/messaging/service-connection-provider';
+import { ColorRegistry } from '@ogun/core/lib/browser/color-registry';
+import { ContextKeyService } from '@ogun/core/lib/browser/context-key-service';
 import { cleanTerminalTitle, guessShellTypeFromExecutable } from '../common/shell-type';
 import { TerminalCommandHistoryStateFactory } from './terminal-command-history';
 

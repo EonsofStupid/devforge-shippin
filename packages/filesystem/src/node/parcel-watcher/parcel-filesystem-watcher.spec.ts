@@ -17,10 +17,10 @@
 import * as temp from 'temp';
 import * as chai from 'chai';
 import * as cp from 'child_process';
-import * as fs from '@theia/core/shared/fs-extra';
+import * as fs from '@ogun/core/shared/fs-extra';
 import * as assert from 'assert';
-import URI from '@theia/core/lib/common/uri';
-import { FileUri } from '@theia/core/lib/node';
+import URI from '@ogun/core/lib/common/uri';
+import { FileUri } from '@ogun/core/lib/node';
 import { ParcelFileSystemWatcherService } from './parcel-filesystem-service';
 import { DidFilesChangedParams, FileChange, FileChangeType } from '../../common/filesystem-watcher-protocol';
 

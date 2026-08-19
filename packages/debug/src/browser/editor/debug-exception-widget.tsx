@@ -14,16 +14,16 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import * as React from '@theia/core/shared/react';
-import { createRoot, Root } from '@theia/core/shared/react-dom/client';
+import * as React from '@ogun/core/shared/react';
+import { createRoot, Root } from '@ogun/core/shared/react-dom/client';
 import * as monaco from '@theia/monaco-editor-core';
-import { injectable, inject, postConstruct } from '@theia/core/shared/inversify';
-import { Disposable, DisposableCollection } from '@theia/core/lib/common/disposable';
-import { MonacoEditorZoneWidget } from '@theia/monaco/lib/browser/monaco-editor-zone-widget';
+import { injectable, inject, postConstruct } from '@ogun/core/shared/inversify';
+import { Disposable, DisposableCollection } from '@ogun/core/lib/common/disposable';
+import { MonacoEditorZoneWidget } from '@ogun/monaco/lib/browser/monaco-editor-zone-widget';
 import { DebugEditor } from './debug-editor';
 import { DebugExceptionInfo } from '../model/debug-thread';
-import { nls } from '@theia/core/lib/common/nls';
-import { codicon } from '@theia/core/lib/browser/widgets';
+import { nls } from '@ogun/core/lib/common/nls';
+import { codicon } from '@ogun/core/lib/browser/widgets';
 
 export interface ShowDebugExceptionParams {
     info: DebugExceptionInfo

@@ -12,7 +12,7 @@
 
 ## Description
 
-The `@theia/property-view` extension contributes a generic, global property view based on Theia's global selection.
+The `@ogun/property-view` extension contributes a generic, global property view based on Theia's global selection.
 
 The property view widget can be opened/toggled either via menu _View->Properties_ or via shortcut <kbd>Shift+Alt+P</kbd>. It is located in the bottom dock area by default.
 
@@ -27,7 +27,7 @@ To contribute a specific property view, it is necessary to implement a `Property
 
 ## Additional Information
 
-- [API documentation for `@theia/property-view`](https://eclipse-theia.github.io/theia/docs/next/modules/_theia_property-view.html)
+- [API documentation for `@ogun/property-view`](https://eclipse-theia.github.io/theia/docs/next/modules/_theia_property-view.html)
 - [Theia - GitHub](https://github.com/eclipse-theia/theia)
 - [Theia - Website](https://theia-ide.org/)
 

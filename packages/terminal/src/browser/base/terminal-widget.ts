@@ -14,14 +14,14 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { Disposable, Event, ViewColumn } from '@theia/core';
-import { BaseWidget } from '@theia/core/lib/browser';
-import { MarkdownString } from '@theia/core/lib/common/markdown-rendering/markdown-string';
-import { ThemeIcon } from '@theia/core/lib/common/theme';
-import { CommandLineOptions } from '@theia/process/lib/common/shell-command-builder';
+import { Disposable, Event, ViewColumn } from '@ogun/core';
+import { BaseWidget } from '@ogun/core/lib/browser';
+import { MarkdownString } from '@ogun/core/lib/common/markdown-rendering/markdown-string';
+import { ThemeIcon } from '@ogun/core/lib/common/theme';
+import { CommandLineOptions } from '@ogun/process/lib/common/shell-command-builder';
 import { TerminalSearchWidget } from '../search/terminal-search-widget';
 import { TerminalProcessInfo, TerminalExitReason } from '../../common/base-terminal-protocol';
-import URI from '@theia/core/lib/common/uri';
+import URI from '@ogun/core/lib/common/uri';
 
 export interface TerminalDimensions {
     cols: number;

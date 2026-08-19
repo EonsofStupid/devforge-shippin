@@ -14,15 +14,15 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { ContainerModule } from '@theia/core/shared/inversify';
-import { BackendApplicationContribution, CliContribution } from '@theia/core/lib/node';
-import { MessagingListenerContribution } from '@theia/core/lib/node/messaging/messaging-listeners';
+import { ContainerModule } from '@ogun/core/shared/inversify';
+import { BackendApplicationContribution, CliContribution } from '@ogun/core/lib/node';
+import { MessagingListenerContribution } from '@ogun/core/lib/node/messaging/messaging-listeners';
 import { RemoteAutoShutdownService } from './remote-auto-shutdown-service';
-import { RemoteCliContribution } from '@theia/core/lib/node/remote/remote-cli-contribution';
+import { RemoteCliContribution } from '@ogun/core/lib/node/remote/remote-cli-contribution';
 import { RemoteConnectionService } from './remote-connection-service';
 import { RemoteProxyServerProvider } from './remote-proxy-server-provider';
 import { RemoteConnectionSocketProvider } from './remote-connection-socket-provider';
-import { ConnectionContainerModule } from '@theia/core/lib/node/messaging/connection-container-module';
+import { ConnectionContainerModule } from '@ogun/core/lib/node/messaging/connection-container-module';
 import { RemoteSSHConnectionProvider, RemoteSSHConnectionProviderPath } from '../electron-common/remote-ssh-connection-provider';
 import { RemoteSSHConnectionProviderImpl } from './ssh/remote-ssh-connection-provider';
 import { SSHIdentityFileCollector } from './ssh/ssh-identity-file-collector';
@@ -30,14 +30,14 @@ import { RemoteCopyService } from './setup/remote-copy-service';
 import { RemoteSetupService } from './setup/remote-setup-service';
 import { RemoteNativeDependencyService } from './setup/remote-native-dependency-service';
 import { BackendRemoteServiceImpl } from './backend-remote-service-impl';
-import { BackendRemoteService } from '@theia/core/lib/node/remote/backend-remote-service';
+import { BackendRemoteService } from '@ogun/core/lib/node/remote/backend-remote-service';
 import { RemoteNodeSetupService } from './setup/remote-node-setup-service';
 import { RemotePosixScriptStrategy, RemoteSetupScriptService, RemoteWindowsScriptStrategy } from './setup/remote-setup-script-service';
 import { RemoteStatusService, RemoteStatusServicePath } from '../electron-common/remote-status-service';
 import { RemoteStatusServiceImpl } from './remote-status-service';
-import { ConnectionHandler, RpcConnectionHandler, bindRootContributionProvider } from '@theia/core';
+import { ConnectionHandler, RpcConnectionHandler, bindRootContributionProvider } from '@ogun/core';
 import { RemoteCopyRegistryImpl } from './setup/remote-copy-contribution';
-import { RemoteCopyContribution } from '@theia/core/lib/node/remote/remote-copy-contribution';
+import { RemoteCopyContribution } from '@ogun/core/lib/node/remote/remote-copy-contribution';
 import { MainCopyContribution } from './setup/main-copy-contribution';
 import { RemoteNativeDependencyContribution } from './setup/remote-native-dependency-contribution';
 import { AppNativeDependencyContribution } from './setup/app-native-dependency-contribution';

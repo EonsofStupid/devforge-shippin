@@ -14,7 +14,7 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { ReasoningLevel } from '@theia/ai-core';
+import { ReasoningLevel } from '@ogun/ai-core';
 
 /**
  * Translates a reasoning level to the OpenAI request fragment to merge into `settings`.

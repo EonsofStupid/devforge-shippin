@@ -14,13 +14,13 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import URI from '@theia/core/lib/common/uri';
-import { Disposable } from '@theia/core/lib/common';
-import { Dimension, DiffNavigator, DeltaDecorationParams } from '@theia/editor/lib/browser';
+import URI from '@ogun/core/lib/common/uri';
+import { Disposable } from '@ogun/core/lib/common';
+import { Dimension, DiffNavigator, DeltaDecorationParams } from '@ogun/editor/lib/browser';
 import { MonacoEditorModel } from './monaco-editor-model';
 import { EditorServiceOverrides, MonacoEditor, MonacoEditorServices } from './monaco-editor';
 import { MonacoDiffNavigatorFactory } from './monaco-diff-navigator-factory';
-import { DiffUris } from '@theia/core/lib/browser/diff-uris';
+import { DiffUris } from '@ogun/core/lib/browser/diff-uris';
 import * as monaco from '@theia/monaco-editor-core';
 import { ICodeEditor, IDiffEditorConstructionOptions } from '@theia/monaco-editor-core/esm/vs/editor/browser/editorBrowser';
 import { IActionDescriptor, IStandaloneCodeEditor, IStandaloneDiffEditor, StandaloneCodeEditor, StandaloneDiffEditor2 }

@@ -19,10 +19,10 @@ import {
     NOTIFICATION_TYPES,
     NOTIFICATION_TYPE_LABELS,
     NOTIFICATION_TYPE_DESCRIPTIONS,
-} from '@theia/ai-core/lib/common';
-import { nls } from '@theia/core';
-import { SelectComponent, SelectOption } from '@theia/core/lib/browser/widgets/select-component';
-import * as React from '@theia/core/shared/react';
+} from '@ogun/ai-core/lib/common';
+import { nls } from '@ogun/core';
+import { SelectComponent, SelectOption } from '@ogun/core/lib/browser/widgets/select-component';
+import * as React from '@ogun/core/shared/react';
 
 export interface AgentNotificationSettingsProps {
     agentId: string;

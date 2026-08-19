@@ -19,7 +19,7 @@
  *
  * Parses ANSI SGR (Select Graphic Rendition) sequences from text,
  * strips them, and returns decoration segments with CSS class names
- * matching the existing `ansi.css` classes from `@theia/core`.
+ * matching the existing `ansi.css` classes from `@ogun/core`.
  */
 
 const FOREGROUND_COLORS = ['black', 'red', 'green', 'yellow', 'blue', 'magenta', 'cyan', 'white'] as const;

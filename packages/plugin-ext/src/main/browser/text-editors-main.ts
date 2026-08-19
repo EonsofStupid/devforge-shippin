@@ -35,28 +35,28 @@ import {
 import { Range, TextDocumentShowOptions } from '../../common/plugin-api-rpc-model';
 import { EditorsAndDocumentsMain } from './editors-and-documents-main';
 import { RPCProtocol } from '../../common/rpc-protocol';
-import { Disposable, DisposableCollection } from '@theia/core/lib/common/disposable';
+import { Disposable, DisposableCollection } from '@ogun/core/lib/common/disposable';
 import { TextEditorMain } from './text-editor-main';
 import { disposed } from '../../common/errors';
 import { toMonacoWorkspaceEdit } from './languages-main';
-import { MonacoBulkEditService } from '@theia/monaco/lib/browser/monaco-bulk-edit-service';
+import { MonacoBulkEditService } from '@ogun/monaco/lib/browser/monaco-bulk-edit-service';
 import { UriComponents } from '../../common/uri-components';
-import { Endpoint } from '@theia/core/lib/browser/endpoint';
+import { Endpoint } from '@ogun/core/lib/browser/endpoint';
 import * as monaco from '@theia/monaco-editor-core';
 import { ResourceEdit } from '@theia/monaco-editor-core/esm/vs/editor/browser/services/bulkEditService';
 import { IDecorationRenderOptions } from '@theia/monaco-editor-core/esm/vs/editor/common/editorCommon';
 import { StandaloneServices } from '@theia/monaco-editor-core/esm/vs/editor/standalone/browser/standaloneServices';
 import { ICodeEditorService } from '@theia/monaco-editor-core/esm/vs/editor/browser/services/codeEditorService';
 import { type ILineChange } from '@theia/monaco-editor-core/esm/vs/editor/common/diff/legacyLinesDiffComputer';
-import { ArrayUtils, URI } from '@theia/core';
-import { DiffUris } from '@theia/core/lib/browser/diff-uris';
+import { ArrayUtils, URI } from '@ogun/core';
+import { DiffUris } from '@ogun/core/lib/browser/diff-uris';
 import { TextEditorChangeKind } from '../../plugin/types-impl';
-import { Change } from '@theia/scm/lib/browser/dirty-diff/diff-computer';
-import { DirtyDiffUpdate } from '@theia/scm/lib/browser/dirty-diff/dirty-diff-decorator';
-import { ScmDecorationsService } from '@theia/scm/lib/browser/decorations/scm-decorations-service';
+import { Change } from '@ogun/scm/lib/browser/dirty-diff/diff-computer';
+import { DirtyDiffUpdate } from '@ogun/scm/lib/browser/dirty-diff/dirty-diff-decorator';
+import { ScmDecorationsService } from '@ogun/scm/lib/browser/decorations/scm-decorations-service';
 import { toNotebookWorspaceEdit } from './notebooks/notebooks-main';
-import { interfaces } from '@theia/core/shared/inversify';
-import { NotebookService } from '@theia/notebook/lib/browser';
+import { interfaces } from '@ogun/core/shared/inversify';
+import { NotebookService } from '@ogun/notebook/lib/browser';
 
 export class TextEditorsMainImpl implements TextEditorsMain, Disposable {
 

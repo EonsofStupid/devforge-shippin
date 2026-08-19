@@ -14,7 +14,7 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import type { OVSXRouterConfig } from '@theia/ovsx-client';
+import type { OVSXRouterConfig } from '@ogun/ovsx-client';
 
 export const VSX_ENVIRONMENT_PATH = '/services/vsx-environment';
 

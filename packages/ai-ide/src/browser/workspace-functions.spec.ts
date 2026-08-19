@@ -14,13 +14,13 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { enableJSDOM } from '@theia/core/lib/browser/test/jsdom';
+import { enableJSDOM } from '@ogun/core/lib/browser/test/jsdom';
 let disableJSDOM = enableJSDOM();
-import { FrontendApplicationConfigProvider } from '@theia/core/lib/browser/frontend-application-config-provider';
+import { FrontendApplicationConfigProvider } from '@ogun/core/lib/browser/frontend-application-config-provider';
 FrontendApplicationConfigProvider.set({});
 
 import { expect } from 'chai';
-import { CancellationTokenSource, OS, PreferenceService } from '@theia/core';
+import { CancellationTokenSource, OS, PreferenceService } from '@ogun/core';
 import {
     AccessibleRootContribution,
     GetWorkspaceDirectoryStructure,
@@ -30,18 +30,18 @@ import {
     WorkspaceFunctionScope,
     FindFilesByPattern
 } from './workspace-functions';
-import { bindRootContributionProvider } from '@theia/core/lib/common/contribution-provider';
-import { AiConfigurationService, ToolInvocationContext } from '@theia/ai-core';
-import { Container } from '@theia/core/shared/inversify';
-import { EnvVariablesServer } from '@theia/core/lib/common/env-variables';
-import { FileService } from '@theia/filesystem/lib/browser/file-service';
-import { FileOperationError, FileOperationResult, FileStat } from '@theia/filesystem/lib/common/files';
-import { URI } from '@theia/core/lib/common/uri';
-import { WorkspaceService } from '@theia/workspace/lib/browser';
-import { ProblemManager } from '@theia/markers/lib/browser';
-import { MonacoTextModelService } from '@theia/monaco/lib/browser/monaco-text-model-service';
-import { MonacoWorkspace } from '@theia/monaco/lib/browser/monaco-workspace';
-import { FileSearchService } from '@theia/file-search/lib/common/file-search-service';
+import { bindRootContributionProvider } from '@ogun/core/lib/common/contribution-provider';
+import { AiConfigurationService, ToolInvocationContext } from '@ogun/ai-core';
+import { Container } from '@ogun/core/shared/inversify';
+import { EnvVariablesServer } from '@ogun/core/lib/common/env-variables';
+import { FileService } from '@ogun/filesystem/lib/browser/file-service';
+import { FileOperationError, FileOperationResult, FileStat } from '@ogun/filesystem/lib/common/files';
+import { URI } from '@ogun/core/lib/common/uri';
+import { WorkspaceService } from '@ogun/workspace/lib/browser';
+import { ProblemManager } from '@ogun/markers/lib/browser';
+import { MonacoTextModelService } from '@ogun/monaco/lib/browser/monaco-text-model-service';
+import { MonacoWorkspace } from '@ogun/monaco/lib/browser/monaco-workspace';
+import { FileSearchService } from '@ogun/file-search/lib/common/file-search-service';
 import { Minimatch } from 'minimatch';
 
 const makeFileSearchService = (

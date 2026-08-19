@@ -13,7 +13,7 @@
 
 ## Description
 
-The `@theia/preview` extension adds the ability to display rendered previews of supported resources.\
+The `@ogun/preview` extension adds the ability to display rendered previews of supported resources.\
 The extension comes with built-in support for rendering `markdown` files.
 
 ## Contribute Custom Previews
@@ -32,7 +32,7 @@ bind(PreviewHandler).toService(MyPreviewHandler);
 
 ## Additional Information
 
-- [API documentation for `@theia/preview`](https://eclipse-theia.github.io/theia/docs/next/modules/_theia_preview.html)
+- [API documentation for `@ogun/preview`](https://eclipse-theia.github.io/theia/docs/next/modules/_theia_preview.html)
 - [Theia - GitHub](https://github.com/eclipse-theia/theia)
 - [Theia - Website](https://theia-ide.org/)
 

@@ -18,9 +18,9 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { Emitter } from '@theia/core';
-import { inject, injectable } from '@theia/core/shared/inversify';
-import { Disposable } from '@theia/core/shared/vscode-languageserver-protocol';
+import { Emitter } from '@ogun/core';
+import { inject, injectable } from '@ogun/core/shared/inversify';
+import { Disposable } from '@ogun/core/shared/vscode-languageserver-protocol';
 import { NotebookEditorWidgetService } from './notebook-editor-widget-service';
 
 interface RendererMessage {

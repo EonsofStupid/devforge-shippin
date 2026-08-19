@@ -15,10 +15,10 @@
 // *****************************************************************************
 
 import * as cp from 'child_process';
-import * as fs from '@theia/core/shared/fs-extra';
-import { injectable } from '@theia/core/shared/inversify';
-import { OS } from '@theia/core/lib/common/os';
-import { FileUri } from '@theia/core/lib/common/file-uri';
+import * as fs from '@ogun/core/shared/fs-extra';
+import { injectable } from '@ogun/core/shared/inversify';
+import { OS } from '@ogun/core/lib/common/os';
+import { FileUri } from '@ogun/core/lib/common/file-uri';
 import { ExternalTerminalService, ExternalTerminalConfiguration } from '../common/external-terminal';
 
 /*---------------------------------------------------------------------------------------------

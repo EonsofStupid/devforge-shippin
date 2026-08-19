@@ -14,13 +14,13 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { inject, injectable, named } from '@theia/core/shared/inversify';
-import { nls, ILogger } from '@theia/core';
-import { ACTION_ITEM, codicon, ConfirmDialog, Dialog, DISABLED_CLASS } from '@theia/core/lib/browser';
-import { Autorun, ObservableUtils } from '@theia/core/lib/common/observable';
-import { EditorDecoration, Range } from '@theia/editor/lib/browser';
-import { NavigationLocation } from '@theia/editor/lib/browser/navigation/navigation-location';
-import { NavigationLocationService } from '@theia/editor/lib/browser/navigation/navigation-location-service';
+import { inject, injectable, named } from '@ogun/core/shared/inversify';
+import { nls, ILogger } from '@ogun/core';
+import { ACTION_ITEM, codicon, ConfirmDialog, Dialog, DISABLED_CLASS } from '@ogun/core/lib/browser';
+import { Autorun, ObservableUtils } from '@ogun/core/lib/common/observable';
+import { EditorDecoration, Range } from '@ogun/editor/lib/browser';
+import { NavigationLocation } from '@ogun/editor/lib/browser/navigation/navigation-location';
+import { NavigationLocationService } from '@ogun/editor/lib/browser/navigation/navigation-location-service';
 import { MergeEditorPane } from './merge-editor-pane';
 import { MergeEditorPaneToolbarItem } from './merge-editor-pane-header';
 import { LineRange } from '../../model/line-range';

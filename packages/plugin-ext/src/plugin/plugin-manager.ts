@@ -14,7 +14,7 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { injectable, inject, postConstruct } from '@theia/core/shared/inversify';
+import { injectable, inject, postConstruct } from '@ogun/core/shared/inversify';
 import {
     PLUGIN_RPC_CONTEXT,
     AbstractPluginManagerExt,
@@ -33,7 +33,7 @@ import {
     ExtensionKind
 } from '../common/plugin-api-rpc';
 import { PluginMetadata, PluginJsonValidationContribution } from '../common/plugin-protocol';
-import * as theia from '@theia/plugin';
+import * as theia from '@ogun/plugin';
 import * as types from './types-impl';
 import { join } from './path';
 import { EnvExtImpl } from './env';
@@ -41,12 +41,12 @@ import { PreferenceRegistryExtImpl } from './preference-registry';
 import { InternalStorageExt, Memento, GlobalState } from './plugin-storage';
 import { ExtPluginApi } from '../common/plugin-ext-api-contribution';
 import { RPCProtocol } from '../common/rpc-protocol';
-import { Emitter, Event } from '@theia/core/lib/common/event';
+import { Emitter, Event } from '@ogun/core/lib/common/event';
 import { WebviewsExtImpl } from './webviews';
 import { URI as Uri } from './types-impl';
 import { InternalSecretsExt, SecretStorageExt } from '../plugin/secrets-ext';
 import { PluginExt } from './plugin-context';
-import { Deferred } from '@theia/core/lib/common/promise-util';
+import { Deferred } from '@ogun/core/lib/common/promise-util';
 import { PluginLogger } from './logger';
 
 export interface PluginHost {

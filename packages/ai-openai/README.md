@@ -12,7 +12,7 @@
 
 ## Description
 
-The `@theia/ai-openai` integrates OpenAI's models with Theia AI.
+The `@ogun/ai-openai` integrates OpenAI's models with Theia AI.
 The OpenAI API key and the models to use can be configured via preferences.
 Alternatively the OpenAI API key can also be handed in via the `OPENAI_API_KEY` variable.
 
@@ -92,7 +92,7 @@ path and without the `api-version` parameter, e.g. _`https://<my_prefix>.openai.
 
 ## Additional Information
 
-- [API documentation for `@theia/ai-openai`](https://eclipse-theia.github.io/theia/docs/next/modules/_theia_ai-openai.html)
+- [API documentation for `@ogun/ai-openai`](https://eclipse-theia.github.io/theia/docs/next/modules/_theia_ai-openai.html)
 - [Theia - GitHub](https://github.com/eclipse-theia/theia)
 - [Theia - Website](https://theia-ide.org/)
 

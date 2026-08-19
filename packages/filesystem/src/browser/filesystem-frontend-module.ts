@@ -16,22 +16,22 @@
 
 import '../../src/browser/style/index.css';
 
-import { ContainerModule, interfaces } from '@theia/core/shared/inversify';
-import { ResourceResolver, CommandContribution } from '@theia/core/lib/common';
-import { WebSocketConnectionProvider, FrontendApplicationContribution, LabelProviderContribution, BreadcrumbsContribution } from '@theia/core/lib/browser';
+import { ContainerModule, interfaces } from '@ogun/core/shared/inversify';
+import { ResourceResolver, CommandContribution } from '@ogun/core/lib/common';
+import { WebSocketConnectionProvider, FrontendApplicationContribution, LabelProviderContribution, BreadcrumbsContribution } from '@ogun/core/lib/browser';
 import { FileResourceResolver } from './file-resource';
 import { bindFileSystemPreferences } from '../common/filesystem-preferences';
 import { FileSystemFrontendContribution } from './filesystem-frontend-contribution';
 import { FileTreeDecoratorAdapter, FileTreeLabelProvider } from './file-tree';
 import { FileService, FileServiceContribution } from './file-service';
 import { RemoteFileSystemProvider, RemoteFileSystemServer, remoteFileSystemPath, RemoteFileSystemProxyFactory } from '../common/remote-file-system-provider';
-import { bindRootContributionProvider } from '@theia/core/lib/common/contribution-provider';
+import { bindRootContributionProvider } from '@ogun/core/lib/common/contribution-provider';
 import { RemoteFileServiceContribution } from './remote-file-service-contribution';
 import { FileSystemWatcherErrorHandler } from './filesystem-watcher-error-handler';
 import { FilepathBreadcrumbsContribution } from './breadcrumbs/filepath-breadcrumbs-contribution';
 import { BreadcrumbsFileTreeWidget, createFileTreeBreadcrumbsWidget } from './breadcrumbs/filepath-breadcrumbs-container';
 import { FilesystemSaveableService } from './filesystem-saveable-service';
-import { SaveableService } from '@theia/core/lib/browser/saveable-service';
+import { SaveableService } from '@ogun/core/lib/browser/saveable-service';
 import { VSCodeFileServiceContribution, VSCodeFileSystemProvider } from './vscode-file-service-contribution';
 import { FileUploadService } from '../common/upload/file-upload';
 import { FileUploadServiceImpl } from './upload/file-upload-service-impl';

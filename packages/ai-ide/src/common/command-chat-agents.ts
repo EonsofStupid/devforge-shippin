@@ -14,9 +14,9 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { inject, injectable } from '@theia/core/shared/inversify';
-import { AbstractTextToModelParsingChatAgent, SystemMessageDescription } from '@theia/ai-chat/lib/common/chat-agents';
-import { AIVariableContext, LanguageModelRequirement } from '@theia/ai-core';
+import { inject, injectable } from '@ogun/core/shared/inversify';
+import { AbstractTextToModelParsingChatAgent, SystemMessageDescription } from '@ogun/ai-chat/lib/common/chat-agents';
+import { AIVariableContext, LanguageModelRequirement } from '@ogun/ai-core';
 import {
     MutableChatRequestModel,
     ChatResponseContent,
@@ -24,13 +24,13 @@ import {
     CustomCallback,
     HorizontalLayoutChatResponseContentImpl,
     MarkdownChatResponseContentImpl,
-} from '@theia/ai-chat/lib/common/chat-model';
+} from '@ogun/ai-chat/lib/common/chat-model';
 import {
     CommandRegistry,
     MessageService,
     generateUuid,
     nls,
-} from '@theia/core';
+} from '@ogun/core';
 
 import { commandTemplate } from './command-prompt-template';
 

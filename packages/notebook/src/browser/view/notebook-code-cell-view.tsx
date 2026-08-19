@@ -14,9 +14,9 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { inject, injectable } from '@theia/core/shared/inversify';
-import * as React from '@theia/core/shared/react';
-import { MonacoEditorServices } from '@theia/monaco/lib/browser/monaco-editor';
+import { inject, injectable } from '@ogun/core/shared/inversify';
+import * as React from '@ogun/core/shared/react';
+import { MonacoEditorServices } from '@ogun/monaco/lib/browser/monaco-editor';
 import { NotebookRendererRegistry } from '../notebook-renderer-registry';
 import { NotebookCellModel } from '../view-model/notebook-cell-model';
 import { NotebookModel } from '../view-model/notebook-model';
@@ -25,19 +25,19 @@ import { CellRenderer, observeCellHeight } from './notebook-cell-list-view';
 import { NotebookCellToolbarFactory } from './notebook-cell-toolbar-factory';
 import { NotebookCellActionContribution, NotebookCellCommands } from '../contributions/notebook-cell-actions-contribution';
 import { CellExecution, NotebookExecutionStateService } from '../service/notebook-execution-state-service';
-import { codicon } from '@theia/core/lib/browser';
+import { codicon } from '@ogun/core/lib/browser';
 import { NotebookCellExecutionState } from '../../common';
-import { CancellationToken, CommandRegistry, DisposableCollection, nls } from '@theia/core';
+import { CancellationToken, CommandRegistry, DisposableCollection, nls } from '@ogun/core';
 import { NotebookContextManager } from '../service/notebook-context-manager';
 import { NotebookViewportService } from './notebook-viewport-service';
-import { EditorPreferences } from '@theia/editor/lib/common/editor-preferences';
+import { EditorPreferences } from '@ogun/editor/lib/common/editor-preferences';
 import { NotebookOptionsService } from '../service/notebook-options';
-import { MarkdownRenderer } from '@theia/core/lib/browser/markdown-rendering/markdown-renderer';
-import { MarkdownStringImpl as MarkdownString } from '@theia/core/lib/common/markdown-rendering/markdown-string';
+import { MarkdownRenderer } from '@ogun/core/lib/browser/markdown-rendering/markdown-renderer';
+import { MarkdownStringImpl as MarkdownString } from '@ogun/core/lib/common/markdown-rendering/markdown-string';
 import { NotebookCellEditorService } from '../service/notebook-cell-editor-service';
 import { CellOutputWebview } from '../renderers/cell-output-webview';
 import { NotebookCellStatusBarItem, NotebookCellStatusBarItemList, NotebookCellStatusBarService } from '../service/notebook-cell-status-bar-service';
-import { LabelParser } from '@theia/core/lib/browser/label-parser';
+import { LabelParser } from '@ogun/core/lib/browser/label-parser';
 import { NotebookViewModel } from '../view-model/notebook-view-model';
 
 @injectable()

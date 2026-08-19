@@ -14,13 +14,13 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { inject, injectable } from '@theia/core/shared/inversify';
-import { ILogger, MaybePromise, nls, URI } from '@theia/core';
+import { inject, injectable } from '@ogun/core/shared/inversify';
+import { ILogger, MaybePromise, nls, URI } from '@ogun/core';
 import {
     AIVariable, AIVariableContext, AIVariableContribution, AIVariableResolutionRequest,
     AIVariableResolver, AIVariableService, ResolvedAIVariable
 } from '../common/variable-service';
-import { FileService } from '@theia/filesystem/lib/browser/file-service';
+import { FileService } from '@ogun/filesystem/lib/browser/file-service';
 import { SkillService } from './skill-service';
 import { parseSkillFile } from '../common/skill';
 

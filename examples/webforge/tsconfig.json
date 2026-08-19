@@ -222,10 +222,10 @@
       "path": "../../packages/vsx-registry"
     },
     {
-      "path": "../../packages/webforge-channels"
+      "path": "../../packages/channels"
     },
     {
-      "path": "../../packages/webforge-runtime"
+      "path": "../../packages/runtime"
     },
     {
       "path": "../../packages/workspace"

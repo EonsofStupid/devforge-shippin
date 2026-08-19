@@ -14,14 +14,14 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import * as React from '@theia/core/shared/react';
-import { nls } from '@theia/core';
-import { HoverService } from '@theia/core/lib/browser';
-import { MarkdownStringImpl } from '@theia/core/lib/common/markdown-rendering';
-import { TreeElement } from '@theia/core/lib/browser/source-tree';
-import { TypeBadge } from '@theia/vsx-registry/lib/browser/type-badge';
-import { ExtensionCard, ExtensionCardTrust } from '@theia/vsx-registry/lib/browser/extension-card';
-import { MCPServerDescription } from '@theia/ai-mcp/lib/common/mcp-server-manager';
+import * as React from '@ogun/core/shared/react';
+import { nls } from '@ogun/core';
+import { HoverService } from '@ogun/core/lib/browser';
+import { MarkdownStringImpl } from '@ogun/core/lib/common/markdown-rendering';
+import { TreeElement } from '@ogun/core/lib/browser/source-tree';
+import { TypeBadge } from '@ogun/vsx-registry/lib/browser/type-badge';
+import { ExtensionCard, ExtensionCardTrust } from '@ogun/vsx-registry/lib/browser/extension-card';
+import { MCPServerDescription } from '@ogun/ai-mcp/lib/common/mcp-server-manager';
 import { ClassificationResult, ResolvedRegistryEntry } from '../../common/mcp/mcp-registry-types';
 
 /**

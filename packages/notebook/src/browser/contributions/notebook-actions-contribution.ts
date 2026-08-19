@@ -14,9 +14,9 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { Command, CommandContribution, CommandHandler, CommandRegistry, MenuContribution, MenuModelRegistry, nls, URI } from '@theia/core';
-import { inject, injectable } from '@theia/core/shared/inversify';
-import { ApplicationShell, codicon, KeybindingContribution, KeybindingRegistry } from '@theia/core/lib/browser';
+import { Command, CommandContribution, CommandHandler, CommandRegistry, MenuContribution, MenuModelRegistry, nls, URI } from '@ogun/core';
+import { inject, injectable } from '@ogun/core/shared/inversify';
+import { ApplicationShell, codicon, KeybindingContribution, KeybindingRegistry } from '@ogun/core/lib/browser';
 import { NotebookModel } from '../view-model/notebook-model';
 import { NotebookService } from '../service/notebook-service';
 import { CellEditType, CellKind, NotebookCommand } from '../../common';
@@ -28,7 +28,7 @@ import {
     NOTEBOOK_CELL_FOCUSED, NOTEBOOK_EDITOR_FOCUSED, NOTEBOOK_HAS_OUTPUTS, NOTEBOOK_OUTPUT_FOCUSED
 } from './notebook-context-keys';
 import { NotebookClipboardService } from '../service/notebook-clipboard-service';
-import { ContextKeyService } from '@theia/core/lib/browser/context-key-service';
+import { ContextKeyService } from '@ogun/core/lib/browser/context-key-service';
 import { NotebookEditorWidget } from '../notebook-editor-widget';
 
 export namespace NotebookCommands {

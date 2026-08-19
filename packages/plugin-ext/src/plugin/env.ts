@@ -14,12 +14,12 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { inject, injectable, postConstruct } from '@theia/core/shared/inversify';
-import * as theia from '@theia/plugin';
+import { inject, injectable, postConstruct } from '@ogun/core/shared/inversify';
+import * as theia from '@ogun/plugin';
 import { RPCProtocol } from '../common/rpc-protocol';
 import { EnvMain, PLUGIN_RPC_CONTEXT } from '../common/plugin-api-rpc';
 import { QueryParameters } from '../common/env';
-import { generateUuid } from '@theia/core/lib/common/uuid';
+import { generateUuid } from '@ogun/core/lib/common/uuid';
 
 @injectable()
 export abstract class EnvExtImpl {

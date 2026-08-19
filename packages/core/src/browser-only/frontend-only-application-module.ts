@@ -22,7 +22,7 @@ import { bindMessageService } from '../browser/frontend-application-bindings';
 import { KeyStoreService } from '../common/key-store';
 import { QuickPickService } from '../common/quick-pick-service';
 import { QuickPickServiceImpl } from '../browser/quick-input';
-import { BackendRequestService, RequestService } from '@theia/request';
+import { BackendRequestService, RequestService } from '@ogun/request';
 import { ConnectionStatus, ConnectionStatusService } from '../browser/connection-status-service';
 
 export { bindMessageService };

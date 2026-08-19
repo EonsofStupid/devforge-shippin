@@ -14,9 +14,9 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { BasicChannel } from '@theia/core/lib/common/message-rpc/channel';
-import { Uint8ArrayReadBuffer, Uint8ArrayWriteBuffer } from '@theia/core/lib/common/message-rpc/uint8-array-message-buffer';
-import { injectable } from '@theia/core/shared/inversify';
+import { BasicChannel } from '@ogun/core/lib/common/message-rpc/channel';
+import { Uint8ArrayReadBuffer, Uint8ArrayWriteBuffer } from '@ogun/core/lib/common/message-rpc/uint8-array-message-buffer';
+import { injectable } from '@ogun/core/shared/inversify';
 import { RPCProtocol, RPCProtocolImpl } from '../../common/rpc-protocol';
 
 @injectable()

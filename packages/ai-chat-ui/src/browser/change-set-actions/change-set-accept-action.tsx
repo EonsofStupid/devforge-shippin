@@ -14,11 +14,11 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import * as React from '@theia/core/shared/react';
-import { injectable } from '@theia/core/shared/inversify';
+import * as React from '@ogun/core/shared/react';
+import { injectable } from '@ogun/core/shared/inversify';
 import { ChangeSetActionRenderer } from './change-set-action-service';
-import { ChangeSet, ChangeSetElement } from '@theia/ai-chat';
-import { nls } from '@theia/core';
+import { ChangeSet, ChangeSetElement } from '@ogun/ai-chat';
+import { nls } from '@ogun/core';
 
 @injectable()
 export class ChangeSetAcceptAction implements ChangeSetActionRenderer {

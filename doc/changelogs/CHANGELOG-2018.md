@@ -6,7 +6,7 @@
 - [core] added a way to prevent application exit from extensions
 - [core] added functionality to prevent application exit if some editors are dirty
 - [core] allowed the ability to scope bindings per connection
-- [core] fixed `@theia/core/lib/node/debug#DEBUG_MODE` flag to correctly detect when the runtime is inspected/debugged
+- [core] fixed `@ogun/core/lib/node/debug#DEBUG_MODE` flag to correctly detect when the runtime is inspected/debugged
 - [cpp] fixed clangd being prematurely started when a build config is active
 - [electron] implemented HTTP-based authentication for Git
 - [electron] updated Electron to `^2.0.14`

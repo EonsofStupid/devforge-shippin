@@ -14,7 +14,7 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { MarkdownStringImpl } from '@theia/core/lib/common/markdown-rendering/markdown-string';
+import { MarkdownStringImpl } from '@ogun/core/lib/common/markdown-rendering/markdown-string';
 
 export { extractJsonStringField } from '../../common/toolcall-utils';
 

@@ -13,11 +13,11 @@
 //
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
-import { LogLevel, MeasurementResult } from '@theia/core';
-import { LogLevelCliContribution } from '@theia/core/lib/node/logger-cli-contribution';
-import { inject, injectable } from '@theia/core/shared/inversify';
-import { BACKEND_TELEMETRY_SESSION, TelemetryEvent } from '@theia/telemetry/lib/common';
-import { TelemetrySink } from '@theia/telemetry/lib/node';
+import { LogLevel, MeasurementResult } from '@ogun/core';
+import { LogLevelCliContribution } from '@ogun/core/lib/node/logger-cli-contribution';
+import { inject, injectable } from '@ogun/core/shared/inversify';
+import { BACKEND_TELEMETRY_SESSION, TelemetryEvent } from '@ogun/telemetry/lib/common';
+import { TelemetrySink } from '@ogun/telemetry/lib/node';
 import { MetricsContribution } from './metrics-contribution';
 
 const metricsName = 'theia_measurements';

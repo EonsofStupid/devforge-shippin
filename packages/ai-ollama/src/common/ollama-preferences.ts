@@ -14,8 +14,8 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { AI_CORE_PREFERENCES_TITLE } from '@theia/ai-core/lib/common/ai-core-preferences';
-import { PreferenceSchema } from '@theia/core/lib/common';
+import { AI_CORE_PREFERENCES_TITLE } from '@ogun/ai-core/lib/common/ai-core-preferences';
+import { PreferenceSchema } from '@ogun/core/lib/common';
 
 export const HOST_PREF = 'ai-features.ollama.ollamaHost';
 export const MODELS_PREF = 'ai-features.ollama.ollamaModels';

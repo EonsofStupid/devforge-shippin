@@ -13,12 +13,12 @@
 
 ## Description
 
-The `@theia/ai-vercel-ai` extension integrates Vercels's models with Theia AI.
+The `@ogun/ai-vercel-ai` extension integrates Vercels's models with Theia AI.
 The Vercel AI API key and the models to use can be configured via preferences.
 
 ## Additional Information
 
-- [API documentation for `@theia/ai-vercel-ai`](https://eclipse-theia.github.io/theia/docs/next/modules/_theia_ai-vercel-ai.html)
+- [API documentation for `@ogun/ai-vercel-ai`](https://eclipse-theia.github.io/theia/docs/next/modules/_theia_ai-vercel-ai.html)
 - [Theia - GitHub](https://github.com/eclipse-theia/theia)
 - [Theia - Website](https://theia-ide.org/)
 

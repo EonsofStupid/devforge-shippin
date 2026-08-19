@@ -14,12 +14,12 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { injectable, inject, interfaces } from '@theia/core/shared/inversify';
-import { DefaultDebugSessionFactory } from '@theia/debug/lib/browser/debug-session-contribution';
-import { DebugConfigurationSessionOptions } from '@theia/debug/lib/browser/debug-session-options';
-import { DebugSession, DebugSessionData } from '@theia/debug/lib/browser/debug-session';
-import { DebugSessionConnection } from '@theia/debug/lib/browser/debug-session-connection';
-import { TerminalWidgetOptions, TerminalWidget } from '@theia/terminal/lib/browser/base/terminal-widget';
+import { injectable, inject, interfaces } from '@ogun/core/shared/inversify';
+import { DefaultDebugSessionFactory } from '@ogun/debug/lib/browser/debug-session-contribution';
+import { DebugConfigurationSessionOptions } from '@ogun/debug/lib/browser/debug-session-options';
+import { DebugSession, DebugSessionData } from '@ogun/debug/lib/browser/debug-session';
+import { DebugSessionConnection } from '@ogun/debug/lib/browser/debug-session-connection';
+import { TerminalWidgetOptions, TerminalWidget } from '@ogun/terminal/lib/browser/base/terminal-widget';
 import { TerminalOptionsExt } from '../../../common/plugin-api-rpc';
 import { PluginChannel } from '../../../common/connection';
 

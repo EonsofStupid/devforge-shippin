@@ -14,8 +14,8 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { MaybePromise } from '@theia/core';
-import { WidgetOpenerOptions } from '@theia/core/lib/browser';
+import { MaybePromise } from '@ogun/core';
+import { WidgetOpenerOptions } from '@ogun/core/lib/browser';
 import { TerminalWidget } from './base/terminal-widget';
 
 /**

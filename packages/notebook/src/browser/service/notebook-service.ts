@@ -14,14 +14,14 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { Disposable, DisposableCollection, Emitter, Resource, URI, ILogger } from '@theia/core';
-import { inject, injectable, named } from '@theia/core/shared/inversify';
-import { BinaryBuffer } from '@theia/core/lib/common/buffer';
+import { Disposable, DisposableCollection, Emitter, Resource, URI, ILogger } from '@ogun/core';
+import { inject, injectable, named } from '@ogun/core/shared/inversify';
+import { BinaryBuffer } from '@ogun/core/lib/common/buffer';
 import { CellKind, NotebookData, TransientOptions } from '../../common';
 import { NotebookModel, NotebookModelFactory, NotebookModelProps } from '../view-model/notebook-model';
-import { FileService } from '@theia/filesystem/lib/browser/file-service';
+import { FileService } from '@ogun/filesystem/lib/browser/file-service';
 import { NotebookCellModel, NotebookCellModelFactory, NotebookCellModelProps } from '../view-model/notebook-cell-model';
-import { Deferred } from '@theia/core/lib/common/promise-util';
+import { Deferred } from '@ogun/core/lib/common/promise-util';
 import { NotebookMonacoTextModelService } from './notebook-monaco-text-model-service';
 import { CellEditOperation } from '../notebook-types';
 

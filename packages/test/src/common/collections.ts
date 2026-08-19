@@ -14,9 +14,9 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { Event } from '@theia/core';
+import { Event } from '@ogun/core';
 import { CollectionDelta, TreeDeltaBuilder } from './tree-delta';
-import { Emitter } from '@theia/core/shared/vscode-languageserver-protocol';
+import { Emitter } from '@ogun/core/shared/vscode-languageserver-protocol';
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 export function observableProperty(observationFunction: string): (target: any, property: string) => any {

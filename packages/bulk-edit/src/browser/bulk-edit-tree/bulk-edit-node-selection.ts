@@ -14,10 +14,10 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { SelectionService } from '@theia/core/lib/common/selection-service';
-import { SelectionCommandHandler } from '@theia/core/lib/common/selection-command-handler';
+import { SelectionService } from '@ogun/core/lib/common/selection-service';
+import { SelectionCommandHandler } from '@ogun/core/lib/common/selection-command-handler';
 import { ResourceFileEdit, ResourceTextEdit } from '@theia/monaco-editor-core/esm/vs/editor/browser/services/bulkEditService';
-import { isObject } from '@theia/core/lib/common';
+import { isObject } from '@ogun/core/lib/common';
 
 export interface BulkEditNodeSelection {
     bulkEdit: ResourceFileEdit | ResourceTextEdit;

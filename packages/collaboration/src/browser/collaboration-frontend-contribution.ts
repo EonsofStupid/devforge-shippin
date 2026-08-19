@@ -19,16 +19,16 @@ import '../../src/browser/style/index.css';
 import {
     CancellationToken, CancellationTokenSource, Command, CommandContribution, CommandRegistry, MessageService, nls, PreferenceService, Progress, QuickInputService, QuickPickItem,
     URI
-} from '@theia/core';
-import { inject, injectable, optional, postConstruct } from '@theia/core/shared/inversify';
+} from '@ogun/core';
+import { inject, injectable, optional, postConstruct } from '@ogun/core/shared/inversify';
 import { AuthMetadata, AuthProvider, ConnectionProvider, FormAuthProvider, initializeProtocol, SocketIoTransportProvider, WebAuthProvider } from 'open-collaboration-protocol';
-import { WindowService } from '@theia/core/lib/browser/window/window-service';
+import { WindowService } from '@ogun/core/lib/browser/window/window-service';
 import { CollaborationInstance, CollaborationInstanceFactory } from './collaboration-instance';
-import { EnvVariablesServer } from '@theia/core/lib/common/env-variables';
+import { EnvVariablesServer } from '@ogun/core/lib/common/env-variables';
 import { CollaborationWorkspaceService } from './collaboration-workspace-service';
-import { StatusBar, StatusBarAlignment, StatusBarEntry } from '@theia/core/lib/browser/status-bar';
-import { codiconArray } from '@theia/core/lib/browser/widgets/widget';
-import { FrontendApplicationConfigProvider } from '@theia/core/lib/browser/frontend-application-config-provider';
+import { StatusBar, StatusBarAlignment, StatusBarEntry } from '@ogun/core/lib/browser/status-bar';
+import { codiconArray } from '@ogun/core/lib/browser/widgets/widget';
+import { FrontendApplicationConfigProvider } from '@ogun/core/lib/browser/frontend-application-config-provider';
 
 initializeProtocol({
     cryptoModule: window.crypto

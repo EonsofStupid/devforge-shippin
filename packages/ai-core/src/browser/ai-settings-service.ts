@@ -13,8 +13,8 @@
 //
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
-import { DisposableCollection, Emitter, Event, ILogger, RecursiveReadonly } from '@theia/core';
-import { inject, injectable, postConstruct } from '@theia/core/shared/inversify';
+import { DisposableCollection, Emitter, Event, ILogger, RecursiveReadonly } from '@ogun/core';
+import { inject, injectable, postConstruct } from '@ogun/core/shared/inversify';
 import { AiConfigurationService, AISettings, AISettingsService, AgentSettings } from '../common';
 
 @injectable()

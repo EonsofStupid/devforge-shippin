@@ -13,21 +13,21 @@
 //
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
-import { AiConfigurationService, ToolInvocationContext, ToolProvider, ToolRequest } from '@theia/ai-core';
-import { CancellationToken, Disposable, OS, PreferenceService, URI, Path } from '@theia/core';
-import { ContributionProvider } from '@theia/core/lib/common/contribution-provider';
-import { EnvVariablesServer } from '@theia/core/lib/common/env-variables';
-import { inject, injectable, named, optional, postConstruct } from '@theia/core/shared/inversify';
-import { FileService } from '@theia/filesystem/lib/browser/file-service';
-import { FileStat, FileOperationError, FileOperationResult } from '@theia/filesystem/lib/common/files';
-import { FileSearchService } from '@theia/file-search/lib/common/file-search-service';
-import { WorkspaceService } from '@theia/workspace/lib/browser';
+import { AiConfigurationService, ToolInvocationContext, ToolProvider, ToolRequest } from '@ogun/ai-core';
+import { CancellationToken, Disposable, OS, PreferenceService, URI, Path } from '@ogun/core';
+import { ContributionProvider } from '@ogun/core/lib/common/contribution-provider';
+import { EnvVariablesServer } from '@ogun/core/lib/common/env-variables';
+import { inject, injectable, named, optional, postConstruct } from '@ogun/core/shared/inversify';
+import { FileService } from '@ogun/filesystem/lib/browser/file-service';
+import { FileStat, FileOperationError, FileOperationResult } from '@ogun/filesystem/lib/common/files';
+import { FileSearchService } from '@ogun/file-search/lib/common/file-search-service';
+import { WorkspaceService } from '@ogun/workspace/lib/browser';
 import {
     FILE_CONTENT_FUNCTION_ID, GET_FILE_DIAGNOSTICS_ID,
     GET_WORKSPACE_DIRECTORY_STRUCTURE_FUNCTION_ID,
     GET_WORKSPACE_FILE_LIST_FUNCTION_ID, FIND_FILES_BY_PATTERN_FUNCTION_ID
 } from '../common/workspace-functions';
-import { extractJsonStringField } from '@theia/ai-chat-ui/lib/browser/chat-response-renderer/toolcall-utils';
+import { extractJsonStringField } from '@ogun/ai-chat-ui/lib/browser/chat-response-renderer/toolcall-utils';
 import ignore from 'ignore';
 import { Minimatch } from 'minimatch';
 import {
@@ -36,10 +36,10 @@ import {
     FILE_CONTENT_MAX_SIZE_KB_PREF,
     USER_EXCLUDE_PATTERN_PREF
 } from '../common/workspace-preferences';
-import { MonacoWorkspace } from '@theia/monaco/lib/browser/monaco-workspace';
-import { MonacoTextModelService } from '@theia/monaco/lib/browser/monaco-text-model-service';
-import { ProblemManager } from '@theia/markers/lib/browser';
-import { DiagnosticSeverity, Range } from '@theia/core/shared/vscode-languageserver-protocol';
+import { MonacoWorkspace } from '@ogun/monaco/lib/browser/monaco-workspace';
+import { MonacoTextModelService } from '@ogun/monaco/lib/browser/monaco-text-model-service';
+import { ProblemManager } from '@ogun/markers/lib/browser';
+import { DiagnosticSeverity, Range } from '@ogun/core/shared/vscode-languageserver-protocol';
 
 export const AccessibleRootContribution = Symbol('AccessibleRootContribution');
 

@@ -14,18 +14,18 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { injectable, inject } from '@theia/core/shared/inversify';
-import { environment } from '@theia/core/shared/@theia/application-package/lib/environment';
-import { KeybindingContribution, KeybindingRegistry, OpenerService, LabelProvider } from '@theia/core/lib/browser';
-import { QuickAccessContribution, QuickAccessProvider, QuickInputService, QuickAccessRegistry, QuickPicks, QuickPickItem, findMatches } from '@theia/core/lib/browser/quick-input';
+import { injectable, inject } from '@ogun/core/shared/inversify';
+import { environment } from '@ogun/core/shared/@ogun/application-package/lib/environment';
+import { KeybindingContribution, KeybindingRegistry, OpenerService, LabelProvider } from '@ogun/core/lib/browser';
+import { QuickAccessContribution, QuickAccessProvider, QuickInputService, QuickAccessRegistry, QuickPicks, QuickPickItem, findMatches } from '@ogun/core/lib/browser/quick-input';
 import {
     CommandRegistry, CommandHandler, Command, SelectionService, CancellationToken,
     CommandContribution, MenuContribution, MenuModelRegistry, nls
-} from '@theia/core/lib/common';
-import { Range, Position, SymbolInformation, WorkspaceSymbolParams } from '@theia/core/shared/vscode-languageserver-protocol';
+} from '@ogun/core/lib/common';
+import { Range, Position, SymbolInformation, WorkspaceSymbolParams } from '@ogun/core/shared/vscode-languageserver-protocol';
 import { MonacoLanguages, WorkspaceSymbolProvider } from './monaco-languages';
-import URI from '@theia/core/lib/common/uri';
-import { EditorMainMenu } from '@theia/editor/lib/browser';
+import URI from '@ogun/core/lib/common/uri';
+import { EditorMainMenu } from '@ogun/editor/lib/browser';
 
 @injectable()
 export class WorkspaceSymbolCommand implements QuickAccessProvider, CommandContribution, KeybindingContribution, MenuContribution, CommandHandler, QuickAccessContribution {

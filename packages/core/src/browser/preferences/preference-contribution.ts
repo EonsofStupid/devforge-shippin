@@ -17,7 +17,7 @@
 import { interfaces } from 'inversify';
 import { bindRootContributionProvider, PreferenceProvider } from '../../common';
 import { PreferenceScope, ValidPreferenceScopes } from '../../common/preferences/preference-scope';
-import { FrontendApplicationConfig } from '@theia/application-package/lib/application-props';
+import { FrontendApplicationConfig } from '@ogun/application-package/lib/application-props';
 import { isObject } from '../../common/types';
 import { PreferenceSchemaServiceImpl } from '../../common/preferences/preference-schema-service';
 import { PreferenceContribution, PreferenceSchemaService } from '../../common/preferences/preference-schema';

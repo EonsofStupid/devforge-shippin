@@ -1,5 +1,5 @@
 {
-  "name": "@theia/terminal-manager",
+  "name": "@ogun/terminal-manager",
   "version": "1.74.0",
   "description": "Theia - Terminal Manager Extension",
   "keywords": [
@@ -24,9 +24,9 @@
     "watch": "theiaext watch"
   },
   "dependencies": {
-    "@theia/core": "1.74.0",
-    "@theia/preferences": "1.74.0",
-    "@theia/terminal": "1.74.0"
+    "@ogun/core": "1.74.0",
+    "@ogun/preferences": "1.74.0",
+    "@ogun/terminal": "1.74.0"
   },
   "theiaExtensions": [
     {

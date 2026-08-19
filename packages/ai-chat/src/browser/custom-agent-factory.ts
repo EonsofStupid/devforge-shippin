@@ -14,7 +14,7 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { CustomAgentPromptVariant } from '@theia/ai-core';
+import { CustomAgentPromptVariant } from '@ogun/ai-core';
 import { CustomChatAgent } from '../common';
 
 export const CustomAgentFactory = Symbol('CustomAgentFactory');

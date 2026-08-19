@@ -13,7 +13,7 @@
 An example demonstrating three Theia concepts:
 
 - "headless plugins", being plugins loaded in a single plugin host Node process outside of the context of any frontend connection
-- client of a custom "Greeting of the Day" API provided by the `@theia/api-provider-sample` extension
+- client of a custom "Greeting of the Day" API provided by the `@ogun/api-provider-sample` extension
 - "backend plugins", being plugins loaded in the backend plugin host process for a frontend connection
 
 Thus this plug-in demonstrates the capability of a VS Code-compatible plugin to provide two distinct backend entry-points for the two different backend contexts.

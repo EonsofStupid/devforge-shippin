@@ -14,9 +14,9 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { ContributionProvider, ILogger } from '@theia/core/lib/common';
-import { BackendApplicationContribution } from '@theia/core/lib/node/backend-application';
-import { inject, injectable, named, postConstruct } from '@theia/core/shared/inversify';
+import { ContributionProvider, ILogger } from '@ogun/core/lib/common';
+import { BackendApplicationContribution } from '@ogun/core/lib/node/backend-application';
+import { inject, injectable, named, postConstruct } from '@ogun/core/shared/inversify';
 import { TelemetryConsentProvider, isKindAllowedByLevel } from '../common/telemetry-consent-provider';
 import { TELEMETRY_FILTERS, TelemetryPreferences } from '../common/telemetry-preferences';
 import {

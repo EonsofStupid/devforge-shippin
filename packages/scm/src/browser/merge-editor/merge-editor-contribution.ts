@@ -14,9 +14,9 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { inject, injectable } from '@theia/core/shared/inversify';
-import { Command, CommandContribution, CommandRegistry, MenuContribution, MenuModelRegistry, nls } from '@theia/core';
-import { TabBarToolbarContribution, TabBarToolbarRegistry } from '@theia/core/lib/browser/shell/tab-bar-toolbar';
+import { inject, injectable } from '@ogun/core/shared/inversify';
+import { Command, CommandContribution, CommandRegistry, MenuContribution, MenuModelRegistry, nls } from '@ogun/core';
+import { TabBarToolbarContribution, TabBarToolbarRegistry } from '@ogun/core/lib/browser/shell/tab-bar-toolbar';
 import {
     ApplicationShell,
     codicon,
@@ -25,10 +25,10 @@ import {
     KeybindingContribution,
     KeybindingRegistry,
     LabelProvider
-} from '@theia/core/lib/browser';
-import { ColorContribution } from '@theia/core/lib/browser/color-application-contribution';
-import { ColorRegistry } from '@theia/core/lib/browser/color-registry';
-import { Color } from '@theia/core/lib/common/color';
+} from '@ogun/core/lib/browser';
+import { ColorContribution } from '@ogun/core/lib/browser/color-application-contribution';
+import { ColorRegistry } from '@ogun/core/lib/browser/color-registry';
+import { Color } from '@ogun/core/lib/common/color';
 import { ScmColors } from '../scm-colors';
 import { MergeEditor, MergeEditorSettings } from './merge-editor';
 

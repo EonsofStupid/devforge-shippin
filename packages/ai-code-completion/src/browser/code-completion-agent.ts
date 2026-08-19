@@ -14,16 +14,16 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { LanguageModelService } from '@theia/ai-core/lib/browser';
+import { LanguageModelService } from '@ogun/ai-core/lib/browser';
 import {
     Agent, AgentSpecificVariables, getTextOfResponse,
     LanguageModelRegistry, LanguageModelRequirement, PromptService,
     PromptVariantSet,
     UserRequest
-} from '@theia/ai-core/lib/common';
-import { generateUuid, ILogger, nls, ProgressService } from '@theia/core';
-import { FrontendApplicationConfigProvider } from '@theia/core/lib/browser/frontend-application-config-provider';
-import { inject, injectable, named } from '@theia/core/shared/inversify';
+} from '@ogun/ai-core/lib/common';
+import { generateUuid, ILogger, nls, ProgressService } from '@ogun/core';
+import { FrontendApplicationConfigProvider } from '@ogun/core/lib/browser/frontend-application-config-provider';
+import { inject, injectable, named } from '@ogun/core/shared/inversify';
 import * as monaco from '@theia/monaco-editor-core';
 import { codeCompletionPrompts } from './code-completion-prompt-template';
 import { CodeCompletionPostProcessor } from './code-completion-postprocessor';

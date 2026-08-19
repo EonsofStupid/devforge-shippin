@@ -14,7 +14,7 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { nls, PreferenceSchema } from '@theia/core';
+import { nls, PreferenceSchema } from '@ogun/core';
 
 export const MCP_SERVERS_PREF = 'ai-features.mcp.mcpServers';
 export const MCP_USE_WORKSPACE_AS_ROOT_PREF = 'ai-features.mcp.useWorkspaceAsRoot';
@@ -185,7 +185,7 @@ Example configuration:\n\
                         type: 'object',
                         title: nls.localize('theia/ai/mcp/servers/registryMetadata/title', 'Registry Metadata'),
                         markdownDescription: nls.localize('theia/ai/mcp/servers/registryMetadata/mdDescription',
-                            'Provenance metadata for a server installed from an AI registry. Written by `@theia/ai-registry`; not user-editable.'),
+                            'Provenance metadata for a server installed from an AI registry. Written by `@ogun/ai-registry`; not user-editable.'),
                         properties: {
                             serverId: {
                                 type: 'string',

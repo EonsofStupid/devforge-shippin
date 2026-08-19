@@ -14,8 +14,8 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { ContainerModule } from '@theia/core/shared/inversify';
-import { TextReplacementContribution } from '@theia/core/lib/browser/preload/text-replacement-contribution';
+import { ContainerModule } from '@ogun/core/shared/inversify';
+import { TextReplacementContribution } from '@ogun/core/lib/browser/preload/text-replacement-contribution';
 import { TextSampleReplacementContribution } from './preload/text-replacement-sample';
 
 export default new ContainerModule(bind => {

@@ -14,12 +14,12 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { ILogger } from '@theia/core';
-import { OpenerService } from '@theia/core/lib/browser';
-import URI from '@theia/core/lib/common/uri';
-import { inject, injectable } from '@theia/core/shared/inversify';
-import { Position } from '@theia/editor/lib/browser';
-import { FileService } from '@theia/filesystem/lib/browser/file-service';
+import { ILogger } from '@ogun/core';
+import { OpenerService } from '@ogun/core/lib/browser';
+import URI from '@ogun/core/lib/common/uri';
+import { inject, injectable } from '@ogun/core/shared/inversify';
+import { Position } from '@ogun/editor/lib/browser';
+import { FileService } from '@ogun/filesystem/lib/browser/file-service';
 import { TerminalWidget } from './base/terminal-widget';
 import { TerminalLink, TerminalLinkProvider } from './terminal-link-provider';
 

@@ -14,9 +14,9 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { inject, injectable, interfaces } from '@theia/core/shared/inversify';
-import { VSXEnvironment } from '@theia/vsx-registry/lib/common/vsx-environment';
-import { Command, CommandContribution, CommandRegistry, MessageService } from '@theia/core/lib/common';
+import { inject, injectable, interfaces } from '@ogun/core/shared/inversify';
+import { VSXEnvironment } from '@ogun/vsx-registry/lib/common/vsx-environment';
+import { Command, CommandContribution, CommandRegistry, MessageService } from '@ogun/core/lib/common';
 
 @injectable()
 export class VSXCommandContribution implements CommandContribution {

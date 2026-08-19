@@ -14,8 +14,8 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import * as React from '@theia/core/shared/react';
-import { injectable, interfaces, Container, postConstruct, inject } from '@theia/core/shared/inversify';
+import * as React from '@ogun/core/shared/react';
+import { injectable, interfaces, Container, postConstruct, inject } from '@ogun/core/shared/inversify';
 import {
     ApplicationShell,
     codicon,
@@ -33,15 +33,15 @@ import {
     TreeWidget,
     TREE_NODE_CONTENT_CLASS,
     Widget,
-} from '@theia/core/lib/browser';
+} from '@ogun/core/lib/browser';
 import { OpenEditorNode, OpenEditorsModel } from './navigator-open-editors-tree-model';
-import { createFileTreeContainer, FileTreeModel, FileTreeWidget } from '@theia/filesystem/lib/browser';
+import { createFileTreeContainer, FileTreeModel, FileTreeWidget } from '@ogun/filesystem/lib/browser';
 import { OpenEditorsTreeDecoratorService } from './navigator-open-editors-decorator-service';
 import { OPEN_EDITORS_CONTEXT_MENU } from './navigator-open-editors-menus';
-import { CommandService } from '@theia/core/lib/common';
+import { CommandService } from '@ogun/core/lib/common';
 import { OpenEditorsCommands } from './navigator-open-editors-commands';
-import { nls } from '@theia/core/lib/common/nls';
-import { WorkspaceService } from '@theia/workspace/lib/browser';
+import { nls } from '@ogun/core/lib/common/nls';
+import { WorkspaceService } from '@ogun/workspace/lib/browser';
 import { AbstractNavigatorTreeWidget } from '../abstract-navigator-tree-widget';
 
 export const OPEN_EDITORS_PROPS: TreeProps = {

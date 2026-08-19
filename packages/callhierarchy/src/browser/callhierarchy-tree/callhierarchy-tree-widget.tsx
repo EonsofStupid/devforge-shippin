@@ -14,20 +14,20 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { injectable, inject } from '@theia/core/shared/inversify';
+import { injectable, inject } from '@ogun/core/shared/inversify';
 import {
     ContextMenuRenderer, TreeWidget, NodeProps, TreeProps, TreeNode,
     TreeModel, DockPanel, codicon
-} from '@theia/core/lib/browser';
-import { LabelProvider } from '@theia/core/lib/browser/label-provider';
+} from '@ogun/core/lib/browser';
+import { LabelProvider } from '@ogun/core/lib/browser/label-provider';
 import { ItemNode, CallerNode } from './callhierarchy-tree';
 import { CallHierarchyTreeModel } from './callhierarchy-tree-model';
 import { CALLHIERARCHY_ID, CallHierarchyItem, CallHierarchyIncomingCall, CALL_HIERARCHY_LABEL } from '../callhierarchy';
-import URI from '@theia/core/lib/common/uri';
-import { Location, Range, SymbolKind, DocumentUri, SymbolTag } from '@theia/core/shared/vscode-languageserver-protocol';
-import { EditorManager } from '@theia/editor/lib/browser';
-import { nls } from '@theia/core/lib/common/nls';
-import * as React from '@theia/core/shared/react';
+import URI from '@ogun/core/lib/common/uri';
+import { Location, Range, SymbolKind, DocumentUri, SymbolTag } from '@ogun/core/shared/vscode-languageserver-protocol';
+import { EditorManager } from '@ogun/editor/lib/browser';
+import { nls } from '@ogun/core/lib/common/nls';
+import * as React from '@ogun/core/shared/react';
 
 export const HIERARCHY_TREE_CLASS = 'theia-CallHierarchyTree';
 export const DEFINITION_NODE_CLASS = 'theia-CallHierarchyTreeNode';

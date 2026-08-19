@@ -14,10 +14,10 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { Command, isObject, MenuPath, nls } from '@theia/core';
-import { CommonCommands } from '@theia/core/lib/browser';
-import URI from '@theia/core/lib/common/uri';
-import { UserStorageUri } from '@theia/userstorage/lib/browser';
+import { Command, isObject, MenuPath, nls } from '@ogun/core';
+import { CommonCommands } from '@ogun/core/lib/browser';
+import URI from '@ogun/core/lib/common/uri';
+import { UserStorageUri } from '@ogun/userstorage/lib/browser';
 
 export namespace ToolbarCommands {
     export const TOGGLE_TOOLBAR = Command.toLocalizedCommand({

@@ -17,8 +17,8 @@
 import * as monaco from '@theia/monaco-editor-core';
 import { StandaloneCodeEditor } from '@theia/monaco-editor-core/esm/vs/editor/standalone/browser/standaloneCodeEditor';
 import { type ILineChange } from '@theia/monaco-editor-core/esm/vs/editor/common/diff/legacyLinesDiffComputer';
-import { Disposable, DisposableCollection } from '@theia/core/lib/common/disposable';
-import { MonacoEditor } from '@theia/monaco/lib/browser/monaco-editor';
+import { Disposable, DisposableCollection } from '@ogun/core/lib/common/disposable';
+import { MonacoEditor } from '@ogun/monaco/lib/browser/monaco-editor';
 import {
     TextEditorConfiguration,
     EditorChangedPropertiesData,
@@ -31,11 +31,11 @@ import {
     DecorationOptions
 } from '../../common/plugin-api-rpc';
 import { Range } from '../../common/plugin-api-rpc-model';
-import { Emitter, Event } from '@theia/core';
+import { Emitter, Event } from '@ogun/core';
 import { TextEditorCursorStyle, cursorStyleToString } from '../../common/editor-options';
 import { TextEditorLineNumbersStyle, EndOfLine } from '../../plugin/types-impl';
-import { SimpleMonacoEditor } from '@theia/monaco/lib/browser/simple-monaco-editor';
-import { MonacoDiffEditor } from '@theia/monaco/lib/browser/monaco-diff-editor';
+import { SimpleMonacoEditor } from '@ogun/monaco/lib/browser/simple-monaco-editor';
+import { MonacoDiffEditor } from '@ogun/monaco/lib/browser/monaco-diff-editor';
 import { EndOfLineSequence, ITextModel } from '@theia/monaco-editor-core/esm/vs/editor/common/model';
 import { EditorOption, RenderLineNumbersType } from '@theia/monaco-editor-core/esm/vs/editor/common/config/editorOptions';
 

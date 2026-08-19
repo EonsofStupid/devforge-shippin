@@ -14,10 +14,10 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { injectable, inject } from '@theia/core/shared/inversify';
-import { ApplicationShell, FrontendApplicationContribution } from '@theia/core/lib/browser';
-import { NavigationLocationService } from '@theia/editor/lib/browser/navigation/navigation-location-service';
-import { NavigationLocation } from '@theia/editor/lib/browser/navigation/navigation-location';
+import { injectable, inject } from '@ogun/core/shared/inversify';
+import { ApplicationShell, FrontendApplicationContribution } from '@ogun/core/lib/browser';
+import { NavigationLocationService } from '@ogun/editor/lib/browser/navigation/navigation-location-service';
+import { NavigationLocation } from '@ogun/editor/lib/browser/navigation/navigation-location';
 import { CustomEditorWidget } from './custom-editor-widget';
 
 @injectable()

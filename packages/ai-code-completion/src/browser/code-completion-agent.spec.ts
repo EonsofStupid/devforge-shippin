@@ -14,12 +14,12 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { enableJSDOM } from '@theia/core/lib/browser/test/jsdom';
+import { enableJSDOM } from '@ogun/core/lib/browser/test/jsdom';
 let disableJSDOM = enableJSDOM();
-import { FrontendApplicationConfigProvider } from '@theia/core/lib/browser/frontend-application-config-provider';
+import { FrontendApplicationConfigProvider } from '@ogun/core/lib/browser/frontend-application-config-provider';
 FrontendApplicationConfigProvider.set({});
 
-import { UserRequest } from '@theia/ai-core/lib/common';
+import { UserRequest } from '@ogun/ai-core/lib/common';
 import { expect } from 'chai';
 import * as sinon from 'sinon';
 import { CancellationTokenSource, editor, IRange, languages, Position, Uri } from '@theia/monaco-editor-core/esm/vs/editor/editor.api';

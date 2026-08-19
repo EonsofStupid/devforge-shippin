@@ -14,9 +14,9 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { injectable, inject } from '@theia/core/shared/inversify';
-import { Emitter } from '@theia/core/lib/common/event';
-import { StorageService } from '@theia/core/lib/browser/storage-service';
+import { injectable, inject } from '@ogun/core/shared/inversify';
+import { Emitter } from '@ogun/core/lib/common/event';
+import { StorageService } from '@ogun/core/lib/browser/storage-service';
 
 @injectable()
 export class DebugWatchManager {

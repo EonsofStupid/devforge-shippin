@@ -14,9 +14,9 @@
  * SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
  ********************************************************************************/
 
-import { nls } from '@theia/core';
-import { BaseWidget, PanelLayout } from '@theia/core/lib/browser';
-import { Container, inject, injectable, interfaces, postConstruct } from '@theia/core/shared/inversify';
+import { nls } from '@ogun/core';
+import { BaseWidget, PanelLayout } from '@ogun/core/lib/browser';
+import { Container, inject, injectable, interfaces, postConstruct } from '@ogun/core/shared/inversify';
 import { MemoryWidgetOptions } from '../utils/memory-widget-utils';
 import { MemoryOptionsWidget } from './memory-options-widget';
 import { MemoryTableWidget } from './memory-table-widget';

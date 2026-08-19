@@ -14,16 +14,16 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 import * as Docker from 'dockerode';
-import { inject, injectable, interfaces } from '@theia/core/shared/inversify';
+import { inject, injectable, interfaces } from '@ogun/core/shared/inversify';
 import { ContainerCreationContribution } from '../docker-container-service';
 import { DevContainerConfiguration, DockerfileContainer, ImageContainer, NonComposeContainerBase } from '../devcontainer-file';
-import { ILogger, Path } from '@theia/core';
+import { ILogger, Path } from '@ogun/core';
 import { ContainerOutputProvider } from '../../electron-common/container-output-provider';
-import * as fs from '@theia/core/shared/fs-extra';
+import * as fs from '@ogun/core/shared/fs-extra';
 import * as os from 'os';
 import * as path from 'path';
 import * as cp from 'child_process';
-import { ForwardedPort, RemotePortForwardingProvider } from '@theia/remote/lib/electron-common/remote-port-forwarding-provider';
+import { ForwardedPort, RemotePortForwardingProvider } from '@ogun/remote/lib/electron-common/remote-port-forwarding-provider';
 import { RemoteDockerContainerConnection } from '../remote-docker-container-connection';
 import { WorkspaceCreationContribution } from './workspace-creation-contribution';
 import { parseWorkspaceMount } from '../dockerode-utils';

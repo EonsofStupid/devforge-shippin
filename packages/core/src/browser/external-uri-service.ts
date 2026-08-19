@@ -14,7 +14,7 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { environment } from '@theia/application-package/lib/environment';
+import { environment } from '@ogun/application-package/lib/environment';
 import { injectable } from 'inversify';
 import { MaybePromise } from '../common/types';
 import URI from '../common/uri';

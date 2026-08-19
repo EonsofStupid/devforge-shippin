@@ -20,17 +20,17 @@ import {
     ChatResponseContent,
     MutableChatRequestModel,
     SerializableChatResponseContentData,
-} from '@theia/ai-chat';
+} from '@ogun/ai-chat';
 import {
     ChatContentDeserializerContribution,
     ChatContentDeserializerRegistry
-} from '@theia/ai-chat/lib/common/chat-content-deserializer';
-import { ChatResponsePartRenderer } from '@theia/ai-chat-ui/lib/browser/chat-response-part-renderer';
-import { ResponseNode } from '@theia/ai-chat-ui/lib/browser/chat-tree-view';
-import { Agent } from '@theia/ai-core';
-import { injectable, interfaces } from '@theia/core/shared/inversify';
-import * as React from '@theia/core/shared/react';
-import { ReactNode } from '@theia/core/shared/react';
+} from '@ogun/ai-chat/lib/common/chat-content-deserializer';
+import { ChatResponsePartRenderer } from '@ogun/ai-chat-ui/lib/browser/chat-response-part-renderer';
+import { ResponseNode } from '@ogun/ai-chat-ui/lib/browser/chat-tree-view';
+import { Agent } from '@ogun/ai-core';
+import { injectable, interfaces } from '@ogun/core/shared/inversify';
+import * as React from '@ogun/core/shared/react';
+import { ReactNode } from '@ogun/core/shared/react';
 
 export function bindCustomResponseContentRendererContribution(bind: interfaces.Bind): void {
     bind(CustomResponseContentRendererAgent).toSelf().inSingletonScope();

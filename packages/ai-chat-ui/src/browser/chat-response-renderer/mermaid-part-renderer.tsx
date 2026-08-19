@@ -14,14 +14,14 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { ChatResponseContent, CodeChatResponseContent } from '@theia/ai-chat/lib/common';
-import { UntitledResourceResolver } from '@theia/core';
-import { ClipboardService } from '@theia/core/lib/browser/clipboard-service';
-import { ThemeService } from '@theia/core/lib/browser/theming';
-import { inject, injectable } from '@theia/core/shared/inversify';
-import * as React from '@theia/core/shared/react';
-import { ReactNode } from '@theia/core/shared/react';
-import { MonacoEditorProvider } from '@theia/monaco/lib/browser/monaco-editor-provider';
+import { ChatResponseContent, CodeChatResponseContent } from '@ogun/ai-chat/lib/common';
+import { UntitledResourceResolver } from '@ogun/core';
+import { ClipboardService } from '@ogun/core/lib/browser/clipboard-service';
+import { ThemeService } from '@ogun/core/lib/browser/theming';
+import { inject, injectable } from '@ogun/core/shared/inversify';
+import * as React from '@ogun/core/shared/react';
+import { ReactNode } from '@ogun/core/shared/react';
+import { MonacoEditorProvider } from '@ogun/monaco/lib/browser/monaco-editor-provider';
 import { ChatResponsePartRenderer } from '../chat-response-part-renderer';
 import { ResponseNode } from '../chat-tree-view/chat-view-tree-widget';
 import { MermaidViewer } from './mermaid-rendering';

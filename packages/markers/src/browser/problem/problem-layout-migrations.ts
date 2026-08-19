@@ -14,8 +14,8 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { injectable } from '@theia/core/shared/inversify';
-import { ApplicationShellLayoutMigration, WidgetDescription } from '@theia/core/lib/browser/shell/shell-layout-restorer';
+import { injectable } from '@ogun/core/shared/inversify';
+import { ApplicationShellLayoutMigration, WidgetDescription } from '@ogun/core/lib/browser/shell/shell-layout-restorer';
 import { PROBLEM_KIND } from '../../common/problem-marker';
 import { PROBLEMS_WIDGET_ID } from './problem-widget';
 

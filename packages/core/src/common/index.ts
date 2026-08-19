@@ -14,7 +14,7 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-export { environment } from '@theia/application-package/lib/environment';
+export { environment } from '@ogun/application-package/lib/environment';
 export * from './application-error';
 export * from './cancellation';
 export * from './command';

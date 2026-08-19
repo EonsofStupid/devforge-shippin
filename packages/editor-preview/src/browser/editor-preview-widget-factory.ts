@@ -14,11 +14,11 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import URI from '@theia/core/lib/common/uri';
-import { EditorWidgetFactory } from '@theia/editor/lib/browser/editor-widget-factory';
-import { injectable } from '@theia/core/shared/inversify';
+import URI from '@ogun/core/lib/common/uri';
+import { EditorWidgetFactory } from '@ogun/editor/lib/browser/editor-widget-factory';
+import { injectable } from '@ogun/core/shared/inversify';
 import { EditorPreviewWidget } from './editor-preview-widget';
-import { NavigatableWidgetOptions } from '@theia/core/lib/browser';
+import { NavigatableWidgetOptions } from '@ogun/core/lib/browser';
 
 export interface EditorPreviewOptions extends NavigatableWidgetOptions {
     preview?: boolean;

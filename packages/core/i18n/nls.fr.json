@@ -1410,7 +1410,7 @@
               "mdDescription": "Hachage du contenu de l'autorisation du registre utilisée pour installer ce serveur.",
               "title": "Hachage de la configuration du registre"
             },
-            "mdDescription": "Métadonnées de provenance pour un serveur installé à partir d'un registre d'IA. Rédigées par `@theia/ai-registry` ; non modifiables par l'utilisateur.",
+            "mdDescription": "Métadonnées de provenance pour un serveur installé à partir d'un registre d'IA. Rédigées par `@ogun/ai-registry` ; non modifiables par l'utilisateur.",
             "serverId": {
               "mdDescription": "Identifie l'entrée de registre IA à partir de laquelle ce serveur a été installé.",
               "title": "Identifiant du serveur de registre"

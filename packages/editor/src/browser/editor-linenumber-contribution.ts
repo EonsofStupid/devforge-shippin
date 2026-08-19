@@ -16,10 +16,10 @@
 
 import { EditorManager } from './editor-manager';
 import { EditorMouseEvent, MouseTargetType, Position, TextEditor } from './editor';
-import { injectable, inject } from '@theia/core/shared/inversify';
-import { FrontendApplicationContribution, ContextMenuRenderer, isContextMenuEvent } from '@theia/core/lib/browser';
-import { ContextKeyService } from '@theia/core/lib/browser/context-key-service';
-import { Disposable, DisposableCollection, MenuPath } from '@theia/core';
+import { injectable, inject } from '@ogun/core/shared/inversify';
+import { FrontendApplicationContribution, ContextMenuRenderer, isContextMenuEvent } from '@ogun/core/lib/browser';
+import { ContextKeyService } from '@ogun/core/lib/browser/context-key-service';
+import { Disposable, DisposableCollection, MenuPath } from '@ogun/core';
 import { EditorWidget } from './editor-widget';
 
 export const EDITOR_LINENUMBER_CONTEXT_MENU: MenuPath = ['editor_linenumber_context_menu'];

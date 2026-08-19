@@ -20,7 +20,7 @@
  *--------------------------------------------------------------------------------------------*/
 // code copied and modified from https://github.com/microsoft/vscode/blob/1.77.0/src/vscode-dts/vscode.proposed.editSessionIdentityProvider.d.ts
 
-export module '@theia/plugin' {
+export module '@ogun/plugin' {
 
     // https://github.com/microsoft/vscode/issues/157734
 

@@ -14,14 +14,14 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { inject, injectable, postConstruct } from '@theia/core/shared/inversify';
-import { RPCProtocol } from '@theia/plugin-ext/lib/common/rpc-protocol';
-import { Plugin } from '@theia/plugin-ext/lib/common/plugin-api-rpc';
+import { inject, injectable, postConstruct } from '@ogun/core/shared/inversify';
+import { RPCProtocol } from '@ogun/plugin-ext/lib/common/rpc-protocol';
+import { Plugin } from '@ogun/plugin-ext/lib/common/plugin-api-rpc';
 import type * as gotd from '../gotd';
 import { GreetingKind, GreetingExt, MAIN_RPC_CONTEXT } from '../common/plugin-api-rpc';
 import { GreetingExtImpl } from './greeting-ext-impl';
-import { Disposable, DisposableCollection } from '@theia/core';
-import { PluginContainerModule } from '@theia/plugin-ext/lib/plugin/node/plugin-container-module';
+import { Disposable, DisposableCollection } from '@ogun/core';
+import { PluginContainerModule } from '@ogun/plugin-ext/lib/plugin/node/plugin-container-module';
 
 // This script is responsible for creating and returning the extension's
 // custom API object when a plugin's module imports it. Keep in mind that
@@ -36,7 +36,7 @@ const GotdApiFactory = Symbol('GotdApiFactory');
 // This is called when the plugin-host process is forked.
 export const containerModule = PluginContainerModule.create(({ bind, bindApiFactory }) => {
     bind(GreetingExt).to(GreetingExtImpl).inSingletonScope();
-    bindApiFactory('@theia/api-provider-sample', GotdApiFactory, GotdApiFactoryImpl);
+    bindApiFactory('@ogun/api-provider-sample', GotdApiFactory, GotdApiFactoryImpl);
 });
 
 // Creates the Greeting of the Day API object

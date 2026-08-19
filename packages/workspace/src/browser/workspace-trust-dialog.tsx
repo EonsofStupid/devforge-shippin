@@ -14,11 +14,11 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { nls } from '@theia/core';
-import { codicon } from '@theia/core/lib/browser';
-import { ReactDialog } from '@theia/core/lib/browser/dialogs/react-dialog';
-import * as React from '@theia/core/shared/react';
-import URI from '@theia/core/lib/common/uri';
+import { nls } from '@ogun/core';
+import { codicon } from '@ogun/core/lib/browser';
+import { ReactDialog } from '@ogun/core/lib/browser/dialogs/react-dialog';
+import * as React from '@ogun/core/shared/react';
+import URI from '@ogun/core/lib/common/uri';
 
 export class WorkspaceTrustDialog extends ReactDialog<boolean> {
     protected confirmed = true;

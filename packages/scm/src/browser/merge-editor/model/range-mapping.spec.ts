@@ -20,7 +20,7 @@
 // copied and modified from https://github.com/microsoft/vscode/blob/1.96.3/src/vs/workbench/contrib/mergeEditor/test/browser/mapping.test.ts
 
 import { expect } from 'chai';
-import { Range } from '@theia/core/shared/vscode-languageserver-protocol';
+import { Range } from '@ogun/core/shared/vscode-languageserver-protocol';
 import { DocumentRangeMap, RangeMapping } from './range-mapping';
 
 describe('document-range-map', () => {

@@ -14,10 +14,10 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import * as React from '@theia/core/shared/react';
-import * as DOMPurify from '@theia/core/shared/dompurify';
+import * as React from '@ogun/core/shared/react';
+import * as DOMPurify from '@ogun/core/shared/dompurify';
 import { ConsoleItem } from './console-session';
-import { Severity } from '@theia/core/lib/common/severity';
+import { Severity } from '@ogun/core/lib/common/severity';
 import Anser = require('anser');
 
 export class AnsiConsoleItem implements ConsoleItem {

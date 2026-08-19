@@ -28,17 +28,17 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 /* eslint-disable @typescript-eslint/tslint/config */
 
-import { Emitter, Event as EventNamespace, WaitUntilEvent, AsyncEmitter, WaitUntilData } from '@theia/core/lib/common/event';
-import { GLOB_SPLIT, GLOBSTAR, parse } from '@theia/core/lib/common/glob';
+import { Emitter, Event as EventNamespace, WaitUntilEvent, AsyncEmitter, WaitUntilData } from '@ogun/core/lib/common/event';
+import { GLOB_SPLIT, GLOBSTAR, parse } from '@ogun/core/lib/common/glob';
 import { UriComponents } from '../common/uri-components';
 import { Disposable, RelativePattern, URI, WorkspaceEdit } from './types-impl';
 import { EditorsAndDocumentsExtImpl as ExtHostDocumentsAndEditors } from './editors-and-documents';
 import { WorkspaceExtImpl as ExtHostWorkspace } from './workspace';
-import type * as vscode from '@theia/plugin';
+import type * as vscode from '@ogun/plugin';
 import * as typeConverter from './type-converters';
-import { FileOperation } from '@theia/filesystem/lib/common/files';
+import { FileOperation } from '@ogun/filesystem/lib/common/files';
 import { flatten } from '../common/arrays';
-import { CancellationToken } from '@theia/core/lib/common/cancellation';
+import { CancellationToken } from '@ogun/core/lib/common/cancellation';
 import {
     Plugin, TextEditorsMain as MainThreadTextEditorsShape, PLUGIN_RPC_CONTEXT, FileSystemEvents, ExtHostFileSystemEventServiceShape,
     WorkspaceFileEditDto, WorkspaceTextEditDto

@@ -14,10 +14,10 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { inject, injectable } from '@theia/core/shared/inversify';
-import { Event, nls } from '@theia/core';
-import { TreeElement } from '@theia/core/lib/browser/source-tree';
-import { PluginIdentifiers } from '@theia/plugin-ext';
+import { inject, injectable } from '@ogun/core/shared/inversify';
+import { Event, nls } from '@ogun/core';
+import { TreeElement } from '@ogun/core/lib/browser/source-tree';
+import { PluginIdentifiers } from '@ogun/plugin-ext';
 import { ExtensionsSourceContribution, SearchResult } from './extensions-source-contribution';
 import { VSXExtension } from './vsx-extension';
 import { VSXExtensionsModel } from './vsx-extensions-model';

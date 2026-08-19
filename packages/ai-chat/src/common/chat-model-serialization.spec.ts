@@ -18,7 +18,7 @@ import { expect } from 'chai';
 import { ChatAgentLocation } from './chat-agents';
 import { MutableChatModel } from './chat-model';
 import { ParsedChatRequest, ParsedChatRequestTextPart, ParsedChatRequestVariablePart, ParsedChatRequestFunctionPart, ParsedChatRequestAgentPart } from './parsed-chat-request';
-import { ToolRequest } from '@theia/ai-core';
+import { ToolRequest } from '@ogun/ai-core';
 import { SerializableTextPart, SerializableVariablePart, SerializableFunctionPart, SerializableAgentPart } from './chat-model-serialization';
 
 describe('ChatModel Serialization and Restoration', () => {

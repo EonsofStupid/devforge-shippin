@@ -14,8 +14,8 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { CommonCommands } from '@theia/core/lib/browser';
-import { Command } from '@theia/core/lib/common';
+import { CommonCommands } from '@ogun/core/lib/browser';
+import { Command } from '@ogun/core/lib/common';
 
 export namespace OpenEditorsCommands {
     export const CLOSE_ALL_TABS_FROM_TOOLBAR = Command.toDefaultLocalizedCommand({

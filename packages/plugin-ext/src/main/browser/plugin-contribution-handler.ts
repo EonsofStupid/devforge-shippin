@@ -14,9 +14,9 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { injectable, inject, named } from '@theia/core/shared/inversify';
+import { injectable, inject, named } from '@ogun/core/shared/inversify';
 import { ITokenTypeMap, IEmbeddedLanguagesMap } from 'vscode-textmate';
-import { TextmateRegistry, getEncodedLanguageId, MonacoTextmateService, GrammarDefinition } from '@theia/monaco/lib/browser/textmate';
+import { TextmateRegistry, getEncodedLanguageId, MonacoTextmateService, GrammarDefinition } from '@ogun/monaco/lib/browser/textmate';
 import { MenusContributionPointHandler } from './menus/menus-contribution-handler';
 import { PluginViewRegistry } from './view/plugin-view-registry';
 import { PluginCustomEditorRegistry } from './custom-editors/plugin-custom-editor-registry';
@@ -27,32 +27,32 @@ import {
 import {
     DefaultUriLabelProviderContribution,
     LabelProviderContribution,
-} from '@theia/core/lib/browser';
+} from '@ogun/core/lib/browser';
 import { KeybindingsContributionPointHandler } from './keybindings/keybindings-contribution-handler';
-import { MonacoSnippetSuggestProvider } from '@theia/monaco/lib/browser/monaco-snippet-suggest-provider';
+import { MonacoSnippetSuggestProvider } from '@ogun/monaco/lib/browser/monaco-snippet-suggest-provider';
 import { PluginSharedStyle } from './plugin-shared-style';
-import { CommandRegistry, Command, CommandHandler } from '@theia/core/lib/common/command';
-import { Disposable, DisposableCollection } from '@theia/core/lib/common/disposable';
-import { Emitter } from '@theia/core/lib/common/event';
-import { TaskDefinitionRegistry, ProblemMatcherRegistry, ProblemPatternRegistry } from '@theia/task/lib/browser';
-import { NotebookRendererRegistry, NotebookTypeRegistry } from '@theia/notebook/lib/browser';
+import { CommandRegistry, Command, CommandHandler } from '@ogun/core/lib/common/command';
+import { Disposable, DisposableCollection } from '@ogun/core/lib/common/disposable';
+import { Emitter } from '@ogun/core/lib/common/event';
+import { TaskDefinitionRegistry, ProblemMatcherRegistry, ProblemPatternRegistry } from '@ogun/task/lib/browser';
+import { NotebookRendererRegistry, NotebookTypeRegistry } from '@ogun/notebook/lib/browser';
 import { PluginDebugService } from './debug/plugin-debug-service';
-import { DebugSchemaUpdater } from '@theia/debug/lib/browser/debug-schema-updater';
-import { MonacoThemingService } from '@theia/monaco/lib/browser/monaco-theming-service';
-import { ColorRegistry } from '@theia/core/lib/browser/color-registry';
+import { DebugSchemaUpdater } from '@ogun/debug/lib/browser/debug-schema-updater';
+import { MonacoThemingService } from '@ogun/monaco/lib/browser/monaco-theming-service';
+import { ColorRegistry } from '@ogun/core/lib/browser/color-registry';
 import { PluginIconService } from './plugin-icon-service';
 import { PluginIconThemeService } from './plugin-icon-theme-service';
-import { ContributionProvider, isObject, OVERRIDE_PROPERTY_PATTERN, PreferenceSchemaService } from '@theia/core/lib/common';
+import { ContributionProvider, isObject, OVERRIDE_PROPERTY_PATTERN, PreferenceSchemaService } from '@ogun/core/lib/common';
 import * as monaco from '@theia/monaco-editor-core';
-import { ContributedTerminalProfileStore, TerminalProfileStore } from '@theia/terminal/lib/browser/terminal-profile-service';
-import { TerminalWidget } from '@theia/terminal/lib/browser/base/terminal-widget';
-import { TerminalService } from '@theia/terminal/lib/browser/base/terminal-service';
+import { ContributedTerminalProfileStore, TerminalProfileStore } from '@ogun/terminal/lib/browser/terminal-profile-service';
+import { TerminalWidget } from '@ogun/terminal/lib/browser/base/terminal-widget';
+import { TerminalService } from '@ogun/terminal/lib/browser/base/terminal-service';
 import { PluginTerminalRegistry } from './plugin-terminal-registry';
-import { ContextKeyService } from '@theia/core/lib/browser/context-key-service';
-import { LanguageService } from '@theia/core/lib/browser/language-service';
+import { ContextKeyService } from '@ogun/core/lib/browser/context-key-service';
+import { LanguageService } from '@ogun/core/lib/browser/language-service';
 import { ThemeIcon } from '@theia/monaco-editor-core/esm/vs/base/common/themables';
-import { JSONObject, JSONValue } from '@theia/core/shared/@lumino/coreutils';
-import { ILogger } from '@theia/core';
+import { JSONObject, JSONValue } from '@ogun/core/shared/@lumino/coreutils';
+import { ILogger } from '@ogun/core';
 
 // The enum export is missing from `vscode-textmate@9.2.0`
 const enum StandardTokenType {

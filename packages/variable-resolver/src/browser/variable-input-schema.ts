@@ -27,7 +27,7 @@ const typeDescription = 'The type of user input prompt to use.';
 const descriptionDescription = 'The description is shown when the user is prompted for input.';
 const defaultDescription = 'The default value for the input.';
 
-import { IJSONSchema } from '@theia/core/lib/common/json-schema';
+import { IJSONSchema } from '@ogun/core/lib/common/json-schema';
 
 export const inputsSchema: IJSONSchema = {
     definitions: {

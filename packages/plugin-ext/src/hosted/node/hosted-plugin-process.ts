@@ -14,11 +14,11 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { ConnectionErrorHandler, ContributionProvider, ILogger, MessageService } from '@theia/core/lib/common';
-import { Deferred } from '@theia/core/lib/common/promise-util';
-import { BinaryMessagePipe } from '@theia/core/lib/node/messaging/binary-message-pipe';
-import { createIpcEnv } from '@theia/core/lib/node/messaging/ipc-protocol';
-import { inject, injectable, named } from '@theia/core/shared/inversify';
+import { ConnectionErrorHandler, ContributionProvider, ILogger, MessageService } from '@ogun/core/lib/common';
+import { Deferred } from '@ogun/core/lib/common/promise-util';
+import { BinaryMessagePipe } from '@ogun/core/lib/node/messaging/binary-message-pipe';
+import { createIpcEnv } from '@ogun/core/lib/node/messaging/ipc-protocol';
+import { inject, injectable, named } from '@ogun/core/shared/inversify';
 import * as cp from 'child_process';
 import { Duplex } from 'stream';
 import { HostedPluginClient, PLUGIN_HOST_BACKEND, PluginHostEnvironmentVariable, ServerPluginRunner } from '../../common/plugin-protocol';
@@ -26,7 +26,7 @@ import { PluginHostNavigatorState } from '../../main/common/plugin-host-environm
 import { HostedPluginCliContribution } from './hosted-plugin-cli-contribution';
 import { HostedPluginLocalizationService } from './hosted-plugin-localization-service';
 import { ProcessTerminateMessage, ProcessTerminatedMessage } from './hosted-plugin-protocol';
-import { ProcessUtils } from '@theia/core/lib/node/process-utils';
+import { ProcessUtils } from '@ogun/core/lib/node/process-utils';
 
 export interface IPCConnectionOptions {
     readonly serverName: string;

@@ -51,7 +51,7 @@
 - [console] updated the `anser` import workaround [#8741](https://github.com/eclipse-theia/theia/pull/8741)
 - [core] added ability to filter tree nodes [#8540](https://github.com/eclipse-theia/theia/pull/8540)
 - [debug] fixed issue where the debug-view is not properly updated when hidden [#8645](https://github.com/eclipse-theia/theia/pull/8645)
-- [documentation] improved documentation for `@theia/cli` electron configurations [#8699](https://github.com/eclipse-theia/theia/pull/8699)
+- [documentation] improved documentation for `@ogun/cli` electron configurations [#8699](https://github.com/eclipse-theia/theia/pull/8699)
 - [documentation] improved documentation for `BackendApplicationContribution` [#8686](https://github.com/eclipse-theia/theia/pull/8686)
 - [documentation] improved documentation for `MenuContribution` [#8715](https://github.com/eclipse-theia/theia/pull/8715)
 - [documentation] improved documentation for `MessageService` [#8688](https://github.com/eclipse-theia/theia/pull/8688)
@@ -81,7 +81,7 @@
 <a name="breaking_changes_1.8.0">[Breaking Changes:](#breaking_changes_1.8.0)</a>
 
 - [electron] removed `attachWillPreventUnload` method from the Electron main application. The `confirmExit` logic is handled on the frontend [#8732](https://github.com/eclipse-theia/theia/pull/8732)
-- [file-search] deprecated dependency on `@theia/process` and replaced its usage by node's `child_process` API [#8721](https://github.com/eclipse-theia/theia/pull/8721)
+- [file-search] deprecated dependency on `@ogun/process` and replaced its usage by node's `child_process` API [#8721](https://github.com/eclipse-theia/theia/pull/8721)
 
 ## v1.7.0 - 29/10/2020
 
@@ -102,7 +102,7 @@
 - [documentation] improved documentation for `LabelProvider` and `LabelProviderContribution` [#8569](https://github.com/eclipse-theia/theia/pull/8569)
 - [documentation] improved documentation for `PreferenceService` [#8612](https://github.com/eclipse-theia/theia/pull/8612)
 - [documentation] improved documentation for `WidgetManager` and `WidgetOpenHandler` [#8644](https://github.com/eclipse-theia/theia/pull/8644)
-- [documentation] improved documentation for the `@theia/preview` extension [#8625](https://github.com/eclipse-theia/theia/pull/8625)
+- [documentation] improved documentation for the `@ogun/preview` extension [#8625](https://github.com/eclipse-theia/theia/pull/8625)
 - [editor] fixed inconsistent `showTextDocument` behavior [#8588](https://github.com/eclipse-theia/theia/pull/8588)
 - [electron] added handling for `SIGPIPE` errors [#8661](https://github.com/eclipse-theia/theia/pull/8661)
 - [filesystem] refactored file watchers: [#8546](https://github.com/eclipse-theia/theia/pull/8546)
@@ -174,7 +174,7 @@
 - [preferences] updated the rendering of preference category headers and leaves [#8512](https://github.com/eclipse-theia/theia/pull/8512)
 - [scm] fixed activation request of the scm-widget [#8508](https://github.com/eclipse-theia/theia/pull/8508)
 - [search-in-workspace] added handling to respect the `files.exclude` preference when searching [#8433](https://github.com/eclipse-theia/theia/pull/8433)
-- [timeline] added the `@theia/timeline` extension [#7997](https://github.com/eclipse-theia/theia/pull/7997)
+- [timeline] added the `@ogun/timeline` extension [#7997](https://github.com/eclipse-theia/theia/pull/7997)
 
 <a name="breaking_changes_1.6.0">[Breaking Changes:](#breaking_changes_1.6.0)</a>
 
@@ -325,14 +325,14 @@
 - [preferences] renamed file `preference-contribution.ts` to `preferences-contribution.ts` [#8237](https://github.com/eclipse-theia/theia/pull/8237)
 - [terminal] fixed typo (`rezize` to `resize`) in `TerminalWidget` [#8193](https://github.com/eclipse-theia/theia/pull/8193)
 <a name="1_4_0_replace_json"></a>
-- [[json]](#1_4_0_replace_json) replaced `@theia/json` Theia extension with `vscode.json-language-features` VS Code extension [#8112](https://github.com/eclipse-theia/theia/pull/8112)
+- [[json]](#1_4_0_replace_json) replaced `@ogun/json` Theia extension with `vscode.json-language-features` VS Code extension [#8112](https://github.com/eclipse-theia/theia/pull/8112)
   - You can register JSON validations at application startup by implementing `JsonSchemaContribution` Theia contribution point.
   - Alternatively you can provide JSON validations using VS Code [contributes.jsonValidation](https://code.visualstudio.com/api/references/contribution-points#contributes.jsonValidation) contribution point.
 <a name="1_4_0_absolute_user_storage_uri"></a>
 - [[user-storage]](#1_4_0_absolute_user_storage_uri) settings URI must be an absolute to satisfy expectations of `vscode.json-language-features` [#8112](https://github.com/eclipse-theia/theia/pull/8112)
   - If you implement a custom user storage make sure to check old relative locations, otherwise it can cause user data loss.
 <a name="1_4_0_deprecate_languages"></a>
-- [[languages]](#1_4_0_deprecate_languages) `@theia/languages` extension is deprecated, use VS Code extensions to provide language smartness:
+- [[languages]](#1_4_0_deprecate_languages) `@ogun/languages` extension is deprecated, use VS Code extensions to provide language smartness:
   <https://code.visualstudio.com/api/language-extensions/language-server-extension-guide> [#8112](https://github.com/eclipse-theia/theia/pull/8112)
 
 ## v1.3.0 - 25/06/2020
@@ -553,9 +553,9 @@ Breaking changes:
 - [plugin] removed `configStorage` argument from `PluginManager.registerPlugin` [#7265](https://github.com/eclipse-theia/theia/pull/7265)
   - use `PluginManager.configStorage` property instead. [#7265](https://github.com/eclipse-theia/theia/pull/7265)
 - [process] `TerminalProcess` doesn't handle shell quoting, the shell process arguments must be prepared from the caller [#6836](https://github.com/eclipse-theia/theia/pull/6836)
-  - Removed all methods related to shell escaping inside this class. You should use functions located in `@theia/process/lib/common/shell-quoting.ts`
+  - Removed all methods related to shell escaping inside this class. You should use functions located in `@ogun/process/lib/common/shell-quoting.ts`
   in order to process arguments for shells.
-- [process/terminal] moved shell escaping utilities into `@theia/process/lib/common/shell-quoting` and `@theia/process/lib/common/shell-command-builder` for creating shell inputs [#6836](https://github.com/eclipse-theia/theia/pull/6836)
+- [process/terminal] moved shell escaping utilities into `@ogun/process/lib/common/shell-quoting` and `@ogun/process/lib/common/shell-command-builder` for creating shell inputs [#6836](https://github.com/eclipse-theia/theia/pull/6836)
 
 ## v1.0.0 - 26/03/2020
 
@@ -686,7 +686,7 @@ The default location remains the same: `~/.theia`, however it can be customized 
   // your-env-variables-server.ts:
 
   import { injectable } from 'inversify';
-  import { EnvVariablesServerImpl } from '@theia/core/lib/node/env-variables';
+  import { EnvVariablesServerImpl } from '@ogun/core/lib/node/env-variables';
 
   @injectable()
   export class YourEnvVariableServer extends EnvVariablesServerImpl {
@@ -700,7 +700,7 @@ The default location remains the same: `~/.theia`, however it can be customized 
   // your-backend-application-module.ts:
 
   import { ContainerModule } from 'inversify';
-  import { EnvVariablesServer } from '@theia/core/lib/common/env-variables';
+  import { EnvVariablesServer } from '@ogun/core/lib/common/env-variables';
   import { YourEnvVariableServer } from './your-env-variables-server';
 
   export default new ContainerModule((bind, unbind, isBound, rebind) => {
@@ -714,32 +714,32 @@ Breaking changes:
 - [terminal] added new abstract methods to the TerminalWidget[#7179]: `scrollLineUp`, `scrollLineDown`, `scrollToTop`, `scrollPageUp`, `scrollPageDown`
 - The release includes the removal of language-specific Theia extensions and other Theia extensions that are or can be replaced by equivalent VS Code extensions.
   - Migration steps are available at the following wiki page [`Consuming Builtin and External VS Code Extensions`](https://github.com/eclipse-theia/theia/wiki/Consuming-Builtin-and-External-VS-Code-Extensions).
-  - [debug-nodejs] removed the `@theia/debug-nodejs` extension [#6933](https://github.com/eclipse-theia/theia/pull/6933)
+  - [debug-nodejs] removed the `@ogun/debug-nodejs` extension [#6933](https://github.com/eclipse-theia/theia/pull/6933)
     - The extension will no longer be maintained by the project and remains in the Git history for anyone who would like to reference it or maintain it.
-  - [editorconfig] removed the `@theia/editorconfig` extension [#6933](https://github.com/eclipse-theia/theia/pull/6933)
+  - [editorconfig] removed the `@ogun/editorconfig` extension [#6933](https://github.com/eclipse-theia/theia/pull/6933)
     - The extension will no longer be maintained by the project and remains in the Git history for anyone who would like to reference it or maintain it.
-  - [java] removed the `@theia/java` extension [#6933](https://github.com/eclipse-theia/theia/pull/6933)
-    - The extension will no longer be maintained by the project and remains in the Git history for anyone who would like to reference it or maintain it.
-    - Please view the `theia-apps` [theia-java](https://github.com/theia-ide/theia-apps/tree/master/theia-java-docker) image for an example application which has been updated to
-      use VS Code extensions instead of `@theia/java`.
-  - [java-debug] removed the `@theia/java-debug` extension [#6933](https://github.com/eclipse-theia/theia/pull/6933)
+  - [java] removed the `@ogun/java` extension [#6933](https://github.com/eclipse-theia/theia/pull/6933)
     - The extension will no longer be maintained by the project and remains in the Git history for anyone who would like to reference it or maintain it.
     - Please view the `theia-apps` [theia-java](https://github.com/theia-ide/theia-apps/tree/master/theia-java-docker) image for an example application which has been updated to
-      use VS Code extensions instead of `@theia/java-debug`.
-  - [merge-conflicts] removed the `@theia/merge-conflicts` extension [#6933](https://github.com/eclipse-theia/theia/pull/6933)
+      use VS Code extensions instead of `@ogun/java`.
+  - [java-debug] removed the `@ogun/java-debug` extension [#6933](https://github.com/eclipse-theia/theia/pull/6933)
     - The extension will no longer be maintained by the project and remains in the Git history for anyone who would like to reference it or maintain it.
-  - [python] removed the `@theia/python` extension [#6933](https://github.com/eclipse-theia/theia/pull/6933)
+    - Please view the `theia-apps` [theia-java](https://github.com/theia-ide/theia-apps/tree/master/theia-java-docker) image for an example application which has been updated to
+      use VS Code extensions instead of `@ogun/java-debug`.
+  - [merge-conflicts] removed the `@ogun/merge-conflicts` extension [#6933](https://github.com/eclipse-theia/theia/pull/6933)
+    - The extension will no longer be maintained by the project and remains in the Git history for anyone who would like to reference it or maintain it.
+  - [python] removed the `@ogun/python` extension [#6933](https://github.com/eclipse-theia/theia/pull/6933)
     - The extension will no longer be maintained by the project and remains in the Git history for anyone who would like to reference it or maintain it.
     - Please view the `theia-apps` [theia-python](https://github.com/theia-ide/theia-apps/tree/master/theia-python-docker) image for an example application which has been updated to
-      use VS Code extensions instead of `@theia/python`.
-  - [textmate-grammars] removed the `@theia/textmate-grammars` extension [#6933](https://github.com/eclipse-theia/theia/pull/6933)
+      use VS Code extensions instead of `@ogun/python`.
+  - [textmate-grammars] removed the `@ogun/textmate-grammars` extension [#6933](https://github.com/eclipse-theia/theia/pull/6933)
     - The extension will no longer be maintained by the project and remains in the Git history for anyone who would like to reference it or maintain it.
-  - [tslint] removed the `@theia/tslint` extension [#6933](https://github.com/eclipse-theia/theia/pull/6933)
+  - [tslint] removed the `@ogun/tslint` extension [#6933](https://github.com/eclipse-theia/theia/pull/6933)
     - The extension will no longer be maintained by the project and remains in the Git history for anyone who would like to reference it or maintain it.
-  - [typescript] removed the `@theia/typescript` extension [#6933](https://github.com/eclipse-theia/theia/pull/6933)
+  - [typescript] removed the `@ogun/typescript` extension [#6933](https://github.com/eclipse-theia/theia/pull/6933)
     - The extension will no longer be maintained by the project and remains in the Git history for anyone who would like to reference it or maintain it.
     - Please view the `theia-apps` [theia-typescript](https://github.com/theia-ide/theia-apps/tree/master/theia-docker) image for an example application which has been updated to
-      use VS Code extensions instead of `@theia/typescript`.
+      use VS Code extensions instead of `@ogun/typescript`.
 
 ## v0.15.0 - 30/01/2020
 
@@ -822,9 +822,9 @@ Breaking changes:
 - [core] removed `virtual-renderer`. `react-renderer` should be used instead [#6885](https://github.com/eclipse-theia/theia/pull/6885)
 - [core] removed `virtual-widget`. `react-widget` should be used instead [#6885](https://github.com/eclipse-theia/theia/pull/6885)
 - [core] renamed method `registerComositionEventListeners()` to `registerCompositionEventListeners()` [#6961](https://github.com/eclipse-theia/theia/pull/6961)
-- [debug] removed `@theia/json` dependency. Applications should explicitly depend on `@theia/json` instead [#6647](https://github.com/eclipse-theia/theia/pull/6647)
+- [debug] removed `@ogun/json` dependency. Applications should explicitly depend on `@ogun/json` instead [#6647](https://github.com/eclipse-theia/theia/pull/6647)
 - [plugin] renamed `gererateTimeFolderName` to `generateTimeFolderName` [#6956](https://github.com/eclipse-theia/theia/pull/6956)
-- [preferences] removed `@theia/json` dependency. Applications should explicitly depend on `@theia/json` instead [#6647](https://github.com/eclipse-theia/theia/pull/6647)
+- [preferences] removed `@ogun/json` dependency. Applications should explicitly depend on `@ogun/json` instead [#6647](https://github.com/eclipse-theia/theia/pull/6647)
 - [task] renamed method `getStrigifiedTaskSchema()` has been renamed to `getStringifiedTaskSchema()` [#6780](https://github.com/eclipse-theia/theia/pull/6780)
 - [task] renamed method `reorgnizeTasks()` has been renamed to `reorganizeTasks()` [#6780](https://github.com/eclipse-theia/theia/pull/6780)
 - Support VS Code icon and color theming. [#6475](https://github.com/eclipse-theia/theia/pull/6475)
@@ -888,7 +888,7 @@ Breaking changes:
 - Updated `example-browser` and `example-electron` applications to remove extensions which are instead contributed by VS Code builtin extensions [#6883](https://github.com/eclipse-theia/theia/pull/6883)
   - Extensions removed from the example applications are deprecated and will be removed in the future. If adopters/extenders would like to continue
   using the deprecated extensions, they must be self-maintained and can be accessed through the repository's Git history.
-  - In order to fetch plugins remotely, the `@theia/cli` script `download:plugins` can be used:
+  - In order to fetch plugins remotely, the `@ogun/cli` script `download:plugins` can be used:
     - In your `package.json` you can define:
       - `theiaPluginDir`: to specify the folder in which to download plugins, in respect to your `package.json`
       - `theiaPlugins`: to specify the list of plugins in the form of `"id": "url"`

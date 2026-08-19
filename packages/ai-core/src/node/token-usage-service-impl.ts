@@ -14,10 +14,10 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { injectable, inject, named } from '@theia/core/shared/inversify';
+import { injectable, inject, named } from '@ogun/core/shared/inversify';
 import { TokenUsage, TokenUsageParams, TokenUsageService } from '../common/token-usage-service';
 import { TokenUsageServiceClient } from '../common/protocol';
-import { ILogger } from '@theia/core';
+import { ILogger } from '@ogun/core';
 
 @injectable()
 export class TokenUsageServiceImpl implements TokenUsageService {

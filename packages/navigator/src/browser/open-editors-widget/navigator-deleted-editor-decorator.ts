@@ -14,12 +14,12 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { injectable, inject, postConstruct } from '@theia/core/shared/inversify';
-import { ApplicationShell, DepthFirstTreeIterator, NavigatableWidget, Tree, TreeDecoration, TreeDecorator } from '@theia/core/lib/browser';
-import { FileSystemFrontendContribution } from '@theia/filesystem/lib/browser/filesystem-frontend-contribution';
-import { Emitter } from '@theia/core';
-import { FileStatNode } from '@theia/filesystem/lib/browser';
-import { FileChangeType } from '@theia/filesystem/lib/common/files';
+import { injectable, inject, postConstruct } from '@ogun/core/shared/inversify';
+import { ApplicationShell, DepthFirstTreeIterator, NavigatableWidget, Tree, TreeDecoration, TreeDecorator } from '@ogun/core/lib/browser';
+import { FileSystemFrontendContribution } from '@ogun/filesystem/lib/browser/filesystem-frontend-contribution';
+import { Emitter } from '@ogun/core';
+import { FileStatNode } from '@ogun/filesystem/lib/browser';
+import { FileChangeType } from '@ogun/filesystem/lib/common/files';
 
 @injectable()
 export class NavigatorDeletedEditorDecorator implements TreeDecorator {

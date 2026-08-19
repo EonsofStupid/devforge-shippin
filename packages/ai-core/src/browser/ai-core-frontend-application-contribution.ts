@@ -14,11 +14,11 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { FrontendApplicationContribution } from '@theia/core/lib/browser';
-import { inject, injectable, named } from '@theia/core/shared/inversify';
+import { FrontendApplicationContribution } from '@ogun/core/lib/browser';
+import { inject, injectable, named } from '@ogun/core/shared/inversify';
 import { Agent } from '../common';
 import { AgentService } from '../common/agent-service';
-import { ContributionProvider } from '@theia/core/lib/common/contribution-provider';
+import { ContributionProvider } from '@ogun/core/lib/common/contribution-provider';
 
 @injectable()
 export class AICoreFrontendApplicationContribution implements FrontendApplicationContribution {

@@ -14,9 +14,9 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import * as React from '@theia/core/shared/react';
-import { Key, KeyCode } from '@theia/core/lib/browser';
-import debounce = require('@theia/core/shared/lodash.debounce');
+import * as React from '@ogun/core/shared/react';
+import { Key, KeyCode } from '@ogun/core/lib/browser';
+import debounce = require('@ogun/core/shared/lodash.debounce');
 
 interface HistoryState {
     history: string[];

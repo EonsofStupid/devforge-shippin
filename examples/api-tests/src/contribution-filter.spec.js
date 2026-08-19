@@ -19,8 +19,8 @@ describe('Contribution filter', function () {
     this.timeout(5000);
     const { assert } = chai;
 
-    const { CommandRegistry, CommandContribution } = require('@theia/core/lib/common/command');
-    const { SampleFilteredCommandContribution, SampleFilteredCommand } = require('@theia/api-samples/lib/browser/contribution-filter/sample-filtered-command-contribution');
+    const { CommandRegistry, CommandContribution } = require('@ogun/core/lib/common/command');
+    const { SampleFilteredCommandContribution, SampleFilteredCommand } = require('@ogun/api-samples/lib/browser/contribution-filter/sample-filtered-command-contribution');
 
     const container = window.theia.container;
     const commands = container.get(CommandRegistry);

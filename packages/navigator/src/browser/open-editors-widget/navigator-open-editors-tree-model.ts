@@ -14,8 +14,8 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { injectable, inject, postConstruct } from '@theia/core/shared/inversify';
-import { FileNode, FileStatNode, FileTreeModel } from '@theia/filesystem/lib/browser';
+import { injectable, inject, postConstruct } from '@ogun/core/shared/inversify';
+import { FileNode, FileStatNode, FileTreeModel } from '@ogun/filesystem/lib/browser';
 import {
     ApplicationShell,
     CompositeTreeNode,
@@ -27,11 +27,11 @@ import {
     Widget,
     ExpandableTreeNode,
     TabBar
-} from '@theia/core/lib/browser';
-import { WorkspaceService } from '@theia/workspace/lib/browser';
-import debounce = require('@theia/core/shared/lodash.debounce');
-import { nls } from '@theia/core/lib/common';
-import { FileStat } from '@theia/filesystem/lib/common/files';
+} from '@ogun/core/lib/browser';
+import { WorkspaceService } from '@ogun/workspace/lib/browser';
+import debounce = require('@ogun/core/shared/lodash.debounce');
+import { nls } from '@ogun/core/lib/common';
+import { FileStat } from '@ogun/filesystem/lib/common/files';
 
 export interface OpenEditorNode extends FileStatNode {
     widget: Widget;

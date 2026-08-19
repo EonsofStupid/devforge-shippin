@@ -15,7 +15,7 @@
 // *****************************************************************************
 
 import { expect } from 'chai';
-import { PreferenceScope } from '@theia/core/lib/common/preferences/preference-scope';
+import { PreferenceScope } from '@ogun/core/lib/common/preferences/preference-scope';
 import {
     TELEMETRY_FILTERS,
     TELEMETRY_LEVEL,

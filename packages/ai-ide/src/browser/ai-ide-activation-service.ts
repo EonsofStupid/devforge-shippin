@@ -13,13 +13,13 @@
 //
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
-import { inject, injectable, preDestroy } from '@theia/core/shared/inversify';
-import { FrontendApplicationContribution } from '@theia/core/lib/browser';
-import { DisposableCollection, Emitter, MaybePromise, Event, PreferenceService } from '@theia/core';
-import { ContextKeyService, ContextKey } from '@theia/core/lib/browser/context-key-service';
-import { AIActivationService, ENABLE_AI_CONTEXT_KEY } from '@theia/ai-core/lib/browser/ai-activation-service';
+import { inject, injectable, preDestroy } from '@ogun/core/shared/inversify';
+import { FrontendApplicationContribution } from '@ogun/core/lib/browser';
+import { DisposableCollection, Emitter, MaybePromise, Event, PreferenceService } from '@ogun/core';
+import { ContextKeyService, ContextKey } from '@ogun/core/lib/browser/context-key-service';
+import { AIActivationService, ENABLE_AI_CONTEXT_KEY } from '@ogun/ai-core/lib/browser/ai-activation-service';
 import { PREFERENCE_NAME_ENABLE_AI } from '../common/ai-ide-preferences';
-import { WorkspaceTrustService } from '@theia/workspace/lib/browser/workspace-trust-service';
+import { WorkspaceTrustService } from '@ogun/workspace/lib/browser/workspace-trust-service';
 
 /**
  * Implements AI Activation Service based on preferences.

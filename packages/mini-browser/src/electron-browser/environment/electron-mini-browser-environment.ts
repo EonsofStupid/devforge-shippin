@@ -14,13 +14,13 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { Endpoint } from '@theia/core/lib/browser';
+import { Endpoint } from '@ogun/core/lib/browser';
 
-import { ElectronSecurityToken } from '@theia/core/lib/electron-common/electron-token';
-import { inject, injectable } from '@theia/core/shared/inversify';
+import { ElectronSecurityToken } from '@ogun/core/lib/electron-common/electron-token';
+import { inject, injectable } from '@ogun/core/shared/inversify';
 import { MiniBrowserEnvironment } from '../../browser/environment/mini-browser-environment';
 
-import '@theia/core/lib/electron-common/electron-api';
+import '@ogun/core/lib/electron-common/electron-api';
 
 @injectable()
 export class ElectronMiniBrowserEnvironment extends MiniBrowserEnvironment {

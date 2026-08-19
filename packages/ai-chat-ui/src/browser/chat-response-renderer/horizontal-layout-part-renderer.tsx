@@ -15,14 +15,14 @@
 // *****************************************************************************
 
 import { ChatResponsePartRenderer } from '../chat-response-part-renderer';
-import { inject, injectable, named } from '@theia/core/shared/inversify';
+import { inject, injectable, named } from '@ogun/core/shared/inversify';
 import {
     ChatResponseContent,
     HorizontalLayoutChatResponseContent,
-} from '@theia/ai-chat/lib/common';
-import { ReactNode } from '@theia/core/shared/react';
-import * as React from '@theia/core/shared/react';
-import { ContributionProvider } from '@theia/core';
+} from '@ogun/ai-chat/lib/common';
+import { ReactNode } from '@ogun/core/shared/react';
+import * as React from '@ogun/core/shared/react';
+import { ContributionProvider } from '@ogun/core';
 import { ResponseNode } from '../chat-tree-view/chat-view-tree-widget';
 
 @injectable()

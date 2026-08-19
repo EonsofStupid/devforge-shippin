@@ -18,12 +18,12 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { CancellationToken, Command, Disposable, Emitter, Event, URI, ILogger } from '@theia/core';
+import { CancellationToken, Command, Disposable, Emitter, Event, URI, ILogger } from '@ogun/core';
 import { CellStatusbarAlignment } from '../../common';
-import { ThemeColor } from '@theia/core/lib/common/theme';
-import { AccessibilityInformation } from '@theia/core/lib/common/accessibility';
-import { injectable, inject, named } from '@theia/core/shared/inversify';
-import { MarkdownString } from '@theia/core/lib/common/markdown-rendering';
+import { ThemeColor } from '@ogun/core/lib/common/theme';
+import { AccessibilityInformation } from '@ogun/core/lib/common/accessibility';
+import { injectable, inject, named } from '@ogun/core/shared/inversify';
+import { MarkdownString } from '@ogun/core/lib/common/markdown-rendering';
 
 export interface NotebookCellStatusBarItem {
     readonly alignment: CellStatusbarAlignment;

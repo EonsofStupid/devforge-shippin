@@ -14,33 +14,33 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { injectable, inject } from '@theia/core/shared/inversify';
-import { CommandContribution, CommandRegistry, MenuContribution, MenuModelRegistry, MessageService, isWindows, MaybeArray } from '@theia/core/lib/common';
-import { isOSX, environment } from '@theia/core';
+import { injectable, inject } from '@ogun/core/shared/inversify';
+import { CommandContribution, CommandRegistry, MenuContribution, MenuModelRegistry, MessageService, isWindows, MaybeArray } from '@ogun/core/lib/common';
+import { isOSX, environment } from '@ogun/core';
 import {
     open, OpenerService, CommonMenus, KeybindingRegistry, KeybindingContribution,
     FrontendApplicationContribution, SHELL_TABBAR_CONTEXT_COPY, OnWillStopAction, Navigatable, SaveableSource, Widget,
     QuickInputService, QuickPickItem
-} from '@theia/core/lib/browser';
-import { FileDialogService, OpenFileDialogProps, FileDialogTreeFilters } from '@theia/filesystem/lib/browser';
-import { ContextKeyService } from '@theia/core/lib/browser/context-key-service';
+} from '@ogun/core/lib/browser';
+import { FileDialogService, OpenFileDialogProps, FileDialogTreeFilters } from '@ogun/filesystem/lib/browser';
+import { ContextKeyService } from '@ogun/core/lib/browser/context-key-service';
 import { WorkspaceService } from './workspace-service';
 import { WorkspaceFileService, THEIA_EXT, VSCODE_EXT } from '../common';
 import { WorkspaceCommands } from './workspace-commands';
 import { WorkspaceTrustService } from './workspace-trust-service';
 import { QuickOpenWorkspace } from './quick-open-workspace';
-import URI from '@theia/core/lib/common/uri';
-import { FileService } from '@theia/filesystem/lib/browser/file-service';
-import { EncodingRegistry } from '@theia/core/lib/browser/encoding-registry';
-import { UTF8 } from '@theia/core/lib/common/encodings';
-import { DisposableCollection } from '@theia/core/lib/common/disposable';
-import { PreferenceConfigurations } from '@theia/core/lib/common/preferences/preference-configurations';
-import { nls } from '@theia/core/lib/common/nls';
-import { BinaryBuffer } from '@theia/core/lib/common/buffer';
-import { FileStat } from '@theia/filesystem/lib/common/files';
+import URI from '@ogun/core/lib/common/uri';
+import { FileService } from '@ogun/filesystem/lib/browser/file-service';
+import { EncodingRegistry } from '@ogun/core/lib/browser/encoding-registry';
+import { UTF8 } from '@ogun/core/lib/common/encodings';
+import { DisposableCollection } from '@ogun/core/lib/common/disposable';
+import { PreferenceConfigurations } from '@ogun/core/lib/common/preferences/preference-configurations';
+import { nls } from '@ogun/core/lib/common/nls';
+import { BinaryBuffer } from '@ogun/core/lib/common/buffer';
+import { FileStat } from '@ogun/filesystem/lib/common/files';
 import { UntitledWorkspaceExitDialog } from './untitled-workspace-exit-dialog';
-import { FilesystemSaveableService } from '@theia/filesystem/lib/browser/filesystem-saveable-service';
-import { StopReason } from '@theia/core/lib/common/frontend-application-state';
+import { FilesystemSaveableService } from '@ogun/filesystem/lib/browser/filesystem-saveable-service';
+import { StopReason } from '@ogun/core/lib/common/frontend-application-state';
 
 export enum WorkspaceStates {
     /**

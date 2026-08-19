@@ -14,7 +14,7 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import * as theia from '@theia/plugin';
+import * as theia from '@ogun/plugin';
 import { RPCProtocol } from '../common/rpc-protocol';
 import { CommandRegistryImpl } from './command-registry';
 import { UriComponents } from '../common/uri-components';
@@ -27,8 +27,8 @@ import {
     CommentOptions
 } from '../common/plugin-api-rpc-model';
 import { DocumentsExtImpl } from './documents';
-import { Emitter } from '@theia/core/lib/common/event';
-import { Disposable, DisposableCollection } from '@theia/core/lib/common/disposable';
+import { Emitter } from '@ogun/core/lib/common/event';
+import { Disposable, DisposableCollection } from '@ogun/core/lib/common/disposable';
 import { fromMarkdown, fromRange, toRange } from './type-converters';
 import {
     CommentsCommandArg, CommentsContextCommandArg, CommentsEditCommandArg,

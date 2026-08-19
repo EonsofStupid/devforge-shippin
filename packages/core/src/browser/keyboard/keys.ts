@@ -15,6 +15,6 @@
 // *****************************************************************************
 
 /**
- * @deprecated since 1.20.0. Import from `@theia/core/lib/common/keys` instead.
+ * @deprecated since 1.20.0. Import from `@ogun/core/lib/common/keys` instead.
  */
 export * from '../../common/keys';

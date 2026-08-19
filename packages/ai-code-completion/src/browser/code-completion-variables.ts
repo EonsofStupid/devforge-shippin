@@ -14,8 +14,8 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { AIVariable } from '@theia/ai-core/lib/common/variable-service';
-import { nls } from '@theia/core';
+import { AIVariable } from '@ogun/ai-core/lib/common/variable-service';
+import { nls } from '@ogun/core';
 
 export const FILE: AIVariable = {
     id: 'codeCompletionFile',

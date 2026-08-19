@@ -14,9 +14,9 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { ChatModel, ResponseTokenUsage } from '@theia/ai-chat';
-import { nls } from '@theia/core/lib/common/nls';
-import { MarkdownString } from '@theia/core/lib/common/markdown-rendering';
+import { ChatModel, ResponseTokenUsage } from '@ogun/ai-chat';
+import { nls } from '@ogun/core/lib/common/nls';
+import { MarkdownString } from '@ogun/core/lib/common/markdown-rendering';
 
 /** Fallback denominator for the token usage indicator when the active model does not report its own input limit. */
 export const CHAT_CONTEXT_WINDOW_SIZE_FALLBACK = 200000;

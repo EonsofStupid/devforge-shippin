@@ -19,8 +19,8 @@
  *--------------------------------------------------------------------------------------------*/
 // copied and modified from https://github.com/microsoft/vscode/blob/1.96.3/src/vs/workbench/contrib/mergeEditor/browser/model/lineRange.ts
 
-import { Range, uinteger } from '@theia/core/shared/vscode-languageserver-protocol';
-import { TextEditorDocument } from '@theia/editor/lib/browser/editor';
+import { Range, uinteger } from '@ogun/core/shared/vscode-languageserver-protocol';
+import { TextEditorDocument } from '@ogun/editor/lib/browser/editor';
 
 /**
  * Represents a range of whole lines of text. Line numbers are zero-based.

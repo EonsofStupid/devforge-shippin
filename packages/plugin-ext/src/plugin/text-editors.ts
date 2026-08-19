@@ -16,8 +16,8 @@
 
 import { TextEditorsExt, EditorChangedPropertiesData, TextEditorPositionData, TextEditorsMain, PLUGIN_RPC_CONTEXT, TextEditorDiffInformationDto } from '../common/plugin-api-rpc';
 import { RPCProtocol } from '../common/rpc-protocol';
-import * as theia from '@theia/plugin';
-import { Emitter, Event } from '@theia/core/lib/common/event';
+import * as theia from '@ogun/plugin';
+import { Emitter, Event } from '@ogun/core/lib/common/event';
 import { EditorsAndDocumentsExtImpl } from './editors-and-documents';
 import { TextEditorExt } from './text-editor';
 import * as Converters from './type-converters';

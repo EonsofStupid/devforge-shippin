@@ -14,10 +14,10 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { AIVariableContext, AIVariableResolutionRequest, AIVariableResolver, ResolvedAIVariable } from '@theia/ai-core';
-import { FrontendVariableContribution, FrontendVariableService } from '@theia/ai-core/lib/browser';
-import { MaybePromise, PreferenceService } from '@theia/core';
-import { inject, injectable } from '@theia/core/shared/inversify';
+import { AIVariableContext, AIVariableResolutionRequest, AIVariableResolver, ResolvedAIVariable } from '@ogun/ai-core';
+import { FrontendVariableContribution, FrontendVariableService } from '@ogun/ai-core/lib/browser';
+import { MaybePromise, PreferenceService } from '@ogun/core';
+import { inject, injectable } from '@ogun/core/shared/inversify';
 import { PREF_AI_INLINE_COMPLETION_MAX_CONTEXT_LINES } from '../common/ai-code-completion-preference';
 import { CodeCompletionVariableContext } from './code-completion-variable-context';
 import { FILE, LANGUAGE, PREFIX, SUFFIX } from './code-completion-variables';

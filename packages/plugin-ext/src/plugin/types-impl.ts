@@ -21,20 +21,20 @@
 
 /* eslint-disable no-null/no-null */
 
-import { UUID } from '@theia/core/shared/@lumino/coreutils';
+import { UUID } from '@ogun/core/shared/@lumino/coreutils';
 import { illegalArgument } from '../common/errors';
-import type * as theia from '@theia/plugin';
-import { URI as CodeURI } from '@theia/core/shared/vscode-uri';
+import type * as theia from '@ogun/plugin';
+import { URI as CodeURI } from '@ogun/core/shared/vscode-uri';
 import { UriComponents } from '../common/uri-components';
 import { relative } from '../common/paths-util';
-import { startsWithIgnoreCase } from '@theia/core/lib/common/strings';
+import { startsWithIgnoreCase } from '@ogun/core/lib/common/strings';
 import { SymbolKind } from '../common/plugin-api-rpc-model';
-import { FileSystemProviderErrorCode, markAsFileSystemProviderError } from '@theia/filesystem/lib/common/files';
+import { FileSystemProviderErrorCode, markAsFileSystemProviderError } from '@ogun/filesystem/lib/common/files';
 import * as paths from 'path';
 import { es5ClassCompat } from '../common/types';
-import { isObject, isStringArray } from '@theia/core/lib/common';
-import { CellEditType, CellMetadataEdit, NotebookDocumentMetadataEdit } from '@theia/notebook/lib/common';
-import { BinaryBuffer } from '@theia/core/lib/common/buffer';
+import { isObject, isStringArray } from '@ogun/core/lib/common';
+import { CellEditType, CellMetadataEdit, NotebookDocumentMetadataEdit } from '@ogun/notebook/lib/common';
+import { BinaryBuffer } from '@ogun/core/lib/common/buffer';
 
 /**
  * This is an implementation of #theia.Uri based on vscode-uri.

@@ -21,10 +21,10 @@ import {
     TreeNode,
     TreeProps,
     TreeWidget
-} from '@theia/core/lib/browser';
-import { FileStat } from '@theia/filesystem/lib/common/files';
-import { inject, injectable, postConstruct } from '@theia/core/shared/inversify';
-import * as React from '@theia/core/shared/react';
+} from '@ogun/core/lib/browser';
+import { FileStat } from '@ogun/filesystem/lib/common/files';
+import { inject, injectable, postConstruct } from '@ogun/core/shared/inversify';
+import * as React from '@ogun/core/shared/react';
 import { PropertyDataService } from '../property-data-service';
 import { PropertyViewContentWidget } from '../property-view-content-widget';
 import {
@@ -33,7 +33,7 @@ import {
     ResourcePropertiesRoot,
     ROOT_ID
 } from './resource-property-view-tree-items';
-import { nls } from '@theia/core/lib/common/nls';
+import { nls } from '@ogun/core/lib/common/nls';
 
 /**
  * This widget fetches the property data for {@link FileSelection}s and selections of {@link Navigatable}s

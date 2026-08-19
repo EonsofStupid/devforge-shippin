@@ -1,1 +1,1 @@
-module.exports = require('@theia/electron/shared/electron');
+module.exports = require('@ogun/electron/shared/electron');

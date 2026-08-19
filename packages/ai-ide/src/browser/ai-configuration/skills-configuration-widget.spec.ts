@@ -14,24 +14,24 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { enableJSDOM, enableReactActEnvironment } from '@theia/core/lib/browser/test/jsdom';
+import { enableJSDOM, enableReactActEnvironment } from '@ogun/core/lib/browser/test/jsdom';
 let disableJSDOM = enableJSDOM();
 let disableReactActEnvironment = enableReactActEnvironment();
 
-import { FrontendApplicationConfigProvider } from '@theia/core/lib/browser/frontend-application-config-provider';
+import { FrontendApplicationConfigProvider } from '@ogun/core/lib/browser/frontend-application-config-provider';
 FrontendApplicationConfigProvider.set({});
 
 import { expect } from 'chai';
-import * as React from '@theia/core/shared/react';
-import { MessageLoop } from '@theia/core/shared/@lumino/messaging';
+import * as React from '@ogun/core/shared/react';
+import { MessageLoop } from '@ogun/core/shared/@lumino/messaging';
 
-import { Emitter, URI } from '@theia/core';
+import { Emitter, URI } from '@ogun/core';
 
-import { OpenHandler, OpenerService } from '@theia/core/lib/browser';
-import { Skill } from '@theia/ai-core/lib/common/skill';
-import { SkillService } from '@theia/ai-core/lib/browser/skill-service';
-import { PromptFragment, PromptService } from '@theia/ai-core/lib/common/prompt-service';
-import { Agent, AgentService } from '@theia/ai-core';
+import { OpenHandler, OpenerService } from '@ogun/core/lib/browser';
+import { Skill } from '@ogun/ai-core/lib/common/skill';
+import { SkillService } from '@ogun/ai-core/lib/browser/skill-service';
+import { PromptFragment, PromptService } from '@ogun/ai-core/lib/common/prompt-service';
+import { Agent, AgentService } from '@ogun/ai-core';
 
 import { AISkillsConfigurationWidget } from './skills-configuration-widget';
 

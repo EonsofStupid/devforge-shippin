@@ -19,15 +19,15 @@
  *--------------------------------------------------------------------------------------------*/
 // based on https://github.com/microsoft/vscode/blob/04c36be045a94fee58e5f8992d3e3fd980294a84/src/vs/platform/files/common/files.ts
 
-import URI from '@theia/core/lib/common/uri';
-import { Event } from '@theia/core/lib/common/event';
-import { Disposable as IDisposable } from '@theia/core/lib/common/disposable';
-import { BinaryBuffer, BinaryBufferReadableStream } from '@theia/core/lib/common/buffer';
-import type { TextDocumentContentChangeEvent } from '@theia/core/shared/vscode-languageserver-protocol';
-import { ReadableStreamEvents } from '@theia/core/lib/common/stream';
-import { CancellationToken } from '@theia/core/lib/common/cancellation';
-import { isObject } from '@theia/core/lib/common';
-import { MarkdownString } from '@theia/core/lib/common/markdown-rendering';
+import URI from '@ogun/core/lib/common/uri';
+import { Event } from '@ogun/core/lib/common/event';
+import { Disposable as IDisposable } from '@ogun/core/lib/common/disposable';
+import { BinaryBuffer, BinaryBufferReadableStream } from '@ogun/core/lib/common/buffer';
+import type { TextDocumentContentChangeEvent } from '@ogun/core/shared/vscode-languageserver-protocol';
+import { ReadableStreamEvents } from '@ogun/core/lib/common/stream';
+import { CancellationToken } from '@ogun/core/lib/common/cancellation';
+import { isObject } from '@ogun/core/lib/common';
+import { MarkdownString } from '@ogun/core/lib/common/markdown-rendering';
 
 export const enum FileOperation {
     CREATE,

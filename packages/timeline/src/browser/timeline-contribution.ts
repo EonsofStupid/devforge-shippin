@@ -14,7 +14,7 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { injectable, inject } from '@theia/core/shared/inversify';
+import { injectable, inject } from '@ogun/core/shared/inversify';
 import {
     ViewContainer,
     WidgetManager,
@@ -22,13 +22,13 @@ import {
     ApplicationShell,
     Navigatable,
     codicon
-} from '@theia/core/lib/browser';
-import { EXPLORER_VIEW_CONTAINER_ID } from '@theia/navigator/lib/browser';
+} from '@ogun/core/lib/browser';
+import { EXPLORER_VIEW_CONTAINER_ID } from '@ogun/navigator/lib/browser';
 import { TimelineWidget } from './timeline-widget';
 import { TimelineService } from './timeline-service';
-import { CommandContribution, CommandRegistry, nls } from '@theia/core/lib/common';
-import { TabBarToolbarContribution, TabBarToolbarRegistry } from '@theia/core/lib/browser/shell/tab-bar-toolbar';
-import { toArray } from '@theia/core/shared/@lumino/algorithm';
+import { CommandContribution, CommandRegistry, nls } from '@ogun/core/lib/common';
+import { TabBarToolbarContribution, TabBarToolbarRegistry } from '@ogun/core/lib/browser/shell/tab-bar-toolbar';
+import { toArray } from '@ogun/core/shared/@lumino/algorithm';
 import { LOAD_MORE_COMMAND } from './timeline-tree-model';
 
 @injectable()

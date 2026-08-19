@@ -14,10 +14,10 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { inject, injectable, postConstruct, interfaces, Container } from '@theia/core/shared/inversify';
+import { inject, injectable, postConstruct, interfaces, Container } from '@ogun/core/shared/inversify';
 import {
     Message, ApplicationShell, Widget, BaseWidget, PanelLayout, StatefulWidget, ViewContainer, codicon, ViewContainerTitleOptions, WidgetManager
-} from '@theia/core/lib/browser';
+} from '@ogun/core/lib/browser';
 import { DebugThreadsWidget } from './debug-threads-widget';
 import { DebugStackFramesWidget } from './debug-stack-frames-widget';
 import { DebugBreakpointsWidget } from './debug-breakpoints-widget';
@@ -25,7 +25,7 @@ import { DebugVariablesWidget } from './debug-variables-widget';
 import { DebugToolBar } from './debug-toolbar-widget';
 import { DebugViewModel } from './debug-view-model';
 import { DebugWatchWidget } from './debug-watch-widget';
-import { FrontendApplicationStateService } from '@theia/core/lib/browser/frontend-application-state';
+import { FrontendApplicationStateService } from '@ogun/core/lib/browser/frontend-application-state';
 
 export const DEBUG_VIEW_CONTAINER_TITLE_OPTIONS: ViewContainerTitleOptions = {
     label: 'debug',

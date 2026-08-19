@@ -1,2 +1,2 @@
-import fixPath = require('@theia/electron/shared/fix-path');
+import fixPath = require('@ogun/electron/shared/fix-path');
 export = fixPath;

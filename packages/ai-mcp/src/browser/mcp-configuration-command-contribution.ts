@@ -14,14 +14,14 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { Command, CommandContribution, CommandRegistry } from '@theia/core';
-import { inject, injectable } from '@theia/core/shared/inversify';
+import { Command, CommandContribution, CommandRegistry } from '@ogun/core';
+import { inject, injectable } from '@ogun/core/shared/inversify';
 import { MCPServerEditor } from './mcp-server-editor';
 
 /**
  * Public command id for opening the "Add MCP Server" dialog. Exposed as a string
- * so consumers (e.g. `@theia/ai-registry`) can trigger it without depending on
- * `@theia/ai-mcp`'s implementation details.
+ * so consumers (e.g. `@ogun/ai-registry`) can trigger it without depending on
+ * `@ogun/ai-mcp`'s implementation details.
  */
 export const ADD_MCP_SERVER_COMMAND: Command = Command.toLocalizedCommand({
     id: 'aiConfiguration.mcp.addServer',

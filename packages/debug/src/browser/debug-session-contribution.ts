@@ -14,15 +14,15 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { injectable, inject, named, postConstruct, interfaces } from '@theia/core/shared/inversify';
+import { injectable, inject, named, postConstruct, interfaces } from '@ogun/core/shared/inversify';
 import { DebugSession, DebugSessionData } from './debug-session';
 import { DebugConfigurationSessionOptions, DebugSessionOptions } from './debug-session-options';
-import { OutputChannelManager, OutputChannel } from '@theia/output/lib/browser/output-channel';
+import { OutputChannelManager, OutputChannel } from '@ogun/output/lib/browser/output-channel';
 import { DebugPreferences } from '../common/debug-preferences';
 import { DebugSessionConnection } from './debug-session-connection';
 import { DebugChannel, DebugAdapterPath, ForwardingDebugChannel } from '../common/debug-service';
-import { ContributionProvider } from '@theia/core/lib/common/contribution-provider';
-import { RemoteConnectionProvider, ServiceConnectionProvider } from '@theia/core/lib/browser/messaging/service-connection-provider';
+import { ContributionProvider } from '@ogun/core/lib/common/contribution-provider';
+import { RemoteConnectionProvider, ServiceConnectionProvider } from '@ogun/core/lib/browser/messaging/service-connection-provider';
 
 /**
  * DebugSessionContribution symbol for DI.

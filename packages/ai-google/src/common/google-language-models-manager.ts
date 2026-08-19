@@ -13,7 +13,7 @@
 //
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
-import { ReasoningApi, ReasoningSupport } from '@theia/ai-core';
+import { ReasoningApi, ReasoningSupport } from '@ogun/ai-core';
 
 export const GOOGLE_LANGUAGE_MODELS_MANAGER_PATH = '/services/google/language-model-manager';
 export const GoogleLanguageModelsManager = Symbol('GoogleLanguageModelsManager');

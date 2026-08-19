@@ -14,10 +14,10 @@
  * SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
  ********************************************************************************/
 
-import { Key, KeyCode } from '@theia/core/lib/browser';
-import { inject } from '@theia/core/shared/inversify';
-import * as React from '@theia/core/shared/react';
-import { DebugVariable } from '@theia/debug/lib/browser/console/debug-console-items';
+import { Key, KeyCode } from '@ogun/core/lib/browser';
+import { inject } from '@ogun/core/shared/inversify';
+import * as React from '@ogun/core/shared/react';
+import { DebugVariable } from '@ogun/debug/lib/browser/console/debug-console-items';
 import { EMPTY_MEMORY } from '../memory-widget/memory-options-widget';
 import { MemoryTable, MemoryTableWidget } from '../memory-widget/memory-table-widget';
 import { Interfaces } from '../utils/memory-widget-utils';

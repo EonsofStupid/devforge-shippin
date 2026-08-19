@@ -14,15 +14,15 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { inject, injectable } from '@theia/core/shared/inversify';
-import { AbstractRemoteRegistryContribution, RemoteRegistry } from '@theia/remote/lib/electron-browser/remote-registry-contribution';
-import { WorkspaceStorageService } from '@theia/workspace/lib/browser/workspace-storage-service';
-import { Command, MessageService, QuickInputService, URI, isWindows, nls } from '@theia/core';
-import { WorkspaceInput, WorkspaceOpenHandlerContribution, WorkspaceService } from '@theia/workspace/lib/browser/workspace-service';
-import { WorkspaceServer } from '@theia/workspace/lib/common';
+import { inject, injectable } from '@ogun/core/shared/inversify';
+import { AbstractRemoteRegistryContribution, RemoteRegistry } from '@ogun/remote/lib/electron-browser/remote-registry-contribution';
+import { WorkspaceStorageService } from '@ogun/workspace/lib/browser/workspace-storage-service';
+import { Command, MessageService, QuickInputService, URI, isWindows, nls } from '@ogun/core';
+import { WorkspaceInput, WorkspaceOpenHandlerContribution, WorkspaceService } from '@ogun/workspace/lib/browser/workspace-service';
+import { WorkspaceServer } from '@ogun/workspace/lib/common';
 import { RemoteWslConnectionProvider, WslDistribution } from '../electron-common/remote-wsl-connection-provider';
 import { WSL_WORKSPACE_SCHEME } from '../electron-common/wsl-workspaces';
-import { RemotePreferences } from '@theia/remote/lib/electron-common/remote-preferences';
+import { RemotePreferences } from '@ogun/remote/lib/electron-common/remote-preferences';
 
 export namespace RemoteWslCommands {
     export const CONNECT_TO_WSL = Command.toLocalizedCommand({

@@ -14,16 +14,16 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { injectable, inject, postConstruct } from '@theia/core/shared/inversify';
-import { FileService } from '@theia/filesystem/lib/browser/file-service';
-import { FileSystemProvider } from '@theia/filesystem/lib/common/files';
-import { UserStorageContribution } from '@theia/userstorage/lib/browser/user-storage-contribution';
+import { injectable, inject, postConstruct } from '@ogun/core/shared/inversify';
+import { FileService } from '@ogun/filesystem/lib/browser/file-service';
+import { FileSystemProvider } from '@ogun/filesystem/lib/common/files';
+import { UserStorageContribution } from '@ogun/userstorage/lib/browser/user-storage-contribution';
 import { RemoteStatusService } from '../electron-common/remote-status-service';
 import { LocalEnvVariablesServer, LocalRemoteFileSystemProvider } from './local-backend-services';
-import { Deferred } from '@theia/core/lib/common/promise-util';
-import { URI } from '@theia/core';
-import { EnvVariablesServer } from '@theia/core/lib/common/env-variables';
-import { getCurrentPort } from '@theia/core/lib/electron-browser/messaging/electron-local-ws-connection-source';
+import { Deferred } from '@ogun/core/lib/common/promise-util';
+import { URI } from '@ogun/core';
+import { EnvVariablesServer } from '@ogun/core/lib/common/env-variables';
+import { getCurrentPort } from '@ogun/core/lib/electron-browser/messaging/electron-local-ws-connection-source';
 
 /**
  * This overide is to have remote connections still use settings, keymaps, etc. from the local machine.

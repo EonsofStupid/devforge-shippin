@@ -14,17 +14,17 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { interfaces } from '@theia/core/shared/inversify';
+import { interfaces } from '@ogun/core/shared/inversify';
 import { ScmHistoryContribution, SCM_HISTORY_ID } from './scm-history-contribution';
-import { WidgetFactory, bindViewContribution, ApplicationShellLayoutMigration } from '@theia/core/lib/browser';
+import { WidgetFactory, bindViewContribution, ApplicationShellLayoutMigration } from '@ogun/core/lib/browser';
 import { ScmHistoryWidget } from './scm-history-widget';
 import { ScmExtraLayoutVersion4Migration } from '../scm-extra-layout-migrations';
 
 import '../../../src/browser/style/history.css';
 
 /**
- * @deprecated since 1.75.0 - superseded by the SCM history graph in `@theia/scm`
- * and the Timeline view in `@theia/timeline`. This package will be removed in a
+ * @deprecated since 1.75.0 - superseded by the SCM history graph in `@ogun/scm`
+ * and the Timeline view in `@ogun/timeline`. This package will be removed in a
  * future release - see https://github.com/eclipse-theia/theia/issues/17457.
  */
 export function bindScmHistoryModule(bind: interfaces.Bind): void {

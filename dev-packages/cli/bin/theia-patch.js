@@ -22,7 +22,7 @@ const cp = require('child_process');
 const patchPackage = require.resolve('patch-package');
 console.log(`patch-package = ${patchPackage}`);
 
-const patchesDir = path.join('.', 'node_modules', '@theia', 'cli', 'patches');
+const patchesDir = path.join('.', 'node_modules', '@ogun', 'cli', 'patches');
 
 console.log(`patchesdir = ${patchesDir}`);
 

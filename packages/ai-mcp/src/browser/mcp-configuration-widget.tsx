@@ -14,10 +14,10 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { codicon, ConfirmDialog, ReactWidget } from '@theia/core/lib/browser';
-import { inject, injectable, optional, postConstruct } from '@theia/core/shared/inversify';
-import * as React from '@theia/core/shared/react';
-import { HoverService } from '@theia/core/lib/browser/hover-service';
+import { codicon, ConfirmDialog, ReactWidget } from '@ogun/core/lib/browser';
+import { inject, injectable, optional, postConstruct } from '@ogun/core/shared/inversify';
+import * as React from '@ogun/core/shared/react';
+import { HoverService } from '@ogun/core/lib/browser/hover-service';
 import {
     isLocalMCPServerDescription,
     isRemoteMCPServerDescription,
@@ -27,8 +27,8 @@ import {
     MCPServerStatus
 } from '../common/mcp-server-manager';
 import { MCPRegistryUiBridge } from './mcp-registry-ui-bridge';
-import { MessageService, nls, PreferenceScope, PreferenceService } from '@theia/core';
-import { PROMPT_VARIABLE } from '@theia/ai-core/lib/browser/prompt-variable-contribution';
+import { MessageService, nls, PreferenceScope, PreferenceService } from '@ogun/core';
+import { PROMPT_VARIABLE } from '@ogun/ai-core/lib/browser/prompt-variable-contribution';
 import { MCP_SERVERS_PREF } from '../common/mcp-preferences';
 import { MCPServerEditor } from './mcp-server-editor';
 
@@ -61,7 +61,7 @@ export class AIMCPConfigurationWidget extends ReactWidget {
     protected readonly serverEditor: MCPServerEditor;
 
     /**
-     * Registry integration is optional - `@theia/ai-registry` binds it. When absent
+     * Registry integration is optional - `@ogun/ai-registry` binds it. When absent
      * (registry package not in the bundle), all registry-specific affordances are hidden.
      */
     @inject(MCPRegistryUiBridge) @optional()

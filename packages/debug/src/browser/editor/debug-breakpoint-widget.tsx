@@ -14,18 +14,18 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import * as React from '@theia/core/shared/react';
-import { createRoot, Root } from '@theia/core/shared/react-dom/client';
+import * as React from '@ogun/core/shared/react';
+import { createRoot, Root } from '@ogun/core/shared/react-dom/client';
 import { DebugProtocol } from '@vscode/debugprotocol';
-import { injectable, postConstruct, inject } from '@theia/core/shared/inversify';
-import { Disposable, DisposableCollection, InMemoryResources, nls } from '@theia/core';
-import URI from '@theia/core/lib/common/uri';
-import { MonacoEditorProvider } from '@theia/monaco/lib/browser/monaco-editor-provider';
-import { MonacoEditorZoneWidget } from '@theia/monaco/lib/browser/monaco-editor-zone-widget';
-import { SimpleMonacoEditor } from '@theia/monaco/lib/browser/simple-monaco-editor';
+import { injectable, postConstruct, inject } from '@ogun/core/shared/inversify';
+import { Disposable, DisposableCollection, InMemoryResources, nls } from '@ogun/core';
+import URI from '@ogun/core/lib/common/uri';
+import { MonacoEditorProvider } from '@ogun/monaco/lib/browser/monaco-editor-provider';
+import { MonacoEditorZoneWidget } from '@ogun/monaco/lib/browser/monaco-editor-zone-widget';
+import { SimpleMonacoEditor } from '@ogun/monaco/lib/browser/simple-monaco-editor';
 import { DebugEditor } from './debug-editor';
 import { DebugSourceBreakpoint } from '../model/debug-source-breakpoint';
-import { Dimension } from '@theia/editor/lib/browser';
+import { Dimension } from '@ogun/editor/lib/browser';
 import * as monaco from '@theia/monaco-editor-core';
 import { LanguageSelector } from '@theia/monaco-editor-core/esm/vs/editor/common/languageSelector';
 import { provideSuggestionItems, CompletionOptions } from '@theia/monaco-editor-core/esm/vs/editor/contrib/suggest/browser/suggest';
@@ -34,7 +34,7 @@ import { CompletionItemKind, CompletionContext } from '@theia/monaco-editor-core
 import { ILanguageFeaturesService } from '@theia/monaco-editor-core/esm/vs/editor/common/services/languageFeatures';
 import { StandaloneServices } from '@theia/monaco-editor-core/esm/vs/editor/standalone/browser/standaloneServices';
 import { TextModel } from '@theia/monaco-editor-core/esm/vs/editor/common/model/textModel';
-import { SelectComponent, SelectOption } from '@theia/core/lib/browser/widgets/select-component';
+import { SelectComponent, SelectOption } from '@ogun/core/lib/browser/widgets/select-component';
 
 export type ShowDebugBreakpointOptions = DebugSourceBreakpoint | {
     position: monaco.Position,

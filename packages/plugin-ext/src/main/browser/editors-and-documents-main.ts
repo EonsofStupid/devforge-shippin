@@ -14,7 +14,7 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { interfaces } from '@theia/core/shared/inversify';
+import { interfaces } from '@ogun/core/shared/inversify';
 import * as monaco from '@theia/monaco-editor-core';
 import { type ILineChange } from '@theia/monaco-editor-core/esm/vs/editor/common/diff/legacyLinesDiffComputer';
 import { RPCProtocol } from '../../common/rpc-protocol';
@@ -26,18 +26,18 @@ import {
     TextEditorAddData,
     EditorPosition
 } from '../../common/plugin-api-rpc';
-import { Disposable } from '@theia/core/lib/common/disposable';
+import { Disposable } from '@ogun/core/lib/common/disposable';
 import { EditorModelService } from './text-editor-model-service';
-import { MonacoEditorModel } from '@theia/monaco/lib/browser/monaco-editor-model';
-import { MonacoEditor } from '@theia/monaco/lib/browser/monaco-editor';
+import { MonacoEditorModel } from '@ogun/monaco/lib/browser/monaco-editor-model';
+import { MonacoEditor } from '@ogun/monaco/lib/browser/monaco-editor';
 import { TextEditorMain } from './text-editor-main';
-import { DisposableCollection, Emitter, URI } from '@theia/core';
-import { EditorManager, EditorWidget } from '@theia/editor/lib/browser';
-import { SaveableService } from '@theia/core/lib/browser/saveable-service';
+import { DisposableCollection, Emitter, URI } from '@ogun/core';
+import { EditorManager, EditorWidget } from '@ogun/editor/lib/browser';
+import { SaveableService } from '@ogun/core/lib/browser/saveable-service';
 import { TabsMainImpl } from './tabs/tabs-main';
-import { NotebookCellEditorService, NotebookEditorWidgetService } from '@theia/notebook/lib/browser';
-import { SimpleMonacoEditor } from '@theia/monaco/lib/browser/simple-monaco-editor';
-import { EncodingRegistry } from '@theia/core/lib/browser/encoding-registry';
+import { NotebookCellEditorService, NotebookEditorWidgetService } from '@ogun/notebook/lib/browser';
+import { SimpleMonacoEditor } from '@ogun/monaco/lib/browser/simple-monaco-editor';
+import { EncodingRegistry } from '@ogun/core/lib/browser/encoding-registry';
 
 export class EditorsAndDocumentsMain implements Disposable {
 

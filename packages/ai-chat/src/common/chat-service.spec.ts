@@ -14,21 +14,21 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { enableJSDOM } from '@theia/core/lib/browser/test/jsdom';
+import { enableJSDOM } from '@ogun/core/lib/browser/test/jsdom';
 const disableJSDOM = enableJSDOM();
-import { FrontendApplicationConfigProvider } from '@theia/core/lib/browser/frontend-application-config-provider';
+import { FrontendApplicationConfigProvider } from '@ogun/core/lib/browser/frontend-application-config-provider';
 FrontendApplicationConfigProvider.set({});
 
 import { expect } from 'chai';
 import * as sinon from 'sinon';
-import { Container } from '@theia/core/shared/inversify';
+import { Container } from '@ogun/core/shared/inversify';
 import { ChatServiceImpl } from './chat-service';
 import { ChatAgentService } from './chat-agent-service';
 import { ChatSessionStore } from './chat-session-store';
 import { ChatContentDeserializerRegistry } from './chat-content-deserializer';
 import { ChangeSetElementDeserializerRegistry } from './change-set-element-deserializer';
-import { ToolInvocationRegistry, AIVariableService } from '@theia/ai-core';
-import { ILogger } from '@theia/core';
+import { ToolInvocationRegistry, AIVariableService } from '@ogun/ai-core';
+import { ILogger } from '@ogun/core';
 import { ChatRequestParser } from './chat-request-parser';
 
 disableJSDOM();

@@ -14,10 +14,10 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { CliContribution } from '@theia/core/lib/node';
-import { injectable } from '@theia/core/shared/inversify';
-import { Argv } from '@theia/core/shared/yargs';
-import { OVSX_RATE_LIMIT, OVSXRouterConfig } from '@theia/ovsx-client';
+import { CliContribution } from '@ogun/core/lib/node';
+import { injectable } from '@ogun/core/shared/inversify';
+import { Argv } from '@ogun/core/shared/yargs';
+import { OVSX_RATE_LIMIT, OVSXRouterConfig } from '@ogun/ovsx-client';
 import * as fs from 'fs';
 
 @injectable()

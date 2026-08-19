@@ -31,16 +31,16 @@ import {
     ToolCallResult,
     ToolInvocationContext,
     UserRequest
-} from '@theia/ai-core';
-import { CancellationToken } from '@theia/core';
+} from '@ogun/ai-core';
+import { CancellationToken } from '@ogun/core';
 import {
     GoogleGenAI, FunctionCallingConfigMode, FunctionDeclaration, Content, Schema, Part, Modality, FunctionResponse, ToolConfig, Tool, UrlContextMetadata, GroundingMetadata
 } from '@google/genai';
-import { wait } from '@theia/core/lib/common/promise-util';
+import { wait } from '@ogun/core/lib/common/promise-util';
 import { GoogleLanguageModelRetrySettings } from './google-language-models-manager-impl';
 import { googleReasoningFor } from './google-reasoning';
 import { GOOGLE_GOOGLE_SEARCH, GOOGLE_URL_CONTEXT } from './google-server-tools';
-import { UUID } from '@theia/core/shared/@lumino/coreutils';
+import { UUID } from '@ogun/core/shared/@lumino/coreutils';
 
 interface ToolCallback {
     readonly name: string;

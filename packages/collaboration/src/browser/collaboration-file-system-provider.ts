@@ -15,11 +15,11 @@
 // *****************************************************************************
 
 import * as Y from 'yjs';
-import { Disposable, Emitter, Event, URI } from '@theia/core';
+import { Disposable, Emitter, Event, URI } from '@ogun/core';
 import {
     FileChange, FileDeleteOptions,
     FileOverwriteOptions, FileSystemProviderCapabilities, FileType, Stat, WatchOptions, FileSystemProviderWithFileReadWriteCapability, FileWriteOptions
-} from '@theia/filesystem/lib/common/files';
+} from '@ogun/filesystem/lib/common/files';
 import { ProtocolBroadcastConnection, Workspace, Peer } from 'open-collaboration-protocol';
 
 export namespace CollaborationURI {

@@ -18,7 +18,7 @@
 
 import { expect } from 'chai';
 import * as path from 'path';
-import { Plugin } from '@theia/plugin-ext';
+import { Plugin } from '@ogun/plugin-ext';
 import { findPlugin } from './plugin-vscode-init';
 
 const PLUGIN_A_FOLDER = path.join(path.sep, 'p', 'sample-namespace.plugin-esm');

@@ -18,9 +18,9 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { CancellationToken, Disposable, DisposableCollection, Emitter, Event, URI } from '@theia/core';
+import { CancellationToken, Disposable, DisposableCollection, Emitter, Event, URI } from '@ogun/core';
 import { URI as TheiaURI } from '../types-impl';
-import type * as theia from '@theia/plugin';
+import type * as theia from '@ogun/plugin';
 import {
     NotebookCellStatusBarListDto, NotebookDataDto,
     NotebookDocumentsAndEditorsDelta, NotebookDocumentShowOptions, NotebookDocumentsMain, NotebookEditorAddData, NotebookEditorsMain, NotebooksExt, NotebooksMain, Plugin,
@@ -31,12 +31,12 @@ import { RPCProtocol } from '../../common/rpc-protocol';
 import { UriComponents } from '../../common/uri-components';
 import { CommandRegistryImpl, CommandsConverter } from '../command-registry';
 import * as typeConverters from '../type-converters';
-import { BinaryBuffer } from '@theia/core/lib/common/buffer';
+import { BinaryBuffer } from '@ogun/core/lib/common/buffer';
 import { Cell, NotebookDocument } from './notebook-document';
 import { NotebookEditor } from './notebook-editor';
 import { EditorsAndDocumentsExtImpl } from '../editors-and-documents';
 import { DocumentsExtImpl } from '../documents';
-import { CellUri, NotebookCellModelResource, NotebookModelResource } from '@theia/notebook/lib/common';
+import { CellUri, NotebookCellModelResource, NotebookModelResource } from '@ogun/notebook/lib/common';
 import { PluginLogger } from '../logger';
 
 export class NotebooksExtImpl implements NotebooksExt {

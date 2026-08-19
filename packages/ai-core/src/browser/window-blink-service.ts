@@ -14,11 +14,11 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { environment, nls, ILogger } from '@theia/core';
-import { inject, injectable, optional, named } from '@theia/core/shared/inversify';
-import { WindowTitleService } from '@theia/core/lib/browser/window/window-title-service';
-import { SecondaryWindowService } from '@theia/core/lib/browser/window/secondary-window-service';
-import { FrontendApplicationConfigProvider } from '@theia/core/lib/browser/frontend-application-config-provider';
+import { environment, nls, ILogger } from '@ogun/core';
+import { inject, injectable, optional, named } from '@ogun/core/shared/inversify';
+import { WindowTitleService } from '@ogun/core/lib/browser/window/window-title-service';
+import { SecondaryWindowService } from '@ogun/core/lib/browser/window/secondary-window-service';
+import { FrontendApplicationConfigProvider } from '@ogun/core/lib/browser/frontend-application-config-provider';
 
 /**
  * Result of a window blink attempt

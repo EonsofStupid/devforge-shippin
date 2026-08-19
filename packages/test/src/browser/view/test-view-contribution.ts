@@ -14,18 +14,18 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { AbstractViewContribution, FrontendApplicationContribution, ViewContainerTitleOptions, Widget, codicon } from '@theia/core/lib/browser';
-import { Command, CommandRegistry, MenuModelRegistry, nls } from '@theia/core';
-import { inject, injectable } from '@theia/core/shared/inversify';
+import { AbstractViewContribution, FrontendApplicationContribution, ViewContainerTitleOptions, Widget, codicon } from '@ogun/core/lib/browser';
+import { Command, CommandRegistry, MenuModelRegistry, nls } from '@ogun/core';
+import { inject, injectable } from '@ogun/core/shared/inversify';
 import { TestItem, TestRunProfileKind, TestService } from '../test-service';
-import { ContextKeyService } from '@theia/core/lib/browser/context-key-service';
+import { ContextKeyService } from '@ogun/core/lib/browser/context-key-service';
 import { TestTreeWidget } from './test-tree-widget';
-import { TabBarToolbarContribution, TabBarToolbarRegistry } from '@theia/core/lib/browser/shell/tab-bar-toolbar';
+import { TabBarToolbarContribution, TabBarToolbarRegistry } from '@ogun/core/lib/browser/shell/tab-bar-toolbar';
 import { TestCommandId } from '../constants';
-import { NavigationLocationService } from '@theia/editor/lib/browser/navigation/navigation-location-service';
-import { NavigationLocation } from '@theia/editor/lib/browser/navigation/navigation-location';
-import { FileService } from '@theia/filesystem/lib/browser/file-service';
-import { FileNavigatorCommands } from '@theia/navigator/lib/browser/file-navigator-commands';
+import { NavigationLocationService } from '@ogun/editor/lib/browser/navigation/navigation-location-service';
+import { NavigationLocation } from '@ogun/editor/lib/browser/navigation/navigation-location';
+import { FileService } from '@ogun/filesystem/lib/browser/file-service';
+import { FileNavigatorCommands } from '@ogun/navigator/lib/browser/file-navigator-commands';
 export const PLUGIN_TEST_VIEW_TITLE_MENU = ['plugin_test', 'title'];
 
 export namespace TestViewCommands {

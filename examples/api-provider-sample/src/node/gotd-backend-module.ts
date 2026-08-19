@@ -13,10 +13,10 @@
 //
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
-import { ContainerModule } from '@theia/core/shared/inversify';
-import { ExtPluginApiProvider } from '@theia/plugin-ext';
+import { ContainerModule } from '@ogun/core/shared/inversify';
+import { ExtPluginApiProvider } from '@ogun/plugin-ext';
 import { ExtPluginGotdApiProvider } from './ext-plugin-gotd-api-provider';
-import { MainPluginApiProvider } from '@theia/plugin-ext/lib/common/plugin-ext-api-contribution';
+import { MainPluginApiProvider } from '@ogun/plugin-ext/lib/common/plugin-ext-api-contribution';
 import { GotdMainPluginApiProvider } from './gotd-main-plugin-provider';
 import { GreetingMain } from '../common/plugin-api-rpc';
 import { GreetingMainImpl } from './greeting-main-impl';

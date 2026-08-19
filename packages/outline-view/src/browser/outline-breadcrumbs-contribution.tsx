@@ -14,12 +14,12 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { injectable, inject, postConstruct } from '@theia/core/shared/inversify';
-import { LabelProvider, BreadcrumbsService, Widget, TreeNode, OpenerService, open, SelectableTreeNode, BreadcrumbsContribution, Breadcrumb } from '@theia/core/lib/browser';
-import URI from '@theia/core/lib/common/uri';
+import { injectable, inject, postConstruct } from '@ogun/core/shared/inversify';
+import { LabelProvider, BreadcrumbsService, Widget, TreeNode, OpenerService, open, SelectableTreeNode, BreadcrumbsContribution, Breadcrumb } from '@ogun/core/lib/browser';
+import URI from '@ogun/core/lib/common/uri';
 import { OutlineViewService } from './outline-view-service';
 import { OutlineSymbolInformationNode, OutlineViewWidget } from './outline-view-widget';
-import { Disposable, DisposableCollection, Emitter, Event, UriSelection } from '@theia/core/lib/common';
+import { Disposable, DisposableCollection, Emitter, Event, UriSelection } from '@ogun/core/lib/common';
 
 export const OutlineBreadcrumbType = Symbol('OutlineBreadcrumb');
 export const BreadcrumbPopupOutlineViewFactory = Symbol('BreadcrumbPopupOutlineViewFactory');

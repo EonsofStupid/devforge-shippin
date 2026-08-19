@@ -18,7 +18,7 @@
 const levenshtein = require('js-levenshtein');
 
 // eslint-disable-next-line import/no-extraneous-dependencies
-const metadata = require('@theia/core/src/common/i18n/nls.metadata.json');
+const metadata = require('@ogun/core/src/common/i18n/nls.metadata.json');
 const messages = new Set(Object.values(metadata.messages)
     .reduceRight((prev, curr) => prev.concat(curr), [])
     .map(e => e.replace(/&&/g, '')));

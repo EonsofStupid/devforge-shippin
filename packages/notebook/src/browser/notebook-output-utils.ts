@@ -19,7 +19,7 @@
  *  Copied from commit 18b2c92451b076943e5b508380e0eba66ba7d934 from file src\vs\workbench\contrib\notebook\common\notebookCommon.ts
  *--------------------------------------------------------------------------------------------*/
 
-import { BinaryBuffer } from '@theia/core/lib/common/buffer';
+import { BinaryBuffer } from '@ogun/core/lib/common/buffer';
 
 const textDecoder = new TextDecoder();
 

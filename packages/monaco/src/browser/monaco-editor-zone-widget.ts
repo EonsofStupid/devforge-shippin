@@ -18,8 +18,8 @@
  *  Licensed under the MIT License. See https://github.com/Microsoft/vscode/blob/master/LICENSE.txt for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { Disposable, DisposableCollection, Event, Emitter } from '@theia/core';
-import { TrackedRangeStickiness } from '@theia/editor/lib/browser';
+import { Disposable, DisposableCollection, Event, Emitter } from '@ogun/core';
+import { TrackedRangeStickiness } from '@ogun/editor/lib/browser';
 import * as monaco from '@theia/monaco-editor-core';
 
 export interface MonacoEditorViewZone extends monaco.editor.IViewZone {

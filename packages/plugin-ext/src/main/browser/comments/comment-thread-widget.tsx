@@ -13,7 +13,7 @@
 //
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
-import { MonacoEditorZoneWidget } from '@theia/monaco/lib/browser/monaco-editor-zone-widget';
+import { MonacoEditorZoneWidget } from '@ogun/monaco/lib/browser/monaco-editor-zone-widget';
 import {
     Comment,
     CommentMode,
@@ -22,9 +22,9 @@ import {
     CommentThreadCollapsibleState
 } from '../../../common/plugin-api-rpc-model';
 import { CommentGlyphWidget } from './comment-glyph-widget';
-import { BaseWidget, DISABLED_CLASS } from '@theia/core/lib/browser';
-import * as React from '@theia/core/shared/react';
-import { MouseTargetType } from '@theia/editor/lib/browser';
+import { BaseWidget, DISABLED_CLASS } from '@ogun/core/lib/browser';
+import * as React from '@ogun/core/shared/react';
+import { MouseTargetType } from '@ogun/editor/lib/browser';
 import { CommentsService } from './comments-service';
 import {
     CommandMenu,
@@ -34,13 +34,13 @@ import {
     DisposableCollection,
     MenuModelRegistry,
     MenuPath
-} from '@theia/core/lib/common';
+} from '@ogun/core/lib/common';
 import { CommentsContext } from './comments-context';
-import { RefObject } from '@theia/core/shared/react';
+import { RefObject } from '@ogun/core/shared/react';
 import * as monaco from '@theia/monaco-editor-core';
-import { createRoot, Root } from '@theia/core/shared/react-dom/client';
-import { CommentAuthorInformation } from '@theia/plugin';
-import { ContextKeyService } from '@theia/core/lib/browser/context-key-service';
+import { createRoot, Root } from '@ogun/core/shared/react-dom/client';
+import { CommentAuthorInformation } from '@ogun/plugin';
+import { ContextKeyService } from '@ogun/core/lib/browser/context-key-service';
 
 /*---------------------------------------------------------------------------------------------
  *  Copyright (c) Microsoft Corporation. All rights reserved.

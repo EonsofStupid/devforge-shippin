@@ -18,15 +18,15 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { Disposable, DisposableCollection } from '@theia/core';
-import { interfaces } from '@theia/core/shared/inversify';
-import { UriComponents } from '@theia/core/lib/common/uri';
-import { NotebookEditorWidget, NotebookService, NotebookEditorWidgetService, NotebookCellEditorService } from '@theia/notebook/lib/browser';
-import { NotebookModel } from '@theia/notebook/lib/browser/view-model/notebook-model';
+import { Disposable, DisposableCollection } from '@ogun/core';
+import { interfaces } from '@ogun/core/shared/inversify';
+import { UriComponents } from '@ogun/core/lib/common/uri';
+import { NotebookEditorWidget, NotebookService, NotebookEditorWidgetService, NotebookCellEditorService } from '@ogun/notebook/lib/browser';
+import { NotebookModel } from '@ogun/notebook/lib/browser/view-model/notebook-model';
 import { MAIN_RPC_CONTEXT, NotebookDocumentsAndEditorsDelta, NotebookDocumentsAndEditorsMain, NotebookEditorAddData, NotebookModelAddedData, NotebooksExt } from '../../../common';
 import { RPCProtocol } from '../../../common/rpc-protocol';
 import { NotebookDto } from './notebook-dto';
-import { WidgetManager } from '@theia/core/lib/browser';
+import { WidgetManager } from '@ogun/core/lib/browser';
 import { NotebookEditorsMainImpl } from './notebook-editors-main';
 import { NotebookDocumentsMainImpl } from './notebook-documents-main';
 import { diffMaps, diffSets } from '../../../common/collections';

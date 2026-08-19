@@ -14,7 +14,7 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { GenericCapabilitySelections } from '@theia/ai-core';
+import { GenericCapabilitySelections } from '@ogun/ai-core';
 import { ChatAgentLocation } from './chat-agents';
 import { ChatSessionSettings, ResponseTokenUsage } from './chat-model';
 

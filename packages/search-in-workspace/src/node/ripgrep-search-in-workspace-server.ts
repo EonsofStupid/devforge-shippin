@@ -14,13 +14,13 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import * as fs from '@theia/core/shared/fs-extra';
+import * as fs from '@ogun/core/shared/fs-extra';
 import * as path from 'path';
-import { ILogger } from '@theia/core';
-import { RawProcess, RawProcessFactory, RawProcessOptions } from '@theia/process/lib/node';
-import { FileUri } from '@theia/core/lib/common/file-uri';
-import URI from '@theia/core/lib/common/uri';
-import { inject, injectable } from '@theia/core/shared/inversify';
+import { ILogger } from '@ogun/core';
+import { RawProcess, RawProcessFactory, RawProcessOptions } from '@ogun/process/lib/node';
+import { FileUri } from '@ogun/core/lib/common/file-uri';
+import URI from '@ogun/core/lib/common/uri';
+import { inject, injectable } from '@ogun/core/shared/inversify';
 import { SearchInWorkspaceServer, SearchInWorkspaceOptions, SearchInWorkspaceResult, SearchInWorkspaceClient, LinePreview } from '../common/search-in-workspace-interface';
 
 export const RgPath = Symbol('RgPath');

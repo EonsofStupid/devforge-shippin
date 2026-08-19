@@ -14,19 +14,19 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { inject, injectable, optional } from '@theia/core/shared/inversify';
+import { inject, injectable, optional } from '@ogun/core/shared/inversify';
 import {
     codiconArray,
     QuickAccessContribution,
     QuickAccessProvider,
     QuickAccessRegistry,
     QuickInputService
-} from '@theia/core/lib/browser';
-import { CancellationToken, CommandContribution, CommandRegistry, CommandService, nls } from '@theia/core/lib/common';
+} from '@ogun/core/lib/browser';
+import { CancellationToken, CommandContribution, CommandRegistry, CommandService, nls } from '@ogun/core/lib/common';
 import { TerminalWidget } from './base/terminal-widget';
 import { TerminalService } from './base/terminal-service';
 import { TerminalCommands } from './terminal-frontend-contribution';
-import { filterItems, QuickPickItem, QuickPicks } from '@theia/core/lib/browser/quick-input/quick-input-service';
+import { filterItems, QuickPickItem, QuickPicks } from '@ogun/core/lib/browser/quick-input/quick-input-service';
 
 @injectable()
 export class TerminalQuickOpenService implements QuickAccessProvider {

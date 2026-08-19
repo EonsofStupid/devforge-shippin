@@ -14,8 +14,8 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { Container, interfaces, injectable, inject } from '@theia/core/shared/inversify';
-import { TreeProps, ContextMenuRenderer, TreeNode, open, NodeProps, defaultTreeProps } from '@theia/core/lib/browser';
+import { Container, interfaces, injectable, inject } from '@ogun/core/shared/inversify';
+import { TreeProps, ContextMenuRenderer, TreeNode, open, NodeProps, defaultTreeProps } from '@ogun/core/lib/browser';
 import { FileTreeModel, FileStatNode, createFileTreeContainer, FileTreeWidget } from '../file-tree';
 
 const BREADCRUMBS_FILETREE_CLASS = 'theia-FilepathBreadcrumbFileTree';

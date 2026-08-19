@@ -15,7 +15,7 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { BasePromptFragment } from '@theia/ai-core/lib/common';
+import { BasePromptFragment } from '@ogun/ai-core/lib/common';
 import { CONTEXT_FILES_VARIABLE_ID, TASK_CONTEXT_SUMMARY_VARIABLE_ID } from '../../common/context-variables';
 import {
     FILE_CONTENT_FUNCTION_ID,

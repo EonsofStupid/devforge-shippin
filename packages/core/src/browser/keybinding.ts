@@ -41,7 +41,7 @@ export namespace KeybindingScope {
 }
 
 /**
- * @deprecated import from `@theia/core/lib/common/keybinding` instead
+ * @deprecated import from `@ogun/core/lib/common/keybinding` instead
  */
 export type Keybinding = common.Keybinding;
 export const Keybinding = common.Keybinding;

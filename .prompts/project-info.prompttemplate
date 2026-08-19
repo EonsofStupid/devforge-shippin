@@ -53,7 +53,7 @@ When binding a `ContributionProvider`, prefer `bindRootContributionProvider` ove
 - **`bindRootContributionProvider`** should be used in most cases. It walks to the root Inversify container before constructing the provider, which avoids a memory leak where the provider permanently retains a reference to a child container. Use this whenever contributions are bound in the main (root) container, which is the typical case for module-level `ContainerModule` bindings.
 - **`bindContributionProvider`** should only be used when some or all of the relevant contributions are scoped to a child container rather than the root container, such as connection-scoped containers (e.g., inside `ConnectionContainerModule.create(...)`).
 
-Both functions are exported from `@theia/core/lib/common/contribution-provider`.
+Both functions are exported from `@ogun/core/lib/common/contribution-provider`.
 
 ### Test File References
 
@@ -136,7 +136,7 @@ The `FileService` in browser mode communicates with the backend via RPC and has 
 - **Inaccessible paths:** Arbitrary filesystem paths outside these boundaries (e.g., `/tmp/`, `/etc/`)
 
 When implementing browser-side services that need to read files from user-configured directories:
-1. Use `FileService` from `@theia/filesystem/lib/browser/file-service`
+1. Use `FileService` from `@ogun/filesystem/lib/browser/file-service`
 2. Convert paths to URIs using `URI.fromFilePath(path)`
 3. Expect `fileService.exists()` to return `false` for paths outside allowed boundaries
 4. Document that users should configure paths within their workspace or config directory

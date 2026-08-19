@@ -14,9 +14,9 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { ContainerModule } from '@theia/core/shared/inversify';
-import { ElectronIpcConnectionProvider } from '@theia/core/lib/electron-browser/messaging/electron-ipc-connection-source';
-import { CommandContribution, MenuContribution } from '@theia/core/lib/common';
+import { ContainerModule } from '@ogun/core/shared/inversify';
+import { ElectronIpcConnectionProvider } from '@ogun/core/lib/electron-browser/messaging/electron-ipc-connection-source';
+import { CommandContribution, MenuContribution } from '@ogun/core/lib/common';
 import { SampleUpdater, SampleUpdaterPath, SampleUpdaterClient } from '../../common/updater/sample-updater';
 import { SampleUpdaterFrontendContribution, ElectronMenuUpdater, SampleUpdaterClientImpl } from './sample-updater-frontend-contribution';
 

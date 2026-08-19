@@ -14,11 +14,11 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { Container } from '@theia/core/shared/inversify';
-import { ILogger, isWindows } from '@theia/core';
-import { FileUri } from '@theia/core/lib/common/file-uri';
-import { MockLogger } from '@theia/core/lib/common/test/mock-logger';
-import { RawProcessFactory, RawProcessOptions, RawProcess, ProcessManager } from '@theia/process/lib/node';
+import { Container } from '@ogun/core/shared/inversify';
+import { ILogger, isWindows } from '@ogun/core';
+import { FileUri } from '@ogun/core/lib/common/file-uri';
+import { MockLogger } from '@ogun/core/lib/common/test/mock-logger';
+import { RawProcessFactory, RawProcessOptions, RawProcess, ProcessManager } from '@ogun/process/lib/node';
 import { RipgrepSearchInWorkspaceServer, RgPath } from './ripgrep-search-in-workspace-server';
 import { SearchInWorkspaceClient, SearchInWorkspaceResult } from '../common/search-in-workspace-interface';
 import * as path from 'path';

@@ -18,17 +18,17 @@ import {
     FolderPreferenceProvider,
     FolderPreferenceProviderFactory,
     FolderPreferenceProviderFolder,
-} from '@theia/preferences/lib/browser';
-import { Container, injectable, interfaces } from '@theia/core/shared/inversify';
+} from '@ogun/preferences/lib/browser';
+import { Container, injectable, interfaces } from '@ogun/core/shared/inversify';
 import { extensionsConfigurationSchema } from './recommended-extensions-json-schema';
 import {
     WorkspaceFilePreferenceProvider,
     WorkspaceFilePreferenceProviderFactory,
     WorkspaceFilePreferenceProviderOptions
-} from '@theia/preferences/lib/browser/workspace-file-preference-provider';
-import { SectionPreferenceProviderUri, SectionPreferenceProviderSection } from '@theia/preferences/lib/common/section-preference-provider';
-import { UserPreferenceProvider, UserPreferenceProviderFactory } from '@theia/preferences/lib/common/user-preference-provider';
-import { bindFactory } from '@theia/core';
+} from '@ogun/preferences/lib/browser/workspace-file-preference-provider';
+import { SectionPreferenceProviderUri, SectionPreferenceProviderSection } from '@ogun/preferences/lib/common/section-preference-provider';
+import { UserPreferenceProvider, UserPreferenceProviderFactory } from '@ogun/preferences/lib/common/user-preference-provider';
+import { bindFactory } from '@ogun/core';
 
 /**
  * The overrides in this file are required because the base preference providers assume that a

@@ -14,9 +14,9 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { ElectronMainApplication, ElectronMainApplicationContribution } from '@theia/core/lib/electron-main/electron-main-application';
-import { ElectronSecurityTokenService } from '@theia/core/lib/electron-main/electron-security-token-service';
-import { inject, injectable } from '@theia/core/shared/inversify';
+import { ElectronMainApplication, ElectronMainApplicationContribution } from '@ogun/core/lib/electron-main/electron-main-application';
+import { ElectronSecurityTokenService } from '@ogun/core/lib/electron-main/electron-security-token-service';
+import { inject, injectable } from '@ogun/core/shared/inversify';
 import { MiniBrowserEndpoint } from '../common/mini-browser-endpoint';
 
 /**

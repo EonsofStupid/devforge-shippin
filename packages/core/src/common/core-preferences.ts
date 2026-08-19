@@ -15,7 +15,7 @@
 // *****************************************************************************
 
 import { interfaces } from 'inversify';
-import { environment } from '@theia/application-package/lib/environment';
+import { environment } from '@ogun/application-package/lib/environment';
 import { SUPPORTED_ENCODINGS } from './supported-encodings';
 import { isOSX } from '../common/os';
 import { nls } from '../common/nls';

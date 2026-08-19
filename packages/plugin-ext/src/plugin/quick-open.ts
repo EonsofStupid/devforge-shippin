@@ -18,19 +18,19 @@ import {
     QuickOpenExt, PLUGIN_RPC_CONTEXT as Ext, QuickOpenMain, TransferInputBox, Plugin,
     TransferQuickInputButton, TransferQuickInput, TransferQuickPickItem
 } from '../common/plugin-api-rpc';
-import * as theia from '@theia/plugin';
-import { CancellationToken } from '@theia/core/lib/common/cancellation';
+import * as theia from '@ogun/plugin';
+import { CancellationToken } from '@ogun/core/lib/common/cancellation';
 import { RPCProtocol } from '../common/rpc-protocol';
-import { Emitter, Event } from '@theia/core/lib/common/event';
-import { DisposableCollection } from '@theia/core/lib/common/disposable';
+import { Emitter, Event } from '@ogun/core/lib/common/event';
+import { DisposableCollection } from '@ogun/core/lib/common/disposable';
 import { InputBoxValidationSeverity, QuickInputButtons, QuickPickItemKind, ThemeIcon } from './types-impl';
-import { Severity } from '@theia/core/lib/common/severity';
-import { URI } from '@theia/core/shared/vscode-uri';
+import { Severity } from '@ogun/core/lib/common/severity';
+import { URI } from '@ogun/core/shared/vscode-uri';
 import * as path from 'path';
 import { convertToTransferQuickPickItems } from './type-converters';
 import { PluginPackage } from '../common/plugin-protocol';
-import { QuickInputButtonHandle } from '@theia/core/lib/browser';
-import { MaybePromise } from '@theia/core/lib/common/types';
+import { QuickInputButtonHandle } from '@ogun/core/lib/browser';
+import { MaybePromise } from '@ogun/core/lib/common/types';
 import { PluginIconPath } from './plugin-icon-path';
 
 /**

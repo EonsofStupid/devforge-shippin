@@ -14,12 +14,12 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { inject, injectable, postConstruct } from '@theia/core/shared/inversify';
-import { Emitter, Event } from '@theia/core';
-import { SaveErrorChecker } from '@theia/core/lib/browser/saveable-service';
-import { DiagnosticSeverity } from '@theia/core/shared/vscode-languageserver-protocol';
+import { inject, injectable, postConstruct } from '@ogun/core/shared/inversify';
+import { Emitter, Event } from '@ogun/core';
+import { SaveErrorChecker } from '@ogun/core/lib/browser/saveable-service';
+import { DiagnosticSeverity } from '@ogun/core/shared/vscode-languageserver-protocol';
 import { ProblemManager } from './problem-manager';
-import URI from '@theia/core/lib/common/uri';
+import URI from '@ogun/core/lib/common/uri';
 
 @injectable()
 export class ProblemAutoSaveContribution implements SaveErrorChecker {

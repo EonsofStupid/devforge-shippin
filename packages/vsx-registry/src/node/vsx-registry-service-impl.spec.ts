@@ -16,11 +16,11 @@
 
 import { expect } from 'chai';
 import * as sinon from 'sinon';
-import { Container } from '@theia/core/shared/inversify';
-import { ILogger } from '@theia/core/lib/common/logger';
-import { RequestService } from '@theia/core/shared/@theia/request';
-import { OVSXApiFilterProvider, OVSXApiFilter, OVSXRouterConfig } from '@theia/ovsx-client';
-import { OVSXClient, VSXExtensionRaw, VSXQueryResult, VSXSearchResult } from '@theia/ovsx-client/lib/ovsx-types';
+import { Container } from '@ogun/core/shared/inversify';
+import { ILogger } from '@ogun/core/lib/common/logger';
+import { RequestService } from '@ogun/core/shared/@ogun/request';
+import { OVSXApiFilterProvider, OVSXApiFilter, OVSXRouterConfig } from '@ogun/ovsx-client';
+import { OVSXClient, VSXExtensionRaw, VSXQueryResult, VSXSearchResult } from '@ogun/ovsx-client/lib/ovsx-types';
 import { OVSXClientProvider } from '../common/ovsx-client-provider';
 import { VSXEnvironment } from '../common/vsx-environment';
 import { VSXRegistryService } from '../common/vsx-registry-service';

@@ -14,9 +14,9 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import * as React from '@theia/core/shared/react';
-import { codicon, HoverPosition, HoverService } from '@theia/core/lib/browser';
-import { MarkdownString } from '@theia/core/lib/common/markdown-rendering/markdown-string';
+import * as React from '@ogun/core/shared/react';
+import { codicon, HoverPosition, HoverService } from '@ogun/core/lib/browser';
+import { MarkdownString } from '@ogun/core/lib/common/markdown-rendering/markdown-string';
 
 /**
  * Trust state for the publisher-row icon. Both the OVSX and MCP entry types map their

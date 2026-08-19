@@ -15,7 +15,7 @@
 // *****************************************************************************
 
 // Reexporting here for backwards compatibility.
-// Please import from '@theia/core/lib/browser' or '@theia/core/lib/browser/keyboard' instead of this module.
+// Please import from '@ogun/core/lib/browser' or '@ogun/core/lib/browser/keyboard' instead of this module.
 // This module might be removed in future releases.
 import { KeySequence, Keystroke, KeyCode, KeyModifier, Key, SpecialCases, KeysOrKeyCodes } from './keyboard/keys';
 export { KeySequence, Keystroke, KeyCode, KeyModifier, Key, SpecialCases, KeysOrKeyCodes };

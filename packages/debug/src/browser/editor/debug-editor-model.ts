@@ -15,13 +15,13 @@
 // *****************************************************************************
 
 import debounce = require('p-debounce');
-import { injectable, inject, postConstruct, interfaces, Container } from '@theia/core/shared/inversify';
+import { injectable, inject, postConstruct, interfaces, Container } from '@ogun/core/shared/inversify';
 import * as monaco from '@theia/monaco-editor-core';
 import { StandaloneCodeEditor } from '@theia/monaco-editor-core/esm/vs/editor/standalone/browser/standaloneCodeEditor';
 import { IDecorationOptions } from '@theia/monaco-editor-core/esm/vs/editor/common/editorCommon';
-import URI from '@theia/core/lib/common/uri';
-import { Disposable, DisposableCollection, MenuPath, isOSX } from '@theia/core';
-import { ContextMenuRenderer, isContextMenuEvent } from '@theia/core/lib/browser';
+import URI from '@ogun/core/lib/common/uri';
+import { Disposable, DisposableCollection, MenuPath, isOSX } from '@ogun/core';
+import { ContextMenuRenderer, isContextMenuEvent } from '@ogun/core/lib/browser';
 import { BreakpointManager, SourceBreakpointsChangeEvent } from '../breakpoint/breakpoint-manager';
 import { DebugSourceBreakpoint } from '../model/debug-source-breakpoint';
 import { DebugSessionManager } from '../debug-session-manager';

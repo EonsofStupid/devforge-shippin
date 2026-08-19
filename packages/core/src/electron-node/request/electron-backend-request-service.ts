@@ -15,7 +15,7 @@
  ********************************************************************************/
 
 import { decorate, injectable, inject, named } from 'inversify';
-import { NodeRequestOptions, NodeRequestService } from '@theia/request/lib/node-request-service';
+import { NodeRequestOptions, NodeRequestService } from '@ogun/request/lib/node-request-service';
 import { ElectronSecurityToken } from '../../electron-common/electron-token';
 import { ILogger } from '../../common';
 

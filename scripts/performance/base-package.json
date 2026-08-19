@@ -1,6 +1,6 @@
 {
   "private": true,
-  "name": "@theia/example-{{app}}",
+  "name": "@ogun/example-{{app}}",
   "version": "{{version}}",
   "license": "EPL-2.0 OR GPL-2.0-with-classpath-exception",
   "theia": {
@@ -20,8 +20,8 @@
     }
   },
   "dependencies": {
-    "@theia/core": "{{version}}",
-    "@theia/plugin-ext": "{{version}}"
+    "@ogun/core": "{{version}}",
+    "@ogun/plugin-ext": "{{version}}"
   },
   "scripts": {
     "clean": "theia clean",
@@ -32,6 +32,6 @@
     "start": "THEIA_CONFIG_DIR=\"{{configDir}}\" theia start --plugins=local-dir:../../noPlugins --log-level=debug"
   },
   "devDependencies": {
-    "@theia/cli": "{{version}}"
+    "@ogun/cli": "{{version}}"
   }
 }

@@ -19,9 +19,9 @@
  *--------------------------------------------------------------------------------------------*/
 // copied and modified from https://github.com/microsoft/vscode/blob/53eac52308c4611000a171cc7bf1214293473c78/src/vs/workbench/contrib/customEditor/browser/customEditors.ts
 
-import { injectable } from '@theia/core/shared/inversify';
-import URI from '@theia/core/lib/common/uri';
-import { Reference } from '@theia/core/lib/common/reference';
+import { injectable } from '@ogun/core/shared/inversify';
+import URI from '@ogun/core/lib/common/uri';
+import { Reference } from '@ogun/core/lib/common/reference';
 import { CustomEditorModel } from './custom-editors-main';
 
 @injectable()

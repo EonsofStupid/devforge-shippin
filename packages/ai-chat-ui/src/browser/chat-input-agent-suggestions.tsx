@@ -14,11 +14,11 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import * as React from '@theia/core/shared/react';
+import * as React from '@ogun/core/shared/react';
 import { DeclaredEventsEventListenerObject, useMarkdownRendering } from './chat-response-renderer/markdown-part-renderer';
-import { OpenerService } from '@theia/core/lib/browser';
-import { ChatSuggestion, ChatSuggestionCallback } from '@theia/ai-chat';
-import { MarkdownString } from '@theia/core/lib/common/markdown-rendering';
+import { OpenerService } from '@ogun/core/lib/browser';
+import { ChatSuggestion, ChatSuggestionCallback } from '@ogun/ai-chat';
+import { MarkdownString } from '@ogun/core/lib/common/markdown-rendering';
 
 interface ChatInputAgentSuggestionsProps {
     suggestions: readonly ChatSuggestion[];

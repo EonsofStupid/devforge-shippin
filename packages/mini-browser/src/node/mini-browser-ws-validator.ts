@@ -14,9 +14,9 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { WsRequestValidatorContribution } from '@theia/core/lib/node/ws-request-validators';
+import { WsRequestValidatorContribution } from '@ogun/core/lib/node/ws-request-validators';
 import * as http from 'http';
-import { injectable, postConstruct } from '@theia/core/shared/inversify';
+import { injectable, postConstruct } from '@ogun/core/shared/inversify';
 import { MiniBrowserEndpoint } from '../common/mini-browser-endpoint';
 
 /**

@@ -14,12 +14,12 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { CancellationToken } from '@theia/core';
-import { ContributionProvider, Disposable, Emitter, Event } from '@theia/core/lib/common';
-import URI from '@theia/core/lib/common/uri';
-import { inject, injectable, named, postConstruct } from '@theia/core/shared/inversify';
-import { DocumentUri, Position } from '@theia/core/shared/vscode-languageserver-protocol';
-import { LanguageSelector, score } from '@theia/editor/lib/common/language-selector';
+import { CancellationToken } from '@ogun/core';
+import { ContributionProvider, Disposable, Emitter, Event } from '@ogun/core/lib/common';
+import URI from '@ogun/core/lib/common/uri';
+import { inject, injectable, named, postConstruct } from '@ogun/core/shared/inversify';
+import { DocumentUri, Position } from '@ogun/core/shared/vscode-languageserver-protocol';
+import { LanguageSelector, score } from '@ogun/editor/lib/common/language-selector';
 import { TypeHierarchyItem } from './typehierarchy';
 
 export const TypeHierarchyService = Symbol('TypeHierarchyService');

@@ -14,8 +14,8 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { QuickAccessContribution } from '@theia/core/lib/browser/quick-input';
-import { injectable } from '@theia/core/shared/inversify';
+import { QuickAccessContribution } from '@ogun/core/lib/browser/quick-input';
+import { injectable } from '@ogun/core/shared/inversify';
 import { ICodeEditor } from '@theia/monaco-editor-core/esm/vs/editor/browser/editorBrowser';
 import { ICodeEditorService } from '@theia/monaco-editor-core/esm/vs/editor/browser/services/codeEditorService';
 import { StandaloneGotoLineQuickAccessProvider } from '@theia/monaco-editor-core/esm/vs/editor/standalone/browser/quickAccess/standaloneGotoLineQuickAccess';

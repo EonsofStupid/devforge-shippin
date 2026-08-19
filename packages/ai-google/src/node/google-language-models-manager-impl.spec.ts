@@ -16,7 +16,7 @@
 
 import { expect } from 'chai';
 import type { Model } from '@google/genai';
-import { ReasoningApi } from '@theia/ai-core';
+import { ReasoningApi } from '@ogun/ai-core';
 import { GoogleLanguageModelsManagerImpl, reasoningApiFromModelId } from './google-language-models-manager-impl';
 import { GoogleModelDescription } from '../common';
 

@@ -1410,7 +1410,7 @@
               "mdDescription": "用於安裝此伺服器的登錄檔核准內容雜湊值。",
               "title": "登錄檔設定雜湊值"
             },
-            "mdDescription": "從 AI 註冊表安裝之伺服器的來源元資料。由 `@theia/ai-registry` 撰寫;使用者無法編輯。",
+            "mdDescription": "從 AI 註冊表安裝之伺服器的來源元資料。由 `@ogun/ai-registry` 撰寫;使用者無法編輯。",
             "serverId": {
               "mdDescription": "標示此伺服器所安裝的 AI 登錄檔項目。",
               "title": "登錄檔伺服器識別碼"

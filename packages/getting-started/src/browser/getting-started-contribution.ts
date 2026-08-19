@@ -14,19 +14,19 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { injectable, inject } from '@theia/core/shared/inversify';
+import { injectable, inject } from '@ogun/core/shared/inversify';
 import {
     ArrayUtils, CommandRegistry, MenuModelRegistry, nls, PreferenceContribution,
     PreferenceDataProperty, PreferenceSchemaService, PreferenceService
-} from '@theia/core/lib/common';
-import { CommonCommands, CommonMenus, AbstractViewContribution, FrontendApplicationContribution, FrontendApplication } from '@theia/core/lib/browser';
-import { EditorManager } from '@theia/editor/lib/browser/editor-manager';
+} from '@ogun/core/lib/common';
+import { CommonCommands, CommonMenus, AbstractViewContribution, FrontendApplicationContribution, FrontendApplication } from '@ogun/core/lib/browser';
+import { EditorManager } from '@ogun/editor/lib/browser/editor-manager';
 import { GettingStartedWidget } from './getting-started-widget';
-import { FileService } from '@theia/filesystem/lib/browser/file-service';
-import { FrontendApplicationStateService } from '@theia/core/lib/browser/frontend-application-state';
-import { WorkspaceService } from '@theia/workspace/lib/browser';
-import { FrontendApplicationConfigProvider } from '@theia/core/lib/browser/frontend-application-config-provider';
-import { URI as VSCodeURI } from '@theia/core/shared/vscode-uri';
+import { FileService } from '@ogun/filesystem/lib/browser/file-service';
+import { FrontendApplicationStateService } from '@ogun/core/lib/browser/frontend-application-state';
+import { WorkspaceService } from '@ogun/workspace/lib/browser';
+import { FrontendApplicationConfigProvider } from '@ogun/core/lib/browser/frontend-application-config-provider';
+import { URI as VSCodeURI } from '@ogun/core/shared/vscode-uri';
 
 /**
  * Triggers opening the `GettingStartedWidget`.

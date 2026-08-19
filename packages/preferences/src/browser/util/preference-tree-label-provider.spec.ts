@@ -16,18 +16,18 @@
 
 /* eslint-disable @typescript-eslint/no-explicit-any */
 
-import { enableJSDOM } from '@theia/core/lib/browser/test/jsdom';
+import { enableJSDOM } from '@ogun/core/lib/browser/test/jsdom';
 const disableJSDOM = enableJSDOM();
 
-import { FrontendApplicationConfigProvider } from '@theia/core/lib/browser/frontend-application-config-provider';
+import { FrontendApplicationConfigProvider } from '@ogun/core/lib/browser/frontend-application-config-provider';
 FrontendApplicationConfigProvider.set({});
 
 import { expect } from 'chai';
-import { Container } from '@theia/core/shared/inversify';
+import { Container } from '@ogun/core/shared/inversify';
 import { PreferenceTreeGenerator } from './preference-tree-generator';
 import { PreferenceTreeLabelProvider } from './preference-tree-label-provider';
 import { Preference } from './preference-types';
-import { SelectableTreeNode } from '@theia/core/lib/browser';
+import { SelectableTreeNode } from '@ogun/core/lib/browser';
 import { PreferenceLayoutProvider } from './preference-layout';
 
 disableJSDOM();

@@ -14,9 +14,9 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { nls } from '@theia/core';
-import { PreferenceSchema } from '@theia/core/lib/common/preferences';
-import { AI_CORE_PREFERENCES_TITLE } from '@theia/ai-core/lib/common/ai-core-preferences';
+import { nls } from '@ogun/core';
+import { PreferenceSchema } from '@ogun/core/lib/common/preferences';
+import { AI_CORE_PREFERENCES_TITLE } from '@ogun/ai-core/lib/common/ai-core-preferences';
 
 export const SHELL_COMMAND_ALLOWLIST_PREFERENCE = 'ai-features.terminal.shellCommandAllowlist';
 export const SHELL_COMMAND_DENYLIST_PREFERENCE = 'ai-features.terminal.shellCommandDenylist';

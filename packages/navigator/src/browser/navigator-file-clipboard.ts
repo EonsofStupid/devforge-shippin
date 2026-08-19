@@ -14,8 +14,8 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { inject, injectable, postConstruct } from '@theia/core/shared/inversify';
-import { ClipboardService } from '@theia/core/lib/browser/clipboard-service';
+import { inject, injectable, postConstruct } from '@ogun/core/shared/inversify';
+import { ClipboardService } from '@ogun/core/lib/browser/clipboard-service';
 
 /**
  * In-app store for file URIs copied in the navigator.

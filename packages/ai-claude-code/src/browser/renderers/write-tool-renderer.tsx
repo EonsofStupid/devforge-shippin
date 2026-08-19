@@ -14,19 +14,19 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { ChatResponsePartRenderer } from '@theia/ai-chat-ui/lib/browser/chat-response-part-renderer';
-import { ResponseNode } from '@theia/ai-chat-ui/lib/browser/chat-tree-view';
-import { ChatResponseContent, ToolCallChatResponseContent } from '@theia/ai-chat/lib/common';
-import { codicon, LabelProvider } from '@theia/core/lib/browser';
-import { URI } from '@theia/core/lib/common/uri';
-import { inject, injectable, named } from '@theia/core/shared/inversify';
-import * as React from '@theia/core/shared/react';
-import { ReactNode } from '@theia/core/shared/react';
-import { EditorManager } from '@theia/editor/lib/browser';
-import { WorkspaceService } from '@theia/workspace/lib/browser';
+import { ChatResponsePartRenderer } from '@ogun/ai-chat-ui/lib/browser/chat-response-part-renderer';
+import { ResponseNode } from '@ogun/ai-chat-ui/lib/browser/chat-tree-view';
+import { ChatResponseContent, ToolCallChatResponseContent } from '@ogun/ai-chat/lib/common';
+import { codicon, LabelProvider } from '@ogun/core/lib/browser';
+import { URI } from '@ogun/core/lib/common/uri';
+import { inject, injectable, named } from '@ogun/core/shared/inversify';
+import * as React from '@ogun/core/shared/react';
+import { ReactNode } from '@ogun/core/shared/react';
+import { EditorManager } from '@ogun/editor/lib/browser';
+import { WorkspaceService } from '@ogun/workspace/lib/browser';
 import { ClaudeCodeToolCallChatResponseContent } from '../claude-code-tool-call-content';
 import { CollapsibleToolRenderer } from './collapsible-tool-renderer';
-import { nls, ILogger } from '@theia/core';
+import { nls, ILogger } from '@ogun/core';
 
 interface WriteToolInput {
     file_path: string;

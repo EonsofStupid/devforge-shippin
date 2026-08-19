@@ -16,11 +16,11 @@
 
 import * as assert from 'assert';
 import * as Converter from './type-converters';
-import * as theia from '@theia/plugin';
+import * as theia from '@ogun/plugin';
 import * as types from './types-impl';
 import * as model from '../common/plugin-api-rpc-model';
 import { MarkdownString } from './markdown-string';
-import { MarkdownString as MarkdownStringInterface } from '@theia/core/lib/common/markdown-rendering';
+import { MarkdownString as MarkdownStringInterface } from '@ogun/core/lib/common/markdown-rendering';
 import { TaskDto } from '../common/plugin-api-rpc';
 
 describe('Type converters:', () => {

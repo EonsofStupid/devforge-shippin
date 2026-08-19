@@ -18,7 +18,7 @@
 describe('animationFrame', function () {
     this.timeout(5_000);
     const { assert } = chai;
-    const { animationFrame } = require('@theia/core/lib/browser/browser');
+    const { animationFrame } = require('@ogun/core/lib/browser/browser');
 
     class FrameCounter {
         constructor() {

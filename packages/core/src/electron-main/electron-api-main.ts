@@ -17,8 +17,8 @@
 import {
     ipcMain, BrowserWindow, Menu, MenuItemConstructorOptions, webContents, WebContents, session, shell, clipboard, IpcMainEvent,
     app, JumpListCategory, JumpListItem
-} from '@theia/electron/shared/electron';
-import * as nativeKeymap from '@theia/electron/shared/native-keymap';
+} from '@ogun/electron/shared/electron';
+import * as nativeKeymap from '@ogun/electron/shared/native-keymap';
 
 import { inject, injectable } from 'inversify';
 import { FrontendApplicationState, StopReason } from '../common/frontend-application-state';

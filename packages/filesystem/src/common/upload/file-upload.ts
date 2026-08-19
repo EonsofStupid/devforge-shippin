@@ -14,10 +14,10 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import URI from '@theia/core/lib/common/uri';
-import { CancellationToken } from '@theia/core/lib/common/cancellation';
-import { Progress } from '@theia/core/lib/common/message-service-protocol';
-import { Event } from '@theia/core/lib/common/event';
+import URI from '@ogun/core/lib/common/uri';
+import { CancellationToken } from '@ogun/core/lib/common/cancellation';
+import { Progress } from '@ogun/core/lib/common/message-service-protocol';
+import { Event } from '@ogun/core/lib/common/event';
 
 export type CustomDataTransfer = Iterable<readonly [string, CustomDataTransferItem]>;
 

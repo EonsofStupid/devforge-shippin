@@ -14,8 +14,8 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { Severity } from '@theia/core/lib/common/severity';
-import { DiagnosticSeverity } from '@theia/core/shared/vscode-languageserver-protocol';
+import { Severity } from '@ogun/core/lib/common/severity';
+import { DiagnosticSeverity } from '@ogun/core/shared/vscode-languageserver-protocol';
 import { expect } from 'chai';
 import { ApplyToKind, FileLocationKind, ProblemLocationKind, ProblemMatch, ProblemMatchData, ProblemMatcher } from '../common/problem-matcher-protocol';
 import { ProblemCollector } from './task-problem-collector';

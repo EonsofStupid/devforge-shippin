@@ -14,12 +14,12 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { inject, injectable } from '@theia/core/shared/inversify';
-import { BackendApplicationContribution } from '@theia/core/lib/node/backend-application';
-import { HostedPluginReader as PluginReaderHosted } from '@theia/plugin-ext/lib/hosted/node/plugin-reader';
-import { Deferred } from '@theia/core/lib/common/promise-util';
-import { PluginDeployerHandler, PluginMetadata } from '@theia/plugin-ext/lib/common/plugin-protocol';
-import { PluginDeployerEntryImpl } from '@theia/plugin-ext/lib/main/node/plugin-deployer-entry-impl';
+import { inject, injectable } from '@ogun/core/shared/inversify';
+import { BackendApplicationContribution } from '@ogun/core/lib/node/backend-application';
+import { HostedPluginReader as PluginReaderHosted } from '@ogun/plugin-ext/lib/hosted/node/plugin-reader';
+import { Deferred } from '@ogun/core/lib/common/promise-util';
+import { PluginDeployerHandler, PluginMetadata } from '@ogun/plugin-ext/lib/common/plugin-protocol';
+import { PluginDeployerEntryImpl } from '@ogun/plugin-ext/lib/main/node/plugin-deployer-entry-impl';
 
 @injectable()
 export class HostedPluginReader implements BackendApplicationContribution {

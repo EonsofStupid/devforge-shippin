@@ -14,14 +14,14 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { ToolInvocationContext, ToolProvider, ToolRequest } from '@theia/ai-core';
-import { inject, injectable } from '@theia/core/shared/inversify';
-import { TerminalService } from '@theia/terminal/lib/browser/base/terminal-service';
+import { ToolInvocationContext, ToolProvider, ToolRequest } from '@ogun/ai-core';
+import { inject, injectable } from '@ogun/core/shared/inversify';
+import { TerminalService } from '@ogun/terminal/lib/browser/base/terminal-service';
 import { SUGGEST_TERMINAL_COMMAND_ID } from '../common/ai-terminal-functions';
-import { WorkspaceService } from '@theia/workspace/lib/browser';
-import { TerminalWidget } from '@theia/terminal/lib/browser/base/terminal-widget';
-import { waitForEvent } from '@theia/core/lib/common/promise-util';
-import { ApplicationShell } from '@theia/core/lib/browser';
+import { WorkspaceService } from '@ogun/workspace/lib/browser';
+import { TerminalWidget } from '@ogun/terminal/lib/browser/base/terminal-widget';
+import { waitForEvent } from '@ogun/core/lib/common/promise-util';
+import { ApplicationShell } from '@ogun/core/lib/browser';
 
 @injectable()
 export class SuggestTerminalCommand implements ToolProvider {

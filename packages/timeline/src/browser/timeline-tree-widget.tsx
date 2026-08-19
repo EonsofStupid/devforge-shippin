@@ -14,17 +14,17 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { injectable, inject } from '@theia/core/shared/inversify';
-import { CommandRegistry, MenuModelRegistry, MenuPath } from '@theia/core/lib/common';
-import { TreeWidget, TreeProps, NodeProps, TREE_NODE_SEGMENT_GROW_CLASS, TREE_NODE_INFO_CLASS } from '@theia/core/lib/browser/tree';
-import { codicon, ContextMenuRenderer, HoverService } from '@theia/core/lib/browser';
+import { injectable, inject } from '@ogun/core/shared/inversify';
+import { CommandRegistry, MenuModelRegistry, MenuPath } from '@ogun/core/lib/common';
+import { TreeWidget, TreeProps, NodeProps, TREE_NODE_SEGMENT_GROW_CLASS, TREE_NODE_INFO_CLASS } from '@ogun/core/lib/browser/tree';
+import { codicon, ContextMenuRenderer, HoverService } from '@ogun/core/lib/browser';
 import { TimelineNode, TimelineTreeModel } from './timeline-tree-model';
 import { TimelineService } from './timeline-service';
 import { TimelineContextKeyService } from './timeline-context-key-service';
-import * as React from '@theia/core/shared/react';
+import * as React from '@ogun/core/shared/react';
 import { TimelineItem } from '../common/timeline-model';
-import { MarkdownString } from '@theia/core/lib/common/markdown-rendering';
-import { isThemeIcon } from '@theia/core/lib/common/theme';
+import { MarkdownString } from '@ogun/core/lib/common/markdown-rendering';
+import { isThemeIcon } from '@ogun/core/lib/common/theme';
 
 export const TIMELINE_ITEM_CONTEXT_MENU: MenuPath = ['timeline-item-context-menu'];
 

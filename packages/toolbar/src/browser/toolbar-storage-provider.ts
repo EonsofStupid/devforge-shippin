@@ -15,18 +15,18 @@
 // *****************************************************************************
 
 import * as jsoncParser from 'jsonc-parser';
-import { Command, deepClone, Disposable, DisposableCollection, Emitter, MessageService, nls, ILogger } from '@theia/core';
-import { injectable, postConstruct, inject, interfaces, named } from '@theia/core/shared/inversify';
-import { MonacoTextModelService } from '@theia/monaco/lib/browser/monaco-text-model-service';
-import { MonacoEditorModel } from '@theia/monaco/lib/browser/monaco-editor-model';
-import { MonacoWorkspace } from '@theia/monaco/lib/browser/monaco-workspace';
+import { Command, deepClone, Disposable, DisposableCollection, Emitter, MessageService, nls, ILogger } from '@ogun/core';
+import { injectable, postConstruct, inject, interfaces, named } from '@ogun/core/shared/inversify';
+import { MonacoTextModelService } from '@ogun/monaco/lib/browser/monaco-text-model-service';
+import { MonacoEditorModel } from '@ogun/monaco/lib/browser/monaco-editor-model';
+import { MonacoWorkspace } from '@ogun/monaco/lib/browser/monaco-workspace';
 import * as monaco from '@theia/monaco-editor-core';
-import { FrontendApplicationStateService } from '@theia/core/lib/browser/frontend-application-state';
-import { EditorManager } from '@theia/editor/lib/browser';
-import { Widget } from '@theia/core/lib/browser';
-import { FileService } from '@theia/filesystem/lib/browser/file-service';
-import { Deferred } from '@theia/core/lib/common/promise-util';
-import URI from '@theia/core/lib/common/uri';
+import { FrontendApplicationStateService } from '@ogun/core/lib/browser/frontend-application-state';
+import { EditorManager } from '@ogun/editor/lib/browser';
+import { Widget } from '@ogun/core/lib/browser';
+import { FileService } from '@ogun/filesystem/lib/browser/file-service';
+import { Deferred } from '@ogun/core/lib/common/promise-util';
+import URI from '@ogun/core/lib/common/uri';
 import {
     DeflatedToolbarTree,
     ToolbarTreeSchema,

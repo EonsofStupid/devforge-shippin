@@ -13,14 +13,14 @@
  *
  * SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
  ********************************************************************************/
-import { Disposable, DisposableCollection, Emitter, MessageService } from '@theia/core';
-import { ApplicationShell, OpenViewArguments, WidgetManager } from '@theia/core/lib/browser';
-import { injectable, inject, postConstruct } from '@theia/core/shared/inversify';
+import { Disposable, DisposableCollection, Emitter, MessageService } from '@ogun/core';
+import { ApplicationShell, OpenViewArguments, WidgetManager } from '@ogun/core/lib/browser';
+import { injectable, inject, postConstruct } from '@ogun/core/shared/inversify';
 import { MemoryDiffTableWidget, MemoryDiffWidget } from '../diff-widget/memory-diff-table-widget';
 import { MemoryWidget } from '../memory-widget/memory-widget';
 import { RegisterWidget } from '../register-widget/register-widget-types';
 import { MemoryDiffWidgetData, MemoryWidgetOptions } from './memory-widget-utils';
-import { nls } from '@theia/core/lib/common/nls';
+import { nls } from '@ogun/core/lib/common/nls';
 import { EditableMemoryWidget } from '../editable-widget/memory-editable-table-widget';
 
 @injectable()

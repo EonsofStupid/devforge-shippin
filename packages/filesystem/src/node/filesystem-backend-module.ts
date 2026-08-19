@@ -15,8 +15,8 @@
 // *****************************************************************************
 
 import * as path from 'path';
-import { ContainerModule, interfaces } from '@theia/core/shared/inversify';
-import { ConnectionHandler, RpcConnectionHandler, ILogger } from '@theia/core/lib/common';
+import { ContainerModule, interfaces } from '@ogun/core/shared/inversify';
+import { ConnectionHandler, RpcConnectionHandler, ILogger } from '@ogun/core/lib/common';
 import { FileSystemWatcherServer, FileSystemWatcherService } from '../common/filesystem-watcher-protocol';
 import { FileSystemWatcherServerClient } from './filesystem-watcher-client';
 import { ParcelFileSystemWatcherService, ParcelFileSystemWatcherServerOptions } from './parcel-watcher/parcel-filesystem-service';
@@ -27,9 +27,9 @@ import {
     remoteFileSystemPath, RemoteFileSystemServer, RemoteFileSystemClient, FileSystemProviderServer, RemoteFileSystemProxyFactory
 } from '../common/remote-file-system-provider';
 import { FileSystemProvider } from '../common/files';
-import { EncodingService } from '@theia/core/lib/common/encoding-service';
-import { BackendApplicationContribution, IPCConnectionProvider } from '@theia/core/lib/node';
-import { RpcProxyFactory, ConnectionErrorHandler } from '@theia/core';
+import { EncodingService } from '@ogun/core/lib/common/encoding-service';
+import { BackendApplicationContribution, IPCConnectionProvider } from '@ogun/core/lib/node';
+import { RpcProxyFactory, ConnectionErrorHandler } from '@ogun/core';
 import { FileSystemWatcherServiceDispatcher } from './filesystem-watcher-dispatcher';
 import { bindFileSystemPreferences } from '../common';
 

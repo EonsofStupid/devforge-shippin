@@ -33,17 +33,17 @@ import {
     PREFERENCE_NAME_DEFAULT_NOTIFICATION_TYPE,
     GenericCapabilitySelections,
     CAPABILITY_TYPE_PROMPT_MAP,
-} from '@theia/ai-core/lib/common';
-import { isChatAgent } from '@theia/ai-chat/lib/common';
-import { codicon, CommonCommands, QuickInputService } from '@theia/core/lib/browser';
-import { CommandService } from '@theia/core/lib/common/command';
-import { inject, injectable, postConstruct } from '@theia/core/shared/inversify';
-import * as React from '@theia/core/shared/react';
+} from '@ogun/ai-core/lib/common';
+import { isChatAgent } from '@ogun/ai-chat/lib/common';
+import { codicon, CommonCommands, QuickInputService } from '@ogun/core/lib/browser';
+import { CommandService } from '@ogun/core/lib/common/command';
+import { inject, injectable, postConstruct } from '@ogun/core/shared/inversify';
+import * as React from '@ogun/core/shared/react';
 import { AIConfigurationSelectionService } from './ai-configuration-service';
 import { LanguageModelRenderer } from './language-model-renderer';
-import { LanguageModelAliasRegistry, LanguageModelAlias } from '@theia/ai-core/lib/common/language-model-alias';
+import { LanguageModelAliasRegistry, LanguageModelAlias } from '@ogun/ai-core/lib/common/language-model-alias';
 import { AIVariableConfigurationWidget } from './variable-configuration-widget';
-import { MessageService, nls, URI } from '@theia/core';
+import { MessageService, nls, URI } from '@ogun/core';
 import { PromptVariantRenderer } from './template-settings-renderer';
 import { AIListDetailConfigurationWidget } from './base/ai-list-detail-configuration-widget';
 import { AgentNotificationSettings } from './components/agent-notification-settings';

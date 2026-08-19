@@ -16,12 +16,12 @@
 
 /* eslint-disable @typescript-eslint/no-explicit-any */
 
-import { inject, injectable, postConstruct, named } from '@theia/core/shared/inversify';
-import URI from '@theia/core/lib/common/uri';
-import { WorkspaceService } from '@theia/workspace/lib/browser/workspace-service';
+import { inject, injectable, postConstruct, named } from '@ogun/core/shared/inversify';
+import URI from '@ogun/core/lib/common/uri';
+import { WorkspaceService } from '@ogun/workspace/lib/browser/workspace-service';
 import { FolderPreferenceProvider, FolderPreferenceProviderFactory } from './folder-preference-provider';
-import { FileStat } from '@theia/filesystem/lib/common/files';
-import { PreferenceProviderImpl, PreferenceConfigurations, PreferenceResolveResult, PreferenceScope, PreferenceUtils, ILogger } from '@theia/core';
+import { FileStat } from '@ogun/filesystem/lib/common/files';
+import { PreferenceProviderImpl, PreferenceConfigurations, PreferenceResolveResult, PreferenceScope, PreferenceUtils, ILogger } from '@ogun/core';
 
 @injectable()
 export class FoldersPreferencesProvider extends PreferenceProviderImpl {

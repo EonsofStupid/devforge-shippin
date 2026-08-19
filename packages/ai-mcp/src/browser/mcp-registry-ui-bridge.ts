@@ -14,14 +14,14 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { Event } from '@theia/core/lib/common/event';
+import { Event } from '@ogun/core/lib/common/event';
 import { MCPInstallEntry } from './mcp-server-editor';
 
 export const MCPRegistryUiBridge = Symbol('MCPRegistryUiBridge');
 
 /**
- * Optional integration point exposed by `@theia/ai-registry` so that AI-related
- * widgets (e.g. the MCP configuration view in `@theia/ai-ide`) can surface
+ * Optional integration point exposed by `@ogun/ai-registry` so that AI-related
+ * widgets (e.g. the MCP configuration view in `@ogun/ai-ide`) can surface
  * registry affordances without taking a hard dependency on the registry package.
  *
  * If no registry implementation is bound, consumers should treat this as absent

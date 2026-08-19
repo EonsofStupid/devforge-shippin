@@ -15,7 +15,7 @@
 // *****************************************************************************
 
 import { expect } from 'chai';
-import { Emitter } from '@theia/core/lib/common/event';
+import { Emitter } from '@ogun/core/lib/common/event';
 import { ScmHistoryGraphModel, PAGE_SIZE } from './scm-history-graph-model';
 import { ScmHistoryItem, ScmHistoryItemRef, ScmHistoryItemRefsChangeEvent, ScmHistoryItemChange, ScmHistoryOptions, ScmHistoryProvider } from './scm-provider';
 import { ScmRepository } from './scm-repository';

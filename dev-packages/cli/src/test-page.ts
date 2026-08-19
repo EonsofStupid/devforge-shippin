@@ -81,7 +81,7 @@ export default async function newTestPage(options: TestPageOptions): Promise<pup
         }
         console.log('loading mocha...');
         // replace console.log by theia logger for mocha
-        await page.waitForFunction(() => !!(window as any)['theia']?.['@theia/core/lib/common/logger']?.logger, {
+        await page.waitForFunction(() => !!(window as any)['theia']?.['@ogun/core/lib/common/logger']?.logger, {
             timeout: 30 * 1000
         });
         await page.addScriptTag({ path: require.resolve('mocha/mocha.js') });
@@ -89,9 +89,9 @@ export default async function newTestPage(options: TestPageOptions): Promise<pup
 
         console.log('loading Theia...');
         await page.evaluate(() => {
-            const { FrontendApplicationStateService } = (window as any)['theia']['@theia/core/lib/browser/frontend-application-state'];
-            const { PreferenceService } = (window as any)['theia']['@theia/core/lib/common/preferences/preference-service'];
-            const { WorkspaceService } = (window as any)['theia']['@theia/workspace/lib/browser/workspace-service'];
+            const { FrontendApplicationStateService } = (window as any)['theia']['@ogun/core/lib/browser/frontend-application-state'];
+            const { PreferenceService } = (window as any)['theia']['@ogun/core/lib/common/preferences/preference-service'];
+            const { WorkspaceService } = (window as any)['theia']['@ogun/workspace/lib/browser/workspace-service'];
 
             const container = (window as any)['theia'].container;
             const frontendApplicationState = container.get(FrontendApplicationStateService);

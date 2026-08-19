@@ -23,10 +23,10 @@ import {
     LanguageModelService,
     PromptService,
     UserRequest
-} from '@theia/ai-core';
-import { inject, injectable } from '@theia/core/shared/inversify';
+} from '@ogun/ai-core';
+import { inject, injectable } from '@ogun/core/shared/inversify';
 import { ChatSession } from './chat-service';
-import { generateUuid, nls } from '@theia/core';
+import { generateUuid, nls } from '@ogun/core';
 
 import { CHAT_SESSION_NAMING_PROMPT } from './chat-session-naming-prompt-template';
 

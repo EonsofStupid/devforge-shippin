@@ -9,10 +9,10 @@
 // SPDX-License-Identifier: MIT
 // *****************************************************************************
 
-import { BasePromptFragment } from '@theia/ai-core/lib/common';
-import { CHAT_CONTEXT_DETAILS_VARIABLE_ID } from '@theia/ai-chat';
+import { BasePromptFragment } from '@ogun/ai-core/lib/common';
+import { CHAT_CONTEXT_DETAILS_VARIABLE_ID } from '@ogun/ai-chat';
 import { QUERY_DOM_FUNCTION_ID, LAUNCH_BROWSER_FUNCTION_ID, CLOSE_BROWSER_FUNCTION_ID, IS_BROWSER_RUNNING_FUNCTION_ID } from '../common/app-tester-chat-functions';
-import { MCPServerDescription } from '@theia/ai-mcp/lib/common/mcp-server-manager';
+import { MCPServerDescription } from '@ogun/ai-mcp/lib/common/mcp-server-manager';
 import {
   FILE_CONTENT_FUNCTION_ID,
   LIST_LAUNCH_CONFIGURATIONS_FUNCTION_ID,

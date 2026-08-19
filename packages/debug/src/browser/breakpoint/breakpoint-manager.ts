@@ -14,10 +14,10 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { injectable, inject, postConstruct } from '@theia/core/shared/inversify';
-import { CommandService, Emitter, Event, MapUtils } from '@theia/core/lib/common';
-import { LabelProvider, OpenerService, StorageService } from '@theia/core/lib/browser';
-import URI from '@theia/core/lib/common/uri';
+import { injectable, inject, postConstruct } from '@ogun/core/shared/inversify';
+import { CommandService, Emitter, Event, MapUtils } from '@ogun/core/lib/common';
+import { LabelProvider, OpenerService, StorageService } from '@ogun/core/lib/browser';
+import URI from '@ogun/core/lib/common/uri';
 import { SourceBreakpoint, ExceptionBreakpoint, FunctionBreakpoint, BaseBreakpoint, InstructionBreakpoint, DataBreakpoint } from './breakpoint-marker';
 import { DebugSourceBreakpoint } from '../model/debug-source-breakpoint';
 import { DebugFunctionBreakpoint } from '../model/debug-function-breakpoint';
@@ -26,8 +26,8 @@ import { DebugExceptionBreakpoint } from '../view/debug-exception-breakpoint';
 import { DebugDataBreakpoint } from '../model/debug-data-breakpoint';
 import { BPCapabilities, DebugBreakpoint, DebugBreakpointOptions } from '../model/debug-breakpoint';
 import { DebugProtocol } from '@vscode/debugprotocol';
-import { FileService } from '@theia/filesystem/lib/browser/file-service';
-import { FileChangeType } from '@theia/filesystem/lib/common/files';
+import { FileService } from '@ogun/filesystem/lib/browser/file-service';
+import { FileChangeType } from '@ogun/filesystem/lib/common/files';
 
 export interface BreakpointsChangeEvent<T extends object> {
     uri: URI

@@ -19,29 +19,29 @@ describe('Monaco API', async function () {
     this.timeout(5000);
 
     const { assert } = chai;
-    const { timeout } = require('@theia/core/lib/common/promise-util');
+    const { timeout } = require('@ogun/core/lib/common/promise-util');
     const { IOpenerService } = require('@theia/monaco-editor-core/esm/vs/platform/opener/common/opener');
 
-    const { EditorManager } = require('@theia/editor/lib/browser/editor-manager');
-    const { WorkspaceService } = require('@theia/workspace/lib/browser/workspace-service');
-    const { MonacoEditor } = require('@theia/monaco/lib/browser/monaco-editor');
-    const { MonacoResolvedKeybinding } = require('@theia/monaco/lib/browser/monaco-resolved-keybinding');
-    const { MonacoTextmateService } = require('@theia/monaco/lib/browser/textmate/monaco-textmate-service');
-    const { CommandRegistry } = require('@theia/core/lib/common/command');
+    const { EditorManager } = require('@ogun/editor/lib/browser/editor-manager');
+    const { WorkspaceService } = require('@ogun/workspace/lib/browser/workspace-service');
+    const { MonacoEditor } = require('@ogun/monaco/lib/browser/monaco-editor');
+    const { MonacoResolvedKeybinding } = require('@ogun/monaco/lib/browser/monaco-resolved-keybinding');
+    const { MonacoTextmateService } = require('@ogun/monaco/lib/browser/textmate/monaco-textmate-service');
+    const { CommandRegistry } = require('@ogun/core/lib/common/command');
     const { KeyCodeChord, ResolvedChord } = require('@theia/monaco-editor-core/esm/vs/base/common/keybindings');
     const { IKeybindingService } = require('@theia/monaco-editor-core/esm/vs/platform/keybinding/common/keybinding');
     const { StandaloneServices } = require('@theia/monaco-editor-core/esm/vs/editor/standalone/browser/standaloneServices');
     const { TokenizationRegistry } = require('@theia/monaco-editor-core/esm/vs/editor/common/languages');
-    const { MonacoContextKeyService } = require('@theia/monaco/lib/browser/monaco-context-key-service');
+    const { MonacoContextKeyService } = require('@ogun/monaco/lib/browser/monaco-context-key-service');
     const { URI } = require('@theia/monaco-editor-core/esm/vs/base/common/uri');
 
     const container = window.theia.container;
     const editorManager = container.get(EditorManager);
     const workspaceService = container.get(WorkspaceService);
     const textmateService = container.get(MonacoTextmateService);
-    /** @type {import('@theia/core/src/common/command').CommandRegistry} */
+    /** @type {import('@ogun/core/src/common/command').CommandRegistry} */
     const commands = container.get(CommandRegistry);
-    /** @type {import('@theia/monaco/src/browser/monaco-context-key-service').MonacoContextKeyService} */
+    /** @type {import('@ogun/monaco/src/browser/monaco-context-key-service').MonacoContextKeyService} */
     const contextKeys = container.get(MonacoContextKeyService);
 
     /** @type {MonacoEditor} */

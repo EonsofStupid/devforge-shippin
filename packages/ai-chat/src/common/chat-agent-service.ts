@@ -19,10 +19,10 @@
  *--------------------------------------------------------------------------------------------*/
 // Partially copied from https://github.com/microsoft/vscode/blob/a2cab7255c0df424027be05d58e1b7b941f4ea60/src/vs/workbench/contrib/chat/common/chatAgents.ts
 
-import { ContributionProvider, Emitter, Event, ILogger, PreferenceService } from '@theia/core';
-import { inject, injectable, named, optional, postConstruct } from '@theia/core/shared/inversify';
+import { ContributionProvider, Emitter, Event, ILogger, PreferenceService } from '@ogun/core';
+import { inject, injectable, named, optional, postConstruct } from '@ogun/core/shared/inversify';
 import { ChatAgent } from './chat-agents';
-import { AgentService, AISettingsService } from '@theia/ai-core';
+import { AgentService, AISettingsService } from '@ogun/ai-core';
 import { ParsedChatRequest, ParsedChatRequestAgentPart } from './parsed-chat-request';
 import { DEFAULT_CHAT_AGENT_PREF } from './ai-chat-preferences';
 

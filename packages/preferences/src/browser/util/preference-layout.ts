@@ -14,8 +14,8 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { nls } from '@theia/core';
-import { injectable } from '@theia/core/shared/inversify';
+import { nls } from '@ogun/core';
+import { injectable } from '@ogun/core/shared/inversify';
 
 export interface PreferenceLayout {
     id: string;

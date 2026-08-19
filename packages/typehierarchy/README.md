@@ -12,11 +12,11 @@
 
 ## Description
 
-The `@theia/typehierarchy` extension includes support for `super` and `subtype` information for document symbols.
+The `@ogun/typehierarchy` extension includes support for `super` and `subtype` information for document symbols.
 
 ## Additional Information
 
-- [API documentation for `@theia/typehierarchy`](https://eclipse-theia.github.io/theia/docs/next/modules/_theia_typehierarchy.html)
+- [API documentation for `@ogun/typehierarchy`](https://eclipse-theia.github.io/theia/docs/next/modules/_theia_typehierarchy.html)
 - [Theia - GitHub](https://github.com/eclipse-theia/theia)
 - [Theia - Website](https://theia-ide.org/)
 

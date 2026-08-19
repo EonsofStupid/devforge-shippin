@@ -20,26 +20,26 @@
 // some code is copied and modified from:
 // https://github.com/microsoft/vscode/blob/7cf4cca47aa025a590fc939af54932042302be63/src/vs/workbench/services/themes/browser/fileIconThemeData.ts
 
-import debounce = require('@theia/core/shared/lodash.debounce');
+import debounce = require('@ogun/core/shared/lodash.debounce');
 import * as jsoncparser from 'jsonc-parser';
-import { injectable, inject, postConstruct } from '@theia/core/shared/inversify';
-import { IconThemeService, IconTheme, IconThemeDefinition } from '@theia/core/lib/browser/icon-theme-service';
+import { injectable, inject, postConstruct } from '@ogun/core/shared/inversify';
+import { IconThemeService, IconTheme, IconThemeDefinition } from '@ogun/core/lib/browser/icon-theme-service';
 import { IconThemeContribution, DeployedPlugin, UiTheme, getPluginId } from '../../common/plugin-protocol';
-import URI from '@theia/core/lib/common/uri';
-import { Disposable, DisposableCollection } from '@theia/core/lib/common/disposable';
-import { Emitter } from '@theia/core/lib/common/event';
-import { RecursivePartial } from '@theia/core/lib/common/types';
-import { LabelProviderContribution, DidChangeLabelEvent, LabelProvider, URIIconReference } from '@theia/core/lib/browser/label-provider';
-import { ThemeType } from '@theia/core/lib/common/theme';
-import { FileStatNode, DirNode } from '@theia/filesystem/lib/browser';
-import { WorkspaceRootNode } from '@theia/navigator/lib/browser/navigator-tree';
-import { Endpoint } from '@theia/core/lib/browser/endpoint';
-import { FileService } from '@theia/filesystem/lib/browser/file-service';
-import { FileStat, FileChangeType } from '@theia/filesystem/lib/common/files';
-import { WorkspaceService } from '@theia/workspace/lib/browser';
+import URI from '@ogun/core/lib/common/uri';
+import { Disposable, DisposableCollection } from '@ogun/core/lib/common/disposable';
+import { Emitter } from '@ogun/core/lib/common/event';
+import { RecursivePartial } from '@ogun/core/lib/common/types';
+import { LabelProviderContribution, DidChangeLabelEvent, LabelProvider, URIIconReference } from '@ogun/core/lib/browser/label-provider';
+import { ThemeType } from '@ogun/core/lib/common/theme';
+import { FileStatNode, DirNode } from '@ogun/filesystem/lib/browser';
+import { WorkspaceRootNode } from '@ogun/navigator/lib/browser/navigator-tree';
+import { Endpoint } from '@ogun/core/lib/browser/endpoint';
+import { FileService } from '@ogun/filesystem/lib/browser/file-service';
+import { FileStat, FileChangeType } from '@ogun/filesystem/lib/common/files';
+import { WorkspaceService } from '@ogun/workspace/lib/browser';
 import { StandaloneServices } from '@theia/monaco-editor-core/esm/vs/editor/standalone/browser/standaloneServices';
 import { ILanguageService } from '@theia/monaco-editor-core/esm/vs/editor/common/languages/language';
-import { LanguageService } from '@theia/core/lib/browser/language-service';
+import { LanguageService } from '@ogun/core/lib/browser/language-service';
 import { DEFAULT_ICON_SIZE, PLUGIN_FILE_ICON_CLASS } from './plugin-shared-style';
 
 export interface PluginIconDefinition {

@@ -14,16 +14,16 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { OS, Path, QuickInputService, ILogger } from '@theia/core';
-import URI from '@theia/core/lib/common/uri';
-import { inject, injectable, named } from '@theia/core/shared/inversify';
-import { Position } from '@theia/editor/lib/browser';
+import { OS, Path, QuickInputService, ILogger } from '@ogun/core';
+import URI from '@ogun/core/lib/common/uri';
+import { inject, injectable, named } from '@ogun/core/shared/inversify';
+import { Position } from '@ogun/editor/lib/browser';
 import { AbstractFileOpeningLinkProvider } from './terminal-file-opening-link-provider';
 import { TerminalWidget } from './base/terminal-widget';
 import { TerminalLink } from './terminal-link-provider';
 import { TerminalWidgetImpl } from './terminal-widget-impl';
-import { FileSearchService } from '@theia/file-search/lib/common/file-search-service';
-import { WorkspaceService } from '@theia/workspace/lib/browser';
+import { FileSearchService } from '@ogun/file-search/lib/common/file-search-service';
+import { WorkspaceService } from '@ogun/workspace/lib/browser';
 @injectable()
 export class FileLinkProvider extends AbstractFileOpeningLinkProvider {
 

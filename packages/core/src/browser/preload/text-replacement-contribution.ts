@@ -21,7 +21,7 @@ export const TextReplacementContribution = Symbol('TextReplacementContribution')
  *
  * @example Create a text replacement contribution
  * ```typescript
- *          import { TextReplacementContribution } from '@theia/core/lib/browser/preload/text-replacement-contribution';
+ *          import { TextReplacementContribution } from '@ogun/core/lib/browser/preload/text-replacement-contribution';
  *          export class TextSampleReplacementContribution implements TextReplacementContribution {
  *              getReplacement(locale: string): Record<string, string> {
  *                  switch (locale) {

@@ -14,13 +14,13 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { inject, injectable } from '@theia/core/shared/inversify';
-import URI from '@theia/core/lib/common/uri';
-import { JsonSchemaRegisterContext, JsonSchemaContribution, JsonSchemaDataStore } from '@theia/core/lib/browser/json-schema-store';
-import { WorkspaceService } from '@theia/workspace/lib/browser';
-import { PreferenceSchemaService, PreferenceConfigurations, PreferenceScope } from '@theia/core';
-import { UserStorageUri } from '@theia/userstorage/lib/browser';
-import debounce = require('@theia/core/shared/lodash.debounce');
+import { inject, injectable } from '@ogun/core/shared/inversify';
+import URI from '@ogun/core/lib/common/uri';
+import { JsonSchemaRegisterContext, JsonSchemaContribution, JsonSchemaDataStore } from '@ogun/core/lib/browser/json-schema-store';
+import { WorkspaceService } from '@ogun/workspace/lib/browser';
+import { PreferenceSchemaService, PreferenceConfigurations, PreferenceScope } from '@ogun/core';
+import { UserStorageUri } from '@ogun/userstorage/lib/browser';
+import debounce = require('@ogun/core/shared/lodash.debounce');
 
 const PREFERENCE_URI_PREFIX = 'vscode://schemas/settings/';
 const DEBOUNCED_UPDATE_DELAY = 200;

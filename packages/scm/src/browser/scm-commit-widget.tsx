@@ -14,15 +14,15 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { injectable, inject } from '@theia/core/shared/inversify';
-import { DisposableCollection } from '@theia/core';
-import { Message } from '@theia/core/shared/@lumino/messaging';
-import * as React from '@theia/core/shared/react';
+import { injectable, inject } from '@ogun/core/shared/inversify';
+import { DisposableCollection } from '@ogun/core';
+import { Message } from '@ogun/core/shared/@lumino/messaging';
+import * as React from '@ogun/core/shared/react';
 import TextareaAutosize from 'react-textarea-autosize';
 import { ScmInput, ScmInputIssueType } from './scm-input';
 import {
     ContextMenuRenderer, ReactWidget, KeybindingRegistry, StatefulWidget
-} from '@theia/core/lib/browser';
+} from '@ogun/core/lib/browser';
 import { ScmService } from './scm-service';
 
 @injectable()

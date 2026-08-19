@@ -14,11 +14,11 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { inject, injectable, named } from '@theia/core/shared/inversify';
-import { nls, ILogger } from '@theia/core';
-import { ObservableUtils } from '@theia/core/lib/common/observable';
-import { codicon, DiffUris, LabelProvider, open, OpenerService } from '@theia/core/lib/browser';
-import { EditorDecoration, EditorOpenerOptions, Range } from '@theia/editor/lib/browser';
+import { inject, injectable, named } from '@ogun/core/shared/inversify';
+import { nls, ILogger } from '@ogun/core';
+import { ObservableUtils } from '@ogun/core/lib/common/observable';
+import { codicon, DiffUris, LabelProvider, open, OpenerService } from '@ogun/core/lib/browser';
+import { EditorDecoration, EditorOpenerOptions, Range } from '@ogun/editor/lib/browser';
 import { MergeRange, MergeRangeAcceptedState, MergeSide } from '../../model/merge-range';
 import { MergeEditorPane } from './merge-editor-pane';
 import { MergeEditorPaneToolbarItem } from './merge-editor-pane-header';

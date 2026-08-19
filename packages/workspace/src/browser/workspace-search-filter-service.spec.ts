@@ -16,8 +16,8 @@
 
 import { expect } from 'chai';
 import * as sinon from 'sinon';
-import { Emitter } from '@theia/core';
-import { ContributionProvider } from '@theia/core/lib/common';
+import { Emitter } from '@ogun/core';
+import { ContributionProvider } from '@ogun/core/lib/common';
 import { WorkspaceSearchFilterProvider, WorkspaceSearchFilterService } from './workspace-search-filter-service';
 
 class MockProvider implements WorkspaceSearchFilterProvider {

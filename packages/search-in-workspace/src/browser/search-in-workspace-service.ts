@@ -14,15 +14,15 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { injectable, inject, postConstruct } from '@theia/core/shared/inversify';
+import { injectable, inject, postConstruct } from '@ogun/core/shared/inversify';
 import {
     SearchInWorkspaceServer,
     SearchInWorkspaceClient,
     SearchInWorkspaceResult,
     SearchInWorkspaceOptions
 } from '../common/search-in-workspace-interface';
-import { WorkspaceService } from '@theia/workspace/lib/browser';
-import { ILogger } from '@theia/core';
+import { WorkspaceService } from '@ogun/workspace/lib/browser';
+import { ILogger } from '@ogun/core';
 
 /**
  * Class that will receive the search results from the server.  This is separate

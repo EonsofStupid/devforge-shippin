@@ -15,9 +15,9 @@
 // *****************************************************************************
 
 import * as jsoncparser from 'jsonc-parser';
-import { inject, injectable } from '@theia/core/shared/inversify';
-import { JSONValue } from '@theia/core/shared/@lumino/coreutils';
-import { isWindows, PreferenceService } from '@theia/core';
+import { inject, injectable } from '@ogun/core/shared/inversify';
+import { JSONValue } from '@ogun/core/shared/@lumino/coreutils';
+import { isWindows, PreferenceService } from '@ogun/core';
 
 @injectable()
 export class JSONCEditor {

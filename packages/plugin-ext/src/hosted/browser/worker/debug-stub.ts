@@ -14,8 +14,8 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-// eslint-disable-next-line @theia/runtime-import-check
-import { interfaces } from '@theia/core/shared/inversify';
+// eslint-disable-next-line @ogun/runtime-import-check
+import { interfaces } from '@ogun/core/shared/inversify';
 import { DebugExtImpl } from '../../../plugin/debug/debug-ext';
 
 /* eslint-disable @typescript-eslint/no-explicit-any */

@@ -14,9 +14,9 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { Mutable } from '@theia/core';
-import { MarkdownStringImpl as BaseMarkdownString, MarkdownString as MarkdownStringInterface, MarkdownStringTrustedOptions } from '@theia/core/lib/common/markdown-rendering';
-import * as pluginAPI from '@theia/plugin';
+import { Mutable } from '@ogun/core';
+import { MarkdownStringImpl as BaseMarkdownString, MarkdownString as MarkdownStringInterface, MarkdownStringTrustedOptions } from '@ogun/core/lib/common/markdown-rendering';
+import * as pluginAPI from '@ogun/plugin';
 import { es5ClassCompat } from '../common/types';
 import { URI } from './types-impl';
 

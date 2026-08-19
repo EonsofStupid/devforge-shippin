@@ -14,17 +14,17 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { ConfirmDialog, Dialog, QuickInputService } from '@theia/core/lib/browser';
-import { ReactDialog } from '@theia/core/lib/browser/dialogs/react-dialog';
-import { SelectComponent } from '@theia/core/lib/browser/widgets/select-component';
+import { ConfirmDialog, Dialog, QuickInputService } from '@ogun/core/lib/browser';
+import { ReactDialog } from '@ogun/core/lib/browser/dialogs/react-dialog';
+import { SelectComponent } from '@ogun/core/lib/browser/widgets/select-component';
 import {
     Command, CommandContribution, CommandMenu, CommandRegistry, ContextExpressionMatcher, MAIN_MENU_BAR,
     MenuContribution, MenuModelRegistry, MenuPath, MessageService
-} from '@theia/core/lib/common';
-import { ILogger } from '@theia/core/lib/common/logger';
-import { inject, injectable, interfaces, named } from '@theia/core/shared/inversify';
-import * as React from '@theia/core/shared/react';
-import { ReactNode } from '@theia/core/shared/react';
+} from '@ogun/core/lib/common';
+import { ILogger } from '@ogun/core/lib/common/logger';
+import { inject, injectable, interfaces, named } from '@ogun/core/shared/inversify';
+import * as React from '@ogun/core/shared/react';
+import { ReactNode } from '@ogun/core/shared/react';
 
 const API_SAMPLES_CATEGORY = 'API Samples';
 

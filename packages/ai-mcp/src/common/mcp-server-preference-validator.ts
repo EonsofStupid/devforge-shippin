@@ -20,7 +20,7 @@ import { MCPRegistryMetadata } from './mcp-server-manager';
 interface BaseMCPServerPreferenceValue {
     autostart?: boolean;
     deferLoading?: boolean;
-    /** Provenance link to an AI registry entry; written by `@theia/ai-registry`. */
+    /** Provenance link to an AI registry entry; written by `@ogun/ai-registry`. */
     registryMetadata?: MCPRegistryMetadata;
 }
 

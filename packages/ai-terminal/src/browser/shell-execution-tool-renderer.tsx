@@ -14,21 +14,21 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { ChatResponsePartRenderer } from '@theia/ai-chat-ui/lib/browser/chat-response-part-renderer';
-import { ResponseNode } from '@theia/ai-chat-ui/lib/browser/chat-tree-view';
-import { CountdownTimer, InlineActionMenuNode, useToolConfirmationState } from '@theia/ai-chat-ui/lib/browser/chat-response-renderer/tool-confirmation';
-import { CopyButton, MetaRow, OutputBox, formatDuration } from '@theia/ai-chat-ui/lib/browser/chat-response-renderer/tool-call-rendering';
-import { ChatResponseContent, ToolCallChatResponseContent } from '@theia/ai-chat/lib/common';
-import { ToolConfirmationMode as ToolConfirmationPreferenceMode } from '@theia/ai-chat/lib/common/chat-tool-preferences';
-import { ToolConfirmationManager } from '@theia/ai-chat/lib/browser/chat-tool-preference-bindings';
-import { isToolCallContent, ToolInvocationRegistry, ToolRequest } from '@theia/ai-core';
-import { CommandRegistry, nls } from '@theia/core/lib/common';
-import { codicon, ContextMenuRenderer } from '@theia/core/lib/browser';
-import { GroupImpl } from '@theia/core/lib/browser/menu/composite-menu-node';
-import { ClipboardService } from '@theia/core/lib/browser/clipboard-service';
-import { inject, injectable } from '@theia/core/shared/inversify';
-import * as React from '@theia/core/shared/react';
-import { ReactNode } from '@theia/core/shared/react';
+import { ChatResponsePartRenderer } from '@ogun/ai-chat-ui/lib/browser/chat-response-part-renderer';
+import { ResponseNode } from '@ogun/ai-chat-ui/lib/browser/chat-tree-view';
+import { CountdownTimer, InlineActionMenuNode, useToolConfirmationState } from '@ogun/ai-chat-ui/lib/browser/chat-response-renderer/tool-confirmation';
+import { CopyButton, MetaRow, OutputBox, formatDuration } from '@ogun/ai-chat-ui/lib/browser/chat-response-renderer/tool-call-rendering';
+import { ChatResponseContent, ToolCallChatResponseContent } from '@ogun/ai-chat/lib/common';
+import { ToolConfirmationMode as ToolConfirmationPreferenceMode } from '@ogun/ai-chat/lib/common/chat-tool-preferences';
+import { ToolConfirmationManager } from '@ogun/ai-chat/lib/browser/chat-tool-preference-bindings';
+import { isToolCallContent, ToolInvocationRegistry, ToolRequest } from '@ogun/ai-core';
+import { CommandRegistry, nls } from '@ogun/core/lib/common';
+import { codicon, ContextMenuRenderer } from '@ogun/core/lib/browser';
+import { GroupImpl } from '@ogun/core/lib/browser/menu/composite-menu-node';
+import { ClipboardService } from '@ogun/core/lib/browser/clipboard-service';
+import { inject, injectable } from '@ogun/core/shared/inversify';
+import * as React from '@ogun/core/shared/react';
+import { ReactNode } from '@ogun/core/shared/react';
 import { ShellExecutionTool } from './shell-execution-tool';
 import { ShellCommandPermissionService } from './shell-command-permission-service';
 import {
@@ -244,7 +244,7 @@ const ShellExecutionToolComponent: React.FC<ShellExecutionToolComponentProps> = 
         response.confirm();
     }, [response, toolConfirmationManager, chatId]);
 
-    // Command and tab IDs from @theia/ai-ide (OPEN_AI_CONFIG_VIEW.id / ToolsConfigurationWidget.ID).
+    // Command and tab IDs from @ogun/ai-ide (OPEN_AI_CONFIG_VIEW.id / ToolsConfigurationWidget.ID).
     // The package may not be present, so guard via commandRegistry.getCommand().
     const hasPermissionsConfiguration = React.useMemo(() =>
         commandRegistry.getCommand('aiConfiguration:open') !== undefined,

@@ -24,12 +24,12 @@ import {
     LanguageModelStatus,
     LanguageModelTextResponse,
     UserRequest
-} from '@theia/ai-core';
-import { CancellationToken } from '@theia/core';
+} from '@ogun/ai-core';
+import { CancellationToken } from '@ogun/core';
 import OpenAI from 'openai';
 import { RunnableToolFunctionWithoutParse } from 'openai/lib/RunnableFunction';
 import { ChatCompletionAssistantMessageParam, ChatCompletionMessageParam } from 'openai/resources';
-import { StreamingAsyncIterator } from '@theia/ai-openai/lib/node/openai-streaming-iterator';
+import { StreamingAsyncIterator } from '@ogun/ai-openai/lib/node/openai-streaming-iterator';
 import { COPILOT_PROVIDER_ID, getCopilotApiBaseUrl } from '../common';
 import type { RunnerOptions } from 'openai/lib/AbstractChatCompletionRunner';
 import type { ChatCompletionStream } from 'openai/lib/ChatCompletionStream';

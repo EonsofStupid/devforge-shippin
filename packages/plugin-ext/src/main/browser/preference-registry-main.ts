@@ -19,8 +19,8 @@ import {
     PreferenceServiceImpl,
     PreferenceScope,
     PreferenceProviderProvider
-} from '@theia/core/lib/common/preferences';
-import { interfaces } from '@theia/core/shared/inversify';
+} from '@ogun/core/lib/common/preferences';
+import { interfaces } from '@ogun/core/shared/inversify';
 import {
     MAIN_RPC_CONTEXT,
     PreferenceRegistryExt,
@@ -30,9 +30,9 @@ import {
 } from '../../common/plugin-api-rpc';
 import { RPCProtocol } from '../../common/rpc-protocol';
 import { ConfigurationTarget } from '../../plugin/types-impl';
-import { WorkspaceService } from '@theia/workspace/lib/browser';
-import { FileStat } from '@theia/filesystem/lib/common/files';
-import { Disposable, DisposableCollection } from '@theia/core/lib/common/disposable';
+import { WorkspaceService } from '@ogun/workspace/lib/browser';
+import { FileStat } from '@ogun/filesystem/lib/common/files';
+import { Disposable, DisposableCollection } from '@ogun/core/lib/common/disposable';
 
 export function getPreferences(preferenceProviderProvider: PreferenceProviderProvider, rootFolders: FileStat[]): PreferenceData {
     const folders = rootFolders.map(root => root.resource.toString());

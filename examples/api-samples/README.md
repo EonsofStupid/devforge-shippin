@@ -12,7 +12,7 @@
 
 ## Description
 
-The `@theia/api-samples` extension contains programming examples on how to use internal APIs.
+The `@ogun/api-samples` extension contains programming examples on how to use internal APIs.
 The purpose of the extension is to:
 
 - provide developers with real-world coding examples using internal APIs, dependency injection, etc.

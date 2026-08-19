@@ -14,10 +14,10 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { inject, injectable, postConstruct } from '@theia/core/shared/inversify';
-import * as React from '@theia/core/shared/react';
-import { MessageService, nls } from '@theia/core';
-import { TokenUsageFrontendService, ModelTokenUsageData } from '@theia/ai-core/lib/browser/token-usage-frontend-service';
+import { inject, injectable, postConstruct } from '@ogun/core/shared/inversify';
+import * as React from '@ogun/core/shared/react';
+import { MessageService, nls } from '@ogun/core';
+import { TokenUsageFrontendService, ModelTokenUsageData } from '@ogun/ai-core/lib/browser/token-usage-frontend-service';
 import { formatDistanceToNow } from 'date-fns';
 import { AITableConfigurationWidget, TableColumn } from './base/ai-table-configuration-widget';
 

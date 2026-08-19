@@ -14,10 +14,10 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { injectable } from '@theia/core/shared/inversify';
-import { Emitter, Event, Disposable, DisposableCollection } from '@theia/core';
+import { injectable } from '@ogun/core/shared/inversify';
+import { Emitter, Event, Disposable, DisposableCollection } from '@ogun/core';
 import { ConsoleSession } from './console-session';
-import { Severity } from '@theia/core/lib/common/severity';
+import { Severity } from '@ogun/core/lib/common/severity';
 
 @injectable()
 export class ConsoleSessionManager implements Disposable {

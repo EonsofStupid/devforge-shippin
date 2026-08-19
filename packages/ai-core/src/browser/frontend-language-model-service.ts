@@ -14,10 +14,10 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { nls } from '@theia/core/lib/common/nls';
-import { inject, injectable } from '@theia/core/shared/inversify';
-import { Prioritizeable } from '@theia/core/lib/common/prioritizeable';
-import { WorkspaceTrustService } from '@theia/workspace/lib/browser/workspace-trust-service';
+import { nls } from '@ogun/core/lib/common/nls';
+import { inject, injectable } from '@ogun/core/shared/inversify';
+import { Prioritizeable } from '@ogun/core/lib/common/prioritizeable';
+import { WorkspaceTrustService } from '@ogun/workspace/lib/browser/workspace-trust-service';
 import { AiConfigurationService, LanguageModel, LanguageModelResponse, ReasoningSettings, UserRequest } from '../common';
 import { LanguageModelServiceImpl } from '../common/language-model-service';
 import {

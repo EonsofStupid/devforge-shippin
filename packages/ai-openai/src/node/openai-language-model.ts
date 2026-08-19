@@ -28,9 +28,9 @@ import {
     resolveCompactionTokenThreshold,
     resolveServerSideCompaction,
     ServerToolDescriptor
-} from '@theia/ai-core';
-import { CancellationToken } from '@theia/core';
-import { injectable } from '@theia/core/shared/inversify';
+} from '@ogun/ai-core';
+import { CancellationToken } from '@ogun/core';
+import { injectable } from '@ogun/core/shared/inversify';
 import { OpenAI, AzureOpenAI } from 'openai';
 import { ChatCompletionStream } from 'openai/lib/ChatCompletionStream';
 import { RunnableToolFunctionWithoutParse } from 'openai/lib/RunnableFunction';
@@ -41,7 +41,7 @@ import type { FinalRequestOptions } from 'openai/internal/request-options';
 import type { RunnerOptions } from 'openai/lib/AbstractChatCompletionRunner';
 import { OpenAiResponseApiUtils, processSystemMessages } from './openai-response-api-utils';
 import { openAiReasoningFor } from './openai-reasoning';
-import { createProxyFetch } from '@theia/ai-core/lib/node';
+import { createProxyFetch } from '@ogun/ai-core/lib/node';
 
 export class MistralFixedOpenAI extends OpenAI {
     protected override async prepareOptions(options: FinalRequestOptions): Promise<void> {

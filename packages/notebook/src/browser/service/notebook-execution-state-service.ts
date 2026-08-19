@@ -18,8 +18,8 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { Disposable, DisposableCollection, Emitter, URI, generateUuid } from '@theia/core';
-import { inject, injectable } from '@theia/core/shared/inversify';
+import { Disposable, DisposableCollection, Emitter, URI, generateUuid } from '@ogun/core';
+import { inject, injectable } from '@ogun/core/shared/inversify';
 import { NotebookService } from './notebook-service';
 import {
     CellEditType, CellExecuteOutputEdit, CellExecuteOutputItemEdit, CellExecutionUpdateType,

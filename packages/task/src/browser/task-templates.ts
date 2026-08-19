@@ -18,9 +18,9 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { injectable } from '@theia/core/shared/inversify';
-import { QuickPickValue } from '@theia/core/lib/browser';
-import { nls } from '@theia/core';
+import { injectable } from '@ogun/core/shared/inversify';
+import { QuickPickValue } from '@ogun/core/lib/browser';
+import { nls } from '@ogun/core';
 
 /** The representation of a task template used in the auto-generation of `tasks.json` */
 export interface TaskTemplateEntry {

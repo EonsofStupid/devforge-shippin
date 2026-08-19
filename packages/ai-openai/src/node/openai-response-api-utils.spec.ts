@@ -17,7 +17,7 @@
 import { expect } from 'chai';
 import {
     CompactionMessage, isCompactionResponsePart, isServerToolCallResponsePart, isUsageResponsePart, LanguageModelMessage, LanguageModelStreamResponsePart, UserRequest
-} from '@theia/ai-core';
+} from '@ogun/ai-core';
 import { OpenAiModelUtils } from './openai-language-model';
 import { OPENAI_FUNCTION_CALL_REASONING_DATA_KEY, OpenAiResponseApiUtils } from './openai-response-api-utils';
 import { OPENAI_WEB_SEARCH, OPENAI_WEB_SEARCH_REPLAY_DATA_KEY } from './openai-server-tools';

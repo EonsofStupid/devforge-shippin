@@ -31,7 +31,7 @@
 // @theia/monaco-editor-core/esm/vs/nls with packages/monaco/src/browser/monaco-nls.ts.
 // See webpack-generator.ts for the alias configuration.
 
-import { Container } from '@theia/core/shared/inversify';
+import { Container } from '@ogun/core/shared/inversify';
 import { ICodeEditorService } from '@theia/monaco-editor-core/esm/vs/editor/browser/services/codeEditorService';
 import { StandaloneServices } from '@theia/monaco-editor-core/esm/vs/editor/standalone/browser/standaloneServices';
 import { SyncDescriptor } from '@theia/monaco-editor-core/esm/vs/platform/instantiation/common/descriptors';
@@ -64,7 +64,7 @@ import { ILayoutService } from '@theia/monaco-editor-core/esm/vs/platform/layout
 import { Event } from '@theia/monaco-editor-core/esm/vs/base/common/event';
 import * as dom from '@theia/monaco-editor-core/esm/vs/base/browser/dom';
 import { mainWindow } from '@theia/monaco-editor-core/esm/vs/base/browser/window';
-import { Disposable } from '@theia/core';
+import { Disposable } from '@ogun/core';
 
 export const contentHoverWidgetPatcher = createContentHoverWidgetPatcher();
 

@@ -14,14 +14,14 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import * as fs from '@theia/core/shared/fs-extra';
+import * as fs from '@ogun/core/shared/fs-extra';
 import * as path from 'path';
 import * as temp from 'temp';
 import { extract } from 'tar-fs';
 import { expect } from 'chai';
-import URI from '@theia/core/lib/common/uri';
+import URI from '@ogun/core/lib/common/uri';
 import { MockDirectoryArchiver } from './test/mock-directory-archiver';
-import { FileUri } from '@theia/core/lib/common/file-uri';
+import { FileUri } from '@ogun/core/lib/common/file-uri';
 
 const track = temp.track();
 

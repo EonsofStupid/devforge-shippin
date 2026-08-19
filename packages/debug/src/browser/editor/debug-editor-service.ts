@@ -14,17 +14,17 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { injectable, inject, postConstruct } from '@theia/core/shared/inversify';
+import { injectable, inject, postConstruct } from '@ogun/core/shared/inversify';
 import * as monaco from '@theia/monaco-editor-core';
-import { EditorManager, EditorWidget } from '@theia/editor/lib/browser';
-import { ContextMenuRenderer } from '@theia/core/lib/browser';
-import { MonacoEditor } from '@theia/monaco/lib/browser/monaco-editor';
+import { EditorManager, EditorWidget } from '@ogun/editor/lib/browser';
+import { ContextMenuRenderer } from '@ogun/core/lib/browser';
+import { MonacoEditor } from '@ogun/monaco/lib/browser/monaco-editor';
 import { DebugSessionManager } from '../debug-session-manager';
 import { DebugEditorModel, DebugEditorModelFactory } from './debug-editor-model';
 import { BreakpointManager } from '../breakpoint/breakpoint-manager';
 import { DebugSourceBreakpoint } from '../model/debug-source-breakpoint';
 import { DebugBreakpointWidget } from './debug-breakpoint-widget';
-import URI from '@theia/core/lib/common/uri';
+import URI from '@ogun/core/lib/common/uri';
 
 @injectable()
 export class DebugEditorService {

@@ -22,7 +22,7 @@
 // https://github.com/microsoft/vscode/blob/1.96.3/src/vs/editor/common/core/position.ts,
 // https://github.com/microsoft/vscode/blob/1.96.3/src/vs/editor/common/core/textLength.ts
 
-import { Position, Range } from '@theia/core/shared/vscode-languageserver-protocol';
+import { Position, Range } from '@ogun/core/shared/vscode-languageserver-protocol';
 
 export namespace RangeUtils {
 

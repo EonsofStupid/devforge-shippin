@@ -14,8 +14,8 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { FrontendApplicationConfigProvider } from '@theia/core/lib/browser/frontend-application-config-provider';
-import { enableJSDOM } from '@theia/core/lib/browser/test/jsdom';
+import { FrontendApplicationConfigProvider } from '@ogun/core/lib/browser/frontend-application-config-provider';
+import { enableJSDOM } from '@ogun/core/lib/browser/test/jsdom';
 const disableJSDOM = enableJSDOM();
 // xterm.js (pulled in transitively via plugin-ext from VSXExtensionsModel) calls
 // HTMLCanvasElement.prototype.getContext at module-load time. JSDOM's default impl
@@ -28,8 +28,8 @@ if (canvasProto) {
 try { FrontendApplicationConfigProvider.set({}); } catch { /* already set by a sibling spec */ }
 
 import { expect } from 'chai';
-import { QuickPickItem } from '@theia/core/lib/browser';
-import { Command, CommandHandler, CommandRegistry } from '@theia/core/lib/common/command';
+import { QuickPickItem } from '@ogun/core/lib/browser';
+import { Command, CommandHandler, CommandRegistry } from '@ogun/core/lib/common/command';
 import { VSXExtension } from './vsx-extension';
 import { VSXExtensionsCommands } from './vsx-extension-commands';
 import { VSXExtensionsContribution } from './vsx-extensions-contribution';

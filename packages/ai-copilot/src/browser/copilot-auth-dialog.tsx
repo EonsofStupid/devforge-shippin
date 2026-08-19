@@ -14,13 +14,13 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import * as React from '@theia/core/shared/react';
-import { inject, injectable, postConstruct } from '@theia/core/shared/inversify';
-import { DialogProps, DialogError } from '@theia/core/lib/browser/dialogs';
-import { ReactDialog } from '@theia/core/lib/browser/dialogs/react-dialog';
-import { ClipboardService } from '@theia/core/lib/browser/clipboard-service';
-import { WindowService } from '@theia/core/lib/browser/window/window-service';
-import { CommandService, nls } from '@theia/core';
+import * as React from '@ogun/core/shared/react';
+import { inject, injectable, postConstruct } from '@ogun/core/shared/inversify';
+import { DialogProps, DialogError } from '@ogun/core/lib/browser/dialogs';
+import { ReactDialog } from '@ogun/core/lib/browser/dialogs/react-dialog';
+import { ClipboardService } from '@ogun/core/lib/browser/clipboard-service';
+import { WindowService } from '@ogun/core/lib/browser/window/window-service';
+import { CommandService, nls } from '@ogun/core';
 import { CopilotAuthService, DeviceCodeResponse } from '../common/copilot-auth-service';
 import { CopilotAuthDialogMessages } from './copilot-auth-dialog-messages';
 

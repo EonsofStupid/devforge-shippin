@@ -12,7 +12,7 @@
 
 ## Description
 
-The `@theia/ai-tool-sketchpad` extension lets you prototype LLM tools at runtime without writing or rebuilding any code.
+The `@ogun/ai-tool-sketchpad` extension lets you prototype LLM tools at runtime without writing or rebuilding any code.
 
 When designing custom AI agents, most aspects of agent behavior (system prompts, LLMs, skills, MCPs) can already be adjusted at runtime. Custom tools were the remaining gap. This extension closes it by letting you define _sketched tools_ declaratively: name, description, input parameters, and return behavior. The tool implementation is deliberately left out.
 

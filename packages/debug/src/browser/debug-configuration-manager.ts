@@ -21,25 +21,25 @@
 
 import debounce = require('p-debounce');
 import { visit, parse } from 'jsonc-parser';
-import { inject, injectable, postConstruct } from '@theia/core/shared/inversify';
-import URI from '@theia/core/lib/common/uri';
-import { Emitter, Event, WaitUntilEvent } from '@theia/core/lib/common/event';
-import { EditorManager, EditorWidget } from '@theia/editor/lib/browser';
-import { MonacoEditor } from '@theia/monaco/lib/browser/monaco-editor';
-import { LabelProvider, QuickPickValue, StorageService } from '@theia/core/lib/browser';
-import { QuickPickService } from '@theia/core/lib/common/quick-pick-service';
-import { WorkspaceService } from '@theia/workspace/lib/browser/workspace-service';
+import { inject, injectable, postConstruct } from '@ogun/core/shared/inversify';
+import URI from '@ogun/core/lib/common/uri';
+import { Emitter, Event, WaitUntilEvent } from '@ogun/core/lib/common/event';
+import { EditorManager, EditorWidget } from '@ogun/editor/lib/browser';
+import { MonacoEditor } from '@ogun/monaco/lib/browser/monaco-editor';
+import { LabelProvider, QuickPickValue, StorageService } from '@ogun/core/lib/browser';
+import { QuickPickService } from '@ogun/core/lib/common/quick-pick-service';
+import { WorkspaceService } from '@ogun/workspace/lib/browser/workspace-service';
 import { DebugConfigurationModel } from './debug-configuration-model';
 import { DebugSessionOptions, DynamicDebugConfigurationSessionOptions } from './debug-session-options';
 import { DebugService, DynamicDebugConfigurationProvider } from '../common/debug-service';
-import { ContextKey, ContextKeyService } from '@theia/core/lib/browser/context-key-service';
+import { ContextKey, ContextKeyService } from '@ogun/core/lib/browser/context-key-service';
 import { DebugConfiguration } from '../common/debug-common';
-import { WorkspaceVariableContribution } from '@theia/workspace/lib/browser/workspace-variable-contribution';
-import { MonacoTextModelService } from '@theia/monaco/lib/browser/monaco-text-model-service';
+import { WorkspaceVariableContribution } from '@ogun/workspace/lib/browser/workspace-variable-contribution';
+import { MonacoTextModelService } from '@ogun/monaco/lib/browser/monaco-text-model-service';
 import * as monaco from '@theia/monaco-editor-core';
 import { ICommandService } from '@theia/monaco-editor-core/esm/vs/platform/commands/common/commands';
 import { StandaloneServices } from '@theia/monaco-editor-core/esm/vs/editor/standalone/browser/standaloneServices';
-import { nls, PreferenceConfigurations, PreferenceScope, PreferenceService } from '@theia/core';
+import { nls, PreferenceConfigurations, PreferenceScope, PreferenceService } from '@ogun/core';
 import { DebugCompound } from '../common/debug-compound';
 
 /**

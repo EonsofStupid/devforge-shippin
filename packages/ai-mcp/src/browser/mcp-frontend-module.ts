@@ -17,9 +17,9 @@
 import '../../src/browser/style/mcp-server-dialog.css';
 import '../../src/browser/style/mcp-configuration-widget.css';
 
-import { CommandContribution } from '@theia/core';
-import { ContainerModule } from '@theia/core/shared/inversify';
-import { FrontendApplicationContribution, OpenHandler, RemoteConnectionProvider, ServiceConnectionProvider, WidgetFactory } from '@theia/core/lib/browser';
+import { CommandContribution } from '@ogun/core';
+import { ContainerModule } from '@ogun/core/shared/inversify';
+import { FrontendApplicationContribution, OpenHandler, RemoteConnectionProvider, ServiceConnectionProvider, WidgetFactory } from '@ogun/core/lib/browser';
 import {
     MCPFrontendService,
     MCPServerManager,
@@ -33,8 +33,8 @@ import { MCPServerManagerServerClientImpl } from './mcp-server-manager-server-cl
 import { MCPServerManagerServer, MCPServerManagerServerClient, MCPServerManagerServerPath } from '../common/mcp-protocol';
 import { MCPOAuthFrontendDelegate, MCPOAuthFrontendDelegateClient, mcpOAuthFrontendDelegatePath } from '../common/mcp-oauth';
 import { MCPOAuthFrontendDelegateClientImpl } from './mcp-oauth-frontend-delegate-client';
-import { WorkspaceRestrictionContribution } from '@theia/workspace/lib/browser/workspace-trust-service';
-import { GenericCapabilitiesContribution } from '@theia/ai-core';
+import { WorkspaceRestrictionContribution } from '@ogun/workspace/lib/browser/workspace-trust-service';
+import { GenericCapabilitiesContribution } from '@ogun/ai-core';
 import { MCPGenericCapabilitiesContribution } from './mcp-generic-capabilities-contribution';
 import { MCPServerEditor, MCPServerEditorImpl, MCPServerEditDialogFactory, MCPServerEditDialogParameters } from './mcp-server-editor';
 import { MCPServerEditDialog, DEFAULT_MCP_SERVER_FORM_DATA } from './mcp-server-edit-dialog';

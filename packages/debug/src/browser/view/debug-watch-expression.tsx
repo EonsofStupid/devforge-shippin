@@ -14,12 +14,12 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import * as React from '@theia/core/shared/react';
-import { SingleTextInputDialog } from '@theia/core/lib/browser/dialogs';
+import * as React from '@ogun/core/shared/react';
+import { SingleTextInputDialog } from '@ogun/core/lib/browser/dialogs';
 import { ExpressionItem, DebugSessionProvider } from '../console/debug-console-items';
 import { DebugProtocol } from '@vscode/debugprotocol';
-import { codicon, TREE_NODE_SEGMENT_GROW_CLASS } from '@theia/core/lib/browser';
-import { nls } from '@theia/core';
+import { codicon, TREE_NODE_SEGMENT_GROW_CLASS } from '@ogun/core/lib/browser';
+import { nls } from '@ogun/core';
 
 export class DebugWatchExpression extends ExpressionItem {
 

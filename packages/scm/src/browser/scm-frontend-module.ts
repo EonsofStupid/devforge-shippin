@@ -16,13 +16,13 @@
 
 import '../../src/browser/style/index.css';
 
-import { interfaces, ContainerModule, Container } from '@theia/core/shared/inversify';
+import { interfaces, ContainerModule, Container } from '@ogun/core/shared/inversify';
 import {
     bindViewContribution, FrontendApplicationContribution,
     WidgetFactory, ViewContainer,
     WidgetManager, ApplicationShellLayoutMigration,
     createTreeContainer, TreeModel, TreeModelImpl, StylingParticipant
-} from '@theia/core/lib/browser';
+} from '@ogun/core/lib/browser';
 import { ScmService } from './scm-service';
 import { SCM_WIDGET_FACTORY_ID, ScmContribution, SCM_VIEW_CONTAINER_ID, SCM_VIEW_CONTAINER_TITLE_OPTIONS } from './scm-contribution';
 import { ScmWidget } from './scm-widget';
@@ -39,16 +39,16 @@ import { ScmAvatarService } from './scm-avatar-service';
 import { ScmContextKeyService } from './scm-context-key-service';
 import { ScmLayoutVersion3Migration, ScmLayoutVersion5Migration } from './scm-layout-migrations';
 import { ScmTreeLabelProvider } from './scm-tree-label-provider';
-import { TabBarToolbarContribution } from '@theia/core/lib/browser/shell/tab-bar-toolbar';
-import { ColorContribution } from '@theia/core/lib/browser/color-application-contribution';
-import { LabelProviderContribution } from '@theia/core/lib/browser/label-provider';
+import { TabBarToolbarContribution } from '@ogun/core/lib/browser/shell/tab-bar-toolbar';
+import { ColorContribution } from '@ogun/core/lib/browser/color-application-contribution';
+import { LabelProviderContribution } from '@ogun/core/lib/browser/label-provider';
 import { bindScmPreferences } from '../common/scm-preferences';
 import { bindMergeEditor } from './merge-editor/merge-editor-module';
 import { ScmRepositoriesWidget } from './scm-repositories-widget';
 import { ScmHistoryGraphWidget } from './scm-history-graph-widget';
 import { ScmHistoryGraphModel, ScmHistoryGraphModelProvider } from './scm-history-graph-model';
 import { ScmHistoryGraphContribution } from './scm-history-graph-contribution';
-import { CommandContribution, MenuContribution } from '@theia/core';
+import { CommandContribution, MenuContribution } from '@ogun/core';
 
 export default new ContainerModule(bind => {
     bind(ScmContextKeyService).toSelf().inSingletonScope();

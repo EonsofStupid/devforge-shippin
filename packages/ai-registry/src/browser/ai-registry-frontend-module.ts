@@ -17,13 +17,13 @@
 import '../../src/browser/style/mcp-entries.css';
 import '../../src/browser/style/skill-entries.css';
 
-import { ContainerModule } from '@theia/core/shared/inversify';
-import { PreferenceContribution } from '@theia/core';
-import { RemoteConnectionProvider, ServiceConnectionProvider } from '@theia/core/lib/browser';
-import { OpenHandler } from '@theia/core/lib/browser/opener-service';
-import { TabBarToolbarContribution } from '@theia/core/lib/browser/shell/tab-bar-toolbar';
-import { ExtensionsSourceContribution } from '@theia/vsx-registry/lib/browser/extensions-source-contribution';
-import { MCPRegistryUiBridge } from '@theia/ai-mcp/lib/browser/mcp-registry-ui-bridge';
+import { ContainerModule } from '@ogun/core/shared/inversify';
+import { PreferenceContribution } from '@ogun/core';
+import { RemoteConnectionProvider, ServiceConnectionProvider } from '@ogun/core/lib/browser';
+import { OpenHandler } from '@ogun/core/lib/browser/opener-service';
+import { TabBarToolbarContribution } from '@ogun/core/lib/browser/shell/tab-bar-toolbar';
+import { ExtensionsSourceContribution } from '@ogun/vsx-registry/lib/browser/extensions-source-contribution';
+import { MCPRegistryUiBridge } from '@ogun/ai-mcp/lib/browser/mcp-registry-ui-bridge';
 import { AIRegistryConfiguration } from '../common/ai-registry-configuration';
 import { MCPRegistryEntryResolver, MCPRegistryEntryResolverImpl } from '../common/mcp/mcp-registry-entry-resolver';
 import { RegistryFetchService, RegistryFetchServiceImpl } from '../common/registry-fetch-service';

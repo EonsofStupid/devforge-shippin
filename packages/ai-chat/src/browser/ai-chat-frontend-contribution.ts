@@ -14,12 +14,12 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { AIContextVariable, AIVariableService } from '@theia/ai-core';
-import { Command, CommandContribution, CommandRegistry, Path, URI } from '@theia/core';
-import { open, OpenerService } from '@theia/core/lib/browser';
-import { inject, injectable } from '@theia/core/shared/inversify';
-import { FileService } from '@theia/filesystem/lib/browser/file-service';
-import { WorkspaceService } from '@theia/workspace/lib/browser';
+import { AIContextVariable, AIVariableService } from '@ogun/ai-core';
+import { Command, CommandContribution, CommandRegistry, Path, URI } from '@ogun/core';
+import { open, OpenerService } from '@ogun/core/lib/browser';
+import { inject, injectable } from '@ogun/core/shared/inversify';
+import { FileService } from '@ogun/filesystem/lib/browser/file-service';
+import { WorkspaceService } from '@ogun/workspace/lib/browser';
 import { ChatService } from '../common';
 
 export const VARIABLE_ADD_CONTEXT_COMMAND: Command = Command.toLocalizedCommand({

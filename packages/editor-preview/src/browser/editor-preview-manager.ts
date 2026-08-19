@@ -14,16 +14,16 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { EditorManager, EditorOpenerOptions, EditorWidget } from '@theia/editor/lib/browser';
-import { inject, injectable, postConstruct } from '@theia/core/shared/inversify';
+import { EditorManager, EditorOpenerOptions, EditorWidget } from '@ogun/editor/lib/browser';
+import { inject, injectable, postConstruct } from '@ogun/core/shared/inversify';
 import { EditorPreviewPreferences, ENABLE_PREVIEW_PREFERENCE } from '../common/editor-preview-preferences';
-import { MaybePromise } from '@theia/core/lib/common';
-import URI from '@theia/core/lib/common/uri';
+import { MaybePromise } from '@ogun/core/lib/common';
+import URI from '@ogun/core/lib/common/uri';
 import { EditorPreviewWidgetFactory, EditorPreviewOptions } from './editor-preview-widget-factory';
 import { EditorPreviewWidget } from './editor-preview-widget';
 import { PreviewTabWidget } from './preview-tab-widget';
-import { FrontendApplicationStateService } from '@theia/core/lib/browser/frontend-application-state';
-import { WidgetOpenerOptions } from '@theia/core/lib/browser';
+import { FrontendApplicationStateService } from '@ogun/core/lib/browser/frontend-application-state';
+import { WidgetOpenerOptions } from '@ogun/core/lib/browser';
 
 @injectable()
 export class EditorPreviewManager extends EditorManager {

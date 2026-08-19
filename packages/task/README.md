@@ -12,7 +12,7 @@
 
 ## Description
 
-The `@theia/task` extension extension permits executing scripts or binaries in the application's backend.
+The `@ogun/task` extension extension permits executing scripts or binaries in the application's backend.
 
 Tasks launch configurations can be defined independently for each workspace, under `.theia/tasks.json`. When present, they are automatically picked-up when a client opens a workspace, and watches for changes. A task can be executed by triggering the "Run Task" command (shortcut F1). A list of known tasks will then be available, one of which can be selected to trigger execution.
 
@@ -189,7 +189,7 @@ export interface TaskRunnerContribution {
 
 ## Additional Information
 
-- [API documentation for `@theia/task`](https://eclipse-theia.github.io/theia/docs/next/modules/_theia_task.html)
+- [API documentation for `@ogun/task`](https://eclipse-theia.github.io/theia/docs/next/modules/_theia_task.html)
 - [Theia - GitHub](https://github.com/eclipse-theia/theia)
 - [Theia - Website](https://theia-ide.org/)
 

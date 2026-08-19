@@ -14,12 +14,12 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { injectable, inject } from '@theia/core/shared/inversify';
-import { SelectionService } from '@theia/core/lib/common';
-import * as React from '@theia/core/shared/react';
+import { injectable, inject } from '@ogun/core/shared/inversify';
+import { SelectionService } from '@ogun/core/lib/common';
+import * as React from '@ogun/core/shared/react';
 import {
     ContextMenuRenderer, ReactWidget, LabelProvider, KeybindingRegistry, StorageService
-} from '@theia/core/lib/browser';
+} from '@ogun/core/lib/browser';
 import { ScmService } from './scm-service';
 import { ScmAvatarService } from './scm-avatar-service';
 import { ScmAmendComponent } from './scm-amend-component';

@@ -14,10 +14,10 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { AbstractStreamParsingChatAgent } from '@theia/ai-chat/lib/common/chat-agents';
-import { LanguageModelRequirement } from '@theia/ai-core/lib/common';
-import { nls } from '@theia/core';
-import { injectable } from '@theia/core/shared/inversify';
+import { AbstractStreamParsingChatAgent } from '@ogun/ai-chat/lib/common/chat-agents';
+import { LanguageModelRequirement } from '@ogun/ai-core/lib/common';
+import { nls } from '@ogun/core';
+import { injectable } from '@ogun/core/shared/inversify';
 import { codeReviewerSystemPrompt, CODE_REVIEWER_SYSTEM_PROMPT_ID } from './code-reviewer-prompt-template';
 
 export const CodeReviewerAgentId = 'code-reviewer';

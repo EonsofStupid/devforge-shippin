@@ -14,9 +14,9 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { LanguageModelRegistry, LanguageModelStatus, ReasoningApi, ReasoningSupport } from '@theia/ai-core';
-import { createProxyFetch, getProxyUrl } from '@theia/ai-core/lib/node';
-import { inject, injectable } from '@theia/core/shared/inversify';
+import { LanguageModelRegistry, LanguageModelStatus, ReasoningApi, ReasoningSupport } from '@ogun/ai-core';
+import { createProxyFetch, getProxyUrl } from '@ogun/ai-core/lib/node';
+import { inject, injectable } from '@ogun/core/shared/inversify';
 import { Anthropic } from '@anthropic-ai/sdk';
 import type { ModelInfo } from '@anthropic-ai/sdk/resources/models';
 import { AnthropicModel, DEFAULT_MAX_TOKENS } from './anthropic-language-model';

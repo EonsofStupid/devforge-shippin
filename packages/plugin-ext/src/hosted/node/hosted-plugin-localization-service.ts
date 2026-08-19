@@ -15,15 +15,15 @@
 // *****************************************************************************
 
 import * as path from 'path';
-import * as fs from '@theia/core/shared/fs-extra';
-import { LazyLocalization, LocalizationProvider } from '@theia/core/lib/node/i18n/localization-provider';
-import { Localization } from '@theia/core/lib/common/i18n/localization';
-import { inject, injectable, named } from '@theia/core/shared/inversify';
+import * as fs from '@ogun/core/shared/fs-extra';
+import { LazyLocalization, LocalizationProvider } from '@ogun/core/lib/node/i18n/localization-provider';
+import { Localization } from '@ogun/core/lib/common/i18n/localization';
+import { inject, injectable, named } from '@ogun/core/shared/inversify';
 import { DeployedPlugin, Localization as PluginLocalization, PluginIdentifiers, Translation } from '../../common';
-import { EnvVariablesServer } from '@theia/core/lib/common/env-variables';
-import { BackendApplicationContribution } from '@theia/core/lib/node';
-import { Disposable, DisposableCollection, isObject, MaybePromise, nls, Path, URI, ILogger } from '@theia/core';
-import { Deferred } from '@theia/core/lib/common/promise-util';
+import { EnvVariablesServer } from '@ogun/core/lib/common/env-variables';
+import { BackendApplicationContribution } from '@ogun/core/lib/node';
+import { Disposable, DisposableCollection, isObject, MaybePromise, nls, Path, URI, ILogger } from '@ogun/core';
+import { Deferred } from '@ogun/core/lib/common/promise-util';
 import { LanguagePackBundle, LanguagePackService } from '../../common/language-pack-service';
 
 export interface VSCodeNlsConfig {

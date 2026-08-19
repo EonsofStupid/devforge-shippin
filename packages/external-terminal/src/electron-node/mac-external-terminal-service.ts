@@ -15,8 +15,8 @@
 // *****************************************************************************
 
 import * as cp from 'child_process';
-import { injectable } from '@theia/core/shared/inversify';
-import { FileUri } from '@theia/core/lib/common/file-uri';
+import { injectable } from '@ogun/core/shared/inversify';
+import { FileUri } from '@ogun/core/lib/common/file-uri';
 import { ExternalTerminalService, ExternalTerminalConfiguration } from '../common/external-terminal';
 
 /*---------------------------------------------------------------------------------------------

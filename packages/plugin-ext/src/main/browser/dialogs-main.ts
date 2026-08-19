@@ -14,17 +14,17 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { interfaces } from '@theia/core/shared/inversify';
+import { interfaces } from '@ogun/core/shared/inversify';
 import { RPCProtocol } from '../../common/rpc-protocol';
 import { OpenDialogOptionsMain, SaveDialogOptionsMain, DialogsMain, UploadDialogOptionsMain } from '../../common/plugin-api-rpc';
-import { OpenFileDialogProps, SaveFileDialogProps, FileDialogService } from '@theia/filesystem/lib/browser';
-import { WorkspaceService } from '@theia/workspace/lib/browser';
-import URI from '@theia/core/lib/common/uri';
-import { FileUploadService } from '@theia/filesystem/lib/common/upload/file-upload';
-import { FileService } from '@theia/filesystem/lib/browser/file-service';
-import { FileStat } from '@theia/filesystem/lib/common/files';
-import { EnvVariablesServer } from '@theia/core/lib/common/env-variables';
-import { nls } from '@theia/core';
+import { OpenFileDialogProps, SaveFileDialogProps, FileDialogService } from '@ogun/filesystem/lib/browser';
+import { WorkspaceService } from '@ogun/workspace/lib/browser';
+import URI from '@ogun/core/lib/common/uri';
+import { FileUploadService } from '@ogun/filesystem/lib/common/upload/file-upload';
+import { FileService } from '@ogun/filesystem/lib/browser/file-service';
+import { FileStat } from '@ogun/filesystem/lib/common/files';
+import { EnvVariablesServer } from '@ogun/core/lib/common/env-variables';
+import { nls } from '@ogun/core';
 
 export class DialogsMainImpl implements DialogsMain {
 

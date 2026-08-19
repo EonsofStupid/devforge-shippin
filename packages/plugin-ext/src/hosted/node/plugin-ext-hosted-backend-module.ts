@@ -15,11 +15,11 @@
 // *****************************************************************************
 
 import * as path from 'path';
-import { interfaces } from '@theia/core/shared/inversify';
-import { bindContributionProvider } from '@theia/core/lib/common/contribution-provider';
-import { CliContribution } from '@theia/core/lib/node/cli';
-import { ConnectionContainerModule } from '@theia/core/lib/node/messaging/connection-container-module';
-import { BackendApplicationContribution } from '@theia/core/lib/node/backend-application';
+import { interfaces } from '@ogun/core/shared/inversify';
+import { bindContributionProvider } from '@ogun/core/lib/common/contribution-provider';
+import { CliContribution } from '@ogun/core/lib/node/cli';
+import { ConnectionContainerModule } from '@ogun/core/lib/node/messaging/connection-container-module';
+import { BackendApplicationContribution } from '@ogun/core/lib/node/backend-application';
 import { MetadataScanner } from './metadata-scanner';
 import { BackendPluginHostableFilter, HostedPluginServerImpl } from './plugin-service';
 import { HostedPluginReader } from './plugin-reader';
@@ -36,8 +36,8 @@ import { FilePluginUriFactory } from './scanners/file-plugin-uri-factory';
 import { HostedPluginLocalizationService } from './hosted-plugin-localization-service';
 import { LanguagePackService, languagePackServicePath } from '../../common/language-pack-service';
 import { PluginLanguagePackService } from './plugin-language-pack-service';
-import { RpcConnectionHandler } from '@theia/core/lib/common/messaging/proxy-factory';
-import { ConnectionHandler } from '@theia/core/lib/common/messaging/handler';
+import { RpcConnectionHandler } from '@ogun/core/lib/common/messaging/proxy-factory';
+import { ConnectionHandler } from '@ogun/core/lib/common/messaging/handler';
 import { isConnectionScopedBackendPlugin } from '../common/hosted-plugin';
 
 const commonHostedConnectionModule = ConnectionContainerModule.create(({ bind, bindBackendService }) => {

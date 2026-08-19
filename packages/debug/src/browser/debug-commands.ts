@@ -14,9 +14,9 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { Command, MAIN_MENU_BAR } from '@theia/core/lib/common';
-import { codicon } from '@theia/core/lib/browser';
-import { nls } from '@theia/core/lib/common/nls';
+import { Command, MAIN_MENU_BAR } from '@ogun/core/lib/common';
+import { codicon } from '@ogun/core/lib/browser';
+import { nls } from '@ogun/core/lib/common/nls';
 
 export namespace DebugMenus {
     export const DEBUG = [...MAIN_MENU_BAR, '6_debug'];

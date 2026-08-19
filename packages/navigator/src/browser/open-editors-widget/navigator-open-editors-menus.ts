@@ -14,7 +14,7 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { MenuPath } from '@theia/core/lib/common';
+import { MenuPath } from '@ogun/core/lib/common';
 
 export const OPEN_EDITORS_CONTEXT_MENU: MenuPath = ['open-editors-context-menu'];
 export namespace OpenEditorsContextMenu {

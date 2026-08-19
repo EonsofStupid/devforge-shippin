@@ -14,16 +14,16 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { inject, injectable, postConstruct } from '@theia/core/shared/inversify';
-import { TabBar, Widget, Title } from '@theia/core/shared/@lumino/widgets';
-import { Message, ContextMenuRenderer, LabelProvider, StatefulWidget, codicon } from '@theia/core/lib/browser';
-import { WorkspaceService } from '@theia/workspace/lib/browser/workspace-service';
-import URI from '@theia/core/lib/common/uri';
-import { FileStat } from '@theia/filesystem/lib/common/files';
+import { inject, injectable, postConstruct } from '@ogun/core/shared/inversify';
+import { TabBar, Widget, Title } from '@ogun/core/shared/@lumino/widgets';
+import { Message, ContextMenuRenderer, LabelProvider, StatefulWidget, codicon } from '@ogun/core/lib/browser';
+import { WorkspaceService } from '@ogun/workspace/lib/browser/workspace-service';
+import URI from '@ogun/core/lib/common/uri';
+import { FileStat } from '@ogun/filesystem/lib/common/files';
 import { PreferenceScopeCommandManager } from '../util/preference-scope-command-manager';
 import { Preference, PreferenceMenus } from '../util/preference-types';
-import { CommandRegistry, DisposableCollection, Emitter, MenuModelRegistry, PreferenceScope } from '@theia/core/lib/common';
-import { nls } from '@theia/core/lib/common/nls';
+import { CommandRegistry, DisposableCollection, Emitter, MenuModelRegistry, PreferenceScope } from '@ogun/core/lib/common';
+import { nls } from '@ogun/core/lib/common/nls';
 
 const USER_TAB_LABEL = nls.localizeByDefault('User');
 const USER_TAB_INDEX = PreferenceScope['User'];

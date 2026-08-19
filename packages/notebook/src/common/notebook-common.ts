@@ -14,10 +14,10 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { Command, URI, isObject } from '@theia/core';
-import { MarkdownString } from '@theia/core/lib/common/markdown-rendering/markdown-string';
-import { BinaryBuffer } from '@theia/core/lib/common/buffer';
-import { UriComponents } from '@theia/core/lib/common/uri';
+import { Command, URI, isObject } from '@ogun/core';
+import { MarkdownString } from '@ogun/core/lib/common/markdown-rendering/markdown-string';
+import { BinaryBuffer } from '@ogun/core/lib/common/buffer';
+import { UriComponents } from '@ogun/core/lib/common/uri';
 
 export interface NotebookCommand extends Command {
     title?: string;

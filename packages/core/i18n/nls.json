@@ -1410,7 +1410,7 @@
               "mdDescription": "Content hash of the registry approval used to install this server.",
               "title": "Registry Config Hash"
             },
-            "mdDescription": "Provenance metadata for a server installed from an AI registry. Written by `@theia/ai-registry`; not user-editable.",
+            "mdDescription": "Provenance metadata for a server installed from an AI registry. Written by `@ogun/ai-registry`; not user-editable.",
             "serverId": {
               "mdDescription": "Identifies the AI registry entry this server was installed from.",
               "title": "Registry Server Id"

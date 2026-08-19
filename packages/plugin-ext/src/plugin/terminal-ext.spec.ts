@@ -15,7 +15,7 @@
 // *****************************************************************************
 
 import * as chai from 'chai';
-import * as theia from '@theia/plugin';
+import * as theia from '@ogun/plugin';
 import { TerminalServiceMain, Plugin, TerminalOptions } from '../common/plugin-api-rpc';
 import { RPCProtocol, ProxyIdentifier } from '../common/rpc-protocol';
 import { TerminalServiceExtImpl, TerminalExtImpl } from './terminal-ext';

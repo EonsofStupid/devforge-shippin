@@ -15,11 +15,11 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { AGENT_DELEGATION_FUNCTION_ID, PromptService } from '@theia/ai-core';
-import { FrontendApplicationContribution } from '@theia/core/lib/browser';
-import { nls } from '@theia/core';
-import { inject, injectable } from '@theia/core/shared/inversify';
-import { SHELL_EXECUTION_FUNCTION_ID } from '@theia/ai-terminal/lib/common/shell-execution-server';
+import { AGENT_DELEGATION_FUNCTION_ID, PromptService } from '@ogun/ai-core';
+import { FrontendApplicationContribution } from '@ogun/core/lib/browser';
+import { nls } from '@ogun/core';
+import { inject, injectable } from '@ogun/core/shared/inversify';
+import { SHELL_EXECUTION_FUNCTION_ID } from '@ogun/ai-terminal/lib/common/shell-execution-server';
 import {
     LIST_TASKS_FUNCTION_ID,
     RUN_TASK_FUNCTION_ID

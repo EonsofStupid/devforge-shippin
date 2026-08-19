@@ -14,11 +14,11 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { Emitter, Event } from '@theia/core';
-import { RemoteConnection, RemoteExecOptions, RemoteExecResult, RemoteExecTester } from '@theia/remote/lib/electron-node/remote-types';
+import { Emitter, Event } from '@ogun/core';
+import { RemoteConnection, RemoteExecOptions, RemoteExecResult, RemoteExecTester } from '@ogun/remote/lib/electron-node/remote-types';
 import { Socket } from 'net';
 import { exec, spawn } from 'child_process';
-import { Deferred } from '@theia/core/lib/common/promise-util';
+import { Deferred } from '@ogun/core/lib/common/promise-util';
 
 export interface RemoteWslConnectionOptions {
     id: string;

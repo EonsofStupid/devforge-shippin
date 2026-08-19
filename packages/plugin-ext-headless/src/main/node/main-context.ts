@@ -13,11 +13,11 @@
 //
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
-import { interfaces } from '@theia/core/shared/inversify';
-import { RPCProtocol } from '@theia/plugin-ext/lib/common/rpc-protocol';
-import { EnvMainImpl } from '@theia/plugin-ext/lib/main/common/env-main';
-import { BasicMessageRegistryMainImpl } from '@theia/plugin-ext/lib/main/common/basic-message-registry-main';
-import { BasicNotificationMainImpl } from '@theia/plugin-ext/lib/main/common/basic-notification-main';
+import { interfaces } from '@ogun/core/shared/inversify';
+import { RPCProtocol } from '@ogun/plugin-ext/lib/common/rpc-protocol';
+import { EnvMainImpl } from '@ogun/plugin-ext/lib/main/common/env-main';
+import { BasicMessageRegistryMainImpl } from '@ogun/plugin-ext/lib/main/common/basic-message-registry-main';
+import { BasicNotificationMainImpl } from '@ogun/plugin-ext/lib/main/common/basic-notification-main';
 
 import { HEADLESSMAIN_RPC_CONTEXT, HEADLESSPLUGIN_RPC_CONTEXT } from '../../common/headless-plugin-rpc';
 

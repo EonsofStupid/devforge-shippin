@@ -1,4 +1,4 @@
-# `@theia/re-export`
+# `@ogun/re-export`
 
 Utility package to re-export dependencies.
 
@@ -29,7 +29,7 @@ through your `package.json` file with a `theiaReExports` key:
 ### `transitive`
 
 If you want to re-export packages from another package that also re-exports
-its dependencies. We use this in `@theia/core` to simplify the consumption
+its dependencies. We use this in `@ogun/core` to simplify the consumption
 of some optional Electron-specific dependencies.
 
 ### `export *`

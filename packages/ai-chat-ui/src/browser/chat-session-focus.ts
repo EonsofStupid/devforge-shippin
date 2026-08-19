@@ -14,8 +14,8 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { ChatService } from '@theia/ai-chat';
-import { ApplicationShell } from '@theia/core/lib/browser';
+import { ChatService } from '@ogun/ai-chat';
+import { ApplicationShell } from '@ogun/core/lib/browser';
 
 /** Id of the chat view widget. Kept in sync with `ChatViewWidget.ID`. */
 const CHAT_VIEW_WIDGET_ID = 'chat-view-widget';

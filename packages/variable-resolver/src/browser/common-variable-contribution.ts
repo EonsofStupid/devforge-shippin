@@ -14,19 +14,19 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { injectable, inject, optional } from '@theia/core/shared/inversify';
+import { injectable, inject, optional } from '@ogun/core/shared/inversify';
 import { VariableContribution, VariableRegistry } from './variable';
-import { ApplicationServer } from '@theia/core/lib/common/application-protocol';
-import { EnvVariablesServer } from '@theia/core/lib/common/env-variables';
-import { CommandService } from '@theia/core/lib/common/command';
-import { OS } from '@theia/core/lib/common/os';
-import { PreferenceService } from '@theia/core/lib/common/preferences/preference-service';
-import { ResourceContextKey } from '@theia/core/lib/browser/resource-context-key';
+import { ApplicationServer } from '@ogun/core/lib/common/application-protocol';
+import { EnvVariablesServer } from '@ogun/core/lib/common/env-variables';
+import { CommandService } from '@ogun/core/lib/common/command';
+import { OS } from '@ogun/core/lib/common/os';
+import { PreferenceService } from '@ogun/core/lib/common/preferences/preference-service';
+import { ResourceContextKey } from '@ogun/core/lib/browser/resource-context-key';
 import { VariableInput } from './variable-input';
-import { QuickInputService, QuickPickValue } from '@theia/core/lib/browser';
-import { MaybeArray, RecursivePartial } from '@theia/core/lib/common/types';
-import { cancelled } from '@theia/core/lib/common/cancellation';
-import URI from '@theia/core/lib/common/uri';
+import { QuickInputService, QuickPickValue } from '@ogun/core/lib/browser';
+import { MaybeArray, RecursivePartial } from '@ogun/core/lib/common/types';
+import { cancelled } from '@ogun/core/lib/common/cancellation';
+import URI from '@ogun/core/lib/common/uri';
 
 @injectable()
 export class CommonVariableContribution implements VariableContribution {

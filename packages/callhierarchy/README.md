@@ -12,11 +12,11 @@
 
 ## Description
 
-The `@theia/callhierarchy` extension contributes a `call hierarchy` view which displays the caller hierarchy for a selected callable.
+The `@ogun/callhierarchy` extension contributes a `call hierarchy` view which displays the caller hierarchy for a selected callable.
 
 ## Additional Information
 
-- [API documentation for `@theia/callhierarchy`](https://eclipse-theia.github.io/theia/docs/next/modules/_theia_callhierarchy.html)
+- [API documentation for `@ogun/callhierarchy`](https://eclipse-theia.github.io/theia/docs/next/modules/_theia_callhierarchy.html)
 - [Theia - GitHub](https://github.com/eclipse-theia/theia)
 - [Theia - Website](https://theia-ide.org/)
 

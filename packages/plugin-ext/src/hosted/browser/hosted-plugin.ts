@@ -21,8 +21,8 @@
 
 /* eslint-disable @typescript-eslint/no-explicit-any */
 
-import { generateUuid } from '@theia/core/lib/common/uuid';
-import { injectable, inject, postConstruct } from '@theia/core/shared/inversify';
+import { generateUuid } from '@ogun/core/lib/common/uuid';
+import { injectable, inject, postConstruct } from '@ogun/core/shared/inversify';
 import { PluginWorker } from './plugin-worker';
 import { getPluginId, DeployedPlugin, HostedPluginServer } from '../../common/plugin-protocol';
 import { HostedPluginWatcher } from './hosted-plugin-watcher';
@@ -34,45 +34,45 @@ import {
     CommandRegistry, WillExecuteCommandEvent,
     CancellationTokenSource, ProgressService, nls,
     RpcProxy
-} from '@theia/core';
-import { PreferenceServiceImpl, PreferenceProviderProvider } from '@theia/core/lib/common/preferences';
-import { WorkspaceService } from '@theia/workspace/lib/browser';
+} from '@ogun/core';
+import { PreferenceServiceImpl, PreferenceProviderProvider } from '@ogun/core/lib/common/preferences';
+import { WorkspaceService } from '@ogun/workspace/lib/browser';
 import { PluginContributionHandler } from '../../main/browser/plugin-contribution-handler';
 import { getQueryParameters } from '../../main/browser/env-main';
 import { getPreferences } from '../../main/browser/preference-registry-main';
-import { Deferred, waitForEvent } from '@theia/core/lib/common/promise-util';
-import { DebugSessionManager } from '@theia/debug/lib/browser/debug-session-manager';
-import { DebugConfigurationManager } from '@theia/debug/lib/browser/debug-configuration-manager';
-import { Event, WaitUntilEvent } from '@theia/core/lib/common/event';
-import { FileSearchService } from '@theia/file-search/lib/common/file-search-service';
-import { FrontendApplicationStateService } from '@theia/core/lib/browser/frontend-application-state';
+import { Deferred, waitForEvent } from '@ogun/core/lib/common/promise-util';
+import { DebugSessionManager } from '@ogun/debug/lib/browser/debug-session-manager';
+import { DebugConfigurationManager } from '@ogun/debug/lib/browser/debug-configuration-manager';
+import { Event, WaitUntilEvent } from '@ogun/core/lib/common/event';
+import { FileSearchService } from '@ogun/file-search/lib/common/file-search-service';
+import { FrontendApplicationStateService } from '@ogun/core/lib/browser/frontend-application-state';
 import { PluginViewRegistry } from '../../main/browser/view/plugin-view-registry';
-import { WillResolveTaskProvider, TaskProviderRegistry, TaskResolverRegistry } from '@theia/task/lib/browser/task-contribution';
-import { TaskDefinitionRegistry } from '@theia/task/lib/browser/task-definition-registry';
+import { WillResolveTaskProvider, TaskProviderRegistry, TaskResolverRegistry } from '@ogun/task/lib/browser/task-contribution';
+import { TaskDefinitionRegistry } from '@ogun/task/lib/browser/task-definition-registry';
 import { WebviewEnvironment } from '../../main/browser/webview/webview-environment';
 import { WebviewWidget } from '../../main/browser/webview/webview';
-import { WidgetManager } from '@theia/core/lib/browser/widget-manager';
-import { TerminalService } from '@theia/terminal/lib/browser/base/terminal-service';
-import URI from '@theia/core/lib/common/uri';
-import { FrontendApplicationConfigProvider } from '@theia/core/lib/browser/frontend-application-config-provider';
-import { environment } from '@theia/core/shared/@theia/application-package/lib/environment';
-import { JsonSchemaStore } from '@theia/core/lib/browser/json-schema-store';
-import { FileService, FileSystemProviderActivationEvent } from '@theia/filesystem/lib/browser/file-service';
+import { WidgetManager } from '@ogun/core/lib/browser/widget-manager';
+import { TerminalService } from '@ogun/terminal/lib/browser/base/terminal-service';
+import URI from '@ogun/core/lib/common/uri';
+import { FrontendApplicationConfigProvider } from '@ogun/core/lib/browser/frontend-application-config-provider';
+import { environment } from '@ogun/core/shared/@ogun/application-package/lib/environment';
+import { JsonSchemaStore } from '@ogun/core/lib/browser/json-schema-store';
+import { FileService, FileSystemProviderActivationEvent } from '@ogun/filesystem/lib/browser/file-service';
 import { PluginCustomEditorRegistry } from '../../main/browser/custom-editors/plugin-custom-editor-registry';
 import { CustomEditorWidget } from '../../main/browser/custom-editors/custom-editor-widget';
 import { StandaloneServices } from '@theia/monaco-editor-core/esm/vs/editor/standalone/browser/standaloneServices';
 import { ILanguageService } from '@theia/monaco-editor-core/esm/vs/editor/common/languages/language';
 import { LanguageService } from '@theia/monaco-editor-core/esm/vs/editor/common/services/languageService';
-import { Uint8ArrayReadBuffer, Uint8ArrayWriteBuffer } from '@theia/core/lib/common/message-rpc/uint8-array-message-buffer';
-import { BasicChannel } from '@theia/core/lib/common/message-rpc/channel';
-import { NotebookTypeRegistry, NotebookService, NotebookRendererMessagingService } from '@theia/notebook/lib/browser';
-import { ApplicationServer } from '@theia/core/lib/common/application-protocol';
+import { Uint8ArrayReadBuffer, Uint8ArrayWriteBuffer } from '@ogun/core/lib/common/message-rpc/uint8-array-message-buffer';
+import { BasicChannel } from '@ogun/core/lib/common/message-rpc/channel';
+import { NotebookTypeRegistry, NotebookService, NotebookRendererMessagingService } from '@ogun/notebook/lib/browser';
+import { ApplicationServer } from '@ogun/core/lib/common/application-protocol';
 import {
     AbstractHostedPluginSupport, PluginContributions, PluginHost,
     ALL_ACTIVATION_EVENT, isConnectionScopedBackendPlugin
 } from '../common/hosted-plugin';
-import { isRemote } from '@theia/core/lib/browser/browser';
-import { WorkspaceTrustService } from '@theia/workspace/lib/browser/workspace-trust-service';
+import { isRemote } from '@ogun/core/lib/browser/browser';
+import { WorkspaceTrustService } from '@ogun/workspace/lib/browser/workspace-trust-service';
 
 export type DebugActivationEvent = 'onDebugResolve' | 'onDebugInitialConfigurations' | 'onDebugAdapterProtocolTracker' | 'onDebugDynamicConfigurations';
 

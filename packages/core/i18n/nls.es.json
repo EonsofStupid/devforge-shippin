@@ -1410,7 +1410,7 @@
               "mdDescription": "Hash del contenido de la autorización del registro utilizada para instalar este servidor.",
               "title": "Hash de configuración del Registro"
             },
-            "mdDescription": "Metadatos de procedencia para un servidor instalado desde un registro de IA. Escrito por `@theia/ai-registry`; no editable por el usuario.",
+            "mdDescription": "Metadatos de procedencia para un servidor instalado desde un registro de IA. Escrito por `@ogun/ai-registry`; no editable por el usuario.",
             "serverId": {
               "mdDescription": "Identifica la entrada del registro de IA desde la que se instaló este servidor.",
               "title": "ID del servidor de registro"

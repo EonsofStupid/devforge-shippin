@@ -15,8 +15,8 @@
 // *****************************************************************************
 
 import { expect } from 'chai';
-import { OS } from '@theia/core/lib/common/os';
-import { RemoteCliContext } from '@theia/core/lib/node/remote/remote-cli-contribution';
+import { OS } from '@ogun/core/lib/common/os';
+import { RemoteCliContext } from '@ogun/core/lib/node/remote/remote-cli-contribution';
 import { PreferenceCliContribution } from './preference-cli-contribution';
 
 const REMOTE_CLI_CONTEXT: RemoteCliContext = {

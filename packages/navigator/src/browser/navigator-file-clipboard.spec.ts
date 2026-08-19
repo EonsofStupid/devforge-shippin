@@ -14,16 +14,16 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { enableJSDOM } from '@theia/core/lib/browser/test/jsdom';
+import { enableJSDOM } from '@ogun/core/lib/browser/test/jsdom';
 const disableJSDOM = enableJSDOM();
 
-import { FrontendApplicationConfigProvider } from '@theia/core/lib/browser/frontend-application-config-provider';
+import { FrontendApplicationConfigProvider } from '@ogun/core/lib/browser/frontend-application-config-provider';
 FrontendApplicationConfigProvider.set({});
 
 import { expect } from 'chai';
-import { Container } from '@theia/core/shared/inversify';
-import { Emitter } from '@theia/core/lib/common/event';
-import { ClipboardService } from '@theia/core/lib/browser/clipboard-service';
+import { Container } from '@ogun/core/shared/inversify';
+import { Emitter } from '@ogun/core/lib/common/event';
+import { ClipboardService } from '@ogun/core/lib/browser/clipboard-service';
 import { NavigatorFileClipboard } from './navigator-file-clipboard';
 
 disableJSDOM();

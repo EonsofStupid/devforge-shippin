@@ -14,19 +14,19 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { ContainerModule } from '@theia/core/shared/inversify';
-import { CliContribution } from '@theia/core/lib/node/cli';
-import { RemoteCliContribution } from '@theia/core/lib/node/remote/remote-cli-contribution';
+import { ContainerModule } from '@ogun/core/shared/inversify';
+import { CliContribution } from '@ogun/core/lib/node/cli';
+import { RemoteCliContribution } from '@ogun/core/lib/node/remote/remote-cli-contribution';
 import { PreferenceCliContribution } from './preference-cli-contribution';
-import { ConnectionContainerModule } from '@theia/core/lib/node/messaging/connection-container-module';
+import { ConnectionContainerModule } from '@ogun/core/lib/node/messaging/connection-container-module';
 import { CliPreferences, CliPreferencesPath } from '../common/cli-preferences';
 import { bindPreferenceProviders } from './preference-bindings';
 import { PreferenceStorageFactory } from '../common/abstract-resource-preference-provider';
-import { PreferenceScope, URI } from '@theia/core';
+import { PreferenceScope, URI } from '@ogun/core';
 import { BackendPreferenceStorage } from './backend-preference-storage';
 import { JSONCEditor } from '../common/jsonc-editor';
-import { EncodingService } from '@theia/core/lib/common/encoding-service';
-import { DiskFileSystemProvider } from '@theia/filesystem/lib/node/disk-file-system-provider';
+import { EncodingService } from '@ogun/core/lib/common/encoding-service';
+import { DiskFileSystemProvider } from '@ogun/filesystem/lib/node/disk-file-system-provider';
 
 const preferencesConnectionModule = ConnectionContainerModule.create(({ bind, bindBackendService }) => {
     bindBackendService(CliPreferencesPath, CliPreferences);

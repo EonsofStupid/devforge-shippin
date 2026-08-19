@@ -218,7 +218,7 @@ export abstract class AbstractTreeDecoratorService implements TreeDecoratorServi
 }
 
 /**
- * @deprecated import from `@theia/core/lib/browser/widget-decoration` instead.
+ * @deprecated import from `@ogun/core/lib/browser/widget-decoration` instead.
  */
 export import TreeDecoration = WidgetDecoration;
 

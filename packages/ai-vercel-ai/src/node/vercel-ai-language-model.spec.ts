@@ -15,8 +15,8 @@
 // *****************************************************************************
 
 import { expect } from 'chai';
-import { MockLogger } from '@theia/core/lib/common/test/mock-logger';
-import { LanguageModelMessage } from '@theia/ai-core';
+import { MockLogger } from '@ogun/core/lib/common/test/mock-logger';
+import { LanguageModelMessage } from '@ogun/ai-core';
 import { CoreMessage } from 'ai';
 import { VercelAiModel } from './vercel-ai-language-model';
 import { VercelAiLanguageModelFactory } from './vercel-ai-language-model-factory';

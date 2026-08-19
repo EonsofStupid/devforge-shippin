@@ -13,12 +13,12 @@
 //
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
-import { ContainerModule } from '@theia/core/shared/inversify';
-import { WidgetFactory } from '@theia/core/lib/browser/widget-manager';
+import { ContainerModule } from '@ogun/core/shared/inversify';
+import { WidgetFactory } from '@ogun/core/lib/browser/widget-manager';
 import { BulkEditTreeWidget, BULK_EDIT_TREE_WIDGET_ID, createBulkEditTreeWidget } from './bulk-edit-tree';
-import { FrontendApplicationContribution, LabelProviderContribution, bindViewContribution } from '@theia/core/lib/browser';
+import { FrontendApplicationContribution, LabelProviderContribution, bindViewContribution } from '@ogun/core/lib/browser';
 import { BulkEditContribution } from './bulk-edit-contribution';
-import { TabBarToolbarContribution } from '@theia/core/lib/browser/shell/tab-bar-toolbar';
+import { TabBarToolbarContribution } from '@ogun/core/lib/browser/shell/tab-bar-toolbar';
 import { BulkEditTreeLabelProvider } from './bulk-edit-tree-label-provider';
 import '../../src/browser/style/bulk-edit.css';
 

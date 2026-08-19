@@ -21,7 +21,7 @@ import { ReactDialog } from './dialogs/react-dialog';
 import { ApplicationServer, ApplicationInfo, ExtensionInfo } from '../common/application-protocol';
 import { Message } from './widgets/widget';
 import { FrontendApplicationConfigProvider } from './frontend-application-config-provider';
-import { DEFAULT_SUPPORTED_API_VERSION, DEFAULT_SUPPORTED_MONACO_VERSION } from '@theia/application-package/lib/api';
+import { DEFAULT_SUPPORTED_API_VERSION, DEFAULT_SUPPORTED_MONACO_VERSION } from '@ogun/application-package/lib/api';
 import { WindowService } from './window/window-service';
 import { Key, KeyCode } from './keys';
 import { nls } from '../common/nls';

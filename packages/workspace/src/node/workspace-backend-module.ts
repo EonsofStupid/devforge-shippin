@@ -14,12 +14,12 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { ContainerModule } from '@theia/core/shared/inversify';
-import { ConnectionHandler, RpcConnectionHandler, bindRootContributionProvider } from '@theia/core/lib/common';
+import { ContainerModule } from '@ogun/core/shared/inversify';
+import { ConnectionHandler, RpcConnectionHandler, bindRootContributionProvider } from '@ogun/core/lib/common';
 import { WorkspaceServer, workspacePath, UntitledWorkspaceService, WorkspaceFileService, bindWorkspacePreferences } from '../common';
 import { DefaultWorkspaceServer, FileWorkspaceHandlerContribution, WorkspaceCliContribution, WorkspaceHandlerContribution } from './default-workspace-server';
-import { CliContribution } from '@theia/core/lib/node/cli';
-import { BackendApplicationContribution } from '@theia/core/lib/node';
+import { CliContribution } from '@ogun/core/lib/node/cli';
+import { BackendApplicationContribution } from '@ogun/core/lib/node';
 import { bindWorkspaceTrustPreferences } from '../common/workspace-trust-preferences';
 
 export default new ContainerModule(bind => {

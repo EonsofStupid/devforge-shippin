@@ -14,11 +14,11 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { injectable, inject } from '@theia/core/shared/inversify';
-import { URI } from '@theia/core';
-import { FileService } from '@theia/filesystem/lib/browser/file-service';
-import { WorkspaceService } from '@theia/workspace/lib/browser/workspace-service';
-import { ContextFileValidationService, FileValidationResult, FileValidationState } from '@theia/ai-chat/lib/browser/context-file-validation-service';
+import { injectable, inject } from '@ogun/core/shared/inversify';
+import { URI } from '@ogun/core';
+import { FileService } from '@ogun/filesystem/lib/browser/file-service';
+import { WorkspaceService } from '@ogun/workspace/lib/browser/workspace-service';
+import { ContextFileValidationService, FileValidationResult, FileValidationState } from '@ogun/ai-chat/lib/browser/context-file-validation-service';
 import { WorkspaceFunctionScope } from './workspace-functions';
 
 @injectable()

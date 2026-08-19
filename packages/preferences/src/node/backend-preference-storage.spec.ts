@@ -15,12 +15,12 @@
 // *****************************************************************************
 
 import { expect } from 'chai';
-import { URI } from '@theia/core';
-import { Disposable } from '@theia/core/lib/common/disposable';
-import { Event } from '@theia/core/lib/common/event';
-import { FileChange } from '@theia/filesystem/lib/common/files';
-import { DiskFileSystemProvider } from '@theia/filesystem/lib/node/disk-file-system-provider';
-import { EncodingService } from '@theia/core/lib/common/encoding-service';
+import { URI } from '@ogun/core';
+import { Disposable } from '@ogun/core/lib/common/disposable';
+import { Event } from '@ogun/core/lib/common/event';
+import { FileChange } from '@ogun/filesystem/lib/common/files';
+import { DiskFileSystemProvider } from '@ogun/filesystem/lib/node/disk-file-system-provider';
+import { EncodingService } from '@ogun/core/lib/common/encoding-service';
 import { JSONCEditor } from '../common/jsonc-editor';
 import { BackendPreferenceStorage } from './backend-preference-storage';
 

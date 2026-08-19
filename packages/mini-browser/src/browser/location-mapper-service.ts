@@ -14,11 +14,11 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { inject, injectable, named } from '@theia/core/shared/inversify';
-import URI from '@theia/core/lib/common/uri';
-import { Endpoint } from '@theia/core/lib/browser';
-import { MaybePromise, Prioritizeable } from '@theia/core/lib/common/types';
-import { ContributionProvider } from '@theia/core/lib/common/contribution-provider';
+import { inject, injectable, named } from '@ogun/core/shared/inversify';
+import URI from '@ogun/core/lib/common/uri';
+import { Endpoint } from '@ogun/core/lib/browser';
+import { MaybePromise, Prioritizeable } from '@ogun/core/lib/common/types';
+import { ContributionProvider } from '@ogun/core/lib/common/contribution-provider';
 import { MiniBrowserEnvironment } from './environment/mini-browser-environment';
 
 /**

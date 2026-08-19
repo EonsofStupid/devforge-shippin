@@ -16,8 +16,8 @@
 
 /* eslint-disable @typescript-eslint/no-explicit-any */
 
-import * as React from '@theia/core/shared/react';
-import { LabelProvider } from '@theia/core/lib/browser';
+import * as React from '@ogun/core/shared/react';
+import { LabelProvider } from '@ogun/core/lib/browser';
 import { DebugProtocol } from '@vscode/debugprotocol';
 import {
     Emitter,
@@ -30,11 +30,11 @@ import {
     ContributionProvider,
     CommandService,
     CancellationError
-} from '@theia/core/lib/common';
-import { inject, injectable, named, postConstruct, interfaces, LazyServiceIdentifier } from '@theia/core/shared/inversify';
-import { TerminalService } from '@theia/terminal/lib/browser/base/terminal-service';
-import { EditorManager } from '@theia/editor/lib/browser';
-import { CompositeTreeElement } from '@theia/core/lib/browser/source-tree';
+} from '@ogun/core/lib/common';
+import { inject, injectable, named, postConstruct, interfaces, LazyServiceIdentifier } from '@ogun/core/shared/inversify';
+import { TerminalService } from '@ogun/terminal/lib/browser/base/terminal-service';
+import { EditorManager } from '@ogun/editor/lib/browser';
+import { CompositeTreeElement } from '@ogun/core/lib/browser/source-tree';
 import { DebugSessionConnection, DebugRequestTypes, DebugEventTypes } from './debug-session-connection';
 import { DebugThread, StoppedDetails, DebugThreadData } from './model/debug-thread';
 import { DebugScope, DebugVariable } from './console/debug-console-items';
@@ -42,18 +42,18 @@ import { DebugStackFrame } from './model/debug-stack-frame';
 import { DebugSource } from './model/debug-source';
 import { DebugBreakpoint } from './model/debug-breakpoint';
 import debounce = require('p-debounce');
-import URI from '@theia/core/lib/common/uri';
+import URI from '@ogun/core/lib/common/uri';
 import { BreakpointManager } from './breakpoint/breakpoint-manager';
 import { DebugConfigurationSessionOptions, InternalDebugSessionOptions } from './debug-session-options';
 import { DebugConfiguration, DebugConsoleMode } from '../common/debug-common';
 import { SourceBreakpoint } from './breakpoint/breakpoint-marker';
-import { TerminalWidgetOptions, TerminalWidget } from '@theia/terminal/lib/browser/base/terminal-widget';
-import { FileService } from '@theia/filesystem/lib/browser/file-service';
+import { TerminalWidgetOptions, TerminalWidget } from '@ogun/terminal/lib/browser/base/terminal-widget';
+import { FileService } from '@ogun/filesystem/lib/browser/file-service';
 import { DebugContribution } from './debug-contribution';
-import { Deferred, waitForEvent } from '@theia/core/lib/common/promise-util';
-import { WorkspaceService } from '@theia/workspace/lib/browser';
-import { nls } from '@theia/core';
-import { TestService, TestServices } from '@theia/test/lib/browser/test-service';
+import { Deferred, waitForEvent } from '@ogun/core/lib/common/promise-util';
+import { WorkspaceService } from '@ogun/workspace/lib/browser';
+import { nls } from '@ogun/core';
+import { TestService, TestServices } from '@ogun/test/lib/browser/test-service';
 import { DebugSessionManager } from './debug-session-manager';
 
 import { DebugPreferences } from '../common/debug-preferences';

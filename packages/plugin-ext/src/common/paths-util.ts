@@ -42,7 +42,7 @@ SOFTWARE.
 ====
 */
 
-import { sep } from '@theia/core/lib/common/paths';
+import { sep } from '@ogun/core/lib/common/paths';
 
 const replaceRegex = new RegExp('//+', 'g');
 

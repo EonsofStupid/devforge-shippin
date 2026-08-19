@@ -14,11 +14,11 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { FrontendApplicationContribution } from '@theia/core/lib/browser';
-import { inject, injectable } from '@theia/core/shared/inversify';
-import { AGENT_DELEGATION_FUNCTION_ID, PromptService } from '@theia/ai-core';
+import { FrontendApplicationContribution } from '@ogun/core/lib/browser';
+import { inject, injectable } from '@ogun/core/shared/inversify';
+import { AGENT_DELEGATION_FUNCTION_ID, PromptService } from '@ogun/ai-core';
 import { GitHubChatAgentId } from './github-chat-agent';
-import { nls } from '@theia/core';
+import { nls } from '@ogun/core';
 
 @injectable()
 export class GitHubCapabilityContribution implements FrontendApplicationContribution {

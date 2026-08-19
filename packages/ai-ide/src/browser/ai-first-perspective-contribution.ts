@@ -14,13 +14,13 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { injectable } from '@theia/core/shared/inversify';
-import { nls } from '@theia/core';
-import { PerspectiveContribution, PerspectiveChromeOptions, PerspectiveService } from '@theia/core/lib/browser/perspective-service';
-import { ApplicationShell } from '@theia/core/lib/browser/shell/application-shell';
-import { EXPLORER_VIEW_CONTAINER_ID } from '@theia/navigator/lib/browser';
-import { SCM_VIEW_CONTAINER_ID } from '@theia/scm/lib/browser/scm-contribution';
-import { ChatViewWidget } from '@theia/ai-chat-ui/lib/browser/chat-view-widget';
+import { injectable } from '@ogun/core/shared/inversify';
+import { nls } from '@ogun/core';
+import { PerspectiveContribution, PerspectiveChromeOptions, PerspectiveService } from '@ogun/core/lib/browser/perspective-service';
+import { ApplicationShell } from '@ogun/core/lib/browser/shell/application-shell';
+import { EXPLORER_VIEW_CONTAINER_ID } from '@ogun/navigator/lib/browser';
+import { SCM_VIEW_CONTAINER_ID } from '@ogun/scm/lib/browser/scm-contribution';
+import { ChatViewWidget } from '@ogun/ai-chat-ui/lib/browser/chat-view-widget';
 import { AISessionsWidget } from './ai-sessions-widget';
 
 export const AI_FIRST_PERSPECTIVE_ID = 'ai-first';

@@ -15,8 +15,8 @@
 // *****************************************************************************
 
 import { ContainerModule, decorate, injectable } from 'inversify';
-import { ApplicationPackage } from '@theia/application-package';
-import { REQUEST_SERVICE_PATH } from '@theia/request';
+import { ApplicationPackage } from '@ogun/application-package';
+import { REQUEST_SERVICE_PATH } from '@ogun/request';
 import {
     bindRootContributionProvider, MessageService, MessageClient, ConnectionHandler, RpcConnectionHandler,
     CommandService, commandServicePath, messageServicePath, OSBackendProvider, OSBackendProviderPath,

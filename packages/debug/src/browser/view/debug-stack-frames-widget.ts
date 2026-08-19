@@ -14,15 +14,15 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { injectable, inject, postConstruct, interfaces, Container } from '@theia/core/shared/inversify';
-import { MenuPath } from '@theia/core';
-import { TreeNode, NodeProps, SelectableTreeNode } from '@theia/core/lib/browser';
-import { SourceTreeWidget, TreeElementNode } from '@theia/core/lib/browser/source-tree';
+import { injectable, inject, postConstruct, interfaces, Container } from '@ogun/core/shared/inversify';
+import { MenuPath } from '@ogun/core';
+import { TreeNode, NodeProps, SelectableTreeNode } from '@ogun/core/lib/browser';
+import { SourceTreeWidget, TreeElementNode } from '@ogun/core/lib/browser/source-tree';
 import { DebugStackFramesSource, LoadMoreStackFrames } from './debug-stack-frames-source';
 import { DebugStackFrame } from '../model/debug-stack-frame';
 import { DebugViewModel } from './debug-view-model';
 import { DebugCallStackItemTypeKey } from '../debug-call-stack-item-type-key';
-import { nls } from '@theia/core/lib/common/nls';
+import { nls } from '@ogun/core/lib/common/nls';
 
 @injectable()
 export class DebugStackFramesWidget extends SourceTreeWidget {

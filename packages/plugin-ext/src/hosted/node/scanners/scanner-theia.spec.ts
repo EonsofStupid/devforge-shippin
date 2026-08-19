@@ -22,8 +22,8 @@ import * as path from 'path';
 import * as fs from 'fs';
 import { AbstractPluginScanner, TheiaPluginScanner } from './scanner-theia';
 import { PluginPackage, PluginEntryPoint } from '../../../common/plugin-protocol';
-import { PreferenceSchema } from '@theia/core/lib/common/preferences/preference-schema';
-import URI from '@theia/core/lib/common/uri';
+import { PreferenceSchema } from '@ogun/core/lib/common/preferences/preference-schema';
+import URI from '@ogun/core/lib/common/uri';
 
 class TestPluginScanner extends AbstractPluginScanner {
     constructor() {

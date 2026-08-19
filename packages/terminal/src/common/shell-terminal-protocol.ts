@@ -14,10 +14,10 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { RpcProxy } from '@theia/core';
+import { RpcProxy } from '@ogun/core';
 import { IBaseTerminalServer, IBaseTerminalServerOptions } from './base-terminal-protocol';
-import { OS } from '@theia/core/lib/common/os';
-import { MarkdownString } from '@theia/core/lib/common/markdown-rendering/markdown-string';
+import { OS } from '@ogun/core/lib/common/os';
+import { MarkdownString } from '@ogun/core/lib/common/markdown-rendering/markdown-string';
 
 export const IShellTerminalServer = Symbol('IShellTerminalServer');
 

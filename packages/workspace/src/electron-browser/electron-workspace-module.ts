@@ -14,8 +14,8 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { ContainerModule } from '@theia/core/shared/inversify';
-import { FrontendApplicationContribution } from '@theia/core/lib/browser';
+import { ContainerModule } from '@ogun/core/shared/inversify';
+import { FrontendApplicationContribution } from '@ogun/core/lib/browser';
 import { ElectronWorkspaceContribution } from './electron-workspace-contribution';
 
 export default new ContainerModule(bind => {

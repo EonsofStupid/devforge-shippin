@@ -14,11 +14,11 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { nls, CommandRegistry, deepClone } from '@theia/core/lib/common';
-import { JsonSchemaContribution, JsonSchemaDataStore, JsonSchemaRegisterContext } from '@theia/core/lib/browser/json-schema-store';
-import { injectable, inject, postConstruct } from '@theia/core/shared/inversify';
-import URI from '@theia/core/lib/common/uri';
-import { IJSONSchema } from '@theia/core/lib/common/json-schema';
+import { nls, CommandRegistry, deepClone } from '@ogun/core/lib/common';
+import { JsonSchemaContribution, JsonSchemaDataStore, JsonSchemaRegisterContext } from '@ogun/core/lib/browser/json-schema-store';
+import { injectable, inject, postConstruct } from '@ogun/core/shared/inversify';
+import URI from '@ogun/core/lib/common/uri';
+import { IJSONSchema } from '@ogun/core/lib/common/json-schema';
 
 @injectable()
 export class KeybindingSchemaUpdater implements JsonSchemaContribution {

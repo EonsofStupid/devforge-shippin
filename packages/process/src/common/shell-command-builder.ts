@@ -21,7 +21,7 @@
 
 /* eslint-disable no-null/no-null */
 
-import { injectable } from '@theia/core/shared/inversify';
+import { injectable } from '@ogun/core/shared/inversify';
 import {
     createShellCommandLine, BashQuotingFunctions, PowershellQuotingFunctions, CmdQuotingFunctions, ShellQuoting, ShellQuotedString, escapeForShell, ShellQuotingFunctions
 } from '../common/shell-quoting';

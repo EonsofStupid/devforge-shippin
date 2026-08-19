@@ -19,12 +19,12 @@ import { CodeEditorWidget, ICodeEditorWidgetOptions } from '@theia/monaco-editor
 import { IInstantiationService } from '@theia/monaco-editor-core/esm/vs/platform/instantiation/common/instantiation';
 import { StandaloneServices } from '@theia/monaco-editor-core/esm/vs/editor/standalone/browser/standaloneServices';
 import { ServiceCollection } from '@theia/monaco-editor-core/esm/vs/platform/instantiation/common/serviceCollection';
-import { Disposable, DisposableCollection, Emitter, Event, TextDocumentContentChangeDelta, URI } from '@theia/core';
+import { Disposable, DisposableCollection, Emitter, Event, TextDocumentContentChangeDelta, URI } from '@ogun/core';
 import { MonacoEditorModel } from './monaco-editor-model';
-import { Dimension, EditorMouseEvent, MouseTarget, Position, TextDocumentChangeEvent } from '@theia/editor/lib/browser';
+import { Dimension, EditorMouseEvent, MouseTarget, Position, TextDocumentChangeEvent } from '@ogun/editor/lib/browser';
 import * as monaco from '@theia/monaco-editor-core';
-import { ElementExt } from '@theia/core/shared/@lumino/domutils';
-import { Selection } from '@theia/editor/lib/browser/editor';
+import { ElementExt } from '@ogun/core/shared/@lumino/domutils';
+import { Selection } from '@ogun/editor/lib/browser/editor';
 import { SelectionDirection } from '@theia/monaco-editor-core/esm/vs/editor/common/core/selection';
 import { ShowLightbulbIconMode } from '@theia/monaco-editor-core/esm/vs/editor/common/config/editorOptions';
 

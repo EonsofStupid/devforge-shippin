@@ -15,10 +15,10 @@
 // *****************************************************************************
 
 import { expect } from 'chai';
-import { Container } from '@theia/core/shared/inversify';
-import { Emitter } from '@theia/core';
-import { CommandRegistry, MenuModelRegistry } from '@theia/core/lib/common';
-import { ContributionProvider } from '@theia/core/lib/common/contribution-provider';
+import { Container } from '@ogun/core/shared/inversify';
+import { Emitter } from '@ogun/core';
+import { CommandRegistry, MenuModelRegistry } from '@ogun/core/lib/common';
+import { ContributionProvider } from '@ogun/core/lib/common/contribution-provider';
 import { ExtensionsSourceContribution } from './extensions-source-contribution';
 import { VSXExtensionsSearchModel } from './vsx-extensions-search-model';
 import { VSXExtensionsFilterContribution } from './vsx-extensions-filter-contribution';

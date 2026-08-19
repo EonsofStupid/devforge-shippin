@@ -14,9 +14,9 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { generateUuid } from '@theia/core/lib/common/uuid';
-import { RPCProtocol } from '@theia/plugin-ext/lib/common/rpc-protocol';
-import { inject, injectable } from '@theia/core/shared/inversify';
+import { generateUuid } from '@ogun/core/lib/common/uuid';
+import { RPCProtocol } from '@ogun/plugin-ext/lib/common/rpc-protocol';
+import { inject, injectable } from '@ogun/core/shared/inversify';
 import { GreetingKind, GreeterData, GreetingExt, GreetingMain, MAIN_RPC_CONTEXT } from '../common/plugin-api-rpc';
 
 const GREETINGS = {

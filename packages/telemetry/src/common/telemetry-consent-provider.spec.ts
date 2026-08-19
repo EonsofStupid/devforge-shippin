@@ -15,8 +15,8 @@
 // *****************************************************************************
 
 import { expect } from 'chai';
-import { Emitter } from '@theia/core/lib/common';
-import { Container } from '@theia/core/shared/inversify';
+import { Emitter } from '@ogun/core/lib/common';
+import { Container } from '@ogun/core/shared/inversify';
 import {
     PreferenceTelemetryConsentProvider, TelemetryConsentProvider, isKindAllowedByLevel
 } from './telemetry-consent-provider';

@@ -14,12 +14,12 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { injectable, inject } from '@theia/core/shared/inversify';
-import { MenuPath } from '@theia/core/lib/common/menu';
-import { EDITOR_CONTEXT_MENU } from '@theia/editor/lib/browser';
-import { Anchor, ContextMenuAccess, ContextMenuRenderer, Coordinate } from '@theia/core/lib/browser';
-import { Menu } from '@theia/core/shared/@lumino/widgets';
-import { CommandRegistry } from '@theia/core/shared/@lumino/commands';
+import { injectable, inject } from '@ogun/core/shared/inversify';
+import { MenuPath } from '@ogun/core/lib/common/menu';
+import { EDITOR_CONTEXT_MENU } from '@ogun/editor/lib/browser';
+import { Anchor, ContextMenuAccess, ContextMenuRenderer, Coordinate } from '@ogun/core/lib/browser';
+import { Menu } from '@ogun/core/shared/@lumino/widgets';
+import { CommandRegistry } from '@ogun/core/shared/@lumino/commands';
 import { IContextMenuService } from '@theia/monaco-editor-core/esm/vs/platform/contextview/browser/contextView';
 import { IContextMenuDelegate } from '@theia/monaco-editor-core/esm/vs/base/browser/contextmenu';
 import { IAction, Separator, SubmenuAction } from '@theia/monaco-editor-core/esm/vs/base/common/actions';

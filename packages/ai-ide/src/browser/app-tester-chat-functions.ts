@@ -13,9 +13,9 @@
 //
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
-import { type ToolProvider, type ToolRequest } from '@theia/ai-core';
-import { isLocalMCPServerDescription, MCPServerManager } from '@theia/ai-mcp/lib/common';
-import { inject, injectable } from '@theia/core/shared/inversify';
+import { type ToolProvider, type ToolRequest } from '@ogun/ai-core';
+import { isLocalMCPServerDescription, MCPServerManager } from '@ogun/ai-mcp/lib/common';
+import { inject, injectable } from '@ogun/core/shared/inversify';
 import { CLOSE_BROWSER_FUNCTION_ID, IS_BROWSER_RUNNING_FUNCTION_ID, LAUNCH_BROWSER_FUNCTION_ID, QUERY_DOM_FUNCTION_ID } from '../common/app-tester-chat-functions';
 import { BrowserAutomation } from '../common/browser-automation-protocol';
 

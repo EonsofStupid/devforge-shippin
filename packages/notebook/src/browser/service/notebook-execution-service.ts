@@ -18,13 +18,13 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { inject, injectable, named } from '@theia/core/shared/inversify';
+import { inject, injectable, named } from '@ogun/core/shared/inversify';
 import { CellExecution, NotebookExecutionStateService } from '../service/notebook-execution-state-service';
 import { CellKind, NotebookCellExecutionState } from '../../common';
 import { NotebookCellModel } from '../view-model/notebook-cell-model';
 import { NotebookModel } from '../view-model/notebook-model';
 import { NotebookKernelService } from './notebook-kernel-service';
-import { CommandService, Disposable, ILogger } from '@theia/core';
+import { CommandService, Disposable, ILogger } from '@ogun/core';
 import { NotebookKernelQuickPickService } from './notebook-kernel-quick-pick-service';
 import { NotebookKernelHistoryService } from './notebook-kernel-history-service';
 

@@ -1,5 +1,5 @@
 {
-  "name": "@theia/toolbar",
+  "name": "@ogun/toolbar",
   "version": "1.74.0",
   "description": "Theia - Toolbar",
   "keywords": [
@@ -28,15 +28,15 @@
     "update:icons": "node ./update-icons.js"
   },
   "dependencies": {
-    "@theia/core": "1.74.0",
-    "@theia/editor": "1.74.0",
-    "@theia/file-search": "1.74.0",
-    "@theia/filesystem": "1.74.0",
-    "@theia/monaco": "1.74.0",
+    "@ogun/core": "1.74.0",
+    "@ogun/editor": "1.74.0",
+    "@ogun/file-search": "1.74.0",
+    "@ogun/filesystem": "1.74.0",
+    "@ogun/monaco": "1.74.0",
     "@theia/monaco-editor-core": "1.108.201",
-    "@theia/search-in-workspace": "1.74.0",
-    "@theia/userstorage": "1.74.0",
-    "@theia/workspace": "1.74.0",
+    "@ogun/search-in-workspace": "1.74.0",
+    "@ogun/userstorage": "1.74.0",
+    "@ogun/workspace": "1.74.0",
     "ajv": "^6.15.0",
     "jsonc-parser": "^3.3.1",
     "perfect-scrollbar": "1.5.5",

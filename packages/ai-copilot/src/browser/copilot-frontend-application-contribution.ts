@@ -14,13 +14,13 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { inject, injectable } from '@theia/core/shared/inversify';
-import { CommandService, nls, PreferenceService } from '@theia/core';
-import { FrontendApplicationContribution } from '@theia/core/lib/browser';
-import { MessageService } from '@theia/core/lib/common/message-service';
+import { inject, injectable } from '@ogun/core/shared/inversify';
+import { CommandService, nls, PreferenceService } from '@ogun/core';
+import { FrontendApplicationContribution } from '@ogun/core/lib/browser';
+import { MessageService } from '@ogun/core/lib/common/message-service';
 import { CopilotAuthService, CopilotLanguageModelsManager, CopilotModelDescription, COPILOT_PROVIDER_ID } from '../common';
 import { COPILOT_ENABLED_PREF, COPILOT_MODEL_OVERRIDES_PREF, COPILOT_ENTERPRISE_URL_PREF } from '../common/copilot-preferences';
-import { AICorePreferences, PREFERENCE_NAME_MAX_RETRIES } from '@theia/ai-core/lib/common/ai-core-preferences';
+import { AICorePreferences, PREFERENCE_NAME_MAX_RETRIES } from '@ogun/ai-core/lib/common/ai-core-preferences';
 import { CopilotCommands } from './copilot-command-contribution';
 
 @injectable()

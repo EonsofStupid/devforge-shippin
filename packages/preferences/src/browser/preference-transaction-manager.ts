@@ -14,16 +14,16 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { CancellationError, Listener, ListenerList, MaybePromise, MessageService, nls, ILogger } from '@theia/core';
-import { Deferred } from '@theia/core/lib/common/promise-util';
-import { inject, injectable, interfaces, postConstruct, named } from '@theia/core/shared/inversify';
-import { PreferenceScope } from '@theia/core/lib/common/preferences/preference-scope';
-import URI from '@theia/core/lib/common/uri';
-import { MonacoEditorModel } from '@theia/monaco/lib/browser/monaco-editor-model';
+import { CancellationError, Listener, ListenerList, MaybePromise, MessageService, nls, ILogger } from '@ogun/core';
+import { Deferred } from '@ogun/core/lib/common/promise-util';
+import { inject, injectable, interfaces, postConstruct, named } from '@ogun/core/shared/inversify';
+import { PreferenceScope } from '@ogun/core/lib/common/preferences/preference-scope';
+import URI from '@ogun/core/lib/common/uri';
+import { MonacoEditorModel } from '@ogun/monaco/lib/browser/monaco-editor-model';
 import { Mutex, MutexInterface } from 'async-mutex';
-import { MonacoTextModelService } from '@theia/monaco/lib/browser/monaco-text-model-service';
+import { MonacoTextModelService } from '@ogun/monaco/lib/browser/monaco-text-model-service';
 import { MonacoJSONCEditor } from './monaco-jsonc-editor';
-import { EditorManager } from '@theia/editor/lib/browser/editor-manager';
+import { EditorManager } from '@ogun/editor/lib/browser/editor-manager';
 import { IReference } from '@theia/monaco-editor-core/esm/vs/base/common/lifecycle';
 
 @injectable()
@@ -219,7 +219,7 @@ export class PreferenceTransaction extends Transaction<[string, string[], unknow
         const saveAndRetry = nls.localizeByDefault('Save and Retry');
         const open = nls.localizeByDefault('Open File');
         const msg = await this.messageService.error(
-            // eslint-disable-next-line @theia/localization-check
+            // eslint-disable-next-line @ogun/localization-check
             nls.localizeByDefault('Unable to write into {0} settings because the file has unsaved changes. Please save the {0} settings file first and then try again.',
                 nls.localizeByDefault(PreferenceScope[this.context.getScope()].toLocaleLowerCase())
             ),

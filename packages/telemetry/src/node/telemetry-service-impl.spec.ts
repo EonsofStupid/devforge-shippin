@@ -15,9 +15,9 @@
 // *****************************************************************************
 
 import { expect } from 'chai';
-import { ContributionProvider, Emitter, ILogger } from '@theia/core/lib/common';
+import { ContributionProvider, Emitter, ILogger } from '@ogun/core/lib/common';
 import * as sinon from 'sinon';
-import { Container } from '@theia/core/shared/inversify';
+import { Container } from '@ogun/core/shared/inversify';
 import { TelemetryConsentProvider } from '../common/telemetry-consent-provider';
 import { TELEMETRY_FILTERS, TELEMETRY_LEVEL, TelemetryPreferences } from '../common/telemetry-preferences';
 import { TelemetryEvent } from '../common/telemetry-protocol';

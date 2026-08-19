@@ -15,8 +15,8 @@
 // *****************************************************************************
 
 import { expect } from 'chai';
-import { OS } from '@theia/core';
-import { RemotePlatform } from '@theia/core/lib/node/remote/remote-cli-contribution';
+import { OS } from '@ogun/core';
+import { RemotePlatform } from '@ogun/core/lib/node/remote/remote-cli-contribution';
 import { AppNativeDependencyContribution } from './app-native-dependency-contribution';
 
 class TestableAppNativeDependencyContribution extends AppNativeDependencyContribution {

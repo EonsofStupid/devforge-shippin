@@ -12,11 +12,11 @@
 
 ## Description
 
-The `@theia/bulk-edit` extension contributes a `Refactor Preview` widget to the application that displays WorkspaceEdits to end-users.
+The `@ogun/bulk-edit` extension contributes a `Refactor Preview` widget to the application that displays WorkspaceEdits to end-users.
 
 ## Additional Information
 
-- [API documentation for `@theia/bulk-edit`](https://eclipse-theia.github.io/theia/docs/next/modules/_theia_bulk-edit.html)
+- [API documentation for `@ogun/bulk-edit`](https://eclipse-theia.github.io/theia/docs/next/modules/_theia_bulk-edit.html)
 - [Theia - GitHub](https://github.com/eclipse-theia/theia)
 - [Theia - Website](https://theia-ide.org/)
 

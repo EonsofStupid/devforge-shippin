@@ -23,12 +23,12 @@
 /* eslint-disable @typescript-eslint/tslint/config */
 /* eslint-disable @typescript-eslint/no-explicit-any */
 
-import { URI } from '@theia/core/shared/vscode-uri';
-import { interfaces } from '@theia/core/shared/inversify';
-import CoreURI from '@theia/core/lib/common/uri';
-import { BinaryBuffer } from '@theia/core/lib/common/buffer';
-import { Disposable, DisposableCollection } from '@theia/core/lib/common/disposable';
-import { Event, Emitter } from '@theia/core/lib/common/event';
+import { URI } from '@ogun/core/shared/vscode-uri';
+import { interfaces } from '@ogun/core/shared/inversify';
+import CoreURI from '@ogun/core/lib/common/uri';
+import { BinaryBuffer } from '@ogun/core/lib/common/buffer';
+import { Disposable, DisposableCollection } from '@ogun/core/lib/common/disposable';
+import { Event, Emitter } from '@ogun/core/lib/common/event';
 import { MAIN_RPC_CONTEXT, FileSystemMain, FileSystemExt, IFileChangeDto } from '../../common/plugin-api-rpc';
 import { RPCProtocol } from '../../common/rpc-protocol';
 import { UriComponents } from '../../common/uri-components';
@@ -36,8 +36,8 @@ import {
     FileSystemProviderCapabilities, Stat, FileType, FileSystemProviderErrorCode, FileOverwriteOptions, FileDeleteOptions, FileOpenOptions, FileWriteOptions, WatchOptions,
     FileSystemProviderWithFileReadWriteCapability, FileSystemProviderWithOpenReadWriteCloseCapability, FileSystemProviderWithFileFolderCopyCapability,
     FileStat, FileChange, FileOperationError, FileOperationResult, ReadOnlyMessageFileSystemProvider
-} from '@theia/filesystem/lib/common/files';
-import { FileService } from '@theia/filesystem/lib/browser/file-service';
+} from '@ogun/filesystem/lib/common/files';
+import { FileService } from '@ogun/filesystem/lib/browser/file-service';
 import { MarkdownString } from '../../common/plugin-api-rpc-model';
 
 type IDisposable = Disposable;

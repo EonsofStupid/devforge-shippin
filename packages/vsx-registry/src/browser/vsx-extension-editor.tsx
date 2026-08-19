@@ -14,13 +14,13 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import * as React from '@theia/core/shared/react';
-import { inject, injectable, postConstruct } from '@theia/core/shared/inversify';
-import { ReactWidget, Message, Widget, codicon } from '@theia/core/lib/browser';
+import * as React from '@ogun/core/shared/react';
+import { inject, injectable, postConstruct } from '@ogun/core/shared/inversify';
+import { ReactWidget, Message, Widget, codicon } from '@ogun/core/lib/browser';
 import { VSXExtension, VSXExtensionEditorComponent } from './vsx-extension';
 import { VSXExtensionsModel } from './vsx-extensions-model';
-import { Deferred } from '@theia/core/lib/common/promise-util';
-import { nls } from '@theia/core/lib/common/nls';
+import { Deferred } from '@ogun/core/lib/common/promise-util';
+import { nls } from '@ogun/core/lib/common/nls';
 
 @injectable()
 export class VSXExtensionEditor extends ReactWidget {

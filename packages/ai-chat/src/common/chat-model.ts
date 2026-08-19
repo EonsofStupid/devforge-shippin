@@ -35,10 +35,10 @@ import {
     ToolRequest,
     ToolResultMessage,
     ToolUseMessage
-} from '@theia/ai-core';
-import { ArrayUtils, CancellationToken, CancellationTokenSource, Command, Disposable, DisposableCollection, Emitter, Event, generateUuid, URI } from '@theia/core';
-import { MarkdownString, MarkdownStringImpl } from '@theia/core/lib/common/markdown-rendering';
-import { Position } from '@theia/core/shared/vscode-languageserver-protocol';
+} from '@ogun/ai-core';
+import { ArrayUtils, CancellationToken, CancellationTokenSource, Command, Disposable, DisposableCollection, Emitter, Event, generateUuid, URI } from '@ogun/core';
+import { MarkdownString, MarkdownStringImpl } from '@ogun/core/lib/common/markdown-rendering';
+import { Position } from '@ogun/core/shared/vscode-languageserver-protocol';
 import { ChangeSet, ChangeSetElement, ChangeSetImpl, ChatUpdateChangeSetEvent } from './change-set';
 import { ChatAgentLocation } from './chat-agents';
 import {
@@ -61,7 +61,7 @@ import {
     ParsedChatRequestAgentPart,
     ParsedChatRequestPart
 } from './parsed-chat-request';
-import debounce = require('@theia/core/shared/lodash.debounce');
+import debounce = require('@ogun/core/shared/lodash.debounce');
 export { ChangeSet, ChangeSetElement, ChangeSetImpl };
 
 /**********************

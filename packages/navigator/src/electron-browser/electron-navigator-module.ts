@@ -14,9 +14,9 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { CommandContribution, MenuContribution } from '@theia/core';
-import { ContainerModule } from '@theia/core/shared/inversify';
-import { KeybindingContribution } from '@theia/core/lib/browser';
+import { CommandContribution, MenuContribution } from '@ogun/core';
+import { ContainerModule } from '@ogun/core/shared/inversify';
+import { KeybindingContribution } from '@ogun/core/lib/browser';
 import { ElectronNavigatorMenuContribution } from './electron-navigator-menu-contribution';
 
 export default new ContainerModule(bind => {

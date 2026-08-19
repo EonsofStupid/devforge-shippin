@@ -16,14 +16,14 @@
 
 import { PluginDebugAdapterCreator } from '../../debug/plugin-debug-adapter-creator';
 import * as path from 'path';
-import * as theia from '@theia/plugin';
+import * as theia from '@ogun/plugin';
 import { PlatformSpecificAdapterContribution, PluginPackageDebuggersContribution } from '../../../common';
-import { isWindows, isOSX } from '@theia/core/lib/common/os';
+import { isWindows, isOSX } from '@ogun/core/lib/common/os';
 import * as net from 'net';
 import { ChildProcess, spawn, fork, ForkOptions } from 'child_process';
-import { DebugAdapter } from '@theia/debug/lib/common/debug-model';
+import { DebugAdapter } from '@ogun/debug/lib/common/debug-model';
 import { DebugAdapterExecutable, DebugAdapterInlineImplementation, DebugAdapterNamedPipeServer, DebugAdapterServer } from '../../types-impl';
-import { ProcessDebugAdapter, SocketDebugAdapter } from '@theia/debug/lib/node/stream-debug-adapter';
+import { ProcessDebugAdapter, SocketDebugAdapter } from '@ogun/debug/lib/node/stream-debug-adapter';
 const isElectron = require('is-electron');
 
 export class NodeDebugAdapterCreator extends PluginDebugAdapterCreator {

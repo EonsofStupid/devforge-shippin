@@ -14,12 +14,12 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { injectable, inject } from '@theia/core/shared/inversify';
-import URI from '@theia/core/lib/common/uri';
-import { LabelProviderContribution, LabelProvider, URIIconReference } from '@theia/core/lib/browser/label-provider';
-import { TreeLabelProvider } from '@theia/core/lib/browser/tree/tree-label-provider';
+import { injectable, inject } from '@ogun/core/shared/inversify';
+import URI from '@ogun/core/lib/common/uri';
+import { LabelProviderContribution, LabelProvider, URIIconReference } from '@ogun/core/lib/browser/label-provider';
+import { TreeLabelProvider } from '@ogun/core/lib/browser/tree/tree-label-provider';
 import { TreeViewNode } from './tree-view-widget';
-import { TreeNode } from '@theia/core/lib/browser/tree/tree';
+import { TreeNode } from '@ogun/core/lib/browser/tree/tree';
 import { ThemeIcon } from '@theia/monaco-editor-core/esm/vs/base/common/themables';
 
 @injectable()

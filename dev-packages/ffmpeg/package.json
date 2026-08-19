@@ -1,5 +1,5 @@
 {
-  "name": "@theia/ffmpeg",
+  "name": "@ogun/ffmpeg",
   "version": "1.74.0",
   "description": "Theia FFMPEG reader utility.",
   "publishConfig": {

@@ -14,16 +14,16 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { ContainerModule } from '@theia/core/shared/inversify';
+import { ContainerModule } from '@ogun/core/shared/inversify';
 import {
     PluginDeployerFileHandler, PluginDeployerDirectoryHandler, PluginScanner, PluginDeployerParticipant, PluginDeployerResolver
-} from '@theia/plugin-ext';
+} from '@ogun/plugin-ext';
 import { PluginVsCodeFileHandler } from './plugin-vscode-file-handler';
 import { PluginVsCodeDirectoryHandler } from './plugin-vscode-directory-handler';
 import { VsCodePluginScanner } from './scanner-vscode';
 import { PluginVsCodeCliContribution } from './plugin-vscode-cli-contribution';
-import { CliContribution } from '@theia/core/lib/node';
-import { PluginHostEnvironmentVariable } from '@theia/plugin-ext/lib/common';
+import { CliContribution } from '@ogun/core/lib/node';
+import { PluginHostEnvironmentVariable } from '@ogun/plugin-ext/lib/common';
 import { PluginVSCodeEnvironment } from '../common/plugin-vscode-environment';
 import { PluginVSCodeDeployerParticipant } from './plugin-vscode-deployer-participant';
 import { LocalVSIXFilePluginDeployerResolver } from './local-vsix-file-plugin-deployer-resolver';

@@ -21,9 +21,9 @@ import {
 import { ElectronAcceleratorLabelProvider, UILabelProvider, UserSettingsLabelProvider } from '@theia/monaco-editor-core/esm/vs/base/common/keybindingLabels';
 import { USLayoutResolvedKeybinding } from '@theia/monaco-editor-core/esm/vs/platform/keybinding/common/usLayoutResolvedKeybinding';
 import * as MonacoPlatform from '@theia/monaco-editor-core/esm/vs/base/common/platform';
-import { KeybindingRegistry } from '@theia/core/lib/browser/keybinding';
-import { KeyCode, KeySequence, Keystroke, Key, KeyModifier } from '@theia/core/lib/browser/keys';
-import { isOSX } from '@theia/core/lib/common/os';
+import { KeybindingRegistry } from '@ogun/core/lib/browser/keybinding';
+import { KeyCode, KeySequence, Keystroke, Key, KeyModifier } from '@ogun/core/lib/browser/keys';
+import { isOSX } from '@ogun/core/lib/common/os';
 import { KEY_CODE_MAP } from './monaco-keycode-map';
 
 export class MonacoResolvedKeybinding extends ResolvedKeybinding {

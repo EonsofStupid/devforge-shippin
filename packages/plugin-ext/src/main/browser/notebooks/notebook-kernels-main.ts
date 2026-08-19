@@ -18,17 +18,17 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { CancellationToken, Disposable, Emitter, Event, URI } from '@theia/core';
-import { UriComponents } from '@theia/core/lib/common/uri';
-import { LanguageService } from '@theia/core/lib/browser/language-service';
+import { CancellationToken, Disposable, Emitter, Event, URI } from '@ogun/core';
+import { UriComponents } from '@ogun/core/lib/common/uri';
+import { LanguageService } from '@ogun/core/lib/browser/language-service';
 import { CellExecuteUpdateDto, CellExecutionCompleteDto, MAIN_RPC_CONTEXT, NotebookKernelDto, NotebookKernelsExt, NotebookKernelsMain } from '../../../common';
 import { RPCProtocol } from '../../../common/rpc-protocol';
 import {
     CellExecution, NotebookEditorWidgetService, NotebookExecutionStateService,
     NotebookKernelChangeEvent, NotebookKernelService, NotebookService, NotebookKernel as NotebookKernelServiceKernel
-} from '@theia/notebook/lib/browser';
-import { interfaces } from '@theia/core/shared/inversify';
-import { NotebookKernelSourceAction } from '@theia/notebook/lib/common';
+} from '@ogun/notebook/lib/browser';
+import { interfaces } from '@ogun/core/shared/inversify';
+import { NotebookKernelSourceAction } from '@ogun/notebook/lib/common';
 import { NotebookDto } from './notebook-dto';
 
 abstract class NotebookKernel implements NotebookKernelServiceKernel {

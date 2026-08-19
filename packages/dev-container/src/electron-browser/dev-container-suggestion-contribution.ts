@@ -14,13 +14,13 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { inject, injectable } from '@theia/core/shared/inversify';
-import { CommandService, MessageService, nls } from '@theia/core';
-import { FrontendApplicationContribution, LocalStorageService } from '@theia/core/lib/browser';
-import { WorkspaceService } from '@theia/workspace/lib/browser/workspace-service';
+import { inject, injectable } from '@ogun/core/shared/inversify';
+import { CommandService, MessageService, nls } from '@ogun/core';
+import { FrontendApplicationContribution, LocalStorageService } from '@ogun/core/lib/browser';
+import { WorkspaceService } from '@ogun/workspace/lib/browser/workspace-service';
 import { RemoteContainerConnectionProvider } from '../electron-common/remote-container-connection-provider';
 import { RemoteContainerCommands } from './container-connection-contribution';
-import { RemoteStatusService } from '@theia/remote/lib/electron-common/remote-status-service';
+import { RemoteStatusService } from '@ogun/remote/lib/electron-common/remote-status-service';
 
 const DONT_SHOW_AGAIN_KEY = 'dev-container.suggestion.dontShowAgain';
 

@@ -13,22 +13,22 @@
 //
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
-import { CommandService, ContributionProvider, deepClone, Emitter, Event, MessageService, URI } from '@theia/core';
+import { CommandService, ContributionProvider, deepClone, Emitter, Event, MessageService, URI } from '@ogun/core';
 import {
     ChatRequest, ChatRequestModel, ChatService, ChatSession, ChatSessionSettings,
     formatProviderError, formattedProviderErrorToShortString, isActiveSessionChangedEvent, MutableChatModel
-} from '@theia/ai-chat';
-import { GenericCapabilitySelections, AIVariableResolutionRequest } from '@theia/ai-core';
-import { ApplicationShell, BaseWidget, codicon, ExtractableWidget, Message, PanelLayout, StatefulWidget } from '@theia/core/lib/browser';
-import { nls } from '@theia/core/lib/common/nls';
-import { inject, injectable, named, postConstruct } from '@theia/core/shared/inversify';
+} from '@ogun/ai-chat';
+import { GenericCapabilitySelections, AIVariableResolutionRequest } from '@ogun/ai-core';
+import { ApplicationShell, BaseWidget, codicon, ExtractableWidget, Message, PanelLayout, StatefulWidget } from '@ogun/core/lib/browser';
+import { nls } from '@ogun/core/lib/common/nls';
+import { inject, injectable, named, postConstruct } from '@ogun/core/shared/inversify';
 import { AIChatInputWidget } from './chat-input-widget';
 import { ChatBannerWidget } from './chat-banner-widget';
 import { ChatViewTreeWidget, ChatWelcomeMessageProvider } from './chat-tree-view/chat-view-tree-widget';
-import { AIActivationService } from '@theia/ai-core/lib/browser/ai-activation-service';
-import { ProgressBarFactory } from '@theia/core/lib/browser/progress-bar-factory';
-import { FrontendVariableService } from '@theia/ai-core/lib/browser';
-import { FrontendLanguageModelRegistry } from '@theia/ai-core/lib/common';
+import { AIActivationService } from '@ogun/ai-core/lib/browser/ai-activation-service';
+import { ProgressBarFactory } from '@ogun/core/lib/browser/progress-bar-factory';
+import { FrontendVariableService } from '@ogun/ai-core/lib/browser';
+import { FrontendLanguageModelRegistry } from '@ogun/ai-core/lib/common';
 
 export namespace ChatViewWidget {
     export interface State {

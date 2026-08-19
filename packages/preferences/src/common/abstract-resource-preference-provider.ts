@@ -18,17 +18,17 @@
 /* eslint-disable no-null/no-null */
 
 import * as jsoncparser from 'jsonc-parser';
-import { inject, injectable, postConstruct } from '@theia/core/shared/inversify';
-import { Disposable } from '@theia/core/lib/common/disposable';
+import { inject, injectable, postConstruct } from '@ogun/core/shared/inversify';
+import { Disposable } from '@ogun/core/lib/common/disposable';
 import {
     PreferenceProviderImpl, PreferenceScope, PreferenceProviderDataChange, PreferenceSchemaService,
     PreferenceConfigurations, PreferenceUtils, PreferenceLanguageOverrideService,
     Listener
-} from '@theia/core/lib/common';
-import URI from '@theia/core/lib/common/uri';
-import { Deferred } from '@theia/core/lib/common/promise-util';
-import { Emitter, Event } from '@theia/core';
-import { JSONValue } from '@theia/core/shared/@lumino/coreutils';
+} from '@ogun/core/lib/common';
+import URI from '@ogun/core/lib/common/uri';
+import { Deferred } from '@ogun/core/lib/common/promise-util';
+import { Emitter, Event } from '@ogun/core';
+import { JSONValue } from '@ogun/core/shared/@lumino/coreutils';
 export interface FileContentStatus {
     content: string;
     fileOK: boolean

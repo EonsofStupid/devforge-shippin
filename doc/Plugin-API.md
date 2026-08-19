@@ -43,7 +43,7 @@ Since VS Code and Theia APIs are largely compatible, the initialization passes o
 The plugin API is declared in the [plugin](https://github.com/eclipse-theia/theia/tree/master/packages/plugin) package in file [theia.d.ts](https://github.com/eclipse-theia/theia/blob/master/packages/plugin/src/theia.d.ts).
 
 The implementation of the API defined in the plugin package is passed to a plugin by manipulating the module loading mechanism in plugin containers to construct an API module object.
-This enables Theia plugins to import the API via the `@theia/plugin` module in node or via the `theia` namespace in web workers.
+This enables Theia plugins to import the API via the `@ogun/plugin` module in node or via the `theia` namespace in web workers.
 For VS Code plugins, the same API is available via the `vscode` namespace as expected by them.
 
 Plugin containers are node processes (see [plugin-ext/src/hosted/node/plugin-host.ts](https://github.com/eclipse-theia/theia/blob/master/packages/plugin-ext/src/hosted/node/plugin-host.ts))and web workers ([plugin-ext/src/hosted/browser/worker/worker-main.ts](https://github.com/eclipse-theia/theia/blob/master/packages/plugin-ext/src/hosted/browser/worker/worker-main.ts)).

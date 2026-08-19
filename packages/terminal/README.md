@@ -12,11 +12,11 @@
 
 ## Description
 
-The `@theia/terminal` extension contributes the ability to spawn integrated terminals in the application which can be used in a variety of different scenarios.
+The `@ogun/terminal` extension contributes the ability to spawn integrated terminals in the application which can be used in a variety of different scenarios.
 
 ## Additional Information
 
-- [API documentation for `@theia/terminal`](https://eclipse-theia.github.io/theia/docs/next/modules/_theia_terminal.html)
+- [API documentation for `@ogun/terminal`](https://eclipse-theia.github.io/theia/docs/next/modules/_theia_terminal.html)
 - [Theia - GitHub](https://github.com/eclipse-theia/theia)
 - [Theia - Website](https://theia-ide.org/)
 

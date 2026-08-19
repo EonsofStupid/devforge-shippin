@@ -14,12 +14,12 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { inject, injectable, postConstruct } from '@theia/core/shared/inversify';
-import { Message } from '@theia/core/shared/@lumino/messaging';
-import URI from '@theia/core/lib/common/uri';
-import { NavigatableWidget, StatefulWidget } from '@theia/core/lib/browser';
-import { DisposableCollection } from '@theia/core/lib/common/disposable';
-import { BaseWidget, codicon, PanelLayout } from '@theia/core/lib/browser/widgets/widget';
+import { inject, injectable, postConstruct } from '@ogun/core/shared/inversify';
+import { Message } from '@ogun/core/shared/@lumino/messaging';
+import URI from '@ogun/core/lib/common/uri';
+import { NavigatableWidget, StatefulWidget } from '@ogun/core/lib/browser';
+import { DisposableCollection } from '@ogun/core/lib/common/disposable';
+import { BaseWidget, codicon, PanelLayout } from '@ogun/core/lib/browser/widgets/widget';
 import { MiniBrowserProps, MiniBrowserContentFactory } from './mini-browser-content';
 
 export { MiniBrowserProps };

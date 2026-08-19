@@ -19,9 +19,9 @@
  *--------------------------------------------------------------------------------------------*/
 // copied and modified from https://github.com/microsoft/vscode/blob/1.96.3/src/vs/workbench/contrib/mergeEditor/browser/model/modifiedBaseRange.ts
 
-import { ArrayUtils } from '@theia/core';
-import { uinteger, Position, Range } from '@theia/core/shared/vscode-languageserver-protocol';
-import { TextEditorDocument } from '@theia/editor/lib/browser/editor';
+import { ArrayUtils } from '@ogun/core';
+import { uinteger, Position, Range } from '@ogun/core/shared/vscode-languageserver-protocol';
+import { TextEditorDocument } from '@ogun/editor/lib/browser/editor';
 import { DetailedLineRangeMapping, MappingAlignment } from './range-mapping';
 import { LineRange } from './line-range';
 import { LineRangeEdit, RangeEdit } from './range-editing';

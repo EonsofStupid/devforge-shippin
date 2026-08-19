@@ -14,23 +14,23 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { CancellationToken, DisposableCollection, Emitter, URI } from '@theia/core';
-import { BinaryBuffer } from '@theia/core/lib/common/buffer';
-import { CellEditType, NotebookCellModelResource, NotebookData, NotebookModelResource, TransientOptions } from '@theia/notebook/lib/common';
-import { NotebookService, NotebookWorkspaceEdit } from '@theia/notebook/lib/browser';
-import { Disposable } from '@theia/plugin';
+import { CancellationToken, DisposableCollection, Emitter, URI } from '@ogun/core';
+import { BinaryBuffer } from '@ogun/core/lib/common/buffer';
+import { CellEditType, NotebookCellModelResource, NotebookData, NotebookModelResource, TransientOptions } from '@ogun/notebook/lib/common';
+import { NotebookService, NotebookWorkspaceEdit } from '@ogun/notebook/lib/browser';
+import { Disposable } from '@ogun/plugin';
 import { CommandRegistryMain, MAIN_RPC_CONTEXT, NotebooksExt, NotebooksMain, WorkspaceEditDto, WorkspaceNotebookCellEditDto } from '../../../common';
 import { RPCProtocol } from '../../../common/rpc-protocol';
 import { NotebookDto } from './notebook-dto';
 import { HostedPluginSupport } from '../../../hosted/browser/hosted-plugin';
-import { NotebookModel } from '@theia/notebook/lib/browser/view-model/notebook-model';
-import { NotebookCellModel } from '@theia/notebook/lib/browser/view-model/notebook-cell-model';
-import { interfaces } from '@theia/core/shared/inversify';
+import { NotebookModel } from '@ogun/notebook/lib/browser/view-model/notebook-model';
+import { NotebookCellModel } from '@ogun/notebook/lib/browser/view-model/notebook-cell-model';
+import { interfaces } from '@ogun/core/shared/inversify';
 import {
     NotebookCellStatusBarItemProvider,
     NotebookCellStatusBarItemList,
     NotebookCellStatusBarService
-} from '@theia/notebook/lib/browser/service/notebook-cell-status-bar-service';
+} from '@ogun/notebook/lib/browser/service/notebook-cell-status-bar-service';
 
 export class NotebooksMainImpl implements NotebooksMain {
 

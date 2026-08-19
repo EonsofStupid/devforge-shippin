@@ -16,20 +16,20 @@
 
 /* eslint-disable no-null/no-null, @typescript-eslint/no-explicit-any */
 
-import { Message } from '@theia/core/shared/@lumino/messaging';
-import { injectable, inject, postConstruct } from '@theia/core/shared/inversify';
-import { DisposableCollection } from '@theia/core/lib/common/disposable';
+import { Message } from '@ogun/core/shared/@lumino/messaging';
+import { injectable, inject, postConstruct } from '@ogun/core/shared/inversify';
+import { DisposableCollection } from '@ogun/core/lib/common/disposable';
 import {
     BaseWidget, Widget, StatefulWidget, Panel, PanelLayout, MessageLoop, CompositeTreeNode, SelectableTreeNode, ApplicationShell, NavigatableWidget,
     BadgeService,
-} from '@theia/core/lib/browser';
+} from '@ogun/core/lib/browser';
 import { ScmCommitWidget } from './scm-commit-widget';
 import { ScmActionButtonWidget } from './scm-action-button-widget';
 import { ScmAmendWidget } from './scm-amend-widget';
 import { ScmService } from './scm-service';
 import { ScmTreeWidget } from './scm-tree-widget';
 import { ScmPreferences } from '../common/scm-preferences';
-import { nls } from '@theia/core/lib/common/nls';
+import { nls } from '@ogun/core/lib/common/nls';
 
 @injectable()
 export class ScmWidget extends BaseWidget implements StatefulWidget {

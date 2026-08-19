@@ -14,8 +14,8 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 import * as path from 'path';
-import { injectable } from '@theia/core/shared/inversify';
-import { ExtPluginApi, ExtPluginApiProvider } from '@theia/plugin-ext-headless';
+import { injectable } from '@ogun/core/shared/inversify';
+import { ExtPluginApi, ExtPluginApiProvider } from '@ogun/plugin-ext-headless';
 
 @injectable()
 export class ExtPluginGotdApiProvider implements ExtPluginApiProvider {

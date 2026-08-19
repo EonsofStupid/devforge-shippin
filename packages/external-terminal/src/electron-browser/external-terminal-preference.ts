@@ -14,11 +14,11 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { inject, injectable, interfaces, postConstruct } from '@theia/core/shared/inversify';
-import { isWindows, isOSX } from '@theia/core/lib/common/os';
+import { inject, injectable, interfaces, postConstruct } from '@ogun/core/shared/inversify';
+import { isWindows, isOSX } from '@ogun/core/lib/common/os';
 import { ExternalTerminalService, ExternalTerminalConfiguration } from '../common/external-terminal';
-import { nls } from '@theia/core/lib/common/nls';
-import { PreferenceProxy, PreferenceSchema, PreferenceProxyFactory, PreferenceSchemaService } from '@theia/core';
+import { nls } from '@ogun/core/lib/common/nls';
+import { PreferenceProxy, PreferenceSchema, PreferenceProxyFactory, PreferenceSchemaService } from '@ogun/core';
 
 export const ExternalTerminalPreferences = Symbol('ExternalTerminalPreferences');
 export type ExternalTerminalPreferences = PreferenceProxy<ExternalTerminalConfiguration>;

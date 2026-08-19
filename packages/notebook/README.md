@@ -12,11 +12,11 @@
 
 ## Description
 
-The `@theia/notebook` extension contributes functionality for integrated notebooks
+The `@ogun/notebook` extension contributes functionality for integrated notebooks
 
 ## Additional Information
 
-- [API documentation for `@theia/notebook`](https://eclipse-theia.github.io/theia/docs/next/modules/_theia_notebook.html)
+- [API documentation for `@ogun/notebook`](https://eclipse-theia.github.io/theia/docs/next/modules/_theia_notebook.html)
 - [Theia - GitHub](https://github.com/eclipse-theia/theia)
 - [Theia - Website](https://theia-ide.org/)
 

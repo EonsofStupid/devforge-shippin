@@ -14,8 +14,8 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { PreferenceInspection } from '@theia/core';
-import { JSONValue } from '@theia/core/shared/@lumino/coreutils';
+import { PreferenceInspection } from '@ogun/core';
+import { JSONValue } from '@ogun/core/shared/@lumino/coreutils';
 
 export const sampleBackendPreferencesServicePath = '/services/sampleBackendPreferences';
 export const SampleBackendPreferencesService = Symbol('SampleBackendPreferencesService');

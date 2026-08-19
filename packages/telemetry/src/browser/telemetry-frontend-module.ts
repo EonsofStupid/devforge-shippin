@@ -14,8 +14,8 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { RemoteConnectionProvider, ServiceConnectionProvider } from '@theia/core/lib/browser';
-import { ContainerModule } from '@theia/core/shared/inversify';
+import { RemoteConnectionProvider, ServiceConnectionProvider } from '@ogun/core/lib/browser';
+import { ContainerModule } from '@ogun/core/shared/inversify';
 import { PreferenceTelemetryConsentProvider, TelemetryConsentProvider } from '../common/telemetry-consent-provider';
 import { bindTelemetryPreferences } from '../common/telemetry-preferences';
 import { telemetryServicePath, TelemetryRpc } from '../common/telemetry-protocol';

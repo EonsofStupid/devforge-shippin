@@ -14,12 +14,12 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { LabelProvider } from '@theia/core/lib/browser';
-import { EditorManager, EditorOpenerOptions, EditorWidget } from '@theia/editor/lib/browser';
-import URI from '@theia/core/lib/common/uri';
+import { LabelProvider } from '@ogun/core/lib/browser';
+import { EditorManager, EditorOpenerOptions, EditorWidget } from '@ogun/editor/lib/browser';
+import URI from '@ogun/core/lib/common/uri';
 import { DebugProtocol } from '@vscode/debugprotocol/lib/debugProtocol';
 import { DebugSession } from '../debug-session';
-import { URI as Uri } from '@theia/core/shared/vscode-uri';
+import { URI as Uri } from '@ogun/core/shared/vscode-uri';
 import { DEBUG_SCHEME, SCHEME_PATTERN } from '../../common/debug-uri-utils';
 
 export class DebugSourceData {

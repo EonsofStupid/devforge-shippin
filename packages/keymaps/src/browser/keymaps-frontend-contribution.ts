@@ -14,22 +14,22 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { inject, injectable } from '@theia/core/shared/inversify';
+import { inject, injectable } from '@ogun/core/shared/inversify';
 import {
     CommandContribution,
     Command,
     CommandRegistry,
     MenuContribution,
     MenuModelRegistry
-} from '@theia/core/lib/common';
-import { AbstractViewContribution, codicon, Widget, CommonCommands, CommonMenus } from '@theia/core/lib/browser';
-import { ClipboardService } from '@theia/core/lib/browser/clipboard-service';
+} from '@ogun/core/lib/common';
+import { AbstractViewContribution, codicon, Widget, CommonCommands, CommonMenus } from '@ogun/core/lib/browser';
+import { ClipboardService } from '@ogun/core/lib/browser/clipboard-service';
 import { KeymapsService } from './keymaps-service';
-import { Keybinding } from '@theia/core/lib/common/keybinding';
-import { KeybindingRegistry } from '@theia/core/lib/browser/keybinding';
+import { Keybinding } from '@ogun/core/lib/common/keybinding';
+import { KeybindingRegistry } from '@ogun/core/lib/browser/keybinding';
 import { KeybindingItem, KeybindingWidget } from './keybindings-widget';
-import { TabBarToolbarContribution, TabBarToolbarRegistry } from '@theia/core/lib/browser/shell/tab-bar-toolbar';
-import { nls } from '@theia/core/lib/common/nls';
+import { TabBarToolbarContribution, TabBarToolbarRegistry } from '@ogun/core/lib/browser/shell/tab-bar-toolbar';
+import { nls } from '@ogun/core/lib/common/nls';
 
 export namespace KeymapsCommands {
     export const OPEN_KEYMAPS = Command.toDefaultLocalizedCommand({

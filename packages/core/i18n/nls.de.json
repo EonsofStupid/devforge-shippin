@@ -1410,7 +1410,7 @@
               "mdDescription": "Inhalts-Hash der Registrierungsgenehmigung, die zur Installation dieses Servers verwendet wurde.",
               "title": "Hash der Registrierungskonfiguration"
             },
-            "mdDescription": "Provenienz-Metadaten für einen Server, der aus einem KI-Register installiert wurde. Verfasst von `@theia/ai-registry`; nicht vom Benutzer bearbeitbar.",
+            "mdDescription": "Provenienz-Metadaten für einen Server, der aus einem KI-Register installiert wurde. Verfasst von `@ogun/ai-registry`; nicht vom Benutzer bearbeitbar.",
             "serverId": {
               "mdDescription": "Gibt den AI-Registrierungseintrag an, von dem aus dieser Server installiert wurde.",
               "title": "Registrierungs-Server-ID"

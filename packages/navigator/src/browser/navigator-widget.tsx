@@ -14,20 +14,20 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { injectable, inject, postConstruct } from '@theia/core/shared/inversify';
-import { Message } from '@theia/core/shared/@lumino/messaging';
-import URI from '@theia/core/lib/common/uri';
-import { CommandService, MessageService } from '@theia/core/lib/common';
-import { Key, TreeModel, ContextMenuRenderer, ExpandableTreeNode, TreeProps, TreeNode } from '@theia/core/lib/browser';
-import { DirNode, FileStatNodeData } from '@theia/filesystem/lib/browser';
-import { WorkspaceService, WorkspaceCommands } from '@theia/workspace/lib/browser';
+import { injectable, inject, postConstruct } from '@ogun/core/shared/inversify';
+import { Message } from '@ogun/core/shared/@lumino/messaging';
+import URI from '@ogun/core/lib/common/uri';
+import { CommandService, MessageService } from '@ogun/core/lib/common';
+import { Key, TreeModel, ContextMenuRenderer, ExpandableTreeNode, TreeProps, TreeNode } from '@ogun/core/lib/browser';
+import { DirNode, FileStatNodeData } from '@ogun/filesystem/lib/browser';
+import { WorkspaceService, WorkspaceCommands } from '@ogun/workspace/lib/browser';
 import { WorkspaceNode, WorkspaceRootNode } from './navigator-tree';
 import { FileNavigatorModel } from './navigator-model';
-import { isOSX, environment } from '@theia/core';
-import * as React from '@theia/core/shared/react';
+import { isOSX, environment } from '@ogun/core';
+import * as React from '@ogun/core/shared/react';
 import { NavigatorContextKeyService } from './navigator-context-key-service';
 import { NavigatorFileClipboard } from './navigator-file-clipboard';
-import { nls } from '@theia/core/lib/common/nls';
+import { nls } from '@ogun/core/lib/common/nls';
 import { AbstractNavigatorTreeWidget } from './abstract-navigator-tree-widget';
 
 export const FILE_NAVIGATOR_ID = 'files';

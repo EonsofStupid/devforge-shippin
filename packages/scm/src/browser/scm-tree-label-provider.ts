@@ -14,10 +14,10 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { inject, injectable } from '@theia/core/shared/inversify';
-import URI from '@theia/core/lib/common/uri';
-import { LabelProviderContribution, LabelProvider } from '@theia/core/lib/browser/label-provider';
-import { TreeNode } from '@theia/core/lib/browser/tree';
+import { inject, injectable } from '@ogun/core/shared/inversify';
+import URI from '@ogun/core/lib/common/uri';
+import { LabelProviderContribution, LabelProvider } from '@ogun/core/lib/browser/label-provider';
+import { TreeNode } from '@ogun/core/lib/browser/tree';
 import { ScmFileChangeFolderNode, ScmFileChangeNode, ScmFileChangeGroupNode } from './scm-tree-model';
 
 @injectable()

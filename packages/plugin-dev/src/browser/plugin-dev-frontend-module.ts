@@ -19,12 +19,12 @@ import { HostedPluginManagerClient } from './hosted-plugin-manager-client';
 import { HostedPluginInformer } from './hosted-plugin-informer';
 import { bindHostedPluginPreferences } from '../common/hosted-plugin-preferences';
 import { HostedPluginController } from './hosted-plugin-controller';
-import { ContainerModule } from '@theia/core/shared/inversify';
-import { FrontendApplicationContribution, WebSocketConnectionProvider } from '@theia/core/lib/browser';
+import { ContainerModule } from '@ogun/core/shared/inversify';
+import { FrontendApplicationContribution, WebSocketConnectionProvider } from '@ogun/core/lib/browser';
 import { HostedPluginFrontendContribution } from './hosted-plugin-frontend-contribution';
-import { CommandContribution } from '@theia/core/lib/common/command';
+import { CommandContribution } from '@ogun/core/lib/common/command';
 import { PluginDevServer, pluginDevServicePath } from '../common/plugin-dev-protocol';
-import { DebugContribution } from '@theia/debug/lib/browser/debug-contribution';
+import { DebugContribution } from '@ogun/debug/lib/browser/debug-contribution';
 
 export default new ContainerModule((bind, unbind, isBound, rebind) => {
     bindHostedPluginPreferences(bind);

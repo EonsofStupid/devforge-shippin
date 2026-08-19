@@ -14,12 +14,12 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { OS } from '@theia/core';
-import * as notebookCommon from '@theia/notebook/lib/common';
-import { NotebookCellModel } from '@theia/notebook/lib/browser/view-model/notebook-cell-model';
+import { OS } from '@ogun/core';
+import * as notebookCommon from '@ogun/notebook/lib/common';
+import { NotebookCellModel } from '@ogun/notebook/lib/browser/view-model/notebook-cell-model';
 import * as rpc from '../../../common';
-import { CellExecutionUpdateType } from '@theia/notebook/lib/common';
-import { CellExecuteUpdate, CellExecutionComplete } from '@theia/notebook/lib/browser';
+import { CellExecutionUpdateType } from '@ogun/notebook/lib/common';
+import { CellExecuteUpdate, CellExecutionComplete } from '@ogun/notebook/lib/browser';
 
 export namespace NotebookDto {
 

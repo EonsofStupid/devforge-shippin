@@ -14,10 +14,10 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { RpcProxy, URI } from '@theia/core';
-import { inject, injectable } from '@theia/core/shared/inversify';
-import { RemoteFileSystemProvider, RemoteFileSystemServer } from '@theia/filesystem/lib/common/remote-file-system-provider';
-import { FileService, FileServiceContribution } from '@theia/filesystem/lib/browser/file-service';
+import { RpcProxy, URI } from '@ogun/core';
+import { inject, injectable } from '@ogun/core/shared/inversify';
+import { RemoteFileSystemProvider, RemoteFileSystemServer } from '@ogun/filesystem/lib/common/remote-file-system-provider';
+import { FileService, FileServiceContribution } from '@ogun/filesystem/lib/browser/file-service';
 
 export const LocalEnvVariablesServer = Symbol('LocalEnviromentVariableServer');
 export const LocalRemoteFileSytemServer = Symbol('LocalRemoteFileSytemServer');

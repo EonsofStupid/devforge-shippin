@@ -14,10 +14,10 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { ContainerModule } from '@theia/core/shared/inversify';
-import { bindRootContributionProvider } from '@theia/core';
-import { ConnectionHandler, RpcConnectionHandler } from '@theia/core/lib/common/messaging';
-import { BackendApplicationContribution } from '@theia/core/lib/node';
+import { ContainerModule } from '@ogun/core/shared/inversify';
+import { bindRootContributionProvider } from '@ogun/core';
+import { ConnectionHandler, RpcConnectionHandler } from '@ogun/core/lib/common/messaging';
+import { BackendApplicationContribution } from '@ogun/core/lib/node';
 import { bindProcessTaskRunnerModule } from './process/process-task-runner-backend-module';
 import { bindCustomTaskRunnerModule } from './custom/custom-task-runner-backend-module';
 import { TaskBackendApplicationContribution } from './task-backend-application-contribution';

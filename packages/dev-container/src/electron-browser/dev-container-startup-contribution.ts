@@ -14,12 +14,12 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { inject, injectable } from '@theia/core/shared/inversify';
-import { FrontendApplicationContribution } from '@theia/core/lib/browser';
+import { inject, injectable } from '@ogun/core/shared/inversify';
+import { FrontendApplicationContribution } from '@ogun/core/lib/browser';
 import { RemoteContainerConnectionProvider } from '../electron-common/remote-container-connection-provider';
-import { AbstractRemoteRegistryContribution } from '@theia/remote/lib/electron-browser/remote-registry-contribution';
-import { ILogger, MessageService, nls } from '@theia/core';
-import { RemotePreferences } from '@theia/remote/lib/electron-common/remote-preferences';
+import { AbstractRemoteRegistryContribution } from '@ogun/remote/lib/electron-browser/remote-registry-contribution';
+import { ILogger, MessageService, nls } from '@ogun/core';
+import { RemotePreferences } from '@ogun/remote/lib/electron-common/remote-preferences';
 
 @injectable()
 export class DevContainerStartupContribution extends AbstractRemoteRegistryContribution implements FrontendApplicationContribution {

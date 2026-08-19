@@ -42,10 +42,10 @@ function resolveModulePath(module: string): string {
  * and relative imports from within Monaco's source tree (e.g. `../nls.js`), which are
  * identified by the importing file residing inside `monaco-editor-core`.
  *
- * If `@theia/monaco` is not installed the plugin is a no-op.
+ * If `@ogun/monaco` is not installed the plugin is a no-op.
  */
 export function monacoNlsPlugin(): Plugin {
-    const monacoPackagePath = resolvePackagePath('@theia/monaco', process.cwd());
+    const monacoPackagePath = resolvePackagePath('@ogun/monaco', process.cwd());
     const redirectTarget = monacoPackagePath
         ? path.join(monacoPackagePath, '..', 'lib', 'browser', 'monaco-nls.js')
         : undefined;
@@ -69,7 +69,7 @@ export function monacoNlsPlugin(): Plugin {
 
 /**
  * Expose bundled modules on the `globalThis['theia']` namespace, e.g.
- * `window['theia']['@theia/core/lib/common/uri']`.
+ * `window['theia']['@ogun/core/lib/common/uri']`.
  * Such syntax can be used by external code, for instance, for testing.
  *
  * This is the esbuild equivalent of the webpack `expose-loader`.
@@ -204,7 +204,7 @@ export function nativeDependenciesPlugin(options: NativeDependenciesPluginOption
 
 class PluginImpl implements Plugin {
 
-    name = '@theia/esbuild-plugin';
+    name = '@ogun/esbuild-plugin';
 
     private bindings: Record<string, string> = {};
     private options: NativeDependenciesPluginOptions;

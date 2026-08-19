@@ -14,16 +14,16 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { postConstruct, injectable, inject } from '@theia/core/shared/inversify';
-import { Panel, Widget, Message, StatefulWidget, codicon } from '@theia/core/lib/browser';
+import { postConstruct, injectable, inject } from '@ogun/core/shared/inversify';
+import { Panel, Widget, Message, StatefulWidget, codicon } from '@ogun/core/lib/browser';
 import { PreferencesEditorState, PreferencesEditorWidget } from './preference-editor-widget';
 import { PreferencesTreeWidget } from './preference-tree-widget';
 import { PreferencesSearchbarState, PreferencesSearchbarWidget } from './preference-searchbar-widget';
 import { PreferencesScopeTabBar, PreferencesScopeTabBarState } from './preference-scope-tabbar-widget';
 import { Preference } from '../util/preference-types';
-import URI from '@theia/core/lib/common/uri';
-import { nls } from '@theia/core/lib/common/nls';
-import { PreferenceScope } from '@theia/core';
+import URI from '@ogun/core/lib/common/uri';
+import { nls } from '@ogun/core/lib/common/nls';
+import { PreferenceScope } from '@ogun/core';
 
 interface PreferencesWidgetState {
     scopeTabBarState: PreferencesScopeTabBarState,

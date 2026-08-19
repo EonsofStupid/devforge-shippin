@@ -15,7 +15,7 @@
 // *****************************************************************************
 
 import '../../src/browser/style/toolbar.css';
-import { ContainerModule, interfaces } from '@theia/core/shared/inversify';
+import { ContainerModule, interfaces } from '@ogun/core/shared/inversify';
 import { bindToolbarApplicationShell } from './application-shell-with-toolbar-override';
 import { bindToolbar } from './toolbar-command-contribution';
 import { bindToolbarContentHoverWidgetPatcher } from './toolbar-content-hover-widget-patcher';

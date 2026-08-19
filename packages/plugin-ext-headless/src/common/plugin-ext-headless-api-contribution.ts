@@ -14,19 +14,19 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { PluginManager } from '@theia/plugin-ext';
-import { RPCProtocol } from '@theia/plugin-ext/lib/common/rpc-protocol';
+import { PluginManager } from '@ogun/plugin-ext';
+import { RPCProtocol } from '@ogun/plugin-ext/lib/common/rpc-protocol';
 
-export * from '@theia/plugin-ext';
+export * from '@ogun/plugin-ext';
 
-declare module '@theia/plugin-ext' {
+declare module '@ogun/plugin-ext' {
     /**
      * Plugin API extension description.
      * This interface describes scripts for all three plugin runtimes: frontend (WebWorker), backend (NodeJs), and headless (NodeJs).
      */
     interface ExtPluginApi extends ExtPluginHeadlessApi {
         // Note that the frontendInitPath and backendInitPath properties are included by
-        // Typescript interface merge from the @theia/plugin-ext::ExtPluginApi interface.
+        // Typescript interface merge from the @ogun/plugin-ext::ExtPluginApi interface.
     }
 }
 

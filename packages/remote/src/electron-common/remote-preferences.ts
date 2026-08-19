@@ -14,12 +14,12 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { OS } from '@theia/core';
-import { interfaces } from '@theia/core/shared/inversify';
-import { PreferenceProxy } from '@theia/core/lib/common/preferences/preference-proxy';
-import { nls } from '@theia/core/lib/common/nls';
-import { PreferenceProxyFactory } from '@theia/core/lib/common/preferences/injectable-preference-proxy';
-import { PreferenceContribution, PreferenceSchema } from '@theia/core/lib/common/preferences/preference-schema';
+import { OS } from '@ogun/core';
+import { interfaces } from '@ogun/core/shared/inversify';
+import { PreferenceProxy } from '@ogun/core/lib/common/preferences/preference-proxy';
+import { nls } from '@ogun/core/lib/common/nls';
+import { PreferenceProxyFactory } from '@ogun/core/lib/common/preferences/injectable-preference-proxy';
+import { PreferenceContribution, PreferenceSchema } from '@ogun/core/lib/common/preferences/preference-schema';
 
 const nodeDownloadTemplateParts = [
     nls.localize('theia/remote/nodeDownloadTemplateVersion', '`{version}` for the used node version'),

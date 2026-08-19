@@ -15,15 +15,15 @@
 // *****************************************************************************
 
 import '../../src/browser/style/index.css';
-import { ContainerModule } from '@theia/core/shared/inversify';
+import { ContainerModule } from '@ogun/core/shared/inversify';
 import { AIScanOSSPreferencesSchema } from '../common/ai-scanoss-preferences';
 import { ScanOSSScanButtonAction } from './ai-scanoss-code-scan-action';
-import { CodePartRendererAction } from '@theia/ai-chat-ui/lib/browser/chat-response-renderer';
-import { ChangeSetActionRenderer } from '@theia/ai-chat-ui/lib/browser/change-set-actions/change-set-action-service';
+import { CodePartRendererAction } from '@ogun/ai-chat-ui/lib/browser/chat-response-renderer';
+import { ChangeSetActionRenderer } from '@ogun/ai-chat-ui/lib/browser/change-set-actions/change-set-action-service';
 import { ChangeSetScanActionRenderer } from './change-set-scan-action/change-set-scan-action';
-import { ChangeSetDecorator } from '@theia/ai-chat/lib/browser/change-set-decorator-service';
+import { ChangeSetDecorator } from '@ogun/ai-chat/lib/browser/change-set-decorator-service';
 import { ChangeSetScanDecorator } from './change-set-scan-action/change-set-scan-decorator';
-import { PreferenceContribution } from '@theia/core';
+import { PreferenceContribution } from '@ogun/core';
 
 export default new ContainerModule(bind => {
     bind(PreferenceContribution).toConstantValue({ schema: AIScanOSSPreferencesSchema });

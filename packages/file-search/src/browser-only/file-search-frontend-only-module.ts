@@ -14,12 +14,12 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { ContainerModule, interfaces } from '@theia/core/shared/inversify';
-import { CommandContribution, MenuContribution } from '@theia/core/lib/common';
-import { KeybindingContribution } from '@theia/core/lib/browser';
+import { ContainerModule, interfaces } from '@ogun/core/shared/inversify';
+import { CommandContribution, MenuContribution } from '@ogun/core/lib/common';
+import { KeybindingContribution } from '@ogun/core/lib/browser';
 import { FileSearchService } from '../common/file-search-service';
 import { FileSearchServiceImpl } from './file-search-service-impl';
-import { QuickAccessContribution } from '@theia/core/lib/browser/quick-input/quick-access';
+import { QuickAccessContribution } from '@ogun/core/lib/browser/quick-input/quick-access';
 import { QuickFileOpenFrontendContribution } from '../browser/quick-file-open-contribution';
 import { QuickFileOpenService } from '../browser/quick-file-open';
 import { QuickFileSelectService } from '../browser/quick-file-select-service';

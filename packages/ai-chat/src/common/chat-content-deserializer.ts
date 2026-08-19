@@ -14,7 +14,7 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { inject, injectable, named, postConstruct } from '@theia/core/shared/inversify';
+import { inject, injectable, named, postConstruct } from '@ogun/core/shared/inversify';
 import {
     ChatResponseContent,
     CodeChatResponseContentImpl,
@@ -46,8 +46,8 @@ import {
     QuestionContentData
 } from './chat-model';
 import { SerializableChatResponseContentData } from './chat-model-serialization';
-import { createToolCallError } from '@theia/ai-core/lib/common/language-model';
-import { ContributionProvider, ILogger, MaybePromise } from '@theia/core';
+import { createToolCallError } from '@ogun/ai-core/lib/common/language-model';
+import { ContributionProvider, ILogger, MaybePromise } from '@ogun/core';
 
 export const ChatContentDeserializer = Symbol('ChatContentDeserializer');
 

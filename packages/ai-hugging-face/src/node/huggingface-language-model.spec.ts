@@ -15,7 +15,7 @@
 // *****************************************************************************
 
 import { expect } from 'chai';
-import { LanguageModelMessage } from '@theia/ai-core';
+import { LanguageModelMessage } from '@ogun/ai-core';
 import { HuggingFaceModel } from './huggingface-language-model';
 
 /**

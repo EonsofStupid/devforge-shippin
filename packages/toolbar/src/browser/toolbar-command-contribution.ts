@@ -23,14 +23,14 @@ import {
     MenuModelRegistry,
     PreferenceScope,
     PreferenceService,
-} from '@theia/core';
+} from '@ogun/core';
 import {
     CommonMenus,
     KeybindingContribution,
     KeybindingRegistry,
     Widget,
-} from '@theia/core/lib/browser';
-import { injectable, inject, interfaces, Container } from '@theia/core/shared/inversify';
+} from '@ogun/core/lib/browser';
+import { injectable, inject, interfaces, Container } from '@ogun/core/shared/inversify';
 import { ToolbarImpl } from './toolbar';
 import { bindToolbarIconDialog } from './toolbar-icon-selector-dialog';
 import {
@@ -47,10 +47,10 @@ import { ToolbarController } from './toolbar-controller';
 import { ToolbarPreferencesSchema, ToolbarPreferences, TOOLBAR_ENABLE_PREFERENCE_ID } from '../common/toolbar-preference-contribution';
 import { ToolbarDefaults, ToolbarDefaultsFactory } from './toolbar-defaults';
 import { ToolbarCommands, ToolbarMenus, UserToolbarURI, USER_TOOLBAR_URI } from './toolbar-constants';
-import { JsonSchemaContribution, JsonSchemaDataStore, JsonSchemaRegisterContext } from '@theia/core/lib/browser/json-schema-store';
+import { JsonSchemaContribution, JsonSchemaDataStore, JsonSchemaRegisterContext } from '@ogun/core/lib/browser/json-schema-store';
 import { toolbarConfigurationSchema, toolbarSchemaId } from './toolbar-preference-schema';
-import URI from '@theia/core/lib/common/uri';
-import { PreferenceContribution } from '@theia/core/lib/common/preferences/preference-schema';
+import URI from '@ogun/core/lib/common/uri';
+import { PreferenceContribution } from '@ogun/core/lib/common/preferences/preference-schema';
 
 @injectable()
 export class ToolbarCommandContribution implements CommandContribution, KeybindingContribution, MenuContribution, JsonSchemaContribution {

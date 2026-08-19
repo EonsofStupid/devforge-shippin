@@ -14,12 +14,12 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { inject, injectable, named, postConstruct } from '@theia/core/shared/inversify';
-import { Disposable, DisposableCollection, Emitter, Event, ILogger, MessageService, nls } from '@theia/core';
-import { HoverService } from '@theia/core/lib/browser';
-import { WindowService } from '@theia/core/lib/browser/window/window-service';
-import { TreeElement } from '@theia/core/lib/browser/source-tree';
-import { ExtensionsSourceContribution, SearchContext, SearchResult } from '@theia/vsx-registry/lib/browser/extensions-source-contribution';
+import { inject, injectable, named, postConstruct } from '@ogun/core/shared/inversify';
+import { Disposable, DisposableCollection, Emitter, Event, ILogger, MessageService, nls } from '@ogun/core';
+import { HoverService } from '@ogun/core/lib/browser';
+import { WindowService } from '@ogun/core/lib/browser/window/window-service';
+import { TreeElement } from '@ogun/core/lib/browser/source-tree';
+import { ExtensionsSourceContribution, SearchContext, SearchResult } from '@ogun/vsx-registry/lib/browser/extensions-source-contribution';
 import { RegistryFetchService } from '../../common/registry-fetch-service';
 import { ResolvedSkillEntry } from '../../common/skill/skill-registry-types';
 import { RegistrySearchFilter } from '../../common/registry-search-filter';

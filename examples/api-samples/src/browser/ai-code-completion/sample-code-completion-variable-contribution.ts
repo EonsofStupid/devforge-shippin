@@ -14,11 +14,11 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { CodeCompletionVariableContext } from '@theia/ai-code-completion/lib/browser/code-completion-variable-context';
-import { AIVariable, AIVariableContext, AIVariableContribution, AIVariableResolutionRequest, AIVariableResolver, ResolvedAIVariable } from '@theia/ai-core';
-import { FrontendVariableContribution, FrontendVariableService } from '@theia/ai-core/lib/browser';
-import { MaybePromise } from '@theia/core';
-import { injectable, interfaces } from '@theia/core/shared/inversify';
+import { CodeCompletionVariableContext } from '@ogun/ai-code-completion/lib/browser/code-completion-variable-context';
+import { AIVariable, AIVariableContext, AIVariableContribution, AIVariableResolutionRequest, AIVariableResolver, ResolvedAIVariable } from '@ogun/ai-core';
+import { FrontendVariableContribution, FrontendVariableService } from '@ogun/ai-core/lib/browser';
+import { MaybePromise } from '@ogun/core';
+import { injectable, interfaces } from '@ogun/core/shared/inversify';
 
 const SAMPLE_VARIABLE: AIVariable = {
     id: 'sampleCodeCompletionVariable',

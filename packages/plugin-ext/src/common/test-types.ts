@@ -23,11 +23,11 @@
 
 /* eslint-disable import/no-extraneous-dependencies */
 
-import { MarkdownString } from '@theia/core/lib/common/markdown-rendering';
+import { MarkdownString } from '@ogun/core/lib/common/markdown-rendering';
 import { UriComponents } from './uri-components';
 import { Location, Range } from './plugin-api-rpc-model';
-import { isObject } from '@theia/core';
-import * as languageProtocol from '@theia/core/shared/vscode-languageserver-protocol';
+import { isObject } from '@ogun/core';
+import * as languageProtocol from '@ogun/core/shared/vscode-languageserver-protocol';
 
 export enum TestRunProfileKind {
     Run = 1,

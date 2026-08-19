@@ -18,13 +18,13 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { UriComponents, URI } from '@theia/core/lib/common/uri';
-import { CellRange } from '@theia/notebook/lib/common';
-import { NotebookEditorWidget, NotebookService } from '@theia/notebook/lib/browser';
+import { UriComponents, URI } from '@ogun/core/lib/common/uri';
+import { CellRange } from '@ogun/notebook/lib/common';
+import { NotebookEditorWidget, NotebookService } from '@ogun/notebook/lib/browser';
 import { MAIN_RPC_CONTEXT, NotebookDocumentShowOptions, NotebookEditorRevealType, NotebookEditorsExt, NotebookEditorsMain } from '../../../common';
 import { RPCProtocol } from '../../../common/rpc-protocol';
-import { interfaces } from '@theia/core/shared/inversify';
-import { NotebookOpenHandler } from '@theia/notebook/lib/browser/notebook-open-handler';
+import { interfaces } from '@ogun/core/shared/inversify';
+import { NotebookOpenHandler } from '@ogun/notebook/lib/browser/notebook-open-handler';
 
 export class NotebookEditorsMainImpl implements NotebookEditorsMain {
 

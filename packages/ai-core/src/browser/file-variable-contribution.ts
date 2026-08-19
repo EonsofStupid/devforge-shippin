@@ -14,11 +14,11 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { nls, Path, URI } from '@theia/core';
-import { OpenerService, codiconArray, open } from '@theia/core/lib/browser';
-import { inject, injectable } from '@theia/core/shared/inversify';
-import { FileService } from '@theia/filesystem/lib/browser/file-service';
-import { WorkspaceService } from '@theia/workspace/lib/browser/workspace-service';
+import { nls, Path, URI } from '@ogun/core';
+import { OpenerService, codiconArray, open } from '@ogun/core/lib/browser';
+import { inject, injectable } from '@ogun/core/shared/inversify';
+import { FileService } from '@ogun/filesystem/lib/browser/file-service';
+import { WorkspaceService } from '@ogun/workspace/lib/browser/workspace-service';
 import {
     AIVariable,
     AIVariableContext,

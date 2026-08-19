@@ -18,8 +18,8 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { Disposable, Path } from '@theia/core';
-import { injectable } from '@theia/core/shared/inversify';
+import { Disposable, Path } from '@ogun/core';
+import { injectable } from '@ogun/core/shared/inversify';
 import { NotebookRendererDescriptor } from '../common/notebook-protocol';
 
 export interface NotebookRendererInfo {

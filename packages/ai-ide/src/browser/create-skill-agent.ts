@@ -13,9 +13,9 @@
 //
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
-import { ChatMode } from '@theia/ai-chat';
-import { LanguageModelRequirement } from '@theia/ai-core';
-import { injectable } from '@theia/core/shared/inversify';
+import { ChatMode } from '@ogun/ai-chat';
+import { LanguageModelRequirement } from '@ogun/ai-core';
+import { injectable } from '@ogun/core/shared/inversify';
 import {
     createSkillSystemVariants,
     CREATE_SKILL_SYSTEM_PROMPT_TEMPLATE_ID,
@@ -23,7 +23,7 @@ import {
     CREATE_SKILL_SYSTEM_AGENT_MODE_TEMPLATE_ID,
 } from '../common/create-skill-prompt-template';
 import { AbstractModeAwareChatAgent } from './mode-aware-chat-agent';
-import { nls } from '@theia/core';
+import { nls } from '@ogun/core';
 
 @injectable()
 export class CreateSkillAgent extends AbstractModeAwareChatAgent {

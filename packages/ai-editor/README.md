@@ -12,11 +12,11 @@
 
 ## Description
 
-The `@theia/ai-editor` extension brings AI-powered code actions and editor context interaction to Theia. It allows users to interact with AI directly in the editor for code explanations, fixes, and suggestions using AI agents.
+The `@ogun/ai-editor` extension brings AI-powered code actions and editor context interaction to Theia. It allows users to interact with AI directly in the editor for code explanations, fixes, and suggestions using AI agents.
 
 ## Additional Information
 
-- [API documentation for `@theia/ai-editor`](https://eclipse-theia.github.io/theia/docs/next/modules/_theia_ai-editor.html)
+- [API documentation for `@ogun/ai-editor`](https://eclipse-theia.github.io/theia/docs/next/modules/_theia_ai-editor.html)
 - [Theia - GitHub](https://github.com/eclipse-theia/theia)
 - [Theia - Website](https://theia-ide.org/)
 

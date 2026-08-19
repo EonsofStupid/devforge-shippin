@@ -14,13 +14,13 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { injectable, inject, postConstruct } from '@theia/core/shared/inversify';
-import URI from '@theia/core/lib/common/uri';
-import { Event, Emitter, nls } from '@theia/core/lib/common';
-import { Decoration, DecorationsService } from '@theia/core/lib/browser/decorations-service';
-import { TreeNode, TreeDecoration, TreeDecorator, Tree, TopDownTreeIterator } from '@theia/core/lib/browser';
-import { MaybePromise } from '@theia/core/lib/common/types';
-import { ColorRegistry } from '@theia/core/lib/browser/color-registry';
+import { injectable, inject, postConstruct } from '@ogun/core/shared/inversify';
+import URI from '@ogun/core/lib/common/uri';
+import { Event, Emitter, nls } from '@ogun/core/lib/common';
+import { Decoration, DecorationsService } from '@ogun/core/lib/browser/decorations-service';
+import { TreeNode, TreeDecoration, TreeDecorator, Tree, TopDownTreeIterator } from '@ogun/core/lib/browser';
+import { MaybePromise } from '@ogun/core/lib/common/types';
+import { ColorRegistry } from '@ogun/core/lib/browser/color-registry';
 import { FileStatNode } from './file-tree';
 
 @injectable()

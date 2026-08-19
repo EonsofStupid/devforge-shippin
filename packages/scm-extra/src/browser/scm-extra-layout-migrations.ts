@@ -14,14 +14,14 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { injectable } from '@theia/core/shared/inversify';
-import { ApplicationShellLayoutMigration, WidgetDescription, ApplicationShellLayoutMigrationContext } from '@theia/core/lib/browser/shell/shell-layout-restorer';
+import { injectable } from '@ogun/core/shared/inversify';
+import { ApplicationShellLayoutMigration, WidgetDescription, ApplicationShellLayoutMigrationContext } from '@ogun/core/lib/browser/shell/shell-layout-restorer';
 import { SCM_HISTORY_ID } from './history/scm-history-contribution';
 
 @injectable()
 /**
- * @deprecated since 1.75.0 - superseded by the SCM history graph in `@theia/scm`
- * and the Timeline view in `@theia/timeline`. This package will be removed in a
+ * @deprecated since 1.75.0 - superseded by the SCM history graph in `@ogun/scm`
+ * and the Timeline view in `@ogun/timeline`. This package will be removed in a
  * future release - see https://github.com/eclipse-theia/theia/issues/17457.
  */
 export class ScmExtraLayoutVersion4Migration implements ApplicationShellLayoutMigration {

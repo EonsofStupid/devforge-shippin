@@ -14,15 +14,15 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { enableJSDOM } from '@theia/core/lib/browser/test/jsdom';
+import { enableJSDOM } from '@ogun/core/lib/browser/test/jsdom';
 let disableJSDOM = enableJSDOM();
-import { FrontendApplicationConfigProvider } from '@theia/core/lib/browser/frontend-application-config-provider';
+import { FrontendApplicationConfigProvider } from '@ogun/core/lib/browser/frontend-application-config-provider';
 FrontendApplicationConfigProvider.set({});
 
 import { expect } from 'chai';
-import { Command, CommandHandler, CommandRegistry, ILogger, MessageService } from '@theia/core';
-import { QuickInputService } from '@theia/core/lib/browser';
-import { MCPFrontendService, MCPOAuthFrontendDelegate, MCPServerDescription, MCPServerStatus } from '@theia/ai-mcp';
+import { Command, CommandHandler, CommandRegistry, ILogger, MessageService } from '@ogun/core';
+import { QuickInputService } from '@ogun/core/lib/browser';
+import { MCPFrontendService, MCPOAuthFrontendDelegate, MCPServerDescription, MCPServerStatus } from '@ogun/ai-mcp';
 import { GetMCPOAuthRedirectUrl, MCPCommandContribution, SignInMCPServer, SignOutMCPServer, StartMCPServer, StopMCPServer } from './mcp-command-contribution';
 
 disableJSDOM();

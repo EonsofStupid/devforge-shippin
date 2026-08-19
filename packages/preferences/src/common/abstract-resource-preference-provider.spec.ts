@@ -16,23 +16,23 @@
 
 /* eslint-disable @typescript-eslint/no-explicit-any */
 
-import { enableJSDOM } from '@theia/core/lib/browser/test/jsdom';
+import { enableJSDOM } from '@ogun/core/lib/browser/test/jsdom';
 const disableJSDOM = enableJSDOM();
 
-import { FrontendApplicationConfigProvider } from '@theia/core/lib/browser/frontend-application-config-provider';
+import { FrontendApplicationConfigProvider } from '@ogun/core/lib/browser/frontend-application-config-provider';
 FrontendApplicationConfigProvider.set({});
 
 import { expect } from 'chai';
-import { Container } from '@theia/core/shared/inversify';
+import { Container } from '@ogun/core/shared/inversify';
 import { AbstractResourcePreferenceProvider, FileContentStatus, PreferenceStorage, PreferenceStorageFactory } from './abstract-resource-preference-provider';
-import { bindPreferenceService } from '@theia/core/lib/browser/frontend-application-bindings';
-import { bindMockPreferenceProviders } from '@theia/core/lib/browser/preferences/test';
-import { Deferred } from '@theia/core/lib/common/promise-util';
-import { Listener, MessageService, PreferenceSchemaService } from '@theia/core/lib/common';
-import { MonacoWorkspace } from '@theia/monaco/lib/browser/monaco-workspace';
-import { EditorManager } from '@theia/editor/lib/browser';
+import { bindPreferenceService } from '@ogun/core/lib/browser/frontend-application-bindings';
+import { bindMockPreferenceProviders } from '@ogun/core/lib/browser/preferences/test';
+import { Deferred } from '@ogun/core/lib/common/promise-util';
+import { Listener, MessageService, PreferenceSchemaService } from '@ogun/core/lib/common';
+import { MonacoWorkspace } from '@ogun/monaco/lib/browser/monaco-workspace';
+import { EditorManager } from '@ogun/editor/lib/browser';
 import { PreferenceTransactionFactory } from '../browser/preference-transaction-manager';
-import { JSONValue } from '@theia/core/shared/@lumino/coreutils';
+import { JSONValue } from '@ogun/core/shared/@lumino/coreutils';
 
 disableJSDOM();
 

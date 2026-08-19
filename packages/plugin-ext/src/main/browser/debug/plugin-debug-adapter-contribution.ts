@@ -15,9 +15,9 @@
 // *****************************************************************************
 
 import { DebugExt } from '../../../common/plugin-api-rpc';
-import { DebugConfiguration } from '@theia/debug/lib/common/debug-configuration';
-import { MaybePromise } from '@theia/core/lib/common/types';
-import { DebuggerDescription } from '@theia/debug/lib/common/debug-service';
+import { DebugConfiguration } from '@ogun/debug/lib/common/debug-configuration';
+import { MaybePromise } from '@ogun/core/lib/common/types';
+import { DebuggerDescription } from '@ogun/debug/lib/common/debug-service';
 import { HostedPluginSupport } from '../../../hosted/browser/hosted-plugin';
 
 /**

@@ -19,13 +19,13 @@
  *--------------------------------------------------------------------------------------------*/
 // copied and modified from https://github.com/microsoft/vscode/blob/ba40bd16433d5a817bfae15f3b4350e18f144af4/src/vs/workbench/contrib/webview/common/themeing.ts
 
-import { inject, postConstruct, injectable } from '@theia/core/shared/inversify';
-import { Emitter } from '@theia/core/lib/common/event';
-import { EditorPreferences, EditorConfiguration } from '@theia/editor/lib/common/editor-preferences';
-import { ThemeService } from '@theia/core/lib/browser/theming';
-import { Theme } from '@theia/core/lib/common/theme';
-import { ColorRegistry } from '@theia/core/lib/browser/color-registry';
-import { ColorApplicationContribution } from '@theia/core/lib/browser/color-application-contribution';
+import { inject, postConstruct, injectable } from '@ogun/core/shared/inversify';
+import { Emitter } from '@ogun/core/lib/common/event';
+import { EditorPreferences, EditorConfiguration } from '@ogun/editor/lib/common/editor-preferences';
+import { ThemeService } from '@ogun/core/lib/browser/theming';
+import { Theme } from '@ogun/core/lib/common/theme';
+import { ColorRegistry } from '@ogun/core/lib/browser/color-registry';
+import { ColorApplicationContribution } from '@ogun/core/lib/browser/color-application-contribution';
 
 export type WebviewThemeType = 'vscode-light' | 'vscode-dark' | 'vscode-high-contrast';
 export interface WebviewThemeData {

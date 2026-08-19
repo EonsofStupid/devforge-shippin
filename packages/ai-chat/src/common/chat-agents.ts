@@ -49,7 +49,7 @@ import {
     TextMessage,
     ToolCall,
     ToolRequest,
-} from '@theia/ai-core';
+} from '@ogun/ai-core';
 import {
     Agent,
     FrontendLanguageModelRegistry,
@@ -58,9 +58,9 @@ import {
     isLanguageModelTextResponse,
     LanguageModelRegistry,
     LanguageModelStreamResponsePart
-} from '@theia/ai-core/lib/common';
-import { ContributionProvider, ILogger, isArray, nls } from '@theia/core';
-import { inject, injectable, named, optional, postConstruct } from '@theia/core/shared/inversify';
+} from '@ogun/ai-core/lib/common';
+import { ContributionProvider, ILogger, isArray, nls } from '@ogun/core';
+import { inject, injectable, named, optional, postConstruct } from '@ogun/core/shared/inversify';
 import { ChatAgentService } from './chat-agent-service';
 import {
     ChatModel,

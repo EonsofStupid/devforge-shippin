@@ -15,13 +15,13 @@
 // *****************************************************************************
 import '../../src/browser/style/index.css';
 
-import { ContainerModule } from '@theia/core/shared/inversify';
+import { ContainerModule } from '@ogun/core/shared/inversify';
 import {
     FrontendApplicationContribution, KeybindingContribution, LabelProviderContribution, OpenHandler, UndoRedoHandler, WidgetFactory, WidgetStatusBarContribution
-} from '@theia/core/lib/browser';
-import { ColorContribution } from '@theia/core/lib/browser/color-application-contribution';
+} from '@ogun/core/lib/browser';
+import { ColorContribution } from '@ogun/core/lib/browser/color-application-contribution';
 import { NotebookOpenHandler } from './notebook-open-handler';
-import { CommandContribution, MenuContribution, ResourceResolver, } from '@theia/core';
+import { CommandContribution, MenuContribution, ResourceResolver, } from '@ogun/core';
 import { NotebookTypeRegistry } from './notebook-type-registry';
 import { NotebookRendererRegistry } from './notebook-renderer-registry';
 import { NotebookService } from './service/notebook-service';
@@ -52,10 +52,10 @@ import { NotebookUndoRedoHandler } from './contributions/notebook-undo-redo-hand
 import { NotebookStatusBarContribution } from './contributions/notebook-status-bar-contribution';
 import { NotebookCellEditorService } from './service/notebook-cell-editor-service';
 import { NotebookCellStatusBarService } from './service/notebook-cell-status-bar-service';
-import { MonacoEditorModelFilter } from '@theia/monaco/lib/browser/monaco-text-model-service';
-import { ActiveMonacoEditorContribution } from '@theia/monaco/lib/browser/monaco-editor-service';
+import { MonacoEditorModelFilter } from '@ogun/monaco/lib/browser/monaco-text-model-service';
+import { ActiveMonacoEditorContribution } from '@ogun/monaco/lib/browser/monaco-editor-service';
 import { NotebookCellOpenHandler } from './notebook-cell-open-handler';
-import { SplitEditorContribution } from '@theia/editor/lib/browser/split-editor-contribution';
+import { SplitEditorContribution } from '@ogun/editor/lib/browser/split-editor-contribution';
 import { NotebookEditorSplitContribution } from './notebook-editor-split-contribution';
 
 export default new ContainerModule(bind => {

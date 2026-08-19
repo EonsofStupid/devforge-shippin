@@ -16,19 +16,19 @@
 
 import * as ssh2 from 'ssh2';
 import * as net from 'net';
-import * as fs from '@theia/core/shared/fs-extra';
+import * as fs from '@ogun/core/shared/fs-extra';
 import SftpClient = require('ssh2-sftp-client');
 import SshConfig from 'ssh-config';
-import { Emitter, Event, MessageService, QuickInputService, ILogger } from '@theia/core';
-import { inject, injectable, named } from '@theia/core/shared/inversify';
+import { Emitter, Event, MessageService, QuickInputService, ILogger } from '@ogun/core';
+import { inject, injectable, named } from '@ogun/core/shared/inversify';
 import { RemoteSSHConnectionProvider, RemoteSSHConnectionProviderOptions, SSHConfig } from '../../electron-common/remote-ssh-connection-provider';
 import { RemoteConnectionService } from '../remote-connection-service';
 import { RemoteProxyServerProvider } from '../remote-proxy-server-provider';
 import { RemoteConnection, RemoteExecOptions, RemoteExecResult, RemoteExecTester, RemoteStatusReport } from '../remote-types';
-import { Deferred, timeout } from '@theia/core/lib/common/promise-util';
+import { Deferred, timeout } from '@ogun/core/lib/common/promise-util';
 import { SSHIdentityFileCollector, SSHKey } from './ssh-identity-file-collector';
 import { RemoteSetupService } from '../setup/remote-setup-service';
-import { generateUuid } from '@theia/core/lib/common/uuid';
+import { generateUuid } from '@ogun/core/lib/common/uuid';
 
 @injectable()
 export class RemoteSSHConnectionProviderImpl implements RemoteSSHConnectionProvider {

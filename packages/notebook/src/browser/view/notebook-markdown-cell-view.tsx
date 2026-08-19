@@ -14,16 +14,16 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import * as React from '@theia/core/shared/react';
-import { MarkdownRenderer } from '@theia/core/lib/browser/markdown-rendering/markdown-renderer';
-import { MarkdownStringImpl } from '@theia/core/lib/common/markdown-rendering/markdown-string';
+import * as React from '@ogun/core/shared/react';
+import { MarkdownRenderer } from '@ogun/core/lib/browser/markdown-rendering/markdown-renderer';
+import { MarkdownStringImpl } from '@ogun/core/lib/common/markdown-rendering/markdown-string';
 import { NotebookModel } from '../view-model/notebook-model';
 import { CellRenderer, observeCellHeight } from './notebook-cell-list-view';
 import { NotebookCellModel } from '../view-model/notebook-cell-model';
 import { CellEditor } from './notebook-cell-editor';
-import { inject, injectable } from '@theia/core/shared/inversify';
-import { MonacoEditorServices } from '@theia/monaco/lib/browser/monaco-editor';
-import { CommandRegistry, nls } from '@theia/core';
+import { inject, injectable } from '@ogun/core/shared/inversify';
+import { MonacoEditorServices } from '@ogun/monaco/lib/browser/monaco-editor';
+import { CommandRegistry, nls } from '@ogun/core';
 import { NotebookContextManager } from '../service/notebook-context-manager';
 import { NotebookOptionsService } from '../service/notebook-options';
 import { NotebookCodeCellStatus } from './notebook-code-cell-view';
@@ -31,7 +31,7 @@ import { NotebookEditorFindMatch, NotebookEditorFindMatchOptions } from './noteb
 import * as mark from 'advanced-mark.js';
 import { NotebookCellEditorService } from '../service/notebook-cell-editor-service';
 import { NotebookCellStatusBarService } from '../service/notebook-cell-status-bar-service';
-import { LabelParser } from '@theia/core/lib/browser/label-parser';
+import { LabelParser } from '@ogun/core/lib/browser/label-parser';
 import { NotebookViewModel } from '../view-model/notebook-view-model';
 
 @injectable()

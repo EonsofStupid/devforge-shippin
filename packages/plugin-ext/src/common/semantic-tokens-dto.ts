@@ -20,7 +20,7 @@
 
 // copied and modified from https://github.com/microsoft/vscode/blob/0eb3a02ca2bcfab5faa3dc6e52d7c079efafcab0/src/vs/workbench/api/common/shared/semanticTokensDto.ts
 
-import { BinaryBuffer } from '@theia/core/lib/common/buffer';
+import { BinaryBuffer } from '@ogun/core/lib/common/buffer';
 
 let _isLittleEndian = true;
 let _isLittleEndianComputed = false;

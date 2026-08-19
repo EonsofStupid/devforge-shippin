@@ -12,13 +12,13 @@
 
 ## Description
 
-The `@theia/ai-huggingface` integrates Hugging Face's models with Theia AI.
+The `@ogun/ai-huggingface` integrates Hugging Face's models with Theia AI.
 The Hugging Face API key and the models to use can be configured via preferences.
 Alternatively, the Hugging Face API key can also be provided via the `HUGGINGFACE_API_KEY` environment variable.
 
 ## Additional Information
 
-- [API documentation for `@theia/ai-huggingface`](https://eclipse-theia.github.io/theia/docs/next/modules/_theia_ai-huggingface.html)
+- [API documentation for `@ogun/ai-huggingface`](https://eclipse-theia.github.io/theia/docs/next/modules/_theia_ai-huggingface.html)
 - [Theia - GitHub](https://github.com/eclipse-theia/theia)
 - [Theia - Website](https://theia-ide.org/)
 

@@ -12,7 +12,7 @@
 
 ## Description
 
-The `@theia/ai-core` extension serves as the basis of all AI integration in Theia.
+The `@ogun/ai-core` extension serves as the basis of all AI integration in Theia.
 It manages the integration of language models and provides core concepts like agents, prompts, AI variables, and skills.
 
 ### Skills
@@ -44,12 +44,12 @@ skills/
 - Add `{{skills}}` to an agent's prompt to inject available skills as XML (name and description)
 - Agents can read full skill content using the `getSkillFileContent` tool with the skill name
 
-Enablement of the Theia AI feature is managed via the AI preferences, contributed by `@theia/ai-core-ui`.
-Either include `@theia/ai-core-ui` or bind the included preferences schemas in your Theia based application.
+Enablement of the Theia AI feature is managed via the AI preferences, contributed by `@ogun/ai-core-ui`.
+Either include `@ogun/ai-core-ui` or bind the included preferences schemas in your Theia based application.
 
 ## Additional Information
 
-- [API documentation for `@theia/ai-core`](https://eclipse-theia.github.io/theia/docs/next/modules/_theia_ai-core.html)
+- [API documentation for `@ogun/ai-core`](https://eclipse-theia.github.io/theia/docs/next/modules/_theia_ai-core.html)
 - [Theia - GitHub](https://github.com/eclipse-theia/theia)
 - [Theia - Website](https://theia-ide.org/)
 

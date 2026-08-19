@@ -14,8 +14,8 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { inject, injectable } from '@theia/core/shared/inversify';
-import { nls } from '@theia/core/lib/common/nls';
+import { inject, injectable } from '@ogun/core/shared/inversify';
+import { nls } from '@ogun/core/lib/common/nls';
 import { MCPOAuthCallback } from '../common/mcp-oauth';
 import { MCPOAuthCallbackService } from './mcp-oauth-callback-service';
 

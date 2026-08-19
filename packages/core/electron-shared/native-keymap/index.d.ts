@@ -1,1 +1,1 @@
-export * from '@theia/electron/shared/native-keymap';
+export * from '@ogun/electron/shared/native-keymap';

@@ -14,15 +14,15 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { CancellationToken, generateUuid, ILogger, PreferenceService } from '@theia/core';
-import { FileUri } from '@theia/core/lib/common/file-uri';
-import { inject, injectable, LazyServiceIdentifier } from '@theia/core/shared/inversify';
+import { CancellationToken, generateUuid, ILogger, PreferenceService } from '@ogun/core';
+import { FileUri } from '@ogun/core/lib/common/file-uri';
+import { inject, injectable, LazyServiceIdentifier } from '@ogun/core/shared/inversify';
 import {
     OutputChannel,
     OutputChannelManager,
     OutputChannelSeverity
-} from '@theia/output/lib/browser/output-channel';
-import { WorkspaceService } from '@theia/workspace/lib/browser';
+} from '@ogun/output/lib/browser/output-channel';
+import { WorkspaceService } from '@ogun/workspace/lib/browser';
 import {
     ClaudeCodeClient,
     ClaudeCodeOptions,

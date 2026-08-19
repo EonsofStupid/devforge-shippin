@@ -16,11 +16,11 @@
 
 /* eslint-disable @typescript-eslint/no-explicit-any */
 
-import { injectable, inject } from '@theia/core/shared/inversify';
+import { injectable, inject } from '@ogun/core/shared/inversify';
 import { VariableRegistry } from './variable';
-import URI from '@theia/core/lib/common/uri';
+import URI from '@ogun/core/lib/common/uri';
 import { CommandIdVariables } from '../common/variable-types';
-import { isCancelled } from '@theia/core';
+import { isCancelled } from '@ogun/core';
 
 export interface VariableResolveOptions {
     context?: URI;

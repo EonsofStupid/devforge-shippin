@@ -19,15 +19,15 @@ import * as path from 'path';
 import * as temp from 'temp';
 import * as yargs from 'yargs';
 import yargsFactory = require('yargs/yargs');
-import { ApplicationPackageManager, rebuild } from '@theia/application-manager';
-import { ApplicationProps, DEFAULT_SUPPORTED_API_VERSION } from '@theia/application-package';
+import { ApplicationPackageManager, rebuild } from '@ogun/application-manager';
+import { ApplicationProps, DEFAULT_SUPPORTED_API_VERSION } from '@ogun/application-package';
 import checkDependencies from './check-dependencies';
 import downloadPlugins from './download-plugins';
 import runTest from './run-test';
 import { RateLimiter } from 'limiter';
-import { LocalizationManager, extract } from '@theia/localization-manager';
-import { NodeRequestService } from '@theia/request/lib/node-request-service';
-import { ExtensionIdMatchesFilterFactory, OVSX_RATE_LIMIT, OVSXClient, OVSXHttpClient, OVSXRouterClient, RequestContainsFilterFactory } from '@theia/ovsx-client';
+import { LocalizationManager, extract } from '@ogun/localization-manager';
+import { NodeRequestService } from '@ogun/request/lib/node-request-service';
+import { ExtensionIdMatchesFilterFactory, OVSX_RATE_LIMIT, OVSXClient, OVSXHttpClient, OVSXRouterClient, RequestContainsFilterFactory } from '@ogun/ovsx-client';
 
 const { executablePath } = require('puppeteer');
 
@@ -223,7 +223,7 @@ async function theiaCli(): Promise<void> {
             handler: ({ suppress }) => {
                 checkDependencies({
                     workspaces: undefined,
-                    include: ['@theia/**'],
+                    include: ['@ogun/**'],
                     exclude: [],
                     skipHoisted: true,
                     skipUniqueness: false,
@@ -281,7 +281,7 @@ async function theiaCli(): Promise<void> {
                 },
                 'include': {
                     alias: 'i',
-                    describe: 'Glob pattern of dependencies\' package names to be included, e.g. -i "@theia/**"',
+                    describe: 'Glob pattern of dependencies\' package names to be included, e.g. -i "@ogun/**"',
                     array: true,
                     default: ['**']
                 },
@@ -306,7 +306,7 @@ async function theiaCli(): Promise<void> {
                 },
                 'skip-single-theia-version': {
                     alias: 't',
-                    describe: 'Skip checking whether all @theia/* dependencies are resolved to a single version',
+                    describe: 'Skip checking whether all @ogun/* dependencies are resolved to a single version',
                     boolean: true,
                     default: false
                 },
@@ -661,7 +661,7 @@ async function theiaCli(): Promise<void> {
                 },
             },
             handler: async options => {
-                const ffmpeg = await import('@theia/ffmpeg');
+                const ffmpeg = await import('@ogun/ffmpeg');
                 await ffmpeg.replaceFfmpeg(options);
             },
         })
@@ -690,7 +690,7 @@ async function theiaCli(): Promise<void> {
                 },
             },
             handler: async options => {
-                const ffmpeg = await import('@theia/ffmpeg');
+                const ffmpeg = await import('@ogun/ffmpeg');
                 await ffmpeg.checkFfmpeg(options);
             },
         })

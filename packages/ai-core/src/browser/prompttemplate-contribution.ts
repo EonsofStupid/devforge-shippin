@@ -14,14 +14,14 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { inject, injectable } from '@theia/core/shared/inversify';
-import { GrammarDefinition, GrammarDefinitionProvider, LanguageGrammarDefinitionContribution, TextmateRegistry } from '@theia/monaco/lib/browser/textmate';
+import { inject, injectable } from '@ogun/core/shared/inversify';
+import { GrammarDefinition, GrammarDefinitionProvider, LanguageGrammarDefinitionContribution, TextmateRegistry } from '@ogun/monaco/lib/browser/textmate';
 import * as monaco from '@theia/monaco-editor-core';
-import { Command, CommandContribution, CommandRegistry, nls } from '@theia/core';
-import { TabBarToolbarContribution, TabBarToolbarRegistry } from '@theia/core/lib/browser/shell/tab-bar-toolbar';
+import { Command, CommandContribution, CommandRegistry, nls } from '@ogun/core';
+import { TabBarToolbarContribution, TabBarToolbarRegistry } from '@ogun/core/lib/browser/shell/tab-bar-toolbar';
 
-import { codicon, Widget } from '@theia/core/lib/browser';
-import { EditorWidget, ReplaceOperation } from '@theia/editor/lib/browser';
+import { codicon, Widget } from '@ogun/core/lib/browser';
+import { EditorWidget, ReplaceOperation } from '@ogun/editor/lib/browser';
 import { PromptService, PromptText, ToolInvocationRegistry } from '../common';
 import { ProviderResult } from '@theia/monaco-editor-core/esm/vs/editor/common/languages';
 import { AIVariableService } from '../common/variable-service';

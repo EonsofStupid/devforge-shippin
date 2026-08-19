@@ -14,22 +14,22 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { DebuggerDescription, DebugPath, DebugService, DynamicDebugConfigurationProvider } from '@theia/debug/lib/common/debug-service';
-import debounce = require('@theia/core/shared/lodash.debounce');
-import { deepClone, Emitter, Event, nls, ILogger } from '@theia/core';
-import { Disposable, DisposableCollection } from '@theia/core/lib/common/disposable';
-import { DebugConfiguration } from '@theia/debug/lib/common/debug-configuration';
-import { IJSONSchema, IJSONSchemaSnippet } from '@theia/core/lib/common/json-schema';
+import { DebuggerDescription, DebugPath, DebugService, DynamicDebugConfigurationProvider } from '@ogun/debug/lib/common/debug-service';
+import debounce = require('@ogun/core/shared/lodash.debounce');
+import { deepClone, Emitter, Event, nls, ILogger } from '@ogun/core';
+import { Disposable, DisposableCollection } from '@ogun/core/lib/common/disposable';
+import { DebugConfiguration } from '@ogun/debug/lib/common/debug-configuration';
+import { IJSONSchema, IJSONSchemaSnippet } from '@ogun/core/lib/common/json-schema';
 import { PluginDebugAdapterContribution } from './plugin-debug-adapter-contribution';
 import { PluginDebugConfigurationProvider } from './plugin-debug-configuration-provider';
-import { injectable, inject, postConstruct, named } from '@theia/core/shared/inversify';
-import { WebSocketConnectionProvider } from '@theia/core/lib/browser/messaging/ws-connection-provider';
-import { WorkspaceService } from '@theia/workspace/lib/browser';
-import { CommandIdVariables } from '@theia/variable-resolver/lib/common/variable-types';
+import { injectable, inject, postConstruct, named } from '@ogun/core/shared/inversify';
+import { WebSocketConnectionProvider } from '@ogun/core/lib/browser/messaging/ws-connection-provider';
+import { WorkspaceService } from '@ogun/workspace/lib/browser';
+import { CommandIdVariables } from '@ogun/variable-resolver/lib/common/variable-types';
 import { DebugConfigurationProviderTriggerKind } from '../../../common/plugin-api-rpc';
 import { DebuggerContribution } from '../../../common/plugin-protocol';
-import { DebugRequestTypes } from '@theia/debug/lib/browser/debug-session-connection';
-import * as theia from '@theia/plugin';
+import { DebugRequestTypes } from '@ogun/debug/lib/browser/debug-session-connection';
+import * as theia from '@ogun/plugin';
 
 /**
  * Debug service to work with plugin and extension contributions.

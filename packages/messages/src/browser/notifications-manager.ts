@@ -14,17 +14,17 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { injectable, inject, postConstruct } from '@theia/core/shared/inversify';
-import { MessageClient, MessageType, Message as PlainMessage, ProgressMessage, ProgressUpdate, CancellationToken } from '@theia/core/lib/common';
-import { deepClone } from '@theia/core/lib/common/objects';
-import { Emitter } from '@theia/core';
-import { Deferred } from '@theia/core/lib/common/promise-util';
+import { injectable, inject, postConstruct } from '@ogun/core/shared/inversify';
+import { MessageClient, MessageType, Message as PlainMessage, ProgressMessage, ProgressUpdate, CancellationToken } from '@ogun/core/lib/common';
+import { deepClone } from '@ogun/core/lib/common/objects';
+import { Emitter } from '@ogun/core';
+import { Deferred } from '@ogun/core/lib/common/promise-util';
 import { Md5 } from 'ts-md5';
-import throttle = require('@theia/core/shared/lodash.throttle');
+import throttle = require('@ogun/core/shared/lodash.throttle');
 import { NotificationPreferences } from '../common/notification-preferences';
-import { ContextKeyService, ContextKey } from '@theia/core/lib/browser/context-key-service';
-import { OpenerService } from '@theia/core/lib/browser';
-import URI from '@theia/core/lib/common/uri';
+import { ContextKeyService, ContextKey } from '@ogun/core/lib/browser/context-key-service';
+import { OpenerService } from '@ogun/core/lib/browser';
+import URI from '@ogun/core/lib/common/uri';
 import { NotificationContentRenderer } from './notification-content-renderer';
 
 export interface NotificationUpdateEvent {

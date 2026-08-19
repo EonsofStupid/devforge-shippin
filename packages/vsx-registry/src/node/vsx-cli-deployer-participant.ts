@@ -14,12 +14,12 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { inject, injectable } from '@theia/core/shared/inversify';
-import { PluginDeployerParticipant, PluginDeployerStartContext } from '@theia/plugin-ext';
+import { inject, injectable } from '@ogun/core/shared/inversify';
+import { PluginDeployerParticipant, PluginDeployerStartContext } from '@ogun/plugin-ext';
 import { VsxCli } from './vsx-cli';
 import { VSXExtensionUri } from '../common';
 import * as fs from 'fs';
-import { FileUri } from '@theia/core/lib/node';
+import { FileUri } from '@ogun/core/lib/node';
 import * as path from 'path';
 
 @injectable()

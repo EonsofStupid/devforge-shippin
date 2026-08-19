@@ -23,13 +23,13 @@ import {
     TaskPresentationOptionsDTO
 } from '../../common/plugin-api-rpc';
 import { RPCProtocol } from '../../common/rpc-protocol';
-import { Disposable, DisposableCollection } from '@theia/core/lib/common';
-import { TaskProviderRegistry, TaskResolverRegistry, TaskProvider, TaskResolver } from '@theia/task/lib/browser/task-contribution';
-import { interfaces } from '@theia/core/shared/inversify';
-import { TaskInfo, TaskExitedEvent, TaskConfiguration, TaskOutputPresentation, RevealKind, PanelKind } from '@theia/task/lib/common/task-protocol';
-import { TaskWatcher } from '@theia/task/lib/common/task-watcher';
-import { TaskService } from '@theia/task/lib/browser/task-service';
-import { TaskDefinitionRegistry } from '@theia/task/lib/browser';
+import { Disposable, DisposableCollection } from '@ogun/core/lib/common';
+import { TaskProviderRegistry, TaskResolverRegistry, TaskProvider, TaskResolver } from '@ogun/task/lib/browser/task-contribution';
+import { interfaces } from '@ogun/core/shared/inversify';
+import { TaskInfo, TaskExitedEvent, TaskConfiguration, TaskOutputPresentation, RevealKind, PanelKind } from '@ogun/task/lib/common/task-protocol';
+import { TaskWatcher } from '@ogun/task/lib/common/task-watcher';
+import { TaskService } from '@ogun/task/lib/browser/task-service';
+import { TaskDefinitionRegistry } from '@ogun/task/lib/browser';
 
 const revealKindMap = new Map<number | RevealKind, RevealKind | number>(
     [

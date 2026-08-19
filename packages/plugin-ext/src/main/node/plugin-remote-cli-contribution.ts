@@ -14,9 +14,9 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { MaybePromise } from '@theia/core';
-import { RemoteCliContext, RemoteCliContribution } from '@theia/core/lib/node/remote/remote-cli-contribution';
-import { inject, injectable } from '@theia/core/shared/inversify';
+import { MaybePromise } from '@ogun/core';
+import { RemoteCliContext, RemoteCliContribution } from '@ogun/core/lib/node/remote/remote-cli-contribution';
+import { inject, injectable } from '@ogun/core/shared/inversify';
 import { PluginCliContribution } from './plugin-cli-contribution';
 
 @injectable()

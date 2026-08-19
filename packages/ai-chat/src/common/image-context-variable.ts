@@ -18,8 +18,8 @@ import {
     AIVariable,
     AIVariableResolutionRequest,
     ResolvedAIContextVariable
-} from '@theia/ai-core';
-import { nls } from '@theia/core';
+} from '@ogun/ai-core';
+import { nls } from '@ogun/core';
 import { ParsedChatRequestPart, ParsedChatRequestVariablePart } from './parsed-chat-request';
 
 export const IMAGE_CONTEXT_VARIABLE: AIVariable = {

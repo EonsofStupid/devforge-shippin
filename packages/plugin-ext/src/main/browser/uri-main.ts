@@ -14,12 +14,12 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { Disposable, URI } from '@theia/core';
+import { Disposable, URI } from '@ogun/core';
 import { MAIN_RPC_CONTEXT, UriExt, UriMain } from '../../common';
 import { RPCProtocol } from '../../common/rpc-protocol';
-import { interfaces } from '@theia/core/shared/inversify';
-import { OpenHandler, OpenerOptions, OpenerService } from '@theia/core/lib/browser';
-import { FrontendApplicationConfigProvider } from '@theia/core/lib/browser/frontend-application-config-provider';
+import { interfaces } from '@ogun/core/shared/inversify';
+import { OpenHandler, OpenerOptions, OpenerService } from '@ogun/core/lib/browser';
+import { FrontendApplicationConfigProvider } from '@ogun/core/lib/browser/frontend-application-config-provider';
 import { HostedPluginSupport } from '../../hosted/browser/hosted-plugin';
 
 export class UriMainImpl implements UriMain, Disposable {

@@ -14,16 +14,16 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import * as React from '@theia/core/shared/react';
-import { inject, injectable, postConstruct } from '@theia/core/shared/inversify';
-import { Emitter } from '@theia/core/lib/common/event';
-import { TabBarToolbarContribution, TabBarToolbarRegistry } from '@theia/core/lib/browser/shell/tab-bar-toolbar';
-import { SelectComponent, SelectOption } from '@theia/core/lib/browser/widgets/select-component';
-import { WidgetManager } from '@theia/core/lib/browser/widget-manager';
+import * as React from '@ogun/core/shared/react';
+import { inject, injectable, postConstruct } from '@ogun/core/shared/inversify';
+import { Emitter } from '@ogun/core/lib/common/event';
+import { TabBarToolbarContribution, TabBarToolbarRegistry } from '@ogun/core/lib/browser/shell/tab-bar-toolbar';
+import { SelectComponent, SelectOption } from '@ogun/core/lib/browser/widgets/select-component';
+import { WidgetManager } from '@ogun/core/lib/browser/widget-manager';
 import { OutputWidget } from './output-widget';
 import { OutputCommands } from './output-commands';
 import { OutputChannelManager } from './output-channel';
-import { nls } from '@theia/core/lib/common/nls';
+import { nls } from '@ogun/core/lib/common/nls';
 
 @injectable()
 export class OutputToolbarContribution implements TabBarToolbarContribution {

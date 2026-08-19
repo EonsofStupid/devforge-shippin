@@ -14,7 +14,7 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { Disposable, Emitter, Event } from '@theia/core';
+import { Disposable, Emitter, Event } from '@ogun/core';
 
 const CHECK_INACTIVITY_LIMIT = 30;
 const CHECK_INACTIVITY_INTERVAL = 1000;

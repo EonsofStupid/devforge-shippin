@@ -14,9 +14,9 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { ContainerModule } from '@theia/core/shared/inversify';
-import { ConnectionHandler, PreferenceContribution, RpcConnectionHandler } from '@theia/core';
-import { BackendRequestAllowedContribution } from '@theia/core/lib/node';
+import { ContainerModule } from '@ogun/core/shared/inversify';
+import { ConnectionHandler, PreferenceContribution, RpcConnectionHandler } from '@ogun/core';
+import { BackendRequestAllowedContribution } from '@ogun/core/lib/node';
 import { AIRegistryConfiguration } from '../common/ai-registry-configuration';
 import { SkillInstallBackendService, SkillInstallBackendServicePath, SkillInstallClient } from '../common/skill/skill-install-protocol';
 import { SkillRegistryPreferencesSchema } from '../common/skill/skill-registry-preferences';

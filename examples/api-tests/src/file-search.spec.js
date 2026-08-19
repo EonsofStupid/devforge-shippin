@@ -19,10 +19,10 @@ describe('file-search', function () {
 
     const { assert } = chai;
 
-    const Uri = require('@theia/core/lib/common/uri');
-    const { QuickFileOpenService } = require('@theia/file-search/lib/browser/quick-file-open');
-    const { QuickFileSelectService } = require('@theia/file-search/lib/browser/quick-file-select-service');
-    const { CancellationTokenSource } = require('@theia/core/lib/common/cancellation');
+    const Uri = require('@ogun/core/lib/common/uri');
+    const { QuickFileOpenService } = require('@ogun/file-search/lib/browser/quick-file-open');
+    const { QuickFileSelectService } = require('@ogun/file-search/lib/browser/quick-file-select-service');
+    const { CancellationTokenSource } = require('@ogun/core/lib/common/cancellation');
 
     /** @type {import('inversify').Container} */
     const container = window['theia'].container;
@@ -37,9 +37,9 @@ describe('file-search', function () {
 
             it('should compare two quick-open-items by `label`', () => {
 
-                /** @type import ('@theia/file-search/lib/browser/quick-file-open').FileQuickPickItem*/
+                /** @type import ('@ogun/file-search/lib/browser/quick-file-open').FileQuickPickItem*/
                 const a = { label: 'a', uri: new Uri.default('b') };
-                /** @type import ('@theia/file-search/lib/browser/quick-file-open').FileQuickPickItem*/
+                /** @type import ('@ogun/file-search/lib/browser/quick-file-open').FileQuickPickItem*/
                 const b = { label: 'b', uri: new Uri.default('a') };
 
                 assert.deepEqual([a, b].sort(sortByCompareItems), [a, b], 'a should be before b');
@@ -49,9 +49,9 @@ describe('file-search', function () {
 
             it('should compare two quick-open-items by `uri`', () => {
 
-                /** @type import ('@theia/file-search/lib/browser/quick-file-open').FileQuickPickItem*/
+                /** @type import ('@ogun/file-search/lib/browser/quick-file-open').FileQuickPickItem*/
                 const a = { label: 'a', uri: new Uri.default('a') };
-                /** @type import ('@theia/file-search/lib/browser/quick-file-open').FileQuickPickItem*/
+                /** @type import ('@ogun/file-search/lib/browser/quick-file-open').FileQuickPickItem*/
                 const b = { label: 'a', uri: new Uri.default('b') };
                 assert.deepEqual([a, b].sort(sortByCompareItems), [a, b], 'a should be before b');
                 assert.deepEqual([b, a].sort(sortByCompareItems), [a, b], 'a should be before b');
@@ -62,9 +62,9 @@ describe('file-search', function () {
                 const exactMatch = 'almost_absurdly_long_file_name_with_many_parts.file';
                 const veryGoodMatch = 'almost_absurdly_long_file_name_with_many_parts_plus_one.file';
                 quickFileOpenService['filterAndRange'] = { filter: exactMatch };
-                /** @type import ('@theia/file-search/lib/browser/quick-file-open').FileQuickPickItem*/
+                /** @type import ('@ogun/file-search/lib/browser/quick-file-open').FileQuickPickItem*/
                 const a = { label: exactMatch, uri: new Uri.default(exactMatch) };
-                /** @type import ('@theia/file-search/lib/browser/quick-file-open').FileQuickPickItem*/
+                /** @type import ('@ogun/file-search/lib/browser/quick-file-open').FileQuickPickItem*/
                 const b = { label: veryGoodMatch, uri: new Uri.default(veryGoodMatch) };
                 assert.deepEqual([a, b].sort(sortByCompareItems), [a, b], 'a should be before b');
                 assert.deepEqual([b, a].sort(sortByCompareItems), [a, b], 'a should be before b');

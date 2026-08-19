@@ -14,8 +14,8 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { ContainerModule } from '@theia/core/shared/inversify';
-import { ConnectionHandler, RpcConnectionHandler } from '@theia/core/lib/common';
+import { ContainerModule } from '@ogun/core/shared/inversify';
+import { ConnectionHandler, RpcConnectionHandler } from '@ogun/core/lib/common';
 import { SearchInWorkspaceServer, SearchInWorkspaceClient, SIW_WS_PATH } from '../common/search-in-workspace-interface';
 import { RipgrepSearchInWorkspaceServer, RgPath } from './ripgrep-search-in-workspace-server';
 import { rgPath } from '@vscode/ripgrep';

@@ -14,8 +14,8 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { ContainerModule } from '@theia/core/shared/inversify';
-import { ConnectionHandler, JsonRpcConnectionHandler } from '@theia/core/lib/common/messaging';
+import { ContainerModule } from '@ogun/core/shared/inversify';
+import { ConnectionHandler, JsonRpcConnectionHandler } from '@ogun/core/lib/common/messaging';
 import { ShellExecutionServer, shellExecutionPath } from '../common/shell-execution-server';
 import { ShellExecutionServerImpl } from './shell-execution-server-impl';
 

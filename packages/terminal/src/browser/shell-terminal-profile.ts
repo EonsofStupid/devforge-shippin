@@ -14,7 +14,7 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { URI } from '@theia/core';
+import { URI } from '@ogun/core';
 import { TerminalService } from './base/terminal-service';
 import { TerminalWidget, TerminalWidgetOptions } from './base/terminal-widget';
 import { TerminalProfile } from './terminal-profile-service';

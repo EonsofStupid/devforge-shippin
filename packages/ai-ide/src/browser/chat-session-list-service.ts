@@ -14,12 +14,12 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { ChatService, ChatSession, ChatSessionMetadata, ChatSessionStatus } from '@theia/ai-chat';
-import { PERSISTED_SESSION_LIMIT_PREF, SESSION_STORAGE_PREF } from '@theia/ai-chat/lib/common/ai-chat-preferences';
-import { ChatViewWidget } from '@theia/ai-chat-ui/lib/browser/chat-view-widget';
-import { DisposableCollection, Emitter, Event, PreferenceService } from '@theia/core';
-import { ApplicationShell } from '@theia/core/lib/browser';
-import { inject, injectable, postConstruct } from '@theia/core/shared/inversify';
+import { ChatService, ChatSession, ChatSessionMetadata, ChatSessionStatus } from '@ogun/ai-chat';
+import { PERSISTED_SESSION_LIMIT_PREF, SESSION_STORAGE_PREF } from '@ogun/ai-chat/lib/common/ai-chat-preferences';
+import { ChatViewWidget } from '@ogun/ai-chat-ui/lib/browser/chat-view-widget';
+import { DisposableCollection, Emitter, Event, PreferenceService } from '@ogun/core';
+import { ApplicationShell } from '@ogun/core/lib/browser';
+import { inject, injectable, postConstruct } from '@ogun/core/shared/inversify';
 import { UnreadStateProvider } from './chat-session-item';
 import { SectionedSessions, SessionRow, parentIdOf } from './chat-session-list-components';
 

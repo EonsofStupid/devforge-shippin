@@ -14,18 +14,18 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import * as React from '@theia/core/shared/react';
-import { inject, injectable, postConstruct } from '@theia/core/shared/inversify';
-import { codicon } from '@theia/core/lib/browser';
-import { DisposableCollection, Emitter, Event } from '@theia/core';
-import { nls } from '@theia/core/lib/common/nls';
-import { PreferenceService } from '@theia/core/lib/common';
-import { ChatBannerProvider } from '@theia/ai-chat-ui/lib/browser/chat-banner-provider';
+import * as React from '@ogun/core/shared/react';
+import { inject, injectable, postConstruct } from '@ogun/core/shared/inversify';
+import { codicon } from '@ogun/core/lib/browser';
+import { DisposableCollection, Emitter, Event } from '@ogun/core';
+import { nls } from '@ogun/core/lib/common/nls';
+import { PreferenceService } from '@ogun/core/lib/common';
+import { ChatBannerProvider } from '@ogun/ai-chat-ui/lib/browser/chat-banner-provider';
 import {
     DEFAULT_TOOL_CONFIRMATION_PREFERENCE,
     TOOL_CONFIRMATION_PREFERENCE,
     ToolConfirmationMode
-} from '@theia/ai-chat/lib/common/chat-tool-preferences';
+} from '@ogun/ai-chat/lib/common/chat-tool-preferences';
 
 interface AiSessionOverride {
     /** Human-readable label, e.g. "Default tool confirmation: always_allow". */

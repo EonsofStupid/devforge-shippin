@@ -49,7 +49,7 @@ describe('basic-example-spec', function (): void {
         }
 
         // Set the backend config before loading the server module, matching what main.js does
-        const { BackendApplicationConfigProvider } = require('@theia/core/lib/node/backend-application-config-provider');
+        const { BackendApplicationConfigProvider } = require('@ogun/core/lib/node/backend-application-config-provider');
         BackendApplicationConfigProvider.set({
             singleInstance: false,
             configurationFolder: '.theia'

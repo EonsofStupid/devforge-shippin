@@ -14,14 +14,14 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import URI from '@theia/core/lib/common/uri';
-import { injectable, inject, named } from '@theia/core/shared/inversify';
+import URI from '@ogun/core/lib/common/uri';
+import { injectable, inject, named } from '@ogun/core/shared/inversify';
 import { WorkspaceUtils } from './workspace-utils';
 import { WorkspaceService } from './workspace-service';
-import { UriCommandHandler } from '@theia/core/lib/common/uri-command-handler';
-import { FileSystemUtils } from '@theia/filesystem/lib/common/filesystem-utils';
-import { FileService } from '@theia/filesystem/lib/browser/file-service';
-import { ILogger } from '@theia/core';
+import { UriCommandHandler } from '@ogun/core/lib/common/uri-command-handler';
+import { FileSystemUtils } from '@ogun/filesystem/lib/common/filesystem-utils';
+import { FileService } from '@ogun/filesystem/lib/browser/file-service';
+import { ILogger } from '@ogun/core';
 
 @injectable()
 export class WorkspaceDuplicateHandler implements UriCommandHandler<URI[]> {

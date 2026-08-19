@@ -14,15 +14,15 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { inject, injectable, postConstruct } from '@theia/core/shared/inversify';
-import { Disposable, DisposableCollection, Emitter, Event, nls, PreferenceChange, PreferenceService } from '@theia/core';
-import { HoverService } from '@theia/core/lib/browser';
-import { TreeElement } from '@theia/core/lib/browser/source-tree';
-import { ExtensionsSourceContribution, SearchContext, SearchResult } from '@theia/vsx-registry/lib/browser/extensions-source-contribution';
-import { MCP_SERVERS_PREF } from '@theia/ai-mcp/lib/common/mcp-preferences';
-import { MCPServerDescription } from '@theia/ai-mcp/lib/common/mcp-server-manager';
-import { MCPServersPreference, MCPServersPreferenceValue } from '@theia/ai-mcp/lib/common/mcp-server-preference-validator';
-import { MCPServerInstallDialogFactory } from '@theia/ai-mcp/lib/browser/mcp-server-install-dialog';
+import { inject, injectable, postConstruct } from '@ogun/core/shared/inversify';
+import { Disposable, DisposableCollection, Emitter, Event, nls, PreferenceChange, PreferenceService } from '@ogun/core';
+import { HoverService } from '@ogun/core/lib/browser';
+import { TreeElement } from '@ogun/core/lib/browser/source-tree';
+import { ExtensionsSourceContribution, SearchContext, SearchResult } from '@ogun/vsx-registry/lib/browser/extensions-source-contribution';
+import { MCP_SERVERS_PREF } from '@ogun/ai-mcp/lib/common/mcp-preferences';
+import { MCPServerDescription } from '@ogun/ai-mcp/lib/common/mcp-server-manager';
+import { MCPServersPreference, MCPServersPreferenceValue } from '@ogun/ai-mcp/lib/common/mcp-server-preference-validator';
+import { MCPServerInstallDialogFactory } from '@ogun/ai-mcp/lib/browser/mcp-server-install-dialog';
 import { RegistryFetchService } from '../../common/registry-fetch-service';
 import { RegistrySearchFilter } from '../../common/registry-search-filter';
 import { ResolvedRegistryEntry } from '../../common/mcp/mcp-registry-types';

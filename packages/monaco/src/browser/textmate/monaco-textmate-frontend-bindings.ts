@@ -14,9 +14,9 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { interfaces } from '@theia/core/shared/inversify';
-import { FrontendApplicationContribution, isBasicWasmSupported } from '@theia/core/lib/browser';
-import { bindRootContributionProvider } from '@theia/core';
+import { interfaces } from '@ogun/core/shared/inversify';
+import { FrontendApplicationContribution, isBasicWasmSupported } from '@ogun/core/lib/browser';
+import { bindRootContributionProvider } from '@ogun/core';
 import { TextmateRegistry } from './textmate-registry';
 import { LanguageGrammarDefinitionContribution } from './textmate-contribution';
 import { MonacoTextmateService } from './monaco-textmate-service';

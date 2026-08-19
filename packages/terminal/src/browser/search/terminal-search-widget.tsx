@@ -14,14 +14,14 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { injectable, inject, postConstruct } from '@theia/core/shared/inversify';
-import { ReactWidget } from '@theia/core/lib/browser/widgets/react-widget';
-import * as React from '@theia/core/shared/react';
+import { injectable, inject, postConstruct } from '@ogun/core/shared/inversify';
+import { ReactWidget } from '@ogun/core/lib/browser/widgets/react-widget';
+import * as React from '@ogun/core/shared/react';
 import '../../../src/browser/style/terminal-search.css';
 import { Terminal } from 'xterm';
 import { SearchAddon, ISearchOptions } from 'xterm-addon-search';
-import { codicon, Key } from '@theia/core/lib/browser';
-import { nls } from '@theia/core';
+import { codicon, Key } from '@ogun/core/lib/browser';
+import { nls } from '@ogun/core';
 
 export const TERMINAL_SEARCH_WIDGET_FACTORY_ID = 'terminal-search';
 export const TerminalSearchWidgetFactory = Symbol('TerminalSearchWidgetFactory');

@@ -14,7 +14,7 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { MonacoEditor } from '@theia/monaco/lib/browser/monaco-editor';
+import { MonacoEditor } from '@ogun/monaco/lib/browser/monaco-editor';
 
 export const DebugEditor = Symbol('DebugEditor');
 export type DebugEditor = MonacoEditor;

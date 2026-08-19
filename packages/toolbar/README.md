@@ -12,7 +12,7 @@
 
 ## Description
 
-The `@theia/toolbar` extension contributes a global toolbar to the application shell. The toolbar supplements the `Command Palette` and allows users to easily add, remove, and rearrange toolbar items to their liking. The toolbar is hidden by default and ships with a default layout which can be overridden by downstream applications. Extenders can also contribute custom widgets to the toolbar through a contribution point.
+The `@ogun/toolbar` extension contributes a global toolbar to the application shell. The toolbar supplements the `Command Palette` and allows users to easily add, remove, and rearrange toolbar items to their liking. The toolbar is hidden by default and ships with a default layout which can be overridden by downstream applications. Extenders can also contribute custom widgets to the toolbar through a contribution point.
 
 ### Icon Management
 
@@ -25,7 +25,7 @@ A util npm script is available: `npm run update:icons`.
 
 An example toolbar custom widget and layout override can be found in [here](https://github.com/eclipse-theia/theia/tree/master/examples/api-samples/src/browser/toolbar).
 
-- [API documentation for `@theia/toolbar`](https://eclipse-theia.github.io/theia/docs/next/modules/_theia_toolbar.html)
+- [API documentation for `@ogun/toolbar`](https://eclipse-theia.github.io/theia/docs/next/modules/_theia_toolbar.html)
 - [Theia - GitHub](https://github.com/eclipse-theia/theia)
 - [Theia - Website](https://theia-ide.org/)
 

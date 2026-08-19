@@ -56,7 +56,7 @@ that are bound as `MemoryProvider` contributions.
 
 ## Additional Information
 
-- [API documentation for `@theia/memory-inspector`](https://eclipse-theia.github.io/theia/docs/next/modules/_theia_memory-inspector.html)
+- [API documentation for `@ogun/memory-inspector`](https://eclipse-theia.github.io/theia/docs/next/modules/_theia_memory-inspector.html)
 - [Theia - GitHub](https://github.com/eclipse-theia/theia)
 - [Theia - Website](https://theia-ide.org/)
 

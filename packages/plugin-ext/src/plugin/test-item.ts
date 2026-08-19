@@ -14,10 +14,10 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import type * as theia from '@theia/plugin';
+import type * as theia from '@ogun/plugin';
 
-import { TreeCollection, observableProperty } from '@theia/test/lib/common/collections';
-import { TreeDeltaBuilder } from '@theia/test/lib/common/tree-delta';
+import { TreeCollection, observableProperty } from '@ogun/test/lib/common/collections';
+import { TreeDeltaBuilder } from '@ogun/test/lib/common/tree-delta';
 import { TestControllerImpl } from './tests';
 
 export class TestTagImpl {

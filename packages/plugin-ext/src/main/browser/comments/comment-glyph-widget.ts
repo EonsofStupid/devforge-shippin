@@ -13,7 +13,7 @@
 //
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
-import { Disposable } from '@theia/core/lib/common';
+import { Disposable } from '@ogun/core/lib/common';
 import * as monaco from '@theia/monaco-editor-core';
 
 /*---------------------------------------------------------------------------------------------

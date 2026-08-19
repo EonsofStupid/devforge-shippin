@@ -14,13 +14,13 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { inject, injectable } from '@theia/core/shared/inversify';
-import URI from '@theia/core/lib/common/uri';
-import { DiffUris } from '@theia/core/lib/browser/diff-uris';
-import { open, OpenerService, OpenerOptions } from '@theia/core/lib/browser';
-import { MessageService } from '@theia/core/lib/common/message-service';
-import { FileService } from '@theia/filesystem/lib/browser/file-service';
-import { nls } from '@theia/core';
+import { inject, injectable } from '@ogun/core/shared/inversify';
+import URI from '@ogun/core/lib/common/uri';
+import { DiffUris } from '@ogun/core/lib/browser/diff-uris';
+import { open, OpenerService, OpenerOptions } from '@ogun/core/lib/browser';
+import { MessageService } from '@ogun/core/lib/common/message-service';
+import { FileService } from '@ogun/filesystem/lib/browser/file-service';
+import { nls } from '@ogun/core';
 
 @injectable()
 export class DiffService {

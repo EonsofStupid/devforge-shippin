@@ -20,11 +20,11 @@
  *--------------------------------------------------------------------------------------------*/
 // some code copied and modified from https://github.com/microsoft/vscode/blob/3aab025eaebde6c9544293b6c7554f3f583e15d0/src/vs/workbench/contrib/timeline/common/timeline.ts
 
-import { Command, Disposable, Event } from '@theia/core/lib/common';
-import { URI } from '@theia/core/shared/vscode-uri';
-import { ThemeIcon } from '@theia/core/lib/common/theme';
-import { MarkdownString } from '@theia/core/lib/common/markdown-rendering';
-import { AccessibilityInformation } from '@theia/core/lib/common/accessibility';
+import { Command, Disposable, Event } from '@ogun/core/lib/common';
+import { URI } from '@ogun/core/shared/vscode-uri';
+import { ThemeIcon } from '@ogun/core/lib/common/theme';
+import { MarkdownString } from '@ogun/core/lib/common/markdown-rendering';
+import { AccessibilityInformation } from '@ogun/core/lib/common/accessibility';
 
 export interface TimelineItem {
     source: string;

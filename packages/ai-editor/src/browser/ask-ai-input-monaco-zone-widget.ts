@@ -14,11 +14,11 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { ChatRequest } from '@theia/ai-chat';
-import { Disposable } from '@theia/core/lib/common/disposable';
-import { Emitter, Event } from '@theia/core/lib/common/event';
+import { ChatRequest } from '@ogun/ai-chat';
+import { Disposable } from '@ogun/core/lib/common/disposable';
+import { Emitter, Event } from '@ogun/core/lib/common/event';
 import * as monaco from '@theia/monaco-editor-core';
-import { MonacoEditorZoneWidget } from '@theia/monaco/lib/browser/monaco-editor-zone-widget';
+import { MonacoEditorZoneWidget } from '@ogun/monaco/lib/browser/monaco-editor-zone-widget';
 import { AskAIInputFactory, AskAIInputWidget } from './ask-ai-input-widget';
 
 /**

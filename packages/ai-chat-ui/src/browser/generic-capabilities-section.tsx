@@ -14,10 +14,10 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import * as React from '@theia/core/shared/react';
-import { nls } from '@theia/core';
-import { HoverService } from '@theia/core/lib/browser';
-import { GenericCapabilitySelections } from '@theia/ai-core';
+import * as React from '@ogun/core/shared/react';
+import { nls } from '@ogun/core';
+import { HoverService } from '@ogun/core/lib/browser';
+import { GenericCapabilitySelections } from '@ogun/ai-core';
 import { AvailableGenericCapabilities } from './generic-capabilities-service';
 import { GenericCapabilitiesTree, ServerToolsSection } from './generic-capabilities-tree';
 

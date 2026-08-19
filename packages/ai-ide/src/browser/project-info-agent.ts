@@ -13,11 +13,11 @@
 //
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
-import { AbstractStreamParsingChatAgent } from '@theia/ai-chat';
-import { LanguageModelRequirement } from '@theia/ai-core';
-import { injectable } from '@theia/core/shared/inversify';
+import { AbstractStreamParsingChatAgent } from '@ogun/ai-chat';
+import { LanguageModelRequirement } from '@ogun/ai-core';
+import { injectable } from '@ogun/core/shared/inversify';
 import { projectInfoSystemVariants, projectInfoTemplateVariants } from '../common/project-info-prompt-template';
-import { nls } from '@theia/core';
+import { nls } from '@ogun/core';
 
 @injectable()
 export class ProjectInfoAgent extends AbstractStreamParsingChatAgent {

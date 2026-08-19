@@ -16,10 +16,10 @@
 
 /* eslint-disable @typescript-eslint/no-explicit-any */
 
-import { inject, injectable, postConstruct, named } from '@theia/core/shared/inversify';
-import URI from '@theia/core/lib/common/uri';
+import { inject, injectable, postConstruct, named } from '@ogun/core/shared/inversify';
+import URI from '@ogun/core/lib/common/uri';
 import { UserPreferenceProvider, UserPreferenceProviderFactory } from '../common/user-preference-provider';
-import { PreferenceProviderImpl, PreferenceConfigurations, PreferenceResolveResult, PreferenceUtils, ILogger } from '@theia/core';
+import { PreferenceProviderImpl, PreferenceConfigurations, PreferenceResolveResult, PreferenceUtils, ILogger } from '@ogun/core';
 
 export const UserStorageLocationProvider = Symbol('UserStorageLocationProvider');
 

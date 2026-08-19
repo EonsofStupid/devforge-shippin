@@ -14,10 +14,10 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { inject, injectable } from '@theia/core/shared/inversify';
-import { ClipboardService } from '@theia/core/lib/browser/clipboard-service';
+import { inject, injectable } from '@ogun/core/shared/inversify';
+import { ClipboardService } from '@ogun/core/lib/browser/clipboard-service';
 import { NotebookCellModel } from '../view-model/notebook-cell-model';
-import { environment } from '@theia/core';
+import { environment } from '@ogun/core';
 import { CellData } from '../../common';
 
 @injectable()

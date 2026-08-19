@@ -19,10 +19,10 @@
  *--------------------------------------------------------------------------------------------*/
 // Partially copied from https://github.com/microsoft/vscode/blob/a2cab7255c0df424027be05d58e1b7b941f4ea60/src/vs/workbench/contrib/chat/common/chatService.ts
 
-import { AIVariableResolutionRequest, AIVariableService, ResolvedAIContextVariable, ToolInvocationRegistry, ToolRequest } from '@theia/ai-core';
-import { Emitter, Event, ILogger, URI, generateUuid } from '@theia/core';
-import { Deferred } from '@theia/core/lib/common/promise-util';
-import { inject, injectable, optional } from '@theia/core/shared/inversify';
+import { AIVariableResolutionRequest, AIVariableService, ResolvedAIContextVariable, ToolInvocationRegistry, ToolRequest } from '@ogun/ai-core';
+import { Emitter, Event, ILogger, URI, generateUuid } from '@ogun/core';
+import { Deferred } from '@ogun/core/lib/common/promise-util';
+import { inject, injectable, optional } from '@ogun/core/shared/inversify';
 import { ChatAgentService, DefaultChatAgentId, FallbackChatAgentId } from './chat-agent-service';
 import { ChatAgent, ChatAgentLocation, ChatSessionContext } from './chat-agents';
 import {
@@ -44,7 +44,7 @@ import { ChatSessionIndex, ChatSessionStore } from './chat-session-store';
 import { ChatContentDeserializerRegistry } from './chat-content-deserializer';
 import { ChangeSetDeserializationContext, ChangeSetElementDeserializerRegistry } from './change-set-element-deserializer';
 import { SerializableChangeSetElement, SerializedChatModel, SerializableParsedRequest } from './chat-model-serialization';
-import debounce = require('@theia/core/shared/lodash.debounce');
+import debounce = require('@ogun/core/shared/lodash.debounce');
 
 // Re-export for backward compatibility
 export { DefaultChatAgentId, FallbackChatAgentId };

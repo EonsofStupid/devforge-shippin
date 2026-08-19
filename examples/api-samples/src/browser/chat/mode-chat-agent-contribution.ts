@@ -20,9 +20,9 @@ import {
     MutableChatRequestModel,
     MarkdownChatResponseContentImpl,
     SystemMessageDescription
-} from '@theia/ai-chat';
-import { Agent, LanguageModelRequirement } from '@theia/ai-core';
-import { injectable, interfaces } from '@theia/core/shared/inversify';
+} from '@ogun/ai-chat';
+import { Agent, LanguageModelRequirement } from '@ogun/ai-core';
+import { injectable, interfaces } from '@ogun/core/shared/inversify';
 
 export function bindModeChatAgentContribution(bind: interfaces.Bind): void {
     bind(ModeChatAgent).toSelf().inSingletonScope();

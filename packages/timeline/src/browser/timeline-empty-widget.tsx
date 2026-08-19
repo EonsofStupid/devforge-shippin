@@ -14,11 +14,11 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { injectable } from '@theia/core/shared/inversify';
-import { ReactWidget } from '@theia/core/lib/browser';
-import { AlertMessage } from '@theia/core/lib/browser/widgets/alert-message';
-import * as React from '@theia/core/shared/react';
-import { nls } from '@theia/core';
+import { injectable } from '@ogun/core/shared/inversify';
+import { ReactWidget } from '@ogun/core/lib/browser';
+import { AlertMessage } from '@ogun/core/lib/browser/widgets/alert-message';
+import * as React from '@ogun/core/shared/react';
+import { nls } from '@ogun/core';
 
 @injectable()
 export class TimelineEmptyWidget extends ReactWidget {

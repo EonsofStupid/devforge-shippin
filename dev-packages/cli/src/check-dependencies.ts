@@ -38,11 +38,11 @@ interface CheckDependenciesOptions {
 
 /** NPM package */
 interface Package {
-    /** Name of the package, e.g. `@theia/core`. */
+    /** Name of the package, e.g. `@ogun/core`. */
     name: string,
     /** Actual resolved version of the package, e.g. `1.27.0`. */
     version: string,
-    /** Path of the package relative to the workspace, e.g. `node_modules/@theia/core`. */
+    /** Path of the package relative to the workspace, e.g. `node_modules/@ogun/core`. */
     path: string,
     /** Whether the package is hoisted or not, i.e., whether it is contained in the root `node_modules`. */
     hoisted: boolean,
@@ -246,7 +246,7 @@ function findDuplicateDependencies(packages: Package[], options: CheckDependenci
 
 function findTheiaVersionMix(packages: Package[], options: CheckDependenciesOptions): DependencyIssue[] {
     // @theia/monaco-editor-core is following the versions of Monaco so it can't be part of this check
-    const theiaPackages = packages.filter(p => p.name.startsWith('@theia/') && !p.name.startsWith('@theia/monaco-editor-core'));
+    const theiaPackages = packages.filter(p => p.name.startsWith('@ogun/') && !p.name.startsWith('@theia/monaco-editor-core'));
     let theiaVersion = undefined;
     let referenceTheiaPackage = undefined;
     const packagesWithOtherVersion: Package[] = [];
@@ -302,7 +302,7 @@ function issueMessage(issue: DependencyIssue): string {
     if (issue.issueType === 'multiple-versions') {
         return `Multiple versions of dependency ${chalk.bold(issue.package.name)} found.`;
     } else if (issue.issueType === 'theia-version-mix') {
-        return `Mix of ${chalk.bold('@theia/*')} versions found.`;
+        return `Mix of ${chalk.bold('@ogun/*')} versions found.`;
     } else {
         return `Dependency ${chalk.bold(issue.package.name)} is not hoisted.`;
     }

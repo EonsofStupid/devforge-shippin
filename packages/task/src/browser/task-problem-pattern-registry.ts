@@ -19,11 +19,11 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { Disposable, DisposableCollection } from '@theia/core/lib/common/disposable';
-import { Deferred } from '@theia/core/lib/common/promise-util';
-import { injectable, inject, postConstruct, named } from '@theia/core/shared/inversify';
+import { Disposable, DisposableCollection } from '@ogun/core/lib/common/disposable';
+import { Deferred } from '@ogun/core/lib/common/promise-util';
+import { injectable, inject, postConstruct, named } from '@ogun/core/shared/inversify';
 import { NamedProblemPattern, ProblemLocationKind, ProblemPattern, ProblemPatternContribution } from '../common';
-import { ILogger } from '@theia/core';
+import { ILogger } from '@ogun/core';
 
 @injectable()
 export class ProblemPatternRegistry {

@@ -14,13 +14,13 @@
  * SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
  ********************************************************************************/
 
-import { deepFreeze, Disposable, DisposableCollection, Emitter, nls, ILogger } from '@theia/core';
-import { Key, KeyCode, Message, ReactWidget, StatefulWidget } from '@theia/core/lib/browser';
-import { Deferred } from '@theia/core/lib/common/promise-util';
-import { inject, injectable, postConstruct, named } from '@theia/core/shared/inversify';
-import * as React from '@theia/core/shared/react';
-import { DebugSession, DebugState } from '@theia/debug/lib/browser/debug-session';
-import { DebugSessionManager } from '@theia/debug/lib/browser/debug-session-manager';
+import { deepFreeze, Disposable, DisposableCollection, Emitter, nls, ILogger } from '@ogun/core';
+import { Key, KeyCode, Message, ReactWidget, StatefulWidget } from '@ogun/core/lib/browser';
+import { Deferred } from '@ogun/core/lib/common/promise-util';
+import { inject, injectable, postConstruct, named } from '@ogun/core/shared/inversify';
+import * as React from '@ogun/core/shared/react';
+import { DebugSession, DebugState } from '@ogun/debug/lib/browser/debug-session';
+import { DebugSessionManager } from '@ogun/debug/lib/browser/debug-session-manager';
 import Long from 'long';
 import { MemoryProviderService } from '../memory-provider/memory-provider-service';
 import { Recents } from '../utils/memory-recents';
@@ -28,7 +28,7 @@ import { MWInput, MWInputWithSelect, MWSelect } from '../utils/memory-widget-com
 import { Constants, Interfaces, MemoryWidgetOptions, Utils } from '../utils/memory-widget-utils';
 import { VariableRange } from '../utils/memory-widget-variable-utils';
 import { MWMultiSelect, SingleSelectItemProps } from '../utils/multi-select-bar';
-import debounce = require('@theia/core/shared/lodash.debounce');
+import debounce = require('@ogun/core/shared/lodash.debounce');
 
 export const EMPTY_MEMORY: Interfaces.MemoryReadResult = deepFreeze({
     bytes: new Uint8Array(),

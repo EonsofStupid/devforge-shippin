@@ -16,8 +16,8 @@
 import {
     ChatMode, ChatRequestModel, ChatService, ChatSession,
     MutableChatModel, MutableChatRequestModel
-} from '@theia/ai-chat/lib/common';
-import { inject, injectable } from '@theia/core/shared/inversify';
+} from '@ogun/ai-chat/lib/common';
+import { inject, injectable } from '@ogun/core/shared/inversify';
 import {
     CODER_SYSTEM_PROMPT_ID,
     CODER_EDIT_TEMPLATE_ID,
@@ -28,11 +28,11 @@ import {
     getCoderPromptTemplateEdit,
     getCoderPromptTemplateEditNext
 } from '../common/coder-replace-prompt-template';
-import { LanguageModelRequirement, PromptVariantSet } from '@theia/ai-core';
-import { nls } from '@theia/core';
-import { FrontendApplicationConfigProvider } from '@theia/core/lib/browser/frontend-application-config-provider';
-import { MarkdownStringImpl } from '@theia/core/lib/common/markdown-rendering';
-import { AI_CHAT_HOME, ChatCommands } from '@theia/ai-chat-ui/lib/browser/chat-view-commands';
+import { LanguageModelRequirement, PromptVariantSet } from '@ogun/ai-core';
+import { nls } from '@ogun/core';
+import { FrontendApplicationConfigProvider } from '@ogun/core/lib/browser/frontend-application-config-provider';
+import { MarkdownStringImpl } from '@ogun/core/lib/common/markdown-rendering';
+import { AI_CHAT_HOME, ChatCommands } from '@ogun/ai-chat-ui/lib/browser/chat-view-commands';
 import { AbstractModeAwareChatAgent } from './mode-aware-chat-agent';
 import { AgentModeConfirmationService } from './agent-mode-confirmation-service';
 

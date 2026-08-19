@@ -14,8 +14,8 @@
  * SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
  ********************************************************************************/
 
-import { Command } from '@theia/core';
-import { nls } from '@theia/core/lib/common/nls';
+import { Command } from '@ogun/core';
+import { nls } from '@ogun/core/lib/common/nls';
 
 export const MemoryCommand: Command = { id: 'memory-inspector-command' };
 export const MemoryCategory = nls.localize('theia/memory-inspector/memoryCategory', 'Memory Inspector');

@@ -17,11 +17,11 @@
 import {
     ChatAgentService, ChatRequestModel, ChatResponseContent, ChatSession, ChatSessionMetadata,
     ChatSessionStatus, ErrorChatResponseContent, FormattedProviderError, formatProviderError, ThinkingChatResponseContent
-} from '@theia/ai-chat';
-import { MarkdownRenderer } from '@theia/core/lib/browser/markdown-rendering/markdown-renderer';
-import { nls } from '@theia/core/lib/common/nls';
-import { Disposable, DisposableCollection } from '@theia/core';
-import { formatTimeAgo } from '@theia/ai-chat-ui/lib/browser/chat-date-utils';
+} from '@ogun/ai-chat';
+import { MarkdownRenderer } from '@ogun/core/lib/browser/markdown-rendering/markdown-renderer';
+import { nls } from '@ogun/core/lib/common/nls';
+import { Disposable, DisposableCollection } from '@ogun/core';
+import { formatTimeAgo } from '@ogun/ai-chat-ui/lib/browser/chat-date-utils';
 
 const TOOLTIP_SNIPPET_MAX_LENGTH = 1000;
 

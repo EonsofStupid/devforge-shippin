@@ -14,7 +14,7 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { enableJSDOM } from '@theia/core/lib/browser/test/jsdom';
+import { enableJSDOM } from '@ogun/core/lib/browser/test/jsdom';
 
 let disableJSDOM = enableJSDOM();
 
@@ -33,8 +33,8 @@ describe('ChatCapabilitiesServiceImpl', () => {
         let service: ChatCapabilitiesServiceImpl;
 
         // Helper to access the protected method for testing
-        type ExtractFn = (template: string) => import('@theia/ai-core').GenericCapabilitySelections;
-        const extract = (template: string): import('@theia/ai-core').GenericCapabilitySelections =>
+        type ExtractFn = (template: string) => import('@ogun/ai-core').GenericCapabilitySelections;
+        const extract = (template: string): import('@ogun/ai-core').GenericCapabilitySelections =>
             (service as unknown as { extractUsedGenericCapabilities: ExtractFn }).extractUsedGenericCapabilities(template);
 
         beforeEach(() => {

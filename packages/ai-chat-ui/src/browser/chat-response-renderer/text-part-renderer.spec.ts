@@ -16,7 +16,7 @@
 
 import { TextPartRenderer } from './text-part-renderer';
 import { expect } from 'chai';
-import { ChatResponseContent } from '@theia/ai-chat';
+import { ChatResponseContent } from '@ogun/ai-chat';
 
 describe('TextPartRenderer', () => {
 

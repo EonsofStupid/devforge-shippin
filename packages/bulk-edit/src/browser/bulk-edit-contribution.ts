@@ -14,16 +14,16 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { injectable, inject, optional, postConstruct } from '@theia/core/shared/inversify';
-import { Widget } from '@theia/core/lib/browser/widgets/widget';
-import { CommandRegistry } from '@theia/core/lib/common';
-import { AbstractViewContribution } from '@theia/core/lib/browser/shell/view-contribution';
+import { injectable, inject, optional, postConstruct } from '@ogun/core/shared/inversify';
+import { Widget } from '@ogun/core/lib/browser/widgets/widget';
+import { CommandRegistry } from '@ogun/core/lib/common';
+import { AbstractViewContribution } from '@ogun/core/lib/browser/shell/view-contribution';
 import { BulkEditCommands } from './bulk-edit-commands';
-import { MonacoBulkEditService } from '@theia/monaco/lib/browser/monaco-bulk-edit-service';
-import { TabBarToolbarContribution, TabBarToolbarRegistry } from '@theia/core/lib/browser/shell/tab-bar-toolbar';
+import { MonacoBulkEditService } from '@ogun/monaco/lib/browser/monaco-bulk-edit-service';
+import { TabBarToolbarContribution, TabBarToolbarRegistry } from '@ogun/core/lib/browser/shell/tab-bar-toolbar';
 import { BulkEditTreeWidget, BULK_EDIT_TREE_WIDGET_ID, BULK_EDIT_WIDGET_NAME } from './bulk-edit-tree';
-import { QuickViewService } from '@theia/core/lib/browser';
-import { nls } from '@theia/core/lib/common/nls';
+import { QuickViewService } from '@ogun/core/lib/browser';
+import { nls } from '@ogun/core/lib/common/nls';
 import { ResourceEdit } from '@theia/monaco-editor-core/esm/vs/editor/browser/services/bulkEditService';
 
 @injectable()

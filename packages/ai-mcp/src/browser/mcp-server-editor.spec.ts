@@ -15,8 +15,8 @@
 // *****************************************************************************
 
 import { expect } from 'chai';
-import { Container } from '@theia/core/shared/inversify';
-import { MessageService, PreferenceService } from '@theia/core';
+import { Container } from '@ogun/core/shared/inversify';
+import { MessageService, PreferenceService } from '@ogun/core';
 import { MCP_SERVERS_PREF } from '../common/mcp-preferences';
 import { MCPFrontendService, MCPServerDescription, RemoteMCPServerDescription } from '../common/mcp-server-manager';
 import { MCPInstallEntry, MCPServerEditDialogFactory, MCPServerEditorImpl } from './mcp-server-editor';

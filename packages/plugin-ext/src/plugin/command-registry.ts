@@ -18,12 +18,12 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import * as theia from '@theia/plugin';
+import * as theia from '@ogun/plugin';
 import * as model from '../common/plugin-api-rpc-model';
 import { CommandRegistryExt, PLUGIN_RPC_CONTEXT as Ext, CommandRegistryMain } from '../common/plugin-api-rpc';
 import { RPCProtocol } from '../common/rpc-protocol';
 import { Disposable, URI } from './types-impl';
-import { DisposableCollection } from '@theia/core';
+import { DisposableCollection } from '@ogun/core';
 import { KnownCommands } from './known-commands';
 import { ArgumentProcessor } from '../common/commands';
 import { isUriComponents } from './type-converters';

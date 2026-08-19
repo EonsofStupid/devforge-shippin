@@ -14,21 +14,21 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { inject, injectable, named, postConstruct } from '@theia/core/shared/inversify';
-import { ILogger, ContributionProvider, CommandContribution, Command, CommandRegistry, MenuContribution, MenuModelRegistry, nls } from '@theia/core/lib/common';
+import { inject, injectable, named, postConstruct } from '@ogun/core/shared/inversify';
+import { ILogger, ContributionProvider, CommandContribution, Command, CommandRegistry, MenuContribution, MenuModelRegistry, nls } from '@ogun/core/lib/common';
 import { QuickOpenTask, TaskTerminateQuickOpen, TaskRunningQuickOpen, TaskRestartRunningQuickOpen } from './quick-open-task';
 import {
     FrontendApplication, FrontendApplicationContribution, QuickAccessContribution,
     KeybindingRegistry, KeybindingContribution, StorageService, StatusBar, StatusBarAlignment, CommonMenus
-} from '@theia/core/lib/browser';
-import { WidgetManager } from '@theia/core/lib/browser/widget-manager';
+} from '@ogun/core/lib/browser';
+import { WidgetManager } from '@ogun/core/lib/browser/widget-manager';
 import { TaskContribution, TaskResolverRegistry, TaskProviderRegistry } from './task-contribution';
 import { TaskService } from './task-service';
-import { TerminalMenus } from '@theia/terminal/lib/browser/terminal-frontend-contribution';
+import { TerminalMenus } from '@ogun/terminal/lib/browser/terminal-frontend-contribution';
 import { TaskSchemaUpdater } from './task-schema-updater';
 import { TaskConfiguration, TaskWatcher } from '../common';
-import { EditorManager } from '@theia/editor/lib/browser';
-import { WorkspaceService } from '@theia/workspace/lib/browser/workspace-service';
+import { EditorManager } from '@ogun/editor/lib/browser';
+import { WorkspaceService } from '@ogun/workspace/lib/browser/workspace-service';
 
 export namespace TaskCommands {
     const TASK_CATEGORY = 'Task';

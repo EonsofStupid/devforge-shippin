@@ -1,6 +1,6 @@
 {
   "private": true,
-  "name": "@theia/test-setup",
+  "name": "@ogun/test-setup",
   "version": "1.74.0",
   "description": "Custom setup for mocha tests",
   "main": "test-setup.js"

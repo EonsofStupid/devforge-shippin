@@ -14,17 +14,17 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { inject, injectable, postConstruct } from '@theia/core/shared/inversify';
-import { Diagnostic, DiagnosticSeverity } from '@theia/core/shared/vscode-languageserver-protocol';
-import { Event, Emitter } from '@theia/core/lib/common/event';
-import { Title, Widget } from '@theia/core/shared/@lumino/widgets';
-import { WidgetDecoration } from '@theia/core/lib/browser/widget-decoration';
-import { TabBarDecorator } from '@theia/core/lib/browser/shell/tab-bar-decorator';
+import { inject, injectable, postConstruct } from '@ogun/core/shared/inversify';
+import { Diagnostic, DiagnosticSeverity } from '@ogun/core/shared/vscode-languageserver-protocol';
+import { Event, Emitter } from '@ogun/core/lib/common/event';
+import { Title, Widget } from '@ogun/core/shared/@lumino/widgets';
+import { WidgetDecoration } from '@ogun/core/lib/browser/widget-decoration';
+import { TabBarDecorator } from '@ogun/core/lib/browser/shell/tab-bar-decorator';
 import { Marker } from '../../common/marker';
 import { ProblemManager } from './problem-manager';
 import { ProblemPreferences, ProblemConfiguration } from '../../common/problem-preferences';
-import { Navigatable } from '@theia/core/lib/browser';
-import { PreferenceChangeEvent } from '@theia/core';
+import { Navigatable } from '@ogun/core/lib/browser';
+import { PreferenceChangeEvent } from '@ogun/core';
 
 @injectable()
 export class ProblemTabBarDecorator implements TabBarDecorator {

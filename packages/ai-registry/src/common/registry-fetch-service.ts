@@ -14,9 +14,9 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { Emitter, Event } from '@theia/core';
-import { inject, injectable } from '@theia/core/shared/inversify';
-import { BackendRequestService, RequestContext, RequestService } from '@theia/core/shared/@theia/request';
+import { Emitter, Event } from '@ogun/core';
+import { inject, injectable } from '@ogun/core/shared/inversify';
+import { BackendRequestService, RequestContext, RequestService } from '@ogun/core/shared/@ogun/request';
 import { AIRegistryConfiguration } from './ai-registry-configuration';
 import { MCPRegistryEntryResolver } from './mcp/mcp-registry-entry-resolver';
 import { RegistryMCPServer, ResolvedRegistryEntry } from './mcp/mcp-registry-types';

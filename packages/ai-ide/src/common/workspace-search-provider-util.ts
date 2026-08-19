@@ -14,8 +14,8 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { LinePreview, SearchInWorkspaceResult } from '@theia/search-in-workspace/lib/common/search-in-workspace-interface';
-import { URI } from '@theia/core';
+import { LinePreview, SearchInWorkspaceResult } from '@ogun/search-in-workspace/lib/common/search-in-workspace-interface';
+import { URI } from '@ogun/core';
 
 /**
  * Interface for workspace scope path resolution.

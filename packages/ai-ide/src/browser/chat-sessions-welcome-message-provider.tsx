@@ -14,24 +14,24 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { ChatWelcomeMessageProvider } from '@theia/ai-chat-ui/lib/browser/chat-tree-view';
-import { formatTimeAgo } from '@theia/ai-chat-ui/lib/browser/chat-date-utils';
+import { ChatWelcomeMessageProvider } from '@ogun/ai-chat-ui/lib/browser/chat-tree-view';
+import { formatTimeAgo } from '@ogun/ai-chat-ui/lib/browser/chat-date-utils';
 import {
     ChatAgentService, ChatService, ChatSessionMetadata
-} from '@theia/ai-chat';
-import { BYPASS_MODEL_REQUIREMENT_PREF, WELCOME_SCREEN_SESSIONS_PREF } from '@theia/ai-chat/lib/common/ai-chat-preferences';
-import { AI_CHAT_SHOW_CHATS_COMMAND } from '@theia/ai-chat-ui/lib/browser/chat-view-commands';
+} from '@ogun/ai-chat';
+import { BYPASS_MODEL_REQUIREMENT_PREF, WELCOME_SCREEN_SESSIONS_PREF } from '@ogun/ai-chat/lib/common/ai-chat-preferences';
+import { AI_CHAT_SHOW_CHATS_COMMAND } from '@ogun/ai-chat-ui/lib/browser/chat-view-commands';
 import { ChatSessionItemAction, ChatSessionItemActionContribution } from './chat-session-item-action-contribution';
 import { ChatSessionListService } from './chat-session-list-service';
 import { SectionedSessions, SessionRow, SessionsList } from './chat-session-list-components';
 import { ChatSessionItem } from './chat-session-item';
-import { FrontendLanguageModelRegistry } from '@theia/ai-core/lib/common';
-import { CommandRegistry, ContributionProvider, Emitter, Event, PreferenceService } from '@theia/core';
-import { ApplicationShell, HoverService } from '@theia/core/lib/browser';
+import { FrontendLanguageModelRegistry } from '@ogun/ai-core/lib/common';
+import { CommandRegistry, ContributionProvider, Emitter, Event, PreferenceService } from '@ogun/core';
+import { ApplicationShell, HoverService } from '@ogun/core/lib/browser';
 import { AISessionsWidget } from './ai-sessions-widget';
-import { MarkdownRenderer, MarkdownRendererFactory } from '@theia/core/lib/browser/markdown-rendering/markdown-renderer';
-import { inject, injectable, named, postConstruct } from '@theia/core/shared/inversify';
-import * as React from '@theia/core/shared/react';
+import { MarkdownRenderer, MarkdownRendererFactory } from '@ogun/core/lib/browser/markdown-rendering/markdown-renderer';
+import { inject, injectable, named, postConstruct } from '@ogun/core/shared/inversify';
+import * as React from '@ogun/core/shared/react';
 
 @injectable()
 export class ChatSessionsWelcomeMessageProvider implements ChatWelcomeMessageProvider {

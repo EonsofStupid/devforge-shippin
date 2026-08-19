@@ -8,7 +8,7 @@
 //
 // SPDX-License-Identifier: MIT
 // *****************************************************************************
-import { PromptVariantSet } from '@theia/ai-core/lib/common';
+import { PromptVariantSet } from '@ogun/ai-core/lib/common';
 import {
     GET_WORKSPACE_FILE_LIST_FUNCTION_ID, FILE_CONTENT_FUNCTION_ID, SEARCH_IN_WORKSPACE_FUNCTION_ID,
     FIND_FILES_BY_PATTERN_FUNCTION_ID

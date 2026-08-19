@@ -13,8 +13,8 @@
 //
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
-import { inject, injectable } from '@theia/core/shared/inversify';
-import { FrontendApplicationContribution } from '@theia/core/lib/browser';
+import { inject, injectable } from '@ogun/core/shared/inversify';
+import { FrontendApplicationContribution } from '@ogun/core/lib/browser';
 
 export const AIActivationService = Symbol('AIActivationService');
 /**
@@ -33,8 +33,8 @@ export interface AIActivationService {
     /** Listen whether AI features should actually be able to run (isActive + other conditions, e.g. workspace trust). */
     onDidChangeCanRun: Event<boolean>;
 }
-import { Emitter, Event } from '@theia/core';
-import { ContextKeyService } from '@theia/core/lib/browser/context-key-service';
+import { Emitter, Event } from '@ogun/core';
+import { ContextKeyService } from '@ogun/core/lib/browser/context-key-service';
 
 /**
  * Context key for the AI features. It is set to `true` if the feature is enabled.
@@ -46,7 +46,7 @@ export const ENABLE_AI_CONTEXT_KEY = 'ai-features.AiEnable.enableAI';
  *
  * Adopters may override this implementation to provide custom activation logic.
  *
- * Note that '@theia/ai-ide' also overrides this service to provide activation based on preferences,
+ * Note that '@ogun/ai-ide' also overrides this service to provide activation based on preferences,
  * disabling the feature by default.
  */
 @injectable()

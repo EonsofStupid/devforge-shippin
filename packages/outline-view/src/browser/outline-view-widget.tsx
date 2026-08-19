@@ -14,7 +14,7 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { injectable, inject, postConstruct } from '@theia/core/shared/inversify';
+import { injectable, inject, postConstruct } from '@ogun/core/shared/inversify';
 import {
     TreeWidget,
     TreeNode,
@@ -26,14 +26,14 @@ import {
     TreeModel,
     ExpandableTreeNode,
     codicon
-} from '@theia/core/lib/browser';
+} from '@ogun/core/lib/browser';
 import { OutlineViewTreeModel } from './outline-view-tree-model';
-import { Message } from '@theia/core/shared/@lumino/messaging';
-import { Emitter, Event, isObject, Mutable, UriSelection } from '@theia/core';
-import * as React from '@theia/core/shared/react';
-import { Range } from '@theia/core/shared/vscode-languageserver-protocol';
-import URI from '@theia/core/lib/common/uri';
-import { nls } from '@theia/core/lib/common/nls';
+import { Message } from '@ogun/core/shared/@lumino/messaging';
+import { Emitter, Event, isObject, Mutable, UriSelection } from '@ogun/core';
+import * as React from '@ogun/core/shared/react';
+import { Range } from '@ogun/core/shared/vscode-languageserver-protocol';
+import URI from '@ogun/core/lib/common/uri';
+import { nls } from '@ogun/core/lib/common/nls';
 
 /**
  * Representation of an outline symbol information node.

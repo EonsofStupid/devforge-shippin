@@ -22,11 +22,11 @@ import {
     LanguageModelRequirement,
     PromptService,
     UserRequest
-} from '@theia/ai-core/lib/common';
-import { LanguageModelService } from '@theia/ai-core/lib/browser';
-import { generateUuid, ILogger, nls } from '@theia/core';
+} from '@ogun/ai-core/lib/common';
+import { LanguageModelService } from '@ogun/ai-core/lib/browser';
+import { generateUuid, ILogger, nls } from '@ogun/core';
 import { terminalPrompts } from './ai-terminal-prompt-template';
-import { inject, injectable } from '@theia/core/shared/inversify';
+import { inject, injectable } from '@ogun/core/shared/inversify';
 import { z } from 'zod';
 
 const Commands = z.object({

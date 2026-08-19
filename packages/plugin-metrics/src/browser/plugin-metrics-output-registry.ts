@@ -14,11 +14,11 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { injectable, inject } from '@theia/core/shared/inversify';
-import { OutputChannelRegistryMainImpl } from '@theia/plugin-ext/lib/main/browser/output-channel-registry-main';
+import { injectable, inject } from '@ogun/core/shared/inversify';
+import { OutputChannelRegistryMainImpl } from '@ogun/plugin-ext/lib/main/browser/output-channel-registry-main';
 import { PluginMetricsCreator } from './plugin-metrics-creator';
 import { createDefaultRequestData } from '../common/plugin-metrics-types';
-import { PluginInfo } from '@theia/plugin-ext/lib/common/plugin-api-rpc';
+import { PluginInfo } from '@ogun/plugin-ext/lib/common/plugin-api-rpc';
 
 @injectable()
 export class PluginMetricsOutputChannelRegistry extends OutputChannelRegistryMainImpl {

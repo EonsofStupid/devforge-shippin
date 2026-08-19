@@ -15,20 +15,20 @@
 // *****************************************************************************
 
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import URI from '@theia/core/lib/common/uri';
-import { TextEditor, DiffNavigator } from '@theia/editor/lib/browser';
-import { DiffUris } from '@theia/core/lib/browser/diff-uris';
-import { inject, injectable, named, postConstruct } from '@theia/core/shared/inversify';
-import { DisposableCollection, deepClone, Disposable, CancellationToken } from '@theia/core/lib/common';
+import URI from '@ogun/core/lib/common/uri';
+import { TextEditor, DiffNavigator } from '@ogun/editor/lib/browser';
+import { DiffUris } from '@ogun/core/lib/browser/diff-uris';
+import { inject, injectable, named, postConstruct } from '@ogun/core/shared/inversify';
+import { DisposableCollection, deepClone, Disposable, CancellationToken } from '@ogun/core/lib/common';
 import { MonacoDiffEditor } from './monaco-diff-editor';
 import { MonacoDiffNavigatorFactory } from './monaco-diff-navigator-factory';
 import { EditorServiceOverrides, MonacoEditor, MonacoEditorServices } from './monaco-editor';
 import { MonacoEditorModel, TextDocumentSaveReason } from './monaco-editor-model';
 import { MonacoWorkspace } from './monaco-workspace';
-import { ContributionProvider, ILogger } from '@theia/core';
-import { KeybindingRegistry, OpenerService, open, WidgetOpenerOptions, SaveOptions, FormatType } from '@theia/core/lib/browser';
+import { ContributionProvider, ILogger } from '@ogun/core';
+import { KeybindingRegistry, OpenerService, open, WidgetOpenerOptions, SaveOptions, FormatType } from '@ogun/core/lib/browser';
 import { MonacoResolvedKeybinding } from './monaco-resolved-keybinding';
-import { HttpOpenHandlerOptions } from '@theia/core/lib/browser/http-open-handler';
+import { HttpOpenHandlerOptions } from '@ogun/core/lib/browser/http-open-handler';
 import { MonacoToProtocolConverter } from './monaco-to-protocol-converter';
 import { ProtocolToMonacoConverter } from './protocol-to-monaco-converter';
 import * as monaco from '@theia/monaco-editor-core';
@@ -41,13 +41,13 @@ import { KeyCodeChord } from '@theia/monaco-editor-core/esm/vs/base/common/keybi
 import { IContextKeyService } from '@theia/monaco-editor-core/esm/vs/platform/contextkey/common/contextkey';
 import { ITextModelService } from '@theia/monaco-editor-core/esm/vs/editor/common/services/resolverService';
 import { IReference } from '@theia/monaco-editor-core/esm/vs/base/common/lifecycle';
-import { MarkdownString } from '@theia/core/lib/common/markdown-rendering';
+import { MarkdownString } from '@ogun/core/lib/common/markdown-rendering';
 import { SimpleMonacoEditor } from './simple-monaco-editor';
 import { ICodeEditorWidgetOptions } from '@theia/monaco-editor-core/esm/vs/editor/browser/widget/codeEditor/codeEditorWidget';
-import { timeoutReject } from '@theia/core/lib/common/promise-util';
-import { FileSystemPreferences } from '@theia/filesystem/lib/common';
+import { timeoutReject } from '@ogun/core/lib/common/promise-util';
+import { FileSystemPreferences } from '@ogun/filesystem/lib/common';
 import { insertFinalNewline } from './monaco-utilities';
-import { EditorPreferenceChange, EditorPreferences } from '@theia/editor/lib/common/editor-preferences';
+import { EditorPreferenceChange, EditorPreferences } from '@ogun/editor/lib/common/editor-preferences';
 
 export const MonacoEditorFactory = Symbol('MonacoEditorFactory');
 export interface MonacoEditorFactory {

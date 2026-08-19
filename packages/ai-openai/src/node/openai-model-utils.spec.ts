@@ -15,7 +15,7 @@
 // *****************************************************************************
 import { expect } from 'chai';
 import { OpenAiModelUtils } from './openai-language-model';
-import { LanguageModelMessage } from '@theia/ai-core';
+import { LanguageModelMessage } from '@ogun/ai-core';
 import { OpenAiResponseApiUtils } from './openai-response-api-utils';
 
 const utils = new OpenAiModelUtils();

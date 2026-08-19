@@ -14,18 +14,18 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { KeybindingRegistry, OpenerService, QuickAccessRegistry } from '@theia/core/lib/browser';
-import { LabelProvider } from '@theia/core/lib/browser/label-provider';
-import { findMatches, QuickInputService, QuickPickItem, QuickPicks } from '@theia/core/lib/browser/quick-input/quick-input-service';
-import { CancellationToken, nls, PreferenceService, QuickPickSeparator } from '@theia/core/lib/common';
-import { MessageService } from '@theia/core/lib/common/message-service';
-import URI from '@theia/core/lib/common/uri';
-import * as fuzzy from '@theia/core/shared/fuzzy';
-import { inject, injectable, optional } from '@theia/core/shared/inversify';
-import { Position, Range } from '@theia/editor/lib/browser';
-import { NavigationLocationService } from '@theia/editor/lib/browser/navigation/navigation-location-service';
-import { WorkspaceService } from '@theia/workspace/lib/browser/workspace-service';
-import { WorkspaceSearchFilterService } from '@theia/workspace/lib/browser';
+import { KeybindingRegistry, OpenerService, QuickAccessRegistry } from '@ogun/core/lib/browser';
+import { LabelProvider } from '@ogun/core/lib/browser/label-provider';
+import { findMatches, QuickInputService, QuickPickItem, QuickPicks } from '@ogun/core/lib/browser/quick-input/quick-input-service';
+import { CancellationToken, nls, PreferenceService, QuickPickSeparator } from '@ogun/core/lib/common';
+import { MessageService } from '@ogun/core/lib/common/message-service';
+import URI from '@ogun/core/lib/common/uri';
+import * as fuzzy from '@ogun/core/shared/fuzzy';
+import { inject, injectable, optional } from '@ogun/core/shared/inversify';
+import { Position, Range } from '@ogun/editor/lib/browser';
+import { NavigationLocationService } from '@ogun/editor/lib/browser/navigation/navigation-location-service';
+import { WorkspaceService } from '@ogun/workspace/lib/browser/workspace-service';
+import { WorkspaceSearchFilterService } from '@ogun/workspace/lib/browser';
 import { FileSearchService, WHITESPACE_QUERY_SEPARATOR } from '../common/file-search-service';
 
 export interface FilterAndRange {

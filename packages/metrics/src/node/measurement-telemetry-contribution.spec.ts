@@ -14,8 +14,8 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
-import { Emitter, LogLevel, MeasurementResult, Stopwatch } from '@theia/core';
-import { BACKEND_TELEMETRY_SESSION, TelemetryEvent, TelemetryService } from '@theia/telemetry/lib/common';
+import { Emitter, LogLevel, MeasurementResult, Stopwatch } from '@ogun/core';
+import { BACKEND_TELEMETRY_SESSION, TelemetryEvent, TelemetryService } from '@ogun/telemetry/lib/common';
 import { expect } from 'chai';
 import { MEASUREMENT_TELEMETRY_TOPIC, reportMeasurement } from '../common';
 import { MeasurementMetricsBackendContribution } from './measurement-metrics-contribution';
