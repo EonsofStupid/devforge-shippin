@@ -1,7 +1,7 @@
 {
   "name": "@ogun/channels",
   "version": "1.74.0",
-  "description": "WebForge direct channels \u2014 the Act plane: lets Clyffy (and, later, the Shippin chat webapp) manipulate the application visibly: open files, type in the terminal, teach while working.",
+  "description": "Ogun direct channels \u2014 the Act plane: lets Clyffy (and, later, the Shippin chat webapp) manipulate the application visibly: open files, type in the terminal, teach while working.",
   "dependencies": {
     "@ogun/ai-chat-ui": "1.74.0",
     "@ogun/core": "1.74.0",
@@ -19,13 +19,13 @@
   },
   "theiaExtensions": [
     {
-      "frontend": "lib/browser/webforge-channels-frontend-module",
-      "backend": "lib/node/webforge-channels-backend-module"
+      "frontend": "lib/browser/ogun-channels-frontend-module",
+      "backend": "lib/node/ogun-channels-backend-module"
     }
   ],
   "keywords": [
     "theia-extension",
-    "webforge"
+    "ogun"
   ],
   "license": "EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0",
   "repository": {

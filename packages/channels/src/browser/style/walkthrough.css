@@ -20,24 +20,24 @@
    Theia's own theme variables so the overlay belongs to whatever theme the
    operator runs, while the art keeps its own deliberate palette.            */
 
-.webforge-walkthrough {
-    --wf-a1: #FFB000;   /* guidance      */
-    --wf-a2: #FF7A3D;   /* ember         */
-    --wf-a3: #7CE38B;   /* machinery     */
-    --wf-a4: #6C8CFF;   /* Clyffy speaks */
-    --wf-a5: #B58CFF;   /* depth         */
-    --wf-a6: #FF6B8A;   /* trouble       */
+.ogun-walkthrough {
+    --og-a1: #FFB000;   /* guidance      */
+    --og-a2: #FF7A3D;   /* ember         */
+    --og-a3: #7CE38B;   /* machinery     */
+    --og-a4: #6C8CFF;   /* Clyffy speaks */
+    --og-a5: #B58CFF;   /* depth         */
+    --og-a6: #FF6B8A;   /* trouble       */
 
-    --wf-focal: var(--wf-a1);
-    --wf-plate: #1B1E2C;
-    --wf-ground: #101119;
-    --wf-edge: var(--theia-editorWidget-border, #262A3D);
-    --wf-dim: #868DA8;
+    --og-focal: var(--og-a1);
+    --og-plate: #1B1E2C;
+    --og-ground: #101119;
+    --og-edge: var(--theia-editorWidget-border, #262A3D);
+    --og-dim: #868DA8;
 
-    --wf-arrive: 240ms;
-    --wf-settle: 900ms;
-    --wf-beat: 120ms;
-    --wf-ease: cubic-bezier(.22, .61, .36, 1);
+    --og-arrive: 240ms;
+    --og-settle: 900ms;
+    --og-beat: 120ms;
+    --og-ease: cubic-bezier(.22, .61, .36, 1);
 
     position: fixed;
     inset: 0;
@@ -49,37 +49,37 @@
     pointer-events: none;
 }
 
-.webforge-walkthrough[data-lineage="green"] {
-    --wf-a1: #7CE38B;
-    --wf-a2: #33D17A;
-    --wf-a3: #B8F5C4;
-    --wf-a4: #6C8CFF;
-    --wf-a5: #4ABF9B;
+.ogun-walkthrough[data-lineage="green"] {
+    --og-a1: #7CE38B;
+    --og-a2: #33D17A;
+    --og-a3: #B8F5C4;
+    --og-a4: #6C8CFF;
+    --og-a5: #4ABF9B;
 }
 
-.webforge-walkthrough[data-lineage="chroma"] {
-    --wf-a1: #55E6FF;
-    --wf-a2: #FF55C8;
-    --wf-a3: #7CE38B;
-    --wf-a4: #6C5EB5;
-    --wf-a5: #B58CFF;
+.ogun-walkthrough[data-lineage="chroma"] {
+    --og-a1: #55E6FF;
+    --og-a2: #FF55C8;
+    --og-a3: #7CE38B;
+    --og-a4: #6C5EB5;
+    --og-a5: #B58CFF;
 }
 
-.webforge-walkthrough .wf-scrim {
+.ogun-walkthrough .og-scrim {
     position: absolute;
     inset: 0;
     background: linear-gradient(180deg, rgba(9, 10, 16, .74), rgba(9, 10, 16, .93));
     pointer-events: auto;
-    transition: opacity var(--wf-settle) var(--wf-ease);
+    transition: opacity var(--og-settle) var(--og-ease);
 }
 
 /* Acting: the overlay steps aside so the learner watches the real workbench. */
-.webforge-walkthrough.wf-acting .wf-scrim {
+.ogun-walkthrough.og-acting .og-scrim {
     opacity: 0;
     pointer-events: none;
 }
 
-.webforge-walkthrough .wf-card {
+.ogun-walkthrough .og-card {
     position: relative;
     display: grid;
     grid-template-columns: minmax(0, 300px) minmax(0, 1fr);
@@ -90,60 +90,60 @@
     padding: 20px;
     border-radius: 12px;
     background: var(--theia-editorWidget-background, #181A26);
-    border: 1px solid var(--wf-edge);
+    border: 1px solid var(--og-edge);
     color: var(--theia-foreground, #C9CEE2);
     pointer-events: auto;
     /* The one focal object on screen: crisp offset, no soft haze. */
     box-shadow: 5px 6px 0 rgba(0, 0, 0, .55), inset 0 0 0 1px rgba(255, 255, 255, .05);
     transition:
-        transform var(--wf-settle) var(--wf-ease),
-        max-width var(--wf-settle) var(--wf-ease),
-        opacity var(--wf-arrive) var(--wf-ease);
+        transform var(--og-settle) var(--og-ease),
+        max-width var(--og-settle) var(--og-ease),
+        opacity var(--og-arrive) var(--og-ease);
 }
 
-.webforge-walkthrough.wf-acting .wf-card {
+.ogun-walkthrough.og-acting .og-card {
     max-width: 380px;
     margin: auto 0 0 auto;
     grid-template-columns: 1fr;
     opacity: .97;
 }
 
-.webforge-walkthrough.wf-acting .wf-art-slot {
+.ogun-walkthrough.og-acting .og-art-slot {
     display: none;
 }
 
 /* The art keeps its own ground in every theme: `screen` compositing only reads as
    vibrance over a dark field, and Phosphor Flat is a deliberate single visual world. */
-.webforge-walkthrough .wf-art-slot {
+.ogun-walkthrough .og-art-slot {
     min-width: 0;
     padding: 10px;
     border-radius: 10px;
-    background: var(--wf-ground);
+    background: var(--og-ground);
     border: 1px solid rgba(255, 255, 255, .06);
 }
 
-.webforge-walkthrough .wf-art {
+.ogun-walkthrough .og-art {
     display: block;
     width: 100%;
     height: auto;
 }
 
-.webforge-walkthrough .wf-copy {
+.ogun-walkthrough .og-copy {
     display: flex;
     flex-direction: column;
     gap: 10px;
     min-width: 0;
 }
 
-.webforge-walkthrough .wf-step {
+.ogun-walkthrough .og-step {
     font-family: var(--theia-code-font-family, monospace);
     font-size: 10.5px;
     letter-spacing: .16em;
     text-transform: uppercase;
-    color: var(--wf-focal);
+    color: var(--og-focal);
 }
 
-.webforge-walkthrough .wf-title {
+.ogun-walkthrough .og-title {
     margin: 0;
     font-family: var(--theia-code-font-family, monospace);
     font-size: 17px;
@@ -153,89 +153,89 @@
     text-wrap: balance;
 }
 
-.webforge-walkthrough .wf-body {
+.ogun-walkthrough .og-body {
     margin: 0;
     font-size: 13px;
     line-height: 1.6;
     color: var(--theia-descriptionForeground, #868DA8);
 }
 
-.webforge-walkthrough .wf-actions {
+.ogun-walkthrough .og-actions {
     display: flex;
     flex-wrap: wrap;
     gap: 9px;
     margin-top: 4px;
 }
 
-.webforge-walkthrough .wf-btn {
+.ogun-walkthrough .og-btn {
     font-family: var(--theia-code-font-family, monospace);
     font-size: 12px;
     border-radius: 7px;
     padding: 8px 14px;
     cursor: pointer;
     border: 1px solid transparent;
-    transition: transform var(--wf-beat) var(--wf-ease);
+    transition: transform var(--og-beat) var(--og-ease);
 }
 
-.webforge-walkthrough .wf-btn:active {
+.ogun-walkthrough .og-btn:active {
     transform: translateY(1px);
 }
 
-.webforge-walkthrough .wf-btn:focus-visible {
-    outline: 2px solid var(--wf-a4);
+.ogun-walkthrough .og-btn:focus-visible {
+    outline: 2px solid var(--og-a4);
     outline-offset: 2px;
 }
 
-.webforge-walkthrough .wf-btn-primary {
-    background: var(--wf-focal);
+.ogun-walkthrough .og-btn-primary {
+    background: var(--og-focal);
     color: #14150E;
     font-weight: 600;
 }
 
-.webforge-walkthrough .wf-btn-ghost {
+.ogun-walkthrough .og-btn-ghost {
     background: transparent;
-    border-color: var(--wf-edge);
+    border-color: var(--og-edge);
     color: var(--theia-descriptionForeground, #868DA8);
 }
 
-.webforge-walkthrough .wf-btn-ghost:hover {
+.ogun-walkthrough .og-btn-ghost:hover {
     color: var(--theia-foreground, #C9CEE2);
 }
 
-.webforge-walkthrough .wf-dots {
+.ogun-walkthrough .og-dots {
     display: flex;
     gap: 5px;
     margin-top: 2px;
 }
 
-.webforge-walkthrough .wf-dots i {
+.ogun-walkthrough .og-dots i {
     display: block;
     width: 16px;
     height: 3px;
     border-radius: 2px;
-    background: var(--wf-edge);
+    background: var(--og-edge);
 }
 
-.webforge-walkthrough .wf-dots i.on {
-    background: var(--wf-focal);
+.ogun-walkthrough .og-dots i.on {
+    background: var(--og-focal);
 }
 
 /* ── motion: planes arrive staggered on the beat, focal settles last ──────── */
-.webforge-walkthrough .wf-plane {
+.ogun-walkthrough .og-plane {
     opacity: 0;
 }
 
-.webforge-walkthrough .wf-playing .wf-plane {
-    animation: wf-arrive var(--wf-settle) var(--wf-ease) forwards;
+.ogun-walkthrough .og-playing .og-plane {
+    animation: og-arrive var(--og-settle) var(--og-ease) forwards;
 }
 
-.webforge-walkthrough .wf-playing .wf-p1 { animation-delay: 0ms; }
-.webforge-walkthrough .wf-playing .wf-p2 { animation-delay: 120ms; }
-.webforge-walkthrough .wf-playing .wf-p3 { animation-delay: 240ms; }
-.webforge-walkthrough .wf-playing .wf-p4 { animation-delay: 360ms; }
-.webforge-walkthrough .wf-playing .wf-p5 { animation-delay: 520ms; }
+.ogun-walkthrough .og-playing .og-p1 { animation-delay: 0ms; }
+.ogun-walkthrough .og-playing .og-p2 { animation-delay: 120ms; }
+.ogun-walkthrough .og-playing .og-p3 { animation-delay: 240ms; }
+.ogun-walkthrough .og-playing .og-p4 { animation-delay: 360ms; }
+.ogun-walkthrough .og-playing .og-p5 { animation-delay: 520ms; }
 
-@keyframes wf-arrive {
+@keyframes og-arrive {
     from {
         opacity: 0;
         transform: translateY(14px);
@@ -248,34 +248,34 @@
 }
 
 /* Vibrancy from overlap, not from a bigger palette. */
-.webforge-walkthrough .wf-blend {
+.ogun-walkthrough .og-blend {
     mix-blend-mode: screen;
 }
 
-.webforge-walkthrough .wf-pulse {
-    animation: wf-pulse 1.6s var(--wf-ease) infinite;
+.ogun-walkthrough .og-pulse {
+    animation: og-pulse 1.6s var(--og-ease) infinite;
 }
 
-@keyframes wf-pulse {
+@keyframes og-pulse {
     0%, 100% { opacity: .85; }
     50% { opacity: .35; }
 }
 
 @media (max-width: 860px) {
-    .webforge-walkthrough .wf-card {
+    .ogun-walkthrough .og-card {
         grid-template-columns: 1fr;
     }
 }
 
 @media (prefers-reduced-motion: reduce) {
 
-    .webforge-walkthrough *,
-    .webforge-walkthrough .wf-plane {
+    .ogun-walkthrough *,
+    .ogun-walkthrough .og-plane {
         animation: none !important;
         transition: none !important;
     }
 
-    .webforge-walkthrough .wf-plane {
+    .ogun-walkthrough .og-plane {
         opacity: 1;
     }
 }

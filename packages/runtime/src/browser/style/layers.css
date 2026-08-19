@@ -19,60 +19,60 @@
    density a person can read without leaning in. Small type is the first thing
    that tells a newcomer this tool is not for them.                          */
 
-body[data-webforge-layer="simplified"] {
-    --webforge-ui-size: 14px;
-    --webforge-ui-line: 1.55;
+body[data-ogun-layer="simplified"] {
+    --ogun-ui-size: 14px;
+    --ogun-ui-line: 1.55;
 }
 
-body[data-webforge-layer="simplified"] .theia-sidepanel-title,
-body[data-webforge-layer="simplified"] .p-TabBar-tabLabel,
-body[data-webforge-layer="simplified"] .theia-TreeNodeSegment,
-body[data-webforge-layer="simplified"] .theia-select-component,
-body[data-webforge-layer="simplified"] .theia-button,
-body[data-webforge-layer="simplified"] .theia-input {
-    font-size: var(--webforge-ui-size);
-    line-height: var(--webforge-ui-line);
+body[data-ogun-layer="simplified"] .theia-sidepanel-title,
+body[data-ogun-layer="simplified"] .p-TabBar-tabLabel,
+body[data-ogun-layer="simplified"] .theia-TreeNodeSegment,
+body[data-ogun-layer="simplified"] .theia-select-component,
+body[data-ogun-layer="simplified"] .theia-button,
+body[data-ogun-layer="simplified"] .theia-input {
+    font-size: var(--ogun-ui-size);
+    line-height: var(--ogun-ui-line);
 }
 
 /* Give rows room to breathe — dense trees read as noise to a newcomer. */
-body[data-webforge-layer="simplified"] .theia-TreeNode {
+body[data-ogun-layer="simplified"] .theia-TreeNode {
     padding-top: 2px;
     padding-bottom: 2px;
 }
 
-body[data-webforge-layer="simplified"] .theia-button,
-body[data-webforge-layer="simplified"] .theia-input {
+body[data-ogun-layer="simplified"] .theia-button,
+body[data-ogun-layer="simplified"] .theia-input {
     padding-top: 5px;
     padding-bottom: 5px;
 }
 
 /* Chat and other AI surfaces carry most of the reading in this layer. */
-body[data-webforge-layer="simplified"] .theia-ChatNode,
-body[data-webforge-layer="simplified"] .theia-ChatInput,
-body[data-webforge-layer="simplified"] .theia-ai-chat-node-content {
-    font-size: var(--webforge-ui-size);
+body[data-ogun-layer="simplified"] .theia-ChatNode,
+body[data-ogun-layer="simplified"] .theia-ChatInput,
+body[data-ogun-layer="simplified"] .theia-ai-chat-node-content {
+    font-size: var(--ogun-ui-size);
     line-height: 1.65;
 }
 
 /* ── Clyffy at the keyboard ───────────────────────────────────────────────────
    Whatever Clyffy is typing into wears this while it types, so authorship of
    every keystroke is visible rather than inferred. Green is the machinery
-   colour throughout WebForge — the same green the guided chip fills with.   */
+   colour throughout Ogun — the same green the guided chip fills with.   */
 
-.webforge-clyffy-typing {
+.ogun-clyffy-typing {
     outline: 1.5px solid var(--theia-terminal-ansiGreen, #7CE38B) !important;
     outline-offset: 1px;
     border-radius: 3px;
-    animation: webforge-typing-breathe 1.6s cubic-bezier(.22, .61, .36, 1) infinite;
+    animation: ogun-typing-breathe 1.6s cubic-bezier(.22, .61, .36, 1) infinite;
 }
 
-@keyframes webforge-typing-breathe {
+@keyframes ogun-typing-breathe {
     0%, 100% { outline-color: var(--theia-terminal-ansiGreen, #7CE38B); }
     50% { outline-color: color-mix(in srgb, var(--theia-terminal-ansiGreen, #7CE38B) 40%, transparent); }
 }
 
 @media (prefers-reduced-motion: reduce) {
-    .webforge-clyffy-typing {
+    .ogun-clyffy-typing {
         animation: none;
     }
 }
@@ -84,20 +84,20 @@ body[data-webforge-layer="simplified"] .theia-ai-chat-node-content {
  * ever shown the result never learns where anything lives. Same amber as the walkthrough
  * art, so pointing always looks like the same gesture wherever it happens.
  */
-.webforge-clyffy-pointing {
-    outline: 2px solid var(--wf-a2, #f5a524);
+.ogun-clyffy-pointing {
+    outline: 2px solid var(--og-a2, #f5a524);
     outline-offset: 2px;
     border-radius: 3px;
-    animation: webforge-pointing-pulse 1.6s ease-in-out infinite;
+    animation: ogun-pointing-pulse 1.6s ease-in-out infinite;
 }
 
-@keyframes webforge-pointing-pulse {
-    0%, 100% { outline-color: var(--wf-a2, #f5a524); }
+@keyframes ogun-pointing-pulse {
+    0%, 100% { outline-color: var(--og-a2, #f5a524); }
     50% { outline-color: transparent; }
 }
 
 @media (prefers-reduced-motion: reduce) {
-    .webforge-clyffy-pointing {
+    .ogun-clyffy-pointing {
         animation: none;
     }
 }
