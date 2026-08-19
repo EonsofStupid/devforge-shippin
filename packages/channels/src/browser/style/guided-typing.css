@@ -1,0 +1,172 @@
+/********************************************************************************
+ * Copyright (C) 2026 Shippin.
+ *
+ * This program and the accompanying materials are made available under the
+ * terms of the Eclipse Public License v. 2.0 which is available at
+ * http://www.eclipse.org/legal/epl-2.0.
+ *
+ * This Source Code may also be made available under the following Secondary
+ * Licenses when the conditions for such availability set forth in the Eclipse
+ * Public License v. 2.0 are satisfied: GNU General Public License, version 2
+ * with the GNU Classpath Exception which is available at
+ * https://www.gnu.org/software/classpath/license.html.
+ *
+ * SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
+ ********************************************************************************/
+
+/*
+ * The guided-typing card.
+ *
+ * The first version of this was a 13px dashed chip with its untyped characters in
+ * description grey — legible to someone who already knew it was there, invisible to the
+ * person it was built for. A newcomer is looking at a black rectangle full of text they
+ * do not understand; a hint has to out-shout that, or it is not a hint.
+ *
+ * So: keycaps rather than a string, because "press these keys" is a shape a person reads
+ * without instructions; one clearly-lit NEXT key rather than a percentage; and a solid
+ * card that sits above the terminal on its own ground instead of dissolving into it.
+ */
+
+.ogun-guide {
+    /* The guide carries its own palette: it renders over a terminal, which is the one
+       surface in the workbench whose colours belong to the shell, not the theme. */
+    --og-guide-ink: #F5F3EE;
+    --og-guide-dim: #A7A29A;
+    --og-guide-accent: #FF7A3D;
+    --og-guide-done: #33D17A;
+    --og-guide-ground: #16171F;
+
+    position: absolute;
+    left: 50%;
+    bottom: 22px;
+    transform: translateX(-50%);
+    z-index: 1000;
+    max-width: min(560px, calc(100% - 32px));
+    padding: 14px 18px 15px;
+    border-radius: 12px;
+    background: var(--og-guide-ground);
+    border: 1px solid color-mix(in srgb, var(--og-guide-accent) 55%, transparent);
+    /* One hard-offset plane, the Phosphor Flat tell — the card is lifted, not floating. */
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, .5), 6px 7px 0 rgba(0, 0, 0, .45);
+    font-family: var(--theia-ui-font-family, system-ui, sans-serif);
+    pointer-events: none;
+    animation: ogun-guide-arrive 240ms cubic-bezier(.2, .8, .3, 1) both;
+}
+
+.ogun-guide .og-guide-label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13.5px;
+    font-weight: 600;
+    letter-spacing: .01em;
+    color: var(--og-guide-ink);
+    margin-bottom: 10px;
+}
+
+.ogun-guide .og-guide-label .og-guide-badge {
+    flex: none;
+    font-size: 15px;
+    line-height: 1;
+    color: var(--og-guide-accent);
+}
+
+.ogun-guide .og-guide-note {
+    font-size: 12px;
+    font-weight: 400;
+    color: var(--og-guide-dim);
+    margin: -4px 0 10px;
+}
+
+.ogun-guide .og-guide-keys {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-bottom: 12px;
+}
+
+/* A keycap. Big enough to hit with a finger, which is also big enough to notice. */
+.ogun-guide .og-key {
+    min-width: 30px;
+    height: 34px;
+    padding: 0 9px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 7px;
+    font-family: var(--theia-code-font-family, ui-monospace, monospace);
+    font-size: 17px;
+    font-weight: 600;
+    color: var(--og-guide-dim);
+    background: rgba(255, 255, 255, .05);
+    border: 1px solid rgba(255, 255, 255, .14);
+    border-bottom-width: 3px;
+    transition: color 120ms linear, background 120ms linear, border-color 120ms linear;
+}
+
+.ogun-guide .og-key.og-space {
+    min-width: 74px;
+    font-size: 13px;
+    letter-spacing: .18em;
+}
+
+.ogun-guide .og-key.og-done {
+    color: var(--og-guide-done);
+    background: color-mix(in srgb, var(--og-guide-done) 16%, transparent);
+    border-color: color-mix(in srgb, var(--og-guide-done) 45%, transparent);
+}
+
+/* Exactly one key is lit at a time. Ambiguity about where to look is the whole problem. */
+.ogun-guide .og-key.og-next {
+    color: #1A1206;
+    background: var(--og-guide-accent);
+    border-color: var(--og-guide-accent);
+    animation: ogun-guide-beat 1.6s ease-in-out infinite;
+}
+
+.ogun-guide .og-guide-track {
+    height: 5px;
+    border-radius: 3px;
+    background: rgba(255, 255, 255, .08);
+    overflow: hidden;
+}
+
+.ogun-guide .og-guide-fill {
+    height: 100%;
+    width: 0;
+    border-radius: 3px;
+    background: var(--og-guide-accent);
+    transition: width 140ms cubic-bezier(.2, .8, .3, 1), background 160ms linear;
+}
+
+.ogun-guide.og-filled .og-guide-fill {
+    background: var(--og-guide-done);
+}
+
+.ogun-guide.og-filled .og-guide-label {
+    color: var(--og-guide-done);
+}
+
+.ogun-guide.og-filled .og-guide-label .og-guide-badge {
+    color: var(--og-guide-done);
+}
+
+@keyframes ogun-guide-arrive {
+    from { opacity: 0; transform: translate(-50%, 10px) scale(.97); }
+    to   { opacity: 1; transform: translate(-50%, 0) scale(1); }
+}
+
+@keyframes ogun-guide-beat {
+    0%, 100% { box-shadow: 0 0 0 0 color-mix(in srgb, var(--og-guide-accent) 60%, transparent); }
+    50%      { box-shadow: 0 0 0 6px color-mix(in srgb, var(--og-guide-accent) 0%, transparent); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .ogun-guide,
+    .ogun-guide .og-key.og-next {
+        animation: none;
+    }
+    .ogun-guide .og-guide-fill {
+        transition: none;
+    }
+}

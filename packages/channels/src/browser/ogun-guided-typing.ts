@@ -14,18 +14,21 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
+import { nls } from '@ogun/core';
 import { injectable } from '@ogun/core/shared/inversify';
 import { TerminalWidget } from '@ogun/terminal/lib/browser/base/terminal-widget';
 
 /**
  * The guided-typing teaching mechanic:
  *
- * The target command floats in a chip just ABOVE the terminal — never inline where it
- * could be mistaken for typed text. As the learner types, correctly-typed prefix
- * characters render green and a live percentage ticks up. At the threshold (default
- * 0.7) the system meets them: the remainder is auto-filled into the real terminal and
- * the learner confirms with Enter. Wrong keys are simply not counted — the chip never
- * turns red; a nervous beginner is never shamed. Outcomes are reported for the tape.
+ * The target command floats in a card ABOVE the terminal — never inline where it could be
+ * mistaken for typed text. It is drawn as keycaps rather than a string, with exactly one
+ * key lit as the next to press: "press these keys" is a shape a person reads without being
+ * told, and a single lit key removes any question about where to look. As the learner
+ * types, keys settle green and a progress bar fills. At the threshold (default 0.7) the
+ * system meets them: the remainder is auto-filled into the real terminal and the learner
+ * confirms with Enter. Wrong keys are simply not counted — nothing ever turns red; a
+ * nervous beginner is never shamed. Outcomes are reported for the tape.
  */
 export interface GuideResult {
     type: 'guide.completed' | 'guide.abandoned';
@@ -56,40 +59,48 @@ export class OgunGuidedTyping {
         node.style.position = node.style.position || 'relative';
 
         const overlay = document.createElement('div');
+        overlay.className = 'ogun-guide';
         overlay.setAttribute('aria-live', 'polite');
-        Object.assign(overlay.style, {
-            position: 'absolute',
-            left: '14px',
-            bottom: '34px',
-            zIndex: '1000',
-            fontFamily: 'var(--theia-code-font-family, monospace)',
-            fontSize: '13px',
-            lineHeight: '1.6',
-            pointerEvents: 'none',
-            maxWidth: 'calc(100% - 28px)',
-        } as CSSStyleDeclaration);
+        overlay.setAttribute('aria-label', nls.localize('ogun/guide/aria', 'Type this command: {0}', command));
+
+        const label = document.createElement('div');
+        label.className = 'og-guide-label';
+        const badge = document.createElement('span');
+        badge.className = 'og-guide-badge';
+        badge.textContent = '⌨';
+        const labelText = document.createElement('span');
+        labelText.textContent = nls.localize('ogun/guide/prompt', "Type this — I'll finish it for you");
+        label.append(badge, labelText);
+        overlay.appendChild(label);
 
         if (note) {
             const noteEl = document.createElement('div');
-            noteEl.textContent = `✦ ${note}`;
-            Object.assign(noteEl.style, {
-                color: 'var(--theia-terminal-ansiYellow, #E0AF68)',
-                fontSize: '11.5px',
-                marginBottom: '3px',
-            } as CSSStyleDeclaration);
+            noteEl.className = 'og-guide-note';
+            noteEl.textContent = note;
             overlay.appendChild(noteEl);
         }
 
-        const chip = document.createElement('div');
-        Object.assign(chip.style, {
-            display: 'inline-block',
-            border: '1px dashed var(--theia-terminal-ansiYellow, #E0AF68)',
-            borderRadius: '6px',
-            padding: '3px 10px',
-            background: 'var(--theia-editor-background, rgba(0,0,0,.6))',
-            whiteSpace: 'pre',
-        } as CSSStyleDeclaration);
-        overlay.appendChild(chip);
+        const keys = document.createElement('div');
+        keys.className = 'og-guide-keys';
+        // One element per character, built once and only re-styled as the learner moves —
+        // rebuilding would restart the lit key's animation on every keystroke.
+        const caps = [...command].map(character => {
+            const cap = document.createElement('span');
+            const isSpace = character === ' ';
+            cap.className = isSpace ? 'og-key og-space' : 'og-key';
+            cap.textContent = isSpace ? nls.localize('ogun/guide/space', 'space') : character;
+            keys.appendChild(cap);
+            return cap;
+        });
+        overlay.appendChild(keys);
+
+        const track = document.createElement('div');
+        track.className = 'og-guide-track';
+        const fill = document.createElement('div');
+        fill.className = 'og-guide-fill';
+        track.appendChild(fill);
+        overlay.appendChild(track);
+
         node.appendChild(overlay);
 
         const state = {
@@ -101,22 +112,18 @@ export class OgunGuidedTyping {
         };
 
         const render = () => {
-            chip.textContent = '';
-            const done = document.createElement('span');
-            done.textContent = command.slice(0, state.progress);
-            done.style.color = 'var(--theia-terminal-ansiGreen, #98C379)';
-            done.style.fontWeight = '600';
-            const rest = document.createElement('span');
-            rest.textContent = command.slice(state.progress);
-            rest.style.color = 'var(--theia-descriptionForeground, #6E7681)';
-            const pct = document.createElement('span');
+            caps.forEach((cap, index) => {
+                const done = index < state.progress;
+                const next = !state.filled && index === state.progress;
+                cap.classList.toggle('og-done', done);
+                cap.classList.toggle('og-next', next);
+            });
             const ratio = state.progress / Math.max(1, command.length);
-            pct.textContent = state.filled ? '  ✓ completed — press Enter' : `  ${Math.round(ratio * 100)}%`;
-            pct.style.color = state.filled
-                ? 'var(--theia-terminal-ansiGreen, #98C379)'
-                : 'var(--theia-descriptionForeground, #6E7681)';
-            pct.style.fontSize = '11px';
-            chip.append(done, rest, pct);
+            fill.style.width = `${Math.round(ratio * 100)}%`;
+            overlay.classList.toggle('og-filled', state.filled);
+            labelText.textContent = state.filled
+                ? nls.localize('ogun/guide/confirm', 'Got it — press Enter to run it')
+                : nls.localize('ogun/guide/prompt', "Type this — I'll finish it for you");
         };
 
         // Capture-phase observation: the pty still receives every key; the guide only

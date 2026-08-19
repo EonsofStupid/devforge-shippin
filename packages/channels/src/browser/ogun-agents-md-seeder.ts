@@ -47,21 +47,77 @@ export class OgunAgentsMdSeeder implements FrontendApplicationContribution {
                 return;
             }
             const target = root.resource.resolve('AGENTS.md');
-            if (await this.fileService.exists(target)) {
+            const existing = await this.fileService.exists(target)
+                ? (await this.fileService.read(target)).value
+                : undefined;
+            const verdict = this.judge(existing);
+            if (verdict === 'leave') {
                 return;
             }
-            await this.fileService.createFile(target, BinaryBuffer.fromString(AGENTS_MD_TEMPLATE));
-            this.messageService.info(
-                'Added AGENTS.md — the house rules every AI working in this workspace follows. Yours to edit.',
-                { timeout: 8000 }
-            ).then(undefined, () => { /* dismissed */ });
+            if (verdict === 'backup') {
+                // Unstamped means we cannot prove we wrote it, so it is never overwritten
+                // in place — it is set aside first, under a name the operator will find.
+                await this.fileService.copy(target, root.resource.resolve('AGENTS.md.bak'), { overwrite: true });
+            }
+            await this.fileService.createFile(target, BinaryBuffer.fromString(AGENTS_MD_TEMPLATE), { overwrite: true });
+            this.messageService.info(this.explain(verdict), { timeout: 9000 })
+                .then(undefined, () => { /* dismissed */ });
         } catch {
             // Seeding is a courtesy, never a failure mode.
         }
     }
+
+    /**
+     * May we rewrite this file, and how carefully?
+     *
+     * AGENTS.md is what Clyffy reads as its house rules, so a copy describing routes that
+     * have since moved does not merely look dated — it sends the assistant at endpoints
+     * that answer 404. That makes refreshing it a correctness fix. It is still someone
+     * else's file, though, so the answer depends on how sure we are that we wrote it:
+     *
+     * - a current stamp: nothing to do.
+     * - an older stamp: ours, and out of date. Replace it.
+     * - no stamp but it names a route we have retired: it predates stamping, so it is
+     *   probably ours — but 'probably' does not earn an overwrite. Copy it aside first.
+     * - anything else: the operator's. Leave it completely alone, even though that means
+     *   a file they edited keeps stale routes. That is the right way round; we do not get
+     *   to edit their writing to fix our own rename.
+     */
+    protected judge(content: string | undefined): SeedVerdict {
+        if (content === undefined) {
+            return 'create';
+        }
+        const stamp = AGENTS_MD_STAMP_PATTERN.exec(content);
+        if (stamp) {
+            return Number(stamp.groups?.version) < AGENTS_MD_VERSION ? 'refresh' : 'leave';
+        }
+        return RETIRED_ROUTE_PATTERN.test(content) ? 'backup' : 'leave';
+    }
+
+    protected explain(verdict: SeedVerdict): string {
+        switch (verdict) {
+            case 'backup':
+                return 'Refreshed AGENTS.md — it pointed at endpoints that have since moved. Your previous copy is saved as AGENTS.md.bak.';
+            case 'refresh':
+                return 'Refreshed AGENTS.md — it pointed at endpoints that have since moved. Yours to edit.';
+            default:
+                return 'Added AGENTS.md — the house rules every AI working in this workspace follows. Yours to edit.';
+        }
+    }
 }
 
-export const AGENTS_MD_TEMPLATE = `# AGENTS.md — how AIs work in this Ogun workspace
+type SeedVerdict = 'create' | 'refresh' | 'backup' | 'leave';
+
+/** Routes this fork used to serve and no longer does; naming one dates a file exactly. */
+const RETIRED_ROUTE_PATTERN = /\/webforge\/(channel|catalog|events|preview)/;
+
+/** Bump whenever the template's factual claims change — routes, ops, event names. */
+export const AGENTS_MD_VERSION = 2;
+
+const AGENTS_MD_STAMP_PATTERN = /<!-- ogun:agents-md v(?<version>\d+) -->/;
+
+export const AGENTS_MD_TEMPLATE = `<!-- ogun:agents-md v2 -->
+# AGENTS.md — how AIs work in this Ogun workspace
 
 These are the house rules for ANY AI agent working here (Clyffy, Claude Code, Codex,
 Gemini, and friends). This file follows the open agents.md convention — edit it; it is
