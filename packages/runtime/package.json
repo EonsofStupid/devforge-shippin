@@ -1,7 +1,7 @@
 {
   "name": "@ogun/runtime",
   "version": "1.74.0",
-  "description": "The WebForge runtime layer \u2014 the engine underneath the IDE: a declared runtime-event catalog, provenance for every act, and an addressable surface registry so Clyffy can read and drive any part of the application.",
+  "description": "The Ogun runtime layer \u2014 the engine underneath the IDE: a declared runtime-event catalog, provenance for every act, and an addressable surface registry so Clyffy can read and drive any part of the application.",
   "dependencies": {
     "@ogun/core": "1.74.0",
     "@ogun/editor": "1.74.0",
@@ -19,13 +19,13 @@
   },
   "theiaExtensions": [
     {
-      "frontend": "lib/browser/webforge-runtime-frontend-module",
-      "backend": "lib/node/webforge-runtime-backend-module"
+      "frontend": "lib/browser/ogun-runtime-frontend-module",
+      "backend": "lib/node/ogun-runtime-backend-module"
     }
   ],
   "keywords": [
     "theia-extension",
-    "webforge"
+    "ogun"
   ],
   "license": "EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0",
   "repository": {
