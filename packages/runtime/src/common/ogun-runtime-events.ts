@@ -90,6 +90,11 @@ export const OGUN_EVENT_CATALOG: RuntimeEventDescriptor[] = [
     { name: 'act.surface.focused', plane: 'act', description: 'A surface was focused.', sentence: 'Pointed at {surface}', fields: ['surface', 'kind'] },
     { name: 'act.surface.invoked', plane: 'act', description: 'A surface was invoked (button, command, submit).', sentence: 'Used {surface}', fields: ['surface', 'kind'] },
     { name: 'act.setting.changed', plane: 'act', description: 'A preference changed.', sentence: 'Changed the {key} setting to {value}', fields: ['key', 'scope'] },
+    {
+        name: 'act.extension.installed', plane: 'act',
+        description: 'An extension was installed into the editor.',
+        sentence: 'Added {name} to your editor', fields: ['name']
+    },
     { name: 'act.notice.shown', plane: 'act', description: 'A message was shown to the operator.', sentence: 'Left you a note', fields: ['chars', 'kind'] },
     { name: 'act.preview.opened', plane: 'act', description: 'The running application was put on screen.', sentence: 'Opened a preview of your app', fields: ['url'] },
     { name: 'act.preview.navigated', plane: 'act', description: 'The preview was pointed at a different URL.', sentence: 'Moved the preview to {url}', fields: ['url'] },

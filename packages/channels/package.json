@@ -12,6 +12,7 @@
     "@ogun/navigator": "1.74.0",
     "@ogun/runtime": "1.74.0",
     "@ogun/terminal": "1.74.0",
+    "@ogun/vsx-registry": "1.74.0",
     "@ogun/workspace": "1.74.0",
     "tslib": "^2.6.2"
   },

@@ -21,6 +21,7 @@ import { inject, injectable, named } from '@ogun/core/shared/inversify';
 import { FileService } from '@ogun/filesystem/lib/browser/file-service';
 import { WorkspaceService } from '@ogun/workspace/lib/browser';
 import { OgunRuntimeBus } from '@ogun/runtime/lib/browser/ogun-runtime-bus';
+import { VSXExtensionsModel } from '@ogun/vsx-registry/lib/browser/vsx-extensions-model';
 import { OgunChannelClientImpl } from './ogun-channel-client-impl';
 import { OgunDialogue } from '@ogun/clyffy/lib/browser/dialogue';
 import { OGUN_GUIDED_TYPING_THRESHOLD, OGUN_WALKTHROUGH_LINEAGE, OgunLineage } from './ogun-preferences';
@@ -43,6 +44,15 @@ const CHAT_VIEW_WIDGET_ID = 'chat-view-widget';
  * Progress rides the event tape, so the competence ladder is measured rather than
  * assumed.
  */
+/** One line that makes a real page, short enough to type without dread. */
+const MAKE_COMMAND = 'echo hello > index.html';
+
+/** Serving it is what the preview watches for; the port is arbitrary but must be stable. */
+const SERVE_COMMAND = 'python3 -m http.server 5199';
+
+/** A theme, because a changed editor is a benefit you can see from across the room. */
+const WALKTHROUGH_THEME_ID = 'sdras.night-owl';
+
 @injectable()
 export class OgunWalkthrough {
 
@@ -69,6 +79,9 @@ export class OgunWalkthrough {
 
     @inject(OgunChannelClientImpl)
     protected readonly acts: OgunChannelClientImpl;
+
+    @inject(VSXExtensionsModel)
+    protected readonly extensions: VSXExtensionsModel;
 
     @inject(OgunRuntimeBus)
     protected readonly bus: OgunRuntimeBus;
@@ -257,12 +270,34 @@ export class OgunWalkthrough {
                 return;
             }
             case 'guide-list-files': {
-                const threshold = this.preferences.get<number>(OGUN_GUIDED_TYPING_THRESHOLD, 0.7);
                 await this.acts.guideType(
                     'ls',
                     nls.localize('ogun/walkthrough/lsNote', 'this shows what is in the folder'),
-                    threshold
+                    this.threshold()
                 );
+                return;
+            }
+            case 'guide-make-file': {
+                await this.acts.guideType(
+                    MAKE_COMMAND,
+                    nls.localize('ogun/walkthrough/makeNote', 'this writes a page and puts it in your folder'),
+                    this.threshold()
+                );
+                return;
+            }
+            case 'guide-serve': {
+                // The preview opens itself: the runtime watches terminal output for a
+                // served URL and puts the running thing beside the code. Nothing here has
+                // to know about ports, which is the point of having built that.
+                await this.acts.guideType(
+                    SERVE_COMMAND,
+                    nls.localize('ogun/walkthrough/serveNote', 'this starts your page so it can be looked at'),
+                    this.threshold()
+                );
+                return;
+            }
+            case 'install-theme': {
+                await this.installTheme();
                 return;
             }
             case 'reveal-clyffy': {
@@ -275,6 +310,38 @@ export class OgunWalkthrough {
             case 'none': {
                 return;
             }
+        }
+    }
+
+    protected threshold(): number {
+        return this.preferences.get<number>(OGUN_GUIDED_TYPING_THRESHOLD, 0.7);
+    }
+
+    /**
+     * Install an extension in front of the operator.
+     *
+     * A theme rather than a tool on purpose: the benefit of a formatter is invisible until
+     * you format something, whereas a theme is a benefit you can see from across the room.
+     *
+     * It is installed but NOT applied. The scene promises to show them how installing
+     * works, not to redecorate their editor, and changing how someone's screen looks
+     * without being asked reads as an intrusion however pretty the result.
+     *
+     * Installing reaches the network, and the network is allowed to be down. A walkthrough
+     * step that throws would strand the operator mid-tour, so a failure is reported as a
+     * failure and the tour continues — the honest outcome lands on the tape either way.
+     */
+    protected async installTheme(): Promise<void> {
+        try {
+            const extension = await this.extensions.resolve(WALKTHROUGH_THEME_ID);
+            await extension.install();
+            this.bus.emit('act.extension.installed', { name: extension.displayName ?? WALKTHROUGH_THEME_ID });
+        } catch (error) {
+            this.acts.notify(nls.localize(
+                'ogun/walkthrough/themeFailed',
+                'I could not reach the extension shop just now — the Extensions panel on the left does the same job when you want it.'
+            ));
+            console.warn('[ogun-walkthrough] theme install failed', error);
         }
     }
 
