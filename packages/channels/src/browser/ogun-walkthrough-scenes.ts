@@ -15,6 +15,7 @@
 // *****************************************************************************
 
 import { nls } from '@ogun/core';
+import { ClyffyMood } from '@ogun/clyffy/lib/browser/portrait';
 
 /**
  * The walkthrough scenes, drawn in "Phosphor Flat".
@@ -36,7 +37,8 @@ import { nls } from '@ogun/core';
  */
 
 /** What a scene does in the live workbench when the learner accepts it. */
-export type SceneAct = 'none' | 'open-house-rules' | 'guide-list-files' | 'reveal-clyffy';
+export type SceneAct = 'none' | 'open-house-rules' | 'guide-list-files'
+    | 'guide-make-file' | 'guide-serve' | 'install-theme' | 'reveal-clyffy';
 
 export interface WalkthroughScene {
     /** Stable id — this is what lands on the event tape. */
@@ -46,6 +48,8 @@ export interface WalkthroughScene {
     /** Label of the button that performs the act. */
     actionLabel: string;
     act: SceneAct;
+    /** Which face Clyffy wears while saying this. */
+    mood?: ClyffyMood;
     /** Inline SVG markup; all fills are palette tokens. */
     art: string;
 }
@@ -160,10 +164,60 @@ ${focalPlate(64, 84, 152, 34, `
         'Four ascending rungs with the current one elevated and lit');
 }
 
+/** Scene 4 — a page appears in the folder, because you made it. */
+function artMake(): string {
+    return svg(`${disc(96, 108, 78, 'var(--og-a3)')}
+<g class="og-plane og-p2">
+  <rect x="26" y="150" width="86" height="9" rx="4.5" fill="var(--og-a5)" opacity=".55"/>
+  <rect x="26" y="166" width="58" height="9" rx="4.5" fill="var(--og-a5)" opacity=".35"/>
+</g>
+${focalPlate(118, 52, 150, 112, `
+  <rect x="132" y="70" width="46" height="9" rx="4.5" fill="var(--og-a1)"/>
+  <rect x="132" y="88" width="108" height="7" rx="3.5" fill="#fff" opacity=".26"/>
+  <rect x="132" y="102" width="92" height="7" rx="3.5" fill="#fff" opacity=".2"/>
+  <rect x="132" y="116" width="100" height="7" rx="3.5" fill="#fff" opacity=".2"/>
+  <circle cx="246" cy="146" r="7" fill="var(--og-a3)"/>`)}`,
+    'A new page sitting in your folder');
+}
+
+/** Scene 5 — the page is running, and the preview opens beside it. */
+function artServe(): string {
+    return svg(`${disc(212, 96, 84, 'var(--og-a4)')}
+<g class="og-plane og-p2">
+  <rect x="24" y="58" width="104" height="104" rx="8" fill="var(--og-plate)" opacity=".9"/>
+  <rect x="36" y="72" width="52" height="7" rx="3.5" fill="#fff" opacity=".22"/>
+  <rect x="36" y="86" width="76" height="7" rx="3.5" fill="#fff" opacity=".16"/>
+  <rect x="36" y="100" width="64" height="7" rx="3.5" fill="#fff" opacity=".16"/>
+</g>
+${focalPlate(146, 44, 128, 130, `
+  <rect x="146" y="44" width="128" height="20" rx="9" fill="var(--og-a4)" opacity=".28"/>
+  <circle cx="160" cy="54" r="3.5" fill="var(--og-a1)"/>
+  <rect x="164" y="84" width="70" height="12" rx="6" fill="var(--og-a1)"/>
+  <rect x="164" y="106" width="92" height="7" rx="3.5" fill="#fff" opacity=".24"/>
+  <rect x="164" y="120" width="78" height="7" rx="3.5" fill="#fff" opacity=".18"/>`)}`,
+    'Your page running, beside the code that makes it');
+}
+
+/** Scene 6 — the editor grows a new ability. */
+function artTheme(): string {
+    return svg(`${disc(150, 110, 82, 'var(--og-a5)')}
+<g class="og-plane og-p2">
+  <rect x="30" y="74" width="60" height="60" rx="10" fill="var(--og-a4)" opacity=".4"/>
+  <rect x="212" y="74" width="60" height="60" rx="10" fill="var(--og-a3)" opacity=".4"/>
+</g>
+${focalPlate(104, 62, 94, 94, `
+  <rect x="120" y="80" width="62" height="10" rx="5" fill="var(--og-a1)"/>
+  <rect x="120" y="98" width="44" height="7" rx="3.5" fill="#fff" opacity=".24"/>
+  <path d="M128 126 h46" stroke="var(--og-a3)" stroke-width="6" stroke-linecap="round"/>
+  <path d="M145 118 v16" stroke="var(--og-a3)" stroke-width="6" stroke-linecap="round"/>`)}`,
+    'A new ability clicking into the editor');
+}
+
 export function walkthroughScenes(): WalkthroughScene[] {
     return [
         {
             id: 'welcome',
+            mood: 'idle',
             title: nls.localize('ogun/walkthrough/welcome/title', 'This is Ogun. Nothing here can break.'),
             body: nls.localize(
                 'ogun/walkthrough/welcome/body',
@@ -176,6 +230,7 @@ export function walkthroughScenes(): WalkthroughScene[] {
         },
         {
             id: 'project',
+            mood: 'pointing',
             title: nls.localize('ogun/walkthrough/project/title', 'A project is a folder. A file is a page in it.'),
             body: nls.localize(
                 'ogun/walkthrough/project/body',
@@ -188,6 +243,7 @@ export function walkthroughScenes(): WalkthroughScene[] {
         },
         {
             id: 'terminal',
+            mood: 'acting',
             title: nls.localize('ogun/walkthrough/terminal/title', 'The terminal is where you tell the machine things.'),
             body: nls.localize(
                 'ogun/walkthrough/terminal/body',
@@ -199,7 +255,47 @@ export function walkthroughScenes(): WalkthroughScene[] {
             art: artTerminal()
         },
         {
+            id: 'make',
+            mood: 'acting',
+            title: nls.localize('ogun/walkthrough/make/title', 'Now make something that is yours.'),
+            body: nls.localize(
+                'ogun/walkthrough/make/body',
+                'One line makes a page. You will see it appear in the list on the left the moment you press Enter — '
+                + 'that is your file, in your project, and nothing about it is pretend.'
+            ),
+            actionLabel: nls.localize('ogun/walkthrough/make/action', 'Make it with me'),
+            act: 'guide-make-file',
+            art: artMake()
+        },
+        {
+            id: 'serve',
+            mood: 'acting',
+            title: nls.localize('ogun/walkthrough/serve/title', 'And now it is running.'),
+            body: nls.localize(
+                'ogun/walkthrough/serve/body',
+                'This starts your page so it can actually be looked at, and I will open it beside the code. '
+                + 'Change the file, refresh, and the change is there. That loop is the whole job.'
+            ),
+            actionLabel: nls.localize('ogun/walkthrough/serve/action', 'Put it on screen'),
+            act: 'guide-serve',
+            art: artServe()
+        },
+        {
+            id: 'theme',
+            mood: 'thinking',
+            title: nls.localize('ogun/walkthrough/theme/title', 'The editor can grow.'),
+            body: nls.localize(
+                'ogun/walkthrough/theme/body',
+                'Extensions add abilities to the editor — languages, tools, or just a different set of colours. '
+                + 'I will install one so you have seen it done; you can remove it again from the Extensions panel.'
+            ),
+            actionLabel: nls.localize('ogun/walkthrough/theme/action', 'Install one for me'),
+            act: 'install-theme',
+            art: artTheme()
+        },
+        {
             id: 'clyffy',
+            mood: 'pleased',
             title: nls.localize('ogun/walkthrough/clyffy/title', 'Clyffy sits beside the work, not in front of it.'),
             body: nls.localize(
                 'ogun/walkthrough/clyffy/body',
@@ -212,6 +308,7 @@ export function walkthroughScenes(): WalkthroughScene[] {
         },
         {
             id: 'ladder',
+            mood: 'pleased',
             title: nls.localize('ogun/walkthrough/ladder/title', 'You are on the first rung, and nothing is locked.'),
             body: nls.localize(
                 'ogun/walkthrough/ladder/body',

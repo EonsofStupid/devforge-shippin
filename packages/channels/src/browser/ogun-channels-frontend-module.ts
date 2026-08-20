@@ -14,15 +14,20 @@
 // SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
 // *****************************************************************************
 
+import '@ogun/clyffy/src/browser/style/clyffy.css';
+import '../../src/browser/style/chat.css';
+import '../../src/browser/style/guided-typing.css';
 import '../../src/browser/style/walkthrough.css';
 
 import { CommandContribution, MenuContribution, PreferenceContribution } from '@ogun/core';
-import { FrontendApplicationContribution, RemoteConnectionProvider, ServiceConnectionProvider } from '@ogun/core/lib/browser';
+import { FrontendApplicationContribution, RemoteConnectionProvider, ServiceConnectionProvider, WidgetFactory } from '@ogun/core/lib/browser';
 import { PerspectiveContribution } from '@ogun/core/lib/browser/perspective-service';
 import { ContainerModule } from '@ogun/core/shared/inversify';
 import { OGUN_CHANNEL_SERVICE_PATH, OgunChannelClient, OgunChannelService } from '../common/ogun-channel-protocol';
 import { OgunAgentsMdSeeder } from './ogun-agents-md-seeder';
 import { OgunChannelClientImpl } from './ogun-channel-client-impl';
+import { OgunChatContribution } from './ogun-chat-contribution';
+import { OgunChatWidget } from './ogun-chat-widget';
 import { OgunGuidedPerspectiveContribution } from './ogun-guided-perspective';
 import { OgunGuidedTyping } from './ogun-guided-typing';
 import { OgunPreferencesSchema } from './ogun-preferences';
@@ -31,6 +36,17 @@ import { OgunWalkthroughContribution } from './ogun-walkthrough-contribution';
 
 export default new ContainerModule(bind => {
     bind(PreferenceContribution).toConstantValue({ schema: OgunPreferencesSchema });
+
+    // Clyffy's chat takes the right-hand panel; the upstream view is closed on layout
+    // rather than unbound, so the packages that reference it keep compiling.
+    bind(OgunChatWidget).toSelf();
+    bind(WidgetFactory).toDynamicValue(ctx => ({
+        id: OgunChatWidget.ID,
+        createWidget: () => ctx.container.get(OgunChatWidget)
+    })).inSingletonScope();
+    bind(OgunChatContribution).toSelf().inSingletonScope();
+    bind(CommandContribution).toService(OgunChatContribution);
+    bind(FrontendApplicationContribution).toService(OgunChatContribution);
 
     bind(OgunGuidedTyping).toSelf().inSingletonScope();
 

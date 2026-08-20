@@ -10,6 +10,15 @@
   ],
   "references": [
     {
+      "path": "../vsx-registry"
+    },
+    {
+      "path": "../ai-chat"
+    },
+    {
+      "path": "../clyffy"
+    },
+    {
       "path": "../core"
     },
     {

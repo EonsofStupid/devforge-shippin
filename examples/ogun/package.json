@@ -61,6 +61,8 @@
     "@ogun/api-samples": "1.74.0",
     "@ogun/bulk-edit": "1.74.0",
     "@ogun/callhierarchy": "1.74.0",
+    "@ogun/channels": "1.74.0",
+    "@ogun/clyffy": "1.74.0",
     "@ogun/collaboration": "1.74.0",
     "@ogun/console": "1.74.0",
     "@ogun/core": "1.74.0",
@@ -91,6 +93,7 @@
     "@ogun/process": "1.74.0",
     "@ogun/property-view": "1.74.0",
     "@ogun/remote": "1.74.0",
+    "@ogun/runtime": "1.74.0",
     "@ogun/scanoss": "1.74.0",
     "@ogun/scm": "1.74.0",
     "@ogun/search-in-workspace": "1.74.0",
@@ -106,8 +109,6 @@
     "@ogun/userstorage": "1.74.0",
     "@ogun/variable-resolver": "1.74.0",
     "@ogun/vsx-registry": "1.74.0",
-    "@ogun/channels": "1.74.0",
-    "@ogun/runtime": "1.74.0",
     "@ogun/workspace": "1.74.0"
   },
   "scripts": {

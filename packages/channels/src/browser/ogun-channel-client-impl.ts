@@ -69,17 +69,49 @@ export class OgunChannelClientImpl implements OgunChannelClient {
     /** Set by the frontend module once the RPC proxy exists. */
     backendService: OgunChannelService | undefined;
 
+    /**
+     * Turn whatever the caller said into a URI that exists.
+     *
+     * `new URI('file://AGENTS.md')` does not mean the file AGENTS.md — it means the ROOT of
+     * a host called `agents.md`, because everything after `//` is an authority. So a
+     * relative path silently became nonsense and every open of one failed. That is the
+     * most natural thing anyone would ask for ("open AGENTS.md"), which made it the worst
+     * possible thing to get wrong: relative paths are resolved against the workspace root,
+     * and only genuinely absolute ones are prefixed.
+     */
+    protected async resolve(path: string): Promise<URI> {
+        if (path.startsWith('file://')) {
+            return new URI(path);
+        }
+        if (path.startsWith('/')) {
+            return new URI(`file://${path}`);
+        }
+        const root = (await this.workspaceService.roots)[0];
+        if (!root) {
+            throw new Error(`cannot resolve '${path}': no folder is open`);
+        }
+        return root.resource.resolve(path);
+    }
+
     async openFile(path: string, line?: number): Promise<{ opened: string }> {
         if (!path) {
             throw new Error('path is required');
         }
         return this.asClyffy('open a file', async () => {
-            const uri = new URI(path.startsWith('file://') ? path : `file://${path}`);
+            const uri = await this.resolve(path);
+            // The observer reports editors being CREATED. If the file is already open,
+            // nothing is created and the act would vanish — so only that case is reported
+            // here, or every open would land on the tape twice.
+            const alreadyOpen = this.editorManager.all.some(widget => widget.editor.uri.toString() === uri.toString());
             const editor = await this.editorManager.open(uri, {
                 mode: 'activate',
                 ...(typeof line === 'number' ? { selection: { start: { line, character: 0 } } } : {}),
             });
-            return { opened: editor.editor.uri.path.toString() };
+            const opened = editor.editor.uri.path.toString();
+            if (alreadyOpen) {
+                this.bus.emit('act.file.opened', { path: opened, line });
+            }
+            return { opened };
         });
     }
 
